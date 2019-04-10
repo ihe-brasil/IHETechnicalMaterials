@@ -1,9 +1,0 @@
-<!--<!DOCTYPE usage PUBLIC "DTDVersion-1" "../../../support/dtd/V3mCMETusage.dtd">-->
-<!--CMET Usage collected and expressed by RoseTree 4.2.7-->
-<!--Example copyright 2008 by Health Level Seven, Inc. -->
-<usage rendered="5/1/2008 10:06:04 PM">
-<cmetuse role="uses">
-<hmdref ref="COCS_HD100000UV01-hmd" refname="Clinical Statement Element" refidentifier="COCS_HD100000UV01"/>
-<cmetref ref="COCT_MT090000UV01-msg" refname="R_AssignedEntityUniversal" refidentifier="COCT_MT090000UV01"/>
-</cmetuse>
-</usage>
