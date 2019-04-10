@@ -1,0 +1,277 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:mif="urn:hl7-org:v3/mif2" xmlns:x="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>ObservationInterpretation</title>
+      <link rel="stylesheet" type="text/css" href="../../support/css/V3m.css"><style type="text/css">
+					td {font-family: Verdana,Arial; text-align: left; vertical-align: top; font-size: 11}
+					th {font-family: Verdana,Arial; FONT-WEIGHT: bold; text-align: left; font-size: 11}
+					</style></head>
+   <body><a href="vocabulary.htm#voc-systems">Return to code system index</a><br><br><a name="ObservationInterpretation"></a><table rules="all" border="1px" cellpadding="2" cellspacing="0" bordercolor="lightgrey" class="homepage">
+         <tbody>
+            <tr>
+               <td colspan="4"><font face="Arial" size="3"><strong>ObservationInterpretation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong> [2.16.840.1.113883.5.83]</font><br></td>
+            </tr>
+            <tr bgcolor="cornflowerblue">
+               <th>Lvl- Typ</th>
+               <th>Concept&nbsp;Code<br>&nbsp;&nbsp;<i>Head&nbsp;Code-defined&nbsp;Value&nbsp;Set</i></th>
+               <th>Print Name</th>
+               <th>Definition</th>
+            </tr>
+            <tr>
+               <td><a name="_ObservationInterpretationChange"></a>0-<strong>A</strong></td>
+               <td nowrap="yes"><font color="black"></font><strong>_ObservationInterpretationChange</strong><br><i><font color="white"></font>
+                     						&nbsp;<i><a href="vs_ObservationInterpretation.htm#ObservationInterpretationChange">ObservationInterpretationChange</a></i></i></td>
+               <td>ObservationInterpretationChange</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Change of quantity and/or severity.  At most one of B or W and one of U or D allowed.</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="B"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>B</strong></td>
+               <td>better</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Better (of severity or nominal observations)</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="D"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>D</strong></td>
+               <td>decreased</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Significant change down (quantitative observations, does not imply B or W)</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="U"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>U</strong></td>
+               <td>increased</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Significant change up (quantitative observations, does not imply B or W)</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="W"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>W</strong></td>
+               <td>worse</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Worse (of severity or nominal observations)</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="_ObservationInterpretationExceptions"></a>0-<strong>A</strong></td>
+               <td nowrap="yes"><font color="black"></font><strong>_ObservationInterpretationExceptions</strong><br><i><font color="white"></font>
+                     						&nbsp;<i><a href="vs_ObservationInterpretation.htm#ObservationInterpretationExceptions">ObservationInterpretationExceptions</a></i></i></td>
+               <td>ObservationInterpretationExceptions</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Technical exceptions. At most one allowed. Does not imply normality or severity.</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="<"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>&lt;</strong></td>
+               <td>low off scale</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Below absolute low-off instrument scale.  This is statement depending on the instrument, logically does not imply LL or L
+                     (e.g., if the instrument is inadequate).  If an off-scale value is also low or critically low one must also report L and LL
+                     respectively.
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="&gt;"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>&gt;</strong></td>
+               <td>high off scale</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Above absolute high-off instrument scale. This is statement depending on the instrument, logically does not imply LL or L
+                     (e.g., if the instrument is inadequate).  If an off-scale value is also high or critically high one must also report H and
+                     HH respectively.
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="_ObservationInterpretationNormality"></a>0-<strong>A</strong></td>
+               <td nowrap="yes"><font color="black"></font><strong>_ObservationInterpretationNormality</strong><br><i><font color="white"></font>
+                     						&nbsp;<i><a href="vs_ObservationInterpretation.htm#ObservationInterpretationNormality">ObservationInterpretationNormality</a></i></i></td>
+               <td>ObservationInterpretationNormality</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Normality, Abnormality, Alert.  Concepts in this category are mutually exclusive, i.e., at most one is allowed.</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="A"></a>1-<strong>S</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>A</strong><br><i><font color="white">.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ObservationInterpretation.htm#ObservationInterpretationNormalityAbnormal">ObservationInterpretationNormalityAbnormal</a></i></i></td>
+               <td>Abnormal</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Abnormal (for nominal observations, all service types)</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="AA"></a>2-<strong>S</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;.&nbsp;</font><strong>AA</strong><br><i><font color="white">.&nbsp;.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ObservationInterpretation.htm#ObservationInterpretationNormalityAlert">ObservationInterpretationNormalityAlert</a></i></i></td>
+               <td>Abnormal alert</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Abnormal alert (for nominal observations and all service types)</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="HH"></a>3-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;.&nbsp;.&nbsp;</font><strong>HH</strong></td>
+               <td>High alert</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Above upper alert threshold (for quantitative observations)</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="LL"></a>3-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;.&nbsp;.&nbsp;</font><strong>LL</strong></td>
+               <td>Low alert</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Below lower alert threshold (for quantitative observations)</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="H"></a>2-<strong>S</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;.&nbsp;</font><strong>H</strong><br><i><font color="white">.&nbsp;.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ObservationInterpretation.htm#ObservationInterpretationNormalityHigh">ObservationInterpretationNormalityHigh</a></i></i></td>
+               <td>High</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Above high normal (for quantitative observations)</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="HH"></a>3-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;.&nbsp;.&nbsp;</font><strong>HH</strong></td>
+               <td>High alert</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Above upper alert threshold (for quantitative observations)</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="L"></a>2-<strong>S</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;.&nbsp;</font><strong>L</strong><br><i><font color="white">.&nbsp;.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ObservationInterpretation.htm#ObservationInterpretationNormalityLow">ObservationInterpretationNormalityLow</a></i></i></td>
+               <td>Low</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Below low normal (for quantitative observations)</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="LL"></a>3-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;.&nbsp;.&nbsp;</font><strong>LL</strong></td>
+               <td>Low alert</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Below lower alert threshold (for quantitative observations)</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="N"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>N</strong></td>
+               <td>Normal</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Normal (for all service types)</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="_ObservationInterpretationSusceptibility"></a>0-<strong>A</strong></td>
+               <td nowrap="yes"><font color="black"></font><strong>_ObservationInterpretationSusceptibility</strong><br><i><font color="white"></font>
+                     						&nbsp;<i><a href="vs_ObservationInterpretation.htm#ObservationInterpretationSusceptibility">ObservationInterpretationSusceptibility</a></i></i></td>
+               <td>ObservationInterpretationSusceptibility</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Microbiology: interpretations of minimal inhibitory concentration (MIC) values. At most one allowed.</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="I"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>I</strong></td>
+               <td>intermediate</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Intermediate</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="MS"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>MS</strong></td>
+               <td>moderately susceptible</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Moderately susceptible</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="R"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>R</strong></td>
+               <td>resistent</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Resistent</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="S"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>S</strong></td>
+               <td>susceptible</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Susceptible</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="VS"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>VS</strong></td>
+               <td>very susceptible</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Very susceptible</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="EX"></a>0-<strong>S</strong></td>
+               <td nowrap="yes"><font color="black"></font><strong>EX</strong><br><i><font color="white"></font>
+                     						&nbsp;<i><a href="vs_ObservationInterpretation.htm#ObservationInterpretationOustsideThreshold">ObservationInterpretationOustsideThreshold</a></i></i></td>
+               <td>outside threshold</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc"><b class="vocDesc">Definition:</b>The observation/test result is interpreted as being outside the inclusion range for a particular protocol within which the
+                     result is being reported.
+                  </p>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc"><b class="vocDesc">Example:</b>A positive result on a Hepatitis screening test.
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="HX"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>HX</strong></td>
+               <td>above high threshold</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc"><b class="vocDesc">Definition:</b>The numeric observation/test result is interpreted as being above the high threshold value for a particular protocol within
+                     which the result is being reported.
+                  </p>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc"><b class="vocDesc">Example:</b>An ALT (SGOT) result above a protocol-defined threshold value of 2.5 times the upper limit of normal based on the subject's
+                     sex and age.
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="LX"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>LX</strong></td>
+               <td>below low threshold</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc"><b class="vocDesc">Definition:</b>The numeric observation/test result is interpreted as being below the low threshold value for a particular protocol within
+                     which the result is being reported.
+                  </p>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc"><b class="vocDesc">Example:</b>A Total White Blood Cell Count falling below a protocol-defined threshold value of 3000/mm^3
+                  </p>
+               </td>
+            </tr>
+         </tbody>
+      </table><br><a href="vocabulary.htm#voc-systems">Return to code system index</a><br><br><p xmlns="http://www.w3.org/1999/xhtml" class="copyright">Last Published:&nbsp;06/17/2008&nbsp;10:39&nbsp;AM</p>
+      <p xmlns="http://www.w3.org/1999/xhtml" class="copyright">HL7&reg; Version 3 Standard, &copy; 2008 Health 
+         Level Seven&reg;, Inc.  All Rights Reserved.
+      </p>
+      <p xmlns="http://www.w3.org/1999/xhtml" class="copyright">HL7 and Health Level Seven are registered 
+         trademarks of Health Level Seven, Inc.  Reg. U.S. Pat &amp; TM Off
+      </p>
+   </body>
+</html>

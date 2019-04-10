@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 3 U (http://www.xmlspy.com) by andrew hinchley (HL7 Publications TC) -->
+<div2 id="v3refine">
+	<head>Refinement</head>
+	<p>Refinement is fundamental to many aspects of the HL7 V3 development approach. Key areas addressed elsewhere in the Guide are:-</p>
+	<div2>
+		<list role="ordered">
+			<item>RIM refinement leading to D-MIMs and R-MIMs
+</item>
+			<item>Refinement of R-MIMs to develop HMDs</item>
+		</list>
+	</div2>
+	<p>
+Constraints are a third major aspect of refinement and are one of the main subjects of the Refinement, Constraint and Localization specification.
+
+Appearance constraints modify the status of a model or message element. Elements (defined as optional) may be made mandatory or they may be excluded.
+
+Cardinality constraints change the minimum or maximum number of times that a class attribute or an association may appear.
+
+Type constraints are about substituting a more restricted data type than the once specified for an attribute. Only specific substitutions may be made which are defined in the XML ITS, or more generally in the abstract Data Types specification. The Visio tools make this easy by showing what restrictions can be made for any particular attribute being constrained.
+
+A set of constraints on a message are called a constraint profile. In HL7 V3 constraint profiles must be derived from a balloted V3 message specification.
+
+Conformance is a process by which information system sponsors such as vendors communicate to a User organization how their products meet HL7 specifications.
+
+For future versions of V3, conformance claims will have to relate explicitly to the relevant V3 application roles for a particular message. This is called functional conformance. Additionally technical conformance must be shown in relation to defined V3 messages and one or more profiles of that message.
+
+Localization is a process that combines both constraints and extensions to existing V3 artifacts. Many organizations may carry out localization, but HL7 has explicitly defined when localizations are permitted and under what circumstances.   Refer to the Localization part of the Refinement, Constraint, and Location Section.
+</p>
+</div2>

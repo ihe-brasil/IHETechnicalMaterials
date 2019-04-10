@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+This example was originally defined by William Goosen, and generously
+offered for use in the template specification. It should not be inferred that 
+the details in here, particularly the metadata have any relationship to
+William's original work.
+ -->
+<Template 
+  name="Barthel Index" 
+  intention="Expresses the commonly accepted definition of the Barthel Index"  
+  description="This template expresses the concept of the Barthel Index using the commonly accepted definition. The Barthel Index is used for assessing a patients ability to deal with daily living"  
+  version="2.01" 
+  repositoryURL="http://hcxw2k1.nist.gov:8080/hlxregdoc/HCXW2K1Main.html" 
+  format="HL7.Template.V1" 
+  descriptionLanguage="English"  
+  evidenceSource="htt//www.dundee.ac.uk/medther/Stroke/Scales/barthel.htm"  
+  cautionPoints="Example Template defined for the purposes of providung an example in the template specification"  
+  publicationStatus="PRODUCTION"  
+  publicationStatusChangeDate="2007-07-14T10:23:00+10:00" 
+  xmlns="uri:hl7.org::template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="uri:hl7.org::template template.xsd ">
+  <!-- 
+    Comments on attributes:
+    * version is assigned in a form suitable to the author. 
+    * repositoryURL on the hypothetical basis that this template is published in the HL7 registry
+    * a hypothetical evidence source is provided. 
+    * publicationStatusChangeDate should be updated to be when the template specification itself is published
+  -->
+  <id root="2.16.840.1.113883.10" extension="REPC_RM000103"/>
+  <derivationModel root="2.16.840.1.113883.10" extension="COCS_DM000000UV"/> <!--  Derived from the clinical statement pattern -->
+  <referenceModelId root="2.16.840.1.113883.1.8"/> <!-- May 2007 release of the ballot. no OID is yet assigned to the RIM itself, this fictional oid used instead -->
+  <publisher name="HL7, Inc" address="3300 Washtenaw Avenue, Suite 227 Ann Arbor, MI 48104 USA" email="hq@hl7.org">
+    <id root="2.16.840.1.113883"/> <!-- Is it valid to use this oid to identify HL7 in a corporate sense? -->
+  </publisher>
+
+  <revision comment="First Defined" date="2005-07-25T00:00:00">
+    <author name="William Goosen" email="Williamtfgoossen@cs.com"/> 
+  </revision>
+  <revision comment="Revised for Template Specification" date="2007-07-14T10:23:00+10:00">
+    <author name="Grahame Grieve" email="grahame@jivamedical.com"/> 
+  </revision>
+
+
+  <!-- 
+    model: The actual template model
+  -->
+  
+  <model abstract="false" category="ACT" name="BarthelIndex" sourceModel="REPC_RM000103" typeName="Observation">
+    <!-- 
+       features can be either attributes or associations. 
+       They must appear in the correct sort order.
+    --> 
+    <feature xsi:type="Attribute" conformance="R" mandatory="true" max="1" min="1" name="classCode" datatype="CS" immutable="true">
+    	<vocabulary extensions="false" domain="ActClass" code="OBS"/>
+    </feature>
+    <feature xsi:type="Attribute" conformance="R" mandatory="true" max="1" min="1" name="moodCode" datatype="CS" immutable="true">
+    	<vocabulary extensions="false" domain="ActMood" code="EVN"/>
+    </feature>
+    <feature xsi:type="Attribute" mandatory="false" max="1" min="0" name="code" datatype="CD">
+    	<vocabulary extensions="true" domain="ActCode" code="Barthel-index"/>
+    </feature>
+    <feature xsi:type="Attribute" mandatory="false" max="1" min="0" name="derivationExpr" datatype="ST">
+       <possibleValue>Sumscore</possibleValue>
+    </feature>
+    <feature xsi:type="Attribute" mandatory="false" max="1" min="0" name="effectiveTime" datatype="TS"/>
+    <feature xsi:type="Attribute" mandatory="false" max="1" min="0" name="value" datatype="CO"/>
+    <feature xsi:type="Attribute" mandatory="false" max="1" min="1" name="interpretationCode" datatype="CO">
+    	<vocabulary extensions="true" domain="ObservationInterpretation"/>
+    </feature>
+    <feature xsi:type="Association" mandatory="false" max="1" min="1" name="component1" rimName="outboundRelationship">
+    	<target sourceModel="REPC_RM000103" typeName="ActRelationship" name="Component1" category="ACT_RELATIONSHIP" abstract="false">
+		    <feature xsi:type="Attribute" conformance="R" mandatory="true" max="1" min="1" name="typeCode" datatype="CS" immutable="true">
+		    	<vocabulary extensions="false" domain="ActRelationshipType" code="COMP"/>
+		    </feature>
+		    <feature xsi:type="Association" mandatory="false" max="1" min="1" name="continenceOfBowels" rimName="target">
+		    	<target sourceModel="REPC_RM000103" typeName="Observation" name="ContinenceOfBowels" category="ACT" abstract="false">
+				    <feature xsi:type="Attribute" conformance="R" mandatory="true" max="1" min="1" name="classCode" datatype="CS" immutable="true">
+				    	<vocabulary extensions="false" domain="ActClass" code="OBS"/>
+				    </feature>
+				    <feature xsi:type="Attribute" conformance="R" mandatory="true" max="1" min="1" name="moodCode" datatype="CS" immutable="true">
+				    	<vocabulary extensions="false" domain="ActMood" code="EVN"/>
+				    </feature>
+				    <feature xsi:type="Attribute" mandatory="false" max="1" min="0" name="code" datatype="CD">
+		    			<vocabulary extensions="true" domain="ActCode" code="BrtIB525"/>
+				    </feature>
+				    <feature xsi:type="Attribute" mandatory="false" max="1" min="0" name="effectiveTime" datatype="TS"/>
+				    <feature xsi:type="Attribute" mandatory="false" max="1" min="0" name="value" datatype="CO"/>
+		    	</target>
+		    </feature>
+    	</target>
+    </feature>
+    <feature xsi:type="Association" mandatory="false" max="1" min="1" name="component2" rimName="outboundRelationship">
+    	<target sourceModel="REPC_RM000103" typeName="ActRelationship" name="Component2" category="ACT_RELATIONSHIP" abstract="false">
+		    <feature xsi:type="Attribute" conformance="R" mandatory="true" max="1" min="1" name="typeCode" datatype="CS" immutable="true">
+		    	<vocabulary extensions="false" domain="ActRelationshipType" code="COMP"/>
+		    </feature>
+		    <feature xsi:type="Association" mandatory="false" max="1" min="1" name="controllingBladder" rimName="target">
+		    	<target sourceModel="REPC_RM000103" typeName="Observation" name="ControllingBladder" category="ACT" abstract="false">
+				    <feature xsi:type="Attribute" conformance="R" mandatory="true" max="1" min="1" name="classCode" datatype="CS" immutable="true">
+				    	<vocabulary extensions="false" domain="ActClass" code="OBS"/>
+				    </feature>
+				    <feature xsi:type="Attribute" conformance="R" mandatory="true" max="1" min="1" name="moodCode" datatype="CS" immutable="true">
+				    	<vocabulary extensions="false" domain="ActMood" code="EVN"/>
+				    </feature>
+				    <feature xsi:type="Attribute" mandatory="false" max="1" min="0" name="code" datatype="CD">
+		    			<vocabulary extensions="true" domain="ActCode" code="BrtIB6202"/>
+				    </feature>
+				    <feature xsi:type="Attribute" mandatory="false" max="1" min="0" name="effectiveTime" datatype="TS"/>
+				    <feature xsi:type="Attribute" mandatory="false" max="1" min="0" name="value" datatype="CO"/>
+		    	</target>
+		    </feature>
+    	</target>
+    </feature>
+    <feature xsi:type="Association" mandatory="false" max="1" min="1" name="component3" rimName="outboundRelationship">
+    	<target sourceModel="REPC_RM000103" typeName="ActRelationship" name="Component3" category="ACT_RELATIONSHIP" abstract="false">
+		    <feature xsi:type="Attribute" conformance="R" mandatory="true" max="1" min="1" name="typeCode" datatype="CS" immutable="true">
+		    	<vocabulary extensions="false" domain="ActRelationshipType" code="COMP"/>
+		    </feature>
+		    <feature xsi:type="Association" mandatory="false" max="1" min="1" name="personalToilet" rimName="target">
+		    	<target sourceModel="REPC_RM000103" typeName="Observation" name="PersonalToilet" category="ACT" abstract="false">
+				    <feature xsi:type="Attribute" conformance="R" mandatory="true" max="1" min="1" name="classCode" datatype="CS" immutable="true">
+				    	<vocabulary extensions="false" domain="ActClass" code="OBS"/>
+				    </feature>
+				    <feature xsi:type="Attribute" conformance="R" mandatory="true" max="1" min="1" name="moodCode" datatype="CS" immutable="true">
+				    	<vocabulary extensions="false" domain="ActMood" code="EVN"/>
+				    </feature>
+				    <feature xsi:type="Attribute" mandatory="false" max="1" min="0" name="code" datatype="CD">
+		    			<vocabulary extensions="true" domain="ActCode" code="BrtIB520"/>
+				    </feature>
+				    <feature xsi:type="Attribute" mandatory="false" max="1" min="0" name="effectiveTime" datatype="TS"/>
+				    <feature xsi:type="Attribute" mandatory="false" max="1" min="0" name="value" datatype="CO"/>
+		    	</target>
+		    </feature>
+    	</target>
+    </feature>
+  </model>
+  
+  <!-- 
+    Rim classes. The RIM class definitions used in this model.
+    Of course, these must be identical to the RIM against which
+    the template is based, but storing them in the template 
+    saves implementers work.  
+   -->
+
+  <rim version="1.22"> 
+    <!-- 
+      all the classes that the template depends on.
+      For the purposes of this example, the classes
+      are not enumerated, but would include directly:
+        * Observation
+        * ActRelationship
+      and therefore the following classes would be 
+      dragged in: 
+        * Act
+      By convention, it is not necessary to define the 
+      all the attributes and associations in the RIM
+      in this abbreviated rendition, only those which
+      the model depends on. But it is not wrong to 
+      include all the classes, attributes and associations
+      defined in the RIM.
+      
+      stubs of 2 example classes are provided
+    -->
+    <class id="act" sourceModel="RIM" name="Act" category="ACT">
+	    <feature xsi:type="Attribute" conformance="R" mandatory="true" max="1" min="1" name="classCode" datatype="CS" immutable="true">
+    		<vocabulary extensions="false" domain="ActClass"/>
+	    </feature>
+    </class>
+    <class id="observation" sourceModel="RIM" name="Observation" category="ACT">
+      <super xref="act"/>
+    </class>
+  </rim>
+
+  <!-- 
+    Attachments.
+    
+    Typically a template will have some or all of the following attachments:
+     - MIF Static Model - a full MIF of the original template
+     - Image - a .gif or .png (or similar, a graphical representation of the static model)
+     - ADL - a ADL rendition of the template
+     - schematron - an rendition of the template as schematron rules    
+  -->
+  <attachment type="STATIC_MODEL" mediatype="application/mif+xml">
+    <content><!-- MIF Content --></content>
+  </attachment>
+  <attachment type="STATIC_MODEL_IMAGE" mediatype="image/png">
+    <content><!-- PNG of image --></content>
+  </attachment>
+  <attachment type="ADL" mediatype="text/plain">
+    <content><!-- ADL equivalent of the template (fully stitched, like the model above) --></content>
+  </attachment>
+  <attachment type="DOCUMENTATION" mediatype="application/pdf">
+    <content><!-- PDF Document with Author's Design comments --></content>
+  </attachment>  
+</Template>

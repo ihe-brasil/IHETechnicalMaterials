@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 3 U (http://www.xmlspy.com) by andrew hinchley (HL7 Publications TC) -->
+<div2 id="v3ghmd">
+	<head>Hierarchical Message Descriptions and Message Types</head>
+	<p>This chapter describes the Hierarchical Message Descriptions (HMD) and their resulting message types, which define the message payload. </p>
+	<p>Some questions that are frequently asked are: "Why do we need to create an HMD?  If we already know the sender, the receiver, the trigger event and the classes, why not just send the data?"  There are several important answers to this question.
+		<graphic source="graphics/VG_2_7_01.gif"/>
+	</p>
+	<list role="unordered">
+		<item>
+			<p>The information model contains a group of classes that frequently are interconnected in more than one way. For example, there may be associations that lead from Patient to Person directly (this is the person who is the patient) and indirectly (this is the person who is the next of kin of the patient, or this is the person who is the primary physician of the patient).</p>
+			<p>
+				<emph>The communicating systems must be able to determine which of the objects derived from these classes contain the data to be sent. Furthermore, they must be able to navigate to the related objects through the associations that are defined for the classes.</emph>
+			</p>
+		</item>
+		<item>
+			<p>The same attributes may not be appropriate for different objects. Although both the patient and the physician associated with a clinical order are people, it is unlikely that we will send the physician's religion, date of birth, or sex each time we process an order for the patient.</p>
+			<p>
+				<emph>The communicating systems must be aware which of the objects will be sent.</emph>
+			</p>
+		</item>
+		<item>
+			<p>Finally, to send data over the wire, the computer must organize it sequentially. There are many different ways to organize the data from a group of objects interconnected by their associations. If the sender and the receiver do not agree exactly on that order, the communication is frustrated. If the sender transmits information about the attending physician before that of the primary care physician, and the receiver is expecting the opposite order, there will be a problem.</p>
+			<p>
+				<emph>The communicating systems must know the exact sequence in which information will be sent.</emph>
+			</p>
+		</item>
+	</list>
+	<p>The HMD and its corresponding  message types specify these choices. In simplest terms, an HMD is a tabular representation of the sequence of elements (i.e., classes, attributes and associations) represented in an R-MIM and that define the message without reference to the implementation technology.  The  HMD defines a single base message structure - the "common" message type.  This base message structure is never sent and thus has no corresponding trigger event.  It is the template from which the other specific and corresponding message types are drawn.  The RoseTree tool therefore  requires that a specific HMD is identified in order that an appropriate HMD can be output and an XML schema produced. The HMD and its contained message types may be downloaded as an Excel spreadsheet and a sample XML Example is also available. </p>
+	<p>A message type represents a unique set of constraints applied against the common message.  Successive ballots may introduce additional message types for HMDs that have been defined in previous releases.  The message types will be diffierentiated in terms of the particular trigger event that applies.</p>
+	<div3 id="v3ghmdconf">
+		<head>Use of mandatory and conformance indicators</head>
+		<p>The following table shows how mandatory and conformance indicators are used to refine use of an HMD</p>
+		<table>
+			<tbody>
+				<tr>
+					<th>Constraint</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>Cardinality</td>
+					<td>This specifies the minimum and maximum number of occurrences (repeats) of the field/association.  For example, 1..* implies the minimum number of occurrences (repeats) is 1 whereas the maximum number of occurrences (repeats) is unlimited.</td>
+				</tr>
+				<tr>
+					<td>Mandatory</td>
+					<td>Valid values are M (mandatory) or Blank (not mandatory). 
+
+M (mandatory) means that the field/association must be present in the message, otherwise the message is invalid and is non-conformant.  For Mandatory fields, HL7 sets the minimum cardinality to 1 (a value must be present).
+
+Blank (not mandatory) means that the field/assocation does not need to be present in the message.</td>
+				</tr>
+				<tr>
+					<td>Conformance</td>
+					<td>Valid values are R (required), NP (not permitted), and Blank (optional). 
+
+R (required) means that the sending application must support this field/association.  If the data is available, then the field/association is included in the message.  If the minimum cardinality is 0 and the data is not available, the field/assocation may be omitted from the message and still be conformant.  If the minimum cardinality is 1 and the data is not available, a NullFlavor is required (see below).
+
+NP (not permitted) means that the field/assocation is not included in the message schema and never included in a message instance.
+
+Blank (optional) means that the field/assocation may/may not be sent and support for this field/association is not required of sending applications.  Conformance for this element is to be negotiated on a site-specific basis. </td>
+				</tr>
+				<tr>
+					<td>NullFlavor</td>
+					<td>For required fields/associations with a minimum cardinality of 1, a NullFlavor must be sent for fields/associations that are not available to a sending application.  Sample Nullflavors are "no information", "unknown", "masked" (for privacy applications), "not asked" and "asked, but unknown" (patient asked but did not know valid answer).</td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<tr>
+				<td>Cardinality</td>
+				<td>Mandatory</td>
+				<td>Conformance</td>
+				<td>NullFlavor Required?</td>
+				<td>Explanation of Rules</td>
+			</tr>
+			<tr>
+				<td>0.., 1..</td>
+				<td/>
+				<td/>
+				<td>No</td>
+				<td>The field/association may or may not be present in a message.
+
+Conformance for this element is to be negotiated on a site-specific basis</td>
+			</tr>
+			<tr>
+				<td>0.., 1..</td>
+				<td/>
+				<td>NP</td>
+				<td>Not allowed</td>
+				<td>The field/assocation is not present in the schema and cannot be included in a message instance.</td>
+			</tr>
+			<tr>
+				<td>0..</td>
+				<td/>
+				<td>R</td>
+				<td>No</td>
+				<td>Support for the field/association is required in a sending application.
+
+The field/assocation may or may not be present in a message.</td>
+			</tr>
+			<tr>
+				<td>1..</td>
+				<td/>
+				<td>R</td>
+				<td>Yes</td>
+				<td>Support for the field/association is required in a sending application.
+
+The field/assocation must be present in a message, but may not be valued.  If the field/assocation is not valued, a NullFlavor must be specified.</td>
+			</tr>
+			<tr>
+				<td>1.. </td>
+				<td>M</td>
+				<td>R</td>
+				<td>Not Allowed</td>
+				<td>Support for the field/assocation is required in a sending application.  NullFlavor may not be specifed.
+
+The field/assocation must be present and valued in a message.</td>
+			</tr>
+		</table>
+	</div3>
+	<p>The common message type and the specific message types are presented in Excel and table view, as well as an XML schema. </p>
+	<div3 id="v3ghmdcol">
+		<head>Message Type Column Descriptions- Excel View</head>
+		<p>
+			<graphic source="graphics/excelview.gif"/>
+		</p>
+		<p><graphic source="graphics/T-HMDExcelView.gif"/></p>
+		<table>
+			<tbody>
+				<tr>
+					<th>Column</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>No </td>
+					<td>Row number. Each row is sequentially numbered and identifies the order in which the data were serialized from the R-MIM.</td>
+				</tr>
+				<tr>
+					<td>Element Name</td>
+					<td>The name of the element as it appears in the R-MIM. This may or may not be the same as the value in Property. This value will be different when a class, association or role is cloned and renamed in the process of creating the R-MIM.</td>
+				</tr>
+				<tr>
+					<td>(row type) </td>
+					<td> Each row represents either a class, an association or an attribute from the R-MIM.  Class rows have their name displayed in bold; associations have their name in italics; and attributes have their names in plain font.</td>
+				</tr>
+				<tr>
+					<td>Card </td>
+					<td> Cardinality. This specifies the minimum and maximum number of occurrences of the message element.</td>
+				</tr>
+				<tr>
+					<td>Mand </td>
+					<td>Mandatory. Valid values are M (Mandatory) or Blank. An M in the field requires that some data be sent for this element. If the data is not known, a value of unknown, not given, etc. must be sent. An M in this column (for Mandatory) differs from a 1 in the Cardinality column in that an M indicates that the message cannot be validly parsed without a value in this field or without defining a default. If no default is provided, you either do not send a message or must send a value. An M in this column also differs from an R in the Conformance column (explained below).</td>
+				</tr>
+				<tr>
+					<td>Conf </td>
+					<td> Conformance. Valid values are R (required), NP (not permitted), and Blank (not required). A value of R (required) means that the message elements must appear every time the message is used for an Interaction. If the data is available, the element must carry the data. If the data is not available, a blank may be sent. NP (not permitted) means that the message element is never sent for this message type. Blank means that conformance for this element is to be negotiated on a site-specific basis.</td>
+				</tr>
+				<tr>
+					<td>RIM Source</td>
+					<td> Identifies the class from which the attribute or association originates.</td>
+				</tr>
+				<tr>
+					<td>Of Message Element Type </td>
+					<td>This column identifies the data type of attributes or class name of associations.</td>
+				</tr>
+				<tr>
+					<td>SRC </td>
+					<td> Message Element Type Source. Valid values are D (data type), N (new, being defined starting at this row), U (use, meaning that an element, but not its value, from a previous row in the HMD is being reused), C (CMET), I (Instance, refers to the reuse of a particular element and its value as defined previously in the HMD), and R (recursive, into itself).</td>
+				</tr>
+				<tr>
+					<td>Domain </td>
+					<td> Vocabulary Domain Specification. Clicking on this link will take you to the Domain Specification for this element.</td>
+				</tr>
+				<tr>
+					<td>CS </td>
+					<td> Coding Strength. Valid values are CWE (coded with extensions, meaning that the code set can be expanded to meet local implementation needs) and CNE (coded no extensions, meaning that the code set cannot be expanded).</td>
+				</tr>
+				<tr>
+					<td>Abstract </td>
+					<td>Is a boolean assigned to classes or associations in a gen-spec hierarchy, which becomes a choice in an HMD.  If the value is true, then this type may not appear in message instances.</td>
+				</tr>
+				<tr>
+					<td>Nt </td>
+					<td>Note. If one is provided, this is simply a free text note provided by the committee.</td>
+				</tr>
+			</tbody>
+		</table>
+		<p/>
+	</div3>
+	<div3 id="v3gmtsintro">
+		<head>Message Types - Table View</head>
+		<p>
+			<graphic source="graphics/tableview.gif"/>
+		</p>
+		<p><graphic source="graphics/T-VG_2_8_05.gif"/></p>
+		<p>The table view of the common message and individual message types is an expression of the message type definition condensed enough in a size to fit on a printed page.</p>
+	</div3>
+	<div3 id="v3gmtssview">
+		<head>Schema View</head>
+		<p>
+			<graphic source="graphics/schemaview.gif"/>
+		</p>
+		<p>Provided for the individual message types, this is a link to the schema used to validate all XML messages that conform to the particular message type.</p>
+	</div3>
+	<div3 id="v3gmtsex">
+		<head>Example</head>
+		<p>
+			<graphic source="graphics/exampleview.gif"/>
+		</p>
+		<p>Provided only for the Base HMD this is an XML message rendered from the schema and message type definition.</p>
+	</div3>
+</div2>

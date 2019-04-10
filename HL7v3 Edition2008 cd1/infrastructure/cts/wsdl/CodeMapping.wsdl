@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="urn://hl7.org/CTSVAPI" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="urn://hl7.org/CTSVAPI" xmlns:intf="urn://hl7.org/CTSVAPI" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.2RC2
+Built on Nov 16, 2004 (12:19:44 EST)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="urn://hl7.org/CTSVAPI" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getSupportedMaps">
+    <complexType/>
+   </element>
+   <element name="getSupportedMapsResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getSupportedMapsReturn" type="impl:CodeMap"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="CodeMap">
+    <sequence>
+     <element name="map_name" nillable="true" type="xsd:string"/>
+     <element name="mapDescription" nillable="true" type="xsd:string"/>
+     <element name="fromCodeSystem_id" nillable="true" type="xsd:string"/>
+     <element name="fromCodeSystem_name" nillable="true" type="xsd:string"/>
+     <element name="fromCodeSystem_version" nillable="true" type="xsd:string"/>
+     <element name="toCodeSystem_id" nillable="true" type="xsd:string"/>
+     <element name="toCodeSystem_name" nillable="true" type="xsd:string"/>
+     <element name="toCodeSystem_version" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="UnexpectedError">
+    <sequence>
+     <element name="possible_cause" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="fault" type="impl:UnexpectedError"/>
+   <element name="mapConceptCode">
+    <complexType>
+     <sequence>
+      <element name="in0" type="impl:ConceptId"/>
+      <element name="in1" type="xsd:string"/>
+      <element name="in2" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ConceptId">
+    <sequence>
+     <element name="codeSystem_id" nillable="true" type="xsd:string"/>
+     <element name="concept_code" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="mapConceptCodeResponse">
+    <complexType>
+     <sequence>
+      <element name="mapConceptCodeReturn" type="impl:MappedConceptCode"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="MappedConceptCode">
+    <sequence>
+     <element name="mappedConcept_id" nillable="true" type="impl:ConceptId"/>
+     <element name="mapQuality_code" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="UnknownCodeSystem">
+    <sequence>
+     <element name="codeSystem_id" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="fault1" type="impl:UnknownCodeSystem"/>
+   <complexType name="UnknownConceptCode">
+    <sequence>
+     <element name="concept_code" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="fault2" type="impl:UnknownConceptCode"/>
+   <complexType name="MappingNotAvailable">
+    <sequence>
+     <element name="fromCodeSystem_id" nillable="true" type="xsd:string"/>
+     <element name="toCodeSystem_id" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="fault3" type="impl:MappingNotAvailable"/>
+   <complexType name="UnknownMapName">
+    <sequence>
+     <element name="map_name" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="fault4" type="impl:UnknownMapName"/>
+   <complexType name="ArrayOf_xsd_string">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="AmbiguousMapRequest">
+    <sequence>
+     <element name="possible_maps" nillable="true" type="impl:ArrayOf_xsd_string"/>
+    </sequence>
+   </complexType>
+   <element name="fault5" type="impl:AmbiguousMapRequest"/>
+   <complexType name="MapNameSourceMismatch">
+    <sequence>
+     <element name="fromCodeSystem_id" nillable="true" type="xsd:string"/>
+     <element name="mapSourceCodeSystem_id" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="fault6" type="impl:MapNameSourceMismatch"/>
+   <complexType name="MapNameTargetMismatch">
+    <sequence>
+     <element name="toCodeSystem_id" nillable="true" type="xsd:string"/>
+     <element name="mapTargetCodeSystem_id" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="fault7" type="impl:MapNameTargetMismatch"/>
+   <complexType name="UnableToMap">
+    <sequence/>
+   </complexType>
+   <element name="fault8" type="impl:UnableToMap"/>
+   <element name="getServiceName">
+    <complexType/>
+   </element>
+   <element name="getServiceNameResponse">
+    <complexType>
+     <sequence>
+      <element name="getServiceNameReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getServiceVersion">
+    <complexType/>
+   </element>
+   <element name="getServiceVersionResponse">
+    <complexType>
+     <sequence>
+      <element name="getServiceVersionReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getServiceDescription">
+    <complexType/>
+   </element>
+   <element name="getServiceDescriptionResponse">
+    <complexType>
+     <sequence>
+      <element name="getServiceDescriptionReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getCTSVersion">
+    <complexType/>
+   </element>
+   <element name="getCTSVersionResponse">
+    <complexType>
+     <sequence>
+      <element name="getCTSVersionReturn" type="impl:CTSVersionId"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="CTSVersionId">
+    <sequence>
+     <element name="major" type="xsd:short"/>
+     <element name="minor" type="xsd:short"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="UnknownMapName">
+
+      <wsdl:part element="impl:fault4" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="MapNameTargetMismatch">
+
+      <wsdl:part element="impl:fault7" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="AmbiguousMapRequest">
+
+      <wsdl:part element="impl:fault5" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServiceDescriptionResponse">
+
+      <wsdl:part element="impl:getServiceDescriptionResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="MappingNotAvailable">
+
+      <wsdl:part element="impl:fault3" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServiceVersionRequest">
+
+      <wsdl:part element="impl:getServiceVersion" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSupportedMapsResponse">
+
+      <wsdl:part element="impl:getSupportedMapsResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="MapNameSourceMismatch">
+
+      <wsdl:part element="impl:fault6" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="UnknownConceptCode">
+
+      <wsdl:part element="impl:fault2" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="UnexpectedError">
+
+      <wsdl:part element="impl:fault" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="UnknownCodeSystem">
+
+      <wsdl:part element="impl:fault1" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="UnableToMap">
+
+      <wsdl:part element="impl:fault8" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCTSVersionRequest">
+
+      <wsdl:part element="impl:getCTSVersion" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServiceNameResponse">
+
+      <wsdl:part element="impl:getServiceNameResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServiceDescriptionRequest">
+
+      <wsdl:part element="impl:getServiceDescription" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServiceNameRequest">
+
+      <wsdl:part element="impl:getServiceName" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="mapConceptCodeRequest">
+
+      <wsdl:part element="impl:mapConceptCode" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="mapConceptCodeResponse">
+
+      <wsdl:part element="impl:mapConceptCodeResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCTSVersionResponse">
+
+      <wsdl:part element="impl:getCTSVersionResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSupportedMapsRequest">
+
+      <wsdl:part element="impl:getSupportedMaps" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServiceVersionResponse">
+
+      <wsdl:part element="impl:getServiceVersionResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="CodeMappingOperations">
+
+      <wsdl:operation name="getSupportedMaps">
+
+         <wsdl:input message="impl:getSupportedMapsRequest" name="getSupportedMapsRequest"/>
+
+         <wsdl:output message="impl:getSupportedMapsResponse" name="getSupportedMapsResponse"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="mapConceptCode">
+
+         <wsdl:input message="impl:mapConceptCodeRequest" name="mapConceptCodeRequest"/>
+
+         <wsdl:output message="impl:mapConceptCodeResponse" name="mapConceptCodeResponse"/>
+
+         <wsdl:fault message="impl:AmbiguousMapRequest" name="AmbiguousMapRequest"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+         <wsdl:fault message="impl:MapNameSourceMismatch" name="MapNameSourceMismatch"/>
+
+         <wsdl:fault message="impl:MapNameTargetMismatch" name="MapNameTargetMismatch"/>
+
+         <wsdl:fault message="impl:UnableToMap" name="UnableToMap"/>
+
+         <wsdl:fault message="impl:MappingNotAvailable" name="MappingNotAvailable"/>
+
+         <wsdl:fault message="impl:UnknownMapName" name="UnknownMapName"/>
+
+         <wsdl:fault message="impl:UnknownConceptCode" name="UnknownConceptCode"/>
+
+         <wsdl:fault message="impl:UnknownCodeSystem" name="UnknownCodeSystem"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServiceName">
+
+         <wsdl:input message="impl:getServiceNameRequest" name="getServiceNameRequest"/>
+
+         <wsdl:output message="impl:getServiceNameResponse" name="getServiceNameResponse"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServiceVersion">
+
+         <wsdl:input message="impl:getServiceVersionRequest" name="getServiceVersionRequest"/>
+
+         <wsdl:output message="impl:getServiceVersionResponse" name="getServiceVersionResponse"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServiceDescription">
+
+         <wsdl:input message="impl:getServiceDescriptionRequest" name="getServiceDescriptionRequest"/>
+
+         <wsdl:output message="impl:getServiceDescriptionResponse" name="getServiceDescriptionResponse"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCTSVersion">
+
+         <wsdl:input message="impl:getCTSVersionRequest" name="getCTSVersionRequest"/>
+
+         <wsdl:output message="impl:getCTSVersionResponse" name="getCTSVersionResponse"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="CodeMappingServiceSoapBinding" type="impl:CodeMappingOperations">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getSupportedMaps">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSupportedMapsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSupportedMapsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="mapConceptCode">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="mapConceptCodeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="mapConceptCodeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="AmbiguousMapRequest">
+
+            <wsdlsoap:fault name="AmbiguousMapRequest" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="MapNameSourceMismatch">
+
+            <wsdlsoap:fault name="MapNameSourceMismatch" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="MapNameTargetMismatch">
+
+            <wsdlsoap:fault name="MapNameTargetMismatch" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnableToMap">
+
+            <wsdlsoap:fault name="UnableToMap" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="MappingNotAvailable">
+
+            <wsdlsoap:fault name="MappingNotAvailable" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownMapName">
+
+            <wsdlsoap:fault name="UnknownMapName" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownConceptCode">
+
+            <wsdlsoap:fault name="UnknownConceptCode" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownCodeSystem">
+
+            <wsdlsoap:fault name="UnknownCodeSystem" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServiceName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getServiceNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getServiceNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServiceVersion">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getServiceVersionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getServiceVersionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServiceDescription">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getServiceDescriptionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getServiceDescriptionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCTSVersion">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getCTSVersionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getCTSVersionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="CodeMappingOperationsService">
+
+      <wsdl:port binding="impl:CodeMappingServiceSoapBinding" name="CodeMappingService">
+
+         <wsdlsoap:address location="http://localhost:8080/axis/services/CodeMappingService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

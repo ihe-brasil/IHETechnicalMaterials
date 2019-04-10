@@ -1,0 +1,1673 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:exslt="http://exslt.org/common">
+   <head>
+      <title>Domain: Regulated Products - Regulated Product Submission Topic</title>
+      <link rel="stylesheet" type="text/css" href="../../support/css/v3m.css" title="v3m" /><script src="../../support/js/tree.js" type="text/javascript"></script><script src="../../support/js/setTopFrameText.js" type="text/javascript"></script><script src="../../support/js/swapcss.js" type="text/javascript"></script><script type="text/javascript">
+				if (find('heading')) setHeadingTextFromFileName(document.location.href,"Regulated Product Submission Topic");
+			</script></head>
+   <body>
+      <div class="section">
+         <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">2</span><span class="title"><a name="PORP_DO000001UV-Rps-ic">Regulated Product Submission Topic</a></span><table cellspacing="0" cellpadding="3" border="1">
+               <tr>
+                  <td align="center"><img src="../../support/graphics/ansilogo.gif" alt="ANSI" /><br />ANSI/HL7 RPS, R1-2008<br />HL7 Version 3 Standard: Regulated Product Submission, Release 1<br />3/6/2008<img width="5" alt="spacer" src="../../support/graphics/spacer.gif" /></td>
+               </tr>
+            </table>
+         </div>
+         <div class="body">
+            <table>
+               <tbody>
+                  <tr>
+                     <td><a class="custombutton" href="uvrp.htm#contents">Return to Domain Table of Contents</a></td>
+                  </tr>
+                  <tr>
+                     <td colspan="2">
+                        <p class="lastEdit">Content Last Edited: 2007-03-08T07:20:32</p>
+                     </td>
+                  </tr>
+               </tbody>
+            </table><br /><div class="toc"><span>2.1  <a href="#sbs-PORP_DO000001UV-Rps-ic">Storyboards</a><br /></span><span>2.2  <a href="#roles-PORP_DO000001UV-Rps-ic">Application Roles</a><br /></span><span>2.3  <a href="#tes-PORP_DO000001UV-Rps-ic">Trigger Events</a><br /></span><span>2.4  <a href="#rmims-PORP_DO000001UV-Rps-ic">Refined Message Information Models</a><br /></span><span>2.5  <a href="#hmds-PORP_DO000001UV-Rps-ic">Hierarchical Message Descriptions</a><br /></span><span>2.6  <a href="#ints-PORP_DO000001UV-Rps-ic">Interactions</a><br /></span></div>
+            <div class="heading"><br /><b class="heading">Introduction</b></div>
+            <p>Regulatory authorities receive submissions to address a variety of regulatory issues. The information contained in these submissions
+               is divided into numerous files (paper and electronic). Frequently, files in one submission are related to files in earlier
+               submissions. Because the information is divided into numerous files sent over time, it is often difficult to efficiently process
+               and review the information.
+            </p>
+            <p>The goal of the Regulated Product Submission message is to facilitate the processing and the review of submissions. Accordingly,
+               the Regulated Product Submission Refined Message Information Model captures all information required for the efficient processing
+               and review of regulatory submissions.
+            </p>
+            <p>Different product types have different table of contents; that is to say, different lists of topics that must be addressed
+               within the submission.  However, the general data layouts of all regulated products are the same. Therefore, the objective
+               of the Regulated Product Submission message is to define one message structure that can be used for all regulated products.
+               It is intended that this message will be used, worldwide, for regulated products, including but not limited to, foods, medical
+               devices, human therapeutics, and veterinary medicine.  It is important to note that the wide range of products that is contemplated
+               leads to providing a generic structure for the actual specification.
+            </p>
+            <p>Please note that Regulated Product Submission is similar to the Medical Records Document Topic.  This is based on the fact
+               that both require attention to needs for managing a complex set of documents.
+            </p>
+            <p><strong>Scope</strong></p>
+            <p>The scope of the initial release of this standard is to define the message for submitting information to regulatory authorities.
+               This message includes the contents of a regulatory submission and all information needed to process the submission message.
+               This message is flexible enough to be used for regulatory submissions for any regulated product. Subsequent releases of the
+               standard will provide information about the submission (e.g. information currently collected on application forms) in addition
+               to information about the files in the submission.
+            </p>
+            <p>Although this message can be used for company-to-company communication, the initial intent of this message is for the communication
+               from industry to regulatory authority.
+            </p>
+            <p>The Regulated Clinical Research Information Management Technical Committee invites anyone with additional requirements to
+               submit content proposals for future releases of the standard.
+               
+            </p>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">2.1</span><span class="title"><a name="sbs-PORP_DO000001UV-Rps-ic">Storyboards</a></span><hr class="sectionrule" />
+               </div>
+               <div class="body">
+                  <p><a href="#">Go To Top</a></p>
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e154" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Storyboards (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Managing Applications through Submission Units(<a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_ST000001UV01-str" class="">PORP_ST000001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Managing the contents of submission units(<a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_ST000002UV01-str" class="">PORP_ST000002UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e1542" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Storyboards (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Rps 01(<a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_ST000001UV01-str" class="">PORP_ST000001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Rps 02(<a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_ST000002UV01-str" class="">PORP_ST000002UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e1543" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Storyboards (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Managing Applications through Submission Units(<a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_ST000001UV01-str" class="">PORP_ST000001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Managing the contents of submission units(<a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_ST000002UV01-str" class="">PORP_ST000002UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3gstory">the storyboard discussion</a> in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection inserted">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">2.1.1</span><span class="title"><a name="PORP_ST000001UV01-str">Managing Applications through Submission Units  (PORP_ST000001UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Purpose</b></div>
+                        <p>Over time, an application will typically consist of multiple submissions and regulatory assessments. For example, the marketing
+                           application for a drug product can generate multiple regulatory decisions. The first decision may support the initial marketing
+                           approval of the product for a specific indication. Subsequent regulatory decisions may approve or deny additional indications
+                           for the drug product. The application thus contains multiple submissions, each with their own regulatory action. Each of those
+                           submissions (e.g., initial marketing application, supplemental marketing application) would generally be comprised of multiple
+                           submissions units. 
+                        </p>
+                        <p>A submission is made up of one or many submission units.
+                           
+                        </p>
+                        <p>Note: the current specification does not support a message from the regulatory authority to applicant</p>
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><img class="graphic" src="graphics/PORP_ST000001UV01.gif" alt="PORP_ST000001UV01.gif" /><p></p><a name="PORP_ST000001UV01-str"></a><table class="artifactList">
+                           <caption><b>Interaction List</b></caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Submission Unit sent</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/PORP_IN000001UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_IN000001UV01-int" class="">PORP_IN000001UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <div class="subSubSubSection inserted">
+                           <div class="header"><span class="icon"> </span><span class="number">2.1.1.1</span><span class="title"><a name="PORP_ST000001UV01-PORP_SN000001UV01-stex">Creating a new application and submission (PORP_SN000001UV01) </a></span></div>
+                           <div class="body">
+                              <p>Acme Pharmaceuticals has prepared information relating to its new product - Global Fixit.  This information provides information
+                                 about the quality, safety and effectiveness of the product, and consists of many files that Acme has collected over several
+                                 years.  Acme has marshaled these files, which are designed to address a previously defined set of categories, into its first
+                                 submission unit.  That first submission unit will be sent to a regulatory authority for marketing approval in that jurisdiction.
+                                 In this initial submission unit, the submission unit message identifies all of the submitted files, and indicates the document
+                                 category or categories that the files belong.  This first submission unit commences the application and represents the first
+                                 regulatory submission for that application. 
+                                 
+                              </p>
+                              <p>Since this is the initial submission unit for the application, each file in this submission unit is active.  The submission
+                                 is then transmitted to the regulatory authority.
+                                 
+                              </p>
+                              <p>The regulatory authority receives the submission and validates the message for accuracy. The regulatory authority incorporates
+                                 the message into their tracking\review system creating a new application, original submission, and the first submission unit
+                                 to the original submission.
+                                 
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection inserted">
+                           <div class="header"><span class="icon"> </span><span class="number">2.1.1.2</span><span class="title"><a name="PORP_ST000001UV01-PORP_SN000002UV01-stex">Adding submission units to an existing submission (PORP_SN000002UV01) </a></span></div>
+                           <div class="body">
+                              <p>Device Co. is planning on creating a pre-approval submission for a Class III PMA product. Device Co has already sent the original
+                                 submission unit message and supporting files. However, new studies are available pertaining to the effectiveness of this device.
+                                 Device Co will submit a new submission unit and the supporting files. This new submission unit will be linked as an amendment
+                                 to the original submission.
+                                 The regulatory authority receives and validates this submission unit and then this submission unit is associated with the
+                                 original submission
+                                 
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection inserted">
+                           <div class="header"><span class="icon"> </span><span class="number">2.1.1.3</span><span class="title"><a name="PORP_ST000001UV01-PORP_SN000003UV01-stex">Creating a new submission to an application (PORP_SN000003UV01) </a></span></div>
+                           <div class="body">
+                              <p>Device Co. is planning on creating a submission for a Class III product. Device Co. has already sent the original submission
+                                 unit message (i.e., the original submission) and many amendments to the original submission.
+                              </p>
+                              <p>This product is going to be used for a different purpose than stated in the original submission so a new Submission must be
+                                 initiated. Device Co will submit the new submission and supporting files containing the relevant information that supports
+                                 the new use of the product. As required by the Regulatory Authority, this new submission and the original submission will
+                                 be linked together under the same application.
+                                 
+                              </p>
+                              <p>The regulatory authority receives and validates this submission unit for this new submission. This new submission (e.g., referred
+                                 to as a supplement or variation) and the original submission are both associated to the same application.
+                                 
+                              </p>
+                              <p><strong>Note</strong>: In most cases, supplements/variations can only be created after the original has been approved.
+                                 
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection inserted">
+                           <div class="header"><span class="icon"> </span><span class="number">2.1.1.4</span><span class="title"><a name="PORP_ST000001UV01-PORP_SN000004UV01-stex">Modular Reviews (PORP_SN000004UV01) </a></span></div>
+                           <div class="body">
+                              <p>In some regulatory processes, it is acceptable for the Applicant to provide information to the regulatory authority in defined
+                                 reviewable units. Generally, these units of information support a particular discipline (e.g., clinical) and provide the opportunity
+                                 to expedite some regulatory review processes.
+                                 
+                              </p>
+                              <p>For example, Acme Pharmaceutics has discovered a potential cure for cancer and received permission to submit a continuous
+                                 marketing application. Acme now has the ability to send information in predefined reviewable units.
+                                 
+                              </p>
+                              <p>Acme creates a submission unit for transmission to the regulatory authority that addresses the clinical modules. Since it
+                                 is expected that the regulatory authority review may turn up questions related to particular modules, Acme makes sure that
+                                 the submission unit indicates which type of module it addresses.
+                                 
+                              </p>
+                              <p>The regulatory authority processes this submission unit and associates the unit to the correct submission.
+                                 
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection inserted">
+                           <div class="header"><span class="icon"> </span><span class="number">2.1.1.5</span><span class="title"><a name="PORP_ST000001UV01-PORP_SN000005UV01-stex">One submission unit to multiple applications (PORP_SN000005UV01) </a></span></div>
+                           <div class="body">
+                              <p>In certain regulatory processes, the same documentation may need to be submitted to multiple applications. 
+                                 
+                              </p>
+                              <p>Acme Manufacturing produces an annual report that pertains to multiple active applications.  The company submits one submission
+                                 unit and applies that unit to each application that requires the annual report.
+                                 The regulatory authority processes this submission unit and associates it to all relevant applications.
+                                 
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection inserted">
+                           <div class="header"><span class="icon"> </span><span class="number">2.1.1.6</span><span class="title"><a name="PORP_ST000001UV01-PORP_SN000006UV01-stex">One submission unit to multiple submissions (PORP_SN000006UV01) </a></span></div>
+                           <div class="body">
+                              <p>In certain regulatory processes, the same documentation may need to be submitted to multiple submissions. 
+                                 
+                              </p>
+                              <p>Acme Manufacturing changes some CMC processes that pertains to multiple active submissions for a product.  The company submits
+                                 one CMC submission unit and applies that unit to each submission that it pertains to.
+                                 The regulatory authority processes this submission unit and associates it to all relevant submissions.
+                                 
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection deleted">
+                           <div class="header"><span class="icon"> </span><span class="number">-del-</span><span class="title"><a name="PORP_ST000001UV01-PORP_SN000000UV01-stex">Withdrawing a submission unit (PORP_SN000000UV01) </a></span></div>
+                           <div class="body">
+                              <p>During the review of a submission, it may be necessary for the Applicant to withdraw the submission from further review. 
+                                 
+                              </p>
+                              <p>Acme Pharmaceuticals executives have spent time reviewing the original Global Fixit submission unit and determined that the
+                                 submission unit that was sent to support the Global Fixit submission contains a host of errors.  Therefore it would be inappropriate
+                                 for the regulatory authority to use the files contained within the submission unit for its review.  As a result, Acme decides
+                                 to withdraw the submission unit from consideration.  A transmission is sent that indicates the submission unit has been withdrawn.
+                                 The status code for the previous submission unit will be set to obsolete.
+                                 
+                              </p>
+                              <p>The regulatory authority processes this submission unit and marks all file references provided by this submission unit as
+                                 obsolete.
+                                 
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection inserted">
+                           <div class="header"><span class="icon"> </span><span class="number">2.1.1.7</span><span class="title"><a name="PORP_ST000001UV01-PORP_SN000008UV01-stex">Withdrawing a submission (PORP_SN000008UV01) </a></span></div>
+                           <div class="body">
+                              <p>During the review of a submission, it may be necessary for the Applicant to withdraw the submission from further review or
+                                 to preempt an unfavorable action by the regulatory authority.
+                                 
+                              </p>
+                              <p>Subsequent to the original submission of the Global Fixit submission, Acme scientists are able to spend time reviewing the
+                                 outcome of ongoing studies of Global Fixit's efficacy.  It turns out, after statistical review, that the product is not particularly
+                                 effective.  As a result, Acme wishes to withdraw the submission from consideration.  A submission unit is created to withdraw
+                                 the submission and all related submission units; it is transmitted to the regulatory authority.
+                                 
+                              </p>
+                              <p>The regulatory authority processes this submission unit message and marks the submission and related submission units as obsolete.
+                                 
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="subSubSection inserted">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">2.1.2</span><span class="title"><a name="PORP_ST000002UV01-str">Managing the contents of submission units  (PORP_ST000002UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Purpose</b></div>
+                        <p>
+                           A submission unit is made up of one submission unit message and many files. Properly defined, the submission unit message
+                           concept enables companies to create new submission units from any combination of new and previously submitted files. The submission
+                           unit message is processed by the regulatory authority and is integrated into their tracking/review system.
+                        </p>
+                        <p>Note: the current specification does not support a message from the regulatory authority to applicant</p>
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><img class="graphic" src="graphics/PORP_ST000002UV01.gif" alt="PORP_ST000002UV01.gif" /><p></p><a name="PORP_ST000002UV01-str"></a><table class="artifactList">
+                           <caption><b>Interaction List</b></caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Submission Unit sent</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/PORP_IN000001UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_IN000001UV01-int" class="">PORP_IN000001UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <div class="subSubSubSection inserted">
+                           <div class="header"><span class="icon"> </span><span class="number">2.1.2.1</span><span class="title"><a name="PORP_ST000002UV01-PORP_SN000009UV01-stex">Adding new files to a submission (PORP_SN000009UV01) </a></span></div>
+                           <div class="body">
+                              <p>The results of ongoing studies related to Global Fixit are now available; and these results show that the product is even
+                                 more useful than previously thought.  As a result, Acme decides to add this information to the files that were previously
+                                 submitted in support of the Global Fixit submission.  A new submission unit is created that refers to the additional files
+                                 (i.e., the new study results) and appropriate file references to relate this new information to the existing information.
+                                 The submission unit is transmitted to the regulatory authority. The regulatory authority processes this submission unit.
+                                 
+                              </p>
+                              <p><strong>Note:</strong> A submission unit message contains many file references.  When a submission unit message is provided in support of a submission,
+                                 individual file references can either be added to the submission, supersede existing file references in the submission, append
+                                 existing file references, or may mark specific files as obsolete from the submission.
+                                 
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection inserted">
+                           <div class="header"><span class="icon"> </span><span class="number">2.1.2.2</span><span class="title"><a name="PORP_ST000002UV01-PORP_SN000010UV01-stex">Replacing a previously submitted file (PORP_SN000010UV01) </a></span></div>
+                           <div class="body">
+                              <p>The review process for the Global Fixit submission has extended over a substantial amount of time, and Acme has found that
+                                 new information relevant to the submission has been received.  For example, the original submission contained a summary of
+                                 clinical pharmacology information derived from a series of studies using human biomaterial, and several new studies contain
+                                 information that requires changes to this summary.  Therefore, researchers working for the company have rewritten this summary
+                                 and submits a new submission unit with the new file marked as a replacement to the previous file.
+                                 
+                              </p>
+                              <p>The regulatory authority processes this submission unit. If information relevant to the submission was not submitted in the
+                                 original submission unit, the submission might have been non-filed or refused to accept.
+                                 
+                              </p>
+                              <p><strong>Note:</strong> A submission unit message contains many file references.  When a submission unit message is provided in support of a submission,
+                                 individual file references can either be added to the submission, supersede existing file references in the submission, append
+                                 an existing file reference, or may mark the file as obsolete from the submission.
+                                 
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection inserted">
+                           <div class="header"><span class="icon"> </span><span class="number">2.1.2.3</span><span class="title"><a name="PORP_ST000002UV01-PORP_SN000011UV01-stex">Removing a previously submitted file (PORP_SN000011UV01) </a></span></div>
+                           <div class="body">
+                              <p>Global Fixit has been manufactured at two locations, Big Factory and Little Factory.  Acme Manufacturing now wishes to concentrate
+                                 all its manufacturing at Big Factory.  Therefore it is necessary to inform the regulatory authority of this change and to
+                                 update the submission to ignore all information related to manufacturing taking place at Small Factory.  Therefore Acme creates
+                                 a submission unit to inform the regulatory authority to ignore all files that relate to the manufacture at Small Factory.
+                                 
+                                 The regulatory authority processes this submission unit.
+                                 
+                              </p>
+                              <p><strong>Note:</strong> This method can also be applied to logical documents consisting of multiple physical files. 
+                                 
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection inserted">
+                           <div class="header"><span class="icon"> </span><span class="number">2.1.2.4</span><span class="title"><a name="PORP_ST000002UV01-PORP_SN000012UV01-stex">Replacing one file with multiple files (PORP_SN000012UV01) </a></span></div>
+                           <div class="body">
+                              <p>The Calming Myst submission, a medication for heart burn, included the inclusion of a drug-substance file.  However, Acme
+                                 has now decided that it needs to break this file into several smaller files for better file management.  In essence, the company
+                                 wants regulatory authority to review the drug-substance information in the more granular form.  A new submission unit is created
+                                 that contains multiple drug-substance files to meet the documentation requirement for drug substance information.  Each file
+                                 is marked as a replacement for the previously submitted drug-substance file.  The original drug-substance file is marked as
+                                 obsolete (or replaced).
+                                 
+                              </p>
+                              <p>The regulatory authority processes this submission unit.</p>
+                              <p><strong>Note:</strong> The life cycle of the new more granular file is linked to the original summary file life cycle.
+                                 
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection inserted">
+                           <div class="header"><span class="icon"> </span><span class="number">2.1.2.5</span><span class="title"><a name="PORP_ST000002UV01-PORP_SN000013UV01-stex">Adding an addendum to a file (PORP_SN000013UV01) </a></span></div>
+                           <div class="body">
+                              <p>Before the clinical study begins, Acme would like to add several new (or not previously submitted) pages to a sample case
+                                 report form file. The addition will allow reviewers at the regulatory authority to have this new information. The company
+                                 prepares a submission unit that contains a file with only the new pages.  The submission unit message marks this file as an
+                                 addendum to the previously submitted case report form file. The addendum is considered a separate file that has its own lifecycle
+                                 
+                              </p>
+                              <p><strong>Note:</strong> A submission unit message contains many file references.  When a submission unit message is provided in support of a submission,
+                                 individual file references can either be added to the submission, supersede existing file references in the submission, append
+                                 an existing file reference, or may mark the file as obsolete from the submission.
+                                 
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection inserted">
+                           <div class="header"><span class="icon"> </span><span class="number">2.1.2.6</span><span class="title"><a name="PORP_ST000002UV01-PORP_SN000014UV01-stex">Replacing an addendum (PORP_SN000014UV01) </a></span></div>
+                           <div class="body">
+                              <p>Acme employee, Fred Firestone, has carried out further review of the recently submitted addendum to the sample case report
+                                 form.  As a result of his work, the company realizes that it needs to replace the addendum in order to improve the case report
+                                 form.  Therefore, an additional submission unit is created that contains a new addendum file to replace the previously submitted
+                                 one.  The new addendum is linked to the old one, and marked as a replacement. 
+                                 
+                              </p>
+                              <p><strong>Note:</strong> Addendum files has a life cycle independent of the file they are added to.  If a future submission unit replaces the addendum
+                                 file, the new addendum file would amend the same original file.
+                                 
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection inserted">
+                           <div class="header"><span class="icon"> </span><span class="number">2.1.2.7</span><span class="title"><a name="PORP_ST000002UV01-PORP_SN000015UV01-stex">Replacing a file and an addendum (PORP_SN000015UV01) </a></span></div>
+                           <div class="body">
+                              <p>Further review of the - much changed - sample case report form mentioned above, leads Acme's Submission Control Branch to
+                                 determine that the regulatory authority's review task would be eased if all the contents of the case report form were included
+                                 in a single file.  That is to say, it would be better to support the documentation requirements with a single file, rather
+                                 than having an original file along with one or more addenda.  Acme would like the regulatory authority to only review the
+                                 new consolidated file, and it would like the regulatory authority to be aware that the new file replaces both previously submitted
+                                 files.  A new submission unit is created that contains the new summary file, and marks it as a replacement for both the previous
+                                 sample case report form file and the addendum.
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection inserted">
+                           <div class="header"><span class="icon"> </span><span class="number">2.1.2.8</span><span class="title"><a name="PORP_ST000002UV01-PORP_SN000016UV01-stex">Adding one file to multiple logical documents (PORP_SN000016UV01) </a></span></div>
+                           <div class="body">
+                              <p>Acme Manufacturing has prepared a submission for a product to be marketed to mountain climbers - known as High Altitude Fixit.
+                                 One component of the submission will be a protocol file that pertains to three different studies in the submission.  It documents
+                                 the protocol that was followed during those studies.  When the High Altitude Fixit submission unit is prepared, it will contain,
+                                 among other files, the protocol file and other documentation providing the results of the three studies.  Each of the three
+                                 studies references the protocol file.  The submission unit transmission contains only one copy of the protocol file. 
+                                 The regulatory authority processes this submission unit.
+                                 
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection inserted">
+                           <div class="header"><span class="icon"> </span><span class="number">2.1.2.9</span><span class="title"><a name="PORP_ST000002UV01-PORP_SN000017UV01-stex">Adding files that were previously removed (PORP_SN000017UV01) </a></span></div>
+                           <div class="body">
+                              <p>Several years ago, Acme submitted a submission to market a medication for heart burn known as Calming Myst, which was to be
+                                 produced under license from a European manufacturer.  However, all the files related to the earlier submission unit have been
+                                 marked as ignore because Acme was never able to come to a final arrangement with the manufacturer for the production of the
+                                 product.
+                                 
+                              </p>
+                              <p>However, new management of the European firm is more agreeable, and Acme is confident that it will have the Calming Myst contract
+                                 in hand by early next year.  As a result, Acme would like to reactivate the European manufacturing files for regulatory authority
+                                 review.  A submission unit message is created that refers to the previously submitted files and reactivates them for regulatory
+                                 review.
+                                 
+                              </p>
+                              <p><strong>Note:</strong> The all files associated with this manufacturer has been reactivated. The complete lifecycle of all logical documents associated
+                                 with this manufacturer are also reactivated.
+                                 
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection inserted">
+                           <div class="header"><span class="icon"> </span><span class="number">2.1.2.10</span><span class="title"><a name="PORP_ST000002UV01-PORP_SN000018UV01-stex">Changing the category of a submitted file (PORP_SN000018UV01) </a></span></div>
+                           <div class="body">
+                              <p>Subsequent to the original Global Fixit submission, Acme researchers realize that an analytical procedure file had been mistakenly
+                                 categorized as the protocol document of one of the studies in that previous submission's units.  This was a mistake, since
+                                 it should have been categorized as an analytical procedure document. The company wants to inform the regulatory authority
+                                 to change the category assignment of the file.  The submission unit that Acme transmits to the regulatory authority is designed
+                                 to inform the regulatory authority that the previously referenced protocol actually should be referenced as an analytical
+                                 procedure. The procedure file is not re-transmitted.
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection inserted">
+                           <div class="header"><span class="icon"> </span><span class="number">2.1.2.11</span><span class="title"><a name="PORP_ST000002UV01-PORP_SN000019UV01-stex">Referencing files from other applications (PORP_SN000019UV01) </a></span></div>
+                           <div class="body">
+                              <p>The European manufacturer who produces the Calming Myst product, has done previous business with Acme manufacturing for a
+                                 number of years.  In a previous application - for Calming Balm - Acme had submitted information for that manufacturer that
+                                 is relevant to the Calming Myst application.  Since the regulatory authority already has the files for the manufacturer, Acme
+                                 decides to reference those files in the new application.  The Calming Myst submission unit contains references to those previously
+                                 submitted files.  The submission unit does not contain copies of the previously submitted files. The regulatory authority
+                                 processes this submission unit. It is possible for the reviewers to access the referenced files as if they had been submitted
+                                 in this submission unit.
+                                 
+                              </p>
+                              <p><strong>Note:</strong> It is possible for the reviewers to access the referenced files as if they had been submitted in this submission unit.
+                                 
+                              </p>
+                              <p>This method applies to studies, logical files, or any other file or groups of files that the company has previously sent to
+                                 the regulatory authority.
+                                 
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection inserted">
+                           <div class="header"><span class="icon"> </span><span class="number">2.1.2.12</span><span class="title"><a name="PORP_ST000002UV01-PORP_SN000020UV01-stex">Replacing files referenced from other applications (PORP_SN000020UV01) </a></span></div>
+                           <div class="body">
+                              <p>Subsequent to the Calming Myst application, the European manufacturer decides to move its manufacturing operations to another
+                                 facility and to introduce advanced technologies to the processes. This requires changing the manufacturer information in all
+                                 the applications related to the products they manufacture; in particular, it applies to both the Calming Balm and Calming
+                                 Myst submissions.  Acme will submit a new submission unit as part of the Calming Balm submission that contains the updated
+                                 files.  A new submission unit for the Calming Myst product is submitted as well.  In that submission unit, references to the
+                                 new files are included, but the actual files are not.
+                                 The regulatory authority processes this submission unit. It is possible for the reviewers to access the referenced file as
+                                 it was submitted in this submission unit.
+                                 
+                              </p>
+                              <p><strong>Note:</strong> This method applies to files, logical documents or any other files or groups of files that the company has previously sent
+                                 to the regulatory authority.
+                                 
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection inserted">
+                           <div class="header"><span class="icon"> </span><span class="number">2.1.2.13</span><span class="title"><a name="PORP_ST000002UV01-PORP_SN000021UV01-stex">Replacing one file in multiple logical documents (PORP_SN000021UV01) </a></span></div>
+                           <div class="body">
+                              <p>In the High Altitude Fixit submission, Acme had previously submitted a protocol file that pertained to three different studies
+                                 within the application.  Since that time, investigators under contract to Acme have updated the protocol file specifically
+                                 for one of the three studies.  However, these changes are not relevant to the other two studies.  Acme would like the regulatory
+                                 authority to review the new protocol file for the one study, while continuing to review the previous protocol file for the
+                                 other two.  A new submission unit is created that has the new protocol file marked as a replacement for the relevant study.
+                                 The submission unit contains no reference to the other two studies.  As a result, regulatory authority continues to review
+                                 the previous protocol file for them.
+                                 
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection inserted">
+                           <div class="header"><span class="icon"> </span><span class="number">2.1.2.14</span><span class="title"><a name="PORP_ST000002UV01-PORP_SN000022UV01-stex">Replacing multiple files with one file (PORP_SN000022UV01) </a></span></div>
+                           <div class="body">
+                              <p>The original Global Fixit submission unit included a safety file.  In a later submission unit for the same submission, the
+                                 same safety file was mistakenly submitted again as an original file.  However, new information has been received, which has
+                                 led to an updated safety report.  Acme wants to replace both previously submitted safety files with the new report.  A submission
+                                 unit is created that contains the new safety file, and marks it as replacement for both of the previously submitted files.
+                                 
+                              </p>
+                              <p><strong>Note:</strong> This method can be applied when switching from a more granular document structure to a less granular one.
+                                 
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection deleted">
+                           <div class="header"><span class="icon"> </span><span class="number">-del-</span><span class="title"><a name="PORP_ST000002UV01-PORP_SN000023UV01-stex">Replacing sections of a file (PORP_SN000023UV01) </a></span></div>
+                           <div class="body">
+                              <p>A previous submission unit for the Global Fixit submission contained a structured product labeling (SPL) file.  Based on new
+                                 data, Acme has decided to update the warning section of the label.  The company wants the regulatory authority to review only
+                                 the changes to the warning section, not the entire label.  A new submission unit is created containing the changed section
+                                 of the labeling file and marks it as an update to the previously submitted label. 
+                                 The updated SPL file section is merged with the previously submitted SPL files.
+                                 
+                              </p>
+                              <p><strong>Note:</strong> As we move towards XML, sectional life cycle is possible. The life cycle of sections in the label is defined in the SPL specification.
+                                 
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">2.2</span><span class="title"><a name="roles-PORP_DO000001UV-Rps-ic">Application Roles</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" border="0" class="help_table" width="100%">
+                              <tr id="d0e335a" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Application Roles (Sorted by Artifact Code)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top" align="left" class="general"> </td>
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" border="0" class="inserted">
+                                       <tr>
+                                          <td>
+                                             <table border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Applicant&nbsp;
+                                                      					(<a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_AR000001UV01-ar" class="">PORP_AR000001UV01</a>)
+                                                      				
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" border="0" class="inserted">
+                                       <tr>
+                                          <td>
+                                             <table border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Regulatory Authority&nbsp;
+                                                      					(<a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_AR000002UV01-ar" class="">PORP_AR000002UV01</a>)
+                                                      				
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" border="0" class="help_table" width="100%">
+                              <tr id="d0e335b" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Application Roles (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top" align="left" class="general"> </td>
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" border="0" class="inserted">
+                                       <tr>
+                                          <td>
+                                             <table border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Rps Definition Apc&nbsp;
+                                                      					(<a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_AR000001UV01-ar" class="">PORP_AR000001UV01</a>)
+                                                      				
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" border="0" class="inserted">
+                                       <tr>
+                                          <td>
+                                             <table border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Rps Definition Ra&nbsp;
+                                                      					(<a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_AR000002UV01-ar" class="">PORP_AR000002UV01</a>)
+                                                      				
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e3293" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Application Roles (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Applicant(<a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_AR000001UV01-ar" class="">PORP_AR000001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Regulatory Authority(<a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_AR000002UV01-ar" class="">PORP_AR000002UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3gapprole">the discussion of application roles</a> and their relationships in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection inserted">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">2.2.1</span><span class="title"><a name="PORP_AR000001UV01-ar">Applicant  (PORP_AR000001UV01) </a></span></div>
+                     <div class="body"><b>Description</b> 
+                        					
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Rps Definition Apc</em></td>
+                           </tr>
+                        </table>
+                        <p>The organization that assumes responsibility for producing documentation for the purpose of seeking approval to either start
+                           testing or market a specified product.
+                           
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection inserted">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">2.2.2</span><span class="title"><a name="PORP_AR000002UV01-ar">Regulatory Authority  (PORP_AR000002UV01) </a></span></div>
+                     <div class="body"><b>Description</b> 
+                        					<a href="../../domains/uvrp/uvrp_DO_XX.htm#PORP_AR000002UV01-ar" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a><table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Rps Definition Ra</em></td>
+                           </tr>
+                        </table>
+                        <p>The organization that reviews relevant information and has the ability to approve a product for testing or marketing.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">2.3</span><span class="title"><a name="tes-PORP_DO000001UV-Rps-ic">Trigger Events</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e350" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Trigger Events (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Regulatory Product Submission Unit Notification(<a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_TE000001UV01-te" class="">PORP_TE000001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e3502" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Trigger Events (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Rps Event Activate Notification(<a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_TE000001UV01-te" class="">PORP_TE000001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e3503" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Trigger Events (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Regulatory Product Submission Unit Notification(<a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_TE000001UV01-te" class="">PORP_TE000001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3gtrigger">the discussion of trigger events</a> in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection inserted">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">2.3.1</span><span class="title"><a name="PORP_TE000001UV01-te">Regulatory Product Submission Unit Notification  (PORP_TE000001UV01) </a></span></div>
+                     <div class="body">
+                        <div class="subheading">Description
+                           				<a href="../../domains/uvrp/uvrp_DO_XX.htm#PORP_TE000001UV01-te" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a></div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Rps Event Activate Notification</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>Type: </em></td>
+                              <td class="structType_value"><em>Interaction based</em></td>
+                           </tr>
+                        </table>
+                        <p>Applicant determines they have enough information that warrants a submission unit to a regulatory authority. The applicant
+                           can create a new submission unit, amend an existing submission or withdraw a submission.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">2.4</span><span class="title"><a name="rmims-PORP_DO000001UV-Rps-ic">Refined Message Information Models</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e361" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Refined Message Information Models (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Regulated Product Submission(<a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_RM000001UV01-rmi" class="">PORP_RM000001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e3612" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Refined Message Information Models (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Rps Event(<a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_RM000001UV01-rmi" class="">PORP_RM000001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e3613" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Refined Message Information Models (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Regulated Product Submission(<a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_RM000001UV01-rmi" class="">PORP_RM000001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3grmim">the description of RMIMs</a> in the Version 3 Guide.
+                  </p>
+                  <p></p>
+                  <div class="subSubSection inserted">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">2.4.1</span><span class="title"><a name="PORP_RM000001UV01-rmi">Regulated Product Submission  (PORP_RM000001UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/PORP_RM000001UV.htm" target="_blank"><img class="graphic" src="editable/images/T-PORP_RM000001UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><div class="subheading">Description</div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><b><em>Parent:  </em></b></td>
+                              <td class="structType_value"><em>None Specified</em></td>
+                           </tr>
+                        </table>
+                        <p><strong>Security, Confidentiality, and Data Integrity</strong></p>
+                        <p>Application systems sending and receiving documents are responsible for meeting all legal requirements for document authentication,
+                           confidentiality, and retention. For communications over public media, cryptographic techniques for source/recipient authentication
+                           and secure transport of encapsulated documents may be required, and should be addressed with commercially available tools
+                           outside the scope of this standard.
+                        </p>
+                        <p><strong>Document Identification, Revisions, and Addenda </strong></p>
+                        <p>An original report is the first version of a report. It gets a new unique value for ContextOfUse.id, a new value for ContextOfUse.setId,
+                           and has the value of ContextOfUse.versionNumber set to equal "1". 
+                        </p>
+                        <p>An addendum is an appendage to an existing report that contains supplemental information. The appendage is itself an original
+                           report, as described in the previous paragraph. The related report being appended is referenced via an ActRelationship, where
+                           the ActRelationship.typeCode is set to equal "APND" (for "appends"). The related report being appended remains in place and
+                           its content and status are unaltered. If the related report is subsequently replaced, the addendum will then be associated
+                           with the most current related report in the related report set (see setId). If a new report replaces both the previous report
+                           and the addendum, the ContextOfUse.setId will be the same as the previous reports ContextOfUse.setId and will have an ActRelationship.typeCode
+                           is set to equal "RPLC" (for "replace") for both the previous report and the addendum.
+                        </p>
+                        <p>A replacement report replaces an existing report. The replacement report gets a new globally unique ID value, while the replacement
+                           report uses the same value for ContextOfUse.setId as the related report being replaced, and increments the value of ContextOfUse.versionNumber
+                           by 1. (Note that version number must be incremented by one when a report is replaced, but can also be incremented more often
+                           to meet local requirements.) The related report is considered superseded, but is still retained in the system for historical
+                           reference. The related report being replaced is referenced via an ActRelationship, where the ActRelationship.typeCode is set
+                           to equal "RPLC" (for "replaces").
+                        </p>
+                        <p>These relationships are summarized in the following illustration: </p>
+                        <p><br /><img class="graphic" src="graphics/DocLifecycle.gif" alt="DocLifecycle.gif" /><br /></p>
+                        <p><strong>Context of Use (Document) Statuses and Transitions </strong></p>
+                        <p>A context of use is a file that is being referenced in a particular submission unit with a particular code value. The same
+                           file can have several context of use. Accordingly, it is possible that each context of use of the same file has different
+                           statuses. In addition, a context of use is associated to a submission through a submission unit. Thus, it is possible to query
+                           all active documents in a approved submission.
+                        </p>
+                        <p>Documents only assume a subset of the states that other Acts can take on. When a document is released to regulatory authorities,
+                           its status becomes "active". Documents that are "active" are rendered "obsolete" when they are replaced with a revision. A
+                           document can also be rendered "obsolete"by a status change. If a document is rendered "obsolete", that document can be reactivated.
+                           Obsolete documents cannot be revised.
+                        </p>
+                        <p>In a later phase an active document will end its life when the submission that document belongs to has come to a conclusion.</p>
+                        <p><br /><img class="graphic" src="graphics/DocStates.gif" alt="DocStates.gif" /><br /></p>
+                        <p><strong>Submission Statuses and Transitions</strong></p>
+                        <p>Submissions only assume a subset of the states that other Acts can take on. When a submission is released to regulatory authorities,
+                           its status becomes "active" or "In Review". Since the current specification only supports communication from applicant to
+                           regulatory authority, only withdrawing and activating a submission is currently supported.
+                        </p>
+                        <p>In the future, submissions will have the extra states of approvable, not approvable, and approved.</p>
+                        <p><br /><img class="graphic" src="graphics/SubmissionStates.gif" alt="SubmissionStates.gif" /><br /></p>
+                        <p><strong>Submission Interaction</strong></p>
+                        <p>For the scope of this project, all communication from applicant to regulatory authority are in the form of a submission. Note:
+                           the current specification does not support a message from the regulatory authority to applicant.
+                        </p>
+                        <p>Applicant determines it has enough information to warrant sending a submission to a regulatory authority. The applicant can
+                           create a new submission, amend an existing submission or withdraw a submission.
+                        </p>
+                        <p><br /><img class="graphic" src="graphics/SubmissionInteract.gif" alt="SubmissionInteract.gif" /><br /></p>
+                        <p><strong>ContextOfUse Codes</strong></p>
+                        <p>A document's content is defined by one or more topic codes (e.g. Manufacturer, Introduction, Summary, etc.). The combinations
+                           of these topic codes are well defined by product types. A single topic code can be used in different context. For example,
+                           in human therapeutic products the combination of the topic codes Chemistry, Drug substance, Manufacturer is a valid document
+                           context. If Chemistry has a topic code of 35, Drug substance has a topic code of 71, and Manufacturer has a topic code of
+                           140, then the combination of Chemistry, Drug substance, and Manufacturer would have a ContextOfUse code of 35-71-140. In addition,
+                           if Drug Product has a topic code of 70, then the combination of Chemistry, Drug Product, and Manufacturer would have a ContextOfUse
+                           code of 35-70-140.
+                        </p>
+                        <p>In addition the same ContextOfUse code can be used for multiple products. For example the combination of Chemistry, Drug substance,
+                           and Manufacturer would be a valid ContextOfUse code for both Human Therapeutic products as well as Animal Products.
+                        </p>
+                        <p>It is also common that different product types will use different combinations of the same topic code. For example a Medical
+                           Device product would have a ContextOfUse code that specifies a Cover Letter. However, a Human Therapeutic product would have
+                           a ContextOfUse code that would combine the topic codes of both Administrative and Cover Letter.
+                        </p>
+                        <p><strong>Model Overview</strong></p>
+                        <p>As industry moves away from paper submissions, all companies producing regulated products will benefit from having published
+                           electronic submission standards. Accordingly, the focus of the initial message allows applicants to submit information electronically.
+                           The submitted information is structured as a collection of documents that is organized by report sections.  The actual table
+                           of required and optional report sections varies from product to product and is defined by regulatory authorities.
+                        </p>
+                        <p>Submitted documents are assigned to support one or more report sections. Furthermore, multiple documents can be assigned to
+                           a single report section. Since the same information can be submitted to support multiple applications, it is imperative that
+                           this standard allows the re-use of data between applications. Re-using data is accomplished by using the Uniform Resource
+                           Locator scheme (through the reference property of the ED datatype that is assigned to Act.text) in the File Act. The URL scheme
+                           allows the file in one application to provide a reference to a document that was submitted in another application.
+                        </p>
+                        <p>A single document can be in multiple report sections of an application and can also be in multiple applications. For this
+                           reason, we have defined the ContextOfUse Act which provides the relationship of a document to a report section.  Since a submission
+                           unit can contain multiple ContextOfUse, this class can be used to indicates each assignment of a document to a section.  Looking
+                           across multiple submissions, it is possible to record a single document's context in multiple applications as needed.
+                        </p>
+                        <p>Since this message is primarily focused on document management, it would seem that the ContextOfUse Act would be the obvious
+                           choice to the entry point of this message. However, applicants transmit information to regulatory authorities in the form
+                           of submission units containing multiple ContextOfUse. These submission units support the overall application. Accordingly,
+                           the entry point for this message is the Submission Unit Act.
+                        </p>
+                        <p><strong>Domain Model Walk-Through</strong></p>
+                        <p><strong>SubmissionUnit</strong></p>
+                        <p>A collection of documents submitted at a particular point in time in order to further the granting of a submission.</p>
+                        <p><em>Attributes</em></p>
+                        <ul>
+                           <li>
+                              <p>SubmissionUnit.ID: The unique identifier that is used to refer to this act 		</p>
+                           </li>
+                           <li>
+                              <p>SubmissionUnit.code: The code specifying the particular kind of submission unit (e.g. Original, Amendment, Supplement). 		</p>
+                           </li>
+                           <li>
+                              <p>SubmissionUnit.statusCode: A submission unit is either active or null. 		</p>
+                           </li>
+                        </ul>
+                        <p><em>Relationships</em></p>
+                        <ul>
+                           <li>
+                              <p>Submission: This clone defines the organization of the submission unit. A submission unit either pertains to one or more Submissions
+                                 or pertains to one or more Reviewable Units. For example, an annual report submission unit can apply to multiple applications.
+                                 Therefore, the applicant will create one submission unit and associate that unit to multiple submissions. 		
+                              </p>
+                           </li>
+                           <li>
+                              <p>ReviewableUnit: A reviewable unit is a way to organize several submission units so they are reviewed as an independent unit
+                                 within a submission. A submission unit either pertains to one or more Submissions or pertains to one or more Reviewable Units.
+                                 		
+                              </p>
+                           </li>
+                           <li>
+                              <p>ContextOfUse: A submission unit contains zero to many ContextOfUse. The ContextOfUse Act contains most of the supporting information
+                                 to help further the granting of an application. Two ContextOfUse Acts with the same Code can be sorted by priorityNumber.
+                                 When the applicant administratively changes the status of the submission to obsolete, the applicant would create a submission
+                                 unit message with no context of use.
+                              </p>
+                           </li>
+                        </ul>
+                        <p><strong>Submission</strong></p>
+                        <p>The submission is a way to organize an application into discrete units. Most typically the submission will be used to organize
+                           information based on a review clock. Receipt date from the regulatory authority is important for a submission. Since the message,
+                           at this time, is only from applicant to regulatory authority, submission does not have a date attribute.
+                        </p>
+                        <p><em>Attributes</em></p>
+                        <ul>
+                           <li>
+                              <p>Submission.id: The unique identifier that is used to refer to this act 		</p>
+                           </li>
+                           <li>
+                              <p>Submission.Code: The code specifying the particular kind of submission (e.g. Original, Supplement, Annual report). 		</p>
+                           </li>
+                           <li>
+                              <p>Submission.statusCode: A submission is either active or null. In the future we plan on extending the status code to reflect
+                                 the approval status of the submission. 		
+                              </p>
+                           </li>
+                        </ul>
+                        <p><em>Relationships</em></p>
+                        <ul>
+                           <li>
+                              <p>SubmissionUnit: The submission can be related to one or more submission units or one or more reviewable units. The submission
+                                 unit can have a default order, the priorityNumber, used in the relationship to a submission. Note: There is a harmonization
+                                 proposal to change priorityNumber from the value type of INT to REAL. The REAL value type will allow the applicant to order
+                                 a submission unit between two other previously submitted submission units. 		
+                              </p>
+                           </li>
+                           <li>
+                              <p>ReviewableUnit: The submission can be related to one or more submission units or one or more reviewable units. 		</p>
+                           </li>
+                           <li>
+                              <p>Application: Each submission organizes information for a single application. 		</p>
+                           </li>
+                        </ul>
+                        <p><strong>ReviewableUnit</strong></p>
+                        <p>The reviewable unit is a way to organize a submission into discrete units. Each reviewable unit can have a status. A reviewable
+                           unit performs similar to submission.
+                        </p>
+                        <p><em>Attributes</em></p>
+                        <ul>
+                           <li>
+                              <p>ReviewableUnit.id: The unique identifier that is used to refer to this act 		</p>
+                           </li>
+                           <li>
+                              <p>ReviewableUnit.Code: The code specifying the particular kind of submission (e.g. Original, Supplement, Annual report). 		</p>
+                           </li>
+                           <li>
+                              <p>ReviewableUnit.statusCode: A submission is either active or null. In the future we plan on extending the status code to reflect
+                                 the approval status of the submission. 		
+                              </p>
+                           </li>
+                        </ul>
+                        <p><em>Relationships</em></p>
+                        <ul>
+                           <li>
+                              <p>SubmissionUnit: The submission can be related to one or more submission units or one or more reviewable units. The submission
+                                 unit can have a default order, the priorityNumber, used in the relationship to a submission. Note: There is a harmonization
+                                 proposal to change priorityNumber from the value type of INT to REAL. The REAL value type will allow the applicant to order
+                                 a submission unit between two other previously submitted submission units. 		
+                              </p>
+                           </li>
+                           <li>
+                              <p>Submission: Each reviewable unit organizes information for a single submission. 		</p>
+                           </li>
+                        </ul>
+                        <p><strong>Application</strong></p>
+                        <p>A request for approval to either market a product or to allow the applicant to start testing of a proposed product.</p>
+                        <p><em>Attributes</em></p>
+                        <ul>
+                           <li>
+                              <p>Application.id: The unique identifier that is used to refer to this act 		</p>
+                           </li>
+                           <li>
+                              <p>Application.code: The code specifying the particular kind of application (e.g. New Drug Application, 510k, Veterinary New
+                                 Drug Submission). Each product type will be supported by a different application code. 		
+                              </p>
+                           </li>
+                           <li>
+                              <p>Application.statusCode: An application is either active or null. 		</p>
+                           </li>
+                        </ul>
+                        <p><em>Relationships</em></p>
+                        <ul>
+                           <li>
+                              <p>Submission: There are zero to many submissions that contain information for an application. 		</p>
+                           </li>
+                           <li>
+                              <p>KeywordDefinition: An application has zero to many keywords that can be used to make a KeywordDefinition. 		</p>
+                           </li>
+                           <li>
+                              <p>File: An application can have zero to many files that can be referenced by a ContextOfUse Act. Once a file has been established
+                                 any submission unit in any application to refer to that file. 		
+                              </p>
+                           </li>
+                        </ul>
+                        <p><strong>File</strong></p>
+                        <p>The File Act defines the submitted document in a submission unit.</p>
+                        <p><em>Attributes</em></p>
+                        <ul>
+                           <li>
+                              <p>File.id: The unique identifier that is used to refer to this act 		</p>
+                           </li>
+                           <li>
+                              <p>File.text: The File.text attribute uses an encapsulated data (ED) type. The components of this data type will be used to transmit
+                                 a document's URL (ED.reference), a document format or media type (ED.type). In addition, the ED type can be used to transmit
+                                 the document itself (ED.BIN). However, this message will not allow the use of the ED.BIN attribute. To allow document re-use
+                                 it is important that each file is transmitted separately from this message. The mechanism for packaging an HL7 Clinical Document
+                                 Architecture (CDA) document in File.text is described in the CDA specification.
+                              </p>
+                           </li>
+                        </ul>
+                        <p><em>Relationships</em></p>
+                        <ul>
+                           <li>
+                              <p>Application: A file can be submitted in an application. Although that file can be reused within this application and in other
+                                 application, please refer to specific implementation guide on how to reuse documents. There can be zero to many Files within
+                                 an Application. For example, if a submission status is changed to obsolete no files will be submitted. 		
+                              </p>
+                           </li>
+                        </ul>
+                        <p><strong>FileReference</strong></p>
+                        <p>A file can be used many times. Each time the file is used, that file has a different context of use. Accordingly, each context
+                           of use must refer to one file. 	 		
+                        </p>
+                        <p><em>Attributes</em></p>
+                        <ul>
+                           <li>
+                              <p>FileReference.id: This is the same id that is used in the File Act.</p>
+                           </li>
+                        </ul>
+                        <p><em>Relationships</em></p>
+                        <ul>
+                           <li>
+                              <p>ContextOfUse: A context of use reference one file. In the case that a context of use is being made obsolete, there is no need
+                                 for a file reference. 		
+                              </p>
+                           </li>
+                        </ul>
+                        <p><strong>Keyword</strong></p>
+                        <p>A Keyword is a reference to the KeywordDefinition Act. One or more Keywords can be associated to a contect of use.</p>
+                        <p><em>Attributes</em></p>
+                        <ul>
+                           <li>
+                              <p>Keyword.id: Reference to the KeywordDefinition.id. This field should only be used if there is not coding system equivalent
+                                 		
+                              </p>
+                           </li>
+                           <li>
+                              <p>Keyword.code: Used if the keyword is from a coding system not from keyword definition. 		</p>
+                           </li>
+                        </ul>
+                        <p><em>Relationships</em></p>
+                        <p><strong>KeywordDefinition</strong></p>
+                        <p>A keyword definition contains name value pairs that are used within the context of an application.  Each keyword is an item
+                           of information that provides context for the document(s) in a context of use.  Keywords are used only to further define the
+                           context of a ContextOfUse, and the Keywords, by themselves, have no intrinsic value. Since one of the goals of this message
+                           was to create one message structure that can be used for all regulated product types, we decided not model individual keywords
+                           or keyword groups as classes and relate these classes to specific ContextOfUse codes.
+                        </p>
+                        <p><em>Attributes</em></p>
+                        <ul>
+                           <li>
+                              <p>KeywordDefinition.id: The unique identifier that is used to refer to this act 		</p>
+                           </li>
+                           <li>
+                              <p>KeywordDefinition.code: The type of Keyword (e.g., Manufacture, Dosage Form, Rout of Admin) 		</p>
+                           </li>
+                           <li>
+                              <p>KeywordDefinition.statusCode: Active or nullified. 		</p>
+                           </li>
+                           <li>
+                              <p>KeywordDefinition.effectiveTime: Signifies the keyword's creation time, when the keyword first came into being. 		</p>
+                           </li>
+                           <li>
+                              <p>KeywordDefinition.value: The value of the KeywordDefination.code 		</p>
+                           </li>
+                        </ul>
+                        <p><em>Relationships</em></p>
+                        <ul>
+                           <li>
+                              <p>Application: A Keyword can be used in one to many context of use. 		</p>
+                           </li>
+                           <li>
+                              <p>PreviousKeywordDefinition: This clone represents the source of a replacement relationship. One can only replace another KeywordDefinition.
+                                 When the KeywordDefination is replaced, that KeywordDefinition is obsolete; therefore, that KeywordDefiniation cannot be used
+                                 in a context of use. 		
+                              </p>
+                           </li>
+                        </ul>
+                        <p><strong>PreviousKeywordDefinition</strong></p>
+                        <p>PreviousKeywordDefinition is used to replace an existing KeywordDefination. Once a KeywordDefinition is replaces, that KeywordDefination
+                           can no longer be associated with a context of use.
+                        </p>
+                        <p><em>Attributes</em></p>
+                        <ul>
+                           <li>
+                              <p>PreviousKeywordDefination.id: Reference to the KeywordDefinition.id. 		</p>
+                           </li>
+                        </ul>
+                        <p><em>Relationships</em></p>
+                        <ul>
+                           <li>
+                              <p>KeywordDefinition: This clone represents the target of a replacement relationship. One can only replace another KeywordDefinition.
+                                 		
+                              </p>
+                           </li>
+                        </ul>
+                        <p><strong>ContextOfUse</strong></p>
+                        <p>The ContextOfUse Act defines the use of the submitted document in the context of a submission unit. The document and its assignment
+                           to a particular code will be used to create a table of contents. This table of contents will be used by Regulatory Authorities
+                           to review an application. Based on regional guidance, a document can be submitted once and be referred to by other ContextOfUse's
+                           text attribute in the same submission unit, different submission unit for the same application, or different submission units
+                           in a different application.
+                        </p>
+                        <p><em>Attributes</em></p>
+                        <ul>
+                           <li>
+                              <p>ContextOfUse.id: The unique identifier that is used to refer to this act 		</p>
+                           </li>
+                           <li>
+                              <p>ContextOfUse.code: The code that specifies how the file is to be used within the submission process (e.g. Protocol, Summary
+                                 Introduction). Note: ContextOfUse codes vary between different product types. 		
+                              </p>
+                           </li>
+                           <li>
+                              <p>ContextOfUse.title: The title for the document in the associated assignment. 		</p>
+                           </li>
+                           <li>
+                              <p>ContextOfUse.statusCode: See section "Document Identification, Revisions, and Addenda" 		</p>
+                           </li>
+                           <li>
+                              <p>ContextOfUse.setId: See section "Document Identification, Revisions, and Addenda" 		</p>
+                           </li>
+                           <li>
+                              <p>ContextOfUse.versionNumber: See section "Document Identification, Revisions, and Addenda" 		</p>
+                           </li>
+                        </ul>
+                        <p><em>Relationships</em></p>
+                        <ul>
+                           <li>
+                              <p>RelatedContextOfUse: This clone represents the source of a document relationship. The target is either being appended, revised,
+                                 or transformed by the source document. One ContextOfUse can be the targets for many ParentContextOfUses. See section "Document
+                                 Identification, Revisions, and Addenda" 		
+                              </p>
+                           </li>
+                           <li>
+                              <p>SubmissionUnit: RelatedContextOfUses is the components of the submission unit. There can be one or more ContextOfUses within
+                                 a submission unit. 		
+                              </p>
+                           </li>
+                           <li>
+                              <p>Keyword: A ContextOfUse can be further defined, based on the ContextOfUse.code attribute, by zero to many Keywords. This is
+                                 used to determine additional attributes of the document. (e.g., a document that is associated with a particular Study or Manufacturer).
+                                 Only certain, well defined, ContextOfUse.code can be associated to a particular Keyword. 		
+                              </p>
+                           </li>
+                           <li>
+                              <p>FileReference: A ContextOfUse refers to a File through the FileReference. Accordingly every ContextOfUse, must have one and
+                                 only one FileReference. 		
+                              </p>
+                           </li>
+                        </ul>
+                        <p><strong>RelatedContextOfUse</strong></p>
+                        <p>A ParentContextOfUse provides a relationship between a ContextOfUse and ContextOfUse that was recorded previously. See section
+                           "Document Identification, Revisions, and Addenda"
+                        </p>
+                        <p><em>Attributes</em></p>
+                        <ul>
+                           <li>
+                              <p>RelatedContextOfUse.id: Reference to the ContextOfUse.id 		</p>
+                           </li>
+                           <li>
+                              <p>ReleatedContextOfUse.versionNumber: See section "Document Identification, Revisions, and Addenda" 		</p>
+                           </li>
+                        </ul>
+                        <p><em>Relationships</em></p>
+                        <ul>
+                           <li>
+                              <p>sequelTo: Relates RelatedContextOfUse to the ContextOfUse and defines the sequence order of the ContextOfUse Act. 		</p>
+                           </li>
+                           <li>
+                              <p>ContextOfUse: This clone represents the target of a document relationship.One ContextOfUse be associated with zero to many
+                                 RelatedContextOfUses. 		
+                              </p>
+                           </li>
+                        </ul>
+                        <p></p>
+                        <table class="artifactList">
+                           <caption>Contained Hierarchical Message Descriptions</caption>
+                           <tr class="inserted">
+                              <td class="artifactList_desc">Rps Event Activate</td>
+                              <td class="artifactList_code"><a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_HD000001UV01-hmd" class="">PORP_HD000001UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">2.5</span><span class="title"><a name="hmds-PORP_DO000001UV-Rps-ic">Hierarchical Message Descriptions</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e743" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Hierarchical Message Descriptions (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Regulated Product Submission(<a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_HD000001UV01-hmd" class="">PORP_HD000001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e7432" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Hierarchical Message Descriptions (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Rps Event Activate(<a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_HD000001UV01-hmd" class="">PORP_HD000001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e7433" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Hierarchical Message Descriptions (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Regulated Product Submission(<a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_HD000001UV01-hmd" class="">PORP_HD000001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <p></p>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3ghmd">the description of HMDs</a> in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection inserted">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">2.5.1</span><span class="title"><a name="PORP_HD000001UV01-hmd">Regulated Product Submission  (PORP_HD000001UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Description</b></div>
+                        <p>This is the HMD for the Regulated Product Submission, submission units message.</p>
+                        <p>At this time there is no content for this section.</p>
+                        <p></p>
+                        <div class="subheading">Base Hierarchical Message Description
+                           				<a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_RM000001UV01-rmi" class=""><img src="../../support/graphics/rmimview.gif" alt="View R-MIM" height="16" width="16" style="border-width:0" /></a> 
+                           				<a href="../../domains/uvrp/editable/PORP_HD000001UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="editable/PORP_HD000001UV.xls" target="_blank"><img src="../../support/graphics/excelview.gif" height="16" width="16" alt="Excel View" style="border:0px" /></a> 
+                        </div>
+                        <table class="hmd">
+                           <caption>Message Type List</caption>
+                           <tr class="inserted">
+                              <td class="hmd_desc"><a name="PORP_MT000001UV01-msg"></a>Rps Event Activate
+                              </td>
+                              <td class="hmd_code">PORP_MT000001UV01</td>
+                              <td class="hmd_links"><a href="../../domains/uvrp/editable/PORP_HD000001UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="../../processable/multicacheschemas/PORP_MT000001UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> <a href="../../domains/uvrp/uvrp_DO_XX.htm#PORP_MT000001UV01-msg" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a>
+                                 										 
+                                 									
+                                 
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">2.6</span><span class="title"><a name="ints-PORP_DO000001UV-Rps-ic">Interactions</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e764" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> List of Interactions (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Submission Unit sent(<a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_IN000001UV01-int" class="">PORP_IN000001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e7642" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> List of Interactions (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Rps Event Activate Notification(<a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_IN000001UV01-int" class="">PORP_IN000001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e7643" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> List of Interactions (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Submission Unit sent(<a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_IN000001UV01-int" class="">PORP_IN000001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <p></p>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3gintact">the definition of Interactions</a> in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection inserted">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">2.6.1</span><span class="title"><a name="PORP_IN000001UV01-int">Submission Unit sent  (PORP_IN000001UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">Description <a href="../../processable/multicacheschemas/PORP_IN000001UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                        </div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Rps Event Activate Notification</em></td>
+                           </tr>
+                        </table>
+                        <p>The submission unit is sent from the application to the regultory authority</p>
+                        <p></p>
+                        <table class="interact">
+                           <tr class="inserted">
+                              <td class="interact_type"><b>Trigger Event</b></td>
+                              <td class="interact_desc">Regulatory Product Submission Unit Notification</td>
+                              <td class="interact_code"><a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_TE000001UV01-te" class="">PORP_TE000001UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Transmission Wrapper</b></td>
+                              <td class="interact_desc">Send Message Payload</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_GenericMessageTransmission.htm#MCCI_MT000100UV01-msg" class="">MCCI_MT000100UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Control Act Wrapper</b></td>
+                              <td class="interact_desc">Trigger Event Control Act</td>
+                              <td class="interact_code"><a href="../../domains/uvai/uvai_TriggerEventControlAct.htm#MCAI_MT700201UV01-msg" class="">MCAI_MT700201UV01</a></td>
+                           </tr>
+                           <tr class="inserted">
+                              <td class="interact_type"><b>Message Type</b></td>
+                              <td class="interact_desc">Regulated Product Submission MT</td>
+                              <td class="interact_code"><a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_MT000001UV01-msg" class="">PORP_MT000001UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="interact">
+                           <caption>Sending and Receiving Roles</caption>
+                           <tr class="inserted">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Regulatory Authority</td>
+                              <td class="interact_code"><a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_AR000002UV01-ar" class="">PORP_AR000002UV01</a></td>
+                           </tr>
+                           <tr class="inserted">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Regulatory Authority</td>
+                              <td class="interact_code"><a href="../../domains/uvrp/uvrp_RegulatedProductSubmission.htm#PORP_AR000002UV01-ar" class="">PORP_AR000002UV01</a></td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <p></p>
+               </div>
+            </div>
+            <p>
+               <table>
+                  <tbody>
+                     <tr>
+                        <td><a class="custombutton" href="#top">Return to top of page</a></td>
+                     </tr>
+                  </tbody>
+               </table>
+            </p>
+         </div>
+      </div>
+   </body>
+</html>

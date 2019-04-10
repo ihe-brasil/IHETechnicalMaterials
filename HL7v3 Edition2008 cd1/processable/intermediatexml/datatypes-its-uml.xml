@@ -1,0 +1,310 @@
+<!DOCTYPE spec SYSTEM "../../support/dtd/v3m.dtd">
+<spec xmlns:xlink="http://www.w3.org/TR/WD-xlink">
+	<header>
+		<title>UML Implementation Technology Specification - Data Types</title>
+		<version>1.0</version>
+		<ballot type="NormativeStandard" number="1"/>
+		<date>December 2003</date>
+		<authlist>
+			<author>
+				<role>Editor</role>
+				<name>Grahame Grieve</name>
+				<affiliation>Kestral Computing Pty. Ltd.</affiliation>
+				<email href="grahame@kestral.com.au" xlink-form="simple" show="embed" actuate="auto"/>
+			</author>
+			<author>
+				<role>Editor</role>
+				<name>Gunther Schadow</name>
+				<affiliation>Regenstrief Institute for Health Care</affiliation>
+				<email href="gunther@aurora.rg.iupui.edu" xlink-form="simple" show="embed" actuate="auto"/>
+			</author>
+		</authlist>
+	</header>
+	<front>
+		<div1 id="ack">
+			<head>Acknowledgements</head>
+			<p>
+Many individuals have contributed to the existence and content of this
+specification. The editors would like to thank Thomas Beale (Deepthought
+Informatics) for modeling assistance; Mark Shafarman (Oracle), Charlie
+Mead (Oracle), Dale Nelson (ZedLogic), Dipak Kalra (UCL, OpenEHR) and
+Tom Marley (Salford University, CEN) for ideas and encouragement, and
+Bob Greenes and Margarita Sordo (Harvard Medical School) for breaking
+this ground with the GELLO work.
+  </p>
+		</div1>
+		<div1 id="outstanding">
+			<head>Outstanding Issues</head>
+			<list role="unordered">
+				<item>
+					<p>
+    CEN Request: differentiate between intrinsic and derived properties
+    </p>
+				</item>
+				<item>
+					<p>
+    GELLO Requirement: Creating data types in queries. This is intended to be
+    handled by defining an operation with a class scope for each type. The
+    operation will take as a parameter a literal representation of the data
+    type. This requirement will be handled in the next version of this specification
+    </p>
+				</item>
+			</list>
+		</div1>
+	</front>
+	<body>
+		<div1 id="intro" ballotStatus="NormativeStandard">
+			<head>Introduction</head>
+			<div2 id="why">
+				<head>Why have a Data Types UML ITS?</head>
+				<p>
+The Abstract Data Types specification defines the semantics of the HL7
+Data Types, which are the foundation of all HL7 Version 3 artifacts,
+including the Reference Information Model (RIM), Version 3 messaging
+artifacts, and the Clinical Document Architecture (CDA). The Abstract
+Data Types specification includes a Unified Modeling Language (UML)
+diagram that presents the semantic declarations of these data types
+in a standard UML fashion. 
+   </p>
+				<p>
+This UML ITS implements the semantics of the Abstract Data Types
+specification using UML in such a way that HL7 data types are mapped
+into the core UML and OCL kernel data types where such mappings are
+appropriate. In addition, this representation uses only established
+object-orientated formalisms. Since this specification shows how to
+implement the HL7 data types using the UML core data types and
+methodology, this specification is an ITS for the data types in
+UML
+   </p>
+			</div2>
+			<div2 id="designgoals">
+				<head>Design Goals for the Data types UML ITS</head>
+				<p>The desired outcomes from this specification include:</p>
+				<list role="unordered">
+					<item>
+						<p>A formally correct UML declaration of the HL7 Data Types</p>
+					</item>
+					<item>
+						<p>Enable the use of Computer-Aided Software Engineering (CASE) tools  
+	      for model validation, code generation, instance validation, etc</p>
+					</item>
+					<item>
+						<p>Enable these same outcomes for downstream HL7 UML artifacts 
+	      such as the RIM and message structures</p>
+					</item>
+				</list>
+			</div2>
+		</div1>
+		<div1 id="designissues" ballotStatus="NormativeStandard">
+			<head>Design Issues</head>
+			<p>
+A number of design issues are confronted by any specification wishing to
+map the HL7 data types onto the UML data types.
+  </p>
+			<div2 id="umlversion">
+				<head>UML Version</head>
+				<p>
+This specification is based on the UML 2 standard. The UML version 2 is not 
+fully released but the parts that this specification rests on, primarily the 
+OCL part, have been released in their final form by the OMG 
+[<loc href="http://www.omg.org/technology/documents/modeling_spec_catalog.htm" xlink-form="simple" show="embed" actuate="auto"/>].
+   </p>
+			</div2>
+			<div2 id="dtdequiv">
+				<head>Data Type Definition Language Equivalence</head>
+				<p>
+The abstract data types specification includes many invariant statements.
+Some of these invariant statements are used to make statements about the
+mathematical functions of basic operations such as multiplication, etc.
+A number of the statements are not relevent or not reproducible in OCL 
+due to differences in approach between the 2 langauges. This specification 
+attempts to reproduce only those OCL statements that have practical 
+implications in HL7 usage.
+   </p>
+				<p>
+In addition, the abstract data types specification includes many statements
+concerning ST literals and semantic meaning, which also are not reproduced in 
+this specification. Readers should always consult the abstract data types 
+specification for a full description of the behavior of the data
+types.
+   </p>
+			</div2>
+			<div2 id="classifiers">
+				<head>Classifiers and Operations</head>
+				<p>
+All classifier and operation names are case sensitive.
+   </p>
+				<p>
+OCL declares a number of operations as infix operators. This list of
+operations applies to any HL7 types, so that if such an operation is
+declared on a tpye, it can be used as an infix operator. For example,
+the abstract specification for the HL7 INT type includes a plus() 
+operation. In this specification this is renamed to the OCL functional
+equivalent operation, which is "+", so it is valid to write a + b = c
+where a, b, and c are HL7 INT types
+   </p>
+				<p>
+In the OCL statements all operations used are shown with () according to the
+formal OCL language. In some uses and OCL implementations these are not
+required
+   </p>
+			</div2>
+			<div2 id="flavorsofnull">
+				<head>Flavors of Null</head>
+				<p>
+The HL7 Data types specification defines flavors of Null. Any data type
+may have a flavor of Null and at the same time some of it's properties
+may have a value that still has significance. OCL defines the concept
+of void which maps to the application concept of a "null" or "nil" object.
+Any object may be void, in which case any attempt to reference its properties
+will also result in void. Although both UML and the HL7 abstract data types
+define the concept of a null value with appropriate 3-valued logic, the
+intent, implications and possible implementations clearly differ.
+   </p>
+				<p>
+In choosing how to implement the data types and deal with flavors of null,
+the primary requirement was that an HL7 data type could continue to have
+flavors of null, but any attempt to access the HL7 data type at the OCL
+level would generate a void type if the HL7 type had a null value.
+   </p>
+				<p>
+The selected implementation meets these requirements. The pattern of
+implementation for HL7 types with a direct equivalent in OCL is as
+follows:
+   </p>
+				<list role="unordered">
+					<item>
+						<p>
+Declare the HL7 type using the shortname and generalization from the abstract data type specification
+     </p>
+					</item>
+					<item>
+						<p>
+Declare all properties of the OCL type in the HL7 type, but with HL7 type equivalents for parameters and return values instead of OCL types
+     </p>
+					</item>
+					<item>
+						<p>
+Add any missing operations or semantics that are declared in the HL7 type but not in the OCL type
+     </p>
+					</item>
+					<item>
+						<p>
+Add an agreggation with cardinality 0..1 to the OCL type    
+     </p>
+					</item>
+					<item>
+						<p>
+Add a constraint that states that when the HL7 type is Null, then the aggregated OCL type is void    
+     </p>
+					</item>
+				</list>
+				<p>
+Note that this may mean that the UML "implementation" of an HL7 data type
+may end up with more properties than in the abstract data type specification
+   </p>
+			</div2>
+			<div2 id="collections">
+				<head>Collections</head>
+				<p>
+The OCL Collections Sequence, Bag and Set map directly to the HL7 Data Types
+LIST, BAG and SET. There is no HL7 equivalent for OrderedSet. Any operation
+valid for an OCL collection is also valid for the HL7 Collection types. An
+abstract type "COLL" has been introduced to match the OCL type collection.
+   </p>
+				<p>
+There is a subtle difference in semantics between the OCL type "Set" and the
+HL7 SET. The HL7 SET can include non-discrete elements, but the OCL type can't.
+This specification does not deal with this issue, and implementers should be
+aware of this issue.
+   </p>
+				<p>
+Not all the correctness constraints from the OCL specification concerning the
+collection operators have been reproduced in this specification but they should 
+be assumed to apply
+   </p>
+				<p>
+The OCL Specification does not provide any guidance on the question of whether
+all UML parameterised types should be treated as collections. For the purposes
+of this ITS, any parameterised types are treated as collections by OCL
+   </p>
+			</div2>
+			<div2 id="recursivedeclarations">
+				<head>Recursive Declarations</head>
+				<p>
+Following the abstract specification, many declarations are recursive, with no
+explicit termination of the recursion. For example, ST has an operation
+language() : CS. Type CS has an operation code() : ST, etc. Where implementations
+are invoking invariants on all instances as they are encountered, this recursion
+will never terminate. Real world implementations will need to manage this recursion 
+in some appropriate fashion. 
+   </p>
+			</div2>
+			<div2 id="mixins">
+				<head>Mix-ins</head>
+				<p>
+The Abstract Data Types specification declares some data types as generic type
+extensions, also known as mix-ins. Mix-ins are generic data types that
+specialize the type of their parameter rather than containing a value of the
+parameter type. While this is a recognized pattern in object oriented
+programming, there is no standard notation for depicting this behavior in 
+the UML. In addition, this is not implemented in many current object oriented
+programming languages. For this reason, a property expressing the type
+has been used instead of a pure mix-in. 
+   </p>
+				<p>
+The mix-in types defined in this fashion have a flavor of null, but since this 
+does not exist in the abstract specification, it should not carry a null flavor
+   </p>
+				<p>
+As described above, these mix-in types are treated as collections by OCL. 
+These types carry an implicit constraint size() = 1; the have one and only 
+one element of type T
+   </p>
+			</div2>
+			<div2 id="codegeneration">
+				<head>Code Generation</head>
+				<p>
+It is intended that this notation should be suitable for code generation tools.
+To that end, an XMI file including a full declaration of the types will be
+included with future ballots.
+   </p>
+			</div2>
+		</div1>
+		<div1 id="umldiagrams" ballotStatus="NormativeStandard">
+			<head>UML Diagrams</head>
+			<div2 id="umlocldeclarations">
+				<head>The core UML / OCL kernel declarations</head>
+				<graphic source="graphics/uml-its-main.gif" alt="The core UML / OCL kernel declarations"/>
+			</div2>
+			<div2 id="corehl7datatypes">
+				<head>Core HL7 Data types</head>
+				<graphic source="graphics/uml-its-core.gif" alt="Core HL7 Data types"/>
+			</div2>
+			<div2 id="textmultimedia">
+				<head>Text / Multimedia Types</head>
+				<graphic source="graphics/uml-its-text.gif" alt="Coded Data Types"/>
+			</div2>
+			<div2 id="codeddata">
+				<head>Coded Data Types</head>
+				<graphic source="graphics/uml-its-cd.gif" alt="Coded Data Types"/>
+			</div2>
+			<div2 id="assortedothers">
+				<head>Assorted other types - Names, Identifiers, and Locations</head>
+				<graphic source="graphics/uml-its-names.gif" alt="Names, Identifiers, and Locations"/>
+			</div2>
+			<div2 id="quantitytypes">
+				<head>Quantity Types</head>
+				<graphic source="graphics/uml-its-qty.gif" alt="Quantity Types"/>
+			</div2>
+			<div2 id="generictypes">
+				<head>Generic Types</head>
+				<graphic source="graphics/uml-its-generics.gif" alt="Generic Types"/>
+			</div2>
+			<div2 id="mixinsgenerictypeextensions">
+				<head>Mix-ins (Generic Type Extensions)</head>
+				<graphic source="graphics/uml-its-mixins.gif" alt="Mix-ins (Generic Type Extensions)"/>
+			</div2>
+		</div1>
+	</body>
+</spec>

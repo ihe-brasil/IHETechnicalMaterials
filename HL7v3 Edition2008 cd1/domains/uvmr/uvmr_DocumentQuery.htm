@@ -1,0 +1,1362 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:exslt="http://exslt.org/common">
+   <head>
+      <title>Domain: Medical Records - Document Query Topic</title>
+      <link rel="stylesheet" type="text/css" href="../../support/css/v3m.css" title="v3m" /><script src="../../support/js/tree.js" type="text/javascript"></script><script src="../../support/js/setTopFrameText.js" type="text/javascript"></script><script src="../../support/js/swapcss.js" type="text/javascript"></script><script type="text/javascript">
+				if (find('heading')) setHeadingTextFromFileName(document.location.href,"Document Query Topic");
+			</script></head>
+   <body>
+      <div class="section">
+         <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">3</span><span class="title"><a name="RCMR_DO000010UV-Query-ic">Document Query Topic</a></span><table cellspacing="0" cellpadding="3" border="1">
+               <tr>
+                  <td align="center"><img src="../../support/graphics/dstulogo.gif" alt="DSTU" /><br />HL7 V3 RCMR, R2-2006<br />HL7 Version 3 Standard: Medical Records/Information Management, Release 2<br />2006<img width="5" alt="spacer" src="../../support/graphics/spacer.gif" /></td>
+               </tr>
+            </table>
+         </div>
+         <div class="body">
+            <table>
+               <tbody>
+                  <tr>
+                     <td><a class="custombutton" href="uvmr.htm#contents">Return to Domain Table of Contents</a></td>
+                  </tr>
+                  <tr>
+                     <td colspan="2">
+                        <p class="lastEdit">Content Last Edited: 2006-06-18T13:27:53</p>
+                     </td>
+                  </tr>
+               </tbody>
+            </table><br /><div class="toc"><span>3.1  <a href="#sbs-RCMR_DO000010UV-Query-ic">Storyboards</a><br /></span><span>3.2  <a href="#tes-RCMR_DO000010UV-Query-ic">Trigger Events</a><br /></span><span>3.3  <a href="#rmims-RCMR_DO000010UV-Query-ic">Refined Message Information Models</a><br /></span><span>3.4  <a href="#hmds-RCMR_DO000010UV-Query-ic">Hierarchical Message Descriptions</a><br /></span><span>3.5  <a href="#ints-RCMR_DO000010UV-Query-ic">Interactions</a><br /></span></div>
+            <div class="heading"><br /><b class="heading">Introduction</b></div>
+            <p>This topic defines the Document Query transaction set. It supports the ability to query a document directory or repository
+               using a Query-by-Parameter model, whose parameters are based on the <a href="../../domains/uvmr/uvmr.htm#RCMR_DM000050UV-rmi" class="">Medical Records domain model</a>. A query message can request document metadata with or without the corresponding document(s). A query response can contain
+               one or more documents, and will include document metadata with or without the corresonding document(s) depending on the query.
+            </p>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">3.1</span><span class="title"><a name="sbs-RCMR_DO000010UV-Query-ic">Storyboards</a></span><hr class="sectionrule" />
+               </div>
+               <div class="body">
+                  <p><a href="#">Go To Top</a></p>
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e1792" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Storyboards (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Integrated Care Adverse Drug Event Monitoring(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_ST000020UV01-str" class="">RCMR_ST000020UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">National Health Data Repository(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_ST000019UV01-str" class="">RCMR_ST000019UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e17922" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Storyboards (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Adverse Drug Event(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_ST000020UV01-str" class="">RCMR_ST000020UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Health Data Repository(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_ST000019UV01-str" class="">RCMR_ST000019UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e17923" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Storyboards (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Integrated Care Adverse Drug Event Monitoring(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_ST000020UV01-str" class="">RCMR_ST000020UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">National Health Data Repository(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_ST000019UV01-str" class="">RCMR_ST000019UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3gstory">the storyboard discussion</a> in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">3.1.1</span><span class="title"><a name="RCMR_ST000020UV01-str">Integrated Care Adverse Drug Event Monitoring  (RCMR_ST000020UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Purpose</b></div>This scenario illustrates using the query message to pull documents meeting certain criteria so that they can be subjected
+                        to further research and analysis - in this case looking for adverse drug effects.
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><img class="graphic" src="graphics/RCMR_ST000020UV01.gif" alt="RCMR_ST000020UV01.gif" /><p></p><a name="RCMR_ST000020UV01-str"></a><table class="artifactList">
+                           <caption><b>Interaction List</b></caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Find Document Metadata Query</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/RCMR_IN000029UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_IN000029UV01-int" class="">RCMR_IN000029UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="artifactList_desc">Find Document Metadata Response</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/RCMR_IN000030UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_IN000030UV01-int" class="">RCMR_IN000030UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="artifactList_desc">Find Document Metadata and Content Query</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/RCMR_IN000031UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_IN000031UV01-int" class="">RCMR_IN000031UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="artifactList_desc">Find Document Metadata and Content Response</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/RCMR_IN000032UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_IN000032UV01-int" class="">RCMR_IN000032UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <div class="subSubSubSection">
+                           <div class="header"><span class="icon"> </span><span class="number">3.1.1.1</span><span class="title"><a name="RCMR_ST000020UV01-RCMR_SN000920UV01-stex">Integrated Care Adverse Drug Event Monitoring (RCMR_SN000920UV01) </a></span></div>
+                           <div class="body">
+                              <p>HospitalOne has just completed a survey with the Joint Commission on the Accreditation of Healthcare Organizations (JCAHO).
+                                 In the survey findings, the JCAHO surveyor made a recommendation to HospitalOne to consider improving their process of identifying
+                                 and preventing adverse drug events by implementing a data analysis process for examining clinical documentation of patients
+                                 found to be on both inhaled corticosteroids and oral beta-blockers. The surveyor recommended that the analysis not simply
+                                 focus on documentation that HospitalOne held within its own electronic medical record system (EMR), but also of the electronic
+                                 health record system that existed at the level of the Integrated Delivery Network (IDN) that HospitalOne belonged to. Such
+                                 an analysis process would allow HospitalOne to better control the risk of future adverse events, and enable stronger compliance
+                                 to, for instance, the US Improving Organization Performance accreditation standards PI.3.10 and PI.3.20.
+                              </p>
+                              <p>RiskManagerOne has been assigned the task to conduct the data analysis. RiskManagerOne starts out by identifying the patients
+                                 who have received both inhaled corticosteroids and oral beta-blockers during the course of a hospital stay at HospitalOne
+                                 within the last year. RiskManagerOne then decides to evaluate all progress notes, summary documents, and consultation notes
+                                 for these patients during the same year. All notes maintained at the IDN level are to be examined.
+                              </p><strong>Find Document Metadata Query</strong><a class="">(RCMR_IN000029)</a><p>RiskManagerOne sends a query from HospitalOne's EMR to the IDN clinical document directory (IDN CDD). The query includes patient
+                                 identifiers, desired document types, and encounter date ranges. The query request is to return document metadata for all identified
+                                 patients that are of any of the desired document types, during the desired date ranges.      
+                              </p><strong>Find Document Metadata Response</strong><a class="">(RCMR_IN000030)</a><p>The IDN CDD responds with a list of documents matching the criteria.  </p><strong>Find Document Metadata and Content Query</strong><a class="">(RCMR_IN000031)</a><p>RiskManagerOne scans the list of documents, clicks the "select all" box in the query interface, and submits a query to the
+                                 IDN clinical document management system (IDN CDMS) asking for the complete documents. The query includes document identifiers.
+                                 The query request is to return the complete document for each submitted document identifier. 
+                              </p><strong>Find Document Metadata and Content Response</strong><a class="">(RCMR_IN000032)</a><p>The IDN CDMS responds with the documents.    </p>
+                              <p>RiskManagerOne completes the analysis, and helps HospitalOne implement an enhanced warning system for patients prescribed
+                                 both inhaled corticosteroids and oral beta-blockers.  
+                              </p>
+                              <p>\</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">3.1.2</span><span class="title"><a name="RCMR_ST000019UV01-str">National Health Data Repository  (RCMR_ST000019UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Purpose</b></div>Several scenarios for communicating with a National Health Data Repository are possible. The following scenario illustrates
+                        a two-step approach, whereby one queries a document directory for metadata, and based on the results, submits a second query
+                        to a shared document management system to retrieve the actual documents. Other scenarios that are supported but not illustrated
+                        include a central document directory that does not store content, and which forwards queries for content to the local document
+                        management systems, which then pass the documents back either through a separate interface or through the central directory.
+                        
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><img class="graphic" src="graphics/RCMR_ST000019UV01.gif" alt="RCMR_ST000019UV01.gif" /><p></p><a name="RCMR_ST000019UV01-str"></a><table class="artifactList">
+                           <caption><b>Interaction List</b></caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Original Document with Content</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/RCMR_IN000002UV02.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_IN000002UV02-int" class="">RCMR_IN000002UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="artifactList_desc">Directory Original Document Registration Request</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/RCMR_IN000027UV02.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_IN000027UV02-int" class="">RCMR_IN000027UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="artifactList_desc">Find Document Metadata Query</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/RCMR_IN000029UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_IN000029UV01-int" class="">RCMR_IN000029UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="artifactList_desc">Find Document Metadata Response</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/RCMR_IN000030UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_IN000030UV01-int" class="">RCMR_IN000030UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="artifactList_desc">Find Document Metadata and Content Query</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/RCMR_IN000031UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_IN000031UV01-int" class="">RCMR_IN000031UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="artifactList_desc">Find Document Metadata and Content Response</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/RCMR_IN000032UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_IN000032UV01-int" class="">RCMR_IN000032UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="artifactList_desc">Original Document with Content</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/RCMR_IN000002UV02.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_IN000002UV02-int" class="">RCMR_IN000002UV02</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <div class="subSubSubSection">
+                           <div class="header"><span class="icon"> </span><span class="number">3.1.2.1</span><span class="title"><a name="RCMR_ST000019UV01-RCMR_SN000910UV01-stex">National Health Data Repository (RCMR_SN000910UV01) </a></span></div>
+                           <div class="body"><strong>Original Document with Content</strong><a class="">(RCMR_IN000002)</a><p>PatientOne receives all his primary health care at the United States Department of Veteran Affairs (VA) New Orleans Healthcare
+                                 System (VANOHCS).  The VANOHCS stores all of its clinical patient data in a local computerized patient record system (CPRS),
+                                 and contributes clinical documents to a national health data repository, which is comprised of both a national clinical document
+                                 directory (NATL CDD) and national clinical document management system (NATL CDMS), and which contains all clinical data that
+                                 exists throughout the national VA health care system.
+                              </p><strong>Directory Original Registration Request</strong><a class="">(RCMR_IN000027)</a><p>A new or revised document is uploaded from the VANOHCS CPRS into NATL CDMS which triggers an update to the NATL CDD.  </p><strong>Find Document Metadata Query</strong><a class="">(RCMR_IN000029)</a><p>Due to the approach of Hurricane Katrina, PatientOne drives his family to Houston, Texas to stay with relatives.  They left
+                                 all their belongings behind.  This causes PatientOne much stress and he also overexerted himself with the drive.  On day two
+                                 in Houston, PatientOne starts experiencing chest pain with radiation down his left arm. His family calls an ambulance which
+                                 transports him to the VA Houston Health Care System (VAHHCS).    
+                              </p>
+                              <p>Upon admission to the VAHHCS emergency room, NurseOne asks the patient to provide his VA Information Card, which contains
+                                 his medical record number. NurseOne enters information about PatientOne into the local CPRS and finds that no health record
+                                 data exists at the Houston VA. NurseOne then selects the CPRS "National Patient Locator" and submits a query for information
+                                 about PatientOne to the NATL CDD.   
+                              </p><strong>Find Document Metadata Response</strong><a class="">(RCMR_IN000030)</a><p>The NATL CDD sends a response back, containing a listing of all clinical documents identified for PatientOne.  </p><strong>Find Document Metadata and Content Query</strong><a class="">(RCMR_IN000031)</a><p>NurseOne finds that PatientOne recently had a consultation document uploaded to NATL CDMS from VANOHCS, and also finds a recent
+                                 continuity of care summary document (which contains problems, lab results, medication profile, and more), several progress
+                                 note documents, and recent reports of a treadmill and coronary angiogram. Nurse one selects the CPRS "Retrieve National Patient
+                                 Data" icon and submits a query to NATL CDMS for the documents of interest. 
+                              </p><strong>Find Document Metadata and Content Response</strong><a class="">(RCMR_IN000032)</a><p>NATL CDMS responds back to VAHHCS with the requested documents. Once the documents are available, they can be viewed in the
+                                 local CPRS.
+                              </p><strong>Original Document with Content</strong><a class="">(RCMR_IN000002)</a><p>Meanwhile, PhysicianOne has begun evaluating PatientOne. Vital signs are normal. Sublingual nitroglycerin and oxygen by nasal
+                                 cannula have been applied, and PatientOne is currently chest pain free. An electrocardiogram shows no evidence of acute myocardial
+                                 infarction. PhysicianOne reviews the clinical documents obtained from NATL CDMS, including the recent coronary angiogram report,
+                                 which found no evidence of any coronary artery disease. PhysicianOne reviews the continuity of care summary document with
+                                 PatientOne, confirming that PatientOne believes the data to be correct and up to date, including the diagnosis of gastroesophageal
+                                 reflux disease (GERD). Emergency room lab results on PatientOne come back normal, as does a chest x-ray. PhysicianOne diagnoses
+                                 PatientOne as having GERD, reassures him that his heart is okay, and discharges him from the emergency room. PhysicianOne
+                                 then enters an emergency room visit note into the local CPRS. When the visit note is completed and signed, a copy of it is
+                                 uploaded to the NATL CDMS.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">3.2</span><span class="title"><a name="tes-RCMR_DO000010UV-Query-ic">Trigger Events</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e1884" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Trigger Events (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Document Query For Metadata(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_TE000901UV01-te" class="">RCMR_TE000901UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Document Query For Metadata and Content(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_TE000903UV01-te" class="">RCMR_TE000903UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Document Query Response For Metadata(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_TE000902UV01-te" class="">RCMR_TE000902UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Document Query Response For Metadata and Content(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_TE000904UV01-te" class="">RCMR_TE000904UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e18842" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Trigger Events (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Event For Metadata(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_TE000901UV01-te" class="">RCMR_TE000901UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Event For Metadata and Conent(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_TE000903UV01-te" class="">RCMR_TE000903UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Event Response For Metadata(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_TE000902UV01-te" class="">RCMR_TE000902UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Event Response For Metadata and Content(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_TE000904UV01-te" class="">RCMR_TE000904UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e18843" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Trigger Events (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Document Query For Metadata and Content(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_TE000903UV01-te" class="">RCMR_TE000903UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Document Query For Metadata(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_TE000901UV01-te" class="">RCMR_TE000901UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Document Query Response For Metadata and Content(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_TE000904UV01-te" class="">RCMR_TE000904UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Document Query Response For Metadata(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_TE000902UV01-te" class="">RCMR_TE000902UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3gtrigger">the discussion of trigger events</a> in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">3.2.1</span><span class="title"><a name="RCMR_TE000903UV01-te">Document Query For Metadata and Content  (RCMR_TE000903UV01) </a></span></div>
+                     <div class="body">
+                        <div class="subheading">Description
+                           				<a href="../../domains/uvmr/uvmr_DO_XX.htm#RCMR_TE000903UV01-te" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a></div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Query Event For Metadata and Conent</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>Type: </em></td>
+                              <td class="structType_value"><em>User request</em></td>
+                           </tr>
+                        </table>This is a query looking for document metadata and contents meeting certain parameter-based criteria.
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">3.2.2</span><span class="title"><a name="RCMR_TE000901UV01-te">Document Query For Metadata  (RCMR_TE000901UV01) </a></span></div>
+                     <div class="body">
+                        <div class="subheading">Description
+                           				<a href="../../domains/uvmr/uvmr_DO_XX.htm#RCMR_TE000901UV01-te" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a></div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Query Event For Metadata</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>Type: </em></td>
+                              <td class="structType_value"><em>User request</em></td>
+                           </tr>
+                        </table>This is a query looking for document metadata meeting certain parameter-based criteria.
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">3.2.3</span><span class="title"><a name="RCMR_TE000904UV01-te">Document Query Response For Metadata and Content  (RCMR_TE000904UV01) </a></span></div>
+                     <div class="body">
+                        <div class="subheading">Description
+                           				<a href="../../domains/uvmr/uvmr_DO_XX.htm#RCMR_TE000904UV01-te" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a></div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Query Event Response For Metadata and Content</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>Type: </em></td>
+                              <td class="structType_value"><em>Interaction based</em></td>
+                           </tr>
+                        </table>This is a response to a query looking for document metadata and contents meeting certain parameter-based criteria.
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">3.2.4</span><span class="title"><a name="RCMR_TE000902UV01-te">Document Query Response For Metadata  (RCMR_TE000902UV01) </a></span></div>
+                     <div class="body">
+                        <div class="subheading">Description
+                           				<a href="../../domains/uvmr/uvmr_DO_XX.htm#RCMR_TE000902UV01-te" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a></div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Query Event Response For Metadata</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>Type: </em></td>
+                              <td class="structType_value"><em>Interaction based</em></td>
+                           </tr>
+                        </table>This is a response to a query looking for document metadata meeting certain parameter-based criteria.
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">3.3</span><span class="title"><a name="rmims-RCMR_DO000010UV-Query-ic">Refined Message Information Models</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e1906" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Refined Message Information Models (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Medical Records Parameter Query Model(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_RM000920UV01-rmi" class="">RCMR_RM000920UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e19062" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Refined Message Information Models (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Event Document(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_RM000920UV01-rmi" class="">RCMR_RM000920UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e19063" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Refined Message Information Models (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Medical Records Parameter Query Model(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_RM000920UV01-rmi" class="">RCMR_RM000920UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3grmim">the description of RMIMs</a> in the Version 3 Guide.
+                  </p>
+                  <p></p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">3.3.1</span><span class="title"><a name="RCMR_RM000920UV01-rmi">Medical Records Parameter Query Model  (RCMR_RM000920UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/RCMR_RM000920UV.htm" target="_blank"><img class="graphic" src="editable/images/T-RCMR_RM000920UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><div class="subheading">Description</div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><b><em>Parent:  </em></b></td>
+                              <td class="structType_value"><em>Query Event Domain Model (<a href="../../domains/uvmr/uvmr.htm#RCMR_DM000920UV-rmi" class="">RCMR_DM000920UV</a>)
+                                    									</em></td>
+                           </tr>
+                        </table>
+                        <p>The Query Message Model is a subset of the Query Domain Model, thus all descriptions of the model are found under the discussion
+                           of the <a href="../../domains/uvmr/uvmr.htm#RCMR_DM000920UV-rmi" class="">Domain Model</a>. This section enumerates the changes that are made in going from the Domain Model to the Message Model:
+                        </p>
+                        <ul>
+                           <li><strong>Document Attributes</strong><ul>
+                                 <li>There are no changes from the Domain Model</li>
+                              </ul>
+                           </li>
+                           <li><strong>Document Relationships</strong><ul>
+                                 <li>There are no changes from the Domain Model</li>
+                              </ul>
+                           </li>
+                           <li><strong>Document Participants</strong><ul>
+                                 <li>There are no changes from the Domain Model</li>
+                              </ul>
+                           </li>
+                        </ul>
+                        <p></p>
+                        <table class="artifactList">
+                           <caption>Contained Hierarchical Message Descriptions</caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Query Event Document</td>
+                              <td class="artifactList_code"><a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_HD000920UV01-hmd" class="">RCMR_HD000920UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">3.4</span><span class="title"><a name="hmds-RCMR_DO000010UV-Query-ic">Hierarchical Message Descriptions</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e1940" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Hierarchical Message Descriptions (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Medical Records Parameter Query HMD(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_HD000920UV01-hmd" class="">RCMR_HD000920UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e19402" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Hierarchical Message Descriptions (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Event Document(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_HD000920UV01-hmd" class="">RCMR_HD000920UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e19403" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Hierarchical Message Descriptions (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Medical Records Parameter Query HMD(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_HD000920UV01-hmd" class="">RCMR_HD000920UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <p></p>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3ghmd">the description of HMDs</a> in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">3.4.1</span><span class="title"><a name="RCMR_HD000920UV01-hmd">Medical Records Parameter Query HMD  (RCMR_HD000920UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Description</b></div>
+                        <p>This HMD is used to derive the Query-by-Parameter message.</p>
+                        <p>At this time there is no content for this section.</p>
+                        <p></p>
+                        <div class="subheading">Base Hierarchical Message Description
+                           				<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_RM000920UV01-rmi" class=""><img src="../../support/graphics/rmimview.gif" alt="View R-MIM" height="16" width="16" style="border-width:0" /></a> 
+                           				<a href="../../domains/uvmr/editable/RCMR_HD000920UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="editable/RCMR_HD000920UV.xls" target="_blank"><img src="../../support/graphics/excelview.gif" height="16" width="16" alt="Excel View" style="border:0px" /></a> 
+                        </div>
+                        <table class="hmd">
+                           <caption>Message Type List</caption>
+                           <tr class="">
+                              <td class="hmd_desc"><a name="RCMR_MT000003UV01-msg"></a>Query Event Document
+                              </td>
+                              <td class="hmd_code">RCMR_MT000003UV01</td>
+                              <td class="hmd_links"><a href="../../domains/uvmr/editable/RCMR_HD000920UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="../../processable/multicacheschemas/RCMR_MT000003UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> <a href="../../domains/uvmr/uvmr_DO_XX.htm#RCMR_MT000003UV01-msg" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a>
+                                 										 
+                                 									
+                                 
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">3.5</span><span class="title"><a name="ints-RCMR_DO000010UV-Query-ic">Interactions</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e1959" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> List of Interactions (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Document Metadata and Content Query(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_IN000031UV01-int" class="">RCMR_IN000031UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Document Metadata and Content Response(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_IN000032UV01-int" class="">RCMR_IN000032UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Document Metadata Query(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_IN000029UV01-int" class="">RCMR_IN000029UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Document Metadata Response(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_IN000030UV01-int" class="">RCMR_IN000030UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e19592" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> List of Interactions (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Event Find Document Metadata(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_IN000029UV01-int" class="">RCMR_IN000029UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Event Find Document Metadata and Content(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_IN000031UV01-int" class="">RCMR_IN000031UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Event Response Find Document Metadata(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_IN000030UV01-int" class="">RCMR_IN000030UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Event Response Find Document Metadata and Content(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_IN000032UV01-int" class="">RCMR_IN000032UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e19593" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> List of Interactions (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Document Metadata and Content Query(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_IN000031UV01-int" class="">RCMR_IN000031UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Document Metadata Query(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_IN000029UV01-int" class="">RCMR_IN000029UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Document Metadata and Content Response(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_IN000032UV01-int" class="">RCMR_IN000032UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Document Metadata Response(<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_IN000030UV01-int" class="">RCMR_IN000030UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <p></p>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3gintact">the definition of Interactions</a> in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">3.5.1</span><span class="title"><a name="RCMR_IN000031UV01-int">Find Document Metadata and Content Query  (RCMR_IN000031UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">Description <a href="../../processable/multicacheschemas/RCMR_IN000031UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                        </div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Query Event Find Document Metadata and Content</em></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="interact">
+                           <tr class="">
+                              <td class="interact_type"><b>Trigger Event</b></td>
+                              <td class="interact_desc">Document Query For Metadata and Content</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_TE000903UV01-te" class="">RCMR_TE000903UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Transmission Wrapper</b></td>
+                              <td class="interact_desc">Send Message Payload</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_GenericMessageTransmission.htm#MCCI_MT000100UV01-msg" class="">MCCI_MT000100UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Control Act Wrapper</b></td>
+                              <td class="interact_desc">Query Control Act Request : Query By Parameter</td>
+                              <td class="interact_code"><a href="../../domains/uvqi/uvqi_QueryByParameter.htm#QUQI_MT021001UV01-msg" class="">QUQI_MT021001UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Message Type</b></td>
+                              <td class="interact_desc">Medical Records Parameter Query Message</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_MT000003UV01-msg" class="">RCMR_MT000003UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="resp">
+                           <caption>Receiver Responsibilities</caption>
+                           <tr>
+                              <td class="resp_reason"><b>Reason</b></td>
+                              <td class="resp_te"><b>Trigger Event</b></td>
+                              <td class="resp_in_code"><b>Interaction</b></td>
+                           </tr>
+                           <tr>
+                              <td class="resp_reason">Receiver's response to a query for document metadata and content is to return both matching document metadata and documents.
+                                 
+                              </td>
+                              <td class="resp_te"><a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_TE000904UV01-te" class="">RCMR_TE000904UV01</a></td>
+                              <td class="resp_in_code"><a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_IN000032UV01-int" class="">RCMR_IN000032UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="interact">
+                           <caption>Sending and Receiving Roles</caption>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Content Required Document Management System</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_AR000003UV02-ar" class="">RCMR_AR000003UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Content Optional Document Management System</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_AR000002UV02-ar" class="">RCMR_AR000002UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Clinical Document Directory</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_AR000005UV02-ar" class="">RCMR_AR000005UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Clinical Document Directory</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_AR000005UV02-ar" class="">RCMR_AR000005UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Content Required Document Management System</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_AR000003UV02-ar" class="">RCMR_AR000003UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Content Optional Document Management System</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_AR000002UV02-ar" class="">RCMR_AR000002UV02</a></td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <p></p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">3.5.2</span><span class="title"><a name="RCMR_IN000029UV01-int">Find Document Metadata Query  (RCMR_IN000029UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">Description <a href="../../processable/multicacheschemas/RCMR_IN000029UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                        </div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Query Event Find Document Metadata</em></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="interact">
+                           <tr class="">
+                              <td class="interact_type"><b>Trigger Event</b></td>
+                              <td class="interact_desc">Document Query For Metadata</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_TE000901UV01-te" class="">RCMR_TE000901UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Transmission Wrapper</b></td>
+                              <td class="interact_desc">Send Message Payload</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_GenericMessageTransmission.htm#MCCI_MT000100UV01-msg" class="">MCCI_MT000100UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Control Act Wrapper</b></td>
+                              <td class="interact_desc">Query Control Act Request : Query By Parameter</td>
+                              <td class="interact_code"><a href="../../domains/uvqi/uvqi_QueryByParameter.htm#QUQI_MT021001UV01-msg" class="">QUQI_MT021001UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Message Type</b></td>
+                              <td class="interact_desc">Medical Records Parameter Query Message</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_MT000003UV01-msg" class="">RCMR_MT000003UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="resp">
+                           <caption>Receiver Responsibilities</caption>
+                           <tr>
+                              <td class="resp_reason"><b>Reason</b></td>
+                              <td class="resp_te"><b>Trigger Event</b></td>
+                              <td class="resp_in_code"><b>Interaction</b></td>
+                           </tr>
+                           <tr>
+                              <td class="resp_reason">Receiver's response to a query for document metadata is to return matching document metadata without associated documents.
+                                 
+                              </td>
+                              <td class="resp_te"><a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_TE000902UV01-te" class="">RCMR_TE000902UV01</a></td>
+                              <td class="resp_in_code"><a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_IN000030UV01-int" class="">RCMR_IN000030UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="interact">
+                           <caption>Sending and Receiving Roles</caption>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Clinical Document Directory</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_AR000005UV02-ar" class="">RCMR_AR000005UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Content Required Document Management System</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_AR000003UV02-ar" class="">RCMR_AR000003UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Content Optional Document Management System</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_AR000002UV02-ar" class="">RCMR_AR000002UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Content Optional Document Management System</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_AR000002UV02-ar" class="">RCMR_AR000002UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Content Required Document Management System</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_AR000003UV02-ar" class="">RCMR_AR000003UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Clinical Document Directory</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_AR000005UV02-ar" class="">RCMR_AR000005UV02</a></td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <p></p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">3.5.3</span><span class="title"><a name="RCMR_IN000032UV01-int">Find Document Metadata and Content Response  (RCMR_IN000032UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">Description <a href="../../processable/multicacheschemas/RCMR_IN000032UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                        </div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Query Event Response Find Document Metadata and Content</em></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="interact">
+                           <tr class="">
+                              <td class="interact_type"><b>Trigger Event</b></td>
+                              <td class="interact_desc">Document Query Response For Metadata and Content</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_TE000904UV01-te" class="">RCMR_TE000904UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Transmission Wrapper</b></td>
+                              <td class="interact_desc">Application Level Acknowledgement</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_GenericMessageTransmission.htm#MCCI_MT000300UV01-msg" class="">MCCI_MT000300UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Control Act Wrapper</b></td>
+                              <td class="interact_desc">Query Control Act Response / Acknowledgement</td>
+                              <td class="interact_code"><a href="../../domains/uvqi/uvqi_QueryByParameter.htm#QUQI_MT120001UV01-msg" class="">QUQI_MT120001UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Query Response Type</b></td>
+                              <td class="interact_desc">Document Event, with Content</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_MT000002UV02-msg" class="">RCMR_MT000002UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Query Definition</b></td>
+                              <td class="interact_desc">Document Event, with Content</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_MT000002UV02-msg" class="">RCMR_MT000002UV02</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="interact">
+                           <caption>Sending and Receiving Roles</caption>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Content Required Document Management System</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_AR000003UV02-ar" class="">RCMR_AR000003UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Clinical Document Directory</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_AR000005UV02-ar" class="">RCMR_AR000005UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Content Optional Document Management System</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_AR000002UV02-ar" class="">RCMR_AR000002UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Content Required Document Management System</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_AR000003UV02-ar" class="">RCMR_AR000003UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Content Optional Document Management System</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_AR000002UV02-ar" class="">RCMR_AR000002UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Clinical Document Directory</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_AR000005UV02-ar" class="">RCMR_AR000005UV02</a></td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <p></p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">3.5.4</span><span class="title"><a name="RCMR_IN000030UV01-int">Find Document Metadata Response  (RCMR_IN000030UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">Description <a href="../../processable/multicacheschemas/RCMR_IN000030UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                        </div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Query Event Response Find Document Metadata</em></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="interact">
+                           <tr class="">
+                              <td class="interact_type"><b>Trigger Event</b></td>
+                              <td class="interact_desc">Document Query Response For Metadata</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_TE000902UV01-te" class="">RCMR_TE000902UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Transmission Wrapper</b></td>
+                              <td class="interact_desc">Application Level Acknowledgement</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_GenericMessageTransmission.htm#MCCI_MT000300UV01-msg" class="">MCCI_MT000300UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Control Act Wrapper</b></td>
+                              <td class="interact_desc">Query Control Act Response / Acknowledgement</td>
+                              <td class="interact_code"><a href="../../domains/uvqi/uvqi_QueryByParameter.htm#QUQI_MT120001UV01-msg" class="">QUQI_MT120001UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Query Response Type</b></td>
+                              <td class="interact_desc">Document Event</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_MT000001UV02-msg" class="">RCMR_MT000001UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Query Definition</b></td>
+                              <td class="interact_desc">Document Event</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_MT000001UV02-msg" class="">RCMR_MT000001UV02</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="interact">
+                           <caption>Sending and Receiving Roles</caption>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Content Optional Document Management System</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_AR000002UV02-ar" class="">RCMR_AR000002UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Clinical Document Directory</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_AR000005UV02-ar" class="">RCMR_AR000005UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Content Required Document Management System</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_AR000003UV02-ar" class="">RCMR_AR000003UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Content Optional Document Management System</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_AR000002UV02-ar" class="">RCMR_AR000002UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Clinical Document Directory</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_AR000005UV02-ar" class="">RCMR_AR000005UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Content Required Document Management System</td>
+                              <td class="interact_code"><a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_AR000003UV02-ar" class="">RCMR_AR000003UV02</a></td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <p></p>
+               </div>
+            </div>
+            <p>
+               <table>
+                  <tbody>
+                     <tr>
+                        <td><a class="custombutton" href="#top">Return to top of page</a></td>
+                     </tr>
+                  </tbody>
+               </table>
+            </p>
+         </div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<spec id="MCAI_DO000000UV-ic" type="dependencyTree" sectionCode="UVAI">
+   <header>
+      <title> Message Control Act Infrastructure Dependency Annex
+				</title>
+      <version>V 00-00</version>
+      <ballot type="NormativeStandard" number="1"/>
+      <date>6/31/2008</date>
+      <legalese copyRightDate="2008"/>
+   </header>
+   <body>
+      <div1 id="all-sortOrder">
+         <head> Message Control Act Infrastructure in Structured Sort Order</head>
+         <artree role="ssn">
+            <artreeitem>
+               <stref id="d0e240" role="tree-intro" sectID="UVAI" sectType="SB" refName="Domain: Message Control Act Infrastructure" refFamiliarName="Domain: Message Control Act Infrastructure" refIdentifier="MCAI_DO000000UV"/>
+               <artreeitem>
+                  <rmimref id="treeRef-MCAI_DM700200UV" role="tree-element" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act Infrastructure D-MIM" refFamiliarName="Trigger Event Control Act Infrastructure D-MIM" refIdentifier="MCAI_DM700200UV"/>
+               </artreeitem>
+               <artreeitem>
+                  <stref id="d0e244" role="tree-intro" sectID="UVAI" sectType="SB" refName="Topic: Trigger Event Control Act" refFamiliarName="Topic: Trigger Event Control Act" refIdentifier="MCAI_DO000000UV"/>
+                  <artreeitem>
+                     <stref id="d0e244" role="tree-intro" sectID="" sectType="SB" refName=" Application Roles" refFamiliarName=" Application Roles" refIdentifier=""/>
+                     <artreeitem>
+                        <arref id="treeRef-MCAI_AR000002UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Example, Control Act: Receiver" refFamiliarName="Example, Control Act: Receiver" refIdentifier="MCAI_AR000002UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-MCAI_IN700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act Example" refFamiliarName="Trigger Event Control Act Example" refIdentifier="MCAI_IN700201UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <arref id="treeRef-MCAI_AR000001UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Example, Control Act: Sender" refFamiliarName="Example, Control Act: Sender" refIdentifier="MCAI_AR000001UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-MCAI_IN700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act Example" refFamiliarName="Trigger Event Control Act Example" refIdentifier="MCAI_IN700201UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e244" role="tree-intro" sectID="" sectType="SB" refName=" Trigger Events" refFamiliarName=" Trigger Events" refIdentifier=""/>
+                     <artreeitem>
+                        <teref id="treeRef-MCAI_TE700201UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Example, Control Act" refFamiliarName="Example, Control Act" refIdentifier="MCAI_TE700201UV01"/>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e244" role="tree-intro" sectID="" sectType="SB" refName=" Refined Message Information Models" refFamiliarName=" Refined Message Information Models" refIdentifier=""/>
+                     <artreeitem>
+                        <rmimref id="treeRef-MCAI_RM700200UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_RM700200UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-MCAI_HD700200UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_HD700200UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-MCAI_MT700201UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090300UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedDeviceUniversal" refFamiliarName="R_AssignedDeviceUniversal" refIdentifier="COCT_MT090300UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090100UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedPersonUniversal" refFamiliarName="R_AssignedPersonUniversal" refIdentifier="COCT_MT090100UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-MCAI_MT900001UV01" role="dependency" sectID="UVAI" sectType="SB" refName="A_DetectedIssueUniversal" refFamiliarName="A_DetectedIssueUniversal" refIdentifier="MCAI_MT900001UV01"/>
+                              </artreeitem>
+                           </artreeitem>
+                           <artreeitem>
+                              <msgref id="treeRef-MCAI_MT705201UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act - PRSC" refFamiliarName="Trigger Event Control Act - PRSC" refIdentifier="MCAI_MT705201UV01"/>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090300UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedDeviceUniversal" refFamiliarName="R_AssignedDeviceUniversal" refIdentifier="COCT_MT090300UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090100UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedPersonUniversal" refFamiliarName="R_AssignedPersonUniversal" refIdentifier="COCT_MT090100UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-MCAI_MT900001UV01" role="dependency" sectID="UVAI" sectType="SB" refName="A_DetectedIssueUniversal" refFamiliarName="A_DetectedIssueUniversal" refIdentifier="MCAI_MT900001UV01"/>
+                              </artreeitem>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <rmimref id="treeRef-MCAI_RM900000UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act Detected Issue CMET" refFamiliarName="Trigger Event Control Act Detected Issue CMET" refIdentifier="MCAI_RM900000UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-MCAI_HD900000UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act Detected Issue CMET" refFamiliarName="Trigger Event Control Act Detected Issue CMET" refIdentifier="MCAI_HD900000UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-MCAI_MT900001UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act Detected Issue CMET" refFamiliarName="Trigger Event Control Act Detected Issue CMET" refIdentifier="MCAI_MT900001UV01"/>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e244" role="tree-intro" sectID="" sectType="SB" refName=" Interactions" refFamiliarName=" Interactions" refIdentifier=""/>
+                     <artreeitem>
+                        <intref id="treeRef-MCAI_IN700201UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act Example" refFamiliarName="Trigger Event Control Act Example" refIdentifier="MCAI_IN700201UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-MCAI_AR000001UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Example, Control Act: Sender" refFamiliarName="Example, Control Act: Sender" refIdentifier="MCAI_AR000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-MCAI_AR000002UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Example, Control Act: Receiver" refFamiliarName="Example, Control Act: Receiver" refIdentifier="MCAI_AR000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-MCAI_TE700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Example, Control Act" refFamiliarName="Example, Control Act" refIdentifier="MCAI_TE700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+            </artreeitem>
+         </artree>
+      </div1>
+      <div1 id="all-codeOrder">
+         <head> Message Control Act Infrastructure in Artifact Code Order</head>
+         <artree role="code">
+            <artreeitem>
+               <stref id="d0e240" role="tree-intro" sectID="UVAI" sectType="SB" refName="Domain: Message Control Act Infrastructure" refFamiliarName="Domain: Message Control Act Infrastructure" refIdentifier="MCAI_DO000000UV"/>
+               <artreeitem>
+                  <rmimref id="treeRef-MCAI_DM700200UV" role="tree-element" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act Infrastructure D-MIM" refFamiliarName="Trigger Event Control Act Infrastructure D-MIM" refIdentifier="MCAI_DM700200UV"/>
+               </artreeitem>
+               <artreeitem>
+                  <stref id="d0e244" role="tree-intro" sectID="UVAI" sectType="SB" refName="Topic: Trigger Event Control Act" refFamiliarName="Topic: Trigger Event Control Act" refIdentifier="MCAI_DO000000UV"/>
+                  <artreeitem>
+                     <stref id="d0e244" role="tree-intro" sectID="" sectType="SB" refName=" Application Roles" refFamiliarName=" Application Roles" refIdentifier=""/>
+                     <artreeitem>
+                        <arref id="treeRef-MCAI_AR000001UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Example, Control Act: Sender" refFamiliarName="Example, Control Act: Sender" refIdentifier="MCAI_AR000001UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-MCAI_IN700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act Example" refFamiliarName="Trigger Event Control Act Example" refIdentifier="MCAI_IN700201UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <arref id="treeRef-MCAI_AR000002UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Example, Control Act: Receiver" refFamiliarName="Example, Control Act: Receiver" refIdentifier="MCAI_AR000002UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-MCAI_IN700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act Example" refFamiliarName="Trigger Event Control Act Example" refIdentifier="MCAI_IN700201UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e244" role="tree-intro" sectID="" sectType="SB" refName=" Trigger Events" refFamiliarName=" Trigger Events" refIdentifier=""/>
+                     <artreeitem>
+                        <teref id="treeRef-MCAI_TE700201UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Example, Control Act" refFamiliarName="Example, Control Act" refIdentifier="MCAI_TE700201UV01"/>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e244" role="tree-intro" sectID="" sectType="SB" refName=" Refined Message Information Models" refFamiliarName=" Refined Message Information Models" refIdentifier=""/>
+                     <artreeitem>
+                        <rmimref id="treeRef-MCAI_RM700200UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_RM700200UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-MCAI_HD700200UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_HD700200UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-MCAI_MT700201UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090300UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedDeviceUniversal" refFamiliarName="R_AssignedDeviceUniversal" refIdentifier="COCT_MT090300UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090100UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedPersonUniversal" refFamiliarName="R_AssignedPersonUniversal" refIdentifier="COCT_MT090100UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-MCAI_MT900001UV01" role="dependency" sectID="UVAI" sectType="SB" refName="A_DetectedIssueUniversal" refFamiliarName="A_DetectedIssueUniversal" refIdentifier="MCAI_MT900001UV01"/>
+                              </artreeitem>
+                           </artreeitem>
+                           <artreeitem>
+                              <msgref id="treeRef-MCAI_MT705201UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act - PRSC" refFamiliarName="Trigger Event Control Act - PRSC" refIdentifier="MCAI_MT705201UV01"/>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090300UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedDeviceUniversal" refFamiliarName="R_AssignedDeviceUniversal" refIdentifier="COCT_MT090300UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090100UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedPersonUniversal" refFamiliarName="R_AssignedPersonUniversal" refIdentifier="COCT_MT090100UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-MCAI_MT900001UV01" role="dependency" sectID="UVAI" sectType="SB" refName="A_DetectedIssueUniversal" refFamiliarName="A_DetectedIssueUniversal" refIdentifier="MCAI_MT900001UV01"/>
+                              </artreeitem>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <rmimref id="treeRef-MCAI_RM900000UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act Detected Issue CMET" refFamiliarName="Trigger Event Control Act Detected Issue CMET" refIdentifier="MCAI_RM900000UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-MCAI_HD900000UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act Detected Issue CMET" refFamiliarName="Trigger Event Control Act Detected Issue CMET" refIdentifier="MCAI_HD900000UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-MCAI_MT900001UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act Detected Issue CMET" refFamiliarName="Trigger Event Control Act Detected Issue CMET" refIdentifier="MCAI_MT900001UV01"/>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e244" role="tree-intro" sectID="" sectType="SB" refName=" Interactions" refFamiliarName=" Interactions" refIdentifier=""/>
+                     <artreeitem>
+                        <intref id="treeRef-MCAI_IN700201UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act Example" refFamiliarName="Trigger Event Control Act Example" refIdentifier="MCAI_IN700201UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-MCAI_AR000001UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Example, Control Act: Sender" refFamiliarName="Example, Control Act: Sender" refIdentifier="MCAI_AR000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-MCAI_AR000002UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Example, Control Act: Receiver" refFamiliarName="Example, Control Act: Receiver" refIdentifier="MCAI_AR000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-MCAI_TE700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Example, Control Act" refFamiliarName="Example, Control Act" refIdentifier="MCAI_TE700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+            </artreeitem>
+         </artree>
+      </div1>
+      <div1 id="all-nameOrder">
+         <head> Message Control Act Infrastructure in Name Order</head>
+         <artree role="name">
+            <artreeitem>
+               <stref id="d0e240" role="tree-intro" sectID="UVAI" sectType="SB" refName="Domain: Message Control Act Infrastructure" refFamiliarName="Domain: Message Control Act Infrastructure" refIdentifier="MCAI_DO000000UV"/>
+               <artreeitem>
+                  <rmimref id="treeRef-MCAI_DM700200UV" role="tree-element" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act Infrastructure D-MIM" refFamiliarName="Trigger Event Control Act Infrastructure D-MIM" refIdentifier="MCAI_DM700200UV"/>
+               </artreeitem>
+               <artreeitem>
+                  <stref id="d0e244" role="tree-intro" sectID="UVAI" sectType="SB" refName="Topic: Trigger Event Control Act" refFamiliarName="Topic: Trigger Event Control Act" refIdentifier="MCAI_DO000000UV"/>
+                  <artreeitem>
+                     <stref id="d0e244" role="tree-intro" sectID="" sectType="SB" refName=" Application Roles" refFamiliarName=" Application Roles" refIdentifier=""/>
+                     <artreeitem>
+                        <arref id="treeRef-MCAI_AR000002UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Example, Control Act: Receiver" refFamiliarName="Example, Control Act: Receiver" refIdentifier="MCAI_AR000002UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-MCAI_IN700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act Example" refFamiliarName="Trigger Event Control Act Example" refIdentifier="MCAI_IN700201UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <arref id="treeRef-MCAI_AR000001UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Example, Control Act: Sender" refFamiliarName="Example, Control Act: Sender" refIdentifier="MCAI_AR000001UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-MCAI_IN700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act Example" refFamiliarName="Trigger Event Control Act Example" refIdentifier="MCAI_IN700201UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e244" role="tree-intro" sectID="" sectType="SB" refName=" Trigger Events" refFamiliarName=" Trigger Events" refIdentifier=""/>
+                     <artreeitem>
+                        <teref id="treeRef-MCAI_TE700201UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Example, Control Act" refFamiliarName="Example, Control Act" refIdentifier="MCAI_TE700201UV01"/>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e244" role="tree-intro" sectID="" sectType="SB" refName=" Refined Message Information Models" refFamiliarName=" Refined Message Information Models" refIdentifier=""/>
+                     <artreeitem>
+                        <rmimref id="treeRef-MCAI_RM700200UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_RM700200UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-MCAI_HD700200UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_HD700200UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-MCAI_MT700201UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090300UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedDeviceUniversal" refFamiliarName="R_AssignedDeviceUniversal" refIdentifier="COCT_MT090300UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090100UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedPersonUniversal" refFamiliarName="R_AssignedPersonUniversal" refIdentifier="COCT_MT090100UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-MCAI_MT900001UV01" role="dependency" sectID="UVAI" sectType="SB" refName="A_DetectedIssueUniversal" refFamiliarName="A_DetectedIssueUniversal" refIdentifier="MCAI_MT900001UV01"/>
+                              </artreeitem>
+                           </artreeitem>
+                           <artreeitem>
+                              <msgref id="treeRef-MCAI_MT705201UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act - PRSC" refFamiliarName="Trigger Event Control Act - PRSC" refIdentifier="MCAI_MT705201UV01"/>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090300UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedDeviceUniversal" refFamiliarName="R_AssignedDeviceUniversal" refIdentifier="COCT_MT090300UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090100UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedPersonUniversal" refFamiliarName="R_AssignedPersonUniversal" refIdentifier="COCT_MT090100UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-MCAI_MT900001UV01" role="dependency" sectID="UVAI" sectType="SB" refName="A_DetectedIssueUniversal" refFamiliarName="A_DetectedIssueUniversal" refIdentifier="MCAI_MT900001UV01"/>
+                              </artreeitem>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <rmimref id="treeRef-MCAI_RM900000UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act Detected Issue CMET" refFamiliarName="Trigger Event Control Act Detected Issue CMET" refIdentifier="MCAI_RM900000UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-MCAI_HD900000UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act Detected Issue CMET" refFamiliarName="Trigger Event Control Act Detected Issue CMET" refIdentifier="MCAI_HD900000UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-MCAI_MT900001UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act Detected Issue CMET" refFamiliarName="Trigger Event Control Act Detected Issue CMET" refIdentifier="MCAI_MT900001UV01"/>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e244" role="tree-intro" sectID="" sectType="SB" refName=" Interactions" refFamiliarName=" Interactions" refIdentifier=""/>
+                     <artreeitem>
+                        <intref id="treeRef-MCAI_IN700201UV01" role="tree-element" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act Example" refFamiliarName="Trigger Event Control Act Example" refIdentifier="MCAI_IN700201UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-MCAI_AR000001UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Example, Control Act: Sender" refFamiliarName="Example, Control Act: Sender" refIdentifier="MCAI_AR000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-MCAI_AR000002UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Example, Control Act: Receiver" refFamiliarName="Example, Control Act: Receiver" refIdentifier="MCAI_AR000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-MCAI_TE700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Example, Control Act" refFamiliarName="Example, Control Act" refIdentifier="MCAI_TE700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+            </artreeitem>
+         </artree>
+      </div1>
+   </body>
+</spec>

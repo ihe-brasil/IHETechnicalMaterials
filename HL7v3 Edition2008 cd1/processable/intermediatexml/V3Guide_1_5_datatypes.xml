@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 3 U (http://www.xmlspy.com) by andrew hinchley (HL7 Publications TC) -->
+<!-- edited with XML Spy v4.0 (http://www.xmlspy.com) by Andrew Hinchley -->
+<div2 id="v3gdt">
+	<head>Data Types</head>
+	<p>Data types are the basic building blocks of attributes. They define the structural format of the data carried in the attribute and influence the set of allowable values an attribute may assume. Some data types have very little intrinsic semantic content and the semantic context for that data type is carried by its corresponding attribute. However HL7 also defines quite extensive data types such as PNMP, person Name Part, which provides all the structure and semantics to support a person name. Every attribute in the RIM is associated with one and only one data type, and each data type is associated with zero or many attributes.</p>
+	<p>Data types are discussed in two of the suite of documents that comprise the Version 3 Standard. The Data Types, Unabridged  document provides a formal, rigorous definition of Version 3 data types and is intended for individuals  who wish to explore data types in great detail. A less formal discussion of data types is included in the Implementation Technology Specification (ITS) for XML. It is envisaged that any particular ITS may not implement everything that is defined in the Data Types specification. The XML ITS is not an exception to this rule but nevertheless it is recommended as the best place for most HL7 readers to review the Data Types supported and how they are implemented. The table below groups Data Types.</p>
+	<table>
+		<tr>
+			<td>Data Type Category</td>
+			<td>Explanation</td>
+			<td>Example Data Types</td>
+		</tr>
+		<tr>
+			<td>Basic Data Types</td>
+			<td>These describe 31 of the 42 data types that HL7 defines</td>
+			<td>Text,Codes,Identifiers,Names,Addresses,Quantities</td>
+		</tr>
+		<tr>
+			<td>Generic Collections</td>
+			<td>Data Types where a number of values may be included. They are not complete data types as any collection will have an associated Data Type from one of the other Data Type groups listed here</td>
+			<td>Sequence, BAG and SET</td>
+		</tr>
+		<tr>
+			<td>Generic Type Extensions</td>
+			<td>Ability to extend existing Data Types through a formal extension language</td>
+			<td>Not supported in current XML ITS</td>
+		</tr>
+		<tr>
+			<td>Timing Specifications </td>
+			<td>All timing requirements</td>
+			<td>IVL, Time Interval</td>
+		</tr>
+	</table>
+	<p>
+	A  key capability with  Data Types is the ability to refine a particular Data Type to a simpler one. For instance, the coded Data Type CV can be restricted down to CS, which supports only a Code and a Display Name. The XML ITS presents these refinements by always showing where a simpler Data Type is a restriction of a more complex Type. In the Visio tooling, the tool might first offer the more complex Data Type that has been defined for an Attribute, but then offers the ability to select any of the restriction options, making it easy to choose the simpler Data Type where this is appropriate.
+</p>
+	<p>
+A  specific problem in interpreting the data types specification has been encountered with SET. The specification defines SET&lt;1..1&gt; as being a single instance of the attribute rather than a single SET, however this has often been misinterpreted.
+</p>
+</div2>

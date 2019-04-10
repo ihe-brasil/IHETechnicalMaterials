@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 3 U (http://www.xmlspy.com) by andrew hinchley (HL7 Publications TC) -->
+<!-- edited with XML Spy v4.0 (http://www.xmlspy.com) by Sandy Boyer -->
+<div2 id="v3dmim">
+	<head>Domain Message Information Models</head>
+	<p>The Domain Message Information Model (D-MIM) is a subset of the RIM that includes a fully expanded set of class clones, attributes and relationships that are used to create messages for any particular domain. For example, the set of classes that are used by the Medical Records/Structured Documents domain is quite different from that used by the Patient Administration domain. The D-MIMs for these two domains, then, will be quite different, although both will be derived from the RIM.</p>
+	<p>Like the other models included in the V3 documents, the Domain Message Information Model is a diagram that shows the relationships between the classes but it uses diagramming conventions and notations that were developed by HL7 to represent the specific semantic constructs contained in the critical, "back-bone" classes of the RIM.  Although D-MIMs and R-MIMs could be represented in UML notation, as the RIM is, the HL7 notation provides more details about the specific constraints and class clones being represented. The HL7 diagramming convention abbreviates some relationship conventions, enabling diagrams to be smaller and more concise and to convey more information visually. Understanding the diagramming conventions and notations is key to understanding how to read a D-MIM. The same diagramming conventions used for D-MIMs are also used for R-MIMs and CMETs (discussed in separate chapters of this guide). The rest of this chapter explains the conventions and notations used in the D-MIM diagram. Since a D-MIM is typically larger than a single, printable page, the figures in this chapter are sample portions of a D-MIM diagram that correspond to the convention being discussed.</p>
+	<div3 id="v3dmimentrypt">
+		<head>Entry Points</head>
+		<p>Each D-MIM diagram will have at least one Entry Point. Entry Points designate the class(es) from which the messages begin for the particular domain. Since the D-MIM encompasses an entire domain, there may be several Entry Points, one for each R-MIM contained in the domain. Entry points are represented on the D-MIM diagram as clear boxes with thick black borders. A thick black arrow originates from the Entry Point box and points to a class which is considered the root, or focal class for one or more HMDs. Each Entry Point is named, carries the artifact ID of the R-MIM which originates from it, and contains a brief description. Provided below is a sample Entry Point box:</p>
+		<p>
+			<graphic source="graphics/VG_2_5_01.gif"/>
+		</p>
+	</div3>
+	<div3 id="v3dmimcnc">
+		<head>Classes and Colors</head>
+		<p>Like the RIM, the D-MIM's building blocks are the RIM classes and their attributes. However, in the D-MIM, the same class may appear multiple times in a diagram with different constraints (described below) or associations. These multiple instances of the same class are referred to as 'Clones'. For example, a D-MIM might have numerous clones of the Participation class, some for 'Author' participations, others for the 'Subject' participation, etc. Other classes may not appear at all. Only those classes, attributes and relationships that are required to build the messages for a particular domain are included in the D-MIM.</p>
+		<p>Classes in the D-MIM diagram are represented (much like they are in the RIM) by boxes. The class clone name (the name assigned to the particular instance of the class) is found in the upper left-hand side of the class box.  Clone names are based on a formal algorithm discussed in the following sub-section.  The color of the class box is significant as it identifies the RIM area to which the class belongs. The Act related classes are red, the Entity related classes are green and the Role related classes are yellow.</p>
+		<p>When the core RIM classes (Act, Entity and/or Role) are included in a D-MIM, the class_cd attribute of the core class as well as its value always appears as the first attribute in the clone. The class_cd attribute identifies the Vocabulary mnemonic or domain name associated with the class. </p>
+		<p>Non-core RIM classes included in the D_MIM will appear as dark blue boxes. Like the other classes, the clone name is contained in the top left of the box. The physical class name (as it appears in the RIM) displays in parentheses just below the clone name. The figure below shows sample classes as they might appear in a D-MIM:</p>
+		<p>
+			<graphic source="graphics/T-VG_2_5_02.gif"/>
+		</p>
+	</div3>
+	<div3 id="v3dmimformalname">
+		<head>Formal Names for Class Clones and Associations</head>
+		<p>HL7 allows copies of existing classes to be renamed in a particular context. This process is called "cloning" and  the result is a class "clone". HL7 has defined a formal algorithm for naming the clones and associations that appear in a D-MIM or R-MIM.  This approach assures that similar concepts will have common or similar names wherever they are used in HL7 specifications.  Class clone names for Entity, Role and Act are based upon the class_cd value for the class.  Additionally, for Act and Entity, the mood_cd or determiner_cd also affect the name.  For example, an Act with class_cd of OBS (Observation) and mood_cd of PRMS (Promise) is named "ObservationPromise."</p>
+		<p>In a similar fashion, the type_cd is used to name clones of the Participation, Act_relationship and Role_link classes.  Thus an Act_relationship with type_cd of COMP (has component) will be named "Component."  The associations in the D-MIM are also named according to these algorithms, with the addition that the assigned names are appropriate to the direction of travel.  Thus the relationship for an Entity that scopes the role of Patient will be named "healthCareProvider" whereas the traversal from the scoping Entity to the Patient Role will be named "patient."</p>
+		<p>Each associative class has four names (name into the class from the source direction;into the class from the target direction;out of the class from the source direction;out of the class from the target direction).Association names must be unique for the element where they originate, but do not have to be unique for the D-MIM or R-MIM.Where necessary, uniqueness is maintained by numbering subsequent association names i.e. "name" followed by "integer", "dataenterer02".</p>
+		<p>If  a particular clone name should appear twice in a model, the second occurrence will be assigned the suffix "A" and so on.  The technical committees have the privilege of replacing this suffix with a more meaningful term, and may also append additional suffix terms to any formal name in their model.</p>
+		<p>Technical committees are required to specify a "business name" for every Act, Role and Entity class. These names must be unique for a D-MIM or R-MIM.The business name is then what will be shown on R-MIM Visio diagrams and will also be used as the element name in an XML ITS.</p>
+	</div3>
+	<div3 id="v3dmimscopent">
+		<head>Scoping Entities and Playing Roles:  Dashed and Dotted Lines</head>
+		<p>If you look at the Role (yellow boxes) and Entity (green boxes) classes on a D-MIM diagram, you frequently see solid and dotted lines connecting them. One yellow Role class may be connected to up to two green Entity classes. These lines represent the relationships between the Role and Entity classes. One Entity is the player of the role (e.g., patient) while the other represents the Entity that scopes (recognizes or assigned) the role (e.g., a healthcare organization). The solid line for a role identifies playing Entity (e.g. the Person acting as Patient), while the dashed line represents the scoping Entity (e.g., the organization that assigned the role of Patient). Look at the relationships defined for the Patient, Person and Organization classes in the D-MIM below. The class_cd attribute in the yellow Patient role class identifies the role being played is PAT (patient). We arrive at Patient on the Entity side of the RIM by assigning PSN (person) as the class_cd in the Entity class. The id attribute in the Patient role will contain the patient number. The Entity recognizing the patient number for that Patient (and who the person is a patient of) is the Organization that scopes the role. We arrive at Organization on the Entity side of the RIM by entering ORG (Organization) as the class_cd in Entity.</p>
+		<p>The cardinality of the associations is shown adjacent to the lines.  As shown below, Organization (green box) scopes zero or more Patients (i.e., the Organization assigns the role of Patient to zero or more Persons) while the Patient is scoped by one (and only one) Organization. On the playing end, the Patient is played by one Person (i.e., Patient is played by one Person) while the Person entity plays zero or more Patient (the person can play the role of patient zero or more times with respect to several provider organizations).</p>
+		<p>
+			<graphic source="graphics/T-VG_2_5_03.gif"/>
+		</p>
+	</div3>
+	<div3 id="v3dmimrelclass">
+		<head>Relationship Classes:  Arrowed Boxes</head>
+		<p>Five types of arrowed boxes may appear on a D-MIM. The salmon colored boxes represent Act_relationship classes, the blue arrowed boxes represent Participation classes and the yellow arrowed classes represent Role_link classes.  In all of these relationships, there is a "source" for the relationship, and a "target."  The tail of the arrow is anchored to the source class, while the head of the arrow points to the target class clone.  Each of the directed relationships is described below:</p>
+		<list role="unordered">
+			<item>Act_relationship Classes - The Act_relationship class connects and therefore defines the relationship between two instances of the Act class.</item>
+			<item>Participation Classes - Participation classes connect and therefore define the relationship between Act and Role classes.  The type_cd in the Participation class identifies the way that the Entity playing the Role participates in a particular instance of an Act class.</item>
+			<item>
+				<p>Role_link Classes - Role_link classes do as their label suggests: they link two Role class instances, defining the relationship between the two.</p>
+				<p>The figure below shows the conventions used for Relationship, Participation and Role_link classes:</p>
+				<p>
+					<graphic source="graphics/VG_2_5_04.gif"/>
+				</p>
+			</item>
+			<item>
+				<p>Non-core Class Associations - Non-core class associations, like the classes from which they originate, appear as dark blue arrows. The name of the association and the cardinalities appear adjacent to these arrows.</p>
+			</item>
+		</list>
+		<p>The figure below illustrates the conventions for non-core class associations.</p>
+		<p>
+			<graphic source="graphics/VG_2_5_05.gif"/>
+		</p>
+	</div3>
+	<div3 id="v3dmimrecurse">
+		<head>Recursive Relationships</head>
+		<p>Both Act Relationships and Role Links may be recursive. On the D-MIM diagrams, these recursive relationships are denoted as colored boxes (as noted in the Relationship section above) whose arrowed end is replaced by a notched out corner. The box's border is an arrowed line that points to the notched out corner of the box. The figure below illustrations the notations for both the recursive relationship classes:</p>
+		<p>
+			<graphic source="graphics/VG_2_5_06.gif"/>
+		</p>
+	</div3>
+	<div3 id="v3dmiminheritance">
+		<head>Inheritance</head>
+		<p>A recent addition to V3 has been the ability to control dynamically the standard inheritance rules which normally apply to UML and object modelling.</p>
+		<p>
+			<emph>Context ControlCode</emph>
+		</p>
+This attribute may optionally be added to any participation to control whether this association may replace a previously defined participation, or is an addition to it (i.e the previous context is propagated). A receiver will need to implement mechanisms which can actively take note of the value of this attribute in any particular message instance, in order to properly deal wth this participation information.
+
+	</div3>
+	<div3 id="v3dmimcmets">
+		<head>CMETs</head>
+		<p>CMETs (Common Message Element Types) are pre-defined components that are re-used for several R-MIMs and/or messages. A separate chapter in this guide provides additional details on CMETs. They are denoted on D-MIM diagrams as boxes with a dashed border. The color of the boxes is determined by the color of their base class (pink for Acts, yellow for Roles and green for Entities). The CMET boxes contain a name, the base class type, the artifact ID and the level of attribution. Each CMET has its own corresponding  R-MIM diagram. These are defined separately and can be found in the CMET Section. The figure below shows the convention for denoting CMETs in the D-MIM diagram:</p>
+		<p>
+			<graphic source="graphics/VG_2_5_07.gif"/>
+		</p>
+	</div3>
+	<div3 id="v3dmimchoice">
+		<head>Choices</head>
+		<p>D-MIMs may also contain "Choice" boxes. These boxes are bordered by a dashed line and enclose two or more classes that are part of an inheritance hierarchy (e.g. two or more Roles, two or more Entities, etc.).  It is important to note that any annotations or associations connected to the Choice box apply to all classes within it. Associations connected to a specific class within the choice box apply only to that class. In the figure below, the AR_for_choice Act_relationship applies to all classes within the Choice box. The AR_for_class Act_relationship, however, connects only to the Act2 class.</p>
+		<p>
+			<graphic source="graphics/VG_2_5_08.gif"/>
+		</p>
+	</div3>
+	<div3 id="v3dmimattconv">
+		<head>Attribute Conventions</head>
+		<p>A number of attribute conventions may appear in the D-MIM diagrams to convey information that would not otherwise be apparent. Typically, these conventions are used only if the default values are not used, although they may be used even if the default values are used. Conventions applied to a particular attribute appear beneath the particular attribute to which they apply and are slightly indented. The conventions that can be used are described below:</p>
+		<list role="unordered">
+			<item>
+				<p>Mandatory inclusion - A bold attribute name indicates that the attribute is mandatory.</p>
+			</item>
+			<item>
+				<p>Domain - The vocabulary domain associated with a particular attribute instance is designated by the &lt;= or = symbols. The domain specification must be either a domain name defined in the vocabulary tables, or a single code value from the appropriate domain.</p>
+			</item>
+			<item>
+				<p>Data type - Attribute data types may be specified by preceding them with a colon (":").</p>
+			</item>
+			<item>
+				<p>Vocabulary strength - Vocabulary strength may be denoted by the use of CWE (coded with extension [non-coded values allows where no appropriate code exists]) or CNE (coded, no extension [values must be coded]).</p>
+			</item>
+			<item>
+				<p>Cardinality - Attribute cardinalities are denoted within square brackets [ ].  These are expressed as N...N where N is a numeric or * for unlimited. For example (0...1).</p>
+			</item>
+			<item>
+				<p>Description - Brief descriptions of attributes may be included. Descriptions are enclosed within parentheses.</p>
+			</item>
+			<item>
+				<p>Alias - The alias convention denotes the original attribute name. This convention is used when the attribute shown on the D-MIM has been changed from the default RIM name. The default RIM attribute name is preceded by AKA: and enclosed within curly brackets. For example, {AKA: repeat_nbr} would denote that the attribute this appears with appears as repeat_nbr in the RIM.</p>
+				<p>
+					<graphic source="graphics/T-VG_2_5_09.gif"/>
+				</p>
+			</item>
+		</list>
+	</div3>
+	<div3 id="v3dmimnotes">
+		<head>Notes</head>
+		<p>Notes providing additional information about a particular class may appear in the D-MIM Diagram. Notes are depicted as clear, oblong boxes bordered in black with the top right corner folded down. An arrow originates from the Note box and points to the class being described. A sample note is depicted in the figure below.</p>
+		<p>
+			<graphic source="graphics/VG_2_5_10.gif"/>
+		</p>
+	</div3>
+	<div3 id="v3dmimconst">
+		<head>Constraints </head>
+		<p>Constraints can be placed on a class or an attribute. An example of a constraint placed on a class might be something such as "Either nm or id must be specified." Constraints are denoted by a light blue shaded box that points to the class or attribute that is being constrained. If the constraint applies only to a particular attribute, the constraint box will contain the name of the attribute in the upper left corner. If this area is blank, the constraint applies to the entire class to which the constraining box points. The constraint box holds a formal constraint expression within curly brackets and the textual description of the constraint appears after the closing curly bracket.</p>
+		<p>
+			<graphic source="graphics/VG_2_5_11.gif"/>
+		</p>
+	</div3>
+	<div3 id="v3dmimannote">
+		<head>Annotations</head>
+		<p>In the standards themselves, the D-MIM diagrams are followed by Annotations. The annotations can be of two types, either a development note or a walkthrough note. Development notes explain why things were modeled as they were. Walkthrough notes are intended to help the reader more thoroughly understand the D-MIM itself.</p>
+	</div3>
+</div2>

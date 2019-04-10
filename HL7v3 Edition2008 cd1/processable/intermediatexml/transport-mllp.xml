@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE spec SYSTEM "..\..\support\dtd\v3m.dtd">
+<spec id="MTS-ic" specDTDversionNum="1" xmlns:xlink="http://www.w3.org/TR/WD-xlink">
+	<header ballotStatus="NormativeStandard" ballotNumber="1">
+		<title>Transport Specification: MLLP, Release 2</title>
+		<version>1</version>
+		<ballot type="NormativeStandard" number="1"/>
+		<date>20050319</date>
+		<authlist>
+			<author>
+				<role>Control Query Co-Chair</role>
+				<name>Grahame Grieve</name>
+				<affiliation>Kestral Computing</affiliation>
+			</author>
+			<author>
+				<role>Control Query Co-Chair &amp; Editor</role>
+				<name>Anthony Julian</name>
+				<affiliation>Mayo Clinic</affiliation>
+			</author>
+			<author>
+				<role>Control Query Co-Chair</role>
+				<name>Joann Larson</name>
+				<affiliation>Kaiser Permanente</affiliation>
+			</author>
+			<author>
+				<role>Control Query Co-Chair</role>
+				<name>Douglas Pratt</name>
+				<affiliation>Siemens</affiliation>
+			</author>
+			<author>
+				<role>Control Query Co-Chair</role>
+				<name>Rene Spronk</name>
+				<affiliation>Ringholm</affiliation>
+			</author>
+		</authlist>
+		<!--	<legalese copyRightDate="2003" copyRightOwner="Health Level Seven, Inc." copyRightNotation="All rights reserved." renderer="RoseTree 2.8.61" renderNotation="This document was rendered into XML using software provided to HL7 by Beeler Consulting LLC." contactEmail="HQ@HL7.org" contactName="HL7 Headquarters Staff" contactNote="Comments or questions about this document may be may be addressed to:"/> -->
+	</header>
+	<front>
+		<div1 id="PREFACE">
+			<head>Preface</head>
+			<div2 id="MLLP-Pref-1">
+				<head>Note to Readers</head>
+				<p>In release 2 the MLLP Message Transport protocol has been extended by commit acknowledgements. This is done in order to create a reliable Message Transport protocol, a requirement for all Message Transport protocols used to transport HL7 Version 3 content. See the new Abstract Transport Specification document for this and other transport protocol requirements.
+</p>
+			</div2>
+			<div2 id="MLLP-Pref-2">
+				<head>New features of MLLP Release 2</head>
+				<p>
+ Changes include:
+</p>
+				<list role="unordered">
+					<item>The addition of a definition of a commit acknowledgement and a negative commit acknowledgement at the MLLP transport layer.</item>
+					<item>The mandatory use by a destination system of commit acknowledgements. This to denote that the HL7 Content has been received and committed to safe storage.</item>
+				</list>
+			</div2>
+		</div1>
+	</front>
+	<body>
+		<div1 id="intr0-MTS-MLLP" ballotStatus="NormativeStandard" ballotNumber="1">
+			<head>Overview</head>
+			<!--	<descriptive identifier="spec-preamble" name="preamble" parent="MTS-ic" id="spec-preamble"> -->
+			<div2 id="MLLP-intro">
+				<head>Introduction</head>
+				<p>This document specifies Release 2 of the Minimal Lower Layer Message Transport protocol (MLLP, a.k.a. MLP). Release 1 of the MLLP Message Transport protocol (a version without built-in Reliable delivery assurances) has a long history of use within the HL7 community.  
+ </p>
+				<p>Note on conformance (FAQ): only those applications that claim conformance to MLLP Release 2 (or applications that claim conformance to a future HL7 v3 Normative Edition which contains MLLP Release 2) have to support this specification. HL7 does not require applications which support a MLLP Release 1 conformant transport protocol to upgrade to MLLP Release 2. Upgrading is recommended, but not required. </p>
+				<p>
+					<graphic source="graphics/mllp_layers.gif" xlink-form="simple" xml:attributes="href source" show="embed" actuate="auto"/>
+					<emph role="strong">Figure 1 Abstraction Layers for message transmission</emph>
+					<br/>
+				</p>
+				<p>
+The figure above illustrates the traditional separation between the application layer, the MLLP messaging infrastructure layer, and the message transport layer. 
+Messaging Adapters live inside the Application and provide the interface to the specific messaging stack being used. Messaging adapters are both aware of HL7 and the messaging stack being interfaced. Their role is to prepare the HL7 message for transmission by the messaging infrastructure.
+
+The Messaging Infrastructure consists of the runtime components that implement a particular messaging protocol. These components are generally off-the-shelf implementations that have no knowledge of the specific payload being transported.
+
+Message Transport: this layer represents the means by which the HL7 message is transported to the appropriate destination. Different protocols might use multiple transports, depending on the implementation, the degree of separation between the protocol and the transport and a number of other factors. 
+</p>
+				<p>
+From the application's perspective, it's sending an HL7 message between Application 1 and Application 2. Note that "Application" includes store-and-forward intermediaries, such as Gateways. A Gateway is understood to be an HL7 application that implements delegating capabilities in a distributed healthcare environment. A Gateway performs business level functions in the name of other HL7 Applications. 
+</p>
+				<p>
+The application doesn't need to know the details about what's happening in the underlying layers. While the application initiates sending a message, the underlying MLLP messaging takes care of the delivery. The application communicates with the MLLP Messaging Infrastructure through an adapter that deals with the specifics of MLLP and uses the APIs and/or the object model exposed by the MLLP Messaging Infrastructure. In this context, the MLLP Adapter is still part of the application. The MLLP Messaging Infrastructure then sends the message over the specified transport to the receiving application.
+ </p>
+			</div2>
+			<div2 id="MLLP-spec">
+				<head>Protocol specification</head>
+				<p>
+				The goal of the MLLP Message Transport protocol is to provide an interface between HL7 Applications and the transport protocol that uses minimal overhead.
+				
+MLLP is based on a minimalistic OSI-session layer framing protocol. It is assumed that MLLP will be used only in a network environment.  Most of the details of error detection and correction are handled by the lower levels of any reasonable transport protocol (e.g. TCP/IP, SNA) and do not require any supplementation.	
+The network protocol and the network behavior have to be agreed upon by the communicating parties prior to the exchange of data.
+MLLP Release 2 covers the absolute minimal requirements in order for it to be a reliable Message Transport protocol.
+</p>
+				<p>
+ MLLP has limited support for character encodings, see below for details.
+MLLP supports (amongst other message encodings and ITSs)  the vertical bar and XML HL7 version 2 message encodings and the version 3 XML ITS. It may not be applicable to some HL7 version 3 ITSs. ITS's may require an inherent protocol stack that precludes their use of MLLP.
+</p>
+				<div3 id="MLLP-dynamic">
+					<head>Content exchange model</head>
+					<p>
+					MLLP Release 2 is a reliable Message Transport protocol. It guarantees <emph> In Order delivery</emph> and <emph>At Least Once delivery</emph> of HL7 Content.
+				HL7 Content is framed in a Block and sent to the Destination system. The Destination system acknowledges the receipt of the message by returning a Commit Acknowledgement message. The MLLP acknowledgement protocol is synchronous: the Source system shall not send new HL7 content until an acknowledgement for the previous HL7 Content has been received. 
+			
+					
+						<emph role="strong">Figure 2 Interaction Diagram</emph>
+						<br/>
+					</p>
+					<graphic source="graphics/mllp3.gif" xlink-form="simple" xml:attributes="href source" show="embed" actuate="auto"/>
+					<p>All HL7 Content (of any kind or type) is framed in a Block and sent to 
+the Destination system. The Destination system acknowledges the receipt 
+of the Block by returning a Commit Acknowledgement message. If the HL7 
+Content (a query in the example below) triggers the sending of HL7 
+Content (a Response) by the Destination system, then this HL7 Content is 
+framed in a Block and sent. MLLP has no knowledge of the HL7 Content, 
+nor does it base any part of its behaviour on HL7 Content. 
+</p>
+					<p>
+					
+					The behavior of the Source is described by the pseudo-code shown below. The Source should empty its inbound buffer prior to sending a Block to ensure that a Commit Acknowledgement is related to the Block that was just sent, and not to a prior Block.
+					<list role="ordered">
+							<item>"Send Block with HL7 Content, block and wait for Affirmative Commit Acknowledgement,  Negative Commit Acknowledge, or a Timeout. "
+</item>
+							<item>"In case of Affirmative Commit Acknowledgement (ACK), finished. "
+</item>
+							<item>If case of Negative Commit Acknowledgement the subsequent step is subject to implementation decisions.  The default behavior is
+							<list role="ordered">
+									<item>If the preset number of retries has been reached, notify sender of delivery failure, with reason code.</item>
+									<item>Otherwise go to step 1 to resend the block.</item>
+								</list>
+							</item>
+							<item>In case of a Timeout the subsequent step is subject to implementation decisions. The default behavior is:  <list role="ordered">
+									<item>If preset number of retries has been reached, or if a pre-specified time has elapsed, notify SENDER of delivery failure, with reason code.</item>
+									<item>otherwise go to step 1 to resend the Block.</item></list>
+							</item>
+						</list> </p>
+							<p>See the Abstract Transport Specification document for additional information on application faults raised by Message Adapters.
+							</p>					
+						
+					<p>
+                                  The behavior of the Destination is described by the pseudo-code shown below. The Destination should respond immediately with a Commit Acknowledgement upon receipt of a Block. The Destination should ensure that it sends Acknowledgements related to the last message received, and not to prior messages. It is recommended that the Destination empty its inbound buffer prior to the sending of an Acknowledgement.
+                                  <list role="ordered">
+							<item>Receive and ignore any received bytes until the start of a Block is found.</item>
+							<item>Continue to receive bytes until the end of a Block is found, or until a Timeout occurs.</item>
+							<item>In case of a Timeout, ignore all bytes received thus far; go to step 1.</item>
+							<item>Once an entire Block has been received, attempt to commit the HL7 Content to storage.</item>
+							<item>In case the HL7 Content has been successfully committed to storage, send an Affirmative Commit Acknowledgement (ACK); go to step 1. 
+							</item>
+							<item>In case the HL7 Content can't be committed to storage, send a Negative Commit Acknowledgement (NAK); go to step 1.</item>
+						</list>
+					</p>
+					<p>
+			             Timeouts have to be agreed upon by the communicating parties. It is recommended that the Source use a timeout of between 5 and 30 seconds before giving up on listening for a Commit Acknowledgement. It is recommended that the Destination use a timeout that is at least twice as high as the Source's timeout (e.g. 40 seconds or more) before flushing its inbound buffer. 
+			             </p>
+				</div3>
+				<div3 id="MLLP-block">
+					<head>Block Format</head>
+					<div4 id="MLLP-content-block">
+						<head>HL7 Content Block</head>
+						<p>
+					HL7 content is enclosed by special characters to form a Block.  
+					The Block format is as follows:
+					<emph role="strong">  &lt;SB&gt;dddd&lt;EB&gt;&lt;CR&gt;</emph>
+						</p>
+						<p>
+							<list role="unordered">
+								<item>
+									<emph role="strong">        &lt;SB&gt;</emph>:    Start Block character (1 byte).
+ASCII &lt;VT&gt;, i.e., &lt;0x0B&gt;. 
+                                </item>
+								<item>
+									<emph role="strong">        dddd</emph>:  Data (variable number of bytes).
+This is the HL7 data content of the Block. <br/> The data can contain any single-byte values greater than 0x1F (see below for a discussion of issues related to character encodings) and the ASCII carriage return character, &lt;CR&gt;.
+     </item>
+								<item>
+									<emph role="strong">          &lt;EB&gt;</emph>:    End Block character (1 byte).
+ASCII &lt;FS&gt;, i.e., &lt;0x1C&gt;.  	
+</item>
+								<item>
+									<emph role="strong">       &lt;CR&gt;</emph>:  Carriage Return (1 byte).
+ASCII &lt;CR&gt; character, i.e., &lt;0x0D&gt;.
+   </item>
+							</list>
+						</p>
+						<p>	
+					In pseudo BNF-notation the HL7 Content Block Format is as follows: <br/>
+							<br/>
+							<emph role="strong">HL7-Content-Block = SB, dddd, EB, CR</emph>. <br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dddd = ( printableChar | CR )-sequence.<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printableChar = 0x20 | 0x21 | 0x22 | .. | 0xFF.<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SB = 0x0B.<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EB = 0x1C.<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CR = 0x0D.<br/>
+						</p>
+					</div4>
+					<div4 id="MLLP-ack-block">
+						<head>Commit Acknowledgement Block</head>
+						<p>
+  				      MLLP protocol status information is enclosed by special characters to form a Block.  
+					<br/>
+
+					The Block format for Commit Acknowledgements is as follows:
+					<emph role="strong">  &lt;SB&gt;&lt;ACK&gt;&lt;EB&gt;&lt;CR&gt;</emph> or <emph role="strong">  &lt;SB&gt;&lt;NAK&gt;&lt;EB&gt;&lt;CR&gt;</emph>
+						</p>
+						<p>
+							<list role="unordered">
+								<item>
+									<emph role="strong">  &lt;SB&gt;</emph>:    Start Block character (1 byte).
+ASCII &lt;VT&gt;, i.e., &lt;0x0B&gt;.  <br/>This should not be confused with the ASCII characters SOH or STX.
+  </item>
+								<item>
+									<emph role="strong">     &lt;ACK&gt; or &lt;NAK&gt;</emph>:  
+     Either the acknowledgement character (1 byte, ASCII &lt;ACK&gt;, i.e., &lt;0x06&gt;) or the negative-acknowledgement character (1 byte, ASCII &lt;NAK&gt;, i.e., &lt;0x15&gt;).  
+        </item>
+								<item>
+									<emph role="strong">      &lt;EB&gt;</emph>:         End Block character (1 byte).
+ASCII &lt;FS&gt;, i.e., &lt;0x1C&gt;.  
+</item>
+								<item>
+									<emph role="strong">    &lt;CR&gt;</emph>:       Carriage Return (1 byte).
+ASCII &lt;CR&gt; character, i.e., &lt;0x0D&gt;.
+    </item>
+							</list>
+						</p>
+						<p>	
+					In pseudo BNF-notation the Commit Acknowledgement Block Format is as follows: <br/>
+							<br/>
+							<emph role="strong">Commit-Acknowledgement-Block = SB, ( ACK | NAK ), EB, CR</emph>. <br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SB = 0x0B.<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACK = 0x06.<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NAK = 0x15.<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EB = 0x1C.<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CR = 0x0D.<br/>
+						</p>
+						<p>
+						Note that the receipt of unframed characters (e.g. characters between <emph role="strong">&lt;EB&gt;&lt;CR&gt;</emph> of Block N and 
+						<emph role="strong">&lt;SB&gt;</emph> of Block N+1) should be ignored by the Destination system. This type of error shall not be reported using a MLLP Commit Acknowledgement.</p>
+					</div4>
+				</div3>
+				<div3 id="MLLPLimitations">
+					<head>Limitations of MLLP</head>
+					<p>
+			The MLLP Block is framed by single-byte values. The characters transmitted within the MLLP Block have to be encoded in such a way that the HL7 Content does not conflict with the byte values used for framing. Some multi-byte character encodings (e.g. UTF-16, UTF-32) may result in byte values equal to the MLLP framing characters or byte values lower than 0x1F, resulting in errors. These character encodings are therefore not supported by MLLP.
+</p>
+					<p>
+						Note on supported encodings (FAQ): <emph>MLLP supports all single-byte character encodings (e.g. iso-8859-x, cp1252) as well as UTF-8 and Shift_JIS. </emph> The byte values used by UTF-8 do not conflict with the byte values used for MLLP framing.
+					</p>
+					<p>
+The sending and receiving systems will have to mutually agree upon the encoding used for a given connection. 
+Most applications within a certain geographic/language area share the same character encoding. U.S./Canadian implementations of MLLP typically use the UTF-8 encoding; Western European (Germanic and Latin language areas) implementations typically use the ISO 8859-1 encoding. 
+				</p>
+				</div3>
+			</div2>
+			<div2 id="MLLP-examples">
+				<head>Examples</head>
+				<p>This section contains a number of examples of MLLP-framed HL7 payloads, where &lt;SB&gt; &lt;EB&gt;, &lt;CR&gt;, &lt;ACK&gt; and &lt;NAK&gt; are used to denote the non-printable single-byte values 0x0B, 0x1C, 0x0D, 0x06 and 0x15. They are not to be interpreted as XML-tags.</p>
+				<exhibit role="example">
+					<caption>HL7 version 2 Example</caption>
+					<pre>
+&lt;SB&gt;
+MSH|^~\&amp;|ZIS|1^AHospital|||200405141144||ADT^A01|20041104082400|P|2.3|||
+AL|NE|||8859/15|&lt;CR&gt;EVN|A01|20041104082400.0000+0100|20041104082400&lt;CR&gt;
+PID||""|10||Vries^Danny^D.^^de||19951202|M|||Rembrandlaan^7^Leiden^^7301TH^""
+^^P||""|""||""|||||||""|""&lt;CR&gt;PV1||I|3w^301^""^01|S|||100^van den Berg^^A.S.
+^^""^dr|""||9||||H||||20041104082400.0000+0100&lt;CR&gt;
+&lt;EB&gt;&lt;CR&gt; </pre>
+				</exhibit>
+				<exhibit role="example">
+					<caption>HL7 version 3 Example</caption>
+					<pre>
+&lt;SB&gt;
+&lt;?xml version="1.0" encoding="ISO-8859-15"?&gt;
+	&lt;MFMT_IN10001NL xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc" 
+	         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+	&lt;id extension="10213" root="2.16.840.1.113883.2.4.99.1.700222.1"/&gt;
+	&lt;creationTime value="20050216140000"/&gt;
+	&lt;versionId&gt;V3ED2005&lt;/versionId&gt;
+	&lt;interactionId extension="MFMT_IN100010NL" root="2.16.840.1.113883"/&gt;
+	&lt;processingCode code="P"/&gt;
+	. . .
+	. . .
+	&lt;/MFMT_IN10001NL&gt;
+&lt;EB&gt;&lt;CR&gt;</pre>
+				</exhibit>
+				<exhibit role="example">
+					<caption>CDA Release 2 Example</caption>
+					<pre>
+&lt;SB&gt;				
+&lt;?xml version="1.0"?&gt;
+     &lt;ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc" 
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+     xsi:schemaLocation="urn:hl7-org:v3 CDA.ReleaseTwo.Dec.2003.xsd"&gt;
+
+	&lt;id extension="c266" root="2.16.840.1.113883.3.933"/&gt;
+	&lt;code code="11488-4" codeSystem="2.16.840.1.113883.6.1" 
+               displayName="Consultation note"/&gt;
+	&lt;title&gt;Good Health Clinic Consultation Note&lt;/title&gt;
+	&lt;effectiveTime value="20040407"/&gt;
+	&lt;setId extension="BB35" root="2.16.840.1.113883.3.933"/&gt;
+	&lt;versionNumber value="2"/&gt;		
+			. . .
+			. . .
+     &lt;/ClinicalDocument&gt;
+&lt;EB&gt;&lt;CR&gt;</pre>
+				</exhibit>
+				<exhibit role="example">
+					<caption>MLLP Commit Acknowledgement Example</caption>
+					<pre>
+&lt;SB&gt;&lt;ACK&gt;&lt;EB&gt;&lt;CR&gt;</pre>
+				</exhibit>
+				<exhibit role="example">
+					<caption>MLLP Negative Commit Acknowledgement Example</caption>
+					<pre>
+&lt;SB&gt;&lt;NAK&gt;&lt;EB&gt;&lt;CR&gt;</pre>
+				</exhibit>
+			</div2>
+			<div2 id="MLLP-References">
+				<head>References</head>
+				<p>The specification of MLLP Release 1 is based on the HL7 Implementation Guide for HL7 version 2.3.1, appendix C &quot;Lower Layer Protocols&quot;, section C.4 </p>
+			</div2>
+			<!--	</descriptive> -->
+		</div1>
+	</body>
+</spec>

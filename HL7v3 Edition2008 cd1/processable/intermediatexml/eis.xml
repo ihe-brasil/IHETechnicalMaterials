@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE spec SYSTEM "../../support/dtd/v3m.dtd">
+<spec>
+	<header>
+		<title>Entity Identification Service (EIS)</title>
+		<version>0.997</version>
+		<date>15 June 2006</date>
+		<authlist>
+			<author>
+				<role>Project Lead</role>
+				<name key="Eckman, Barbara">Barbara Eckman</name>
+			</author>
+			<author>
+				<role>Editor</role>
+				<name key="Honey, Alan">Alan Honey</name>
+			</author>
+			<author>
+				<role>Author</role>
+				<name key="Batra, Virinder">Virinder Batra</name>
+			</author>
+			<author>
+				<role>Author</role>
+				<name key="Bennett, Craig">Craig Bennett</name>
+			</author>
+			<author>
+				<role>Author</role>
+				<name key="Dutta, Ani">Ani Dutta</name>
+			</author>
+			<author>
+				<role>Author</role>
+				<name key="Forslund, Dave">Dave Forslund</name>
+			</author>
+			<author>
+				<role>Author</role>
+				<name key="Honey, Alan">Alan Honey</name>
+			</author>
+		</authlist>
+			</header>
+	<body>
+		<div1 id="EIS" ballotStatus="DSTU" ballotNumber="1">
+			<head>Preface</head>
+			<div2 id="reader_notes">
+				<head>Notes to Readers</head>
+				<p>This document is the Service Functional Model for the Entity Identification Service, which is specified under the Service Development Framework process under the auspices of the Healthcare Services Specification Project (HSSP). Further context is given in the overview section below, but one key point to note is that the SFM provides a Service Interface specification, NOT the specification of a Service implementation. This is a critical distinction in terms of Service Oriented Architecture. There could be many different ways of implementing all or part of the functionality to support the behavior described in this specification.</p>
+				<p>For the full ballotable document, please see the linked document below.</p>
+			<p><artref ref="file:EIS_Service_Functional_Model_for_SOA_v1.pdf" alt="Click here to download a copy of the approved document."/></p>
+			</div2>
+		</div1>
+	</body>
+</spec>

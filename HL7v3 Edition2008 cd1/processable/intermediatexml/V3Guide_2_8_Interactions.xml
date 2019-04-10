@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 3 U (http://www.xmlspy.com) by andrew hinchley (HL7 Publications TC) -->
+<div2 id="v3gintact">
+	<head>Interactions</head>
+	<p>Interactions are at the heart of messaging.  The formal definition of an interaction is:</p>
+	<p>A unique association between a specific message type (information transfer), a particular trigger event that initiates or "triggers" the transfer, and the application roles that send and receive the message type.  It is a unique, one-way transfer of information.  </p>
+	<p>A single Interaction explicitly answers the questions: </p>
+	<list role="ordered">
+		<item>
+			<p>Which type of system component sends a particular type of message; </p>
+		</item>
+		<item>
+			<p>To what type of receiving system component the message type is sent;</p>
+		</item>
+		<item>
+			<p>How a system knows when to send a particular type of message;</p>
+		</item>
+		<item>
+			<p>What the particular message type is;</p>
+		</item>
+	</list>
+	<p>Interactions are also discussed in the Storyboard chapter.  The graphic that typically appears with the storyboard is an Interaction Diagram.  As mentioned in the Storyboard chapter, the boxes at the top of the Interaction diagram and the associated vertical lines represent the application roles, the types(s) of system components that send and receive a particular message.  The horizontal lines on the Interaction Diagram are the interactions themselves, thus answering the first two questions above.</p>
+	<p>As the list above indicates, each interaction is related to a sending role, a receiving role (both of which were identified on the Interaction Diagram), a trigger event, and a message type.  In the Version 3 specifications, the Interactions are presented with a name, the artifact ID, and a table that lists the sending role, the receiving role, the trigger event, the message type, the Event type and the Wrapper type.</p>
+	<p>The Event type is the Trigger Event type.  Valid values are interaction-based, state-transition based, user-based or unspecified.  Refer to the Trigger Event section in this part of the V3 Guide for additional information on the Trigger Event type.</p>
+	<p>The Wrapper type,where specified, refers to the Control event wrapper.  The Control Act wrapper is an additional optional wrapper which contains domain specific administrative information related to an interaction which triggered this message (i.e. the message to which a Control Act wrapper is being specified to be added).  This type of wrapper does not appear with HL7 messages where there is no additional context that is needed to be exchanged dynamically, or with HL7 messages that are carrying commands to coordinate the operation of message handling services. Two areas addressed in the current Control Act wrapper definition are:  </p>
+	<list role="ordered">
+		<item>Query</item>
+		<item>Registry (such as updating a Master-Patient Index)</item>
+	</list>
+	<p>The figure below depicts an Interaction as it appears in the Version 3 Specification:</p>
+	<p>
+		<graphic source="graphics/T-VG_2_9_01.gif"/>
+	</p>
+	<p>Each entry in the table is a hyperlink that takes you back to the particular artifact in question.</p>
+</div2>

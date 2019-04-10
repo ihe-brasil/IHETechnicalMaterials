@@ -1,0 +1,2314 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:exslt="http://exslt.org/common">
+   <head>
+      <title>Domain: Care Provision - Care Structures Topic</title>
+      <link rel="stylesheet" type="text/css" href="../../support/css/v3m.css" title="v3m" /><script src="../../support/js/tree.js" type="text/javascript"></script><script src="../../support/js/setTopFrameText.js" type="text/javascript"></script><script src="../../support/js/swapcss.js" type="text/javascript"></script><script type="text/javascript">
+				if (find('heading')) setHeadingTextFromFileName(document.location.href,"Care Structures Topic");
+			</script></head>
+   <body>
+      <div class="section">
+         <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">4</span><span class="title"><a name="REPC_DO000000UV-CareStructures-ic">Care Structures Topic</a></span><table cellspacing="0" cellpadding="3" border="1">
+               <tr>
+                  <td align="center"><img src="../../support/graphics/dstulogo.gif" alt="DSTU" /><br />HL7 CP CP, R1<br />HL7 Version 3 Standard: Care Provision; Care Structures, Release 1<br />July 2007<img width="5" alt="spacer" src="../../support/graphics/spacer.gif" /></td>
+               </tr>
+            </table>
+         </div>
+         <div class="body">
+            <table>
+               <tbody>
+                  <tr>
+                     <td><a class="custombutton" href="uvpc.htm#contents">Return to Domain Table of Contents</a></td>
+                  </tr>
+                  <tr>
+                     <td colspan="2">
+                        <p class="lastEdit">Content Last Edited: 2008-06-04T15:58:05</p>
+                     </td>
+                  </tr>
+               </tbody>
+            </table><br /><div class="toc"><span>4.1  <a href="#rmims-REPC_DO000000UV-CareStructures-ic">Refined Message Information Models</a><br /></span><span>4.2  <a href="#hmds-REPC_DO000000UV-CareStructures-ic">Hierarchical Message Descriptions</a><br /></span></div>
+            <div class="heading"><br /><b class="heading">Introduction</b></div>
+            <p><strong>4.0.1 Scope of Care Structures Topic</strong></p>
+            <p>The Care Structures Topic defines the many UML class diagrams, called Care Structures, which model the information pertinent
+               to the ongoing provision of care. These are described as local CMET's which are local to the Care Provision Domain. These
+               local CMET's will be submitted to the pool of shared HL7 CMET's if these local CMET's pass ballot at the domain level. These
+               CMET's or building blocks within the Care Provision Domain represent re-usable objects in larger model diagrams. This allows
+               for a more efficient use of space when reviewing models on a screen.
+            </p>
+            <p>In many cases, these structures extend the basic assertion for responsibility of care by naming both concerns and care plans
+               as components of the scope of responsibility. Care Structures represent the variable parts of a communication regarding the
+               responsibility for Care Provision. As described in the scope of the Care Provision Domain, this care is provided to individuals,
+               populations, and other targets of care, and communications with this information are designed to support the collaborations
+               between care providers. This Care Structures Topic exists under the Care Provision Domain. For a full description of the domain
+               and a discussion of the responsibility for care, please see the Care Provision Domain Overview. 
+            </p>
+            <p>The types of information modelled in Care Structures include</p>
+            <ul>
+               <li>
+                  <p>Basic Care Statements, i.e. raw data with minimal summarization or interpretation, e.g. body weight, blood pressure, height</p>
+               </li>
+               <li>
+                  <p>Summary information created in lists, e.g. medication lists, surgery lists</p>
+               </li>
+               <li>
+                  <p>Judgment-related Care Statements, e.g. problem lists, allergy lists, diagnostic scales such as Depression scales, Barthel
+                     index for Activities of Daily Living or risk for patient falls
+                  </p>
+               </li>
+               <li>
+                  <p>Care plans and their associated guideline definitions; what was completed and what has yet to be completed</p>
+               </li>
+               <li>
+                  <p>Concern Tracker to follow a problem of a patient over time, provider and location</p>
+               </li>
+               <li>
+                  <p>Statements about the situation of patient caretakers such as family members</p>
+               </li>
+            </ul>
+            <p>Of course, the pertinent information included in an individual communication regarding patients is going to vary depending
+               on the needs of the patient and the needs of the collaborating healthcare providers. The addition of Care Structures to messages
+               at run-time allows messages to grow as needed.
+            </p>
+            <p>This Topic references the Clinical Statement Pattern Domain (a separate ballot pool from the Care Provision Domain) and guides
+               readers on how to ballot specific Clinical Statement issues. Only Care Provision modifications of the Clinical Statement Pattern
+               will be balloted through the Care Structures Topic. Specific Care Structures include the Concern Tracking Structure, the Care
+               Plans/Guidelines Structure, and Assessment structures as well as the most important care structure, the Care Provision Domain
+               version of the Clinical Statement choice box referred to in this Topic document as the Care Statement Structure.
+            </p>
+            <p><strong>4.0.2 Limits of Scope</strong></p>
+            <p>The Care Structures are not intended to represent all the information communicated by systems that originate detailed pertinent
+               information such as observation data or person registration data. The domains that support communication from these data generating
+               systems tend to supply much more detail regarding the complex data context within which the data was generated. In that spirit,
+               the intention of the Care Structures are to communicate the instance identifiers and meta data for these granular instances
+               of data such that the receiving system has enough information to query sending systems for more detail on specific items of
+               pertinent information (assuming the sending systems support queries and instance identifiers). However, other implementation
+               specifications may extend this scope on Information Content to require more detail in the original communication and depend
+               less on query and response methodologies. 
+               
+            </p>
+            <p>These Care Structures may be further constrained for use in other Care Provision Domain topics and/or implementation guides
+               from different committees and organizations external to HL7. It is NOT the intent that this Care Structures Topic describe
+               all the possible constraints on these more general Care Structures.
+            </p>
+            <p><strong>4.0.3 Placement of Care Structures within the Care Provision Domain Model: </strong></p>
+            <p>The structures to the right of the Care Provision Act are described in the following narrative:</p>
+            <p><strong>4.0.3.1  Summary of Care Structures</strong></p>
+            <p>The Care Structures topic is intended to provide a library of reusable and substitutable care structures derived from the
+               Care Provision DMIM. Currently the topic provides only the core structures from which specific care structures such as Blood
+               Pressure and Allergies can be derived. Some of these specific care structures are provided as informative examples:
+            </p>
+            <p>Normative Care Structures:</p>
+            <ul>
+               <li>Care Statement     </li>
+               <li>Composition Content     </li>
+               <li>Statement Collector     </li>
+               <li>Concern Tracking Structure    </li>
+               <li>Care Provider     </li>
+               <li>Care Target     </li>
+               <li>Involved Person   </li>
+            </ul>
+            <p>Informative Care Structures:</p>
+            <ul>
+               <li>Blood Pressure</li>
+               <li>Heart Rate</li>
+               <li>Weight</li>
+               <li>Height</li>
+               <li>Allergy</li>
+               <li>Barthel Index</li>
+            </ul>
+            <p><strong>4.0.3.2 Local CMET's</strong></p>
+            <p>The Care Structures presented within this section are provided as local CMET's (local to the Care Provision Domain). A Care
+               Structure CMET uses the Common Message Element Type approach for representing reusable structures for use within the Care
+               Provision Domain, which is derived from its DMIM. The CMET is used to represent these complex care structures that are used
+               in multiple RMIMs. This simplifies the RMIM dramatically allowing the focus to be on the focal class and its association while
+               supporting the substitution of constrained CMET for a universal CMET at either message design, implementation or creation
+               time.
+            </p>
+            <p>The Care Plan, Involved Person, Care Provider and Care Target structures currently do not have further constrained models
+               but have been provided as a Care structure for reuse purposes.
+            </p>
+            <p>An important concept in this Topic is the Hierarchy of Constraints on the abstract structures in the Care Provision DMIM.
+               The Care Statement structure has been constrained to define the Concern Tracking Structure. The Composition Content structure
+               is also a constraint on the Care Statement. Any of these constraints can be substituted for the Care Statement which is associated
+               with the Care Plan and Statement Collector structures, and the Care Provision Act. 
+            </p>
+            <p><strong>4.0.3.3 Clinical Statement Pattern</strong></p>
+            <p>As mentioned above, the ballot pool for this document focuses on the extensions and constraints that the Care Provision Domain
+               has applied to the Clinical Statement Pattern. These extensions or constraints will be clearly identified in the narrative
+               on each care structure. Ballot issues related to the Clinical Statement Pattern itself should be directed to the Clinical
+               Statement Pattern ballot pool. For contrast, the Clinical Statement Definition is compared to the Care Statement Definition.
+               
+            </p>
+            <p><strong>Clinical Statement Definition (to be balloted in the Clinical Statement Pattern ballot pool)</strong></p>
+            <p>The formal definition of clinical statement for the care of patients is:</p>
+            <blockquote>
+               <p><em>An expression of a discrete item of clinical (or clinically related) information that is recorded because of its relevance
+                     to the care of a patient."</em></p>
+               <p>Clinical information is fractal in nature and therefore the extent and detail conveyed in a single statement may vary.</p>
+               <p>To be regarded as a clinical statement, a concept must be associated with a patient in a manner which makes clear:</p>
+               <ul style="margin-left:20px;">
+                  <li>Its temporal context</li>
+                  <li>Its relationship to the patient</li>
+                  <li>In the case of an observation: its mood and presence, absence or value</li>
+                  <li>In the case of a procedure:its mood and status</li>
+               </ul>
+               <p>This clarity may be achieved by:</p>
+               <ul style="margin-left:20px;">
+                  <li>Explicit representation; or</li>
+                  <li>Implicit application of defaults ONLY where explicitly modeled rules state the appropriate default</li>
+               </ul>
+            </blockquote>
+            <p>The Clinical Statement Pattern is a generalized HL7 abstract pattern used in multiple HL7 domain message information models
+               that provides basic data about the target of care. This HL7 Pattern may be constrained, extended, or left unchanged by HL7
+               Technical Committees, which use this pattern in the definition of a domain.
+            </p>
+            <p><strong>4.0.3.4 Care Statement Structure</strong></p>
+            <p>As you refer back to the Clinical Statement Pattern, you will see that there are no major differences between it and the Care
+               Statement Structure seen below.
+            </p><a class="">REPC_RM000100</a><p><strong>4.0.3.4.1 Extensions on the Clinical Statement Pattern Domain</strong></p>
+            <p>The Clinical Statement Pattern is renamed the Care Statement Structure in this Care Structure Topic in order to emphasize
+               that Care may apply to medical devices, facilities, and environmental sites as well as patients. In that sense, the vocabulary
+               used to support Care Statements is more extensive than the vocabulary used to support simply the care of patients. These extensions
+               will be documented by a gradual increase in the number and variety of HL7 vocabulary value sets. 
+               
+            </p>
+            <p>The intention is that a care statement instance may be added by itself to the Care Provision Act at creation of the RMIM or
+               added at run-time execution of an application in order to support the variability of extent and detail described in the clinical
+               statement definition above. Of course, the care statement may be added to the Care Provision Act along with adding the other
+               structures of the Care Provision Domain as well.
+            </p>
+            <p>The extension of clinical statement to care statement extends the definition of care statement to:</p>
+            <blockquote>
+               <p> An expression of a discrete item of care-related information that is recorded because of its relevance to the care of a target
+                  of care. Care information is fractal in nature and therefore the extent and detail conveyed in a single statement may vary.
+               </p>
+               <p>To be regarded as a care statement, a concept must be associated with a target of care in a manner which makes clear:</p>
+               <ul style="margin-left:20px;">
+                  <li>Its temporal context</li>
+                  <li>Its relationship to the target of care</li>
+                  <li>In the case of an observation: its mood and presence, absence or value</li>
+                  <li>In the case of a procedure: its mood and status</li>
+               </ul>
+               <p>This clarity may be achieved by</p>
+               <ul style="margin-left:20px;">
+                  <li>Explicit representation; or</li>
+                  <li>Implicit application of defaults ONLY where explicitly modelled rules state the appropriate defaults.</li>
+               </ul>
+            </blockquote>
+            <p>The reader should refer to the documentation for the HL7 Reference Information Model for a complete set of attribute descriptions
+               for each class in the Care Statement Structure.
+            </p>
+            <p><strong>4.0.3.4.2 Constraints on the Clinical Statement Pattern Domain:</strong></p>
+            <ol>
+               <li>The multiplicity on Clinical Statement ActChoice Act identifiers is published in the Pattern as (0*), which is constrained
+                  in Care Statement Act identifiers to (1*). The reason for this important constraint is that the extensive use of ActReference
+                  and queries in the Care Provision Domain depends on the existence of instance identifiers. These instance identifiers normally
+                  have been generated by the system authoring the instance. However, many instance identifier strategies exist and the only
+                  assumption in this constraint is that an instance identifier uniquely identifies the instance in systems to be queried. Instances
+                  may be privately communicated from an originating system to a receiving system or interface engine which adds unique system
+                  identifiers and then re-sends the instances out to other systems. In this case, the original system cannot be queried. Only
+                  the systems that have generated or received unique instance identifiers can be queried. 
+                  
+               </li>
+               <li>Two constraints are added to specific Care Structures classes from the Infrastructure Root Class: InfrastructureRoot.realmCode;
+                  InfrastructureRoot.templateID. These constraints are intended to be used in Care Structures in the same way they are used
+                  in CDA Release 2 documents. That is, until more specific HL7 methods are agreed upon for templates, the template ID refers
+                  to a unique specification guide within a Care Provision Topic. The realmCode is then used to further constrain a template
+                  ID, giving different realms the ability to leverage a specific template in a unique way (especially by additional constraints
+                  on vocabulary usage). All of the Classes in the Care Statement include the templateId and realmCode attributes. 
+                  
+               </li>
+               <li>Care Structure Constraints: The Clinical Statement Pattern is very general and allows all clinical Statements (or in the case
+                  of this Topic, the "Care Statements) to be represented from recursions on the ClinicalStatement choice. However, in the Care
+                  Structure Topic, as a Care Structure derived from the Care Statement Pattern is unrolled and defined, the Care Statement is
+                  constrained from representing that same structure in the same RMIM. In other words, in the same RMIM, one must not represent
+                  concern events both in the Concern Tracking Structure and from Concern Acts constructed from the CareStatement. Therefore,
+                  the following Care Structures each act as a constraint on the Care Statement when the derived Care Structure and the Care
+                  Statement are used in the same RMIM. 
+                  
+               </li>
+            </ol>
+            <p>Over time, the Care Structures Topic will include additional Care Structures that may be used by specific realms for specific
+               purposes with specific constraints on vocabulary through the use of the HL7 attributes, InfrastructureRoot.templateId and
+               InfrastructureRoot.realmCode. In this way, constraints will be explicitly defined in both the unrolled portions of the structure
+               and the remaining, constrained, Care Statement portion of the structure. Consequently, when the publication of templates is
+               defined, many Care Structures published in this document may be re-classified and published as templates instead.
+            </p>
+            <p>In the following section, the RMIM's for the specific Care Structures will be described. They will be described first in a
+               "clinically relevant manner" in a general narrative. Following the general clinical narrative, there will be a formal walk-thru
+               developed as found in a typical engineering specification. Not all of the formal walk-thru's have been completed for this
+               ballot.
+            </p>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">4.1</span><span class="title"><a name="rmims-REPC_DO000000UV-CareStructures-ic">Refined Message Information Models</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e1791" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Refined Message Information Models (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">A_CareStatement(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000100UV01-rmi" class="">REPC_RM000100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">A_ConcernList(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000410UV01-rmi" class="">REPC_RM000410UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">A_ConcernTracking(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000300UV01-rmi" class="">REPC_RM000300UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="changed">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general changed">A_ObservationAssessmentScale(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000120UV01-rmi" class="">REPC_RM000120UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">A_ObservationVitalSigns(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000130UV01-rmi" class="">REPC_RM000130UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">A_StatementCollector(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000400UV01-rmi" class="">REPC_RM000400UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">R_CaredEntity(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000700UV01-rmi" class="">REPC_RM000700UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e17912" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Refined Message Information Models (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="changed">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general changed">Care Structures Event Assessment Scale(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000120UV01-rmi" class="">REPC_RM000120UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Care Structures Event Cared Entity(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000700UV01-rmi" class="">REPC_RM000700UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Care Structures Event Concern List(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000410UV01-rmi" class="">REPC_RM000410UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Care Structures Event Concern Tracking(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000300UV01-rmi" class="">REPC_RM000300UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Care Structures Event Statement(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000100UV01-rmi" class="">REPC_RM000100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Care Structures Event Statement Collector(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000400UV01-rmi" class="">REPC_RM000400UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Care Structures Event Vital Signs(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000130UV01-rmi" class="">REPC_RM000130UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e17913" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Refined Message Information Models (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="changed">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general changed">A_ObservationAssessmentScale(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000120UV01-rmi" class="">REPC_RM000120UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">R_CaredEntity(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000700UV01-rmi" class="">REPC_RM000700UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">A_ConcernList(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000410UV01-rmi" class="">REPC_RM000410UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">A_ConcernTracking(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000300UV01-rmi" class="">REPC_RM000300UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">A_CareStatement(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000100UV01-rmi" class="">REPC_RM000100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">A_StatementCollector(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000400UV01-rmi" class="">REPC_RM000400UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">A_ObservationVitalSigns(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000130UV01-rmi" class="">REPC_RM000130UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3grmim">the description of RMIMs</a> in the Version 3 Guide.
+                  </p>
+                  <p></p>
+                  <div class="subSubSection changed">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">4.1.1</span><span class="title"><a name="REPC_RM000120UV01-rmi">A_ObservationAssessmentScale  (REPC_RM000120UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/REPC_RM000120UV.htm" target="_blank"><img class="graphic" src="editable/images/T-REPC_RM000120UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><div class="subheading">Description</div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><b><em>Parent:  </em></b></td>
+                              <td class="structType_value"><em>Care Structures Event Statement (<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000100UV01-rmi" class="">REPC_RM000100UV01</a>)
+                                    									</em></td>
+                           </tr>
+                        </table>
+                        <p><em><strong>Assessment Scales Structure Overview:</strong></em></p>
+                        <p>
+                           Assessment scales are becoming more and more common in healthcare. For many years, the APGAR scale has been used to evaluate
+                           a newborn immediately after birth. Another example is the Barthel index, used mostly by nursing. The aim of the Barthel Index
+                           is to be able to capture and follow the level of help required by the patient in the performance of activities of daily life.
+                           (Mahoney Barthel, 1965) 
+                           1 
+                           . The scientific validation for the Netherlands was carried out by de Haan et al (1993) 
+                           2 
+                           . It appears that the Dutch version of the scale is valid and reliable for individual use and for use in populations (epidemiological
+                           research), as a measure of outcome, for example. There are realm specific differences in the original English and the translated
+                           Dutch version of the scale, e.g. the value sets differ. The total score of the index depends on individual component scores
+                           on ten variables. 
+                           
+                        </p>
+                        <p>The model for the Barthel Index starts with the naming on top (entry-point), with the name Barthel_Index. Beneath that is
+                           the act type Observation(OBS) with the name Barthel_Index. This is the central OBS for this model. In this act the total score
+                           of the Barthel Index is shown. The class Barthel Index has class code = OBS. Furthermore, the field for code system should
+                           be filled with the Barthel Index. In the derivation code the total score for the Barthel Index is recorded. In other words:
+                           derivation method = add all values of the separate variables. Effective time is the point in time on which the Barthel Index
+                           is scored. In the value, which was created by adding the individual variables, is filled up. This is always an INT data type
+                           because it is mandatory to score and fill up all items to get a proper sum score. That is why Mandatory (1..1). Interpretationshows
+                           how the total score should be interpreted. This is 0-9 for seriously limited, 10-19 for moderately limited and 20 for independent.
+                        </p>
+                        <p>The OBS Barthel_Index contains ten variables itself, which each contain another OBS. These are bowels, bladder, grooming,
+                           toilet use, feeding, transfers, mobility, dressing, stairs and bathing respectively. For each of them the scoring options
+                           of 0 up to 3 are given in the field ObservationMethod. The result of the score comes in to the field value. For all OBS the
+                           time can be recorded in effective time. In codea unique code is given for the concerning variable. In earlier versions ICF
+                           codes were used, however, these cause too much confusion with other similar observations of the patient one wants to record.
+                        </p>
+                        <p>1<em>Mahoney, F. I., and  Barthel, D. (1965). Functional Evaluation: The Barthel Index. Maryland State Medical Journal, 14, 56-61.</em></p>
+                        <p>2<em>Haan, de, R., Limburg, M., Schuling, J., Broeshart, J., Jonkers, L., and Zuylen, van, P., (1993). Klinimetrische evaluatie
+                              van de Barthel-index, een maat voor beperkingen in het dagelijks functioneren, Nederlands Tijdschrift voor Geneeskunde, 37
+                              (18), 917-921.</em></p>
+                        <p>The current code set is temporarily for projects.</p><br /><img class="graphic" src="graphics/REPC_NA000033.gif" alt="REPC_NA000033.gif" /><br /><a href="graphics/REPC_RM000103.jpg" target="_blank" style="border:0"><img class="graphic" src="graphics/T-REPC_RM000103.jpg" alt="T-REPC_RM000103.jpg" /></a><p><em><strong>Assessment Scale Structure Walk-through:</strong></em></p>
+                        <p>A formal walk-through will be developed. For now, the reader should refer to the documentation for the HL7 Reference Information
+                           Model for a complete set of attribute descriptions for each class in this RMIM.
+                        </p>
+                        <p></p>
+                        <table class="artifactList">
+                           <caption>Contained Hierarchical Message Descriptions</caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Care Structures Event Assessment Scale</td>
+                              <td class="artifactList_code"><a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000120UV01-hmd" class="">REPC_HD000120UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">4.1.2</span><span class="title"><a name="REPC_RM000700UV01-rmi">R_CaredEntity  (REPC_RM000700UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/REPC_RM000700UV.htm" target="_blank"><img class="graphic" src="editable/images/T-REPC_RM000700UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><div class="subheading">Description</div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><b><em>Parent:  </em></b></td>
+                              <td class="structType_value"><em>Care Provision (<a href="../../domains/uvpc/uvpc.htm#REPC_DM000000UV-rmi" class="">REPC_DM000000UV</a>)
+                                    									</em></td>
+                           </tr>
+                        </table><strong>Cared Entity Structure </strong><p>The Cared Entity Structure supports a Maintained Entity as a participant of an Act played by a place or device.  An example
+                           is a Care Provision Acts Subject participant being a patient's ambulatory device requiring repair or toxic waste needed to
+                           be removed from the patient's adjacent surroundings.    
+                        </p><strong>MaintainedEntity  </strong><p>The role of the entity that is maintained.  The maintained entity is played by either a place entity (E_Place, see description
+                           in CMET domain) or device entity (Device) and scoped by an Organization (Organization) that is responsible for maintaining
+                           the place or device.  
+                        </p><strong><em>Attributes  </em></strong><p>classCode: The mandatory classCode is specified as MNT (maintained entity).    id: set of identifiers that uniquely identifying
+                           the entity as part of its maintained role.  code: a role code that further classifies the type of the maintained entity. 
+                           name: a set of entity names by which the maintain entity is known.  addr: a set of addresses where the maintained entity is
+                           located.    
+                        </p><strong>Device  </strong><p>A device that is playing the role of Maintained Entity.  The device may also play the role of located entity (LocatedEntity).
+                           
+                        </p><strong><em>Attributes  </em></strong><p>classCode: The mandatory class code is specified as DEV (EntityClassDevice), a specialization of Manufactured Material.  
+                           determinerCode: The mandatory determiner code is specified as INSTANCE (specific).    
+                        </p>
+                        
+                        
+                        
+                        id: set of identifiers that uniquely identifying the device independently from its maintained role.  
+                        <p>desc: a multimedia representation or text description of the device.  manufacturerModelName: a string or coded model name
+                           assigned by the device manufacturer.   
+                        </p><strong>LocatedEntity </strong><p>The role of device that is locatable at some address or place.  The located entity is optionally scoped by a place entity
+                           (E_Place, see description in CMET domain).  
+                        </p><strong><em>Attributes  </em></strong><p>classCode: The mandatory classCode is specified as LOCE (RoleClassLocatedEntity).    </p>
+                        
+                        
+                        
+                        addr: a set of addresses where the device is located, to be used when a scoping Place entity is not provided.  
+                        <p>effectiveTime: the interval of time that the device is located at the specified address or place    </p><strong>Organization  </strong><p>An organisation that is scoping the role of Maintained Entity.    </p><strong><em>Attributes</em></strong><p>classCode: The mandatory class code is specified as ORG (EntityClassOrganization).    </p>
+                        
+                        
+                        
+                        determinerCode: The mandatory determiner code is specified as INSTANCE (specific).    
+                        <p>id: set of identifiers that uniquely identifying the maintaining organization.  name: a set of organization names by which
+                           the maintaining organization is known.
+                        </p>
+                        
+                        
+                        
+                        telecom: a set of electronic communication numbers or addresses where the maintaining organization can be contacted.  
+                        <p>addr: a set of addresses where the maintaining organization is located or contactable.    </p>
+                        <p></p>
+                        <table class="artifactList">
+                           <caption>Contained Hierarchical Message Descriptions</caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Care Structures Event Cared Entity</td>
+                              <td class="artifactList_code"><a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000700UV01-hmd" class="">REPC_HD000700UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">4.1.3</span><span class="title"><a name="REPC_RM000410UV01-rmi">A_ConcernList  (REPC_RM000410UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/REPC_RM000410UV.htm" target="_blank"><img class="graphic" src="editable/images/T-REPC_RM000410UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><div class="subheading">Description</div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><b><em>Parent:  </em></b></td>
+                              <td class="structType_value"><em>Care Structures Event Statement Collector (<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000400UV01-rmi" class="">REPC_RM000400UV01</a>)
+                                    									</em></td>
+                           </tr>
+                        </table>
+                        <p>The Concern List RMIM will move to a Working List Management Topic and other related messages when Patient Care creates this
+                           new topic.
+                        </p>
+                        <p></p>
+                        <table class="artifactList">
+                           <caption>Contained Hierarchical Message Descriptions</caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Care Structures Event Concern List</td>
+                              <td class="artifactList_code"><a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000410UV01-hmd" class="">REPC_HD000410UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">4.1.4</span><span class="title"><a name="REPC_RM000300UV01-rmi">A_ConcernTracking  (REPC_RM000300UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/REPC_RM000300UV.htm" target="_blank"><img class="graphic" src="editable/images/T-REPC_RM000300UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><div class="subheading">Description</div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><b><em>Parent:  </em></b></td>
+                              <td class="structType_value"><em>Care Structures Event Statement (<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000100UV01-rmi" class="">REPC_RM000100UV01</a>)
+                                    									</em></td>
+                           </tr>
+                        </table><strong>Concern Tracking Structure Overview:</strong><p>One particular feature of the Care Provision models and messages is the possibility to track the condition of the patient
+                           / target across time, providers and locations. In order to allow this within the mechanics of the HL7 v3 messaging, the Concern
+                           Act class is introduced and fully explained in this Concern Tracking Topic area of this ballot. 
+                        </p>
+                        <p>The Concern Tracking Structure supports the expression of concerns about situations pertaining to selected entities that are
+                           the target or subject of care. It organizes basic clinical data into a longitudinal data structure, which supports tracking
+                           and management of complex processes over time.
+                        </p>
+                        <p>Definition of Concern Class as result of harmonization work:  An interest or focus of attention that tends to persist over
+                           time and has as a subject a state or process.  The subject of the interest or focus of attention has the potential to require
+                           intervention or management.  
+                        </p>
+                        <p>Concern tracking is used to implement the problem-oriented medical record concept introduced by Larry Weed in the 1960's and
+                           1970's. For engineers, the problem-oriented medical record can be considered a health care version of industrial project management
+                           processes that focus on issue resolution. The intention of this model is to support both the tracking of these concerns at
+                           the "high-level" as well as the detailed tracking of complex management processes at the "low-level." The decision on whether
+                           to track concerns at the high-level or low-level is to be an application-dependent decision. Applications may use techniques
+                           described in this section to track concerns but are not required at this level of the specification to include all the tracking
+                           information. 
+                        </p>
+                        <p>Examples of use for the Concern Class include but are not limited to: an observation result in form of a diagnosis e.g. a
+                           patient having cancer which gives the concern a name, a procedure such as amputation of the left leg requiring care management,
+                           a substance administration, e.g. receiving cytotoxic drugs requiring extra management, equipment repair status, device recall
+                           status, a health risk, a financial risk, public health risk, pregnancy, disease, complaint. In particular this concern class
+                           is used to group information about, or to follow up on, a specific episode of care, or a care need or patient problem, especially
+                           if more than one provider is involved in the care. 
+                        </p>
+                        <p>In the usual course of presentation, diagnosis, and treatment, the caretaker of a concern gains a gradually better understanding
+                           of the concern.  An example of a concern in the disease management area is the Episode of Illness.
+                           
+                        </p>
+                        <p>In a typical clinical scenario, the patient presents to the clinician with the "chief complaint." This chief complaint or
+                           chief concern is one of many symptoms that represent the patient's view of the primary problem from which the patient is suffering.
+                           Multiple questions and exams are performed on the patient, which provides a data set from which a clinician may develop a
+                           viewpoint on the concern (the abductive or "hypothesis generating" phase of the process as described by Peirce). On the basis
+                           of this initial understanding of the concern, tests are ordered and observations carried out by the clinician and time passes.
+                           Frequently, the disease evolves and demonstrates more symptoms and signs. At each point in time during multiple contacts with
+                           the patient or with patient data, the clinician has evolved a set of potential diagnoses. In addition, during each point in
+                           time, various treatments may be recommended by the clinician, citing the concern as the reason for the various treatments.
+                           
+                        </p>
+                        <p>One business need filled by the Concern Tracking Structure is to support the direct care of the patient with an organized
+                           model for representing multiple contacts with the subject of care while the concern is evolving, data is being collected,
+                           and treatments are being applied. In addition, the business needs of quality improvement and cost accounting performed by
+                           data mining applications are supported by tracking the evaluation and management actions associated with the concern.
+                        </p>
+                        <p>Thus the concern class can function as a grouper for all activities associated with a specific patient-related problem. The
+                           problem can, due to different observations, evolve over time and can be tracked or managed by one or more care professionals.
+                           Different professionals may have different opinions of the nature of the problem, but all their observations are grouped under
+                           the same concern.   So essentially, the concern class is used to track what affects the patient. It is independent of the
+                           assigned profession, and can have different personal diagnoses attached. It is what ties all underlying activities (Acts)
+                           together. See figure 1 for how some of these concerns can relate to each other:  
+                        </p>
+                        <p>Figure 1: different concerns for the same individual represented in time. </p>
+                        <p><br /><img class="graphic" src="graphics/Concerns.jpg" alt="Concerns.jpg" /><br /><br /></p>
+                        <p>In the discussion that follows, the Concern Tracking Structure will be divided into four levels of function that support communications
+                           at differing levels of detail. These four levels of function include: 
+                        </p>
+                        <ul>
+                           <li>The attention for the Concern itself, i.e. the subject(s) of concern</li>
+                           <li>Adding additional contextual information to the concern, i.e. references to additional relevant Care Statements</li>
+                           <li>Using attention for a Concern to justify additional management, i.e. Concern as "Reason for an intervention"</li>
+                           <li>Establishing associations with past instances of Concern in order to fully represent the Episode of Illness </li>
+                        </ul>
+                        <p><strong>Guidance:</strong> In HL7, the Observation Class is used to communicate the perception of a state or process.  These are linked together under
+                           a concern.  In the RIM, the term Act always represents a record regarding the process of doing. Observation represents a constraint
+                           on the definition of Act that takes the form: the Act of Observation where Observation is the noun form of the infinitive
+                           "to observe." Therefore, the Act of Observation is also the recording of a process. In addition, Observation may need to be
+                           constrained further with various Act.code values in order to narrow the definition of the Act of Observation to various types
+                           of observation processes. 
+                           
+                        </p>
+                        <p>The "Attention" for a Concern is simply the idea or hypothesis that one of many potential states or processes may potentially
+                           require extra attention and management. The specific item or items of concern is represented as the "Subject or Subjects of
+                           Concern. At least one subject of concern must be present in a Concern Tracking Structure. In some implementation guides, the
+                           Subject Act Relationship may be constrained to one or a few subjects rather than a large or infinite number of subjects. All
+                           subjects of concern should be considered as a single cluster or focus of concern. A patient may have multiple concerns identified,
+                           each with a collection of subjects.
+                           
+                        </p>
+                        <p>In healthcare, the concern for the medical device, home of the patient, or other non-living subjects may need to be managed
+                           as well as the concern for the patients' bodies and wellbeing themselves. Accordingly, "concern " in this discussion is meant
+                           to be a general term referring to state of being of any entity. 
+                        </p>
+                        <p>The key characteristics of this Concern Act class are that it allows to link different stages in the condition of the patient
+                           / target in the following ways:
+                        </p>
+                        <ol>
+                           <li>It might be possible that one patient has two different concerns that normally are unrelated; however, there might be interactions.
+                              Example: a patient with diabetes that has an accident and breaks a leg. It is not due to any diabetes related problem. Thus
+                              there will be two separate concern trackers: one for the diabetes care, another for the treatment of the fracture. Basically
+                              from the Concern Act point of view these are unrelated. In terms of instantiation of classes: the Concern Act is instantiated
+                              one time for diabetes and will get an unique class ID, and the Concern Act is instantiated a second time for the fracture
+                              and gets another - different - class ID. 
+                           </li>
+                           <li> It might occur that a patient has a concern and within the care for that, there is a sub-concern, requiring special attention,
+                              related to the top-level concern. For instance a woman being pregnant (the top-level concern) who has high blood pressure
+                              (the sub-concern).  A similar example would be the Concern 'Obesities' for a patient and related to this the sub concern of
+                              (risk for) Diabetes type II. We apply the Component Act relationship in the Concern Tracker structure for this.   In addition,
+                              a use case frequently occurring is to refer to a fetus' observations, e.g. fetal heart rate, but it goes in the record and
+                              messages of the pregnant woman. In that instance, the Condition of mother (patient) is pregnant, which must be linked to the
+                              sub Condition of fetus is 'unborn' and the underlying observation of the fetal heart rate.     In the COMP actRelationship,
+                              the Id of the 'Concern' and that of the 'sub-Concern' are separate and independent, and simply linked in a parent-child actRelationship.
+                              
+                           </li>
+                           <li>Some concerns exist during a period, go away for a while and come back later. Basically the concern is intermittent in nature,
+                              although the concern-related observations and diagnoses of the patient might change over time. Examples include the exacerbation
+                              of COPD, or the 'winter blues'. We can apply the Sequel (SEQL) Act Relationship for this kind of linkage between concerns.
+                              Also this relationship is typically used to refer to an earlier pregnancy (Concern 1) during a current pregnancy (Concern
+                              2). The concern ID's differ, but tackle a similar concern. In addition, the naming (Annotation) or underpinning (Observations)
+                              can have the same names, or values. 
+                           </li>
+                           <li> A concern might be the situation of the patient that evolves over time and about which different providers involved (including
+                              the patient him/herself) have matured their insight. For example a patient talking about chest pain, a general practitioner
+                              thinking about a cardiac problem, and the cardiologist diagnosing a myocardial infarction. In particular relevant is also
+                              the example of episodes of pregnancy, delivery and maternity. ELNK is intended to link different parts (episodes or periods,
+                              sometimes with different care providers and care provisions) of the same concern: e.g., link pregnancy to delivery and to
+                              maternity.    The concern tracker structure allows grouping of observations, procedures, encounters, and other acts for the
+                              particular concern, and this grouping can contain different diagnoses of different providers, all associated with the same
+                              concern. Thus, the concern is a patient-related grouper, which can be used throughout the whole care provision if the care
+                              is carried out by one professional, or to several care provisions if the care is performed by several professionals. In the
+                              above example the general practitioner has provided care and probably referred the patient to the cardiologist. The cardiologist
+                              starts his Care Provision but this can be grouped under the same concern. The test results obtained by the Cardiologist also
+                              go under this concern, thus maturing the insight in the problem the patient has.   This can be dealt with using the ELINK
+                              Episode link Act Relationship, where the id for the concern class remains the same over time, but the Act ids for the different
+                              episodes (patient himself, general practitioner, cardiologist) can differ.     In the ELINK actRelationship, each Concern'
+                              has a separate and unique identifier. 
+                           </li>
+                        </ol>
+                        <p>In particular two options: the merge and split of acts are relevant here. It might be that initially two concerns have been
+                           treated as separate instances, but need to merge into one concern. For example, evolving insights might lead to the conclusion
+                           that one was a symptom concern of the other being a disease concern. In such example the symptom concern can be grouped under
+                           the disease concern by replacing the ID of the symptom concern with the one of the disease concern. This can be done with
+                           the ELINK relationship  Similarly, if two interest, initially grouped under the same Concern (with the same ID), appear to
+                           be independent of each other, then the two concerns can be split, where best is to give each a new instance identifier, or
+                           allow one concern to be continued under the same concern ID, and the split concern getting a new ID. This is dealt with using
+                           the Replace relationship.   
+                        </p>
+                        <p>These four linkage types: Component, Sequel, Episode Link and Replace are considered the use cases that are dealt with in
+                           detail in this Concern Tracking Topic. Further, there is an explanatory document attached to the Care Provision ballot materials
+                           covering much more detail and examples. 
+                        </p>
+                        <p>References from Concern to other Care Statements: The use of the "Reference ActRelationship" from the Concern to a Care Statement
+                           Choice Box (represented here as A_CareStatement CMET) allows the clinician to identify additional Care Statements that may
+                           be relevant to the "context of the Concern," but which cannot be truly classified as subjects of the concern. A normal lab
+                           result is an example. This "Reference ActRelationship" is especially helpful in communicating the context of the concern during
+                           the initial identification of the concern, i.e. the abductive or "hypothesis-generating" phase. Occasionally, "Reference"
+                           may be used to add important contextual information to the Concern as the understanding about the concern evolves. 
+                        </p>
+                        <p><strong>Reasons for Management Actions:</strong>
+                           	The "Reason ActRelationship" is used to cite the Concern as the reason for the management action. After the nature of the
+                           Concern is established by utilizing the Subject and Reference ActRelationships, most ActRelationships associated with Concern
+                           will be used to justify the services generated to address or manage the Concern. This ActRelationship is the "Reason ActRelationship"
+                           from Care Statements back to the instance of Concern itself.
+                           
+                        </p>
+                        <p><strong>Extending and Clarifying the Episode of Illness:</strong>
+                           	Finally, there may be a need to identify associations to other instances of the same concern. For example, after treating
+                           a concern for a period of time, a physician may discover that another physician has been treating the same concern in another
+                           institution. In this case, the first physician may wish to simply link his concern to the other physician's concern, i.e.
+                           using "EpisodeLink ActRelationship;" or he may wish to ask the other physician to obsolete the other physician's concern using
+                           the "Replace ActRelationship."
+                           
+                        </p>
+                        <p><strong>Updating the Concern Tracking Structure:</strong> Note that the specific use cases and recommendations for update semantics and instance management in general are still being
+                           developed by M&amp;M.   Consequently, specific guidance regarding the use or change of the Replace and EpisodeLink ActRelationships
+                           may evolve as HL7 as a whole nails down the details of instance management.
+                        </p>
+                        <p><strong>Participations on the Concern Class: </strong>
+                           	The participations on the Concern Class and the Care Statement Choice Boxes are the same participations defined for the Care
+                           Provision Domain in general. 
+                        </p>
+                        <p><strong><em>Formal Concern Tracking Structure Model Walkthrough:</em></strong></p>
+                        <p><strong>Clone Name: Concern Class</strong></p>
+                        <table width="90%" cellspacing="0" cellpadding="5" border="1" style="border-color:blue">
+                           <tbody>
+                              <tr>
+                                 <td><em>Attribute </em></td>
+                                 <td><em>Constraint </em></td>
+                                 <td><em>Constrained Attribute Description</em></td>
+                              </tr>
+                              <tr>
+                                 <td>classCode</td>
+                                 <td>
+                                    <p>Immutable: Yes  Optionality: B* (1...1)  Datatype: CS  Vocabulary Domain:   CNE =CONC</p>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    Note: until CONC is approved by M&amp;M, ACT will be used instead of CONC
+                                    				
+                                 </td>
+                                 <td>A mandatory attribute constrained to Concern (CONC), which is a subclass of Act. The definition of this class describes the
+                                    "Being concerned or worried about a state or process..." (remaining definition to be crafted).  
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td> moodCode</td>
+                                 <td> Immutable: Yes  Optionality: B* (1...1)  Datatype: CS  Vocabulary Domain:   CNE &lt;=ActMood </td>
+                                 <td>A mandatory attribute which is constrained to the values in the ActMood. Normally, this will be constrained to EVN in many
+                                    derived RMIM's, HMD's, and implementation guides. However, determinations of Concerns may be requested with RQO, or appointments
+                                    may be scheduled with APPT  
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td> Id </td>
+                                 <td>Immutable: Yes  Optionality:  (0...*)  Datatype: SET&lt;ii&gt;  Vocabulary Domain:   Not Applicable </td>
+                                 <td>A required attribute that shall be present if known; multiple id's may be present. Updates may add id's to the set, but may
+                                    not change an id. This attribute should be constrained to be present in most implementation guides.  
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>statusCode     </td>
+                                 <td>Immutable: No  Optionality: * (1...1)  Datatype: CS  Vocabulary Domain:   CNE &lt;=ActStatusCode </td>
+                                 <td>A required attribute that shall be present and shall be valued with a NullFlavor or with members of a value set bound to the
+                                    Vocabulary Domain "ActStatusCode."  This attribute is used to define whether the concern of a performer:  
+                                    <ul>
+                                       <li>new - draft (not messaged, we use these internally though)  </li>
+                                       <li>active - currently being concerned</li>
+                                       <li>completed - resolved concern </li>
+                                       <li>aborted - a concern which we decide to drop without resolution</li>
+                                       <li>suspended - a concern which is active but we are setting it aside</li>
+                                       <li>nullified - a concern which was created in error</li>
+                                       <li>obsolete - a concern which has been replaced by another concern </li>
+                                    </ul>
+                                    <p>Updates in the value of the attribute are allowed.</p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>effectiveTime</td>
+                                 <td>Immutable: No  Optionality: * (0...1)  Datatype: IVL&lt;GTS&gt;  Vocabulary Domain:   Not Applicable</td>
+                                 <td>A required attribute constrained to the time range the concern was active or suspended is or was present in the subject if
+                                    known. If still present at time of update, only the low value in the time range is expressed.  
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>confidentialityCode</td>
+                                 <td>Immutable: No  Optionality: * (0...1)  Datatype: CV  Vocabulary Domain:   CNE &lt;=Confidentiality </td>
+                                 <td>A required attribute that may be present and shall be valued with NullFlavor or members of a value set bound to the Vocabulary
+                                    Domain "Confidentiality."  Updates in the value of the attribute are allowed. 
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <p><strong>Clone Name: subject1</strong></p>
+                        <table width="90%" cellspacing="0" cellpadding="5" border="1" style="border-color:blue">
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <p><em>Attribute </em></p>
+                                 </td>
+                                 <td>
+                                    <p><em>Constraint </em></p>
+                                 </td>
+                                 <td>
+                                    <p><em>Constrained Attribute Description</em></p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>typeCode</p>
+                                 </td>
+                                 <td>
+                                    <p>Immutable: Yes  Optionality: B* (1...1)  Datatype: CS  Vocabulary Domain:   CNE =SUBJ</p>
+                                 </td>
+                                 <td>
+                                    <p> A mandatory attribute constrained to SUBJ, which is a type of ActRelationship. This ActRelationship is used to identify the
+                                       subjects of concern (a care statement). At least one subject of concern must be present. All the subjects of concern must
+                                       be related to each other as if in "a cluster of items which together constitute a concern." 
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>contextControlCode</p>
+                                 </td>
+                                 <td>
+                                    <p>Immutable: No  Optionality: * (1...1)  Datatype: CS  Vocabulary Domain:   CNE &lt;=AN </p>
+                                 </td>
+                                 <td>
+                                    <p>A required attribute that shall be present and shall be valued with NullFlavor or AN.  Updates in the value of the attribute
+                                       are allowed.  
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>contextConduction-Ind</p>
+                                 </td>
+                                 <td>
+                                    <p>Immutable: Yes  Optionality: B* (1...1)  Datatype: BL  Vocabulary Domain:   Not Applicable</p>
+                                 </td>
+                                 <td>
+                                    <p>A mandatory attribute that shall be valued with a Boolean.</p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>priorityNumber</p>
+                                 </td>
+                                 <td>
+                                    <p>Immutable: No  Optionality:  (0...1)  Datatype: INT  Vocabulary Domain:   Not Applicable</p>
+                                 </td>
+                                 <td>
+                                    <p> An optional attribute that shall be present when there is more than one subject of concern. The value set shall range from
+                                       1...* unless constrained by the implementation guide. The interpretation of the value is simply the listing order of the subjects
+                                       of concern where for the first subject of concern, INT = 1.  
+                                    </p>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <p><strong>Clone Name: reference</strong></p>
+                        <table width="90%" cellspacing="0" cellpadding="5" border="1" style="border-color:blue">
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <p><em>Attribute </em></p>
+                                 </td>
+                                 <td>
+                                    <p><em>Constraint </em></p>
+                                 </td>
+                                 <td>
+                                    <p>Constrained Attribute Description</p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p> typeCode</p>
+                                 </td>
+                                 <td>
+                                    <p>Immutable: Yes  Optionality: B* (1...1)  Datatype: CS  Vocabulary Domain:   CNE &lt;=REFR</p>
+                                 </td>
+                                 <td>
+                                    <p>A mandatory attribute constrained to REFR, which is a type of ActRelationship. This ActRelationship is used to establish a
+                                       non-specific reference relationship to any care statement. The ActRelationship itself is optional and is normally used only
+                                       when the author feels a care statement reflects the context of concern, but cannot truly be called "a subject of concern."
+                                       
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>contextControlCode</p>
+                                 </td>
+                                 <td>
+                                    <p>Immutable: No  Optionality: * (1...1)  Datatype: CS  Vocabulary Domain:   CNE &lt;=AN</p>
+                                 </td>
+                                 <td>
+                                    <p>A required attribute that shall be present and shall be valued with NullFlavor or AN.  Updates in the value of the attribute
+                                       are allowed.  "Context" in this attribute refers to Participations of the Act and not to other associations often considered
+                                       "Context".
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>contextConduction-Ind</p>
+                                 </td>
+                                 <td>
+                                    <p>Immutable: Yes  Optionality: B* (1...1)  Datatype: BL  Vocabulary Domain:   Not Applicable </p>
+                                 </td>
+                                 <td>
+                                    <p>A mandatory attribute that shall be valued with a Boolean. "Context" in this attribute refers to Participations of the Act
+                                       and not to other associations often considered "Context"
+                                    </p>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <p><strong>Clone Name: CareStatementChoiceBox</strong> (as A_CareStatement CMET)
+                        </p>
+                        <table width="90%" cellspacing="0" cellpadding="5" border="1" style="border-color:blue">
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <p><em>Included Clones</em></p>
+                                 </td>
+                                 <td>
+                                    <p><em>Constrained Clone Description</em></p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>Note that choice boxes constrain implementation guide developers to a set of Act clones from which to create ActRelationships.
+                                       
+                                    </p>
+                                 </td>
+                                 <td>
+                                    <p>See the Care Statement Structure for the formal walkthrough of this ChoiceBox.</p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>subject1</p>
+                                 </td>
+                                 <td>
+                                    <p>This Care Statement Choice Box is constrained to contain only the choices of Observation, Procedure, and Substance Administration
+                                       and NOT the choices of Supply, Encounter, and Generic Act
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>reference</p>
+                                 </td>
+                                 <td>
+                                    <p>This Care Statement Choice Box is unconstrained.  </p>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <p><strong>Clone Name: reasonOf</strong></p>
+                        <table width="90%" cellspacing="0" cellpadding="5" border="1" style="border-color:blue">
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <p><em>Attribute </em></p>
+                                 </td>
+                                 <td>
+                                    <p><em>Constraint </em></p>
+                                 </td>
+                                 <td>
+                                    <p><em>Constrained Attribute Description</em></p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>typeCode </p>
+                                 </td>
+                                 <td>
+                                    <p>Immutable: Yes  Optionality: B* (1...1)  Datatype: CS  Vocabulary Domain:   CNE &lt;=RSON</p>
+                                 </td>
+                                 <td>
+                                    <p>A mandatory attribute constrained to RSON, which is a type of ActRelationship. This ActRelationship is used to establish justification
+                                       for any care statement. The ActRelationship itself is optional.   
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>contextControlCode </p>
+                                 </td>
+                                 <td>
+                                    <p>Immutable: No  Optionality: * (1...1)  Datatype: CS  Vocabulary Domain:   CNE =AN </p>
+                                 </td>
+                                 <td>
+                                    <p>Refer to the RIM for description of this attribute.  </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>contextConduction-Ind</p>
+                                 </td>
+                                 <td>
+                                    <p>Immutable: Yes  Optionality: B* (1...1)  Datatype: BL  Vocabulary Domain:   Not Applicable</p>
+                                 </td>
+                                 <td>
+                                    <p>Refer to the RIM for description of this attribute. </p>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <p><strong>Clone Name: subjectOf2</strong></p>
+                        <table width="90%" cellspacing="0" cellpadding="5" border="1" style="border-color:blue">
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <p><em>Attribute </em></p>
+                                 </td>
+                                 <td>
+                                    <p><em>Constraint </em></p>
+                                 </td>
+                                 <td>
+                                    <p><em>Constrained Attribute Description</em></p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>typeCode</p>
+                                 </td>
+                                 <td>
+                                    <p>Immutable: Yes  Optionality: B* (1...1)  Datatype: CS  Vocabulary Domain:   CNE =SUBJ</p>
+                                 </td>
+                                 <td>
+                                    <p>A mandatory attribute constrained to SUBJ, which is a type of ActRelationship. This ActRelationship is used to add comments
+                                       to the Concern when the Concern is the target of the optional AnnotationAct. 
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>contextControlCode</p>
+                                 </td>
+                                 <td>
+                                    <p>Immutable: No  Optionality: * (1...1)  Datatype: CS  Vocabulary Domain:   CNE =AN</p>
+                                 </td>
+                                 <td>
+                                    <p>Refer to the RIM for description of this attribute. </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>contextConduction-Ind</p>
+                                 </td>
+                                 <td>
+                                    <p>Immutable: Yes  Optionality: B* (1...1)  Datatype: BL  Vocabulary Domain:   Not Applicable</p>
+                                 </td>
+                                 <td>
+                                    <p>Refer to the RIM for description of this attribute. </p>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <p><strong>Clone Name: subjectOf1</strong></p>
+                        <table width="90%" cellspacing="0" cellpadding="5" border="1" style="border-color:blue">
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <p>Attribute  </p>
+                                 </td>
+                                 <td>
+                                    <p>Constraint  </p>
+                                 </td>
+                                 <td>
+                                    <p> Constrained Attribute Description</p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>typeCode </p>
+                                 </td>
+                                 <td>
+                                    <p>Immutable: Yes Optionality: B* (1...1) Datatype: CS Vocabulary Domain: CNE =SUBJ</p>
+                                 </td>
+                                 <td>
+                                    <p>A mandatory attribute constrained to SUBJ, which is a type of ActRelationship. This ActRelationship is used to document change
+                                       in status of a Concern, such as going from "Being Concerned (status='active' )" to "No longer concerned (status = 'completed')".
+                                       
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>contextControlCode </p>
+                                 </td>
+                                 <td>
+                                    <p>Immutable: No Optionality: * (1...1) Datatype: CS Vocabulary Domain: CNE =AN Refer to the RIM for description of this attribute
+                                       
+                                    </p>
+                                 </td>
+                                 <td>
+                                    <p> Refer to the RIM for description of this attribute.  </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>contextConduction-Ind </p>
+                                 </td>
+                                 <td>
+                                    <p>Immutable: Yes Optionality: B* (1...1) Datatype: BL Vocabulary Domain: Not Applicable</p>
+                                 </td>
+                                 <td>
+                                    <p>Refer to the RIM for description of this attribute.  </p>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <p><strong>Clone Name: links </strong>       .   
+                        </p>
+                        <table width="90%" cellspacing="0" cellpadding="5" border="1" style="border-color:blue">
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <p><em>Attribute </em></p>
+                                 </td>
+                                 <td>
+                                    <p><em>Constraint </em></p>
+                                 </td>
+                                 <td>
+                                    <p><em>Constrained Attribute Description</em></p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>typeCode</p>
+                                 </td>
+                                 <td>
+                                    <p> Immutable: Yes  Optionality: B* (1...1)  Datatype: CS  Vocabulary Domain:   CNE =ELNK</p>
+                                 </td>
+                                 <td>
+                                    <p>A mandatory attribute constrained to ELNK, which is a type of ActRelationship. This ActRelationship is used to string together
+                                       the instances of Concern without changing the statusCode of the target Concern Act to "obsolete." Use ReplaceCONC if the target
+                                       Concern is to become obsolete. 
+                                    </p>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <p><strong>Clone Name: replacementOf  </strong></p>
+                        <table width="90%" cellspacing="0" cellpadding="5" border="1" style="border-color:blue">
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <p><em>Attribute </em></p>
+                                 </td>
+                                 <td>
+                                    <p><em>Constraint </em></p>
+                                 </td>
+                                 <td>
+                                    <p><em>Constrained Attribute Description</em></p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>typeCode</p>
+                                 </td>
+                                 <td>
+                                    <p>Immutable: Yes  Optionality: B* (1...1)  Datatype: CS  Vocabulary Domain:   CNE =RPLC </p>
+                                 </td>
+                                 <td>
+                                    <p>A mandatory attribute constrained to RPLC, which is a type of ActRelationship. This ActRelationship is used to string together
+                                       the instances of Concern when  the statusCode of the target Concern Act is to be changed to "obsolete." Use LinksCONC if the
+                                       target Concern is NOT to become obsolete.
+                                    </p>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <p><strong>Clone Name: component</strong></p>
+                        <table width="90%" cellspacing="0" cellpadding="5" border="1" style="border-color:blue">
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <p>Attribute  </p>
+                                 </td>
+                                 <td>
+                                    <p>Constraint  </p>
+                                 </td>
+                                 <td>
+                                    <p>Constrained Attribute Description </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>typeCode </p>
+                                 </td>
+                                 <td>
+                                    <p>Immutable: Yes Optionality: B* (1...1) Datatype: CS Vocabulary Domain: CNE &lt;=COMP</p>
+                                 </td>
+                                 <td>
+                                    <p>The component relationship has a source of Concern and a target that is another Concern, and is used to create groupings of
+                                       Concerns in a more or less hierarchical order.   
+                                    </p>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <p><strong>Clone Name: sequelTo</strong></p>
+                        <table width="90%" cellspacing="0" cellpadding="5" border="1" style="border-color:blue">
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <p>Attribute  </p>
+                                 </td>
+                                 <td>
+                                    <p>Constraint  </p>
+                                 </td>
+                                 <td>
+                                    <p>Constrained Attribute Description  </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>typeCode </p>
+                                 </td>
+                                 <td>
+                                    <p>Immutable: Yes Optionality: B* (1...1) Datatype: CS Vocabulary Domain: CNE &lt;=SEQL  </p>
+                                 </td>
+                                 <td>
+                                    <p>An act relationship indicating that the source Concern act follows the target Concern act.</p>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <p></p>
+                        <table class="artifactList">
+                           <caption>Contained Hierarchical Message Descriptions</caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Care Structures Event Concern Tracking</td>
+                              <td class="artifactList_code"><a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000300UV01-hmd" class="">REPC_HD000300UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">4.1.5</span><span class="title"><a name="REPC_RM000100UV01-rmi">A_CareStatement  (REPC_RM000100UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/REPC_RM000100UV.htm" target="_blank"><img class="graphic" src="editable/images/T-REPC_RM000100UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><div class="subheading">Description</div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><b><em>Parent:  </em></b></td>
+                              <td class="structType_value"><em>Care Provision (<a href="../../domains/uvpc/uvpc.htm#REPC_DM000000UV-rmi" class="">REPC_DM000000UV</a>)
+                                    									</em></td>
+                           </tr>
+                        </table>
+                        <p><strong>Care Statement Structure Overview:  </strong></p>
+                        <p>The Care Statement Structure assists in collecting clinical information that can be documented during care provision. The
+                           choice box allows expressing any collection of statements about care in any order or number, and in any kind of combination,
+                           depending on the purpose and nature of the message.   
+                        </p>
+                        <p>The Care Statement Structure is the model from which all other Care Structures are derived. This derivation occurs by constraint.
+                           Based on the Clinical Statement Pattern, it is renamed the Care Statement Structure in this Domain Message Information Model
+                           for Care Provision in order to emphasize that Care may apply to medical devices, facilities, and environmental sites as well
+                           as patients. In that sense, the vocabulary used to support Care Statements is more extensive than the vocabulary used to support
+                           simply the care of patients. These extensions will be documented by a gradual increase in the number and variety of HL7 vocabulary
+                           value sets.  This description does not replicate the full details of the Clinical Statement Pattern but documents those aspects
+                           that differ significantly from the base pattern.
+                        </p>
+                        <p>The intention is that a care statement instance may be added by itself to the Care Provision Act at creation of the RMIM or
+                           added at runtime execution of an application in order to support the variability of extent and detail described in the care
+                           statement definition above. Of course, the care statement may be added to the Care Provision Act along with adding the other
+                           structures of the Care Provision Domain as well.   
+                        </p>
+                        <p><strong>Use of the model</strong></p>
+                        <p>The Care Statement model represents a standard, high-level structure for the inclusion of clinical information in Care Provision
+                           communications intended to support specific business functions. Although not intended to be implemented 'as is', the Care
+                           Statement model can be constrained to meet the requirements of many specific communications regarding clinical information.
+                           
+                        </p>
+                        <p>Options for pattern constraint include: </p>
+                        <ul>
+                           <li>The generic 'Care Statement' class attributes may be constrained to reflect the precise nature of the data to be conveyed.
+                              For example: 
+                              <ul>
+                                 <li>Optional attributes may be removed if not appropriate to the business case.</li>
+                                 <li>Attributes themselves may be constrained: 
+                                    <ul>
+                                       <li>multiplicities may be constrained to narrower number sets, e.g. (0..*) may be constrained to (1..*)  </li>
+                                       <li>attribute value sets may be constrained to smaller attribute value sets, e.g. 'mood code' limited to 'Event' </li>
+                                    </ul>
+                                 </li>
+                                 <li>Data types for an attribute may be constrained, e.g. 'ANY to CD' </li>
+                              </ul>
+                           </li>
+                           <li>Associations may be constrained to remove the potential for complexity, e.g. the limitation of an implementation to three
+                              levels of nesting; the removal of 'Episode Link' in order to define an implementation to the 'lowest common denominator' regarding
+                              system capabilities 
+                           </li>
+                           <li>Classes may be constrained: 
+                              <ul>
+                                 <li>Classes may be removed if not required </li>
+                                 <li>Classes may be constrained to specific subclasses, e.g. 'Observation Class' constrained to 'Vital signs Class'</li>
+                                 <li>Classes may be 'cloned' in order to document specific constraints on attributes or associations. </li>
+                                 <li>Classes with specific constraints applied may be 'unrolled' from the Clinical Statement Choice box in order to constrain their
+                                    use to a specific structure (in that case, the constrained version of the class may no longer be assumed to be present in
+                                    the generalized Care Statement Choice Box)  
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                        <ul>
+                           <li>Classes may be combined into specific clinical artifacts, such as combined observations in case of blood pressure or clinical
+                              scales such as Apgar score and Barthel index.
+                           </li>
+                        </ul>
+                        <p>This model is referenced by an Act external to the Care Statements. Often, this external Act provides the 'Entry point' to
+                           a communication specification and represents the context in which the care statement information is being sent. For example,
+                           the information regarding who is sending this information is found in an Act external to the Care Statements. The Care Provision
+                           Act in the Care Provision Domain is an example of an Act external to the Care Statement. 
+                        </p>
+                        <p><strong>Care Statement Model  (REPC_RM000100)</strong></p><strong>Description</strong><p><strong>Model Overview </strong></p>
+                        <p>The model can be divided into 3 related parts:  * CareEntry Choice Box  * Participations surrounding the Acts  * Acts outside
+                           the CareEntry Choice Box  
+                        </p>
+                        <p><strong>CareEntry Choice Box</strong></p>
+                        <p>This part of the model is used to convey the detailed care statements that are being sent in support of the specific business
+                           need. As well as providing a mechanism for conveying the components of this information, it supports grouping of these components
+                           and provides mechanisms to explicitly link statements where there is a specific relationship. 
+                        </p>
+                        <p>The class clones in the CareEntry choice are the same as those available in the Clinical Statement Pattern ActChoice. Class
+                           clone names and all aspects of the attributes are identical.
+                        </p>
+                        <p><strong>Linking of Statements</strong></p>
+                        <p>The modeling of the linking of Care Statements has been modified from that in the Clinical Statement Pattern as follows: </p>
+                        <ol>
+                           <li>The sourceOf / targetOf relationship has been unwrapped into 2 separate relationships: sourceOf and targetOf.</li>
+                           <li>The target of the new sourceOf relationship is the outer CareStatement choice</li>
+                           <li> sourceOf1 has been removed </li>
+                           <li>A constraint has been added to the new sourceOf relationship stating that the value of contextConductionInd must be "false"
+                              if the target is an ActReference (context cannot be conducted to ActReferences) 
+                           </li>
+                        </ol>
+                        
+                        
+                        
+                        This revised modeling approach provides the same semantics as that in the Clinical Statement Pattern but is considered to
+                        be a less complicated approach. 
+                        <p><strong>Record Target and Subject</strong></p>
+                        
+                        
+                        
+                        As well as applying to a patient, a Care Statement can also apply to a variety of other types of entity (eg. Equipment). 
+                        To support this, the target of the RecordTarget participation is a choice of the R_CarePatient and R_CaredEntity CMETs.  
+                        <p>Similarly, the subject of a Care Statement can be any one of several types of entity including:</p>
+                        <ul>
+                           <li> the patient</li>
+                           <li>another person </li>
+                           <li>a specimen</li>
+                           <li>a device</li>
+                           <li>a facility </li>
+                           <li>an environmental site</li>
+                        </ul>
+                        <p>An extended set of roles in the SubjectChoice that is the target of the subject participation supports this requirement. 
+                           
+                        </p><em><strong>consumable  </strong></em><p>The consumable participation is used to bring in the Consumable Choice. This can be a Manufactured Product role (played by
+                           a Labelled Drug or a Material) or an Instance of Kind role (played by a Material Kind that can itself be specified as part
+                           of a larger whole).
+                        </p>
+                        <blockquote></blockquote>
+                        <p></p>
+                        <table class="artifactList">
+                           <caption>Contained Hierarchical Message Descriptions</caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Care Structures Event Statement</td>
+                              <td class="artifactList_code"><a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000100UV01-hmd" class="">REPC_HD000100UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">4.1.6</span><span class="title"><a name="REPC_RM000400UV01-rmi">A_StatementCollector  (REPC_RM000400UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/REPC_RM000400UV.htm" target="_blank"><img class="graphic" src="editable/images/T-REPC_RM000400UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><div class="subheading">Description</div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><b><em>Parent:  </em></b></td>
+                              <td class="structType_value"><em>Care Provision (<a href="../../domains/uvpc/uvpc.htm#REPC_DM000000UV-rmi" class="">REPC_DM000000UV</a>)
+                                    									</em></td>
+                           </tr>
+                        </table>
+                        <p><strong>Statement Collector Structure </strong></p>
+                        <p>The Statement Collector Structure is intended to support various methods of organizing Care Statements. A minimum of semantic
+                           information is implied by each organizing structure. However, the implications of these minimal semantics are very important
+                           to the policies and procedures of many organizations which may use templateId and realmCode attributes to specify additional
+                           semantics.
+                        </p>
+                        <p>The Statement Collector is a choice of collector Acts, ActList and ActCategory. The Component (COMP) Act Relationship is used
+                           to group Care Statements into working lists and category lists created for specific purposes and applications. The structure
+                           can represent any kind of list or grouping used in Patient Care, e.g. problems, medications, allergies, observations, activities,
+                           encounters,  and variances.  Each collector Act may have an Author. 
+                        </p>
+                        <p><strong>ActList </strong></p>
+                        <p>The ActList is a clone of the WorkingList Act, which has the following definition:</p>
+                        <p>"A dynamic list of individual instances of Act which reflects the needs of an individual worker, team of workers, or an organization
+                           to view groups of Acts for clinical and administrative reasons." Examples include problem lists, goal lists, allergy lists,
+                           and to-do lists. 
+                        </p>
+                        <p>The ActList represents the myriad of dynamic or managed lists found in clinical summaries such as concern lists (e.g. problem
+                           lists or allergy lists), medication lists, surgery lists, etc. 
+                        </p>
+                        <p>The most common uses of working lists include lists managed at the departmental level. For example, it is common in many hospital
+                           organizations for the pharmacy department to create the medication list that is used for formal medication interaction applications
+                           when a new medication is added to the list. Another example of a departmental working list is the episode of care defined
+                           by the cost accounting department for analysis of the costs related to encounters that include a specific diagnosis. In this
+                           case, the ActList collects encounters that include Act Relationships to the specific concern. 
+                        </p><em>ActList Attributes</em><p><strong>classCode:</strong> The mandatory classCode is specified as LIST (working list), a specialization of the Act class.    
+                        </p><strong>moodCode:</strong> The mandatory moodCode used in ActList is always EVN (event). 
+                        <p><strong>code: </strong>This required attribute describes a kind of WorkingList. The ActListCode vocabulary domain provides a small set of coded values
+                           but this attribute allows extensions to this value set.  
+                        </p>
+                        <p><strong>effectiveTime:</strong> The effectiveTime attribute is optional and represents the time interval for which the working list is active.
+                        </p><strong>ownershipLevelCode: </strong><p><strong>ActCategory</strong></p>
+                        <p>The formal definition of Category, which is a subclass of Organizer, is:</p>
+                        <p>A group of entries within a composition or topic that have a common characteristic for example, Examination, Diagnosis, Management
+                           or Subjective, Objective, Analysis, Plan (SOAP).  
+                        </p>
+                        <p>The distinction from Topic, another subclass of Organizer relates to value sets. For Category there is a bounded list of things
+                           like "Examination", "Diagnosis" or SOAP categories. For Topic the list is wide open to any clinical concern or reason for
+                           a part of an encounter.   
+                        </p>
+                        <p>The ActCategory allows Care Statements to be classified externally to the Care Statement. For example, a particular template
+                           for a summary report may require the inclusion of data within specific, required categories. This external classification
+                           scheme for clinical statements supports that requirement. This mechanism allows a positive statement that "there is no content
+                           for this classification" within the pertinent information of Care Provision.     
+                        </p><em>ActCategory Attributes</em><p><strong>classCode:</strong> The mandatory classCode is specified as CATEGORY, a specialization of the Organizer class under the abstract ActClassContainer
+                           sub-domain.  
+                        </p><strong>moodCode:</strong> The mandatory moodCode used in the ActCategory is always EVN (event).  
+                        <p><strong>code:</strong> This required attribute describes a kind of Category. There is currently no vocabulary domain specified for this attribute.
+                           
+                        </p><strong>effectiveTime: </strong>The effectiveTime attribute represents the time interval for which the working list is active.  
+                        <p><strong>StatementCollector Associations </strong></p>
+                        <p>The StatementCollector choice has two associations:</p>
+                        <ul>
+                           <li>Author Participation</li>
+                           <li> Component Act Relationship</li>
+                        </ul><strong>Author </strong><p>The author of the StatementCollector is an Assigned Person, defined via the CMET R_AssignedPerson. The R_AssignedPerson CMET
+                           records the person who is responsible for providing the data in the list.  
+                        </p>
+                        <p><em>Attributes  </em></p><strong>typeCode:</strong> The mandatory type code is AUT (author).   
+                        <p><strong>contextControlCode:</strong> Required attribute. See description provided in Common Participation Attributes of the DMIM walkthrough.  The default value
+                           is "OP" (overriding, propagating).  
+                        </p><strong>noteText:</strong> Optional notes provided by author.  
+                        <p><strong>time:</strong> The required time attribute is the time the author signed or completed the care statement collection.  
+                        </p><strong>modeCode:</strong> Optional attribute specifying how the author provide the information, e.g. verbally, electronically or hand written.  Use
+                        any value from the ParticipationMode domain.  The default value is 'ELECTRONIC'.  
+                        <p><strong>signatureCode: </strong>This required attribute specifies if the author has, is required or intends to attest to the care statement collection.  Use
+                           the following values from the ParticipationSignature domain.  
+                        </p>
+                        <table width="90%" cellspacing="0" cellpadding="5" border="1" style="border-color:blue">
+                           <tbody>
+                              <tr>
+                                 <td>Code</td>
+                                 <td>Description </td>
+                              </tr>
+                              <tr>
+                                 <td>I (intended)</td>
+                                 <td> The author intends to provide a signature.</td>
+                              </tr>
+                              <tr>
+                                 <td>S (signed) </td>
+                                 <td> Signature has been affixed, either written on file, or electronic (incl. digital) signature in signatureText.</td>
+                              </tr>
+                              <tr>
+                                 <td>X (required)</td>
+                                 <td>A signature for the care provision act is required of this author.</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <p><strong>signatureText:</strong> Optional digital signature or multimedia representation of the signature provided by the author, attesting to the care statement
+                           collection.
+                        </p><strong> Component  </strong><p>The StatementCollector is composed of a list of Care Statements, specified using the Local CMET A_CareStatement.  The A_CareStatement
+                           structure supports the recording of any care statement, its structure is described in the Care Statement section.
+                        </p><em>Attributes </em><p><strong>typeCode:</strong> The mandatory type code is COMP (component).   
+                        </p><strong>contextControlCode: </strong>Required attribute. See description provided in Common ActRelationship Attributes section of the DMIM walkthrough.  The default
+                        value is "AN" (additive, non-propagating). 
+                        <p><strong>contextConductionInd: </strong>Mandatory attribute.  See description provided in Common ActRelationship Attributes section of the DMIM walkthrough.  The
+                           default value is "true".  
+                        </p><strong>sequenceNumber:</strong> The optional sequenceNumber attribute can be used to indicate the order of each component.     
+                        <blockquote></blockquote>
+                        <p></p>
+                        <table class="artifactList">
+                           <caption>Contained Hierarchical Message Descriptions</caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Care Structures Event Statement Collector</td>
+                              <td class="artifactList_code"><a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000400UV01-hmd" class="">REPC_HD000400UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">4.1.7</span><span class="title"><a name="REPC_RM000130UV01-rmi">A_ObservationVitalSigns  (REPC_RM000130UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/REPC_RM000130UV.htm" target="_blank"><img class="graphic" src="editable/images/T-REPC_RM000130UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><div class="subheading">Description</div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><b><em>Parent:  </em></b></td>
+                              <td class="structType_value"><em>Care Structures Event Statement (<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000100UV01-rmi" class="">REPC_RM000100UV01</a>)
+                                    									</em></td>
+                           </tr>
+                        </table>
+                        <p><em><strong>Vital Signs Structure Overview:</strong></em></p>
+                        <p>Typically, "vital signs" represent a collection of individual findings, each of which include a reference range. This reference
+                           range may be specific for the age or gender of the patient or other "patient criteria." In addition, the vital signs may be
+                           qualified by a specific state the patient is in, e.g. actively exercising; at rest; etc. 
+                        </p>
+                        <p>In this RMIM, the focal class identifies the entire collection of vital signs. The vital signs are taken after the state of
+                           the patient is noted, as indicated by the "startsAfterStartOf" ActRelationship. Finally, the component vital signs, the respective
+                           reference range for each vital sign, and the criterion for each reference range is represented by the remaining classes.
+                        </p>
+                        <p><em><strong>Vital Signs Structure Walk-through:</strong></em></p>
+                        <p>A formal walk-through will be developed. For now, the reader should refer to the documentation for the HL7 Reference Information
+                           Model for a complete set of attribute descriptions for each class in this RMIM.
+                        </p>
+                        <p></p>
+                        <table class="artifactList">
+                           <caption>Contained Hierarchical Message Descriptions</caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Care Structures Event Vital Signs</td>
+                              <td class="artifactList_code"><a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000130UV01-hmd" class="">REPC_HD000130UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">4.2</span><span class="title"><a name="hmds-REPC_DO000000UV-CareStructures-ic">Hierarchical Message Descriptions</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e2738" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Hierarchical Message Descriptions (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">A_ObservationAssessmentScale(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000120UV01-hmd" class="">REPC_HD000120UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">A_ObservationVitalSigns(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000130UV01-hmd" class="">REPC_HD000130UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Care Statement(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000100UV01-hmd" class="">REPC_HD000100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Concern List(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000410UV01-hmd" class="">REPC_HD000410UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Concern Tracking(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000300UV01-hmd" class="">REPC_HD000300UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">R_CaredEntity(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000700UV01-hmd" class="">REPC_HD000700UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Statement Collector(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000400UV01-hmd" class="">REPC_HD000400UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e27382" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Hierarchical Message Descriptions (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Care Structures Event Assessment Scale(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000120UV01-hmd" class="">REPC_HD000120UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Care Structures Event Cared Entity(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000700UV01-hmd" class="">REPC_HD000700UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Care Structures Event Concern List(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000410UV01-hmd" class="">REPC_HD000410UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Care Structures Event Concern Tracking(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000300UV01-hmd" class="">REPC_HD000300UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Care Structures Event Statement(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000100UV01-hmd" class="">REPC_HD000100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Care Structures Event Statement Collector(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000400UV01-hmd" class="">REPC_HD000400UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Care Structures Event Vital Signs(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000130UV01-hmd" class="">REPC_HD000130UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e27383" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Hierarchical Message Descriptions (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">A_ObservationAssessmentScale(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000120UV01-hmd" class="">REPC_HD000120UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">R_CaredEntity(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000700UV01-hmd" class="">REPC_HD000700UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Concern List(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000410UV01-hmd" class="">REPC_HD000410UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Concern Tracking(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000300UV01-hmd" class="">REPC_HD000300UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Care Statement(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000100UV01-hmd" class="">REPC_HD000100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Statement Collector(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000400UV01-hmd" class="">REPC_HD000400UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">A_ObservationVitalSigns(<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_HD000130UV01-hmd" class="">REPC_HD000130UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <p></p>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3ghmd">the description of HMDs</a> in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">4.2.1</span><span class="title"><a name="REPC_HD000120UV01-hmd">A_ObservationAssessmentScale  (REPC_HD000120UV01) </a></span></div>
+                     <div class="body">
+                        <p>At this time there is no content for this section.</p>
+                        <p></p>
+                        <div class="subheading">Base Hierarchical Message Description
+                           				<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000120UV01-rmi" class=""><img src="../../support/graphics/rmimview.gif" alt="View R-MIM" height="16" width="16" style="border-width:0" /></a> 
+                           				<a href="../../domains/uvpc/editable/REPC_HD000120UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="editable/REPC_HD000120UV.xls" target="_blank"><img src="../../support/graphics/excelview.gif" height="16" width="16" alt="Excel View" style="border:0px" /></a> 
+                        </div>
+                        <table class="hmd">
+                           <caption>Message Type List</caption>
+                           <tr class="">
+                              <td class="hmd_desc"><a name="REPC_MT000120UV01-msg"></a>Care Structures Event Assessment Scale
+                              </td>
+                              <td class="hmd_code">REPC_MT000120UV01</td>
+                              <td class="hmd_links"><a href="../../domains/uvpc/editable/REPC_HD000120UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="../../processable/multicacheschemas/REPC_MT000120UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                                 										 
+                                 									
+                                 
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">4.2.2</span><span class="title"><a name="REPC_HD000700UV01-hmd">R_CaredEntity  (REPC_HD000700UV01) </a></span></div>
+                     <div class="body">
+                        <p>At this time there is no content for this section.</p>
+                        <p></p>
+                        <div class="subheading">Base Hierarchical Message Description
+                           				<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000700UV01-rmi" class=""><img src="../../support/graphics/rmimview.gif" alt="View R-MIM" height="16" width="16" style="border-width:0" /></a> 
+                           				<a href="../../domains/uvpc/editable/REPC_HD000700UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="editable/REPC_HD000700UV.xls" target="_blank"><img src="../../support/graphics/excelview.gif" height="16" width="16" alt="Excel View" style="border:0px" /></a> 
+                        </div>
+                        <table class="hmd">
+                           <caption>Message Type List</caption>
+                           <tr class="">
+                              <td class="hmd_desc"><a name="REPC_MT000700UV01-msg"></a>Care Structures Event Cared Entity
+                              </td>
+                              <td class="hmd_code">REPC_MT000700UV01</td>
+                              <td class="hmd_links"><a href="../../domains/uvpc/editable/REPC_HD000700UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="../../processable/multicacheschemas/REPC_MT000700UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                                 										 
+                                 									
+                                 
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">4.2.3</span><span class="title"><a name="REPC_HD000410UV01-hmd">Concern List  (REPC_HD000410UV01) </a></span></div>
+                     <div class="body">
+                        <p>At this time there is no content for this section.</p>
+                        <p></p>
+                        <div class="subheading">Base Hierarchical Message Description
+                           				<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000410UV01-rmi" class=""><img src="../../support/graphics/rmimview.gif" alt="View R-MIM" height="16" width="16" style="border-width:0" /></a> 
+                           				<a href="../../domains/uvpc/editable/REPC_HD000410UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="editable/REPC_HD000410UV.xls" target="_blank"><img src="../../support/graphics/excelview.gif" height="16" width="16" alt="Excel View" style="border:0px" /></a> 
+                        </div>
+                        <table class="hmd">
+                           <caption>Message Type List</caption>
+                           <tr class="">
+                              <td class="hmd_desc"><a name="REPC_MT000410UV01-msg"></a>Care Structures Event Concern List
+                              </td>
+                              <td class="hmd_code">REPC_MT000410UV01</td>
+                              <td class="hmd_links"><a href="../../domains/uvpc/editable/REPC_HD000410UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="../../processable/multicacheschemas/REPC_MT000410UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                                 										 
+                                 									
+                                 
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">4.2.4</span><span class="title"><a name="REPC_HD000300UV01-hmd">Concern Tracking  (REPC_HD000300UV01) </a></span></div>
+                     <div class="body">
+                        <p>At this time there is no content for this section.</p>
+                        <p></p>
+                        <div class="subheading">Base Hierarchical Message Description
+                           				<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000300UV01-rmi" class=""><img src="../../support/graphics/rmimview.gif" alt="View R-MIM" height="16" width="16" style="border-width:0" /></a> 
+                           				<a href="../../domains/uvpc/editable/REPC_HD000300UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="editable/REPC_HD000300UV.xls" target="_blank"><img src="../../support/graphics/excelview.gif" height="16" width="16" alt="Excel View" style="border:0px" /></a> 
+                        </div>
+                        <table class="hmd">
+                           <caption>Message Type List</caption>
+                           <tr class="">
+                              <td class="hmd_desc"><a name="REPC_MT000300UV01-msg"></a>Care Structures Concern Tracking
+                              </td>
+                              <td class="hmd_code">REPC_MT000300UV01</td>
+                              <td class="hmd_links"><a href="../../domains/uvpc/editable/REPC_HD000300UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="../../processable/multicacheschemas/REPC_MT000300UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                                 										 
+                                 									
+                                 
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">4.2.5</span><span class="title"><a name="REPC_HD000100UV01-hmd">Care Statement  (REPC_HD000100UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Description</b></div>
+                        <p>At this time there is no content for this section.</p>
+                        <p></p>
+                        <div class="subheading">Base Hierarchical Message Description
+                           				<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000100UV01-rmi" class=""><img src="../../support/graphics/rmimview.gif" alt="View R-MIM" height="16" width="16" style="border-width:0" /></a> 
+                           				<a href="../../domains/uvpc/editable/REPC_HD000100UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="editable/REPC_HD000100UV.xls" target="_blank"><img src="../../support/graphics/excelview.gif" height="16" width="16" alt="Excel View" style="border:0px" /></a> 
+                        </div>
+                        <table class="hmd">
+                           <caption>Message Type List</caption>
+                           <tr class="">
+                              <td class="hmd_desc"><a name="REPC_MT000100UV01-msg"></a>Care Structures Statement
+                              </td>
+                              <td class="hmd_code">REPC_MT000100UV01</td>
+                              <td class="hmd_links"><a href="../../domains/uvpc/editable/REPC_HD000100UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="../../processable/multicacheschemas/REPC_MT000100UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                                 										 
+                                 									
+                                 
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">4.2.6</span><span class="title"><a name="REPC_HD000400UV01-hmd">Statement Collector  (REPC_HD000400UV01) </a></span></div>
+                     <div class="body">
+                        <p>At this time there is no content for this section.</p>
+                        <p></p>
+                        <div class="subheading">Base Hierarchical Message Description
+                           				<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000400UV01-rmi" class=""><img src="../../support/graphics/rmimview.gif" alt="View R-MIM" height="16" width="16" style="border-width:0" /></a> 
+                           				<a href="../../domains/uvpc/editable/REPC_HD000400UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="editable/REPC_HD000400UV.xls" target="_blank"><img src="../../support/graphics/excelview.gif" height="16" width="16" alt="Excel View" style="border:0px" /></a> 
+                        </div>
+                        <table class="hmd">
+                           <caption>Message Type List</caption>
+                           <tr class="">
+                              <td class="hmd_desc"><a name="REPC_MT000400UV01-msg"></a>Care Structures Event Statement Collector
+                              </td>
+                              <td class="hmd_code">REPC_MT000400UV01</td>
+                              <td class="hmd_links"><a href="../../domains/uvpc/editable/REPC_HD000400UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="../../processable/multicacheschemas/REPC_MT000400UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                                 										 
+                                 									
+                                 
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">4.2.7</span><span class="title"><a name="REPC_HD000130UV01-hmd">A_ObservationVitalSigns  (REPC_HD000130UV01) </a></span></div>
+                     <div class="body">
+                        <p>At this time there is no content for this section.</p>
+                        <p></p>
+                        <div class="subheading">Base Hierarchical Message Description
+                           				<a href="../../domains/uvpc/uvpc_CareStructures.htm#REPC_RM000130UV01-rmi" class=""><img src="../../support/graphics/rmimview.gif" alt="View R-MIM" height="16" width="16" style="border-width:0" /></a> 
+                           				<a href="../../domains/uvpc/editable/REPC_HD000130UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="editable/REPC_HD000130UV.xls" target="_blank"><img src="../../support/graphics/excelview.gif" height="16" width="16" alt="Excel View" style="border:0px" /></a> 
+                        </div>
+                        <table class="hmd">
+                           <caption>Message Type List</caption>
+                           <tr class="">
+                              <td class="hmd_desc"><a name="REPC_MT000130UV01-msg"></a>Care Structures Event Vital Signs
+                              </td>
+                              <td class="hmd_code">REPC_MT000130UV01</td>
+                              <td class="hmd_links"><a href="../../domains/uvpc/editable/REPC_HD000130UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="../../processable/multicacheschemas/REPC_MT000130UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                                 										 
+                                 									
+                                 
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <p>
+               <table>
+                  <tbody>
+                     <tr>
+                        <td><a class="custombutton" href="#top">Return to top of page</a></td>
+                     </tr>
+                  </tbody>
+               </table>
+            </p>
+         </div>
+      </div>
+   </body>
+</html>

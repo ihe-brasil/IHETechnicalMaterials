@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 3 U (http://www.xmlspy.com) by andrew hinchley (HL7 Publications TC) -->
+<!-- edited with XML Spy v4.0 (http://www.xmlspy.com) by Sandy Boyer -->
+<div2 id="v3gapprole">
+	<head>Application Roles</head>
+	<p>Application roles represent a set of communication responsibilities that might be implemented by an application.  Thus they describe system components or sub-components that send and/or receive interactions.</p>
+	<div3 id="v3garnormative">
+		<head>Normative status</head>
+		<p>Despite the fact that the application roles are documented in the normative domain specifications, the HL7 Technical Steering Committee has declared that <emph role="strong">applications roles shall be informative, not normative, in Release 1 of Version 3</emph>.  The reason for this declaration is that HL7 wishes to see a number of Version 3 implementations before it specifies the content and granularity of application roles.  The earliest that application roles could become normative is Release 2.  Despite this restriction, the <ilxspecref spec="&conformancefile;.htm">conformance specification</ilxspecref> describes the prospective use of application roles as the basis of conformance claims.</p>
+	</div3>
+	<div3 id="v3garresponse">
+		<head>Responsibilities</head>
+		<p>As an HL7 interaction is defined, one application role is assigned responsibility for sending (initiating) that interaction, and one application role is assigned responsibility to receive that interaction and undertake the appropriate responses. The sending and receiving responsibilities for a particular interaction may both be assigned to a single application role. </p>
+	</div3>
+	<div3 id="v3gardoc">
+		<head>Documentation</head>
+		<p>The application roles were apparent on the Interaction Diagram found in the Storyboard chapter.  The boxes at the top of the diagram and the corresponding vertical lines represent application roles. Each of the application roles shown on the Interaction Diagram has an entry within the domain chapter. Note that like many of the other artifacts, the application role has a name, an artifact ID and a description. It also contains a Structured Name, which is used to sort the application roles within a particular domain into a logical sequence. </p>
+		<p>
+			<graphic source="graphics/VG_2_3_01.gif"/>
+		</p>
+	</div3>
+</div2>

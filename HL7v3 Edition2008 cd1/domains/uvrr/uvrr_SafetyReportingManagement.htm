@@ -1,0 +1,1744 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:exslt="http://exslt.org/common">
+   <head>
+      <title>Domain: Public Health Reporting - Safety Reporting Management Topic</title>
+      <link rel="stylesheet" type="text/css" href="../../support/css/v3m.css" title="v3m" /><script src="../../support/js/tree.js" type="text/javascript"></script><script src="../../support/js/setTopFrameText.js" type="text/javascript"></script><script src="../../support/js/swapcss.js" type="text/javascript"></script><script type="text/javascript">
+				if (find('heading')) setHeadingTextFromFileName(document.location.href,"Safety Reporting Management Topic");
+			</script></head>
+   <body>
+      <div class="section">
+         <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">5</span><span class="title"><a name="PORR_DO000001UV-Safetyreport-ic">Safety Reporting Management Topic</a></span><table cellspacing="0" cellpadding="3" border="1">
+               <tr>
+                  <td align="center"><img src="../../support/graphics/dstulogo.gif" alt="DSTU" /><br />HL7 V3 RRCS, R2-2006<br />HL7 Version 3 Standard: Public Health Reporting: Individual Case Safety Report, Release 2<br />October 2006<img width="5" alt="spacer" src="../../support/graphics/spacer.gif" /></td>
+               </tr>
+            </table>
+         </div>
+         <div class="body">
+            <table>
+               <tbody>
+                  <tr>
+                     <td><a class="custombutton" href="uvrr.htm#contents">Return to Domain Table of Contents</a></td>
+                  </tr>
+                  <tr>
+                     <td colspan="2">
+                        <p class="lastEdit">Content Last Edited: 2007-11-12T13:52:39</p>
+                     </td>
+                  </tr>
+               </tbody>
+            </table><br /><div class="toc"><span>5.1  <a href="#intro-PORR_DO000001UV-Safetyreport-ic">Introduction</a><br /></span><span>5.2  <a href="#tes-PORR_DO000001UV-Safetyreport-ic">Trigger Events</a><br /></span><span>5.3  <a href="#rmims-PORR_DO000001UV-Safetyreport-ic">Refined Message Information Models</a><br /></span><span>5.4  <a href="#hmds-PORR_DO000001UV-Safetyreport-ic">Hierarchical Message Descriptions</a><br /></span><span>5.5  <a href="#ints-PORR_DO000001UV-Safetyreport-ic">Interactions</a><br /></span></div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">5.1</span><span class="title"><a name="intro-PORR_DO000001UV-Safetyreport-ic">Introduction</a></span></div>
+               <div class="body">
+                  <div class="subSubSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number">5.1.1 </span><span class="title"><a>Individual Case Safety Report Release 2</a></span></div>
+                     <div class="body">
+                        <p><strong>i - Notes to Readers</strong></p>
+                        <p>The Individual Case Safety Report (ICSR) Release 2 Draft Standard for Trial Use (DSTU) was approved by the Patient Safety
+                           Special Interest Group (PSSIG) and endorsed by the Regulated Clinical Research Information Management Technical Committee
+                           at the January 2007 Working Group Meeting.  PSSIG submitted a formal request to the HL7 Board to add ICSR to the HL7 DSTU
+                           Comment Page June 12, 2007.  Approval was received from the Board on June 21, 2007.  The DSTU will be available for download
+                           from the HL7 DSTU webpage August 1, 2007 through July 1, 2008.
+                        </p>
+                        <p>PSSIG will collaborate with the HL7 Implementation and Conformance Technical Committee to develop test plans, tools and other
+                           documentation to support ICSR DSTU testing.  The US Food and Drug Administration will serve as an early adopter organization,
+                           and will coordinate with other parties interested in testing or further development of the standard.  Interested parties should
+                           contact Ms. Lise Stevens, FDA at (301) 827-6085 or via email at Lise.Stevens@fda.hhs.gov.
+                        </p>
+                        <p><strong>ii - Acknowledgements</strong></p>
+                        <p>The Patient Safety Special Interest Group would like to recognize the contributions of the following authors, editors, developers,
+                           and organizations without whom this document could not have been produced:   
+                        </p>
+                        <p><strong>FDA Data Standards Council, AE Workgroup</strong>:  The workgroup is comprised of program and IT representatives from all FDA Centers responsible for managing their respective
+                           adverse event reporting systems.  These individuals contributed storyboards and over 90% of ICSR's content requirements for
+                           both ICSR Release 1 and ICSR Release 2.  We especially acknowledge the work of the FDA Center for Devices and Radiological
+                           Health for their role in serving as the Agency early adopter and coordinating proof of concept testing for ICSR Release 1,
+                           which provided valuable feedback and requirements for improving the standard.
+                        </p>
+                        <p><strong>Mead Walker, Mead Walker Consulting</strong>:  Mead has served as the primary modeling facilitator throughout the initial inception and evolution of the ICSR standard.
+                           He has demonstrated exceptional skill and commitment to deliver quality services and continues to support FDA's implementation
+                           of ICSR, and PSSIG goals to develop quality patient safety-related standards. 
+                        </p>
+                        <p><strong>Anita Benson, DataScene</strong>:  Anita served as the early modeling facilitator and champion for the ICSR.  She has provided outstanding service, and has
+                           been instrumental in ensuring wider applicability and support for patient safety requirements, especially in the area of clinical
+                           trial AE reporting.  Anita contributed the A_ReserachStudyEnrollment CMET, which is used in ICSR to capture relevant information
+                           concerning patient clinical trial enrollment.
+                        </p>
+                        <p><strong>Gloria Nunez, Oracle Corporation</strong>:  Gloria, including other Oracle staff, has made significant contributions throughout the development of both releases of
+                           the ICSR standard.  She has provided relevant, useful comments for changes and improvements during the balloting process which
+                           has resulted in delivery of a quality product.  Oracle served as an early adopter/developer for ICSR Release 1.
+                        </p>
+                        <p><strong>Linda Fischetti and Freida Hall, US Department of Veterans Affairs</strong>:  Linda and Freida (including other VA staff) have positively supported ICSR balloting, and have contributed comments and
+                           suggestions for improvements to the standard.  Their review has been extremely valuable in ensuring that the ballot material
+                           was clear, accurate and relevant to healthcare provider organizations. 
+                        </p>
+                        <p><strong>We extend our special thanks to all those who take the time to review the ballot and submit comments.</strong></p>
+                        <p><strong>iii - Changes from Previous Release</strong></p>
+                        <p>The Individual Case Safety Report (ICSR) Release 2 expands the scope of the 2005 Normative ICSR Release 1 standard to support
+                           other product categories such as food, food additives, dietary supplements, cosmetics, veterinary drug products, and combination
+                           products.  Additional changes to the specification have been made to accommodate new requirements based upon the experience
+                           of pilot testing ICSR Release 1 to support electronic medical device reporting for the FDA Center for Devices and Radiological
+                           Health (CDRH), and support for human and animal reporting.  A more detailed list of other improvements can be found in the
+                           Introduction section of the ICSR DSTU material.
+                        </p>
+                        <p><strong>iv - Known Issues and Planned Changes</strong></p>
+                        <p>PSSIG has not finalized logistics for posting material and will continue to coordinate with HL7 Headquarters and the Implementation
+                           and Conformance Technical Committee for guidance.  The committee suggests that interested parties join the PSSIG list server,
+                           where documents and progress notes will be posted.  The ICSR DSTU is available for download and comments can be posted to
+                           the HL7 DSTU Comment webpage:  http://www.hl7.org/dstucomments/index.cfm
+                        </p>
+                        <p>In addition to improvements introduced as a result of FDA DSTU testing, the committee is aware of ongoing work in the International
+                           Standards Organization (ISO) Technical Committee 215 concerning the collaboration between ISO, the European Committee on Standardization
+                           (CEN), the International Conference on Harmonisation (ICH) and HL7 to create an international adverse event reporting standard.
+                           This work is expected to support ICH requirements for revision to their E2B(M) Message Specification.  The committee anticipates
+                           this work to be presented to HL7 sometime next year, and will incorporate new requirements into the next release of the standard.
+                           
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">5.2</span><span class="title"><a name="tes-PORR_DO000001UV-Safetyreport-ic">Trigger Events</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e1735" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Trigger Events (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">ICSR Create Notification(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_TE049006UV01-te" class="">PORR_TE049006UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e17352" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Trigger Events (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Safetyreport ICSR Event Create Notification(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_TE049006UV01-te" class="">PORR_TE049006UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e17353" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Trigger Events (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">ICSR Create Notification(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_TE049006UV01-te" class="">PORR_TE049006UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3gtrigger">the discussion of trigger events</a> in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection inserted">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">5.2.1</span><span class="title"><a name="PORR_TE049006UV01-te">ICSR Create Notification  (PORR_TE049006UV01) </a></span></div>
+                     <div class="body">
+                        <div class="subheading">Description
+                           				<a href="../../domains/uvrr/uvrr_DO_XX.htm#PORR_TE049006UV01-te" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a></div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Safetyreport ICSR Event Create Notification</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>Type: </em></td>
+                              <td class="structType_value"><em>State-transition based</em></td>
+                           </tr>
+                        </table>
+                        <p>Indicates that a report containing notification of an eligible case associated with a regulated or suspect product, is ready
+                           for transmission to an eligible receiver.  The notification may include the report of an adverse reaction, of a product problem,
+                           or include information related to both adverse events and product problems.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">5.3</span><span class="title"><a name="rmims-PORR_DO000001UV-Safetyreport-ic">Refined Message Information Models</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e1746" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Refined Message Information Models (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">ICSR A_DeviceIntervention(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049008UV01-rmi" class="">PORR_RM049008UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">ICSR A_DrugIntervention(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049007UV01-rmi" class="">PORR_RM049007UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">ICSR A_ProductUse(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049012UV01-rmi" class="">PORR_RM049012UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">ICSR R_Device(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049010UV01-rmi" class="">PORR_RM049010UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">ICSR R_Drug(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049009UV01-rmi" class="">PORR_RM049009UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">ICSR R_Product(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049011UV01-rmi" class="">PORR_RM049011UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">ICSR Refined Message Information Model(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049006UV01-rmi" class="">PORR_RM049006UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e17462" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Refined Message Information Models (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Safetyreport Event Icsr 06(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049006UV01-rmi" class="">PORR_RM049006UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Safetyreport Event Icsr 07(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049007UV01-rmi" class="">PORR_RM049007UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Safetyreport Event ICSR 08(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049008UV01-rmi" class="">PORR_RM049008UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Safetyreport Event Icsr 09(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049009UV01-rmi" class="">PORR_RM049009UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Safetyreport Event Icsr 10(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049010UV01-rmi" class="">PORR_RM049010UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Safetyreport Event Icsr 11(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049011UV01-rmi" class="">PORR_RM049011UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Safetyreport Event Icsr 12(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049012UV01-rmi" class="">PORR_RM049012UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e17463" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Refined Message Information Models (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">ICSR Refined Message Information Model(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049006UV01-rmi" class="">PORR_RM049006UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">ICSR A_DrugIntervention(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049007UV01-rmi" class="">PORR_RM049007UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">ICSR A_DeviceIntervention(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049008UV01-rmi" class="">PORR_RM049008UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">ICSR R_Drug(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049009UV01-rmi" class="">PORR_RM049009UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">ICSR R_Device(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049010UV01-rmi" class="">PORR_RM049010UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">ICSR R_Product(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049011UV01-rmi" class="">PORR_RM049011UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">ICSR A_ProductUse(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049012UV01-rmi" class="">PORR_RM049012UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3grmim">the description of RMIMs</a> in the Version 3 Guide.
+                  </p>
+                  <p></p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">5.3.1</span><span class="title"><a name="PORR_RM049006UV01-rmi">ICSR Refined Message Information Model  (PORR_RM049006UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/PORR_RM049006UV.htm" target="_blank"><img class="graphic" src="editable/images/T-PORR_RM049006UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><div class="subheading">Description</div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><b><em>Parent:  </em></b></td>
+                              <td class="structType_value"><em>Public Health Reporting Domain Information Model (<a href="../../domains/uvrr/uvrr.htm#PORR_DM000000UV-rmi" class="">PORR_DM000000UV</a>)
+                                    									</em></td>
+                           </tr>
+                        </table>
+                        <p><strong>Model Overview</strong></p>
+                        <p>The Individual Case Safety Report (ICSR) Refined Message Information Models (RMIMs) capture information about adverse events
+                           and product problems that are reported to public health, patient safety/quality improvement organizations or regulatory agencies.
+                           The ICSR message supports reporting from a variety of reporting sources such as consumers, hospitals, contract research organizations,
+                           clinicians or pharmaceutical product and medical device manufacturers.  The HL7 ICSR Release 1 specification was most particularly
+                           oriented towards reporting of reactions to regulated drugs, therapeutic biologics, vaccines, and medical devices.  In addition
+                           to the products supported in release 1, the ICSR Release 2 supports a wider variety of products including:  a) veterinary
+                           products, b) food and food additives, c) dietary supplements and cosmetics, and d) combination products.  ICSR Release 2 provides
+                           a minimal level of backward compatibility or harmonization with ICSR Release 1, by supporting concepts and attributes introduced
+                           in the original release, including international pharmacovigilence reporting requirements described in the International Conference
+                           on Harmonisation's (ICH) E2B M2 ICSR message transmission specification. 
+                        </p>
+                        <p>Implementation efforts by the US Food and Drug Administration (FDA) for ICSR Release 1 to support medical device reporting
+                           revealed several limitations to the standard which required substantial changes to the ICSR Release 1 RMIMs.  Some examples
+                           of these changes include streamlining the schema to support the reporting of adverse events and product problems within a
+                           single instance of the message, and the addition of a device observation class that is used to capture results from product
+                           evaluations performed by medical device manufacturers or reprocessors.  Additionally, new requirements for other FDA regulated
+                           products required the creation of generalized product and product use models to capture concepts and attributes that can be
+                           used to support combination product reporting.  The new R_Product RMIM introduced in ICSR Release 2 is based upon the Release
+                           1 product-specific RMIMs for drugs (R_Drug) and devices (R_Device).  These RMIMs are included in Release 2 to maintain a minimal
+                           level of backward compatibility between ICSR Release and 1 and Release 2; however, the ICSR Release 1 attributes for both
+                           drugs and devices are accommodated in the new generic R_Product RMIM.
+                        </p>
+                        <p>The RMIMs are oriented around the following concepts:</p>
+                        <p>a) Adverse experiences:  Any adverse event associated with the use of a product in humans or animals, whether or not considered
+                           product related, including the following:  An adverse event occurring in the course of the use of a product in professional
+                           practice; an adverse event occurring from overdose of the product whether accidental or intentional; an adverse event occurring
+                           from abuse of the product; an adverse event occurring from withdrawal of the product; and any failure of expected pharmacological
+                           action.  Note these events may result in unintended harm to the patient by an act of commission or omission, rather than by
+                           the underlying disease or condition of the patient.
+                        </p>
+                        <p>b) Suspected adverse reaction:  A noxious and unintended response to a product for which there is a reasonable possibility
+                           that the product caused the response. In this definition, the phrase "a reasonable possibility" means that the relationship
+                           cannot be ruled out.  The range of product types for which reports may be generated is set by regulatory and/or organizational
+                           administrative practice within the jurisdiction controlling the reporting between parties.
+                        </p>
+                        <p>c) Suspected product problems or defects: Any problem or defect observed or detected before a product  is used.  This includes
+                           the use of drugs, biologics or medical devices used for treatment, or other consumer products such as cosmetics or dietary
+                           supplements.  Some examples of product problems include faulty packaging or labeling, receipt of an expired therapeutic drug
+                           product, or suspected contamination based upon inappropriate or unauthorized preparations or mixtures.
+                        </p>
+                        <p>d) An affected person or animal:  If applicable to the report, this includes the investigative subject (patient) that experienced
+                           an adverse event.
+                        </p>
+                        <p>e) Substance administrations: Includes information about how the product was given or used, or intended to be given or used
+                           by the investigative subject.
+                        </p>
+                        <p>f) Medical procedures related to devices:  Includes information about how a medical device was used or intended to be used
+                           by a patient or investigative subject.  For example, device implant or removal procedures.
+                        </p>
+                        <p>g) Supporting clinical information: Includes additional clinical detail such as relevant observations, procedures, substance
+                           administrations, supply acts or patient encounters.  These observations are included if the reporter considers them relevant
+                           to the investigation, whether referring to the same point in time as the suspect event or as part of the patient's medical
+                           history. 
+                        </p>
+                        <p>The ICSR RMIM is designed to support within a single structure two aspects of product reporting.  These include: 1) a report
+                           about the investigation into the adverse event(s) or reaction(s) suffered by an affected person or animal that experienced
+                           an intervention or interventions in a therapeutic context.  The suspect event may or may not have a causal relationship with
+                           the administration or use of one or more products; and 2) a report about the investigation into a product problem.  Note that
+                           the key common factor is the involvement of an implicated product such as a medication, device, dietary supplement or cosmetic.
+                        </p>
+                        <p>This message, as with all HL7 V3 specifications, includes a Control Act structure which contains information about the actual
+                           report transmission.  (The reader should refer to the HL7 V3 Infrastructure Management Domain for more details on this structure.)
+                        </p>
+                        <p>Please refer to the HMD documentation for more detailed information on classes and attributes.</p>
+                        <p></p>
+                        <table class="artifactList">
+                           <caption>Contained Hierarchical Message Descriptions</caption>
+                           <tr class="inserted">
+                              <td class="artifactList_desc">Safetyreport Event Icsr Hmd</td>
+                              <td class="artifactList_code"><a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049006UV01-hmd" class="">PORR_HD049006UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">5.3.2</span><span class="title"><a name="PORR_RM049007UV01-rmi">ICSR A_DrugIntervention  (PORR_RM049007UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/PORR_RM049007UV.htm" target="_blank"><img class="graphic" src="editable/images/T-PORR_RM049007UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><div class="subheading">Description</div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><b><em>Parent:  </em></b></td>
+                              <td class="structType_value"><em>Public Health Reporting Domain Information Model (<a href="../../domains/uvrr/uvrr.htm#PORR_DM000000UV-rmi" class="">PORR_DM000000UV</a>)
+                                    									</em></td>
+                           </tr>
+                        </table>
+                        <p><strong>Model Overview</strong></p>
+                        <p>The A_DrugIntervention message element type captures relevant substance administration act information for cases in which
+                           use of a drug is associated with to a reported adverse reaction.  The relevant information includes items related to the substance
+                           administration itself, to component parts of a more general administration act, as well as to ancillary information related
+                           to the substance administration.  This message element type is being used to capture substance administrations for drugs,
+                           therapeutic biologics, and vaccines.  In the ICSR Base model RMIM, this information is associated with the InvestigationEvent
+                           class through the ImplicatedAct association.
+                        </p>
+                        <p><strong>Note to implementers</strong>: This RMIM should only be used by implementers who are interested in drug adverse events and for whom compatibility with
+                           the HL7 Structured Product Labeling (SPL) model is of key importance.  Otherwise, the committee recommends the use of the
+                           A_ProductUse RMIM.
+                        </p>
+                        <p>Please refer to the HMD documentation for more detailed information on classes and attributes.</p>
+                        <p></p>
+                        <table class="artifactList">
+                           <caption>Contained Hierarchical Message Descriptions</caption>
+                           <tr class="inserted">
+                              <td class="artifactList_desc">Safetyreport Event Icsr A_drugintervention HMD</td>
+                              <td class="artifactList_code"><a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049007UV01-hmd" class="">PORR_HD049007UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">5.3.3</span><span class="title"><a name="PORR_RM049008UV01-rmi">ICSR A_DeviceIntervention  (PORR_RM049008UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/PORR_RM049008UV.htm" target="_blank"><img class="graphic" src="editable/images/T-PORR_RM049008UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><div class="subheading">Description</div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><b><em>Parent:  </em></b></td>
+                              <td class="structType_value"><em>Public Health Reporting Domain Information Model (<a href="../../domains/uvrr/uvrr.htm#PORR_DM000000UV-rmi" class="">PORR_DM000000UV</a>)
+                                    									</em></td>
+                           </tr>
+                        </table>
+                        <p><strong>Model Overview</strong></p>
+                        <p>The A_DeviceIntervention message element type captures relevant medical device procedure information for medical device adverse
+                           event reporting.  The intervention information includes items related to the procedure itself, to component parts of a more
+                           general procedure act, as well as to ancillary information related to the procedure.
+                        </p>
+                        <p><strong>Note to implementers</strong>: This model should only be used by early adopters of the ICSR Release 1 message specification, especially those organizations
+                           planning to submit electronic medical device reporting to the FDA's Center for Devices and Radiological Health (CDRH).  It
+                           is recommended that implementers contact CDRH to obtain more information about medical device reporting.  Otherwise, the committee
+                           recommends use of the A_ProductUse RMIM which can be used to capture the same information.
+                        </p>
+                        <p>Please refer to the HMD documentation for more detailed information on classes and attributes.</p>
+                        <p></p>
+                        <table class="artifactList">
+                           <caption>Contained Hierarchical Message Descriptions</caption>
+                           <tr class="inserted">
+                              <td class="artifactList_desc">Safetyreport Event Icsr A_deviceintervention Hmd</td>
+                              <td class="artifactList_code"><a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049008UV01-hmd" class="">PORR_HD049008UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                     </div>
+                  </div>
+                  <div class="subSubSection inserted">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">5.3.4</span><span class="title"><a name="PORR_RM049009UV01-rmi">ICSR R_Drug  (PORR_RM049009UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/PORR_RM049009UV.htm" target="_blank"><img class="graphic" src="editable/images/T-PORR_RM049009UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><div class="subheading">Description</div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><b><em>Parent:  </em></b></td>
+                              <td class="structType_value"><em>Public Health Reporting Domain Information Model (<a href="../../domains/uvrr/uvrr.htm#PORR_DM000000UV-rmi" class="">PORR_DM000000UV</a>)
+                                    									</em></td>
+                           </tr>
+                        </table>
+                        <p><strong>Model Overview</strong></p>
+                        <p>The R_Drug message element type captures the drug product information that is relevant for related adverse event and product
+                           problem reporting.  The term "drug" includes drugs, therapeutic biologics, and vaccines.  Note that the R_Product message
+                           element type can also be used to capture drug product information.  The relevant information includes items related to the
+                           drug itself and information about its manufacture and approval.  The reader should note that this model has been modified
+                           to follow the pattern of the Structured Product Label (SPL) medication information model created by the Regulated Clinical
+                           Information Management Technical Committee the.  The model was modified to minimize compatibility concerns for organizations
+                           which have already implemented SPL and intend to also use ICSR in the near future.
+                        </p>
+                        <p>Please refer to the HMD documentation for more detailed information on classes and attributes.</p>
+                        <p></p>
+                        <table class="artifactList">
+                           <caption>Contained Hierarchical Message Descriptions</caption>
+                           <tr class="inserted">
+                              <td class="artifactList_desc">Safetyreport Event Icsr R_drug Hmd</td>
+                              <td class="artifactList_code"><a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049009UV01-hmd" class="">PORR_HD049009UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                     </div>
+                  </div>
+                  <div class="subSubSection inserted">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">5.3.5</span><span class="title"><a name="PORR_RM049010UV01-rmi">ICSR R_Device  (PORR_RM049010UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/PORR_RM049010UV.htm" target="_blank"><img class="graphic" src="editable/images/T-PORR_RM049010UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><div class="subheading">Description</div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><b><em>Parent:  </em></b></td>
+                              <td class="structType_value"><em>Public Health Reporting Domain Information Model (<a href="../../domains/uvrr/uvrr.htm#PORR_DM000000UV-rmi" class="">PORR_DM000000UV</a>)
+                                    									</em></td>
+                           </tr>
+                        </table>
+                        <p><strong>Model Overview</strong></p>
+                        <p>The R_Device message element type captures specific medical device information that is relevant for device related adverse
+                           event and product problem reports.    Note that early adopters of ICSR Release 1 should use this model and contact the FDA
+                           Center for Devices and Radiological Health (CDRH) to obtain more information about medical device reporting.  The new ICSR
+                           Release 2 R_Product model can also be used for new implementations to capture device product information.  The relevant information
+                           includes items related to the device itself, its manufacture, and evaluations performed by device manufacturers or reprocessors.
+                        </p>
+                        <p>A device in this context refers to a manufactured product that is used directly in treating and/or caring for the patient.
+                           The model captures information about devices by using one central class - <em>Device</em> - to capture descriptive information directly related to the particular device, and another - <em> DeviceModel </em> to capture information about the specific type of device.
+                        </p>
+                        <p>Please refer to the HMD documentation for more detailed information on classes and attributes.</p>
+                        <p></p>
+                        <table class="artifactList">
+                           <caption>Contained Hierarchical Message Descriptions</caption>
+                           <tr class="inserted">
+                              <td class="artifactList_desc">Safetyreport Event Icsr R_device Hmd</td>
+                              <td class="artifactList_code"><a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049010UV01-hmd" class="">PORR_HD049010UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                     </div>
+                  </div>
+                  <div class="subSubSection inserted">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">5.3.6</span><span class="title"><a name="PORR_RM049011UV01-rmi">ICSR R_Product  (PORR_RM049011UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/PORR_RM049011UV.htm" target="_blank"><img class="graphic" src="editable/images/T-PORR_RM049011UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><div class="subheading">Description</div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><b><em>Parent:  </em></b></td>
+                              <td class="structType_value"><em>Public Health Reporting Domain Information Model (<a href="../../domains/uvrr/uvrr.htm#PORR_DM000000UV-rmi" class="">PORR_DM000000UV</a>)
+                                    									</em></td>
+                           </tr>
+                        </table>
+                        <p><strong>Model Overview</strong></p>
+                        <p>The R_Product message element type captures product information relevant for a wide range of adverse event and product problem
+                           reporting requirements.  This information includes items related to the product itself, its packaging, manufacture and potential
+                           post-event evaluation by manufacturers or reprocessors.  Note that information about how a product was supplied (ordered)
+                           can be captured using the relevant Supply Act in the Supporting Clinical Statement CMET.
+                        </p>
+                        <p>A product in this context refers to a manufactured or home fabricated item that is used directly by an investigative subject
+                           - whether person or animal.  This model serves three purposes:
+                        </p>
+                        <ul>
+                           <li>It provides a generic view of a product as opposed to the more specific product  models for medicines (R_Drug) and medical
+                              devices (R_Device).  This structure supports the FDA's (and presumably other reporting authorities') need for capturing  product
+                              problems and adverse events associated with the use of other products such as foods, food additives, cosmetics, dietary  supplements
+                              and veterinary drug products.  The new structure provides all the attributes and functionality of the more specific product
+                              models.
+                           </li>
+                           <li>It addresses the need for reporting related to combination products.  This category includes products which combine drugs,
+                              biologics and/or medical devices into one product for therapeutic use.  It also includes situations in which two or more separately
+                              licensed products are used together to achieve a specific purpose as documented in the relevant labeling information.
+                           </li>
+                           <li>It provides a consolidated structure that can be used to replace the more specific product models for medicines and medical
+                              devices.  This new structure supports migration for unification of the messaging specifications that support a wider variety
+                              of product types
+                           </li>
+                        </ul>
+                        <p>Please refer to the HMD documentation for more detailed information on classes and attributes.</p>
+                        <p></p>
+                        <table class="artifactList">
+                           <caption>Contained Hierarchical Message Descriptions</caption>
+                           <tr class="inserted">
+                              <td class="artifactList_desc">Safetyreport Event R_product Hmd</td>
+                              <td class="artifactList_code"><a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049011UV01-hmd" class="">PORR_HD049011UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">5.3.7</span><span class="title"><a name="PORR_RM049012UV01-rmi">ICSR A_ProductUse  (PORR_RM049012UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/PORR_RM049012UV.htm" target="_blank"><img class="graphic" src="editable/images/T-PORR_RM049012UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><div class="subheading">Description</div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><b><em>Parent:  </em></b></td>
+                              <td class="structType_value"><em>Public Health Reporting Domain Information Model (<a href="../../domains/uvrr/uvrr.htm#PORR_DM000000UV-rmi" class="">PORR_DM000000UV</a>)
+                                    									</em></td>
+                           </tr>
+                        </table>
+                        <p><strong>Model Overview</strong></p>
+                        <p>The A_ProductUse message element type captures information about the acts that establish how a product was used by an investigative
+                           subject for product related adverse events and/or product problem (defect) reporting.  The information includes items relevant
+                           to the use of the product and any associated clinical or other information directly related to the product's use.  Note that
+                           this RMIM supports all attributes and functionality provided in the ICSR Release 1 A_DrugIntervention and A_DeviceIntervention
+                           models.  ICSR Release 2 retained the use of these models to support a minimum level of backward compatibility between ICSR
+                           Release 1 and Release 2.  However, for organizations that have not previously implemented ICSR Release 1, the committee recommends
+                           use of A_ProductUse, and caution implementers that the ICSR Release 1 intervention models may be deprecated over time in future
+                           releases of ICSR.
+                        </p>
+                        <p>The <em>ProductUse</em> This choice structure captures information directly related to the use of the product that is relevant to the investigation.
+                           If it is necessary to introduce component usage, such as substance administrations or procedures, this initial usage will
+                           provide the overall context for the investigation.
+                        </p>
+                        <p>Please refer to the HMD documentation for more detailed information on classes and attributes.</p>
+                        <p></p>
+                        <table class="artifactList">
+                           <caption>Contained Hierarchical Message Descriptions</caption>
+                           <tr class="inserted">
+                              <td class="artifactList_desc">Safetyreport Event Productuse Hmd</td>
+                              <td class="artifactList_code"><a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049012UV01-hmd" class="">PORR_HD049012UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">5.4</span><span class="title"><a name="hmds-PORR_DO000001UV-Safetyreport-ic">Hierarchical Message Descriptions</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e1888" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Hierarchical Message Descriptions (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">ICSR A_DeviceIntervention HMD(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049008UV01-hmd" class="">PORR_HD049008UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">ICSR A_DrugIntervention(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049007UV01-hmd" class="">PORR_HD049007UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">ICSR A_ProductUse HMD(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049012UV01-hmd" class="">PORR_HD049012UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">ICSR HMD(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049006UV01-hmd" class="">PORR_HD049006UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">ICSR R_Device HMD(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049010UV01-hmd" class="">PORR_HD049010UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">ICSR R_Drug HMD(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049009UV01-hmd" class="">PORR_HD049009UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">ICSR R_Product HMD(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049011UV01-hmd" class="">PORR_HD049011UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e18882" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Hierarchical Message Descriptions (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Safetyreport Event Icsr A_deviceintervention Hmd(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049008UV01-hmd" class="">PORR_HD049008UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Safetyreport Event Icsr A_drugintervention HMD(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049007UV01-hmd" class="">PORR_HD049007UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Safetyreport Event Icsr Hmd(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049006UV01-hmd" class="">PORR_HD049006UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Safetyreport Event Icsr R_device Hmd(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049010UV01-hmd" class="">PORR_HD049010UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Safetyreport Event Icsr R_drug Hmd(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049009UV01-hmd" class="">PORR_HD049009UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Safetyreport Event Productuse Hmd(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049012UV01-hmd" class="">PORR_HD049012UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">Safetyreport Event R_product Hmd(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049011UV01-hmd" class="">PORR_HD049011UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e18883" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Hierarchical Message Descriptions (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">ICSR A_DeviceIntervention HMD(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049008UV01-hmd" class="">PORR_HD049008UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">ICSR A_DrugIntervention(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049007UV01-hmd" class="">PORR_HD049007UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">ICSR HMD(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049006UV01-hmd" class="">PORR_HD049006UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">ICSR R_Device HMD(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049010UV01-hmd" class="">PORR_HD049010UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">ICSR R_Drug HMD(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049009UV01-hmd" class="">PORR_HD049009UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">ICSR A_ProductUse HMD(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049012UV01-hmd" class="">PORR_HD049012UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general inserted">ICSR R_Product HMD(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_HD049011UV01-hmd" class="">PORR_HD049011UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <p></p>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3ghmd">the description of HMDs</a> in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection inserted">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">5.4.1</span><span class="title"><a name="PORR_HD049008UV01-hmd">ICSR A_DeviceIntervention HMD  (PORR_HD049008UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Description</b></div>
+                        <p>The Device InterventionHMD includes the information related to medical device related procedures that are referred to in an
+                           ICSR.  Note,  this structure is essentially a PORR internal message element type.
+                        </p>
+                        <p>At this time there is no content for this section.</p>
+                        <p></p>
+                        <div class="subheading">Base Hierarchical Message Description
+                           				<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049008UV01-rmi" class=""><img src="../../support/graphics/rmimview.gif" alt="View R-MIM" height="16" width="16" style="border-width:0" /></a> 
+                           				<a href="../../domains/uvrr/editable/PORR_HD049008UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="editable/PORR_HD049008UV.xls" target="_blank"><img src="../../support/graphics/excelview.gif" height="16" width="16" alt="Excel View" style="border:0px" /></a> 
+                        </div>
+                        <table class="hmd">
+                           <caption>Message Type List</caption>
+                           <tr class="">
+                              <td class="hmd_desc"><a name="PORR_MT049008UV01-msg"></a>Safetyreport Event Icsr A_deviceintervention Hmd
+                              </td>
+                              <td class="hmd_code">PORR_MT049008UV01</td>
+                              <td class="hmd_links"><a href="../../domains/uvrr/editable/PORR_HD049008UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="../../processable/multicacheschemas/PORR_MT049008UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                                 										 
+                                 									
+                                 
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <div class="subSubSection inserted">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">5.4.2</span><span class="title"><a name="PORR_HD049007UV01-hmd">ICSR A_DrugIntervention  (PORR_HD049007UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Description</b></div>
+                        <p>The Drug InterventionHMD includes the information related to drug related subtance administrations that are referred to in
+                           an ICSR.  Note,  this structure is essentially a PORR internal message element type.
+                        </p>
+                        <p>At this time there is no content for this section.</p>
+                        <p></p>
+                        <div class="subheading">Base Hierarchical Message Description
+                           				<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049007UV01-rmi" class=""><img src="../../support/graphics/rmimview.gif" alt="View R-MIM" height="16" width="16" style="border-width:0" /></a> 
+                           				<a href="../../domains/uvrr/editable/PORR_HD049007UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="editable/PORR_HD049007UV.xls" target="_blank"><img src="../../support/graphics/excelview.gif" height="16" width="16" alt="Excel View" style="border:0px" /></a> 
+                        </div>
+                        <table class="hmd">
+                           <caption>Message Type List</caption>
+                           <tr class="">
+                              <td class="hmd_desc"><a name="PORR_MT049007UV01-msg"></a>Safetyreport Event Icsr A_drugintervention HMD
+                              </td>
+                              <td class="hmd_code">PORR_MT049007UV01</td>
+                              <td class="hmd_links"><a href="../../domains/uvrr/editable/PORR_HD049007UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="../../processable/multicacheschemas/PORR_MT049007UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                                 										 
+                                 									
+                                 
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <div class="subSubSection inserted">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">5.4.3</span><span class="title"><a name="PORR_HD049006UV01-hmd">ICSR HMD  (PORR_HD049006UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Description</b></div>
+                        <p>This HMD includes the data that may be needed to file an ICSR report on an adverse event or reaction to a drug, biologic,
+                           vaccine, or device that has been implanted or is otherwise providing services to a patient.  This also includes the data that
+                           may be needed to file an ICSR report on a drug or a device that has not been involved in a patient related reaction. 
+                        </p>
+                        <p>At this time there is no content for this section.</p>
+                        <p></p>
+                        <div class="subheading">Base Hierarchical Message Description
+                           				<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049006UV01-rmi" class=""><img src="../../support/graphics/rmimview.gif" alt="View R-MIM" height="16" width="16" style="border-width:0" /></a> 
+                           				<a href="../../domains/uvrr/editable/PORR_HD049006UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="editable/PORR_HD049006UV.xls" target="_blank"><img src="../../support/graphics/excelview.gif" height="16" width="16" alt="Excel View" style="border:0px" /></a> 
+                        </div>
+                        <table class="hmd">
+                           <caption>Message Type List</caption>
+                           <tr class="inserted">
+                              <td class="hmd_desc"><a name="PORR_MT049006UV01-msg"></a>Safetyreport Event Icsr
+                              </td>
+                              <td class="hmd_code">PORR_MT049006UV01</td>
+                              <td class="hmd_links"><a href="../../domains/uvrr/editable/PORR_HD049006UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="../../processable/multicacheschemas/PORR_MT049006UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> <a href="../../domains/uvrr/uvrr_DO_XX.htm#PORR_MT049006UV01-msg" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a>
+                                 										 
+                                 									
+                                 
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <div class="subSubSection inserted">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">5.4.4</span><span class="title"><a name="PORR_HD049010UV01-hmd">ICSR R_Device HMD  (PORR_HD049010UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Description</b></div>
+                        <p>The Device HMD includes the information related to medical devices that are referred to in an ICSR.  Note,  this structure
+                           is essentially a PORR internal message element type.
+                        </p>
+                        <p>At this time there is no content for this section.</p>
+                        <p></p>
+                        <div class="subheading">Base Hierarchical Message Description
+                           				<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049010UV01-rmi" class=""><img src="../../support/graphics/rmimview.gif" alt="View R-MIM" height="16" width="16" style="border-width:0" /></a> 
+                           				<a href="../../domains/uvrr/editable/PORR_HD049010UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="editable/PORR_HD049010UV.xls" target="_blank"><img src="../../support/graphics/excelview.gif" height="16" width="16" alt="Excel View" style="border:0px" /></a> 
+                        </div>
+                        <table class="hmd">
+                           <caption>Message Type List</caption>
+                           <tr class="">
+                              <td class="hmd_desc"><a name="PORR_MT049010UV01-msg"></a>Safetyreport Event Icsr R_device Hmd
+                              </td>
+                              <td class="hmd_code">PORR_MT049010UV01</td>
+                              <td class="hmd_links"><a href="../../domains/uvrr/editable/PORR_HD049010UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="../../processable/multicacheschemas/PORR_MT049010UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                                 										 
+                                 									
+                                 
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <div class="subSubSection inserted">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">5.4.5</span><span class="title"><a name="PORR_HD049009UV01-hmd">ICSR R_Drug HMD  (PORR_HD049009UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Description</b></div>
+                        <p>The Drug HMD includes the information related to drugs that are referred to in an ICSR.  Note,  this structure is essentially
+                           a PORR internal message element type.
+                        </p>
+                        <p>At this time there is no content for this section.</p>
+                        <p></p>
+                        <div class="subheading">Base Hierarchical Message Description
+                           				<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049009UV01-rmi" class=""><img src="../../support/graphics/rmimview.gif" alt="View R-MIM" height="16" width="16" style="border-width:0" /></a> 
+                           				<a href="../../domains/uvrr/editable/PORR_HD049009UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="editable/PORR_HD049009UV.xls" target="_blank"><img src="../../support/graphics/excelview.gif" height="16" width="16" alt="Excel View" style="border:0px" /></a> 
+                        </div>
+                        <table class="hmd">
+                           <caption>Message Type List</caption>
+                           <tr class="">
+                              <td class="hmd_desc"><a name="PORR_MT049009UV01-msg"></a>Safetyreport Event Icsr R_drug Hmd
+                              </td>
+                              <td class="hmd_code">PORR_MT049009UV01</td>
+                              <td class="hmd_links"><a href="../../domains/uvrr/editable/PORR_HD049009UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="../../processable/multicacheschemas/PORR_MT049009UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                                 										 
+                                 									
+                                 
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <div class="subSubSection inserted">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">5.4.6</span><span class="title"><a name="PORR_HD049012UV01-hmd">ICSR A_ProductUse HMD  (PORR_HD049012UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Description</b></div>
+                        <p>The Drug InterventionHMD includes the information related to how a product was used by an investigated subject that are referred
+                           to in an ICSR.  Note,  this structure is essentially a PORR internal message element type.
+                        </p>
+                        <p>At this time there is no content for this section.</p>
+                        <p></p>
+                        <div class="subheading">Base Hierarchical Message Description
+                           				<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049012UV01-rmi" class=""><img src="../../support/graphics/rmimview.gif" alt="View R-MIM" height="16" width="16" style="border-width:0" /></a> 
+                           				<a href="../../domains/uvrr/editable/PORR_HD049012UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="editable/PORR_HD049012UV.xls" target="_blank"><img src="../../support/graphics/excelview.gif" height="16" width="16" alt="Excel View" style="border:0px" /></a> 
+                        </div>
+                        <table class="hmd">
+                           <caption>Message Type List</caption>
+                           <tr class="">
+                              <td class="hmd_desc"><a name="PORR_MT049012UV01-msg"></a>Safetyreport Event Productuse Hmd
+                              </td>
+                              <td class="hmd_code">PORR_MT049012UV01</td>
+                              <td class="hmd_links"><a href="../../domains/uvrr/editable/PORR_HD049012UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="../../processable/multicacheschemas/PORR_MT049012UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                                 										 
+                                 									
+                                 
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <div class="subSubSection inserted">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">5.4.7</span><span class="title"><a name="PORR_HD049011UV01-hmd">ICSR R_Product HMD  (PORR_HD049011UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Description</b></div>
+                        <p>The R_Product HMD includes the information related to product problem reporting that are referred to in an ICSR.  Note,  this
+                           structure is essentially a PORR internal message element type.
+                        </p>
+                        <p>At this time there is no content for this section.</p>
+                        <p></p>
+                        <div class="subheading">Base Hierarchical Message Description
+                           				<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_RM049011UV01-rmi" class=""><img src="../../support/graphics/rmimview.gif" alt="View R-MIM" height="16" width="16" style="border-width:0" /></a> 
+                           				<a href="../../domains/uvrr/editable/PORR_HD049011UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="editable/PORR_HD049011UV.xls" target="_blank"><img src="../../support/graphics/excelview.gif" height="16" width="16" alt="Excel View" style="border:0px" /></a> 
+                        </div>
+                        <table class="hmd">
+                           <caption>Message Type List</caption>
+                           <tr class="">
+                              <td class="hmd_desc"><a name="PORR_MT049011UV01-msg"></a>Safetyreport Event R_product Hmd
+                              </td>
+                              <td class="hmd_code">PORR_MT049011UV01</td>
+                              <td class="hmd_links"><a href="../../domains/uvrr/editable/PORR_HD049011UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="../../processable/multicacheschemas/PORR_MT049011UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                                 										 
+                                 									
+                                 
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">5.5</span><span class="title"><a name="ints-PORR_DO000001UV-Safetyreport-ic">Interactions</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e1968" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> List of Interactions (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Individual Case Safety Report Create(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_IN049006UV01-int" class="">PORR_IN049006UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Individual Case Safety Report Retraction(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_IN049008UV01-int" class="">PORR_IN049008UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Individual Case Safety Report Revision(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_IN049007UV01-int" class="">PORR_IN049007UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e19682" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> List of Interactions (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Safetyreport Event Cancel Notification Icsr(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_IN049008UV01-int" class="">PORR_IN049008UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Safetyreport Event Create Notification Icsr(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_IN049006UV01-int" class="">PORR_IN049006UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Safetyreport Event Revise Notification Icsr(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_IN049007UV01-int" class="">PORR_IN049007UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e19683" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> List of Interactions (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Individual Case Safety Report Create(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_IN049006UV01-int" class="">PORR_IN049006UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Individual Case Safety Report Retraction(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_IN049008UV01-int" class="">PORR_IN049008UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Individual Case Safety Report Revision(<a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_IN049007UV01-int" class="">PORR_IN049007UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <p></p>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3gintact">the definition of Interactions</a> in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">5.5.1</span><span class="title"><a name="PORR_IN049006UV01-int">Individual Case Safety Report Create  (PORR_IN049006UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">Description <a href="../../processable/multicacheschemas/PORR_IN049006UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                        </div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Safetyreport Event Create Notification Icsr</em></td>
+                           </tr>
+                        </table>
+                        <p>The interaction supports the communication of a new individual case safety report.</p>
+                        <p></p>
+                        <table class="interact">
+                           <tr class="inserted">
+                              <td class="interact_type"><b>Trigger Event</b></td>
+                              <td class="interact_desc">ICSR Create Notification</td>
+                              <td class="interact_code"><a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_TE049006UV01-te" class="">PORR_TE049006UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Transmission Wrapper</b></td>
+                              <td class="interact_desc">Send Message Payload</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_GenericMessageTransmission.htm#MCCI_MT000100UV01-msg" class="">MCCI_MT000100UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Control Act Wrapper</b></td>
+                              <td class="interact_desc">Trigger Event Control Act</td>
+                              <td class="interact_code"><a href="../../domains/uvai/uvai_TriggerEventControlAct.htm#MCAI_MT700201UV01-msg" class="">MCAI_MT700201UV01</a></td>
+                           </tr>
+                           <tr class="inserted">
+                              <td class="interact_type"><b>Message Type</b></td>
+                              <td class="interact_desc">ICSR</td>
+                              <td class="interact_code"><a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_MT049006UV01-msg" class="">PORR_MT049006UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="interact">
+                           <caption>Sending and Receiving Roles</caption>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">ICSR Notification Sender</td>
+                              <td class="interact_code"><a href="../../domains/uvrr/uvrr_ICSR.htm#PORR_AR040001UV01-ar" class="">PORR_AR040001UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">ICSR Notification Receiver</td>
+                              <td class="interact_code"><a href="../../domains/uvrr/uvrr_ICSR.htm#PORR_AR040002UV01-ar" class="">PORR_AR040002UV01</a></td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <p></p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">5.5.2</span><span class="title"><a name="PORR_IN049008UV01-int">Individual Case Safety Report Retraction  (PORR_IN049008UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">Description <a href="../../processable/multicacheschemas/PORR_IN049008UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                        </div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Safetyreport Event Cancel Notification Icsr</em></td>
+                           </tr>
+                        </table>
+                        <p>The interaction supports the cancellation of a previously sent individual case safety report.</p>
+                        <p></p>
+                        <table class="interact">
+                           <tr class="">
+                              <td class="interact_type"><b>Trigger Event</b></td>
+                              <td class="interact_desc">ICSR Withdraw Notification</td>
+                              <td class="interact_code"><a href="../../domains/uvrr/uvrr_ICSR.htm#PORR_TE040003UV01-te" class="">PORR_TE040003UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Transmission Wrapper</b></td>
+                              <td class="interact_desc">Send Message Payload</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_GenericMessageTransmission.htm#MCCI_MT000100UV01-msg" class="">MCCI_MT000100UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Control Act Wrapper</b></td>
+                              <td class="interact_desc">Trigger Event Control Act</td>
+                              <td class="interact_code"><a href="../../domains/uvai/uvai_TriggerEventControlAct.htm#MCAI_MT700201UV01-msg" class="">MCAI_MT700201UV01</a></td>
+                           </tr>
+                           <tr class="inserted">
+                              <td class="interact_type"><b>Message Type</b></td>
+                              <td class="interact_desc">ICSR</td>
+                              <td class="interact_code"><a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_MT049006UV01-msg" class="">PORR_MT049006UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="interact">
+                           <caption>Sending and Receiving Roles</caption>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">ICSR Notification Sender</td>
+                              <td class="interact_code"><a href="../../domains/uvrr/uvrr_ICSR.htm#PORR_AR040001UV01-ar" class="">PORR_AR040001UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">ICSR Notification Receiver</td>
+                              <td class="interact_code"><a href="../../domains/uvrr/uvrr_ICSR.htm#PORR_AR040002UV01-ar" class="">PORR_AR040002UV01</a></td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <p></p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">5.5.3</span><span class="title"><a name="PORR_IN049007UV01-int">Individual Case Safety Report Revision  (PORR_IN049007UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">Description <a href="../../processable/multicacheschemas/PORR_IN049007UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                        </div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Safetyreport Event Revise Notification Icsr</em></td>
+                           </tr>
+                        </table>
+                        <p>The interaction supports revisions to previously sent individual case safety report messages.</p>
+                        <p></p>
+                        <table class="interact">
+                           <tr class="">
+                              <td class="interact_type"><b>Trigger Event</b></td>
+                              <td class="interact_desc">ICSR Revise Notification</td>
+                              <td class="interact_code"><a href="../../domains/uvrr/uvrr_ICSR.htm#PORR_TE040002UV01-te" class="">PORR_TE040002UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Transmission Wrapper</b></td>
+                              <td class="interact_desc">Send Message Payload</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_GenericMessageTransmission.htm#MCCI_MT000100UV01-msg" class="">MCCI_MT000100UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Control Act Wrapper</b></td>
+                              <td class="interact_desc">Trigger Event Control Act</td>
+                              <td class="interact_code"><a href="../../domains/uvai/uvai_TriggerEventControlAct.htm#MCAI_MT700201UV01-msg" class="">MCAI_MT700201UV01</a></td>
+                           </tr>
+                           <tr class="inserted">
+                              <td class="interact_type"><b>Message Type</b></td>
+                              <td class="interact_desc">ICSR</td>
+                              <td class="interact_code"><a href="../../domains/uvrr/uvrr_SafetyReportingManagement.htm#PORR_MT049006UV01-msg" class="">PORR_MT049006UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="interact">
+                           <caption>Sending and Receiving Roles</caption>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">ICSR Notification Sender</td>
+                              <td class="interact_code"><a href="../../domains/uvrr/uvrr_ICSR.htm#PORR_AR040001UV01-ar" class="">PORR_AR040001UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">ICSR Notification Receiver</td>
+                              <td class="interact_code"><a href="../../domains/uvrr/uvrr_ICSR.htm#PORR_AR040002UV01-ar" class="">PORR_AR040002UV01</a></td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <p></p>
+               </div>
+            </div>
+            <p>
+               <table>
+                  <tbody>
+                     <tr>
+                        <td><a class="custombutton" href="#top">Return to top of page</a></td>
+                     </tr>
+                  </tbody>
+               </table>
+            </p>
+         </div>
+      </div>
+   </body>
+</html>

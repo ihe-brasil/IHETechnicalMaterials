@@ -1,0 +1,2718 @@
+<html xmlns:mif="urn:hl7-org:v3/mif" xmlns="http://www.w3.org/TR/REC-html40">
+   <head>
+      <title xmlns="">Physical Service Record</title><style xmlns="">
+         <!--
+ /* Style Definitions */
+.CellGrid
+	{margin-left:6.0pt;
+	margin-right:6.0pt;
+	margin-top:6.0pt;
+	margin-bottom:6.0pt;
+	border-collapse:collapse;
+	border:solid windowtext 1.0pt;}
+
+.CellGridHeader
+	{margin-left:6.0pt;
+	margin-right:6.0pt;
+	margin-top:6.0pt;
+	margin-bottom:6.0pt;
+	border-collapse:collapse;
+	border:solid windowtext 0.75pt;
+	background:#F3F3F3;
+	color:navy;
+	font-weight:bold;}
+
+.CellGridBold
+	{margin-left:6.0pt;
+	margin-right:6.0pt;
+	margin-top:6.0pt;
+	margin-bottom:6.0pt;
+	border-collapse:collapse;
+	border:solid windowtext 0.75pt;
+	font-weight:bold;}
+
+.DividerRow
+	{border-collapse:collapse;
+	border-bottom:solid windowtext 1.5pt}
+
+.DividerContent
+	{margin-left:0pt;
+	margin-right:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	font-size:1pt;}
+	
+.HL7Ref
+	{margin-left:0.0pt;
+	margin-right:0.0pt;
+	margin-top:0.0pt;
+	margin-bottom:0.0pt;
+	font-size:12.0pt;
+	color:gray;
+	font-weight:normal;
+	mso-no-proof:yes;}
+
+.Label
+	{font-size:12.0pt;
+	font-weight:normal;
+	font-style:normal;}
+
+.MsoBodyText
+	{margin-right:1.0pt;
+	margin-left:1.0pt;
+	margin-top:1.0pt;
+	margin-bottom:1.0pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+
+.MsoStrongListBullet
+	{	margin-left:0pt;
+	margin-right:0pt;
+	margin-top:12pt;
+	margin-bottom:0pt;
+	mso-list:l9 level1 lfo1;
+	page-break-after:avoid;
+	color:navy;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-style:italic;
+	font-weight:normal;}
+
+@list l9
+	{mso-list-id:-119;
+	mso-list-type:simple;
+	mso-list-template-ids:-316790866;}
+@list l9:level1
+	{mso-level-number-format:bullet;
+	mso-level-style-link:"List Bullet";
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+
+.MsoStrong
+	{	margin-left:0pt;
+	margin-right:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	page-break-after:avoid;
+	color:navy;
+	font-size:12.0pt;
+	font-family:Arial;
+	font-style:italic;
+	font-weight:normal;}
+
+.TableGrid
+	{border-collapse:collapse;
+	border:solid windowtext 1.5pt;
+	mso-border-alt:solid windowtext 1.5pt;
+	mso-border-insidev:1.5pt solid windowtext;
+	padding:0pt 0pt 0pt 0pt;}
+
+.TableNoGrid
+	{border-collapse:collapse;
+	font-size:10.0pt;
+	font-family:Arial;}
+
+h2
+	{mso-outline-level:1;
+	margin-left:0pt;
+	margin-right:0pt;
+	margin-top:12pt;
+	margin-bottom:0pt;
+	page-break-after:avoid;
+	color:navy;
+	font-size:16.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+
+h3
+	{mso-outline-level:2;
+	margin-left:0pt;
+	margin-right:0pt;
+	margin-top:12pt;
+	margin-bottom:0pt;
+	page-break-after:avoid;
+	color:black;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-style:italic;
+	font-weight:normal;}
+
+h4
+	{mso-outline-level:3;
+	margin-left:0pt;
+	margin-right:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	text-indent:.5in;
+	page-break-after:avoid;
+	color:navy;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-style:italic;
+	font-weight:normal;}
+
+formated
+	{margin-left:0pt;
+	margin-right:0pt;
+	margin-top:12pt;
+	margin-bottom:0pt;
+	page-break-after:avoid;
+	color:navy;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-style:italic;
+	font-weight:normal;}
+
+
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in .75in .75in .75in;}
+
+div.Section1
+	{page:Section1;}
+			--></style><title></title>
+   </head>
+   <body lang="EN-US" link="blue" vlink="purple" style="tab-interval:.5in">
+      <p xmlns="" class="MsoBodyText"><span></span><a href="#1">Professional Service</a></p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#1_A1">Service Type</a>&nbsp;M
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#1_A5">Uncertain Indicator</a>&nbsp;O
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#1_A4">Service Masking Indicators</a>&nbsp;O 2
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#1_A3">Service Time and Length</a>&nbsp;P
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#1_A8">Replaces Record Ids</a>&nbsp;R 10
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#1_A11">occurred at</a>&nbsp;M
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#1_A10">Service Categories</a>&nbsp;P 5
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#1_A7">Anatomical Locations</a>&nbsp;O 25
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#1_A6">Anatomical Location Approaches</a>&nbsp;O 5
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#1_A9">Service Report Reference Id</a>&nbsp;R
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#1_A2">Refuted Indicator</a>&nbsp;O
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#1_S1">for</a>&nbsp;<i>Patient</i>&nbsp;M
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Patient ID</i>&nbsp;M
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Patient Name</i>&nbsp;M
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Patient Birth Date</i>&nbsp;M
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Patient Gender</i>&nbsp;M
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#1_S3">reported by</a>&nbsp;<i>Person</i>&nbsp;R
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Responsible Person Type</i>&nbsp;M
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Person Id</i>&nbsp;R
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Person Name</i>&nbsp;R
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#1_S2">performed by</a>&nbsp;<i>Provider</i>&nbsp;R 5
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Provider Id</i>&nbsp;P
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Provider Name</i>&nbsp;M
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Provider License Number</i>&nbsp;R
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Provider Type</i>&nbsp;R
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#1_S4">fulfills</a>&nbsp;<a href="#5">Request</a>&nbsp;R
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#5_A1">Request Type</a>&nbsp;M
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#5_A2">Request Id</a>&nbsp;R
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#5_S1">requested by</a>&nbsp;<i>Provider</i>&nbsp;R
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Provider Id</i>&nbsp;P
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Provider Name</i>&nbsp;M
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Provider License Number</i>&nbsp;R
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Provider Type</i>&nbsp;R
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#1_S7">is part of</a>&nbsp;<i>Care Compositions</i>&nbsp;R 25
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Care Composition Type</i>&nbsp;M
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Care Composition Identifier</i>&nbsp;M
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#1_S5">because of</a>&nbsp;R 5
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Diagnosis Indications</i></p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Diagnosis Code</i>&nbsp;O
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Diagnosis Type</i>&nbsp;M
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Free Form Diagnosis Indication</i>&nbsp;R
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>and/or&nbsp;<i>Other indications</i></p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Other Indication</i>&nbsp;R
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Other indication ad-hoc description</i>&nbsp;R
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>and/or&nbsp;<i>Symptom Indications</i></p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Symptom Code</i>&nbsp;O
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Free Form Symptom Indication</i>&nbsp;R
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Symptom Type</i>&nbsp;M
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#1_S6">includes</a>&nbsp;<i>Notes</i>&nbsp;R
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Note Text</i>&nbsp;M
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Written in</i>&nbsp;P
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>annotated by</i>&nbsp;<i>Provider</i>&nbsp;M
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Provider Id</i>&nbsp;P
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Provider Name</i>&nbsp;M
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Provider License Number</i>&nbsp;R
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Note Timestamp</i>&nbsp;M
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>Provider Type</i>&nbsp;R
+      </p>
+      <div xmlns="" class="Section1">
+         <h2><a name="1"></a><span>Professional Service</span></h2>
+         <p class="HL7Ref">(ProcedureEvent)</p>
+         <table class="TableGrid" style="margin-left:.25in" border="0" cellspacing="0" cellpadding="0" width="640">
+            <col width="115">
+            <col width="525">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">This is the information that is recorded and maintained on a consultative service or surgical or physical service (procedure)
+                        provided to a patient.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">It is necessary to know of clinical and non-clinical services which have occurred in order to aid in interpretation of results.
+                        Counselling, education, surgeries and physical therapy are examples of the types of services that can be captured.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Constraints</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Annotation is only permitted if Annotation Indicator is not present and vice versa</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Used by</p>
+               </td>
+               <td class="CellGrid" colspan="2" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">NeCST</p>
+               </td>
+            </tr>
+         </table>
+         <h3>Attributes</h3>
+         <h4><a name="1_A1">Service Type</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(code)</p>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Datatype</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">CV</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Code (includes mnemonic, code-system and original text)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Mandatory</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Value must always be supplied (no nulls)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">1</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Does not repeat</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Code Strength</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">CWE</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Un-coded text or local codes allowed</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Code Domain</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">ActPhysicalProfessionalServiceCode</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText"></p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Identifies the type or category of the represented by this record.</p>
+                     
+                     <p class="MsoBodyText" style="margin-top:6.0pt;">e.g. appendectomy, smoking cessation counseling, physiotherapy</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">It is used for searching and for organizing records as well as sorting them for presentation.</p>
+                     
+                     <p class="MsoBodyText" style="margin-top:6.0pt;">This is a key attribute for understanding the type of record and is therefore mandatory.</p>
+                     
+                     <p class="MsoBodyText" style="margin-top:6.0pt;">The element uses CWE to allow for the capture of concepts not presently supported by the approved code system(s). In this
+                        case, the human-to-human benefit of capturing additional non-coded values outweighs the penalties of capturing some information
+                        which will not be searchable or categorizable.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Used by</p>
+               </td>
+               <td class="CellGrid" colspan="2" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">CPhAv3, NCPDP, NeCST, PECS, PIN</p>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+         <h4><a name="1_A5">Uncertain Indicator</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(uncertaintyCode)</p>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Datatype</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">CV</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Code (includes mnemonic, code-system and original text)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Optional</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Implementers may declare whether they support the concept or not</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">1</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Does not repeat</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Default</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">N</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">If no value is specified, receiver behaves as though "N" had been sent.</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Code Strength</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">CNE</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Must be coded using 'official' codeset (no un-coded text or local codes)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Code Domain</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">ActUncertainty</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText"></p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Used to specifically flag the record as suspect or uncertain. The default is "no assertion of uncertainty". This does not
+                        mean that the record is unquestionable, but rather that the provider recording the record has no reason to question its accuracy.
+                        An assertion of "uncertainty" indicates that while there is a high enough chance of the record being accurate to warrant its
+                        presence in the EHR, there is reason to suspect that some or all of it may be inaccurate. Additional details about the reasons
+                        for the uncertainty may be conveyed in notes.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Known uncertainty is important to convey to other clinicians and will affect how the record is interpreted.</p>
+                     
+                     <p class="MsoBodyText" style="margin-top:6.0pt;">The attribute is optional because for systems that support SNOMED, this concept will be communicated as part of the Type.
+                        For systems which choose to support the element, it should always be present with a non-null value because it should always
+                        be known whether uncertainty is being asserted or not.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+         <h4><a name="1_A4">Service Masking Indicators</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(confidentialityCode)</p>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Datatype</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">SET&lt;CV&gt;</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Set of Code (Unique collection; each occurrence includes mnemonic, code-system and original text)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Optional</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Implementers may declare whether they support the concept or not</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">2</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">May repeat up to 2 times</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Code Strength</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">CNE</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Must be coded using 'official' codeset (no un-coded text or local codes)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Code Domain</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">x_VeryBasicConfidentialityKind</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText"></p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Communicates the desire of the patient to restrict access to this record. Provides support for additional confidentiality
+                        constraint, giving patients a level of control over their information. Methods for accessing masked event records will be
+                        governed by each jurisdiction (e.g. court orders, shared secret/consent, etc.).
+                     </p>
+                     
+                     <p class="MsoBodyText" style="margin-top:6.0pt;">Can also be used to communicate that the information is deemed to be sensitive and should not be communicated or exposed to
+                        the patient (at least without the guidance of the authoring or other responsible healthcare provider).
+                     </p>
+                     
+                     <p class="MsoBodyText" style="margin-top:6.0pt;">Valid values are: 'normal' (denotes 'Not Masked'); 'restricted' (denotes 'Masked') and 'taboo' (denotes 'patient restricted').
+                        The default is 'normal' signifying 'Not Masked'. Either or both of the other codes can be asserted to indicate masking by
+                        the patient from providers or masking by a provider from the patient, respectively.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Allows the patient to have discrete control over access to their health data. Awareness of the patient's desire for confidentiality
+                        is important even for providers who have access to the data because it indicates a need for extra caution before disclosing
+                        the information to other care providers.
+                     </p>
+                     
+                     <p class="MsoBodyText" style="margin-top:6.0pt;">Also allows providers to mark records as "not for patient display" for circumstances where the patient has access to their
+                        own EHR. (There are some pieces of information where it would be detrimental to a patient's health or ongoing care were they
+                        to be aware of those records without careful guidance.)
+                     </p>
+                     
+                     <p class="MsoBodyText" style="margin-top:6.0pt;">Two repetitions are supported to allow indicating that the record is masked from both a provider and a patient perspective.</p>
+                     
+                     <p class="MsoBodyText" style="margin-top:6.0pt;">The attribute is optional because not all systems will support masking.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Implementation</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">The value specified for a particular record may be overridden by a higher level masking applied to an indication, a type of
+                        data or even all patient records.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+         <h4><a name="1_A3">Service Time and Length</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(effectiveTime)</p>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Datatype</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">IVL&lt;TS.FULLDATE&gt;</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Date-range (includes approximate start-date, end-date, center-date and duration.  Only two of these properties (usually start
+                     and end) are transmitted.)
+                  </p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Populated</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Implementers must support and must always send a value, however the value may be a null flavor</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">1</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Does not repeat</p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">The date and time during which the professional service was performed, as well as the duration of the service.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Identifies the time-period of relevance to the record which is useful in filtering and organizing "time-view" presentations
+                        of data. Because the timing information won't always be known, this attribute is marked as 'populated'.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Constraints</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Center date cannot be null but duration can be left unspecified if not known.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Used by</p>
+               </td>
+               <td class="CellGrid" colspan="2" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">NCPDP, NeCST, PECS, PIN</p>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+         <h4><a name="1_A8">Replaces Record Ids</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(predecessor.oldProcedureEvent.id)</p>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Datatype</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">II</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Identifier (includes id, assigning authority)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Required</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Implementers must support, but only supply data when it is available</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">10</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">May repeat up to 10 times</p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Used to identify any records that are "superceded" by the current record. This will cause the referenced records to be marked
+                        as "obsolete" with a reference pointing to this record.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Used in circumstances where information initially captured about an event is erroneous, incomplete or not captured at the
+                        desired level of detail and the change cannot be made by retracting the original record. (E.g. Too much time has elapsed,
+                        change is being made by a provider other than the original author of the vent record, etc.) May also be used to reference
+                        multiple records in the case where the same event has been accidentally captured more than once.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+         <h4><a name="1_A11">occurred at</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(location)</p>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Datatype</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">BL</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Boolean (values are 'true' or 'false')</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Mandatory</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Value must always be supplied (no nulls)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">1</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Does not repeat</p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">This identifies the location where the actually occurred. E.g. Patient's residence, clinic, work site, etc. It only needs
+                        to be specified when the occurrence location differs from the official record location.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">The site of the actual event provides context for interpreting the record. In some cases, it may also provide follow-up information</p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+         <h4><a name="1_A10">Service Categories</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(componentOf1.workingListEvent.code)</p>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Datatype</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">CV</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Code (includes mnemonic, code-system and original text)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Populated</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Implementers must support and must always send a value, however the value may be a null flavor</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">5</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">May repeat up to 5 times</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Code Strength</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">CNE</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Must be coded using 'official' codeset (no un-coded text or local codes)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Code Domain</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">ActPhysicalProcedureCategoryList</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText"></p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Describes the categorization of the service. E.g. Psychological Counseling, Smoking Cessation, Cardiac Surgeries, etc.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Allows categorizing professional services for presentation. A given person may have had numerous procedures related to a particular
+                        area. By associating categories with procedures, a person viewing the EHR information can first look at a list of categories
+                        and then drill down to the specific procedures.
+                     </p>
+                     
+                     <p class="MsoBodyText" style="margin-top:6.0pt;">The presence of this field is essential to prevent users from being overwhelmed, however not all services will necessarily
+                        be categorizable. Therefore this element is marked as 'populated'.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+         <h4><a name="1_A7">Anatomical Locations</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(targetSiteCode)</p>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Datatype</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">SET&lt;CV&gt;</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Set of Code (Unique collection; each occurrence includes mnemonic, code-system and original text)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Optional</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Implementers may declare whether they support the concept or not</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">25</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">May repeat up to 25 times</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Code Strength</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">CNE</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Must be coded using 'official' codeset (no un-coded text or local codes)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Code Domain</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">ActHumanProcedureSite</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText"></p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Describes the body area on which the surgical procedure is being performed. For example, a Nephrectomy target site could be
+                        the right or left kidney.
+                     </p>
+                     
+                     <p class="MsoBodyText" style="margin-top:6.0pt;">This attribute is only used when the method is not self-evident from the procedure code.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Provides additional context around the procedure and can be important to interpreting the record.</p>
+                     
+                     <p class="MsoBodyText" style="margin-top:6.0pt;">The attribute is optional because for systems that support SNOMED, this concept will be communicated as part of the Service
+                        Type.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+         <h4><a name="1_A6">Anatomical Location Approaches</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(approachSiteCode)</p>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Datatype</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">SET&lt;CV&gt;</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Set of Code (Unique collection; each occurrence includes mnemonic, code-system and original text)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Optional</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Implementers may declare whether they support the concept or not</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">5</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">May repeat up to 5 times</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Code Strength</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">CNE</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Must be coded using 'official' codeset (no un-coded text or local codes)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Code Domain</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">ActHumanProcedureSite</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText"></p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">A coded value denoting the area of the body that was entered as a mechanism of reaching the surgical procedure target. For
+                        example, Nephrectomy can have a trans-abdominal or a primarily retroperitoneal approach.
+                     </p>
+                     
+                     <p class="MsoBodyText" style="margin-top:6.0pt;">This attribute is only used when the approach location is not self-evident from the procedure code.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Provides additional context around the procedure and can be important to interpreting the record.</p>
+                     
+                     <p class="MsoBodyText" style="margin-top:6.0pt;">The attribute is optional because for systems that support SNOMED, this concept will be communicated as part of the Service
+                        Type.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+         <h4><a name="1_A9">Service Report Reference Id</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(subjectOf2.documentEvent.id)</p>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Datatype</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">II</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Identifier (includes id, assigning authority)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Required</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Implementers must support, but only supply data when it is available</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">1</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Does not repeat</p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">An identifier for a report associated with the procedure.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Allows for a direct link to a report that has been written on the procedure. Often surgical, and even psychological procedures
+                        can result in numerous observations, and other information generally captured in narrative form. When filled in, this attribute
+                        allows the user to drill down to the Clinical Note record used to capture this additional information.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+         <h4><a name="1_A2">Refuted Indicator</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(negationInd)</p>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Datatype</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">BL</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Boolean (values are 'true' or 'false')</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Optional</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Implementers may declare whether they support the concept or not</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">1</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Does not repeat</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Default</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">false</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">If no value is specified, receiver behaves as though "false" had been sent.</p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">When set to true, specifically flags the record as "did not occur". The default is false. Additional details about the reasons
+                        for refuting the record may be conveyed in notes.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">This is primarily used to supercede records where an assertion was made which is subsequently determined to be false. It is
+                        important to be able to make explicit statements that something is known to not be true.
+                     </p>
+                     
+                     <p class="MsoBodyText" style="margin-top:6.0pt;">The attribute is optional because for systems that support SNOMED, this concept will be communicated as part of the Type.
+                        For systems which choose to support the element explicitly, it should always be present with a non-null value because it should
+                        always be known whether the record is being refuted or not.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+         <h3>Associations</h3>
+         <h4><a name="1_S1">for</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(subject.patient)</p>
+         <table class="TableNoGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="90">
+            <col>
+            <tr valign="top">
+               <td>
+                  <p class="MsoBodyText"></p>
+               </td>
+               <td>
+                  <p class="MsoStrong" style="margin-top:0pt"><a href="#2">Patient</a><span class="HL7Ref"> (R_PatientPersonIdentified-confirmable.Patient)</span></p>
+               </td>
+            </tr>
+         </table>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Mandatory</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Value must always be supplied (no nulls)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">1</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Does not repeat</p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">This identifies the patient associated with the</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Used to link the record to the patient's EHR and is therefore mandatory.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Used by</p>
+               </td>
+               <td class="CellGrid" colspan="2" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">PIN</p>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+         <h4><a name="1_S3">reported by</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(informant.personalRelationship)</p>
+         <table class="TableNoGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="90">
+            <col>
+            <tr valign="top">
+               <td>
+                  <p class="MsoBodyText"></p>
+               </td>
+               <td>
+                  <p class="MsoStrong" style="margin-top:0pt"><a href="#4">Person</a><span class="HL7Ref"> (R_InformantMinimalInformational.PersonalRelationship)</span></p>
+               </td>
+            </tr>
+         </table>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Required</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Implementers must support, but only supply data when it is available</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">1</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Does not repeat</p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">In the case where the information in the record is being captured second-hand, identifies the source of the information.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Understanding the source of data is essential to its interpretation. It can be very valuable to include information in the
+                        EHR that has been reported to the recording provider by the patient, patient's relative or other person. However, it is equally
+                        important that such information be clearly distinguished from information of which the provider has first-hand awareness.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Implementation</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">If not specified, it is assumed that the author is capturing information of which they have first-hand awareness.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+         <h4><a name="1_S2">performed by</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(performer.assignedPerson)</p>
+         <table class="TableNoGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="90">
+            <col>
+            <tr valign="top">
+               <td>
+                  <p class="MsoBodyText"></p>
+               </td>
+               <td>
+                  <p class="MsoStrong" style="margin-top:0pt"><a href="#3">Provider</a><span class="HL7Ref"> (R_AssignedPersonInformational.AssignedPerson)</span></p>
+               </td>
+            </tr>
+         </table>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Required</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Implementers must support, but only supply data when it is available</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">5</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">May repeat up to 5 times</p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Identifies the person(s) who actually performed the action described in the record.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">The person who makes the decision to capture information in the electronic record is not always the person who actually performed
+                        the action. Knowledge of the performer is useful both for tracking responsibility and for subsequent follow-up.
+                     </p>
+                     
+                     <p class="MsoBodyText" style="margin-top:6.0pt;">Multiple repetitions are allowed for those circumstances where more than one provider is involved.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Implementation</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">If not specified, it is assumed that the author is also the performer. I.e. If the author and performer are the same, only
+                        the author should be sent. If the author is not the performer, but the performer is not known, a null flavor of UNK (unknown)
+                        should be used.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Used by</p>
+               </td>
+               <td class="CellGrid" colspan="2" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">PIN</p>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+         <h4><a name="1_S4">fulfills</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(inFulfillmentOf.actRequest)</p>
+         <table class="TableNoGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="90">
+            <col>
+            <tr valign="top">
+               <td>
+                  <p class="MsoBodyText"></p>
+               </td>
+               <td>
+                  <p class="MsoStrong" style="margin-top:0pt"><a href="#5">Request</a><span class="HL7Ref"> (ActRequest)</span></p>
+               </td>
+            </tr>
+         </table>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Required</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Implementers must support, but only supply data when it is available</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">1</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Does not repeat</p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">This ties the record to the request (referral or specific request) which resulted in the creation of the .</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">By requesting the action, a provider takes a level of responsibility for it. Also, a link between request and fulfilling record
+                        may result in differences in query responses. For example retrieving a request may also result in retrieval of fulfilling
+                        records. Requesting providers generally have authorization to view masked information as well.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Used by</p>
+               </td>
+               <td class="CellGrid" colspan="2" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">NeCST</p>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+         <h4><a name="1_S7">is part of</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(componentOf2.patientCareProvisionEvent)</p>
+         <table class="TableNoGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="90">
+            <col>
+            <tr valign="top">
+               <td>
+                  <p class="MsoBodyText"></p>
+               </td>
+               <td>
+                  <p class="MsoStrong" style="margin-top:0pt"><a href="#12">Care Compositions</a><span class="HL7Ref"> (A_CareEventIdentified.PatientCareProvisionEvent)</span></p>
+               </td>
+            </tr>
+         </table>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Required</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Implementers must support, but only supply data when it is available</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">25</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">May repeat up to 25 times</p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">This identifies the encounter, episodes and/or other care events the is considered to be part of.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Care compositions provide a means of navigating a patient's EHR by grouping related records together into identified "collections".</p>
+                     
+                     <p class="MsoBodyText" style="margin-top:6.0pt;">Multiple repetitions are allowed so that a single can be attached to multiple encounters, episodes and care events.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+         <h4><a name="1_S5">because of</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(reason.indications)</p>
+         <table class="TableNoGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="90">
+            <col>
+            <tr valign="top">
+               <td>
+                  <p class="MsoStrong"></p>
+               </td>
+               <td>
+                  <p class="MsoStrong"><a href="#7">Diagnosis Indications</a><span class="HL7Ref"> (A_IndicationBasicBasic.ObservationDiagnosis)</span></p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td>
+                  <p class="MsoStrong">
+                     and/or 
+                  </p>
+               </td>
+               <td>
+                  <p class="MsoStrong"><a href="#8">Symptom Indications</a><span class="HL7Ref"> (A_IndicationBasicBasic.ObservationSymptom)</span></p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td>
+                  <p class="MsoStrong">
+                     and/or 
+                  </p>
+               </td>
+               <td>
+                  <p class="MsoStrong"><a href="#9">Other indications</a><span class="HL7Ref"> (A_IndicationBasicBasic.OtherIndication)</span></p>
+               </td>
+            </tr>
+         </table>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Required</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Implementers must support, but only supply data when it is available</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">5</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">May repeat up to 5 times</p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Identifies the clinical reason(s) for the creation of the .</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Essential for understanding the context in which the action was performed. Also frequently used in searching and filtering
+                        and can impact whether the record will be automatically masked. Multiple indications are supported for circumstances where
+                        the is being done for multiple reasons.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+         <h4><a name="1_S6">includes</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(subjectOf1.annotation)</p>
+         <table class="TableNoGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="90">
+            <col>
+            <tr valign="top">
+               <td>
+                  <p class="MsoBodyText"></p>
+               </td>
+               <td>
+                  <p class="MsoStrong" style="margin-top:0pt"><a href="#10">Notes</a><span class="HL7Ref"> (A_AnnotationUniversal.Annotation)</span></p>
+               </td>
+            </tr>
+         </table>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Required</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Implementers must support, but only supply data when it is available</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">1</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Does not repeat</p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">This indicates comments that providers have recorded about the .</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Allows for additional free-text comments to be communicated. Such notes can be added by the provider at the time the record
+                        is created and by any provider at any time after the record is created.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+      </div>
+      <div xmlns="" class="Section1">
+         <h2><a name="2"></a><span>Patient</span></h2>
+         <p class="HL7Ref">(R_PatientPersonIdentified-confirmable.Patient)</p>
+         <table class="TableGrid" style="margin-left:.25in" border="0" cellspacing="0" cellpadding="0" width="640">
+            <col width="115">
+            <col width="525">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">A person who is receiving or may receive healthcare services and has personal attributes (e.g. name, birth date). .</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Information used to identify the patient and to support clinical decisions. This information applies to the person in the
+                        context of the associated action only, and should be stored separately. I.e. the address/phone/email only apply to the current
+                        prescription/dispense/lab order etc.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <p class="MsoStrong" style="margin-left:0.25in">
+            <text>This element incorporates the model: </text>
+         </p>
+         <p class="MsoStrong" style="margin-left:0.5in">R_PatientPersonIdentified-confirmable</p>
+      </div>
+      <div xmlns="" class="Section1">
+         <h2><a name="4"></a><span>Person</span></h2>
+         <p class="HL7Ref">(R_InformantMinimalInformational.PersonalRelationship)</p>
+         <table class="TableGrid" style="margin-left:.25in" border="0" cellspacing="0" cellpadding="0" width="640">
+            <col width="115">
+            <col width="525">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Identifies a person with some relationship to the patient. (The relationship may even be 'self', in which case, the person
+                        is the same as the patient.)
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Provides context for information provided by a person.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <p class="MsoStrong" style="margin-left:0.25in">
+            <text>This element incorporates the model: </text>
+         </p>
+         <p class="MsoStrong" style="margin-left:0.5in">R_InformantMinimalInformational</p>
+      </div>
+      <div xmlns="" class="Section1">
+         <h2><a name="3"></a><span>Provider</span></h2>
+         <p class="HL7Ref">(R_AssignedPersonInformational.AssignedPerson)</p>
+         <table class="TableGrid" style="margin-left:.25in" border="0" cellspacing="0" cellpadding="0" width="640">
+            <col width="115">
+            <col width="525">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Describes a healthcare provider involved in the delivery of healthcare services. Encompasses both professional and non-professional
+                        members.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Important for tracking responsibility for healthcare events, as well as for identifying appropriate individuals to contact
+                        for further information or follow-up.
+                     </p>
+                     
+                     <p class="MsoBodyText" style="margin-top:6.0pt;">While an important piece of identifying information, not all providers will have identifiers, thus this attribute is only
+                        'populated'.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <p class="MsoStrong" style="margin-left:0.25in">
+            <text>This element incorporates the model: </text>
+         </p>
+         <p class="MsoStrong" style="margin-left:0.5in">R_AssignedPersonInformational</p>
+      </div>
+      <div xmlns="" class="Section1">
+         <h2><a name="5"></a><span>Request</span></h2>
+         <p class="HL7Ref">(ActRequest)</p>
+         <table class="TableGrid" style="margin-left:.25in" border="0" cellspacing="0" cellpadding="0" width="640">
+            <col width="115">
+            <col width="525">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">This ties the record to the request (referral or specific request) which resulted in the creation of the .</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">By requesting the action, a provider takes a level of responsibility for it. Also, a link between request and fulfilling record
+                        may result in differences in query responses. For example retrieving a request may also result in retrieval of fulfilling
+                        records. Requesting providers generally have authorization to view masked information as well.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <h3>Attributes</h3>
+         <h4><a name="5_A1">Request Type</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(classCode)</p>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Datatype</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">CS</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Simple Code (mnemonic only)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Mandatory</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Value must always be supplied (no nulls)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">1</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Does not repeat</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Code Strength</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">CNE</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Must be coded using 'official' codeset (no un-coded text or local codes)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Code Domain</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">x_ActClassCareProvisionProcedure</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText"></p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">This distinguishes between "referral" requests and specific orders.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Needed to know what query to execute to retrieve details about the request. (I.e. Get Patient Referral vs. Get Order.)</p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+         <h4><a name="5_A2">Request Id</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(id)</p>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Datatype</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">II</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Identifier (includes id, assigning authority)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Required</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Implementers must support, but only supply data when it is available</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">1</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Does not repeat</p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">This identifies the specific request record (referral or order) which this is fulfilling. The type of request is identified
+                        by the Request Type.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Associates a request to its results. Allows querying for results associated by a request. Also, authors of requests are generally
+                        authorized to view associated results, even if masked. Result records may also be automatically retrieved when retrieving
+                        the request record.
+                     </p>
+                     
+                     <p class="MsoBodyText" style="margin-top:6.0pt;">This attributes is only "required" because in some cases there might not be a formal electronic request. However, the requesting
+                        provider may still be known.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+         <h3>Associations</h3>
+         <h4><a name="5_S1">requested by</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(author.assignedPerson)</p>
+         <table class="TableNoGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="90">
+            <col>
+            <tr valign="top">
+               <td>
+                  <p class="MsoBodyText"></p>
+               </td>
+               <td>
+                  <p class="MsoStrong" style="margin-top:0pt"><a href="#3">Provider</a><span class="HL7Ref"> (R_AssignedPersonInformational.AssignedPerson)</span></p>
+               </td>
+            </tr>
+         </table>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Required</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Implementers must support, but only supply data when it is available</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">1</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Does not repeat</p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">This identifies the provider who requested the to be performed. The request may have been verbal, electronic, as part of a
+                        referral or by other means. This element does not need to be captured in "record" and "update" messages where a request id
+                        is captured, as the requesting provider can be looked up by retrieving the request.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">By requesting the action, the provider takes a level of responsibility for it. The attribute may also be used to search or
+                        filter records. Requesting providers generally have authorization to view masked information as well.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Used by</p>
+               </td>
+               <td class="CellGrid" colspan="2" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">NeCST, PECS</p>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+      </div>
+      <div xmlns="" class="Section1">
+         <h2><a name="12"></a><span>Care Compositions</span></h2>
+         <p class="HL7Ref">(A_CareEventIdentified.PatientCareProvisionEvent)</p>
+         <table class="TableGrid" style="margin-left:.25in" border="0" cellspacing="0" cellpadding="0" width="640">
+            <col width="115">
+            <col width="525">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">A care composition is a record, which summarizes the events that happened during care including who is responsible for the
+                        care provided. Examples include encounters, episodes and general "care events" such as "gynecological care".
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Allows linking records to encounters, episodes and other care compositions. Useful for searching and navigation of the patient's
+                        record.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <p class="MsoStrong" style="margin-left:0.25in">
+            <text>This element incorporates the model: </text>
+         </p>
+         <p class="MsoStrong" style="margin-left:0.5in">A_CareEventIdentified</p>
+      </div>
+      <div xmlns="" class="Section1">
+         <h2><a name="6"></a><span>Indications</span></h2>
+         <p class="HL7Ref">(A_IndicationBasicBasic.Indications)</p>
+         <table class="TableGrid" style="margin-left:.25in" border="0" cellspacing="0" cellpadding="0" width="640">
+            <col width="115">
+            <col width="525">
+         </table>
+      </div>
+      <div xmlns="" class="Section1">
+         <h2><a name="10"></a><span>Notes</span></h2>
+         <p class="HL7Ref">(A_AnnotationUniversal.Annotation)</p>
+         <table class="TableGrid" style="margin-left:.25in" border="0" cellspacing="0" cellpadding="0" width="640">
+            <col width="115">
+            <col width="525">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">This is a list of comments made about the common observation by providers. Information captured here includes the provider
+                        making the comments; and excludes information that would render the allergy record invalid. This information will only be
+                        seen when another provider reviews the common observation. Urgent or targeted messages should be sent using a different mechanism
+                        (e.g. phone).
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Allows various Providers to attach comments to an existing common observation record, and thus improving cross-provider communications.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Issues</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">test entry</p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <p class="MsoStrong" style="margin-left:0.25in">
+            <text>This element incorporates the model: </text>
+         </p>
+         <p class="MsoStrong" style="margin-left:0.5in">A_AnnotationUniversal</p>
+      </div>
+   </body>
+</html>

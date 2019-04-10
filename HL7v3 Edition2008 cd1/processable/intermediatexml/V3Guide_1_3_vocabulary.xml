@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 3 U (http://www.xmlspy.com) by andrew hinchley (HL7 Publications TC) -->
+<div2 id="v3gvocab">
+	<head>Vocabulary</head>
+	<p>Within HL7, a vocabulary domain is the set of all concepts that can be taken as valid values in an instance of a coded field or attribute. For example, the Living_subject class has a coded attribute called administrative_gender_cd. If the administrative_gender_cd attribute becomes part of an HMD, and a message instance is subsequently created as part of an implemented interface, one would expect the administrative_gender_cd attribute to convey male or female. In this example, male and female are concepts and there may be several coding schemes that contain concepts for male and female.</p>
+	<p>It is important to note that a vocabulary domain consists of a set of concepts, not a set of words or codes. In different implementations of an interface, the same concept could be represented using different coding systems. Thus, each concept in a vocabulary domain has a one-to-many relationship to codes that might be used as representations for the concept in a message instance.</p>
+	<p>The general meaning of coding system is a scheme for representing concepts using (usually) short concept identifiers to denote the concepts that are members of the system. A coding scheme defines a set of unique concept codes.</p>
+	<div3 id="mbf4vocabudomrim">
+		<head>Vocabulary Domains and RIM Attributes</head>
+		<p>Each coded attribute in the RIM (i.e., with a data type of CD, CE, CR, CS or CV ) will be associated with one and only one vocabulary domain. For example the vocabulary domain for administrative_gender_cd is AdmistrativeGender.  Some vocabulary domains are associated with more than one RIM attribute. For example the Vocabulary domain PhysicalQuantity is associated with both diet_carbohydrate_qty and Diet_energy_qty. The vocabulary domain table may be an HL7-defined table, an HL7-recognized external coding scheme (e.g., LOINC, SNOMED) or some combination of those. It may contain locally-defined codes.</p>
+		<p>The HL7-defined vocabulary domain tables that have been developed for coded class attributes are stored in the HL7 repository. A number of printable views have been extracted to produce the HL7 Vocabulary Domain listings.  The views are presented in table format and include the HL7 Vocabulary Domain Values list and the HL7 Domain Tables and Coded Attributes list. HL7-recognized external vocabulary domains are described in the External Domains list. Links are provided between these tables and attributes in the RIM. </p>
+		<list role="unordered">
+			<item>
+				<p> The HL7 Vocabulary Domain Values table includes a mnemonic code, concept identifier, print name, and definition/description for each value. This table also shows any hierarchical relationship that exists between values in each domain table. </p>
+			</item>
+			<item>
+				<p> The HL7 Domain Tables and the Coded Attributes table name the coded attribute(s) in the RIM that are supported by that vocabulary domain. </p>
+			</item>
+			<item>
+				<p> The External Domains table includes Concept Identifier, Defining Expression, Code System Abbreviation, Description, and a link to the source for each table. </p>
+			</item>
+		</list>
+	</div3>
+	<div3 id="v3gvocabqualify">
+		<head>Vocabulary Domain Qualifiers</head>
+		<p>Coded fields contain two pieces of information relative to Vocabulary: the Vocabulary Domain name and the Extensibility Qualifier.  The Extensibility Qualifier has two possible values: CNE (coded no extensions), and CWE (coded with extensions).
+ </p>
+		<p>The vocabulary domain name and the associated Extensibility qualifier for each coded attribute in the RIM are specified in the RIM narrative. This specification occurs as the first line of the description for a coded RIM class attribute.  The information is formatted as shown in the example below from Entity.class_cd:</p>
+		<p>
+			<quote>Domain: "EntityClass" (CNE)</quote>
+		</p>
+		<p>There is a hyperlink between the Vocabulary Domain name (EntityClass) and its entry in the HL7 Vocabulary Domain Values table. For those domains that are not yet developed, a domain name  has been assigned but the table contains no values.</p>
+		<p>The CWE value for the Extensibility qualifier means that the code set can be expanded to meet local implementation needs. When a coded attribute is sent in a message, local concepts or free text may be sent in place of a standard code if the desired concept is not represented in the standard vocabulary domain. </p>
+		<p>The CNE value for the Extensibility qualifier means that the code set is fixed and cannot be extended. A concept from the specified domain must be sent as the value of the coded field in a message. If the field cannot be valued from the concepts that exist in the specified domain, the field cannot be placed in the message. If a CNE field is required in a message, but the field cannot be valued from the concepts that exist in the specified domain, then no valid message can be created. </p>
+		<p>The Realm qualifier allows the domain of a coded attribute to be specialized according to the geographical, organizational, or political environment where the HL7 standard is being used. For example, the Realm qualifier would allow the Gender domain to hold a somewhat different value set for HL7 messages when used in Japan versus when the Gender domain is used in HL7 messages in the United States. </p>
+		<p>All domain qualifiers are values in the VocabularyDomainQualifier domain. </p>
+	</div3>
+	<div3 id="v3gvocabconst">
+		<head>Use of Vocabulary Constraints</head>
+		<p>Constraints are applied to RIM classes and their coded RIM attributes by selecting appropriate values from the vocabulary domains for those attributes.</p>
+		<p>The vocabulary domain specifications stated in the RIM always refer to a complete vocabulary domain. That is, at the RIM level there is no specialization based on Realm of use or on the context and needs of a specific message. As RIM attributes are specialized to suit a specific message context, the domain of the attribute can be reduced (constrained) to reflect the specialization.</p>
+		<p>A domain that has been constrained to a particular Realm and coding system is called a value set. A vocabulary domain constraint can be applied to any level below the RIM, and is an expression that states how the value set was derived from the domain specified in the RIM. A vocabulary domain constraint in an R-MIM, D-MIM, etc. contains the name of the value set and its list of domain qualifiers. Domain constraint expressions are only contained in the Value Set Definition Table. </p>
+		<p>The general rule for creating vocabulary domain constraints is that a domain can be reduced in scope as it is specialized for a particular use, but its semantic scope can never be expanded. The application of the general rule results in the following specific rules.</p>
+		<list role="unordered">
+			<item>
+				<p>The vocabulary domain of a coded element or attribute used at any level of specialization below the RIM must be a subset of the vocabulary domain specified for the attribute in the RIM. Note that for attributes that are qualified with an extensibility of CWE, local codes are an allowed extension to the domain, but this is not intended as an increase in the semantic scope of the attribute.</p>
+			</item>
+			<item>
+				<p>Once the extensibility qualifier value CNE has been invoked at any level of attribute domain specification (RIM, D-MIM, R-MIM, CMET, HMD, etc.,), the CNE qualifier must be retained in any subsequent domain constraints. For example, if a coded attribute has a CNE qualifier in the RIM, any D-MIM, R-MIM, CMET, HMD, etc must also have a CNE qualifier associated with the domain of that attribute. If a vocabulary domain in the RIM has the Extensibility qualifier value of CWE (coded with extensions), a subsequent constraint of that attribute's domain can have either the CNE or CWE qualifier.</p>
+			</item>
+		</list>
+	</div3>
+</div2>

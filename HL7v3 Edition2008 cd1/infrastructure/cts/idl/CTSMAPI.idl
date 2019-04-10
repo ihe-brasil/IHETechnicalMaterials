@@ -1,0 +1,1072 @@
+/*  Source file: CTSMAPI.idl
+ */
+
+#ifndef   __CTSMAPI_DEFINED
+#define   __CTSMAPI_DEFINED
+
+
+#include "types.idl"
+
+
+/* Centralized Terminology Services message layer API
+ *      This module defines the interface between the HL7 messaging applications and the terminology services.
+ */
+ 
+module CTSMAPI {
+/***********************************************
+ * Suffix convention:
+ *	Xxx		- Type suffix
+ *	_xxx		- attribute suffix
+ *
+  Suffixes
+ *	Id		- unique entity identifier
+ *	Name		- unique name
+ *	Code		- concept code
+ */
+
+/************************************************
+ * 	Base entity identifiers			*
+ ************************************************/
+/* HL7SpecBlock:basicData */
+/* CTS Specification Version Identifier */
+ 	struct CTSVersionId {
+ 		types::INT	major;
+ 		types::INT	minor;
+ 	};
+
+/* An ISO OID that uniquely names a code systm */
+	typedef types::UID 	CodeSystemId;
+
+/* The unique name of a code system*/
+	typedef types::ST 	CodeSystemName;
+
+/* A concept code, unique within a code system */
+	typedef types::ST  	ConceptCode;	
+	
+/* Unique vocabulary domain name */
+        typedef types::ST 	VocabularyDomainName;
+        typedef sequence<VocabularyDomainName> VocabularyDomainNameList;
+         
+/* Value Set identifier */
+        typedef types::UID 	ValueSetId;
+         
+/* Value Set name */
+        typedef types::ST 	ValueSetName;
+
+
+/* A unique concept identifier consisting of a code system id and concept code */
+	struct ConceptId {
+		CodeSystemId  	codeSystem_id;
+		ConceptCode   	concept_code;
+	};
+
+/* A specific release of a code system */
+	typedef types::ST ReleaseVersionId;
+	typedef sequence<ReleaseVersionId> ReleaseVersionIdList;
+
+
+/* Opaque context for iterative code expansion
+ */
+ 	typedef types::bin_value ExpansionContext;
+
+/* HL7SpecBlockEnd */
+
+
+/************************************************
+ *	Coded elements				*
+ ************************************************/
+
+/* Language identifier
+ *		Syntax is based on IETF RFC 3066 - Tag for Identification of Languages
+ *		Consists of a primary-subtag followed by zero or more secondary subtags		
+ *		<primary subtag>  - drawn from ISO 639 part 1 (2 char) codes where possible, otherwise 3 character
+ *				  - "i-" and "x-" codes are not allowed in this specification
+ *				     
+ *		<secondary subtag 1> - 2-8 characters
+ *				     - 2 character codes are drawn from ISO 3166 alpha-2 country codes
+ *				       3-8 character codes are drawn from IANA registry - see: http://www.iana.org/assignments/language-tags
+ *		<secondary subtag 2-n> - no rules, although some get registered w/ IANA
+ */
+ /* HL7SpecBlock:conceptCodes */
+	typedef ConceptCode LanguageCode;
+
+
+/* Relationship identifier.
+ *	Code System:  HL7 Relationships are drawn from ConceptCodeRelationship (2.16.840.1.113883.5.1088)
+ *		      External relationships may also be used when HL7 equivalent isn't present.
+ */
+        typedef ConceptCode RelationshipCode;
+
+/* The realm of use for a vocabulary domain (realm, geopolitical domain, specialty and the like  
+ *	Code System : VocabularyDomainQualifier (2.16.840.1.113883.5.147) (Subtypes of RealmOfUse)
+ */
+    	typedef ConceptCode ApplicationContextCode;
+
+/* Data type code (CD, CE, CS, etc)
+ *	Code System:  DataType (2.16.840.1.113883.5.1007)
+ */
+ 	typedef ConceptCode DataTypeCode;
+ 	
+/* Coding Strength (CNE, CWE)
+ *	Code System:   VocabularyDomainQualifier (2.16.840.1.113883.5.147)
+ */
+ 	typedef ConceptCode CodingStrengthCode;
+ 	
+/* Value Set Node Type (A, L, S)
+ *	CodeSystem:    ConceptGenerality (2.16.840.1.113883.5.24)
+ */
+ 	typedef ConceptCode ValueSetNodeTypeCode;
+ 	
+ /*
+  * Code system type (E, EI, I)
+  *	CodeSystem:	CodeSystemType (2.16.840.1.113883.5.1085)
+  */
+  	typedef ConceptCode CodeSystemTypeCode;
+  	
+ /*
+  * Match algorithm 
+  *	CodeSystem:	MatchAlgorithm (2.16.840.1.113883.5.1094)
+  */
+  	typedef ConceptCode MatchAlgorithmCode;
+  	typedef sequence<MatchAlgorithmCode> MatchAlgorithmCodeList;
+/* HL7SpecBlockEnd */
+/****************************************
+ * Entities representing the UML model  *
+ ***************************************/
+
+
+/* HL7SpecBlock:codeSystemDescriptor */
+/* Code System Descriptor                                                   
+ *	codeSystem_id		- OID of code system                        
+ *	codeSystem_name		- mnemonic code system name
+ *	copyright		- copyright notice for the code system               
+ *	availableReleases 	- the release of the represented code system
+ */                                                                         
+ 	struct CodeSystemDescriptor {                                       
+ 		CodeSystemId 		codeSystem_id;                      
+ 		CodeSystemName	 	codeSystem_name; 
+ 		types::ST		copyright;                   
+		ReleaseVersionIdList 	availableReleases;                  
+	};                                                                  
+	typedef sequence<CodeSystemDescriptor> CodeSystemDescriptorList;
+
+/* HL7SpecBlockEnd */
+/* HL7SpecBlock:RIMCodedAttribute */
+/* RIM Coded Attribute identifier.  All three elements are necessary to make the id unique
+ *      model_id    	- RIM model identifier
+ *      class_name 	- class name
+ *      attribute_name 	- name of the attribute within the model
+ */
+        struct RIMAttributeId {
+                types::ST   model_id;
+                types::ST   class_name;
+                types::ST   attribute_name;
+        };
+
+ /* RIM Coded Attribute
+  *	RIMAttribute_id		- unique attribute identifier (model, class, attribute)
+  *	dataType_code		- the specific data type of the attribute (CD, CE, CS, ...)
+  *	codingStrength_code 	- coded value that represents the strength (CWE, etc) of the attribute
+  *	vocabularyDomain_name 	- vocabulary domain (if any) of the attribute
+  */
+  	struct RIMCodedAttribute {
+  		RIMAttributeId 		RIMAttribute_id;
+  		DataTypeCode 		dataType_code;
+  		CodingStrengthCode 	codingStrength_code;
+  		VocabularyDomainName 	vocabularyDomain_name;
+  	};
+  	typedef sequence<RIMCodedAttribute> RIMCodedAttributeList;
+
+/* HL7SpecBlockEnd */
+/* HL7SpecBlock:valueSetDescriptor */
+/* Value Set Descriptor - a value set can be uniquely identified by either the value set
+ *	id or the value set name.  Not all value sets, however, will have a name component.
+ *	valueSet_id	- the unique value set identifier
+ *	valueSet_name	- the unique value set name (not present for all value sets)
+ */
+ 	struct ValueSetDescriptor {
+ 		ValueSetId	valueSet_id;
+ 		ValueSetName	valueSet_name;
+ 	};
+ 	typedef sequence<ValueSetDescriptor> ValueSetDescriptorList;
+ 	
+ 	
+/* HL7SpecBlockEnd */ 		
+
+/* HL7SpecBlock:vocabularyDomainDescription */
+/* Vocabulary Domain Value Set - the association of a vocabulary domain with a value set in an optional context
+ *	definedByValueSet - value set id and optional name that defines the vocabulary domain
+ *	appliesIncontext  - the context in which the value set applies
+ */
+
+        struct VocabularyDomainValueSet {
+                ValueSetDescriptor		definedByValueSet;
+                ApplicationContextCode		applicationContext_code;
+        };
+        typedef sequence<VocabularyDomainValueSet> VocabularyDomainValueSetList;
+
+
+/* Vocabulary Domain - a complete description of a vocabulary domain for browsing purposes
+ *	vocabularyDomain_name	- the unique name of the domain
+ *	description		- a description of the intent and purpose of the domain
+ *	restrictsDomain_name 	- the vocabulary domain, if any, that is the superclass of this domain
+ *	basisOfDomains		- the vocabulay domains, if any, that are subclasses of this domain
+ *	constrainsAttributes 	- the attributes, if any, that are constrained directly by this domain
+ *	representedByValueSets 	- list of links to value sets
+ */
+        struct VocabularyDomainDescription {
+                VocabularyDomainName 		vocabularyDomain_name;
+                types::ST 			description;
+                VocabularyDomainName 		restrictsDomain_name;
+                sequence<VocabularyDomainName> 	basisOfDomains;
+                sequence<RIMCodedAttribute> 	constrainsAttributes;
+                VocabularyDomainValueSetList 	representedByValueSets;
+        };
+
+/* HL7SpecBlockEnd */
+/* HL7SpecBlock:valueSetDescription */
+/* Value Set Constructor - a value set that is used as part of another value set
+ *	includeHeadCode	- True means that the included ValueSet head_code is considered part of the constructed set
+ *			  False means it is not
+ *	includedValueSet - value set used to define the constructed set
+ */                                 
+	struct ValueSetConstructor {
+		ValueSetDescriptor	includedValueSet;
+		types::BL		includeHeadCode;
+	};
+	typedef sequence<ValueSetConstructor> ValueSetConstructorList;
+
+/* Code Reference - a value set reference to a concept code
+ *	referenced_code 	- a code from the containing value set's code system
+ *	includeReferencedCode 	- True means that the referenced code is a part of the code set.  False means that
+ *				  only the related concept codes are
+ *	leafOnly		- True means that only the leaf nodes of the related concepts are included. False means that
+ *				  intermediate nodes are included as well 
+ *	relationship	- a code that identifies the relationship to be used.  If present, all concepts that are
+ *			 children of the referencedCode are included (subject to includeReferencedCode and leafOnly restrictions)
+ */
+	struct ValueSetCodeReference {
+		ConceptCode 		referenced_code;
+		RelationshipCode 	relationship_code;
+		types::BL		includeReferencedCode;
+		types::BL		leafOnly;
+
+	};
+	typedef sequence<ValueSetCodeReference> ValueSetCodeReferenceList;
+	
+
+/* Value Set Description
+ *	idAndName		- value set id and name (if any)
+ *      description     	- description of the value set and its use
+ *      definingExpression 	- a semi-formalized expression that defines the set contents (if any)
+ *      basedOnCodeSystem	- base code system id, name and version used to construct the set
+
+ *      allCodes        	- true means that the set includes all codes within the named code system
+ *                        	  false means a selected subset
+ *	head_code		- the concept code from the codeSystem that represents the entire value set (if any)
+ */
+	struct ValueSetDescription {
+		ValueSetDescriptor	idAndName;
+		types::ST		description;
+		types::ST		definingExpression;
+		CodeSystemDescriptor	basedOnCodeSystem;
+		types::BL		allCodes;
+		ConceptCode 		head_code;
+	};
+
+
+/* Value Set - a complete description of a value set used for browsing
+ *	description	- a description of the value set
+ *	constructedUsing - value sets used to define this set
+ *	usedToDefine	- value sets that this set is used in the definition of
+ *	referencesCodes - specific codes that are include ro excluded from this set
+ */
+	struct FullValueSetDescription {
+		ValueSetDescription 		description;
+		ValueSetConstructorList 	constructedUsingValueSets;
+		ValueSetDescriptorList	 	usedToDefine;
+		ValueSetCodeReferenceList 	referencesCodes;
+	};
+
+/* HL7SpecBlockEnd */
+
+/* HL7SpecBlock:codeSystemRegistration */
+
+/*
+ * Code System Registration Entry
+ *	sponsor		- person or organization that sponsors the system within HL7
+ *	publisher	- person or organization the publishes the code system
+ *	versionReportingMethod - method in which the code system is updated
+ *	licensingInformation - description of necessary licensing and how it is obtained
+ *	inUMLS		- True means that the code system is included in the Unified Medical Language System
+ *	systemSpecificLocatorInfo - details that serve to further identify the code system within the context of
+ *			the publisher. Includes things like table number, subsection, etc.
+ *	codeSystemType_code	- One of (External, Internal, External but Internally maintained)
+ */
+ 	struct CodeSystemRegistration {
+ 		types::ST		sponsor;
+ 		types::ST		publisher;
+ 		types::ST		versionReportingMethod;
+ 		types::ST		licensingInformation;
+ 		types::BL		inUMLS;
+ 		types::ST		systemSpecificLocatorInfo;
+ 		CodeSystemTypeCode	codeSystemType_code;
+ 	};
+
+/*
+ * Complete information about a code system
+ *	description	- name, identifier and supported versions of the code system
+ *	registrationInfo - additional registration information as recorded by HL7
+ */
+ 	
+ 	struct CodeSystemInfo {
+ 		CodeSystemDescriptor	description;
+ 		CodeSystemRegistration	registrationInfo;
+ 	};
+    
+/* HL7SpecBlockEnd */
+
+/************************************************
+ *      Message Specific Constructs             *
+ ************************************************/
+
+/* HL7SpecBlock:validateCodeBlock */
+
+/* Code validation error detail
+ *	codeInError	- the part of the coded attribute that is in error (base code, translation,
+ *			  qualifier name or qualifier value)
+ *      isError         - true means that this error is considered significant enough that a
+ *                        message that contains it would not be valid
+ *                        false means that the error is non-fatal but represents a potential
+ *                        flaw somewhere in the formation process
+ *      error_id        - a unique error identifer. 
+ *      errorText       - text associated with the error identifier.
+ */
+        struct ValidationDetail {
+        	types::CD codeInError;
+                types::BL isError;
+                types::ST error_id;
+                types::ST errorText;
+        };
+        typedef sequence<ValidationDetail> ValidationDetailList;
+
+
+/* Validate code return structure
+ *	nErrors		- number of errors encountered
+ *	nWarnings	- number of warnings encountered
+ *	detail		- error and warning detail
+ */
+	struct ValidateCodeReturn {
+		types::INT nErrors;
+		types::INT nWarnings;
+		ValidationDetailList detail;
+	};       
+
+/* HL7SpecBlockEnd */ 
+
+/* HL7SpecBlock:valueSetExpansion */
+/* An expansion of a value set in a runtime mode
+ *      pathLength      - an integer that identifies the distance from the root value set
+ *	nodeType_code	- type of value set node (A, L or S)
+ *      valueSet	- id and name (if any) of the value set associated with this node
+ *      concept_id      - code system and concept code for this node (if any)
+ *      displayName     - text associated with entry (if any)
+ *      isExpandable    - true if this node can undergo further expansion
+ *      expansionContext  - context (opaque) to use for further expansion if isExpandable is true
+ */
+        struct ValueSetExpansion {
+                types::INT       	pathLength;
+                ValueSetNodeTypeCode	nodeType_code;
+                ValueSetDescriptor	valueSet;
+                ConceptId    		concept_id;
+                types::ST        	displayName;
+                types::BL        	isExpandable;
+                ExpansionContext 	expansionContext;
+        };
+        typedef sequence<ValueSetExpansion> ValueSetExpansionList;
+        
+/* HL7SpecBlockEnd */         
+                               
+/*********************************************************************
+*       Exceptions                                                   *
+**********************************************************************/
+ /* HL7SpecBlock:exceptions */
+ 
+/*
+ * An unspecified error occurred and the function didn't complete successfully
+ */
+	exception UnexpectedError {
+		types::ST possible_cause;
+	};
+                               
+/*                             
+ * A vocabulary domain name wasn't recognized by the service
+ *	vocabularyDomain_name	- supplied name that wasn't recognized
+ */                            
+ 	exception UnknownVocabularyDomain {
+                VocabularyDomainName vocabularyDomain_name;
+        };
+        
+/*
+ * The context code was not recognized by the service
+ *	context_code	- the unrecognized code
+ */
+ 	exception UnknownApplicationContextCode {
+ 		ApplicationContextCode	applicationContext_code;
+ 	};
+ 	
+
+/*
+ * The supplied value set was not recognized
+ *		valueSet	- the id and/or name of the value set
+ */
+        exception UnknownValueSet {
+                ValueSetDescriptor valueSet;
+        };
+
+/*
+ * Both the value set UID and name were supplied in a query
+ * and the name didn't match the UID
+ */
+        exception ValueSetNameIdMismatch {
+        	ValueSetId	 valueSet_id;
+        	ValueSetName	 valueSet_name;
+        };
+
+	exception UnknownConceptCode {
+		ConceptId concept_id;
+	};
+
+	exception SubsumptionNotSupported {
+		CodeSystemId codeSystem_id;
+	};
+
+	exception UnrecognizedQualifier {
+		types::CR qualifier;
+	};
+
+	exception UnableToTranslate {
+	};
+
+	exception UnknownCodeSystem {
+		CodeSystemId codeSystem_id;
+	};
+
+	exception UnknownLanguage {
+		LanguageCode language_code;
+	};
+
+
+	exception InvalidExpansionContext {
+	};
+
+	exception QualifiersNotSupported {
+	};
+	
+	exception NoApplicableValueSet {
+		VocabularyDomainName	vocabularyDomain_name;
+		ApplicationContextCode	applicationContext_code;
+	};
+	
+	exception CodeSystemNameIdMismatch {
+		CodeSystemId		codeSystem_id;
+		CodeSystemName		codeSystem_name;
+	};
+	
+/*
+ * The operation exceeded the alloted time limit
+ */
+	exception TimeoutError {
+	};
+	
+	/*
+ 	 * The format of the match text wasn't parsable
+ 	 */
+	exception BadlyFormedMatchText {
+		types::ST	matchText;
+	};
+
+ 	
+ /*
+  * The match algorithm code isn't supported by the service
+  */
+  	exception UnknownMatchAlgorithm {
+  		MatchAlgorithmCode	matchAlgorithm_code;
+  	};
+  	
+  	
+ /*
+  * No appropriate designation could be found for the supplied CD and language criteria.
+  */
+ 	exception NoApplicableDesignationFound {
+ 		types::CD	codeToFillIn;
+ 		types::ST	displayLanguage_code;
+ 	};
+ 	
+/* HL7SpecBlockEnd */	
+
+
+/**********************************
+ *  Module Identification Section *
+ **********************************/
+/* HL7SpecBlock:identification */
+  
+	interface Identification {
+        	types::ST	getServiceName() raises (UnexpectedError);
+        	types::ST	getServiceVersion() raises (UnexpectedError);
+        	types::ST	getServiceDescription() raises (UnexpectedError);
+        	types::ST	getHL7ReleaseVersion() raises (UnexpectedError);
+        	CTSVersionId	getCTSVersion() raises (UnexpectedError);
+        };
+        
+ /* HL7SpecBlockEnd */
+
+/**********************************
+ * Runtime API                    *
+ **********************************/
+ /* HL7SpecBlock:runtime */
+  
+        interface Runtime : Identification {
+        
+/* Return a list of supported match algorithms */
+		MatchAlgorithmCodeList	getSupportedMatchAlgorithms()
+			 raises (UnexpectedError);
+
+/* Vocabulary domains known to the runtime module 
+ *
+ *	matchText		- Match string.  Format depends upon the match algorithm. Empty string means return all names
+ *	matchAlgorithm_code	- Match algorithm code.
+ *	timeout			- time limit for operation to complete in milliseconds (0 means unlimited
+ *	sizeLimit		- maximum number of elements to return (0 means unlimited)
+ *
+ *	Returns			- list of vocabulary domains
+ *
+ *	NOTE: if a sizeLimit has been specified and the number of entries in the list is the same as the size limit,
+ *	      the caller must presume that the list is incomplete.
+ *
+ *	Exceptions
+ *		TimeoutError		- time limit was exceeded
+ *		BadlyFormedMatchText  	- match text couldn't be parsed for the supplied algorithm
+ *		UnknownMatchAlgorithm 	- match algorithm was unrecognized by service
+ */
+		VocabularyDomainNameList getSupportedVocabularyDomains(
+			in types::ST		matchText,
+			in MatchAlgorithmCode	matchAlgorithm_code,
+			in long 		timeout,
+		        in long 		sizeLimit
+		        ) 
+		        raises (BadlyFormedMatchText,
+		        	UnknownMatchAlgorithm,
+		        	TimeoutError,
+		        	UnexpectedError
+		        );
+/* HL7SpecBlockEndElipsis */ 
+/* HL7SpecBlock:validateCode */
+ 
+/*  Validate a CD data element for a specified vocabulary domain
+ *
+ *      vocabularyDomain_name   - Vocabulary domain of the attribute
+ *      codeToValidate          - code to be validated
+ *      applicationContext_code	- application context (Optional)
+ *      activeConceptsOnly     	- True means that code must be active within target
+ *                        	  code system.  False means that inactive codes
+ *                                are valid as well.  (Note that warnings will still be
+ *                                generated for inactive codes).
+ *      errorCheckOnly 		- True means limited validation (check for errors only)
+ *                        	  False means extended validation (check for warnings and errors)
+ *
+ *      Returns         	- Structure containing count of errors (nErrors), count of warnings (nWarnings) followed by
+ *			  	  detailed information
+ *
+ * NOTE:   This method validates the current code and qualifiers.  Use validateTranslations to
+ *	   validate the code translations.
+ *
+ *	Exceptions
+ *		UnknownVocabularyDomain	- the vocabulary domain isn't recognized by the service
+ *		UnknownApplicationContextCode	- applicationContext isn't recognized
+ *		NoApplicableValueSet	- there isn't a value set that applies to this domain in this context
+ *
+ */
+                ValidateCodeReturn validateCode(
+                        in VocabularyDomainName 	vocabularyDomain_name,
+                        in types::CD 			codeToValidate,
+                        in ApplicationContextCode	applicationContext_code,
+                        in types::BL 			activeConceptsOnly,
+                        in types::BL 			errorCheckOnly
+                        )
+                        raises (UnknownVocabularyDomain,
+                        	UnexpectedError,
+                        	UnknownApplicationContextCode,
+                        	NoApplicableValueSet);
+
+/* HL7SpecBlockEnd */ 
+/* HL7SpecBlock:validateTranslation */
+
+/* Validate the set of CD translations
+ *	vocabularyDomain_name   - Vocabulary domain of the attribute
+ *      codeToValidate          - code to be validated
+ *      applicationContext_code	- application context (Optional)
+ *      activeConceptsOnly     	- True means that code must be active within target
+ *                        	  code system.  False means that inactive codes
+ *                                are valid as well.  (Note that warnings will still be
+ *                                generated for inactive codes).
+ *      errorCheckOnly 		- True means limited validation (check for errors only)
+ *                        	  False means extended validation (check for warnings and errors)
+ *
+ *      Returns         	- Structure containing count of errors (nErrors), count of warnings (nWarnings) followed by
+ *			  	  detailed information
+ *
+ * 	Exceptions
+ *		UnknownVocabularyDomain - vocabulary domain isn't recognized by the service
+ *		UnknownApplicationContextCode 	- application context isn't recognized by the service
+ */
+                 ValidateCodeReturn validateTranslation(
+                        in VocabularyDomainName 	vocabularyDomain_name,
+                        in types::CD 			codeToValidate,
+                        in ApplicationContextCode	applicationContext_code,
+                        in types::BL 			activeConceptsOnly,
+                        in types::BL 			errorCheckOnly
+                        )
+                        raises (UnknownVocabularyDomain,
+                        	UnknownApplicationContextCode,
+                        	UnexpectedError);
+
+/* HL7SpecBlockEnd */ 
+/* HL7SpecBlock:translateCode */
+
+/* Translate a coded attribute.  If a target code system is supplied, the supplied code
+ *	is translated into the target code system.  If the target code system is omitted,
+ *	the code is translated into a form that applies in the target context.
+ *
+ *      vocabularyDomain_name 	- vocabulary domain of code and translation
+ *      fromCode        	- code to be translated
+ *	tiCodeSystemId		- id of target code system (Optional)
+ *      toApplicationContext_code - context that identifies the target setting
+ *
+ *	Returns			- New CD data element that includes the translation
+ *
+ *	Exceptions
+ *		UnknownVocabularyDomain - the vocabulary domain isn't recognized by the service
+ *		UnknownCodeSystem	- the code system in fromCode or the toCodeSystemId isn't
+ *					recognized by the service
+ *		UnknownApplicationContextCode	- the application context code isn't recognized by the service
+ *		UnableToTranslate	- the translation failed for the reason specified
+ *
+ */
+                 types::CD translateCode(
+                        in VocabularyDomainName 	vocabularyDomain_name,
+                        in types::CD 			fromCode,
+                        in CodeSystemId			toCodeSystemId,
+                        in ApplicationContextCode  	toApplicationContext_code
+                        )
+                        raises (UnknownVocabularyDomain,
+                                UnknownCodeSystem,
+                                UnknownApplicationContextCode,
+                                UnableToTranslate,
+                                UnexpectedError);
+
+/* HL7SpecBlockEnd */ 
+/* HL7SpecBlock:fillInDetails */
+
+
+/* Fill in the optional fields in a CD, including the code system name, release and the code display name.
+ *      codeToFillIn		- code to be filled in
+ *      displayLanguage_code 	- Language to be used for code system name and code designation
+ *
+ *	Returns		- filled in code
+ *
+ * Exceptions
+ *	UnknownCodeSystem	- the code system part of code isn't recognized by the service
+ *	UnknownConceptCode	- the concept code isn't valid in the supplied code system, or the code isn't valid
+ *	UnknownLanguage		- the language code isn't recognized.
+ *  NoApplicableDesignationFound - No designation exists for the supplied CD and language.
+ *
+ */
+ 		  types::CD fillInDetails(
+                        in types::CD 			codeToFillIn,
+                        in LanguageCode 		displayLanguage_code
+	          	)
+                        raises (UnknownCodeSystem,
+                        	UnknownConceptCode,
+                                UnknownLanguage,
+                                UnexpectedError,
+                                NoApplicableDesignationFound);
+
+/* HL7SpecBlockEnd */ 
+/* HL7SpecBlock:subsumes */
+
+/* Determine whether the first code subsumes (implies) the second.
+ *      parentCode      - the supertype code
+ *      childCode       - the subtype code
+ *
+ *      Returns         - true if the parent subsumes the child
+ *                      - false if the parent does not
+ *
+ *	NOTES:
+ *		1) Translations are ignored in this call
+ *		2) If the two codes are equivalent, the function will return true
+ *		3) If one or both of the codes are exceptions (CWE) and the codes are
+ *		   not equivalent, then the function returns false
+ *
+ *	Exceptions
+ *		UnknownCodeSystem	- Either the parent or child code system aren't recognized
+ *		UnknownConceptCode	- either parentCode or childCode isn't recognized by the service    
+ *		SubsumptionNotSupported	- subsumption testing isn't supported by the service or code system
+ *		UnrecognizedQualifier	- one of the concept qualifiers wasn't recognized by the service
+ *		QualifiersNotSupported	- if qualified concepts aren't supported by this service
+ */
+                types::BL subsumes(
+                        in types::CD  parentCode,
+                        in types::CD  childCode
+                        )
+                        raises (UnknownCodeSystem,
+                        	UnknownConceptCode,
+                                SubsumptionNotSupported,
+                                UnrecognizedQualifier,
+                                QualifiersNotSupported,
+                                UnexpectedError);
+
+
+/* HL7SpecBlockEnd */ 
+/* HL7SpecBlock:areEquivalent */
+
+
+/* Determine whether the two codes should be considered equivalent
+ *	code1		- the first code
+ *	code2		- the second code
+ *
+ *	Returns		- true if the codes are determined to be equivalent, false otherwise
+ *
+ *	Exceptions
+ *		UnknownCodeSystem	- Either the parent or child code system aren't recognized
+ *		UnknownConceptCode	- either parentCode or childCode isn't recognized by the service    
+ *		SubsumptionNotSupported	- subsumption testing isn't supported by the service or code system
+ *		UnrecognizedQualifier	- one of the concept qualifiers wasn't recognized by the service
+ *		QualifiersNotSupported	- if qualified concepts aren't supported by this service
+ */
+ 		types::BL areEquivalent (
+ 			in types::CD	code1,
+ 			in types::CD	code2
+ 			)
+                        raises (UnknownCodeSystem,
+                        	UnknownConceptCode,
+                                SubsumptionNotSupported,
+                                UnrecognizedQualifier,
+                                QualifiersNotSupported,
+                                UnexpectedError);
+                                
+/* HL7SpecBlockEnd */ 
+/* HL7SpecBlock:lookupValueSetExpansion */
+
+/* Return a hierarchical list of the valid values for the supplied vocabulary domain and context
+ *      vocabularyDomain_name   - vocabulary domain to list
+ *      applicationContext_code	- context used to select value set (optional)
+ *      language_code	        - language to be used in the list display
+ *      expandAll       	- true means return a complete list, false means one level
+ *	timeout			- time limit for operation to complete in milliseconds (0 means unlimited
+ *	sizeLimit		- maximum number of elements to return (0 means unlimited)
+ *
+ *      Returns         - list of valid codes
+ *
+ *	NOTE: if a sizeLimit has been specified and the number of entries in the list is the same as the size limit,
+ *	      the caller must presume that the list is incomplete.
+ *
+ *	Exceptions
+ *		UnknownVocabularyDomain		- domain not recognized by service
+ *		UnknownApplicationContextCode	- application context not recognized by the service
+ *		UnknownLanguage			- language code not recognized by the service
+ *		NoApplicableValueSet	- there isn't a value set that applies to this domain in this context
+ *		TimeoutError			- time limit was exceeded
+ */
+
+                ValueSetExpansionList lookupValueSetExpansion(
+                        in VocabularyDomainName   	vocabularyDomain_name,
+                        in ApplicationContextCode	applicationContext_code,
+                        in LanguageCode      		language_code,
+                        in types::BL             	expandAll,
+                        in long 			timeout,
+                        in long				sizeLimit
+                        )
+                        raises (UnknownVocabularyDomain,
+                        	UnknownApplicationContextCode,
+                                UnknownLanguage,
+                                NoApplicableValueSet,
+                                TimeoutError,
+                                UnexpectedError);
+
+/* HL7SpecBlockEnd */ 
+/* HL7SpecBlock:expandValueSetExpansionContext */
+
+/* Expand an unexpanded node returned by lookupValueSetExpansion above
+ *	expandContext		- starting context to expand
+ *	Returns			- list of valid codes underneath context
+ *
+ */
+                ValueSetExpansionList expandValueSetExpansionContext(
+                	in ExpansionContext 	expansionContext
+                	)
+                	raises (InvalidExpansionContext,
+                		TimeoutError,
+                		UnexpectedError);
+                		
+/* HL7SpecBlockEnd */ 
+        };
+        
+
+
+
+/**********************************
+ * Browser API                    *
+ **********************************/
+ /* HL7SpecBlock:browser */
+ 
+        interface Browser : Identification {
+        
+/* HL7SpecBlockEndElipsis */ 
+/* HL7SpecBlock:browserDescription */
+        
+/* Return a list of supported match algorithms */
+		MatchAlgorithmCodeList  getSupportedMatchAlgorithms() raises (UnexpectedError);
+
+/* Coded attributes known to the browser whose names meets the supplied criteria
+ *
+ *	matchText		- Match string.  Format depends upon the match algorithm. Empty string means return all names
+ *	matchAlgorithm_code	- Match algorithm code. 
+ *	timeout			- time limit for operation to complete in milliseconds (0 means unlimited
+ *	sizeLimit		- maximum number of elements to return (0 means unlimited)
+ *
+ *	Returns			- list of coded attributes
+ *
+ *	NOTE: if a sizeLimit has been specified and the number of entries in the list is the same as the size limit,
+ *	      the caller must presume that the list is incomplete.
+ *
+ *	Exceptions
+ *		TimeoutError		- time limit was exceeded
+ *		BadlyFormedMatchText  	- match text couldn't be parsed for the supplied algorithm
+ *		UnknownMatchAlgorithm - match algorithm was unrecognized by service
+ */
+        	RIMCodedAttributeList	getSupportedAttributes(
+        		in types::ST		matchText,
+			in MatchAlgorithmCode	matchAlgorithm_code,
+        		in long 		timeout,
+		        in long 		sizeLimit
+		        )
+		        raises (BadlyFormedMatchText,
+		                UnknownMatchAlgorithm, 
+		                TimeoutError,
+		                UnexpectedError);
+		                
+
+/* Vocabulary domains known to the browser whose names meet the supplied criteria
+ *
+ *	matchText		- Match string.  Format depends upon the match algorithm. Empty string means return all names
+ *	matchAlgorithm_code	- Match algorithm code.
+ *	timeout			- time limit for operation to complete in milliseconds (0 means unlimited
+ *	sizeLimit		- maximum number of elements to return (0 means unlimited)
+ *
+ *	Returns			- list of vocabulary domains
+ *
+ *	NOTE: if a sizeLimit has been specified and the number of entries in the list is the same as the size limit,
+ *	      the caller must presume that the list is incomplete.
+ *
+ *	Exceptions
+ *		TimeoutError		- time limit was exceeded
+ *		BadlyFormedMatchText  	- match text couldn't be parsed for the supplied algorithm
+ *		UnknownMatchAlgorithm 	- match algorithm was unrecognized by service
+ */
+		VocabularyDomainNameList getSupportedVocabularyDomains(
+			in types::ST		matchText,
+			in MatchAlgorithmCode	matchAlgorithm_code,
+        		in long 		timeout,
+		        in long 		sizeLimit
+		        )
+		        raises (BadlyFormedMatchText,
+		                UnknownMatchAlgorithm,
+		                TimeoutError,
+		                UnexpectedError);
+
+/* Value sets known to the browser having names matching the passed match text
+ *
+ *	matchText		- Match string.  Format depends upon the match algorithm. Empty string means return all names
+ *	matchAlgorithm_code	- Match algorithm code.
+ *	timeout			- time limit for operation to complete in milliseconds (0 means unlimited
+ *	sizeLimit		- maximum number of elements to return (0 means unlimited)
+ *
+ *	Returns			- list of value sets
+ *
+ *	NOTE: if a sizeLimit has been specified and the number of entries in the list is the same as the size limit,
+ *	      the caller must presume that the list is incomplete.
+ *
+ *	Exceptions
+ *		TimeoutError		- time limit was exceeded
+ *		BadlyFormedMatchText  	- match text couldn't be parsed for the supplied algorithm
+ *		UnknownMatchAlgorithm 	- match algorithm was unrecognized by service
+ */
+		ValueSetDescriptorList 	getSupportedValueSets(
+			in types::ST		matchText,
+			in MatchAlgorithmCode	matchAlgorithm_code,
+        		in long 		timeout,
+		        in long 		sizeLimit
+		        )
+		        raises (BadlyFormedMatchText,
+		        	UnknownMatchAlgorithm,
+		        	TimeoutError,
+		                UnexpectedError);
+
+/* Code Systems known to the browser whose name match the supplied criteria
+ *
+ *
+ *	matchText		- Match string.  Format depends upon the match algorithm. Empty string means return all names
+ *	matchAlgorithm_code	- Match algorithm code.
+ *	timeout			- time limit for operation to complete in milliseconds (0 means unlimited
+ *	sizeLimit		- maximum number of elements to return (0 means unlimited)
+ *
+ *	Returns			- list of code systems
+ *
+ *	NOTE: if a sizeLimit has been specified and the number of entries in the list is the same as the size limit,
+ *	      the caller must presume that the list is incomplete.
+ *
+ *	Exceptions
+ *		TimeoutError		- time limit was exceeded
+ *		BadlyFormedMatchText  	- match text couldn't be parsed for the supplied algorithm
+ *		UnknownMatchAlgorithm 	- match algorithm was unrecognized by service
+ */
+		CodeSystemDescriptorList getSupportedCodeSystems(
+			in types::ST		matchText,
+			in MatchAlgorithmCode	matchAlgorithm_code,
+        		in long 		timeout,
+		        in long 		sizeLimit
+		        )
+		        raises (BadlyFormedMatchText,
+		        	UnknownMatchAlgorithm,
+		        	TimeoutError,
+		                UnexpectedError);
+
+/* HL7SpecBlockEnd */ 
+/* HL7SpecBlock:lookupVocabularyDomain */
+
+/* Look up the full description of a vocabulary domain
+ *	domain	- vocabulary domain identifier to look up
+ *
+ *	Returns - full description of the vocabulary domain
+ */
+		VocabularyDomainDescription lookupVocabularyDomain(
+			in VocabularyDomainName vocabularyDomain_name
+			)
+			raises (UnknownVocabularyDomain,
+				UnexpectedError);
+
+/* HL7SpecBlockEnd */ 
+/* HL7SpecBlock:lookupValueSet */
+
+/* Look up the full description of a value set
+ * valueSet - unique identifier or name of a value set
+ *
+ * Returns - full description of the value set
+ *
+ * Exceptions
+ *		UnknownValueSet		- if present, the value set id isn't recognized by the service or
+ *					  if the id is absent, the name isn't recognized by the service
+ *					  neither the name nor the id was supplied
+ *		ValueSetNameIdMismatch 	- the value set code is valid in the service, but
+ *					  the name doesn't match the code
+ */
+ 		FullValueSetDescription lookupValueSet(
+        		in ValueSetId	 	valueSet_id,
+        		in ValueSetName		valueSet_name
+            		)
+            	raises (UnknownValueSet,
+            		ValueSetNameIdMismatch,
+            		UnexpectedError);
+
+/* HL7SpecBlockEnd */ 
+/* HL7SpecBlock:lookupCodeSystem */
+
+/* Look up the description and name of a code system
+ *	codeSystem - unique code system identifier
+ *
+ * Returns - description of the code system
+ *
+ * Exceptions
+ *		UnknownCodeSystem 	- the code system id was supplied and isn't recognized by the service
+ *					  only the code system name was supplied and it isn't recognized by the service
+ *					  neither the code system id nor the name was supplied
+ *		CodeSystemNameIdMismatch - both the code system id and name were supplied and the name
+ *					   didn't match the id
+ */
+ 		CodeSystemInfo lookupCodeSystem (
+ 			in CodeSystemId		codeSystem_id,
+ 			in CodeSystemName 	codeSystem_name
+ 			)
+ 			raises (UnknownCodeSystem,
+ 				CodeSystemNameIdMismatch,
+ 				UnexpectedError);
+
+/* HL7SpecBlockEnd */ 
+/* HL7SpecBlock:lookupValueSetForDomain */
+
+/* Return the descriptor of the value set that would be used for the vocabulary domain in the given context (if any)
+ *
+ *      vocabularyDomain_name       - name of the vocabulary domain vocabulary domain
+ *	applicationContext_code	    - applicable context (optional)
+ *
+ *      Returns         - The identifier and name(if any) of the value set that would be used in this context
+ *
+ *	Exceptions
+ *			UnknownVocabularyDomain - the vocabulary domain isn't recognized by the service
+ *			UnknownApplicationContextCode	- the application context isn't recognized by the service
+ *			NoApplicableValueSet	- there isn't a value set that applies to this domain in this context
+ *
+ */
+                 ValueSetDescriptor lookupValueSetForDomain(
+                        in VocabularyDomainName 	vocabularyDomain_name,
+			in ApplicationContextCode	applicationContext_code
+                        )
+                        raises (UnknownVocabularyDomain,
+                        	UnknownApplicationContextCode,
+                        	NoApplicableValueSet,
+                        	UnexpectedError);
+
+/* HL7SpecBlockEnd */ 
+/* HL7SpecBlock:isCodeInValueSet */
+
+
+/* Determine whether a given concept code is in a value set
+ *	valueSet_id	- Value set identifier	(optional but at least one of id or name must be supplied)
+ *	valueSet_name	- Name of the value set (optional 	             "
+ *     	includeHeadCode - True means that the "headcode" of the value set, if any,
+ *			  should be considered part of the set
+ *     	codeToValidate  - code system and concept code to validate
+ *
+ *    	Returns         - TRUE if the concept belongs to the code set
+ *                        FALSE otherwise.
+ *
+ *	Exceptions
+ *
+ *		UnknownValueSet		- if present, the value set id isn't recognized by the service or
+ *					  if the id is absent, the name isn't recognized by the service
+ *		ValueSetNameIdMismatch 	- the value set code is valid in the service, but
+ *					  the name doesn't match the code
+ *		UnknownCodeSystem	- the code system isn't recognized by the service
+ *		UnknownConceptCode 	- the concept code isn't valid in the code system
+ *
+ */
+                 types::BL isCodeInValueSet(
+                        in ValueSetId	 	valueSet_id,
+                        in ValueSetName		valueSet_name,
+                        in types::BL 		includeHeadCode,
+                        in ConceptId 		codeToValidate
+                        )
+                        raises (UnknownValueSet,
+                        	ValueSetNameIdMismatch,
+                        	UnknownConceptCode,
+                        	UnknownCodeSystem,
+                        	UnexpectedError);
+                        	
+/* HL7SpecBlockEnd */ 
+        };
+
+};
+
+#endif
+

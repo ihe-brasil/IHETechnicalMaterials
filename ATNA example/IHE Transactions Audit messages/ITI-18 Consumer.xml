@@ -1,0 +1,26 @@
+<AuditMessage>
+<EventIdentification EventActionCode="E" EventDateTime="2018-11-21T15:23:31.586-05:00" EventOutcomeIndicator="0">
+<EventID csd-code="110112" displayName="Query" codeSystemName="DCM" originalText="Query"/>
+<EventTypeCode csd-code="ITI-18" displayName="Registry Stored Query" codeSystemName="IHE Transactions" originalText="Registry Stored Query"/>
+</EventIdentification>
+<ActiveParticipant AlternativeUserID="2077" NetworkAccessPointID="127.1.1.1" NetworkAccessPointTypeCode="2" UserID="" UserIsRequestor="false">
+<RoleIDCode codeSystemName="DCM" csd-code="110153" displayName="Source" originalText="Source"/>
+</ActiveParticipant>
+<ActiveParticipant UserID="9999" UserIsRequestor="true" UserName="">
+<RoleIDCode codeSystemName="urn:authz:role" csd-code="ClinicalAdministrators" displayName="ClinicalAdministrators" originalText="ClinicalAdministrators"/>
+</ActiveParticipant>
+<ActiveParticipant NetworkAccessPointID="192.168.0.10" NetworkAccessPointTypeCode="1" UserID="http://192.168.0.10:8080/xdstools7.0.2/" UserIsRequestor="false">
+<RoleIDCode codeSystemName="DCM" csd-code="110152" displayName="Destination" originalText="Destination"/>
+</ActiveParticipant>
+<AuditSourceIdentification AuditEnterpriseSiteID="ENTERPRISE" AuditSourceID="TEST"/>
+<ParticipantObjectIdentification ParticipantObjectID="6578946^^^&amp;1.3.6.1.4.1.21367.9999.3.7&amp;ISO" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+<ParticipantObjectIDTypeCode csd-code="2" displayName="Patient Number" codeSystemName="RFC-3881" originalText="Patient Number"/>
+</ParticipantObjectIdentification>
+<ParticipantObjectIdentification ParticipantObjectID="urn:uuid:14d4debf-8f97-4251-9a74-a90016b0af0d" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="24">
+<ParticipantObjectIDTypeCode csd-code="ITI-18" displayName="Registry Stored Query" codeSystemName="IHE Transactions" originalText="Registry Stored Query"/>
+<ParticipantObjectQuery>
+PHF1ZXJ5MzA6QWRob2NRdWVyeVJlcXVlc3QgeG1sbnM6cXVlcnkzMD0idXJuOm9hc2lzOm5hbWVzOnRjOmVieG1sLXJlZ3JlcDp4c2Q6cXVlcnk6My4wIj48cXVlcnkzMDpSZXNwb25zZU9wdGlvbiByZXR1cm5Db21wb3NlZE9iamVjdHM9InRydWUiIHJldHVyblR5cGU9IkxlYWZDbGFzcyIgLz48QWRob2NRdWVyeSB4bWxucz0idXJuOm9hc2lzOm5hbWVzOnRjOmVieG1sLXJlZ3JlcDp4c2Q6cmltOjMuMCIgaWQ9InVybjp1dWlkOjE0ZDRkZWJmLThmOTctNDI1MS05YTc0LWE5MDAxNmIwYWYwZCI+PFNsb3QgbmFtZT0iJFhEU0RvY3VtZW50RW50cnlQYXRpZW50SWQiPjxWYWx1ZUxpc3Q+PFZhbHVlPidST1VURVRFU1QyXl5eJmFtcDsxLjMuNi4xLjQuMS4yMTM2Ny4yMDA1LjMuNzgmYW1wO0lTTyc8L1ZhbHVlPjwvVmFsdWVMaXN0PjwvU2xvdD48U2xvdCBuYW1lPSIkWERTRG9jdW1lbnRFbnRyeVN0YXR1cyI+PFZhbHVlTGlzdD48VmFsdWU+KCd1cm46b2FzaXM6bmFtZXM6dGM6ZWJ4bWwtcmVncmVwOlN0YXR1c1R5cGU6QXBwcm92ZWQnKTwvVmFsdWU+PC9WYWx1ZUxpc3Q+PC9TbG90PjxTbG90IG5hbWU9IiRYRFNEb2N1bWVudEVudHJ5VHlwZSI+PFZhbHVlTGlzdD48VmFsdWU+KCd1cm46dXVpZDo3ZWRjYTgyZi0wNTRkLTQ3ZjItYTAzMi05YjJhNWI1MTg2YzEnLCd1cm46dXVpZDozNDI2OGU0Ny1mZGY1LTQxYTYtYmEzMy04MjEzM2M0NjUyNDgnKTwvVmFsdWU+PC9WYWx1ZUxpc3Q+PC9TbG90PjxTbG90IG5hbWU9IiRNZXRhZGF0YUxldmVsIj48VmFsdWVMaXN0PjxWYWx1ZT4yPC9WYWx1ZT48L1ZhbHVlTGlzdD48L1Nsb3Q+PC9BZGhvY1F1ZXJ5PjwvcXVlcnkzMDpBZGhvY1F1ZXJ5UmVxdWVzdD4=
+</ParticipantObjectQuery>
+<ParticipantObjectDetail type="QueryEncoding" value="VVRGLTg="/>
+</ParticipantObjectIdentification>
+</AuditMessage>

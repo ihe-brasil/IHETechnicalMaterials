@@ -1,0 +1,1189 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:exslt="http://exslt.org/common">
+   <head>
+      <title>Domain: Patient Administration - Encounter Queries Topic</title>
+      <link rel="stylesheet" type="text/css" href="../../support/css/v3m.css" title="v3m" /><script src="../../support/js/tree.js" type="text/javascript"></script><script src="../../support/js/setTopFrameText.js" type="text/javascript"></script><script src="../../support/js/swapcss.js" type="text/javascript"></script><script type="text/javascript">
+				if (find('heading')) setHeadingTextFromFileName(document.location.href,"Encounter Queries Topic");
+			</script></head>
+   <body>
+      <div class="section">
+         <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU2" /></span><span class="number">13</span><span class="title"><a name="PRPA_DO000000UV-PatientEncounter-ic">Encounter Queries Topic</a></span></div>
+         <div class="body">
+            <table>
+               <tbody>
+                  <tr>
+                     <td><a class="custombutton" href="uvpa.htm#contents">Return to Domain Table of Contents</a></td>
+                  </tr>
+                  <tr>
+                     <td colspan="2">
+                        <p class="lastEdit">Content Last Edited: 2007-07-23T17:05:19</p>
+                     </td>
+                  </tr>
+               </tbody>
+            </table><br /><div class="toc"><span>13.1  <a href="#sbs-PRPA_DO000000UV-PatientEncounter-ic">Storyboards</a><br /></span><span>13.2  <a href="#roles-PRPA_DO000000UV-PatientEncounter-ic">Application Roles</a><br /></span><span>13.3  <a href="#tes-PRPA_DO000000UV-PatientEncounter-ic">Trigger Events</a><br /></span><span>13.4  <a href="#rmims-PRPA_DO000000UV-PatientEncounter-ic">Refined Message Information Models</a><br /></span><span>13.5  <a href="#hmds-PRPA_DO000000UV-PatientEncounter-ic">Hierarchical Message Descriptions</a><br /></span><span>13.6  <a href="#ints-PRPA_DO000000UV-PatientEncounter-ic">Interactions</a><br /></span></div>
+            <div class="heading"><br /><b class="heading">Introduction</b></div>This topic covers queries for patient encounters.
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">13.1</span><span class="title"><a name="sbs-PRPA_DO000000UV-PatientEncounter-ic">Storyboards</a></span><hr class="sectionrule" />
+               </div>
+               <div class="body">
+                  <p><a href="#">Go To Top</a></p>
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e16164" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Storyboards (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Encounters Query(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_ST900301UV02-str" class="">PRPA_ST900301UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e161642" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Storyboards (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Patient Encounter Query(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_ST900301UV02-str" class="">PRPA_ST900301UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e161643" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Storyboards (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Encounters Query(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_ST900301UV02-str" class="">PRPA_ST900301UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3gstory">the storyboard discussion</a> in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU2" /></span><span class="number">13.1.1</span><span class="title"><a name="PRPA_ST900301UV02-str">Find Encounters Query  (PRPA_ST900301UV02) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Purpose</b></div>This storyboard demonstrates querying an encounter manager for a list of patient encounters matching a Patient  ID and the
+                        timeframe the encounters took place.
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><img class="graphic" src="graphics/PRPA_ST900301UV02.gif" alt="PRPA_ST900301UV02.gif" /><p></p><a name="PRPA_ST900301UV02-str"></a><table class="artifactList">
+                           <caption><b>Interaction List</b></caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Find Encounters Query</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/PRPA_IN900300UV02.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_IN900300UV02-int" class="">PRPA_IN900300UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="artifactList_desc">Find Encounters Query Response</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/PRPA_IN900350UV02.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_IN900350UV02-int" class="">PRPA_IN900350UV02</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <div class="subSubSubSection">
+                           <div class="header"><span class="icon"> </span><span class="number">13.1.1.1</span><span class="title"><a name="PRPA_ST900301UV02-PRPA_SN900301UV02-stex">Find Encounters By Organization (PRPA_SN900301UV02) </a></span></div>
+                           <div class="body">
+                              <p>Adam Everyman (with Patient ID 8237363) makes an appointment with his new General Practicioner (GP), Dr  Particia Primary.
+                                 Dr Primary asks him about any hospital stays during the last 5 years. Adam Everyman recalls he  had an inpatient stay at the
+                                 Good Health Hospital. He doesn't recall the exact dates of the encounter. She queries  the regional registry, which contains
+                                 copies of relevant data from all regional hospitals, to get hold of the patient's  history. She also initiates a Find Encounters
+                                 Query for Mr. Everyman using his patient identifier (8237363), an  indication that she's looking for "inpatient encounters",
+                                 and the identifier of the Good Health Hospital.
+                              </p>
+                              <p>She receives back a Find Encounters Query Response containing 1 matching encounter. An inpatient encounter  took place from
+                                 20050115 up to 20050203 in the Good Health Hospital with Dr.Adrian as the attending  physician. The returned information (although
+                                 not clinical in nature, but administrative) provides her with  contextual information for the clinical history. Dr Primary
+                                 asks Adam about the details of the encounter and  requests his permission to get hold of a copy of the medical records of
+                                 that encounter.
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection">
+                           <div class="header"><span class="icon"> </span><span class="number">13.1.1.2</span><span class="title"><a name="PRPA_ST900301UV02-PRPA_SN900302UV02-stex">Find Encounter By Time (PRPA_SN900302UV02) </a></span></div>
+                           <div class="body">
+                              <p>Adam Everyman (with Patient ID 8237363) makes an appointment with his new General Practicioner (GP), Dr. Particia Primary.
+                                 Prior to the appointment she queries the regional registry, which contains copies of relevant data  from all regional hospitals,
+                                 to get hold of the patient's history. She also initiates a Find Encounters Query for Mr.  Everyman using his patient identifier
+                                 (8237363), and a timeframe consiting of the last 5 years (date range:  20020301-20070301).
+                              </p>
+                              <p>She receives back a Find Encounters Query Response containing 3 matching encounters. An outpatient encounter  took place on
+                                 20040721 with Dr.Smith in the Good Health Hospital; there was an inpatient encounter which took  place from 20050115 up to
+                                 20050203 with Dr.Adrian in the Good Health Hospital; and an e-mail consult on  20060823 with dentist Dr.Tootache. The returned
+                                 information (although not clinical in nature, but administrative)  provides her with contextual information for the clinical
+                                 history. Dr Primary plans to ask Adam about the details  of the second encounter.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">13.2</span><span class="title"><a name="roles-PRPA_DO000000UV-PatientEncounter-ic">Application Roles</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" border="0" class="help_table" width="100%">
+                              <tr id="d0e16192a" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Application Roles (Sorted by Artifact Code)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top" align="left" class="general"> </td>
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" border="0" class="">
+                                       <tr>
+                                          <td>
+                                             <table border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Encounter Query Placer&nbsp;
+                                                      					(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_AR900301UV02-ar" class="">PRPA_AR900301UV02</a>)
+                                                      				
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" border="0" class="">
+                                       <tr>
+                                          <td>
+                                             <table border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Encounter Query Fulfiller&nbsp;
+                                                      					(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_AR900302UV02-ar" class="">PRPA_AR900302UV02</a>)
+                                                      				
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" border="0" class="help_table" width="100%">
+                              <tr id="d0e16192b" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Application Roles (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top" align="left" class="general"> </td>
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" border="0" class="">
+                                       <tr>
+                                          <td>
+                                             <table border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Patient Encounter Event Query Fulfiller&nbsp;
+                                                      					(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_AR900302UV02-ar" class="">PRPA_AR900302UV02</a>)
+                                                      				
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" border="0" class="">
+                                       <tr>
+                                          <td>
+                                             <table border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Patient Encounter Event Query Placer&nbsp;
+                                                      					(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_AR900301UV02-ar" class="">PRPA_AR900301UV02</a>)
+                                                      				
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e161863" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Application Roles (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Encounter Query Placer(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_AR900301UV02-ar" class="">PRPA_AR900301UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Encounter Query Fulfiller(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_AR900302UV02-ar" class="">PRPA_AR900302UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3gapprole">the discussion of application roles</a> and their relationships in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU2" /></span><span class="number">13.2.1</span><span class="title"><a name="PRPA_AR900301UV02-ar">Encounter Query Placer  (PRPA_AR900301UV02) </a></span></div>
+                     <div class="body"><b>Description</b> 
+                        					<a href="../../domains/uvpa/uvpa_DO_XX.htm#PRPA_AR900301UV02-ar" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a><table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Patient Encounter Event Query Placer</em></td>
+                           </tr>
+                        </table>This application role represents applications that initiate queries to patient encounter registries.
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU2" /></span><span class="number">13.2.2</span><span class="title"><a name="PRPA_AR900302UV02-ar">Encounter Query Fulfiller  (PRPA_AR900302UV02) </a></span></div>
+                     <div class="body"><b>Description</b> 
+                        					<a href="../../domains/uvpa/uvpa_DO_XX.htm#PRPA_AR900302UV02-ar" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a><table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Patient Encounter Event Query Fulfiller</em></td>
+                           </tr>
+                        </table>This application role represents the responsibility of patient encounter registries to respond to queries.
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">13.3</span><span class="title"><a name="tes-PRPA_DO000000UV-PatientEncounter-ic">Trigger Events</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e16207" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Trigger Events (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Encounters Query(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_TE900300UV02-te" class="">PRPA_TE900300UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Encounters Query Response(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_TE900350UV02-te" class="">PRPA_TE900350UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e162072" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Trigger Events (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Patient Encounter Event Find Encounters Query(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_TE900300UV02-te" class="">PRPA_TE900300UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Patient Encounter Event Find Encounters Query Response(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_TE900350UV02-te" class="">PRPA_TE900350UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e162073" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Trigger Events (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Encounters Query(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_TE900300UV02-te" class="">PRPA_TE900300UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Encounters Query Response(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_TE900350UV02-te" class="">PRPA_TE900350UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3gtrigger">the discussion of trigger events</a> in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU2" /></span><span class="number">13.3.1</span><span class="title"><a name="PRPA_TE900300UV02-te">Find Encounters Query  (PRPA_TE900300UV02) </a></span></div>
+                     <div class="body">
+                        <div class="subheading">Description
+                           				<a href="../../domains/uvpa/uvpa_DO_XX.htm#PRPA_TE900300UV02-te" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a></div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Patient Encounter Event Find Encounters Query</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>Type: </em></td>
+                              <td class="structType_value"><em>User request</em></td>
+                           </tr>
+                        </table>
+                        <p>A user initiates a query to an encounter registry requesting all encounters for an identified patient and that match a set
+                           of query attributes.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU2" /></span><span class="number">13.3.2</span><span class="title"><a name="PRPA_TE900350UV02-te">Find Encounters Query Response  (PRPA_TE900350UV02) </a></span></div>
+                     <div class="body">
+                        <div class="subheading">Description
+                           				<a href="../../domains/uvpa/uvpa_DO_XX.htm#PRPA_TE900350UV02-te" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a></div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Patient Encounter Event Find Encounters Query Response</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>Type: </em></td>
+                              <td class="structType_value"><em>Interaction based</em></td>
+                           </tr>
+                        </table>
+                        <p>A patient registry responds to a Find Encounters Query by returning information on the encounter records it holds for the
+                           identified patient that match the set of query attributes sent in the query.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">13.4</span><span class="title"><a name="rmims-PRPA_DO000000UV-PatientEncounter-ic">Refined Message Information Models</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e16223" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Refined Message Information Models (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Encounters Query(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_RM900300UV02-rmi" class="">PRPA_RM900300UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Encounters Query Response(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_RM900350UV02-rmi" class="">PRPA_RM900350UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e162232" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Refined Message Information Models (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Patient Encounter Event Find Encounters Query(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_RM900300UV02-rmi" class="">PRPA_RM900300UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Patient Encounter Event Find Encounters Query Response(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_RM900350UV02-rmi" class="">PRPA_RM900350UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e162233" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Refined Message Information Models (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Encounters Query(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_RM900300UV02-rmi" class="">PRPA_RM900300UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Encounters Query Response(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_RM900350UV02-rmi" class="">PRPA_RM900350UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3grmim">the description of RMIMs</a> in the Version 3 Guide.
+                  </p>
+                  <p></p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU2" /></span><span class="number">13.4.1</span><span class="title"><a name="PRPA_RM900300UV02-rmi">Find Encounters Query  (PRPA_RM900300UV02) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/PRPA_RM900300UV.htm" target="_blank"><img class="graphic" src="editable/images/T-PRPA_RM900300UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><div class="subheading">Description</div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><b><em>Parent:  </em></b></td>
+                              <td class="structType_value"><em>Patient Administration (<a href="../../domains/uvpa/uvpa.htm#PRPA_DM000000UV-rmi" class="">PRPA_DM000000UV</a>)
+                                    									</em></td>
+                           </tr>
+                        </table>
+                        <p><em>Overview</em></p>
+                        <p>The Find Encounters Query R-MIM defines the payload for a query-by-parameter message sent to an encounter manager requesting
+                           all encounters that  match the set of query parameters. The default values of the parameters are such that all active  encounters
+                           are returned. The response may potentially return many records so the <em>responseModalityCode</em>,  <em>initalQuantity</em> and <em>initialQuantityCode</em> attributes of <em>QueryByParameter</em> and the <em>SortControl</em> class are included in  the information model.
+                        </p>
+                        <p><em>Walk-through</em></p>
+                        <p><strong>QueryByParameter</strong> - The entry point to the R-MIM. This class allows the query requester to specify how the  query should be processed by the
+                           query fulfiller. See the QUQI domain for a description.
+                        </p>
+                        <p><strong>SortControl</strong> - This class allows the query requester to specify the order in which the server should return multiple  results. See the
+                           QUQI domain for a description.
+                        </p>
+                        <p><strong>ParameterList</strong> - The collection of parameter items for the query, similar to the WHERE clause in a SQL query.  A query message can include
+                           any combination of the parameters. Multiple instances of parameter item are  combined with AND logic. Multiple values in the
+                           value attribute of a single parameter item instance are combined  with OR logic
+                        </p>
+                        <ul>
+                           <li><strong>PatientId</strong> (mandatory): Identifies the patient that is the subject of the encounter(s)
+                           </li>
+                           <li><strong>EncounterStatus</strong> (optional, default value "active"): Constrains the response to encounters that have one of  the specified statuses, e.g.
+                              active, <span class="inserted">at any point in time </span>within the TimeFrame (if any) as specified by the <em>EncounterTimeframe</em>  parameter.
+                           </li>
+                           <li><strong>TypeOfEncounter</strong> (optional): Constrains the response to encounters of one of the specified types, e.g. IMP  (inpatient)
+                           </li>
+                           <li><strong>EncounterTimeframe</strong> (optional): Constrains the responses to those encounters that had a status as contained in the <em>EncounterStatus</em> parameter within the timeframe as specified by this parameter. It affects encounters  whose <em>effectiveTime</em> overlaps with any part of the timeframe specified in this parameter. Note that this parameter does NOT constrain the participations
+                              in any way, i.e. if an encounter  overlaps with the timeframe specified by this parameter, ALL participations -regardless
+                              of their  effectivetime- shall be returned
+                           </li>
+                           <li><strong>CareEventId </strong>(optional): Constrains the responses to those encounters associated with the CareEvent  specified by the parameter.
+                           </li>
+                           <li><strong>ResponsibleOrganizationID</strong> (optional) Constrains the responses to those encounters where one of the  organizations responsible for the encounter is
+                              equal to one of the specified IDs in this parameter.
+                           </li>
+                        </ul>
+                        <p></p>
+                        <table class="artifactList">
+                           <caption>Contained Hierarchical Message Descriptions</caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Patient Encounter Event Find Encounters Query</td>
+                              <td class="artifactList_code"><a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_HD900300UV02-hmd" class="">PRPA_HD900300UV02</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU2" /></span><span class="number">13.4.2</span><span class="title"><a name="PRPA_RM900350UV02-rmi">Find Encounters Query Response  (PRPA_RM900350UV02) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/PRPA_RM900350UV.htm" target="_blank"><img class="graphic" src="editable/images/T-PRPA_RM900350UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><div class="subheading">Description</div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><b><em>Parent:  </em></b></td>
+                              <td class="structType_value"><em>Patient Administration (<a href="../../domains/uvpa/uvpa.htm#PRPA_DM000000UV-rmi" class="">PRPA_DM000000UV</a>)
+                                    									</em></td>
+                           </tr>
+                        </table>
+                        <p><em>Overview</em></p>
+                        <p>The Find Encounters Query Response R-MIM defines the payload message used for query responses that return basic information
+                           about patient encounters that satisfied the query criteria.
+                        </p>
+                        <p><em>Walk-through</em></p>
+                        <p><strong>EncounterEvent</strong> a patient encounter is an interaction between a patient and care provider(s) for the purpose of providing healthcare-related
+                           services.
+                        </p>
+                        <ul>
+                           <li>(optional) <strong>id</strong> - identifers for the encounter
+                           </li>
+                           <li>(optional) <strong>code </strong>- a value further specifying the type of patient encounter. Examples include inpatient, ambulatory, emergency, home health.
+                           </li>
+                           <li>(required) <strong>statusCode </strong>- a value specifying the state of the patient encounter (based on the RIM Act class state machine). Examples include active,
+                              completed.
+                           </li>
+                           <li>(required) <strong>effectiveTime </strong>- a time interval starting with the administrative onset of the encounter (e.g., admission, registration, patient arrival)
+                              and ending with the patient's departure (e.g., discharge). Note, for active encounters the end of the effectiveTime interval,
+                              if valued, is the <em>anticipated </em>end date-time.
+                           </li>
+                        </ul>
+                        <p><strong>Direct Participations in the Encounter</strong></p>
+                        <ul>
+                           <li><strong>admitter</strong>: the healthcare practitioner that required/authorized the encounter, usually in the case of an inpatient encounter. Note:
+                              the admitter here must be the same as the author reported in the HL7 Trigger Event Control Act for the admission.
+                           </li>
+                           <li><strong>attender</strong>: a healthcare practitioner who had responsibility for overseeing a patient's care during the patient encounter (all of them,
+                              with <em>statusCode </em>and <em>time </em>on the participation)
+                           </li>
+                           <li><strong>responsibleParty</strong>: a healthcare provider <strong>organization</strong> that held clinical responsibility for care of the patient during the encounter (all of them, with <em>statusCode </em>and <em>time </em>on the participation)
+                           </li>
+                           <li><strong>subject</strong>: the patient who is the subject of the encounter.
+                           </li>
+                        </ul>
+                        <p></p>
+                        <table class="artifactList">
+                           <caption>Contained Hierarchical Message Descriptions</caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Patient Encounter Event Find Encounters Query Response</td>
+                              <td class="artifactList_code"><a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_HD900350UV02-hmd" class="">PRPA_HD900350UV02</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">13.5</span><span class="title"><a name="hmds-PRPA_DO000000UV-PatientEncounter-ic">Hierarchical Message Descriptions</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e16382" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Hierarchical Message Descriptions (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Encounters Query(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_HD900300UV02-hmd" class="">PRPA_HD900300UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Encounters Query Response(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_HD900350UV02-hmd" class="">PRPA_HD900350UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e163822" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Hierarchical Message Descriptions (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Patient Encounter Event Find Encounters Query(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_HD900300UV02-hmd" class="">PRPA_HD900300UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Patient Encounter Event Find Encounters Query Response(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_HD900350UV02-hmd" class="">PRPA_HD900350UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e163823" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Hierarchical Message Descriptions (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Encounters Query(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_HD900300UV02-hmd" class="">PRPA_HD900300UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Encounters Query Response(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_HD900350UV02-hmd" class="">PRPA_HD900350UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <p></p>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3ghmd">the description of HMDs</a> in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU2" /></span><span class="number">13.5.1</span><span class="title"><a name="PRPA_HD900300UV02-hmd">Find Encounters Query  (PRPA_HD900300UV02) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Description</b></div>
+                        <p>The Find Encounters Query payload message is used in query-by-parameter messages sent to an encounter manager.</p>
+                        <p>At this time there is no content for this section.</p>
+                        <p></p>
+                        <div class="subheading">Base Hierarchical Message Description
+                           				<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_RM900300UV02-rmi" class=""><img src="../../support/graphics/rmimview.gif" alt="View R-MIM" height="16" width="16" style="border-width:0" /></a> 
+                           				<a href="../../domains/uvpa/editable/PRPA_HD900300UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="editable/PRPA_HD900300UV.xls" target="_blank"><img src="../../support/graphics/excelview.gif" height="16" width="16" alt="Excel View" style="border:0px" /></a> 
+                        </div>
+                        <table class="hmd">
+                           <caption>Message Type List</caption>
+                           <tr class="">
+                              <td class="hmd_desc"><a name="PRPA_MT900300UV02-msg"></a>Patient Encounter Event Find Encounters Query
+                              </td>
+                              <td class="hmd_code">PRPA_MT900300UV02</td>
+                              <td class="hmd_links"><a href="../../domains/uvpa/editable/PRPA_HD900300UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="../../processable/multicacheschemas/PRPA_MT900300UV02.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> <a href="../../domains/uvpa/uvpa_DO_XX.htm#PRPA_MT900300UV02-msg" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a>
+                                 										 
+                                 									
+                                 
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU2" /></span><span class="number">13.5.2</span><span class="title"><a name="PRPA_HD900350UV02-hmd">Find Encounters Query Response  (PRPA_HD900350UV02) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Description</b></div>
+                        <p>The Find Encounters Query Response payload message is used in response to a Find Encounters Query.</p>
+                        <table class="artifactList">
+                           <caption>
+                              												Common Message Element Types Used
+                              									
+                           </caption>
+                           <tr class="">
+                              <td class="artifactList_desc">R_PatientIdentified-confirmable</td>
+                              <td class="artifactList_code"><a href="../../domains/uvct/uvct_do_cmets.htm#COCT_MT050002UV04-msg" class="">COCT_MT050002UV04</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="artifactList_desc">R_AssignedPersonUniversal</td>
+                              <td class="artifactList_code"><a href="../../domains/uvct/uvct_do_cmets.htm#COCT_MT090100UV01-msg" class="">COCT_MT090100UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="artifactList_desc">R_AssignedOrganizationUniversal</td>
+                              <td class="artifactList_code"><a href="../../domains/uvct/uvct_do_cmets.htm#COCT_MT090200UV01-msg" class="">COCT_MT090200UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <div class="subheading">Base Hierarchical Message Description
+                           				<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_RM900350UV02-rmi" class=""><img src="../../support/graphics/rmimview.gif" alt="View R-MIM" height="16" width="16" style="border-width:0" /></a> 
+                           				<a href="../../domains/uvpa/editable/PRPA_HD900350UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="editable/PRPA_HD900350UV.xls" target="_blank"><img src="../../support/graphics/excelview.gif" height="16" width="16" alt="Excel View" style="border:0px" /></a> 
+                        </div>
+                        <table class="hmd">
+                           <caption>Message Type List</caption>
+                           <tr class="">
+                              <td class="hmd_desc"><a name="PRPA_MT900350UV02-msg"></a>Patient Encounter Event Find Encounters Query Response
+                              </td>
+                              <td class="hmd_code">PRPA_MT900350UV02</td>
+                              <td class="hmd_links"><a href="../../domains/uvpa/editable/PRPA_HD900350UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="../../processable/multicacheschemas/PRPA_MT900350UV02.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> <a href="../../domains/uvpa/uvpa_DO_XX.htm#PRPA_MT900350UV02-msg" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a>
+                                 										 
+                                 									
+                                 
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">13.6</span><span class="title"><a name="ints-PRPA_DO000000UV-PatientEncounter-ic">Interactions</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e16411" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> List of Interactions (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Encounters Query(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_IN900300UV02-int" class="">PRPA_IN900300UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Encounters Query Response(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_IN900350UV02-int" class="">PRPA_IN900350UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e164112" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> List of Interactions (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Patient Encounter Event Find Encounters Query(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_IN900300UV02-int" class="">PRPA_IN900300UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Patient Encounter Event Find Encounters Query Response(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_IN900350UV02-int" class="">PRPA_IN900350UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e164113" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> List of Interactions (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Encounters Query(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_IN900300UV02-int" class="">PRPA_IN900300UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Encounters Query Response(<a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_IN900350UV02-int" class="">PRPA_IN900350UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <p></p>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3gintact">the definition of Interactions</a> in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU2" /></span><span class="number">13.6.1</span><span class="title"><a name="PRPA_IN900300UV02-int">Find Encounters Query  (PRPA_IN900300UV02) </a></span></div>
+                     <div class="body">
+                        <div class="heading">Description <a href="../../processable/multicacheschemas/PRPA_IN900300UV02.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                        </div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Patient Encounter Event Find Encounters Query</em></td>
+                           </tr>
+                        </table>
+                        <p>A user initiates a query to an encounter manager requesting all patient encounters that match a particular set of parameters.</p>
+                        <p></p>
+                        <table class="interact">
+                           <tr class="">
+                              <td class="interact_type"><b>Trigger Event</b></td>
+                              <td class="interact_desc">Find Encounters Query</td>
+                              <td class="interact_code"><a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_TE900300UV02-te" class="">PRPA_TE900300UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Transmission Wrapper</b></td>
+                              <td class="interact_desc">Send Message Payload</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_GenericMessageTransmission.htm#MCCI_MT000100UV01-msg" class="">MCCI_MT000100UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Control Act Wrapper</b></td>
+                              <td class="interact_desc">Query Control Act Request : Query By Parameter</td>
+                              <td class="interact_code"><a href="../../domains/uvqi/uvqi_QueryByParameter.htm#QUQI_MT021001UV01-msg" class="">QUQI_MT021001UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Message Type</b></td>
+                              <td class="interact_desc">Find Encounters Query</td>
+                              <td class="interact_code"><a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_MT900300UV02-msg" class="">PRPA_MT900300UV02</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="resp">
+                           <caption>Receiver Responsibilities</caption>
+                           <tr>
+                              <td class="resp_reason"><b>Reason</b></td>
+                              <td class="resp_te"><b>Trigger Event</b></td>
+                              <td class="resp_in_code"><b>Interaction</b></td>
+                           </tr>
+                           <tr>
+                              <td class="resp_reason">A Query Fulfiller application role is responsible for responding to queries</td>
+                              <td class="resp_te"><a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_TE900350UV02-te" class="">PRPA_TE900350UV02</a></td>
+                              <td class="resp_in_code"><a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_IN900350UV02-int" class="">PRPA_IN900350UV02</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="interact">
+                           <caption>Sending and Receiving Roles</caption>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Encounter Query Placer</td>
+                              <td class="interact_code"><a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_AR900301UV02-ar" class="">PRPA_AR900301UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Encounter Query Fulfiller</td>
+                              <td class="interact_code"><a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_AR900302UV02-ar" class="">PRPA_AR900302UV02</a></td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <p></p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU2" /></span><span class="number">13.6.2</span><span class="title"><a name="PRPA_IN900350UV02-int">Find Encounters Query Response  (PRPA_IN900350UV02) </a></span></div>
+                     <div class="body">
+                        <div class="heading">Description <a href="../../processable/multicacheschemas/PRPA_IN900350UV02.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                        </div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Patient Encounter Event Find Encounters Query Response</em></td>
+                           </tr>
+                        </table>
+                        <p>Upon receipt of a Find Encounters Query interaction, an encounter manager returns all patient encounters that match the given
+                           set of parameters.
+                        </p>
+                        <p></p>
+                        <table class="interact">
+                           <tr class="">
+                              <td class="interact_type"><b>Trigger Event</b></td>
+                              <td class="interact_desc">Find Encounters Query Response</td>
+                              <td class="interact_code"><a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_TE900350UV02-te" class="">PRPA_TE900350UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Transmission Wrapper</b></td>
+                              <td class="interact_desc">Application Level Acknowledgement</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_GenericMessageTransmission.htm#MCCI_MT000300UV01-msg" class="">MCCI_MT000300UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Control Act Wrapper</b></td>
+                              <td class="interact_desc">Query Control Act Response / Acknowledgement</td>
+                              <td class="interact_code"><a href="../../domains/uvqi/uvqi_QueryByParameter.htm#QUQI_MT120001UV01-msg" class="">QUQI_MT120001UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Query Response Type</b></td>
+                              <td class="interact_desc">Find Encounters Query Response</td>
+                              <td class="interact_code"><a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_MT900350UV02-msg" class="">PRPA_MT900350UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Query Definition</b></td>
+                              <td class="interact_desc">Find Encounters Query</td>
+                              <td class="interact_code"><a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_MT900300UV02-msg" class="">PRPA_MT900300UV02</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="interact">
+                           <caption>Sending and Receiving Roles</caption>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Encounter Query Fulfiller</td>
+                              <td class="interact_code"><a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_AR900302UV02-ar" class="">PRPA_AR900302UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Encounter Query Placer</td>
+                              <td class="interact_code"><a href="../../domains/uvpa/uvpa_EncounterQueries.htm#PRPA_AR900301UV02-ar" class="">PRPA_AR900301UV02</a></td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <p></p>
+               </div>
+            </div>
+            <p>
+               <table>
+                  <tbody>
+                     <tr>
+                        <td><a class="custombutton" href="#top">Return to top of page</a></td>
+                     </tr>
+                  </tbody>
+               </table>
+            </p>
+         </div>
+      </div>
+   </body>
+</html>

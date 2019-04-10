@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 3 U (http://www.xmlspy.com) by andrew hinchley (HL7 Publications TC) -->
+<div2 id="v3gcmet">
+	<!--This is Section 2.6-->
+	<head>Common Message Element Types</head>
+	<p>CMETs (Common Message Element Types) are a work product produced by a particular committee for expressing a common, useful and reusable concept. They are generally "consumed", or used by both the producing committee and other committees. Because they are intended for common use across messages produced by all committees, they are proposed to, reviewed by, and maintained by the CMET task force of the MnM committee. The CMET task force harmonizes and becomes steward for all CMETs. </p>
+	<p>A CMET can be envisioned as a message type fragment that is reusable by other message types. Any message type, including other CMETs, can reference a CMET. As an example, several committees may require the use of a common concept, that of a person in the role of a patient. A CMET can be defined to express this concept as a message type that clones a role played by a person, with all appropriate attributes. The CMET is then used to uniformly represent the concept for all interested committees. </p>
+	<p>A CMET is derived from a single D-MIM, defined by the producing committee. Its content is a direct subset of the class clones and attributes defined in that D-MIM, and does not include content from other D-MIMs (It does not “span” D-MIMs).</p>
+	<div3 id="v3gcmetsemcat">
+		<!--This is Section 2.6.1-->
+		<head>Semantic Categorization</head>
+		<p>All CMETs can be categorized along two axes: Attribution and Gen-Spec Selectivity.  The semantic intent of a CMET can be captured by  viewing the CMET as a point in this space. Selectivity generally corresponds to an HMD level of specification, and the Attribution corresponds to the message type specification within the HMD.</p>
+		<p>The attribution axis corresponds to the CMET’s message type, and always contains at least three variants:</p>
+		<p>
+			<emph role="strong">Axis 1: Attribution</emph>
+		</p>
+		<list role="ordered">
+			<item>universal – this variant includes all attributes and associations present in the R-MIM. Any of non-mandatory and non-required attributes and/or associations may be present or absent, as permitted in the cardinality constraints.</item>
+			<item>detailed – this variant is a proper subset of the universal variant, and provides a named variant that may restrict the universal variant.  Any of non-mandatory and non-required attributes and/or associations may be present or absent, as permitted in the cardinality constraints.</item>
+			<item>identified – this variant is a proper subset of universal and detailed. Only the mandatory and required attributes and associations may appear. Other variants may not be substituted at runtime.</item>
+		</list>
+		<p>Other variants that are proper subsets of universal may be defined and identified along this axis. These variants tighten constraints on one or more attributes/associations of the universal variant, falling somewhere between detailed and identified.</p>
+		<p>The Gen-Spec axis specifies the generalization-specialization hierarchies that are permissible in the message type. This corresponds to HMD level variants. There is always at least 1 variant, the fully general. Others may or may not be present</p>
+		<p>
+			<emph role="strong">Axis 2: Gen-Spec selector</emph>
+		</p>
+		<list role="ordered">
+			<item>general – this variant contains all permissible specializations of any gen-spec hierarchies represented in the R-MIM.  This variant is used when the R-MIM designer wishes any of the listed specializations to be specified at runtime.</item>
+			<item>specific – these variants specifically limit the available specializations for a message type to the one(s) specified. This variant is to be used when the message designer wishes to limit the available runtime message type choices.</item>
+		</list>
+		<!--This is  CMET Variant Axes diagram-->
+		<p>
+			<graphic source="graphics/VG_3_6_01.gif"/>
+		</p>
+	</div3>
+	<div3 id="v3gcmetdefs">
+		<!--This Section 2.6.2-->
+		<head>Definition and Use of CMETs</head>
+		<p>CMETs are intended to express a common, reusable pattern. They are not intended to be used as a mechanism to simplify a D-MIM or R-MIM diagram, however. This means that a CMET should be expressed diagrammatically as a fully expanded instance diagram, in the D-MIM, where it is defined. An entry point is attached to this diagram to indicate the root class in the CMET. </p>
+		<p>The implication is that a CMET conveys reference information only, and is not intended to be used to carry update information in a message. Simply put, a CMET should be used to help identify the focal class that is the target of an update operation. A CMET should itself not carry update values. </p>
+		<p>
+			<emph role="strong">Entry Point</emph>
+		</p>
+		<p>The entry point for a CMET identifies the single point from which that CMET is "attached" to the containing or referencing message. The entry point is identified visually in the same manner as other entry points in a D-MIM diagram. The entry point identifies the RIM class from which the HMD for the CMET is started, known as the root class. When a CMET is used, the entry point identifier is inserted into the message at that point. </p>
+		<p>
+			<emph role="strong">Type</emph>
+		</p>
+		<p>The type of a CMET is the class type of the root class, together with any externally relevant attributes, such as class_code. Currently, CMETs are of type Act, Role, and Entity. For each of these types, the CMET type is the type of the Act, Role, or Entity, respectively. </p>
+		<p>
+			<emph role="strong">Role Types</emph>
+		</p>
+		<p>If a CMET is of type Role, it may "Participate", "Play or Participate", or "Scope or Participate". This means that a CMET of class type Role may be utilized as the target of a Participation, the target of a playing entity or a Participation, or the target of a scoping entity or a Participation. Note that it still may only have a single entry point,  it cannot be the target of <emph role="strong">both</emph> a Participation <emph role="strong">and</emph> a playing entity at the same time; it may be either. </p>
+		<p>
+			<emph role="strong">Exit Point</emph>
+		</p>
+		<p>A CMET does not contain any exit points. This means that CMETs must be the "terminal" structure in a message type, i.e. one cannot leave a CMET and continue walking other portions of the R-MIM to derive an HMD. </p>
+		<p>
+			<emph role="strong">Gen-Spec Hierarchies (Choices)</emph>
+		</p>
+		<p>A CMET provides the capability to choose between instantiations of several specializations of a “Generalization-Specialization” hierarchy. This is known as a choice structure. Choice structures fall into two categories:</p>
+		<list role="unordered">
+			<item>The choice between multiple class types in the final message type is deferred until message instance creation time. In this case, the message instance must constrain the choice to a single element. In  this case, the message instance builder simply chooses the appropriate message content at runtime.</item>
+			<item>The choice is constrained in the R-MIM or HMD down to a single class type. The choice has been eliminated from the final message type, and is not available to the message instance builder. This method of constraint occurs as a result of choosing derivative CMET message types at design time.</item>
+		</list>
+	</div3>
+	<div3 id="v3gcmetitsart">
+		<head>Implementation Technology Specification Artifacts</head>
+		<p>The HL7 methodology produces an HMD and message type definitions that are then implemented by an ITS. In general, a schema defining the CMET message type is produced. This schema is then included in the message type schema for any message that utilizes the CMET. In this manner, as the CMET defines a schema for a message type, it is used to produce a message fragment that is used in a larger construct. </p>
+	</div3>
+	<div3 id="v3gcmetvis">
+		<!--This is Section 2.6.4-->
+		<head>Visual and Tabular CMET Representation</head>
+		<p>CMETs are usually described by a visual diagram, down to the HMD level, and then specified exactly by a derived tabular representation, as with other message types. The following sections are illustrative: </p>
+		<p>
+			<emph role="strong">D-MIM Diagram</emph>
+		</p>
+		<p>CMETs are derived by an iterative refinement of a domain model. The top level, the domain model, expressed visually in a D-MIM diagram, contains multiple entry points. Each entry point is identified by a name and artifact id. Each entry point thus identifies the common base, or root class for R-MIMs, and HMDs. The R-MIMs and HMDs may derive any message type, including CMETs. At this level, the artifacts are R-MIM instance diagrams, representing abstract families of message types derived from that D-MIM. </p>
+		<p>CMET entry points appear on the D-MIM diagram to illustrate their grounding in the domain model. </p>
+		<p>
+			<graphic source="graphics/VG_2_8_01.gif"/>
+		</p>
+		<p>
+			<emph role="strong">R-MIM Diagrams</emph>
+		</p>
+		<p>A single Entry point on a DMIM can produce more than one R-MIM. Each R-MIM diagram represents the family of HMDs that describe the particular set of reusable concepts. </p>
+		<p>
+			<emph role="strong">HMD Diagram</emph>
+		</p>
+		<p>Each R-MIM diagram derives one or more HMD diagrams, each of which is an instance diagram of an HMD. HMD diagrams show entry point identifiers corresponding to the HMD that is derived, following the pattern "HDrrhh00". </p>
+		<p>Notice that the CMET R-MIM diagram shows the full set of constraints to be applied to the derived HMD and message type. In this respect, it is actually an object instance diagram of the HMD. </p>
+		<p>The following diagram shows two R-MIM or HMD diagrams derived from a common entry point.  Each of the diagrams reduces the original diagram in order to specify a particular function.  These reductions include omission of attributes (right) and the elimination of one of the pair of choices (both) in order to create a CMET for a corporate or personal account.</p>
+		<p>The first: R_Responsible Party is an agent role with a person or organization as playing and scoping entities.</p>
+		<p>
+			<graphic source="graphics/VG_2_8_03A.gif"/>
+		</p>
+		<p>In the second R-MIM, a device is the playing entity.</p>
+		<p>
+			<graphic source="graphics/VG_2_8_03B.gif"/>
+		</p>
+		<p>
+			<emph role="strong">CMET Reference</emph>
+		</p>
+		<p>When a CMET is referenced, or used in another diagram, it is shown with a special notation, a box with dashed edges. It contains the name of the CMET, its artifact id, its class code and its level of attribution. Notice it is also color-coded in a manner consistent with its root class.</p>
+		<p>The following diagram shows one of the derived CMETs (HMD/MT) used in another R-MIM.</p>
+		<p>
+			<graphic source="graphics/VG_2_8_04.gif"/>
+		</p>
+		<p>
+			<emph role="strong">Tabular HMD Representation</emph>
+		</p>
+		<p>The CMET described by the HMD level CMET diagram is alternatively represented fully by an HMD table. The following diagram illustrates a sample tabular representation for the above COCT_HD950100. Note that it is only a partial view of the HMD.</p>
+		<p>
+			<graphic source="graphics/T-VG_2_8_05.gif"/>
+		</p>
+	</div3>
+	<div3 id="v3gcmetexamples">
+		<head>Examples</head>
+		<p>Refer to the Version 3 Guide Section 2.7 for examples of the XML Schema for the CMET R_Patient identified.</p>
+	</div3>
+</div2>

@@ -1,0 +1,2102 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:exslt="http://exslt.org/common">
+   <head>
+      <title>Domain: Care Provision - Care Record Query Topic</title>
+      <link rel="stylesheet" type="text/css" href="../../support/css/v3m.css" title="v3m" /><script src="../../support/js/tree.js" type="text/javascript"></script><script src="../../support/js/setTopFrameText.js" type="text/javascript"></script><script src="../../support/js/swapcss.js" type="text/javascript"></script><script type="text/javascript">
+				if (find('heading')) setHeadingTextFromFileName(document.location.href,"Care Record Query Topic");
+			</script></head>
+   <body>
+      <div class="section">
+         <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">6</span><span class="title"><a name="REPC_DO000000UV-QueryCareRecord-ic">Care Record Query Topic</a></span><table cellspacing="0" cellpadding="3" border="1">
+               <tr>
+                  <td align="center"><img src="../../support/graphics/dstulogo.gif" alt="DSTU" /><br />HL7 CP CP, R1<br />HL7 Version 3 Standard: Care Provision; Queries Care Record, Release 1<br />July 2007<img width="5" alt="spacer" src="../../support/graphics/spacer.gif" /></td>
+               </tr>
+            </table>
+         </div>
+         <div class="body">
+            <table>
+               <tbody>
+                  <tr>
+                     <td><a class="custombutton" href="uvpc.htm#contents">Return to Domain Table of Contents</a></td>
+                  </tr>
+                  <tr>
+                     <td colspan="2">
+                        <p class="lastEdit">Content Last Edited: 2008-06-03T09:25:08</p>
+                     </td>
+                  </tr>
+               </tbody>
+            </table><br /><div class="toc"><span>6.1  <a href="#sbs-REPC_DO000000UV-QueryCareRecord-ic">Storyboards</a><br /></span><span>6.2  <a href="#roles-REPC_DO000000UV-QueryCareRecord-ic">Application Roles</a><br /></span><span>6.3  <a href="#tes-REPC_DO000000UV-QueryCareRecord-ic">Trigger Events</a><br /></span><span>6.4  <a href="#rmims-REPC_DO000000UV-QueryCareRecord-ic">Refined Message Information Models</a><br /></span><span>6.5  <a href="#hmds-REPC_DO000000UV-QueryCareRecord-ic">Hierarchical Message Descriptions</a><br /></span><span>6.6  <a href="#ints-REPC_DO000000UV-QueryCareRecord-ic">Interactions</a><br /></span></div>
+            <div class="heading"><br /><b class="heading">Introduction</b></div>
+            <p>this topic covers the queries and query responses related to care actually given while a subject was under the care of a responsible
+               party
+            </p>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">6.1</span><span class="title"><a name="sbs-REPC_DO000000UV-QueryCareRecord-ic">Storyboards</a></span><hr class="sectionrule" />
+               </div>
+               <div class="body">
+                  <p><a href="#">Go To Top</a></p>
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e3303" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Storyboards (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Aged Care Assessment Record Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#REPC_ST002201UV01-str" class="">REPC_ST002201UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Patient Populates Personal EHR(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#REPC_ST002202UV01-str" class="">REPC_ST002202UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e33032" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Storyboards (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Care Record Aged Care Assessment(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#REPC_ST002201UV01-str" class="">REPC_ST002201UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Care Record Patient Populates Personal Health Record(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#REPC_ST002202UV01-str" class="">REPC_ST002202UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e33033" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Storyboards (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Aged Care Assessment Record Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#REPC_ST002201UV01-str" class="">REPC_ST002201UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Patient Populates Personal EHR(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#REPC_ST002202UV01-str" class="">REPC_ST002202UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3gstory">the storyboard discussion</a> in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">6.1.1</span><span class="title"><a name="REPC_ST002201UV01-str">Aged Care Assessment Record Query  (REPC_ST002201UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Purpose</b></div>This storyboard demonstrates querying a state or national database of eligibility for aged care assessment records to establish
+                        currency (expiry date), scope (respite, permanent, high care/low care, community, residential etc) of an existing eligibility
+                        record; which aged care assessment providers undertook the eligibility assessment; and whether any expired eligibility assessment
+                        record for the same individual exists.
+                        <p></p>
+                        <div class="subSubSubSection">
+                           <div class="header"><span class="icon"> </span><span class="number">6.1.1.1</span><span class="title"><a name="REPC_ST002201UV01-REPC_SN002201UV01-stex">Aged Care Assessment Record Query (REPC_SN002201UV01) </a></span></div>
+                           <div class="body">
+                              <p><strong>Precondition:</strong></p>
+                              <p>Nancy Nightingale is evaluating whether she can provide a package of community based services to potential client Mrs. Eve
+                                 Everywoman. However, it is not clear from the application form (completed on her behalf by her husband, Boris Betterhalf)
+                                 whether Mrs. Everywoman  has been assessed as eligible for this subsidized service. As she is authorized to access the national
+                                 aged care eligibility assessment forms registry and has Mr. Betterhalf's consent, Nancy Nightingale sends a request to the
+                                 national registry to determine whether a current or previous aged care eligibility assessment form exists for Mrs. Everywoman.
+                                 
+                              </p>
+                              <p><strong>Activities: </strong></p>
+                              <p>Nancy Nightingale logs onto the national aged care eligibility assessment registry. She enters Mrs. Everywoman's details to
+                                 query whether a current or previous eligibility assessment exists for Mrs. Everywoman.  She receives a response confirming
+                                 that an eligibility assessment was completed two years previously, is now expired, and was undertaken by an assessment team
+                                 in Melbourne, where Mrs. Everywoman used to live. 
+                              </p>
+                              <p><strong>Postcondition:</strong></p>
+                              <p>Nancy Nightingale notifies Mrs. Everywoman that she requires a current eligibility assessment before she can process her application
+                                 for community based services. She advises Mrs. Everywoman she will make arrangements for her to be seen by an eligibility
+                                 assessment team who will be able to re-assess her care needs and eligibility for government subsidized services. 
+                              </p>
+                              <p><strong>Updates Requirement Summary: </strong></p>
+                              <p>The communicators of this query message, Nancy Nightingale and the national registry system, ensure ready access by clinicians
+                                 to copies of current or preexisting aged care eligibility assessment records, avoiding delays in accessing services due to
+                                 expired or non existent assessment records.<br /><img class="graphic" src="graphics/REPC_ST002201.gif" alt="REPC_ST002201.gif" /><br /></p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">6.1.2</span><span class="title"><a name="REPC_ST002202UV01-str">Patient Populates Personal EHR  (REPC_ST002202UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Purpose</b></div>The purpose of this storyboard is to illustrate requests for components of care records.
+                        <p></p><a name="REPC_ST002202UV01-str"></a><table class="artifactList">
+                           <caption><b>Interaction List</b></caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Get Care Record Profile Query</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/QUPC_IN043100UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_IN043100UV01-int" class="">QUPC_IN043100UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="artifactList_desc">Get Care Record Response</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/QUPC_IN040200UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_IN040200UV01-int" class="">QUPC_IN040200UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="artifactList_desc">Activate Care Provision</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/REPC_IN004110UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvpc/uvpc_CareRecord.htm#REPC_IN004110UV01-int" class="">REPC_IN004110UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <div class="subSubSubSection changed">
+                           <div class="header"><span class="icon"> </span><span class="number">6.1.2.1</span><span class="title"><a name="REPC_ST002202UV01-REPC_SN002202UV01-stex">Patient Populates Personal Health Record (REPC_SN002202UV01) </a></span></div>
+                           <div class="body">
+                              <p><strong>Precondition:</strong> Mr. Adam Everyman wishes to populate a personal health record with information on his condition from Dr. Patricia Primary
+                                 held in her clinical system.
+                              </p>
+                              <p><strong>Activities: </strong>Mr. Adam Everyman requests specific information relating to his cardiac condition from Dr. Patricia Primary [Interaction:
+                                 <a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_IN043100UV01-int" class="">Get Care Record Profile Query</a>].   Dr. Primary responds by sending the answers to the specific information requested to Mr. Everyman who is able to incorporate
+                                 the information into his own personal health record [Interaction: <a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_IN043200UV01-int" class="">Get Care Record Profile Response</a>]. Mr Everyman uploads the information on his cardiac condition into his personal health record [Interaction: <a href="../../domains/uvpc/uvpc_CareRecord.htm#REPC_IN004110UV01-int" class="">Activate Care Provision</a>].
+                              </p>
+                              <p><strong>Alternate flow: </strong>Mr Everyman requests copies of particular test results and treatments relating to his cardiac condition from Dr Primary [Interaction:
+                                 <a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_IN043100UV01-int" class="">Get Care Record Profile Query</a>]. Dr Primary responds by sending the requested documents to Mr Everyman .[Interaction: <a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_IN043200UV01-int" class="">Get Care Record Profile Response</a>]
+                              </p>
+                              <p><strong>Postcondition: </strong> Mr. Everyman now has all the documents and information he requires on his cardiac condition from Dr. Primary.
+                              </p>
+                              <p><strong>Updates Requirement Summary: </strong>The communicators of this storyboard, Mr. Everyman and Dr Primary, are focused on the sourcing and exchange of extracts of
+                                 Mr. Everyman's patient record. 
+                              </p>
+                              <p>Note: This storyboard is supported under the Care Record Query Topic and the Care Record Document Topic. Care Record Summary
+                                 document is the document type that would be returned by Physician A.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">6.2</span><span class="title"><a name="roles-REPC_DO000000UV-QueryCareRecord-ic">Application Roles</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" border="0" class="help_table" width="100%">
+                              <tr id="d0e3381a" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Application Roles (Sorted by Artifact Code)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top" align="left" class="general"> </td>
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" border="0" class="">
+                                       <tr>
+                                          <td>
+                                             <table border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Care Record Query Placer&nbsp;
+                                                      					(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_AR004030UV01-ar" class="">QUPC_AR004030UV01</a>)
+                                                      				
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" border="0" class="">
+                                       <tr>
+                                          <td>
+                                             <table border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Care Record Query Fulfiller&nbsp;
+                                                      					(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_AR004040UV01-ar" class="">QUPC_AR004040UV01</a>)
+                                                      				
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" border="0" class="help_table" width="100%">
+                              <tr id="d0e3381b" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Application Roles (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top" align="left" class="general"> </td>
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" border="0" class="">
+                                       <tr>
+                                          <td>
+                                             <table border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Care Record Event Query Fulfiller&nbsp;
+                                                      					(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_AR004040UV01-ar" class="">QUPC_AR004040UV01</a>)
+                                                      				
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" border="0" class="">
+                                       <tr>
+                                          <td>
+                                             <table border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Care Record Event Query Placer&nbsp;
+                                                      					(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_AR004030UV01-ar" class="">QUPC_AR004030UV01</a>)
+                                                      				
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e33753" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Application Roles (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Care Record Query Placer(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_AR004030UV01-ar" class="">QUPC_AR004030UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Care Record Query Fulfiller(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_AR004040UV01-ar" class="">QUPC_AR004040UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3gapprole">the discussion of application roles</a> and their relationships in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">6.2.1</span><span class="title"><a name="QUPC_AR004030UV01-ar">Care Record Query Placer  (QUPC_AR004030UV01) </a></span></div>
+                     <div class="body"><b>Description</b> 
+                        					<a href="../../domains/uvpc/uvpc_DO_XX.htm#QUPC_AR004030UV01-ar" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a><table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Query Care Record Event Query Placer</em></td>
+                           </tr>
+                        </table>
+                        <p>An application that is capable of sending a care record query to another system and receiving the care record as a response
+                           to the query.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">6.2.2</span><span class="title"><a name="QUPC_AR004040UV01-ar">Care Record Query Fulfiller  (QUPC_AR004040UV01) </a></span></div>
+                     <div class="body"><b>Description</b> 
+                        					<a href="../../domains/uvpc/uvpc_DO_XX.htm#QUPC_AR004040UV01-ar" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a><table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Query Care Record Event Query Fulfiller</em></td>
+                           </tr>
+                        </table>
+                        <p>An application that is capable of receiving a care record query from another system and responding with the requested care
+                           record.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">6.3</span><span class="title"><a name="tes-REPC_DO000000UV-QueryCareRecord-ic">Trigger Events</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e3406" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Trigger Events (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Care Record Candidate Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_TE041100UV01-te" class="">QUPC_TE041100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Care Record Candidate Response(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_TE041200UV01-te" class="">QUPC_TE041200UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Get Care Record Profile Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_TE043100UV01-te" class="">QUPC_TE043100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Get Care Record Profile Response(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_TE043200UV01-te" class="">QUPC_TE043200UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Get Care Record Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_TE040100UV01-te" class="">QUPC_TE040100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Get Care Record Response(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_TE040200UV01-te" class="">QUPC_TE040200UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e34062" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Trigger Events (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Care Record Event Find Candidate Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_TE041100UV01-te" class="">QUPC_TE041100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Care Record Event Find Candidate Query Response(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_TE041200UV01-te" class="">QUPC_TE041200UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Care Record Event Get Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_TE040100UV01-te" class="">QUPC_TE040100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Care Record Event Get Query Response(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_TE040200UV01-te" class="">QUPC_TE040200UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Care Record Event Profile Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_TE043100UV01-te" class="">QUPC_TE043100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Care Record Event Profile Query Response(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_TE043200UV01-te" class="">QUPC_TE043200UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e34063" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Trigger Events (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Care Record Candidate Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_TE041100UV01-te" class="">QUPC_TE041100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Care Record Candidate Response(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_TE041200UV01-te" class="">QUPC_TE041200UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Get Care Record Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_TE040100UV01-te" class="">QUPC_TE040100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Get Care Record Response(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_TE040200UV01-te" class="">QUPC_TE040200UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Get Care Record Profile Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_TE043100UV01-te" class="">QUPC_TE043100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Get Care Record Profile Response(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_TE043200UV01-te" class="">QUPC_TE043200UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3gtrigger">the discussion of trigger events</a> in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">6.3.1</span><span class="title"><a name="QUPC_TE041100UV01-te">Find Care Record Candidate Query  (QUPC_TE041100UV01) </a></span></div>
+                     <div class="body">
+                        <div class="subheading">Description
+                           				<a href="../../domains/uvpc/uvpc_DO_XX.htm#QUPC_TE041100UV01-te" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a></div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Query Care Record Event Find Candidate Query</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>Type: </em></td>
+                              <td class="structType_value"><em>User request</em></td>
+                           </tr>
+                        </table>
+                        <p>A request to find candidate Care Records that match the query criteria.  A list of summarized Care Records are expected in
+                           response.  
+                        </p>
+                        <p>V2 Reference   There is no equivalent event in 2.x.</p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">6.3.2</span><span class="title"><a name="QUPC_TE041200UV01-te">Find Care Record Candidate Response  (QUPC_TE041200UV01) </a></span></div>
+                     <div class="body">
+                        <div class="subheading">Description
+                           				<a href="../../domains/uvpc/uvpc_DO_XX.htm#QUPC_TE041200UV01-te" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a></div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Query Care Record Event Find Candidate Query Response</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>Type: </em></td>
+                              <td class="structType_value"><em>Interaction based</em></td>
+                           </tr>
+                        </table>The  list of summarized Care Records that are presented as response to the Care Record Candidate Query.
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">6.3.3</span><span class="title"><a name="QUPC_TE040100UV01-te">Get Care Record Query  (QUPC_TE040100UV01) </a></span></div>
+                     <div class="body">
+                        <div class="subheading">Description
+                           				<a href="../../domains/uvpc/uvpc_DO_XX.htm#QUPC_TE040100UV01-te" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a></div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Query Care Record Event Get Query</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>Type: </em></td>
+                              <td class="structType_value"><em>User request</em></td>
+                           </tr>
+                        </table>
+                        <p>A request for a specific Care Record determined by its unique identifier.  A Care Record matching the query criteria is expected
+                           in response.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">6.3.4</span><span class="title"><a name="QUPC_TE040200UV01-te">Get Care Record Response  (QUPC_TE040200UV01) </a></span></div>
+                     <div class="body">
+                        <div class="subheading">Description
+                           				<a href="../../domains/uvpc/uvpc_DO_XX.htm#QUPC_TE040200UV01-te" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a></div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Query Care Record Event Get Query Response</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>Type: </em></td>
+                              <td class="structType_value"><em>Interaction based</em></td>
+                           </tr>
+                        </table>
+                        <p>A reponse to a query for a specific Care Record determined by its unique identifier.  A Care Record matching the query criteria
+                           is returned in this response.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">6.3.5</span><span class="title"><a name="QUPC_TE043100UV01-te">Get Care Record Profile Query  (QUPC_TE043100UV01) </a></span></div>
+                     <div class="body">
+                        <div class="subheading">Description
+                           				<a href="../../domains/uvpc/uvpc_DO_XX.htm#QUPC_TE043100UV01-te" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a></div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Query Care Record Event Profile Query</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>Type: </em></td>
+                              <td class="structType_value"><em>User request</em></td>
+                           </tr>
+                        </table>
+                        <p>A request to retrieve a care profile derived from the patient health record that matches the query criteria.  A Care Record
+                           representing this care profile is expected in response. 
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">6.3.6</span><span class="title"><a name="QUPC_TE043200UV01-te">Get Care Record Profile Response  (QUPC_TE043200UV01) </a></span></div>
+                     <div class="body">
+                        <div class="subheading">Description
+                           				<a href="../../domains/uvpc/uvpc_DO_XX.htm#QUPC_TE043200UV01-te" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a></div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Query Care Record Event Profile Query Response</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>Type: </em></td>
+                              <td class="structType_value"><em>Interaction based</em></td>
+                           </tr>
+                        </table>The Care Record response representing the Care Profile Query.
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">6.4</span><span class="title"><a name="rmims-REPC_DO000000UV-QueryCareRecord-ic">Refined Message Information Models</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e3442" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Refined Message Information Models (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Care Record Profile Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_RM040300UV01-rmi" class="">QUPC_RM040300UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Care Record Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_RM040000UV01-rmi" class="">QUPC_RM040000UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Care Record Candidate Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_RM040100UV01-rmi" class="">QUPC_RM040100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e34422" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Refined Message Information Models (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Care Record Event Find Candidate(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_RM040100UV01-rmi" class="">QUPC_RM040100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Care Record Event Get(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_RM040000UV01-rmi" class="">QUPC_RM040000UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Care Record Event Profile(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_RM040300UV01-rmi" class="">QUPC_RM040300UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e34423" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Refined Message Information Models (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Care Record Candidate Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_RM040100UV01-rmi" class="">QUPC_RM040100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Care Record Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_RM040000UV01-rmi" class="">QUPC_RM040000UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Care Record Profile Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_RM040300UV01-rmi" class="">QUPC_RM040300UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3grmim">the description of RMIMs</a> in the Version 3 Guide.
+                  </p>
+                  <p></p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">6.4.1</span><span class="title"><a name="QUPC_RM040100UV01-rmi">Find Care Record Candidate Query  (QUPC_RM040100UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/QUPC_RM040100UV.htm" target="_blank"><img class="graphic" src="editable/images/T-QUPC_RM040100UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><div class="subheading">Description</div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><b><em>Parent:  </em></b></td>
+                              <td class="structType_value"><em>None Specified</em></td>
+                           </tr>
+                        </table>
+                        <p>The Find Care Record Candidate Query request RMIM provides the list of query parameters needed to retrieve a list of summarized
+                           Care Records based on the specified criteria.  These query parameters are as follows:
+                        </p>
+                        <ul>
+                           <li>PatientId: The unique identifier (II) of the patient whose records are being retrieved.  The parameter is mandatory and should
+                              contain exactly one patient identifer, which must not be null.  
+                           </li>
+                           <li>PatientName: The label (PN) by which the patient whose records are being retrieved is known and communicated with.  The patient
+                              name is used for verification of the patient identifier for the query request.  The parameter is required to be supported
+                              but has a maximum of just one patient name.  
+                           </li>
+                           <li>PatientAdministrativeGender: Indicates the gender (CE) of the patient whose records are being retrieved.  Used to assist in
+                              identification of the patient accurately, in the context of other parameters.  The parameter is required to be supported but
+                              has a maximum of just one gender code value. 
+                           </li>
+                           <li>PatientBirthTime: The calendar date (TS) on which a patient whose records are being retrieved was born.  Used to assist in
+                              identification of the patient accurately, in the context of other parameters.  The parameter is required to be supported but
+                              has a maximum of just one date value.  
+                           </li>
+                           <li>CareRecordTimePeriod:  The date range (IVL&lt;TS&gt;) of Care Record contributions to be included in the candidate list.  A query
+                              can request new contribution that have been processed for this patient since the last query request. For example, a system
+                              can query about a patient each month and only get the new contributions to the patient's health record.  The parameter is
+                              required to be supported but has a maximum of just one date range.
+                           </li>
+                           <li>CareProvisionCode:  The code (CD) representing the type of the Care Records to be retrieved.  A query can request a list of
+                              Care Records of a specific type, such as a hospital discharge summary, or a more general grouping of Care Record types, such
+                              as ambulatory patient visits.  The parameter is required to be supported but has a maximum of just one type of Care Record
+                              code value.
+                           </li>
+                           <li>CareProvisionReason: The code (CD) representing the condition that is the "reason" for the Care Provision reported in the
+                              Care Record.  A query can request a list of Care Records that are related to managing a current or previous condition, such
+                              as Pregnancy.  The parameter is required to be supported allows multiple care provision reason code values.
+                           </li>
+                           <li>MaximumCandidates: The maximum number (INT) of candidate Care Records to be returned that match the query criteria.  For example
+                              15= fifteen most recent Care Records that match the query criteria, unspecified= all Care Records that match the query criteria.
+                              The default is for all Care Records to be returned.  The parameter is required to be supported but has a maximum of just one
+                              integer value.
+                           </li>
+                        </ul>
+                        <p></p>
+                        <table class="artifactList">
+                           <caption>Contained Hierarchical Message Descriptions</caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Query Care Record Event Find Candidate</td>
+                              <td class="artifactList_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_HD040100UV01-hmd" class="">QUPC_HD040100UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">6.4.2</span><span class="title"><a name="QUPC_RM040000UV01-rmi">Care Record Query  (QUPC_RM040000UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/QUPC_RM040000UV.htm" target="_blank"><img class="graphic" src="editable/images/T-QUPC_RM040000UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><div class="subheading">Description</div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><b><em>Parent:  </em></b></td>
+                              <td class="structType_value"><em>None Specified</em></td>
+                           </tr>
+                        </table>
+                        <p>The Care Record Query request RMIM provides the list of query parameters needed to retreive a specific Care Record determined
+                           by its unique identifier.  These query parameters are as follows:
+                        </p>
+                        <ul>
+                           <li>CareRecordId: The unique identifier (II) of the Care Record to be retrieved.  The parameter is mandatory and should contain
+                              exactly one Care Record identifier which must not be null. 
+                           </li>
+                           <li>PatientId: The unique identifier (II) of the patient whose record is being retrieved.  The parameter is required to be supported
+                              but has a maximum of just one patient identifier.  This parameter can be provided to ensure that Care Record being requested
+                              is for the correct patient or when Care Record identfiers are only unique for a particular patient.
+                           </li>
+                           <li>VersionTimestamp: The date/time (TS) at which point the state of the Care Record retrieved should be reflected, that is, retreive
+                              the Care Record snapshot at that point in time.  The parameter is required to be supported but has a maximum of just one timestamp.
+                              
+                           </li>
+                           <li>IncludeCarePlanAttachment:  An indicator (BL) that, if set to true, would include any care plan attachments that are available.
+                              If set to false, care plan attachments would not be sent or returned in the query response.  The default is 'false'.  The
+                              parameter is required to be supported but has a maximum of just one boolean indicator.
+                           </li>
+                           <li>MaximumHistoryStatements: The number (INT) of repetitions of each type of historical clinical statement (e.g. A1Cs, weight,
+                              dispensed medications, etc.) to be returned.  For example 1= most recent, 2= last two clinical statements, unspecified= all
+                              available clinical statements.  The default is for all records to be returned.  The parameter is required to be supported
+                              but has a maximum of just one integer value.
+                           </li>
+                        </ul>
+                        <p></p>
+                        <table class="artifactList">
+                           <caption>Contained Hierarchical Message Descriptions</caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Query Care Record Event Get</td>
+                              <td class="artifactList_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_HD040000UV01-hmd" class="">QUPC_HD040000UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">6.4.3</span><span class="title"><a name="QUPC_RM040300UV01-rmi">Care Record Profile Query  (QUPC_RM040300UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/QUPC_RM040300UV.htm" target="_blank"><img class="graphic" src="editable/images/T-QUPC_RM040300UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><div class="subheading">Description</div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><b><em>Parent:  </em></b></td>
+                              <td class="structType_value"><em>None Specified</em></td>
+                           </tr>
+                        </table>
+                        <p>The Care Record Profile Query request RMIM provides the list of query parameters needed to retreive a care profile derived
+                           from patient health record matching the criteria parameters.  These query parameters are as follows:
+                        </p>
+                        <ul>
+                           <li>PatientId: The unique identifer (II) of the patient whose records are being retreived.  The parameter is mandatory and should
+                              contain exactly one patient identifer, which must not be null.  
+                           </li>
+                           <li>PatientName: The label (PN) by which the patient whose records are being retreived is known and communicated with.  The patient
+                              name is used for verification of the patient identifier for the query request.  The parameter is required to be supported
+                              but has a maximum of just one patient name.  
+                           </li>
+                           <li>PatientAdministrativeGender: Inidcates the gender (CE) of the patient whose records are being retreived.  Used to assist in
+                              identification of the patient accurately, in the context of other parameters.  The parameter is required to be supported but
+                              has a maximum of just one gender code value. 
+                           </li>
+                           <li>PatientBirthTime: The calender date (TS) on which a patient whose records are being retreived was born.  Used to assist in
+                              identification of the patient accurately, in the context of other parameters.  The parameter is required to be supported but
+                              has a maximum of just one date value.  
+                           </li>
+                           <li>ClinicalStatementTimePeriod: The date range (IVL&lt;TS&gt;) of the Clinical Statements to be included in the retrieved Care Record
+                              profile. For example when the lab test was resulted, when the drug was dispensed, when the procedure occurred, etc.  This
+                              parameter allows for the filtering of clinical statments in a query response. Only clinical statement, with date attributes
+                              that fall within this date range will be included in the query response.  The parameter is required to be supported but has
+                              a maximum of just one date range.  
+                           </li>
+                           <li>CareRecordTimePeriod:  The date range (IVL&lt;TS&gt;) of Care Record contributions to be included in the candidate list.  A query
+                              can request new contribution that have been processed for this patient since the last query request. For example, a system
+                              can query about a patient each month and only get the new contributions to the patient's health record.  The parameter is
+                              required to be supported but has a maximum of just one date range. 
+                           </li>
+                           <li>CareProvisionCode:  The code (CD) representing the type of the Care Records to be retreived.  A query can request a list of
+                              Care Records of a specific type, such as a hospital discharge summary, or a more general grouping of Care Record types, such
+                              as ambulatory patient visits.  The parameter is required to be supported but has a maximum of just one type of Care Record
+                              code value.
+                           </li>
+                           <li>CareProvisionReason: The code (CD) representing the condition that is the "reason" for the Care Provision reported in the
+                              Care Record.  A query can request a list of Care Records that are related to managing a current or previous condition, such
+                              as Pregnancy.  The parameter is required to be supported The parameter is required to be supported and allows multiple care
+                              provision reason code values.
+                           </li>
+                           <li>MaximumHistoryStatements: The number (INT) of repetitions of each type of historical clinical statement (e.g. A1Cs, weight,
+                              dispensed medications, etc.) to be returned.  For example 1= most recent, 2= last two clincial statements, unspecified= all
+                              available clinical statments.  The default is for all records to be returned.  The parameter is required to be supported but
+                              has a maximum of just one integer value.
+                           </li>
+                           <li>IncludeCarePlanAttachment:  An indicator (BL) that, if set to true, would include any care plan attachments that are available.
+                              If set to false, care plan attachments would not be sent or returned in the query response.  The default is 'false'.  The
+                              parameter is required to be supported but has a maximum of just one boolean indicator.
+                           </li>
+                        </ul>
+                        <p></p>
+                        <table class="artifactList">
+                           <caption>Contained Hierarchical Message Descriptions</caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Query Care Record Event Profile</td>
+                              <td class="artifactList_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_HD040300UV01-hmd" class="">QUPC_HD040300UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">6.5</span><span class="title"><a name="hmds-REPC_DO000000UV-QueryCareRecord-ic">Hierarchical Message Descriptions</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e3515" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Hierarchical Message Descriptions (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Care Record Profile Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_HD040300UV01-hmd" class="">QUPC_HD040300UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Care Record Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_HD040000UV01-hmd" class="">QUPC_HD040000UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Care Record Candidate Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_HD040100UV01-hmd" class="">QUPC_HD040100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e35152" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Hierarchical Message Descriptions (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Care Record Event Find Candidate(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_HD040100UV01-hmd" class="">QUPC_HD040100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Care Record Event Get(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_HD040000UV01-hmd" class="">QUPC_HD040000UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Care Record Event Profile(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_HD040300UV01-hmd" class="">QUPC_HD040300UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e35153" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Hierarchical Message Descriptions (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Care Record Candidate Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_HD040100UV01-hmd" class="">QUPC_HD040100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Care Record Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_HD040000UV01-hmd" class="">QUPC_HD040000UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Care Record Profile Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_HD040300UV01-hmd" class="">QUPC_HD040300UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <p></p>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3ghmd">the description of HMDs</a> in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">6.5.1</span><span class="title"><a name="QUPC_HD040100UV01-hmd">Find Care Record Candidate Query  (QUPC_HD040100UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Description</b></div>
+                        <p>A request to find candidate Care Records that match the query criteria.</p>
+                        <p>At this time there is no content for this section.</p>
+                        <p></p>
+                        <div class="subheading">Base Hierarchical Message Description
+                           				<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_RM040100UV01-rmi" class=""><img src="../../support/graphics/rmimview.gif" alt="View R-MIM" height="16" width="16" style="border-width:0" /></a> 
+                           				<a href="../../domains/uvpc/editable/QUPC_HD040100UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="editable/QUPC_HD040100UV.xls" target="_blank"><img src="../../support/graphics/excelview.gif" height="16" width="16" alt="Excel View" style="border:0px" /></a> 
+                        </div>
+                        <table class="hmd">
+                           <caption>Message Type List</caption>
+                           <tr class="">
+                              <td class="hmd_desc"><a name="QUPC_MT040100UV01-msg"></a>Query Care Record Event Find Candidate
+                              </td>
+                              <td class="hmd_code">QUPC_MT040100UV01</td>
+                              <td class="hmd_links"><a href="../../domains/uvpc/editable/QUPC_HD040100UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="../../processable/multicacheschemas/QUPC_MT040100UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> <a href="../../domains/uvpc/uvpc_DO_XX.htm#QUPC_MT040100UV01-msg" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a>
+                                 										 
+                                 									
+                                 
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">6.5.2</span><span class="title"><a name="QUPC_HD040000UV01-hmd">Care Record Query  (QUPC_HD040000UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Description</b></div>
+                        <p>A request for a specific Care Record determined by its unique identifer.</p>
+                        <p>At this time there is no content for this section.</p>
+                        <p></p>
+                        <div class="subheading">Base Hierarchical Message Description
+                           				<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_RM040000UV01-rmi" class=""><img src="../../support/graphics/rmimview.gif" alt="View R-MIM" height="16" width="16" style="border-width:0" /></a> 
+                           				<a href="../../domains/uvpc/editable/QUPC_HD040000UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="editable/QUPC_HD040000UV.xls" target="_blank"><img src="../../support/graphics/excelview.gif" height="16" width="16" alt="Excel View" style="border:0px" /></a> 
+                        </div>
+                        <table class="hmd">
+                           <caption>Message Type List</caption>
+                           <tr class="">
+                              <td class="hmd_desc"><a name="QUPC_MT040000UV01-msg"></a>Query Care Record Event Get
+                              </td>
+                              <td class="hmd_code">QUPC_MT040000UV01</td>
+                              <td class="hmd_links"><a href="../../domains/uvpc/editable/QUPC_HD040000UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="../../processable/multicacheschemas/QUPC_MT040000UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> <a href="../../domains/uvpc/uvpc_DO_XX.htm#QUPC_MT040000UV01-msg" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a>
+                                 										 
+                                 									
+                                 
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">6.5.3</span><span class="title"><a name="QUPC_HD040300UV01-hmd">Care Record Profile Query  (QUPC_HD040300UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Description</b></div>
+                        <p>A request to retrieve a care profile derived from the patient's health record that matches the query criteria.  </p>
+                        <p>At this time there is no content for this section.</p>
+                        <p></p>
+                        <div class="subheading">Base Hierarchical Message Description
+                           				<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_RM040300UV01-rmi" class=""><img src="../../support/graphics/rmimview.gif" alt="View R-MIM" height="16" width="16" style="border-width:0" /></a> 
+                           				<a href="../../domains/uvpc/editable/QUPC_HD040300UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="editable/QUPC_HD040300UV.xls" target="_blank"><img src="../../support/graphics/excelview.gif" height="16" width="16" alt="Excel View" style="border:0px" /></a> 
+                        </div>
+                        <table class="hmd">
+                           <caption>Message Type List</caption>
+                           <tr class="">
+                              <td class="hmd_desc"><a name="QUPC_MT040300UV01-msg"></a>Query Care Record Event Profile
+                              </td>
+                              <td class="hmd_code">QUPC_MT040300UV01</td>
+                              <td class="hmd_links"><a href="../../domains/uvpc/editable/QUPC_HD040300UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="../../processable/multicacheschemas/QUPC_MT040300UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> <a href="../../domains/uvpc/uvpc_DO_XX.htm#QUPC_MT040300UV01-msg" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a>
+                                 										 
+                                 									
+                                 
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">6.6</span><span class="title"><a name="ints-REPC_DO000000UV-QueryCareRecord-ic">Interactions</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e3555" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> List of Interactions (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Care Record Candidate Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_IN041100UV01-int" class="">QUPC_IN041100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Care Record Candidate Response(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_IN041200UV01-int" class="">QUPC_IN041200UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Get Care Record Profile Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_IN043100UV01-int" class="">QUPC_IN043100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Get Care Record Profile Response(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_IN043200UV01-int" class="">QUPC_IN043200UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Get Care Record Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_IN040100UV01-int" class="">QUPC_IN040100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Get Care Record Response(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_IN040200UV01-int" class="">QUPC_IN040200UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e35552" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> List of Interactions (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Care Record Event Find Candidate Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_IN041100UV01-int" class="">QUPC_IN041100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Care Record Event Find Candidate Query Response(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_IN041200UV01-int" class="">QUPC_IN041200UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Care Record Event Get Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_IN040100UV01-int" class="">QUPC_IN040100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Care Record Event Get Query Response(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_IN040200UV01-int" class="">QUPC_IN040200UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Care Record Event Profile Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_IN043100UV01-int" class="">QUPC_IN043100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Query Care Record Event Profile Query Response(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_IN043200UV01-int" class="">QUPC_IN043200UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e35553" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> List of Interactions (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Care Record Candidate Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_IN041100UV01-int" class="">QUPC_IN041100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Find Care Record Candidate Response(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_IN041200UV01-int" class="">QUPC_IN041200UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Get Care Record Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_IN040100UV01-int" class="">QUPC_IN040100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Get Care Record Response(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_IN040200UV01-int" class="">QUPC_IN040200UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Get Care Record Profile Query(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_IN043100UV01-int" class="">QUPC_IN043100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Get Care Record Profile Response(<a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_IN043200UV01-int" class="">QUPC_IN043200UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <p></p>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3gintact">the definition of Interactions</a> in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">6.6.1</span><span class="title"><a name="QUPC_IN041100UV01-int">Find Care Record Candidate Query  (QUPC_IN041100UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">Description <a href="../../processable/multicacheschemas/QUPC_IN041100UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                        </div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Query Care Record Event Find Candidate Query</em></td>
+                           </tr>
+                        </table>
+                        <p>A request to find candidate Care Records that match the query criteria.  A list of summarized Care Records are expected in
+                           response.  
+                        </p>
+                        <p></p>
+                        <table class="interact">
+                           <tr class="">
+                              <td class="interact_type"><b>Trigger Event</b></td>
+                              <td class="interact_desc">Find Care Record Candidate Query</td>
+                              <td class="interact_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_TE041100UV01-te" class="">QUPC_TE041100UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Transmission Wrapper</b></td>
+                              <td class="interact_desc">Send Message Payload</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_GenericMessageTransmission.htm#MCCI_MT000100UV01-msg" class="">MCCI_MT000100UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Control Act Wrapper</b></td>
+                              <td class="interact_desc">Query Control Act Request : Parameter List</td>
+                              <td class="interact_code"><a href="../../domains/uvqi/uvqi_QueryByParameter.htm#QUQI_MT020001UV01-msg" class="">QUQI_MT020001UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Message Type</b></td>
+                              <td class="interact_desc">Find Care Record Candidate Query</td>
+                              <td class="interact_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_MT040100UV01-msg" class="">QUPC_MT040100UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="resp">
+                           <caption>Receiver Responsibilities</caption>
+                           <tr>
+                              <td class="resp_reason"><b>Reason</b></td>
+                              <td class="resp_te"><b>Trigger Event</b></td>
+                              <td class="resp_in_code"><b>Interaction</b></td>
+                           </tr>
+                           <tr>
+                              <td class="resp_reason">This is the expected response to the Find Care Record Candidates query</td>
+                              <td class="resp_te"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_TE041200UV01-te" class="">QUPC_TE041200UV01</a></td>
+                              <td class="resp_in_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_IN041200UV01-int" class="">QUPC_IN041200UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="interact">
+                           <caption>Sending and Receiving Roles</caption>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Care Record Query Placer</td>
+                              <td class="interact_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_AR004030UV01-ar" class="">QUPC_AR004030UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Care Record Query Fulfiller</td>
+                              <td class="interact_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_AR004040UV01-ar" class="">QUPC_AR004040UV01</a></td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <p></p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">6.6.2</span><span class="title"><a name="QUPC_IN041200UV01-int">Find Care Record Candidate Response  (QUPC_IN041200UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">Description <a href="../../processable/multicacheschemas/QUPC_IN041200UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                        </div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Query Care Record Event Find Candidate Query Response</em></td>
+                           </tr>
+                        </table>
+                        <p>A response to a query to find candidate Care Records that match the query criteria.   A list of summarized Care Records are
+                           returned in this response.
+                        </p>
+                        <p></p>
+                        <table class="interact">
+                           <tr class="">
+                              <td class="interact_type"><b>Trigger Event</b></td>
+                              <td class="interact_desc">Find Care Record Candidate Response</td>
+                              <td class="interact_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_TE041200UV01-te" class="">QUPC_TE041200UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Transmission Wrapper</b></td>
+                              <td class="interact_desc">Application Level Acknowledgement</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_GenericMessageTransmission.htm#MCCI_MT000300UV01-msg" class="">MCCI_MT000300UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Control Act Wrapper</b></td>
+                              <td class="interact_desc">Master File / Registry Query Response, Act Subject</td>
+                              <td class="interact_code"><a href="../../domains/uvmi/uvmi_MasterFile-Registry.htm#MFMI_MT700712UV01-msg" class="">MFMI_MT700712UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Query Response Type</b></td>
+                              <td class="interact_desc">Care Record Candidate</td>
+                              <td class="interact_code"><a href="../../domains/uvpc/uvpc_CareRecord.htm#REPC_MT004005UV01-msg" class="">REPC_MT004005UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Query Definition</b></td>
+                              <td class="interact_desc">Find Care Record Candidate Query</td>
+                              <td class="interact_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_MT040100UV01-msg" class="">QUPC_MT040100UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="interact">
+                           <caption>Sending and Receiving Roles</caption>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Care Record Query Fulfiller</td>
+                              <td class="interact_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_AR004040UV01-ar" class="">QUPC_AR004040UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Care Record Query Placer</td>
+                              <td class="interact_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_AR004030UV01-ar" class="">QUPC_AR004030UV01</a></td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <p></p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">6.6.3</span><span class="title"><a name="QUPC_IN040100UV01-int">Get Care Record Query  (QUPC_IN040100UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">Description <a href="../../processable/multicacheschemas/QUPC_IN040100UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                        </div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Query Care Record Event Get Query</em></td>
+                           </tr>
+                        </table>
+                        <p>A request for a specific Care Record determined by its unique identifier.  A Care Record matching the query criteria is expected
+                           in response.  
+                        </p>
+                        <p></p>
+                        <table class="interact">
+                           <tr class="">
+                              <td class="interact_type"><b>Trigger Event</b></td>
+                              <td class="interact_desc">Get Care Record Query</td>
+                              <td class="interact_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_TE040100UV01-te" class="">QUPC_TE040100UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Transmission Wrapper</b></td>
+                              <td class="interact_desc">Send Message Payload</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_GenericMessageTransmission.htm#MCCI_MT000100UV01-msg" class="">MCCI_MT000100UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Control Act Wrapper</b></td>
+                              <td class="interact_desc">Query Control Act Request : Parameter List</td>
+                              <td class="interact_code"><a href="../../domains/uvqi/uvqi_QueryByParameter.htm#QUQI_MT020001UV01-msg" class="">QUQI_MT020001UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Message Type</b></td>
+                              <td class="interact_desc">Care Record Query</td>
+                              <td class="interact_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_MT040000UV01-msg" class="">QUPC_MT040000UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="resp">
+                           <caption>Receiver Responsibilities</caption>
+                           <tr>
+                              <td class="resp_reason"><b>Reason</b></td>
+                              <td class="resp_te"><b>Trigger Event</b></td>
+                              <td class="resp_in_code"><b>Interaction</b></td>
+                           </tr>
+                           <tr>
+                              <td class="resp_reason">This is the expected response to the Get Care Record Query</td>
+                              <td class="resp_te"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_TE040200UV01-te" class="">QUPC_TE040200UV01</a></td>
+                              <td class="resp_in_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_IN040200UV01-int" class="">QUPC_IN040200UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="interact">
+                           <caption>Sending and Receiving Roles</caption>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Care Record Query Placer</td>
+                              <td class="interact_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_AR004030UV01-ar" class="">QUPC_AR004030UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Care Record Query Fulfiller</td>
+                              <td class="interact_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_AR004040UV01-ar" class="">QUPC_AR004040UV01</a></td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <p></p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">6.6.4</span><span class="title"><a name="QUPC_IN040200UV01-int">Get Care Record Response  (QUPC_IN040200UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">Description <a href="../../processable/multicacheschemas/QUPC_IN040200UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                        </div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Query Care Record Event Get Query Response</em></td>
+                           </tr>
+                        </table>
+                        <p>A response to a query for a specific Care Record determined by its unique identifier.  A Care Record matching the query criteria
+                           is returned in this response.  
+                        </p>
+                        <p></p>
+                        <table class="interact">
+                           <tr class="">
+                              <td class="interact_type"><b>Trigger Event</b></td>
+                              <td class="interact_desc">Get Care Record Response</td>
+                              <td class="interact_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_TE040200UV01-te" class="">QUPC_TE040200UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Transmission Wrapper</b></td>
+                              <td class="interact_desc">Application Level Acknowledgement</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_GenericMessageTransmission.htm#MCCI_MT000300UV01-msg" class="">MCCI_MT000300UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Control Act Wrapper</b></td>
+                              <td class="interact_desc">Master File / Registry Query Response, Act Subject</td>
+                              <td class="interact_code"><a href="../../domains/uvmi/uvmi_MasterFile-Registry.htm#MFMI_MT700712UV01-msg" class="">MFMI_MT700712UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Query Response Type</b></td>
+                              <td class="interact_desc">Care Record</td>
+                              <td class="interact_code"><a href="../../domains/uvpc/uvpc_CareRecord.htm#REPC_MT004000UV01-msg" class="">REPC_MT004000UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Query Definition</b></td>
+                              <td class="interact_desc">Care Record Query</td>
+                              <td class="interact_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_MT040000UV01-msg" class="">QUPC_MT040000UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="interact">
+                           <caption>Sending and Receiving Roles</caption>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Care Record Query Fulfiller</td>
+                              <td class="interact_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_AR004040UV01-ar" class="">QUPC_AR004040UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Care Record Query Placer</td>
+                              <td class="interact_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_AR004030UV01-ar" class="">QUPC_AR004030UV01</a></td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <p></p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">6.6.5</span><span class="title"><a name="QUPC_IN043100UV01-int">Get Care Record Profile Query  (QUPC_IN043100UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">Description <a href="../../processable/multicacheschemas/QUPC_IN043100UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                        </div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Query Care Record Event Profile Query</em></td>
+                           </tr>
+                        </table>
+                        <p>A request to retrieve a care profile derived from the patient's health record.  A Care Record representing this care profile
+                           that matches the query criteria is expected in response .   
+                        </p>
+                        <p></p>
+                        <table class="interact">
+                           <tr class="">
+                              <td class="interact_type"><b>Trigger Event</b></td>
+                              <td class="interact_desc">Get Care Record Profile Query</td>
+                              <td class="interact_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_TE043100UV01-te" class="">QUPC_TE043100UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Transmission Wrapper</b></td>
+                              <td class="interact_desc">Send Message Payload</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_GenericMessageTransmission.htm#MCCI_MT000100UV01-msg" class="">MCCI_MT000100UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Control Act Wrapper</b></td>
+                              <td class="interact_desc">Query Control Act Request : Parameter List</td>
+                              <td class="interact_code"><a href="../../domains/uvqi/uvqi_QueryByParameter.htm#QUQI_MT020001UV01-msg" class="">QUQI_MT020001UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Message Type</b></td>
+                              <td class="interact_desc">Care Record Profile Query</td>
+                              <td class="interact_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_MT040300UV01-msg" class="">QUPC_MT040300UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="resp">
+                           <caption>Receiver Responsibilities</caption>
+                           <tr>
+                              <td class="resp_reason"><b>Reason</b></td>
+                              <td class="resp_te"><b>Trigger Event</b></td>
+                              <td class="resp_in_code"><b>Interaction</b></td>
+                           </tr>
+                           <tr>
+                              <td class="resp_reason">This is the expected response to the Get Care Record Profile query</td>
+                              <td class="resp_te"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_TE043200UV01-te" class="">QUPC_TE043200UV01</a></td>
+                              <td class="resp_in_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_IN043200UV01-int" class="">QUPC_IN043200UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="interact">
+                           <caption>Sending and Receiving Roles</caption>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Care Record Query Placer</td>
+                              <td class="interact_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_AR004030UV01-ar" class="">QUPC_AR004030UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Care Record Query Fulfiller</td>
+                              <td class="interact_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_AR004040UV01-ar" class="">QUPC_AR004040UV01</a></td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <p></p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number">6.6.6</span><span class="title"><a name="QUPC_IN043200UV01-int">Get Care Record Profile Response  (QUPC_IN043200UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">Description <a href="../../processable/multicacheschemas/QUPC_IN043200UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                        </div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Query Care Record Event Profile Query Response</em></td>
+                           </tr>
+                        </table>
+                        <p>A response to a query for a care profile derived from the patient's health record.  A Care Record that represents the care
+                           profile, which matches the query criteria is returned in this response. 
+                        </p>
+                        <p></p>
+                        <table class="interact">
+                           <tr class="">
+                              <td class="interact_type"><b>Trigger Event</b></td>
+                              <td class="interact_desc">Get Care Record Profile Response</td>
+                              <td class="interact_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_TE043200UV01-te" class="">QUPC_TE043200UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Transmission Wrapper</b></td>
+                              <td class="interact_desc">Application Level Acknowledgement</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_GenericMessageTransmission.htm#MCCI_MT000300UV01-msg" class="">MCCI_MT000300UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Control Act Wrapper</b></td>
+                              <td class="interact_desc">Master File / Registry Query Response, Act Subject</td>
+                              <td class="interact_code"><a href="../../domains/uvmi/uvmi_MasterFile-Registry.htm#MFMI_MT700712UV01-msg" class="">MFMI_MT700712UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Query Response Type</b></td>
+                              <td class="interact_desc">Care Record</td>
+                              <td class="interact_code"><a href="../../domains/uvpc/uvpc_CareRecord.htm#REPC_MT004000UV01-msg" class="">REPC_MT004000UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Query Definition</b></td>
+                              <td class="interact_desc">Care Record Profile Query</td>
+                              <td class="interact_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_MT040300UV01-msg" class="">QUPC_MT040300UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="interact">
+                           <caption>Sending and Receiving Roles</caption>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Care Record Query Fulfiller</td>
+                              <td class="interact_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_AR004040UV01-ar" class="">QUPC_AR004040UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Care Record Query Placer</td>
+                              <td class="interact_code"><a href="../../domains/uvpc/uvpc_CareRecordQuery.htm#QUPC_AR004030UV01-ar" class="">QUPC_AR004030UV01</a></td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <p></p>
+               </div>
+            </div>
+            <p>
+               <table>
+                  <tbody>
+                     <tr>
+                        <td><a class="custombutton" href="#top">Return to top of page</a></td>
+                     </tr>
+                  </tbody>
+               </table>
+            </p>
+         </div>
+      </div>
+   </body>
+</html>

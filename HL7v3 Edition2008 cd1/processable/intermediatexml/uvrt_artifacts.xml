@@ -1,0 +1,1162 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<spec id="PORT_DO000001UV-ic" type="dependencyTree" sectionCode="UVRT">
+   <header>
+      <title> Regulated Studies Dependency Annex
+				</title>
+      <version>V 00-00</version>
+      <ballot type="NormativeStandard" number="1"/>
+      <date>6/31/2008</date>
+      <legalese copyRightDate="2008"/>
+   </header>
+   <body>
+      <div1 id="all-sortOrder">
+         <head> Regulated Studies in Structured Sort Order</head>
+         <artree role="ssn">
+            <artreeitem>
+               <stref id="d0e21891" role="tree-intro" sectID="UVRT" sectType="SB" refName="Domain: Regulated Studies" refFamiliarName="Domain: Regulated Studies" refIdentifier="PORT_DO000001UV"/>
+               <artreeitem>
+                  <stref id="d0e21893" role="tree-intro" sectID="UVRT" sectType="SB" refName="Topic: AnnotatedECG" refFamiliarName="Topic: AnnotatedECG" refIdentifier="PORT_DO000001UV"/>
+                  <artreeitem>
+                     <stref id="d0e21893" role="tree-intro" sectID="" sectType="SB" refName=" Story Boards" refFamiliarName=" Story Boards" refIdentifier=""/>
+                     <artreeitem>
+                        <stref id="treeRef-PORT_ST020001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Managing AnnotatedECGs from Clinical Trials" refFamiliarName="Managing AnnotatedECGs from Clinical Trials" refIdentifier="PORT_ST020001UV01"/>
+                        <artreeitem>
+                           <stref id="treeRef-PORT_SN020001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Preparing Annotated ECGs" refFamiliarName="Preparing Annotated ECGs" refIdentifier="PORT_SN020001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORT_SN020002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Submitting Annotated ECGs" refFamiliarName="Submitting Annotated ECGs" refIdentifier="PORT_SN020002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORT_SN020003UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Business Requirements for this Storyboard" refFamiliarName="Business Requirements for this Storyboard" refIdentifier="PORT_SN020003UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Revised, Notification" refFamiliarName="AnnotatedECG Revised, Notification" refIdentifier="PORT_IN020001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Deleted, Notification" refFamiliarName="AnnotatedECG Deleted, Notification" refIdentifier="PORT_IN020002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020003UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Submittable, Notification" refFamiliarName="AnnotatedECG Submittable, Notification" refIdentifier="PORT_IN020003UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21893" role="tree-intro" sectID="" sectType="SB" refName=" Application Roles" refFamiliarName=" Application Roles" refIdentifier=""/>
+                     <artreeitem>
+                        <arref id="treeRef-PORT_AR020001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="AnnotatedECG Event Global Informer - CT" refFamiliarName="AnnotatedECG Event Global Informer - CT" refIdentifier="PORT_AR020001UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR010002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Event Global Informer - CT" refFamiliarName="AnnotatedECG Event Global Informer - CT" refIdentifier="PORT_AR010002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Revised, Notification" refFamiliarName="AnnotatedECG Revised, Notification" refIdentifier="PORT_IN020001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Deleted, Notification" refFamiliarName="AnnotatedECG Deleted, Notification" refIdentifier="PORT_IN020002UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21893" role="tree-intro" sectID="" sectType="SB" refName=" Refined Message Information Models" refFamiliarName=" Refined Message Information Models" refIdentifier=""/>
+                     <artreeitem>
+                        <rmimref id="treeRef-PORT_RM020001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="AnnotatedECG - Clinical Trials" refFamiliarName="AnnotatedECG - Clinical Trials" refIdentifier="PORT_RM020001UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-PORT_HD020001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="AnnotatedECG  - Clinical Trials" refFamiliarName="AnnotatedECG  - Clinical Trials" refIdentifier="PORT_HD020001UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-PORT_MT020001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="AnnotatedECG. base  - Clinical Trials" refFamiliarName="AnnotatedECG. base  - Clinical Trials" refIdentifier="PORT_MT020001UV01"/>
+                           </artreeitem>
+                           <artreeitem>
+                              <msgref id="treeRef-PORT_MT020002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="AnnotatedECG, deletion - Clinical Trials" refFamiliarName="AnnotatedECG, deletion - Clinical Trials" refIdentifier="PORT_MT020002UV01"/>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21893" role="tree-intro" sectID="" sectType="SB" refName=" Interactions" refFamiliarName=" Interactions" refIdentifier=""/>
+                     <artreeitem>
+                        <intref id="treeRef-PORT_IN020002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="AnnotatedECG Deleted, Notification" refFamiliarName="AnnotatedECG Deleted, Notification" refIdentifier="PORT_IN020002UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR020001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Event Global Informer - CT" refFamiliarName="AnnotatedECG Event Global Informer - CT" refIdentifier="PORT_AR020001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR010001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="ClinicalTrial Observation Event Global Tracker" refFamiliarName="ClinicalTrial Observation Event Global Tracker" refIdentifier="PORT_AR010001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORT_TE010001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Agreed Transmission Criterion Attained - CT" refFamiliarName="Agreed Transmission Criterion Attained - CT" refIdentifier="PORT_TE010001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PORT_MT020002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG, deletion - Clinical Trials" refFamiliarName="AnnotatedECG, deletion - Clinical Trials" refIdentifier="PORT_MT020002UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <intref id="treeRef-PORT_IN020001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="AnnotatedECG Revised, Notification" refFamiliarName="AnnotatedECG Revised, Notification" refIdentifier="PORT_IN020001UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR020001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Event Global Informer - CT" refFamiliarName="AnnotatedECG Event Global Informer - CT" refIdentifier="PORT_AR020001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR010001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="ClinicalTrial Observation Event Global Tracker" refFamiliarName="ClinicalTrial Observation Event Global Tracker" refIdentifier="PORT_AR010001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORT_TE010001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Agreed Transmission Criterion Attained - CT" refFamiliarName="Agreed Transmission Criterion Attained - CT" refIdentifier="PORT_TE010001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PORT_MT020001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG. base  - Clinical Trials" refFamiliarName="AnnotatedECG. base  - Clinical Trials" refIdentifier="PORT_MT020001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORT_TE010001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Agreed Transmission Criterion Attained - CT" refFamiliarName="Agreed Transmission Criterion Attained - CT" refIdentifier="PORT_TE010001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Revised, Notification" refFamiliarName="AnnotatedECG Revised, Notification" refIdentifier="PORT_IN020001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <intref id="treeRef-PORT_IN020003UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="AnnotatedECG Submittable, Notification" refFamiliarName="AnnotatedECG Submittable, Notification" refIdentifier="PORT_IN020003UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR010002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="ClinicalTrial Observation Event Global Informer" refFamiliarName="ClinicalTrial Observation Event Global Informer" refIdentifier="PORT_AR010002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR010001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="ClinicalTrial Observation Event Global Tracker" refFamiliarName="ClinicalTrial Observation Event Global Tracker" refIdentifier="PORT_AR010001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORT_TE010001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Agreed Transmission Criterion Attained - CT" refFamiliarName="Agreed Transmission Criterion Attained - CT" refIdentifier="PORT_TE010001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PORT_MT020001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG. base  - Clinical Trials" refFamiliarName="AnnotatedECG. base  - Clinical Trials" refIdentifier="PORT_MT020001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+               <artreeitem>
+                  <stref id="d0e21979" role="tree-intro" sectID="UVRT" sectType="SB" refName="Topic: CTLaboratory" refFamiliarName="Topic: CTLaboratory" refIdentifier="PORT_DO000001UV"/>
+                  <artreeitem>
+                     <stref id="d0e21979" role="tree-intro" sectID="" sectType="SB" refName=" Story Boards" refFamiliarName=" Story Boards" refIdentifier=""/>
+                     <artreeitem>
+                        <stref id="treeRef-PORT_ST030001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Periodic Reporting of CT Laboratory Results" refFamiliarName="Periodic Reporting of CT Laboratory Results" refIdentifier="PORT_ST030001UV01"/>
+                        <artreeitem>
+                           <stref id="treeRef-PORT_SN030001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="CTLaboratory Periodic Report to Sponsor/Agent" refFamiliarName="CTLaboratory Periodic Report to Sponsor/Agent" refIdentifier="PORT_SN030001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORT_SN030002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Business Requirements for this Storyboard" refFamiliarName="Business Requirements for this Storyboard" refIdentifier="PORT_SN030002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN030001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="CTLaboratory Periodic Report to Sponsor/Agent" refFamiliarName="CTLaboratory Periodic Report to Sponsor/Agent" refIdentifier="PORT_IN030001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21979" role="tree-intro" sectID="" sectType="SB" refName=" Application Roles" refFamiliarName=" Application Roles" refIdentifier=""/>
+                     <artreeitem>
+                        <arref id="treeRef-PORT_AR010001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="ClinicalTrial Observation Event Global Tracker" refFamiliarName="ClinicalTrial Observation Event Global Tracker" refIdentifier="PORT_AR010001UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Revised, Notification" refFamiliarName="AnnotatedECG Revised, Notification" refIdentifier="PORT_IN020001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Deleted, Notification" refFamiliarName="AnnotatedECG Deleted, Notification" refIdentifier="PORT_IN020002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020003UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Submittable, Notification" refFamiliarName="AnnotatedECG Submittable, Notification" refIdentifier="PORT_IN020003UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN030001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="CTLaboratory Periodic Report to Sponsor/Agent" refFamiliarName="CTLaboratory Periodic Report to Sponsor/Agent" refIdentifier="PORT_IN030001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <arref id="treeRef-PORT_AR010002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="ClinicalTrial Observation Event Global Informer" refFamiliarName="ClinicalTrial Observation Event Global Informer" refIdentifier="PORT_AR010002UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR020001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="ClinicalTrial Observation Event Global Informer" refFamiliarName="ClinicalTrial Observation Event Global Informer" refIdentifier="PORT_AR020001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR030001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="ClinicalTrial Observation Event Global Informer" refFamiliarName="ClinicalTrial Observation Event Global Informer" refIdentifier="PORT_AR030001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020003UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Submittable, Notification" refFamiliarName="AnnotatedECG Submittable, Notification" refIdentifier="PORT_IN020003UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <arref id="treeRef-PORT_AR030001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="CTLaboratory Observation Event Global Informer" refFamiliarName="CTLaboratory Observation Event Global Informer" refIdentifier="PORT_AR030001UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR010002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="CTLaboratory Observation Event Global Informer" refFamiliarName="CTLaboratory Observation Event Global Informer" refIdentifier="PORT_AR010002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN030001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="CTLaboratory Periodic Report to Sponsor/Agent" refFamiliarName="CTLaboratory Periodic Report to Sponsor/Agent" refIdentifier="PORT_IN030001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21979" role="tree-intro" sectID="" sectType="SB" refName=" Trigger Events" refFamiliarName=" Trigger Events" refIdentifier=""/>
+                     <artreeitem>
+                        <teref id="treeRef-PORT_TE010001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Agreed Transmission Criterion Attained - CT" refFamiliarName="Agreed Transmission Criterion Attained - CT" refIdentifier="PORT_TE010001UV01"/>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21979" role="tree-intro" sectID="" sectType="SB" refName=" Refined Message Information Models" refFamiliarName=" Refined Message Information Models" refIdentifier=""/>
+                     <artreeitem>
+                        <rmimref id="treeRef-PORT_RM030001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="CTLaboratory Observation" refFamiliarName="CTLaboratory Observation" refIdentifier="PORT_RM030001UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-PORT_HD030001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="CTLaboratory Observation" refFamiliarName="CTLaboratory Observation" refIdentifier="PORT_HD030001UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-PORT_MT030001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="CTLaboratory Observation, base" refFamiliarName="CTLaboratory Observation, base" refIdentifier="PORT_MT030001UV01"/>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21979" role="tree-intro" sectID="" sectType="SB" refName=" Interactions" refFamiliarName=" Interactions" refIdentifier=""/>
+                     <artreeitem>
+                        <intref id="treeRef-PORT_IN030001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="CTLaboratory Periodic Report to Sponsor/Agent" refFamiliarName="CTLaboratory Periodic Report to Sponsor/Agent" refIdentifier="PORT_IN030001UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR030001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="CTLaboratory Observation Event Global Informer" refFamiliarName="CTLaboratory Observation Event Global Informer" refIdentifier="PORT_AR030001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR010001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="ClinicalTrial Observation Event Global Tracker" refFamiliarName="ClinicalTrial Observation Event Global Tracker" refIdentifier="PORT_AR010001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORT_TE010001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Agreed Transmission Criterion Attained - CT" refFamiliarName="Agreed Transmission Criterion Attained - CT" refIdentifier="PORT_TE010001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PORT_MT030001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="CTLaboratory Observation, base" refFamiliarName="CTLaboratory Observation, base" refIdentifier="PORT_MT030001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+               <artreeitem>
+                  <stref id="d0e22043" role="tree-intro" sectID="UVRT" sectType="SB" refName="Topic: StabilityStudy" refFamiliarName="Topic: StabilityStudy" refIdentifier="PORT_DO000001UV"/>
+                  <artreeitem>
+                     <stref id="d0e22043" role="tree-intro" sectID="" sectType="SB" refName=" Story Boards" refFamiliarName=" Story Boards" refIdentifier=""/>
+                     <artreeitem>
+                        <stref id="treeRef-PORT_ST090001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Reporting" refFamiliarName="Stability Reporting" refIdentifier="PORT_ST090001UV01"/>
+                        <artreeitem>
+                           <stref id="treeRef-PORT_SN090001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study Event Report" refFamiliarName="Stability Study Event Report" refIdentifier="PORT_SN090001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORT_SN090002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Revise" refFamiliarName="Stability Study Event Report Revise" refIdentifier="PORT_SN090002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORT_SN090003UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Retract" refFamiliarName="Stability Study Event Report Retract" refIdentifier="PORT_SN090003UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN090001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Event Report" refFamiliarName="Stability Study Event Report" refIdentifier="PORT_IN090001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN090002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Revision" refFamiliarName="Stability Study Event Report Revision" refIdentifier="PORT_IN090002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN090003UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Retraction" refFamiliarName="Stability Study Event Report Retraction" refIdentifier="PORT_IN090003UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22043" role="tree-intro" sectID="" sectType="SB" refName=" Application Roles" refFamiliarName=" Application Roles" refIdentifier=""/>
+                     <artreeitem>
+                        <arref id="treeRef-PORT_AR090001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Report Sender" refFamiliarName="Stability Report Sender" refIdentifier="PORT_AR090001UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN090001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Event Report" refFamiliarName="Stability Study Event Report" refIdentifier="PORT_IN090001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN090002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Revision" refFamiliarName="Stability Study Event Report Revision" refIdentifier="PORT_IN090002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN090003UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Retraction" refFamiliarName="Stability Study Event Report Retraction" refIdentifier="PORT_IN090003UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <arref id="treeRef-PORT_AR090002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Report Receiver" refFamiliarName="Stability Report Receiver" refIdentifier="PORT_AR090002UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN090001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Event Report" refFamiliarName="Stability Study Event Report" refIdentifier="PORT_IN090001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN090002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Revision" refFamiliarName="Stability Study Event Report Revision" refIdentifier="PORT_IN090002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN090003UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Retraction" refFamiliarName="Stability Study Event Report Retraction" refIdentifier="PORT_IN090003UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22043" role="tree-intro" sectID="" sectType="SB" refName=" Trigger Events" refFamiliarName=" Trigger Events" refIdentifier=""/>
+                     <artreeitem>
+                        <teref id="treeRef-PORT_TE090001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Report Notification" refFamiliarName="Stability Report Notification" refIdentifier="PORT_TE090001UV01"/>
+                     </artreeitem>
+                     <artreeitem>
+                        <teref id="treeRef-PORT_TE090002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Report Revise Notification" refFamiliarName="Stability Report Revise Notification" refIdentifier="PORT_TE090002UV01"/>
+                     </artreeitem>
+                     <artreeitem>
+                        <teref id="treeRef-PORT_TE090003UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Report Cancel Notification" refFamiliarName="Stability Report Cancel Notification" refIdentifier="PORT_TE090003UV01"/>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22043" role="tree-intro" sectID="" sectType="SB" refName=" Refined Message Information Models" refFamiliarName=" Refined Message Information Models" refIdentifier=""/>
+                     <artreeitem>
+                        <rmimref id="treeRef-PORT_RM090001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study RMIM" refFamiliarName="Stability Study RMIM" refIdentifier="PORT_RM090001UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-PORT_HD090001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study HMD" refFamiliarName="Stability Study HMD" refIdentifier="PORT_HD090001UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-PORT_MT090001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study Create/Revise Message Type" refFamiliarName="Stability Study Create/Revise Message Type" refIdentifier="PORT_MT090001UV01"/>
+                           </artreeitem>
+                           <artreeitem>
+                              <msgref id="treeRef-PORT_MT090002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study Withdraw Message Type" refFamiliarName="Stability Study Withdraw Message Type" refIdentifier="PORT_MT090002UV01"/>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22043" role="tree-intro" sectID="" sectType="SB" refName=" Interactions" refFamiliarName=" Interactions" refIdentifier=""/>
+                     <artreeitem>
+                        <intref id="treeRef-PORT_IN090001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study Event Report" refFamiliarName="Stability Study Event Report" refIdentifier="PORT_IN090001UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR090001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Report Sender" refFamiliarName="Stability Report Sender" refIdentifier="PORT_AR090001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR090002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Report Receiver" refFamiliarName="Stability Report Receiver" refIdentifier="PORT_AR090002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORT_TE090001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Report Notification" refFamiliarName="Stability Report Notification" refIdentifier="PORT_TE090001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PORT_MT090001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Create/Revise Message Type" refFamiliarName="Stability Study Create/Revise Message Type" refIdentifier="PORT_MT090001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <intref id="treeRef-PORT_IN090002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Revision" refFamiliarName="Stability Study Event Report Revision" refIdentifier="PORT_IN090002UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR090001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Report Sender" refFamiliarName="Stability Report Sender" refIdentifier="PORT_AR090001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR090002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Report Receiver" refFamiliarName="Stability Report Receiver" refIdentifier="PORT_AR090002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORT_TE090002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Report Revise Notification" refFamiliarName="Stability Report Revise Notification" refIdentifier="PORT_TE090002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PORT_MT090001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Create/Revise Message Type" refFamiliarName="Stability Study Create/Revise Message Type" refIdentifier="PORT_MT090001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <intref id="treeRef-PORT_IN090003UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Retraction" refFamiliarName="Stability Study Event Report Retraction" refIdentifier="PORT_IN090003UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR090001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Report Sender" refFamiliarName="Stability Report Sender" refIdentifier="PORT_AR090001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR090002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Report Receiver" refFamiliarName="Stability Report Receiver" refIdentifier="PORT_AR090002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORT_TE090003UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Report Cancel Notification" refFamiliarName="Stability Report Cancel Notification" refIdentifier="PORT_TE090003UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PORT_MT090002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Withdraw Message Type" refFamiliarName="Stability Study Withdraw Message Type" refIdentifier="PORT_MT090002UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+            </artreeitem>
+         </artree>
+      </div1>
+      <div1 id="all-codeOrder">
+         <head> Regulated Studies in Artifact Code Order</head>
+         <artree role="code">
+            <artreeitem>
+               <stref id="d0e21891" role="tree-intro" sectID="UVRT" sectType="SB" refName="Domain: Regulated Studies" refFamiliarName="Domain: Regulated Studies" refIdentifier="PORT_DO000001UV"/>
+               <artreeitem>
+                  <stref id="d0e21893" role="tree-intro" sectID="UVRT" sectType="SB" refName="Topic: AnnotatedECG" refFamiliarName="Topic: AnnotatedECG" refIdentifier="PORT_DO000001UV"/>
+                  <artreeitem>
+                     <stref id="d0e21893" role="tree-intro" sectID="" sectType="SB" refName=" Story Boards" refFamiliarName=" Story Boards" refIdentifier=""/>
+                     <artreeitem>
+                        <stref id="treeRef-PORT_ST020001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Managing AnnotatedECGs from Clinical Trials" refFamiliarName="Managing AnnotatedECGs from Clinical Trials" refIdentifier="PORT_ST020001UV01"/>
+                        <artreeitem>
+                           <stref id="treeRef-PORT_SN020001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Preparing Annotated ECGs" refFamiliarName="Preparing Annotated ECGs" refIdentifier="PORT_SN020001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORT_SN020002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Submitting Annotated ECGs" refFamiliarName="Submitting Annotated ECGs" refIdentifier="PORT_SN020002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORT_SN020003UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Business Requirements for this Storyboard" refFamiliarName="Business Requirements for this Storyboard" refIdentifier="PORT_SN020003UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Revised, Notification" refFamiliarName="AnnotatedECG Revised, Notification" refIdentifier="PORT_IN020001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Deleted, Notification" refFamiliarName="AnnotatedECG Deleted, Notification" refIdentifier="PORT_IN020002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020003UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Submittable, Notification" refFamiliarName="AnnotatedECG Submittable, Notification" refIdentifier="PORT_IN020003UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21893" role="tree-intro" sectID="" sectType="SB" refName=" Application Roles" refFamiliarName=" Application Roles" refIdentifier=""/>
+                     <artreeitem>
+                        <arref id="treeRef-PORT_AR020001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="AnnotatedECG Event Global Informer - CT" refFamiliarName="AnnotatedECG Event Global Informer - CT" refIdentifier="PORT_AR020001UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR010002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Event Global Informer - CT" refFamiliarName="AnnotatedECG Event Global Informer - CT" refIdentifier="PORT_AR010002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Revised, Notification" refFamiliarName="AnnotatedECG Revised, Notification" refIdentifier="PORT_IN020001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Deleted, Notification" refFamiliarName="AnnotatedECG Deleted, Notification" refIdentifier="PORT_IN020002UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21893" role="tree-intro" sectID="" sectType="SB" refName=" Refined Message Information Models" refFamiliarName=" Refined Message Information Models" refIdentifier=""/>
+                     <artreeitem>
+                        <rmimref id="treeRef-PORT_RM020001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="AnnotatedECG - Clinical Trials" refFamiliarName="AnnotatedECG - Clinical Trials" refIdentifier="PORT_RM020001UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-PORT_HD020001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="AnnotatedECG  - Clinical Trials" refFamiliarName="AnnotatedECG  - Clinical Trials" refIdentifier="PORT_HD020001UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-PORT_MT020001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="AnnotatedECG. base  - Clinical Trials" refFamiliarName="AnnotatedECG. base  - Clinical Trials" refIdentifier="PORT_MT020001UV01"/>
+                           </artreeitem>
+                           <artreeitem>
+                              <msgref id="treeRef-PORT_MT020002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="AnnotatedECG, deletion - Clinical Trials" refFamiliarName="AnnotatedECG, deletion - Clinical Trials" refIdentifier="PORT_MT020002UV01"/>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21893" role="tree-intro" sectID="" sectType="SB" refName=" Interactions" refFamiliarName=" Interactions" refIdentifier=""/>
+                     <artreeitem>
+                        <intref id="treeRef-PORT_IN020001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="AnnotatedECG Revised, Notification" refFamiliarName="AnnotatedECG Revised, Notification" refIdentifier="PORT_IN020001UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR020001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Event Global Informer - CT" refFamiliarName="AnnotatedECG Event Global Informer - CT" refIdentifier="PORT_AR020001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR010001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="ClinicalTrial Observation Event Global Tracker" refFamiliarName="ClinicalTrial Observation Event Global Tracker" refIdentifier="PORT_AR010001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORT_TE010001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Agreed Transmission Criterion Attained - CT" refFamiliarName="Agreed Transmission Criterion Attained - CT" refIdentifier="PORT_TE010001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PORT_MT020001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG. base  - Clinical Trials" refFamiliarName="AnnotatedECG. base  - Clinical Trials" refIdentifier="PORT_MT020001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORT_TE010001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Agreed Transmission Criterion Attained - CT" refFamiliarName="Agreed Transmission Criterion Attained - CT" refIdentifier="PORT_TE010001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Revised, Notification" refFamiliarName="AnnotatedECG Revised, Notification" refIdentifier="PORT_IN020001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <intref id="treeRef-PORT_IN020002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="AnnotatedECG Deleted, Notification" refFamiliarName="AnnotatedECG Deleted, Notification" refIdentifier="PORT_IN020002UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR020001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Event Global Informer - CT" refFamiliarName="AnnotatedECG Event Global Informer - CT" refIdentifier="PORT_AR020001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR010001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="ClinicalTrial Observation Event Global Tracker" refFamiliarName="ClinicalTrial Observation Event Global Tracker" refIdentifier="PORT_AR010001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORT_TE010001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Agreed Transmission Criterion Attained - CT" refFamiliarName="Agreed Transmission Criterion Attained - CT" refIdentifier="PORT_TE010001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PORT_MT020002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG, deletion - Clinical Trials" refFamiliarName="AnnotatedECG, deletion - Clinical Trials" refIdentifier="PORT_MT020002UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <intref id="treeRef-PORT_IN020003UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="AnnotatedECG Submittable, Notification" refFamiliarName="AnnotatedECG Submittable, Notification" refIdentifier="PORT_IN020003UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR010002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="ClinicalTrial Observation Event Global Informer" refFamiliarName="ClinicalTrial Observation Event Global Informer" refIdentifier="PORT_AR010002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR010001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="ClinicalTrial Observation Event Global Tracker" refFamiliarName="ClinicalTrial Observation Event Global Tracker" refIdentifier="PORT_AR010001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORT_TE010001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Agreed Transmission Criterion Attained - CT" refFamiliarName="Agreed Transmission Criterion Attained - CT" refIdentifier="PORT_TE010001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PORT_MT020001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG. base  - Clinical Trials" refFamiliarName="AnnotatedECG. base  - Clinical Trials" refIdentifier="PORT_MT020001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+               <artreeitem>
+                  <stref id="d0e21979" role="tree-intro" sectID="UVRT" sectType="SB" refName="Topic: CTLaboratory" refFamiliarName="Topic: CTLaboratory" refIdentifier="PORT_DO000001UV"/>
+                  <artreeitem>
+                     <stref id="d0e21979" role="tree-intro" sectID="" sectType="SB" refName=" Story Boards" refFamiliarName=" Story Boards" refIdentifier=""/>
+                     <artreeitem>
+                        <stref id="treeRef-PORT_ST030001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Periodic Reporting of CT Laboratory Results" refFamiliarName="Periodic Reporting of CT Laboratory Results" refIdentifier="PORT_ST030001UV01"/>
+                        <artreeitem>
+                           <stref id="treeRef-PORT_SN030001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="CTLaboratory Periodic Report to Sponsor/Agent" refFamiliarName="CTLaboratory Periodic Report to Sponsor/Agent" refIdentifier="PORT_SN030001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORT_SN030002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Business Requirements for this Storyboard" refFamiliarName="Business Requirements for this Storyboard" refIdentifier="PORT_SN030002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN030001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="CTLaboratory Periodic Report to Sponsor/Agent" refFamiliarName="CTLaboratory Periodic Report to Sponsor/Agent" refIdentifier="PORT_IN030001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21979" role="tree-intro" sectID="" sectType="SB" refName=" Application Roles" refFamiliarName=" Application Roles" refIdentifier=""/>
+                     <artreeitem>
+                        <arref id="treeRef-PORT_AR010001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="ClinicalTrial Observation Event Global Tracker" refFamiliarName="ClinicalTrial Observation Event Global Tracker" refIdentifier="PORT_AR010001UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Revised, Notification" refFamiliarName="AnnotatedECG Revised, Notification" refIdentifier="PORT_IN020001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Deleted, Notification" refFamiliarName="AnnotatedECG Deleted, Notification" refIdentifier="PORT_IN020002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020003UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Submittable, Notification" refFamiliarName="AnnotatedECG Submittable, Notification" refIdentifier="PORT_IN020003UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN030001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="CTLaboratory Periodic Report to Sponsor/Agent" refFamiliarName="CTLaboratory Periodic Report to Sponsor/Agent" refIdentifier="PORT_IN030001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <arref id="treeRef-PORT_AR010002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="ClinicalTrial Observation Event Global Informer" refFamiliarName="ClinicalTrial Observation Event Global Informer" refIdentifier="PORT_AR010002UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR020001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="ClinicalTrial Observation Event Global Informer" refFamiliarName="ClinicalTrial Observation Event Global Informer" refIdentifier="PORT_AR020001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR030001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="ClinicalTrial Observation Event Global Informer" refFamiliarName="ClinicalTrial Observation Event Global Informer" refIdentifier="PORT_AR030001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020003UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Submittable, Notification" refFamiliarName="AnnotatedECG Submittable, Notification" refIdentifier="PORT_IN020003UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <arref id="treeRef-PORT_AR030001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="CTLaboratory Observation Event Global Informer" refFamiliarName="CTLaboratory Observation Event Global Informer" refIdentifier="PORT_AR030001UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR010002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="CTLaboratory Observation Event Global Informer" refFamiliarName="CTLaboratory Observation Event Global Informer" refIdentifier="PORT_AR010002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN030001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="CTLaboratory Periodic Report to Sponsor/Agent" refFamiliarName="CTLaboratory Periodic Report to Sponsor/Agent" refIdentifier="PORT_IN030001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21979" role="tree-intro" sectID="" sectType="SB" refName=" Trigger Events" refFamiliarName=" Trigger Events" refIdentifier=""/>
+                     <artreeitem>
+                        <teref id="treeRef-PORT_TE010001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Agreed Transmission Criterion Attained - CT" refFamiliarName="Agreed Transmission Criterion Attained - CT" refIdentifier="PORT_TE010001UV01"/>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21979" role="tree-intro" sectID="" sectType="SB" refName=" Refined Message Information Models" refFamiliarName=" Refined Message Information Models" refIdentifier=""/>
+                     <artreeitem>
+                        <rmimref id="treeRef-PORT_RM030001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="CTLaboratory Observation" refFamiliarName="CTLaboratory Observation" refIdentifier="PORT_RM030001UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-PORT_HD030001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="CTLaboratory Observation" refFamiliarName="CTLaboratory Observation" refIdentifier="PORT_HD030001UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-PORT_MT030001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="CTLaboratory Observation, base" refFamiliarName="CTLaboratory Observation, base" refIdentifier="PORT_MT030001UV01"/>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21979" role="tree-intro" sectID="" sectType="SB" refName=" Interactions" refFamiliarName=" Interactions" refIdentifier=""/>
+                     <artreeitem>
+                        <intref id="treeRef-PORT_IN030001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="CTLaboratory Periodic Report to Sponsor/Agent" refFamiliarName="CTLaboratory Periodic Report to Sponsor/Agent" refIdentifier="PORT_IN030001UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR030001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="CTLaboratory Observation Event Global Informer" refFamiliarName="CTLaboratory Observation Event Global Informer" refIdentifier="PORT_AR030001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR010001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="ClinicalTrial Observation Event Global Tracker" refFamiliarName="ClinicalTrial Observation Event Global Tracker" refIdentifier="PORT_AR010001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORT_TE010001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Agreed Transmission Criterion Attained - CT" refFamiliarName="Agreed Transmission Criterion Attained - CT" refIdentifier="PORT_TE010001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PORT_MT030001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="CTLaboratory Observation, base" refFamiliarName="CTLaboratory Observation, base" refIdentifier="PORT_MT030001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+               <artreeitem>
+                  <stref id="d0e22043" role="tree-intro" sectID="UVRT" sectType="SB" refName="Topic: StabilityStudy" refFamiliarName="Topic: StabilityStudy" refIdentifier="PORT_DO000001UV"/>
+                  <artreeitem>
+                     <stref id="d0e22043" role="tree-intro" sectID="" sectType="SB" refName=" Story Boards" refFamiliarName=" Story Boards" refIdentifier=""/>
+                     <artreeitem>
+                        <stref id="treeRef-PORT_ST090001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Reporting" refFamiliarName="Stability Reporting" refIdentifier="PORT_ST090001UV01"/>
+                        <artreeitem>
+                           <stref id="treeRef-PORT_SN090001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study Event Report" refFamiliarName="Stability Study Event Report" refIdentifier="PORT_SN090001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORT_SN090002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Revise" refFamiliarName="Stability Study Event Report Revise" refIdentifier="PORT_SN090002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORT_SN090003UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Retract" refFamiliarName="Stability Study Event Report Retract" refIdentifier="PORT_SN090003UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN090001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Event Report" refFamiliarName="Stability Study Event Report" refIdentifier="PORT_IN090001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN090002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Revision" refFamiliarName="Stability Study Event Report Revision" refIdentifier="PORT_IN090002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN090003UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Retraction" refFamiliarName="Stability Study Event Report Retraction" refIdentifier="PORT_IN090003UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22043" role="tree-intro" sectID="" sectType="SB" refName=" Application Roles" refFamiliarName=" Application Roles" refIdentifier=""/>
+                     <artreeitem>
+                        <arref id="treeRef-PORT_AR090001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Report Sender" refFamiliarName="Stability Report Sender" refIdentifier="PORT_AR090001UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN090001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Event Report" refFamiliarName="Stability Study Event Report" refIdentifier="PORT_IN090001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN090002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Revision" refFamiliarName="Stability Study Event Report Revision" refIdentifier="PORT_IN090002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN090003UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Retraction" refFamiliarName="Stability Study Event Report Retraction" refIdentifier="PORT_IN090003UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <arref id="treeRef-PORT_AR090002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Report Receiver" refFamiliarName="Stability Report Receiver" refIdentifier="PORT_AR090002UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN090001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Event Report" refFamiliarName="Stability Study Event Report" refIdentifier="PORT_IN090001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN090002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Revision" refFamiliarName="Stability Study Event Report Revision" refIdentifier="PORT_IN090002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN090003UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Retraction" refFamiliarName="Stability Study Event Report Retraction" refIdentifier="PORT_IN090003UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22043" role="tree-intro" sectID="" sectType="SB" refName=" Trigger Events" refFamiliarName=" Trigger Events" refIdentifier=""/>
+                     <artreeitem>
+                        <teref id="treeRef-PORT_TE090001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Report Notification" refFamiliarName="Stability Report Notification" refIdentifier="PORT_TE090001UV01"/>
+                     </artreeitem>
+                     <artreeitem>
+                        <teref id="treeRef-PORT_TE090002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Report Revise Notification" refFamiliarName="Stability Report Revise Notification" refIdentifier="PORT_TE090002UV01"/>
+                     </artreeitem>
+                     <artreeitem>
+                        <teref id="treeRef-PORT_TE090003UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Report Cancel Notification" refFamiliarName="Stability Report Cancel Notification" refIdentifier="PORT_TE090003UV01"/>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22043" role="tree-intro" sectID="" sectType="SB" refName=" Refined Message Information Models" refFamiliarName=" Refined Message Information Models" refIdentifier=""/>
+                     <artreeitem>
+                        <rmimref id="treeRef-PORT_RM090001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study RMIM" refFamiliarName="Stability Study RMIM" refIdentifier="PORT_RM090001UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-PORT_HD090001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study HMD" refFamiliarName="Stability Study HMD" refIdentifier="PORT_HD090001UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-PORT_MT090001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study Create/Revise Message Type" refFamiliarName="Stability Study Create/Revise Message Type" refIdentifier="PORT_MT090001UV01"/>
+                           </artreeitem>
+                           <artreeitem>
+                              <msgref id="treeRef-PORT_MT090002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study Withdraw Message Type" refFamiliarName="Stability Study Withdraw Message Type" refIdentifier="PORT_MT090002UV01"/>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22043" role="tree-intro" sectID="" sectType="SB" refName=" Interactions" refFamiliarName=" Interactions" refIdentifier=""/>
+                     <artreeitem>
+                        <intref id="treeRef-PORT_IN090001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study Event Report" refFamiliarName="Stability Study Event Report" refIdentifier="PORT_IN090001UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR090001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Report Sender" refFamiliarName="Stability Report Sender" refIdentifier="PORT_AR090001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR090002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Report Receiver" refFamiliarName="Stability Report Receiver" refIdentifier="PORT_AR090002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORT_TE090001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Report Notification" refFamiliarName="Stability Report Notification" refIdentifier="PORT_TE090001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PORT_MT090001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Create/Revise Message Type" refFamiliarName="Stability Study Create/Revise Message Type" refIdentifier="PORT_MT090001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <intref id="treeRef-PORT_IN090002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Revision" refFamiliarName="Stability Study Event Report Revision" refIdentifier="PORT_IN090002UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR090001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Report Sender" refFamiliarName="Stability Report Sender" refIdentifier="PORT_AR090001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR090002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Report Receiver" refFamiliarName="Stability Report Receiver" refIdentifier="PORT_AR090002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORT_TE090002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Report Revise Notification" refFamiliarName="Stability Report Revise Notification" refIdentifier="PORT_TE090002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PORT_MT090001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Create/Revise Message Type" refFamiliarName="Stability Study Create/Revise Message Type" refIdentifier="PORT_MT090001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <intref id="treeRef-PORT_IN090003UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Retraction" refFamiliarName="Stability Study Event Report Retraction" refIdentifier="PORT_IN090003UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR090001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Report Sender" refFamiliarName="Stability Report Sender" refIdentifier="PORT_AR090001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR090002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Report Receiver" refFamiliarName="Stability Report Receiver" refIdentifier="PORT_AR090002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORT_TE090003UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Report Cancel Notification" refFamiliarName="Stability Report Cancel Notification" refIdentifier="PORT_TE090003UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PORT_MT090002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Withdraw Message Type" refFamiliarName="Stability Study Withdraw Message Type" refIdentifier="PORT_MT090002UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+            </artreeitem>
+         </artree>
+      </div1>
+      <div1 id="all-nameOrder">
+         <head> Regulated Studies in Name Order</head>
+         <artree role="name">
+            <artreeitem>
+               <stref id="d0e21891" role="tree-intro" sectID="UVRT" sectType="SB" refName="Domain: Regulated Studies" refFamiliarName="Domain: Regulated Studies" refIdentifier="PORT_DO000001UV"/>
+               <artreeitem>
+                  <stref id="d0e21893" role="tree-intro" sectID="UVRT" sectType="SB" refName="Topic: AnnotatedECG" refFamiliarName="Topic: AnnotatedECG" refIdentifier="PORT_DO000001UV"/>
+                  <artreeitem>
+                     <stref id="d0e21893" role="tree-intro" sectID="" sectType="SB" refName=" Story Boards" refFamiliarName=" Story Boards" refIdentifier=""/>
+                     <artreeitem>
+                        <stref id="treeRef-PORT_ST020001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Managing AnnotatedECGs from Clinical Trials" refFamiliarName="Managing AnnotatedECGs from Clinical Trials" refIdentifier="PORT_ST020001UV01"/>
+                        <artreeitem>
+                           <stref id="treeRef-PORT_SN020001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Preparing Annotated ECGs" refFamiliarName="Preparing Annotated ECGs" refIdentifier="PORT_SN020001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORT_SN020002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Submitting Annotated ECGs" refFamiliarName="Submitting Annotated ECGs" refIdentifier="PORT_SN020002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORT_SN020003UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Business Requirements for this Storyboard" refFamiliarName="Business Requirements for this Storyboard" refIdentifier="PORT_SN020003UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Revised, Notification" refFamiliarName="AnnotatedECG Revised, Notification" refIdentifier="PORT_IN020001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Deleted, Notification" refFamiliarName="AnnotatedECG Deleted, Notification" refIdentifier="PORT_IN020002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020003UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Submittable, Notification" refFamiliarName="AnnotatedECG Submittable, Notification" refIdentifier="PORT_IN020003UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21893" role="tree-intro" sectID="" sectType="SB" refName=" Application Roles" refFamiliarName=" Application Roles" refIdentifier=""/>
+                     <artreeitem>
+                        <arref id="treeRef-PORT_AR020001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="AnnotatedECG Event Global Informer - CT" refFamiliarName="AnnotatedECG Event Global Informer - CT" refIdentifier="PORT_AR020001UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR010002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Event Global Informer - CT" refFamiliarName="AnnotatedECG Event Global Informer - CT" refIdentifier="PORT_AR010002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Revised, Notification" refFamiliarName="AnnotatedECG Revised, Notification" refIdentifier="PORT_IN020001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Deleted, Notification" refFamiliarName="AnnotatedECG Deleted, Notification" refIdentifier="PORT_IN020002UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21893" role="tree-intro" sectID="" sectType="SB" refName=" Refined Message Information Models" refFamiliarName=" Refined Message Information Models" refIdentifier=""/>
+                     <artreeitem>
+                        <rmimref id="treeRef-PORT_RM020001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="AnnotatedECG - Clinical Trials" refFamiliarName="AnnotatedECG - Clinical Trials" refIdentifier="PORT_RM020001UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-PORT_HD020001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="AnnotatedECG  - Clinical Trials" refFamiliarName="AnnotatedECG  - Clinical Trials" refIdentifier="PORT_HD020001UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-PORT_MT020002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="AnnotatedECG, deletion - Clinical Trials" refFamiliarName="AnnotatedECG, deletion - Clinical Trials" refIdentifier="PORT_MT020002UV01"/>
+                           </artreeitem>
+                           <artreeitem>
+                              <msgref id="treeRef-PORT_MT020001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="AnnotatedECG. base  - Clinical Trials" refFamiliarName="AnnotatedECG. base  - Clinical Trials" refIdentifier="PORT_MT020001UV01"/>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21893" role="tree-intro" sectID="" sectType="SB" refName=" Interactions" refFamiliarName=" Interactions" refIdentifier=""/>
+                     <artreeitem>
+                        <intref id="treeRef-PORT_IN020002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="AnnotatedECG Deleted, Notification" refFamiliarName="AnnotatedECG Deleted, Notification" refIdentifier="PORT_IN020002UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR020001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Event Global Informer - CT" refFamiliarName="AnnotatedECG Event Global Informer - CT" refIdentifier="PORT_AR020001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR010001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="ClinicalTrial Observation Event Global Tracker" refFamiliarName="ClinicalTrial Observation Event Global Tracker" refIdentifier="PORT_AR010001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORT_TE010001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Agreed Transmission Criterion Attained - CT" refFamiliarName="Agreed Transmission Criterion Attained - CT" refIdentifier="PORT_TE010001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PORT_MT020002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG, deletion - Clinical Trials" refFamiliarName="AnnotatedECG, deletion - Clinical Trials" refIdentifier="PORT_MT020002UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <intref id="treeRef-PORT_IN020001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="AnnotatedECG Revised, Notification" refFamiliarName="AnnotatedECG Revised, Notification" refIdentifier="PORT_IN020001UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR020001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Event Global Informer - CT" refFamiliarName="AnnotatedECG Event Global Informer - CT" refIdentifier="PORT_AR020001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR010001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="ClinicalTrial Observation Event Global Tracker" refFamiliarName="ClinicalTrial Observation Event Global Tracker" refIdentifier="PORT_AR010001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORT_TE010001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Agreed Transmission Criterion Attained - CT" refFamiliarName="Agreed Transmission Criterion Attained - CT" refIdentifier="PORT_TE010001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PORT_MT020001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG. base  - Clinical Trials" refFamiliarName="AnnotatedECG. base  - Clinical Trials" refIdentifier="PORT_MT020001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORT_TE010001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Agreed Transmission Criterion Attained - CT" refFamiliarName="Agreed Transmission Criterion Attained - CT" refIdentifier="PORT_TE010001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Revised, Notification" refFamiliarName="AnnotatedECG Revised, Notification" refIdentifier="PORT_IN020001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <intref id="treeRef-PORT_IN020003UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="AnnotatedECG Submittable, Notification" refFamiliarName="AnnotatedECG Submittable, Notification" refIdentifier="PORT_IN020003UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR010002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="ClinicalTrial Observation Event Global Informer" refFamiliarName="ClinicalTrial Observation Event Global Informer" refIdentifier="PORT_AR010002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR010001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="ClinicalTrial Observation Event Global Tracker" refFamiliarName="ClinicalTrial Observation Event Global Tracker" refIdentifier="PORT_AR010001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORT_TE010001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Agreed Transmission Criterion Attained - CT" refFamiliarName="Agreed Transmission Criterion Attained - CT" refIdentifier="PORT_TE010001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PORT_MT020001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG. base  - Clinical Trials" refFamiliarName="AnnotatedECG. base  - Clinical Trials" refIdentifier="PORT_MT020001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+               <artreeitem>
+                  <stref id="d0e21979" role="tree-intro" sectID="UVRT" sectType="SB" refName="Topic: CTLaboratory" refFamiliarName="Topic: CTLaboratory" refIdentifier="PORT_DO000001UV"/>
+                  <artreeitem>
+                     <stref id="d0e21979" role="tree-intro" sectID="" sectType="SB" refName=" Story Boards" refFamiliarName=" Story Boards" refIdentifier=""/>
+                     <artreeitem>
+                        <stref id="treeRef-PORT_ST030001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Periodic Reporting of CT Laboratory Results" refFamiliarName="Periodic Reporting of CT Laboratory Results" refIdentifier="PORT_ST030001UV01"/>
+                        <artreeitem>
+                           <stref id="treeRef-PORT_SN030001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="CTLaboratory Periodic Report to Sponsor/Agent" refFamiliarName="CTLaboratory Periodic Report to Sponsor/Agent" refIdentifier="PORT_SN030001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORT_SN030002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Business Requirements for this Storyboard" refFamiliarName="Business Requirements for this Storyboard" refIdentifier="PORT_SN030002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN030001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="CTLaboratory Periodic Report to Sponsor/Agent" refFamiliarName="CTLaboratory Periodic Report to Sponsor/Agent" refIdentifier="PORT_IN030001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21979" role="tree-intro" sectID="" sectType="SB" refName=" Application Roles" refFamiliarName=" Application Roles" refIdentifier=""/>
+                     <artreeitem>
+                        <arref id="treeRef-PORT_AR010002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="ClinicalTrial Observation Event Global Informer" refFamiliarName="ClinicalTrial Observation Event Global Informer" refIdentifier="PORT_AR010002UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR020001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="ClinicalTrial Observation Event Global Informer" refFamiliarName="ClinicalTrial Observation Event Global Informer" refIdentifier="PORT_AR020001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR030001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="ClinicalTrial Observation Event Global Informer" refFamiliarName="ClinicalTrial Observation Event Global Informer" refIdentifier="PORT_AR030001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020003UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Submittable, Notification" refFamiliarName="AnnotatedECG Submittable, Notification" refIdentifier="PORT_IN020003UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <arref id="treeRef-PORT_AR010001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="ClinicalTrial Observation Event Global Tracker" refFamiliarName="ClinicalTrial Observation Event Global Tracker" refIdentifier="PORT_AR010001UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Revised, Notification" refFamiliarName="AnnotatedECG Revised, Notification" refIdentifier="PORT_IN020001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Deleted, Notification" refFamiliarName="AnnotatedECG Deleted, Notification" refIdentifier="PORT_IN020002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN020003UV01" role="dependency" sectID="UVRT" sectType="SB" refName="AnnotatedECG Submittable, Notification" refFamiliarName="AnnotatedECG Submittable, Notification" refIdentifier="PORT_IN020003UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN030001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="CTLaboratory Periodic Report to Sponsor/Agent" refFamiliarName="CTLaboratory Periodic Report to Sponsor/Agent" refIdentifier="PORT_IN030001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <arref id="treeRef-PORT_AR030001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="CTLaboratory Observation Event Global Informer" refFamiliarName="CTLaboratory Observation Event Global Informer" refIdentifier="PORT_AR030001UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR010002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="CTLaboratory Observation Event Global Informer" refFamiliarName="CTLaboratory Observation Event Global Informer" refIdentifier="PORT_AR010002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN030001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="CTLaboratory Periodic Report to Sponsor/Agent" refFamiliarName="CTLaboratory Periodic Report to Sponsor/Agent" refIdentifier="PORT_IN030001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21979" role="tree-intro" sectID="" sectType="SB" refName=" Trigger Events" refFamiliarName=" Trigger Events" refIdentifier=""/>
+                     <artreeitem>
+                        <teref id="treeRef-PORT_TE010001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Agreed Transmission Criterion Attained - CT" refFamiliarName="Agreed Transmission Criterion Attained - CT" refIdentifier="PORT_TE010001UV01"/>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21979" role="tree-intro" sectID="" sectType="SB" refName=" Refined Message Information Models" refFamiliarName=" Refined Message Information Models" refIdentifier=""/>
+                     <artreeitem>
+                        <rmimref id="treeRef-PORT_RM030001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="CTLaboratory Observation" refFamiliarName="CTLaboratory Observation" refIdentifier="PORT_RM030001UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-PORT_HD030001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="CTLaboratory Observation" refFamiliarName="CTLaboratory Observation" refIdentifier="PORT_HD030001UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-PORT_MT030001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="CTLaboratory Observation, base" refFamiliarName="CTLaboratory Observation, base" refIdentifier="PORT_MT030001UV01"/>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21979" role="tree-intro" sectID="" sectType="SB" refName=" Interactions" refFamiliarName=" Interactions" refIdentifier=""/>
+                     <artreeitem>
+                        <intref id="treeRef-PORT_IN030001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="CTLaboratory Periodic Report to Sponsor/Agent" refFamiliarName="CTLaboratory Periodic Report to Sponsor/Agent" refIdentifier="PORT_IN030001UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR030001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="CTLaboratory Observation Event Global Informer" refFamiliarName="CTLaboratory Observation Event Global Informer" refIdentifier="PORT_AR030001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR010001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="ClinicalTrial Observation Event Global Tracker" refFamiliarName="ClinicalTrial Observation Event Global Tracker" refIdentifier="PORT_AR010001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORT_TE010001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Agreed Transmission Criterion Attained - CT" refFamiliarName="Agreed Transmission Criterion Attained - CT" refIdentifier="PORT_TE010001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PORT_MT030001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="CTLaboratory Observation, base" refFamiliarName="CTLaboratory Observation, base" refIdentifier="PORT_MT030001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+               <artreeitem>
+                  <stref id="d0e22043" role="tree-intro" sectID="UVRT" sectType="SB" refName="Topic: StabilityStudy" refFamiliarName="Topic: StabilityStudy" refIdentifier="PORT_DO000001UV"/>
+                  <artreeitem>
+                     <stref id="d0e22043" role="tree-intro" sectID="" sectType="SB" refName=" Story Boards" refFamiliarName=" Story Boards" refIdentifier=""/>
+                     <artreeitem>
+                        <stref id="treeRef-PORT_ST090001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Reporting" refFamiliarName="Stability Reporting" refIdentifier="PORT_ST090001UV01"/>
+                        <artreeitem>
+                           <stref id="treeRef-PORT_SN090001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study Event Report" refFamiliarName="Stability Study Event Report" refIdentifier="PORT_SN090001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORT_SN090002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Revise" refFamiliarName="Stability Study Event Report Revise" refIdentifier="PORT_SN090002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORT_SN090003UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Retract" refFamiliarName="Stability Study Event Report Retract" refIdentifier="PORT_SN090003UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN090001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Event Report" refFamiliarName="Stability Study Event Report" refIdentifier="PORT_IN090001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN090002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Revision" refFamiliarName="Stability Study Event Report Revision" refIdentifier="PORT_IN090002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN090003UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Retraction" refFamiliarName="Stability Study Event Report Retraction" refIdentifier="PORT_IN090003UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22043" role="tree-intro" sectID="" sectType="SB" refName=" Application Roles" refFamiliarName=" Application Roles" refIdentifier=""/>
+                     <artreeitem>
+                        <arref id="treeRef-PORT_AR090002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Report Receiver" refFamiliarName="Stability Report Receiver" refIdentifier="PORT_AR090002UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN090001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Event Report" refFamiliarName="Stability Study Event Report" refIdentifier="PORT_IN090001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN090002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Revision" refFamiliarName="Stability Study Event Report Revision" refIdentifier="PORT_IN090002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN090003UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Retraction" refFamiliarName="Stability Study Event Report Retraction" refIdentifier="PORT_IN090003UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <arref id="treeRef-PORT_AR090001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Report Sender" refFamiliarName="Stability Report Sender" refIdentifier="PORT_AR090001UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN090001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Event Report" refFamiliarName="Stability Study Event Report" refIdentifier="PORT_IN090001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN090002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Revision" refFamiliarName="Stability Study Event Report Revision" refIdentifier="PORT_IN090002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORT_IN090003UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Retraction" refFamiliarName="Stability Study Event Report Retraction" refIdentifier="PORT_IN090003UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22043" role="tree-intro" sectID="" sectType="SB" refName=" Trigger Events" refFamiliarName=" Trigger Events" refIdentifier=""/>
+                     <artreeitem>
+                        <teref id="treeRef-PORT_TE090003UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Report Cancel Notification" refFamiliarName="Stability Report Cancel Notification" refIdentifier="PORT_TE090003UV01"/>
+                     </artreeitem>
+                     <artreeitem>
+                        <teref id="treeRef-PORT_TE090001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Report Notification" refFamiliarName="Stability Report Notification" refIdentifier="PORT_TE090001UV01"/>
+                     </artreeitem>
+                     <artreeitem>
+                        <teref id="treeRef-PORT_TE090002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Report Revise Notification" refFamiliarName="Stability Report Revise Notification" refIdentifier="PORT_TE090002UV01"/>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22043" role="tree-intro" sectID="" sectType="SB" refName=" Refined Message Information Models" refFamiliarName=" Refined Message Information Models" refIdentifier=""/>
+                     <artreeitem>
+                        <rmimref id="treeRef-PORT_RM090001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study RMIM" refFamiliarName="Stability Study RMIM" refIdentifier="PORT_RM090001UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-PORT_HD090001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study HMD" refFamiliarName="Stability Study HMD" refIdentifier="PORT_HD090001UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-PORT_MT090001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study Create/Revise Message Type" refFamiliarName="Stability Study Create/Revise Message Type" refIdentifier="PORT_MT090001UV01"/>
+                           </artreeitem>
+                           <artreeitem>
+                              <msgref id="treeRef-PORT_MT090002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study Withdraw Message Type" refFamiliarName="Stability Study Withdraw Message Type" refIdentifier="PORT_MT090002UV01"/>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22043" role="tree-intro" sectID="" sectType="SB" refName=" Interactions" refFamiliarName=" Interactions" refIdentifier=""/>
+                     <artreeitem>
+                        <intref id="treeRef-PORT_IN090001UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study Event Report" refFamiliarName="Stability Study Event Report" refIdentifier="PORT_IN090001UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR090001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Report Sender" refFamiliarName="Stability Report Sender" refIdentifier="PORT_AR090001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR090002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Report Receiver" refFamiliarName="Stability Report Receiver" refIdentifier="PORT_AR090002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORT_TE090001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Report Notification" refFamiliarName="Stability Report Notification" refIdentifier="PORT_TE090001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PORT_MT090001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Create/Revise Message Type" refFamiliarName="Stability Study Create/Revise Message Type" refIdentifier="PORT_MT090001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <intref id="treeRef-PORT_IN090003UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Retraction" refFamiliarName="Stability Study Event Report Retraction" refIdentifier="PORT_IN090003UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR090001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Report Sender" refFamiliarName="Stability Report Sender" refIdentifier="PORT_AR090001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR090002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Report Receiver" refFamiliarName="Stability Report Receiver" refIdentifier="PORT_AR090002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORT_TE090003UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Report Cancel Notification" refFamiliarName="Stability Report Cancel Notification" refIdentifier="PORT_TE090003UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PORT_MT090002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Withdraw Message Type" refFamiliarName="Stability Study Withdraw Message Type" refIdentifier="PORT_MT090002UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <intref id="treeRef-PORT_IN090002UV01" role="tree-element" sectID="UVRT" sectType="SB" refName="Stability Study Event Report Revision" refFamiliarName="Stability Study Event Report Revision" refIdentifier="PORT_IN090002UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR090001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Report Sender" refFamiliarName="Stability Report Sender" refIdentifier="PORT_AR090001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORT_AR090002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Report Receiver" refFamiliarName="Stability Report Receiver" refIdentifier="PORT_AR090002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORT_TE090002UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Report Revise Notification" refFamiliarName="Stability Report Revise Notification" refIdentifier="PORT_TE090002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PORT_MT090001UV01" role="dependency" sectID="UVRT" sectType="SB" refName="Stability Study Create/Revise Message Type" refFamiliarName="Stability Study Create/Revise Message Type" refIdentifier="PORT_MT090001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+            </artreeitem>
+         </artree>
+      </div1>
+   </body>
+</spec>

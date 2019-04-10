@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE spec SYSTEM "../../support/dtd/v3m.dtd">
+<spec>
+	<header>
+		<title>Decision Support Service (DSS)</title>
+		<version>1.0</version>
+		<date>29 January 2007</date>
+		<authlist>
+			<author>
+				<role>Project Lead and Editor</role>
+				<name key="Kawamoto, Kensaku">Kensaku Kawamoto</name>
+			</author>
+			<author>
+				<role>Contributor</role>
+				<name key="Esler, Brett">Brett Esler</name>
+			</author>
+		</authlist>
+			</header>
+	<body>
+		<div1 id="dss" ballotStatus="DSTU" ballotNumber="1">
+			<head>Preface</head>
+			<div2 id="reader_notes">
+				<head>Notes to Readers</head>
+				<p>This document is the Service Functional Model (SFM) for the Decision Support Service, which is specified under the Service Development Framework process under the auspices of the Healthcare Services Specification Project (HSSP). This document achieved HL7 Draft Standard for Trial Use (DSTU) status on January 29, 2007 and will continue as a DSTU until January 29, 2009.  Readers and users of this draft standard are encouraged to submit comments on the HL7 DSTU Comment Site at:  <link href="http://www.hl7.org/dstucomments/index.cfm">http://www.hl7.org/dstucomments/index.cfm</link>.  Further context is given in the overview section below, but one key point to note is that the SFM provides a Service Interface specification, NOT the specification of a Service implementation. This is a critical distinction in terms of Service Oriented Architecture. There could be many different ways of implementing all or part of the functionality to support the behavior described in this specification.</p>
+				<p>For the full document, please see the linked document below.</p>
+			</div2>
+			<p><artref ref="file:AUDIT_SDO_CDS_DSS_R1_D1_2006SEP_20070129061919.pdf" alt="Click here to download a copy of the approved document."/></p>
+		</div1>
+	</body>
+</spec>

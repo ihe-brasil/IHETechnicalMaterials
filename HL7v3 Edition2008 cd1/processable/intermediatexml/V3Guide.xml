@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 2 (http://www.xmlspy.com) by andrew hinchley (HL7 Publications TC) -->
+<!DOCTYPE spec SYSTEM "../../support/dtd/v3m.dtd" [
+	<!ENTITY foreword SYSTEM "V3Guide_0_1_foreword.xml">
+	<!ENTITY chap1_1 SYSTEM "V3Guide_1_1_introduction.xml">
+	<!ENTITY chap1_2 SYSTEM "V3Guide_1_2_information_model.xml">
+	<!ENTITY chap1_3 SYSTEM "V3Guide_1_3_vocabulary.xml">
+	<!ENTITY chap1_4 SYSTEM "V3Guide_1_4_its.xml">
+	<!ENTITY chap1_5 SYSTEM "V3Guide_1_5_datatypes.xml">
+	<!ENTITY chap1_6 SYSTEM "V3Guide_1_6_cmet.xml">
+	<!ENTITY chap1_7 SYSTEM "V3Guide_1_7_refinement.xml">
+	<!ENTITY chap1_8 SYSTEM "V3Guide_1_8_examples.xml">
+	<!ENTITY chap2_1 SYSTEM "V3Guide_2_1_Messaging_Components_Intro.xml">
+	<!ENTITY chap2_2 SYSTEM "V3Guide_2_2_storyboards.xml">
+	<!ENTITY chap2_3 SYSTEM "V3Guide_2_3_Application_Roles.xml">
+	<!ENTITY chap2_4 SYSTEM "V3Guide_2_4_Trigger_Events.xml">
+	<!ENTITY chap2_5 SYSTEM "V3Guide_2_5_DMIMS.xml">
+	<!ENTITY chap2_6 SYSTEM "V3Guide_2_6_RMIMSs.xml">
+	<!ENTITY chap2_7 SYSTEM "V3Guide_2_7_HMDs.xml">
+	<!ENTITY chap2_8 SYSTEM "V3Guide_2_8_Interactions.xml">
+	<!ENTITY chap2_9 SYSTEM "V3Guide_2_9_wrappers.xml">
+]>
+<spec>
+	<header>
+		<title>HL7 V3 Guide</title>
+		<version>3.0</version>
+		<!--<ballot type="Committee" number="2"/>-->
+		<date>March 2004</date>
+		<!--		<authlist>
+			<author>
+				<role>Editor</role>
+				<name>Andrew Hinchley</name>
+				<affiliation>CPL Consulting</affiliation>
+				<email href="andrewhinchley@cpl-consulting.co.uk"/>
+			</author>
+		</authlist>-->
+	</header>
+	<body>
+		&foreword;
+	<div1 id="v3fnd">
+			<head>HL7 Foundation Components</head>
+			&chap1_1;
+			&chap1_2;
+			&chap1_3; 
+			&chap1_4;
+			&chap1_5;
+			&chap1_6;
+			&chap1_7; 
+			&chap1_8; 
+		</div1>
+		<div1 id="v3msg">
+			<head>HL7 Messaging Components</head>
+			  &chap2_1;
+			  &chap2_2;
+			  &chap2_3;
+			  &chap2_4;
+			  &chap2_5;
+			  &chap2_6;
+			  &chap2_7;
+			  &chap2_8;
+			  &chap2_9;
+		</div1>
+	</body>
+	<back>
+		<div1 id="mbf1introref">
+			<head>References</head>
+			<blist>
+				<bibl id="mdf" key="Message Development Framework">
+				      HL7 Version 3 Standard: Message Development Framework, HL7 Version 3 Taskforce
+				</bibl>
+				<bibl id="adminmgt" key="HL7 Version 3 Standard: Administrative Management">
+					HL7 Version 3 Standard: Administrative Management, HL7 Version 3 Taskforce
+				</bibl>
+				<bibl id="inframgt" key="HL7 Version 3 Standard: Infrastructure Management">
+					HL7 Version 3 Standard: Infrastructure Management, HL7 Version 3 Taskforce
+				</bibl>
+				<bibl id="handcmgt" key="HL7 Version 3 Standard: Health and Clinical Management">
+					HL7 Version 3 Standard: Health and Clinical Management, HL7 Version 3 Taskforce
+				</bibl>
+				<bibl id="hl7v3voc" key="HL7 Version 3 Standard: Vocabulary">
+					HL7 Version 3 Standard: Vocabulary, HL7 Version 3 Taskforce
+				</bibl>
+				<bibl id="stofprin" key="HL7 Version 3 Statement of Principles">
+					HL7 Version 3 Statement of Principles, HL7 Version 3 Taskforce
+				</bibl>
+				<bibl id="metdev" key="Method for the Development of Healthcare Messages">
+					Method for the Development of Healthcare Messages, CEN TC 251
+				</bibl>
+				<bibl id="oose" key="Object Oriented Software Engineering">
+					Object Oriented Software Engineering, Ivar Jacobson, et al.
+				</bibl>
+				<bibl id="ooan" key="Object Oriented Analysis">
+					Object Oriented Analysis, Peter Coad &amp; Ed Yourdon
+				</bibl>
+				<bibl id="oerm" key="Open EDI Reference Model">
+					Open EDI Reference Model, ISO/IEC CD 14662
+				</bibl>
+				<bibl id="umv8" key="Unified Method, Version 0.8">
+					Unified Method, Version 0.8, Grady Booch &amp; James Rumbaugh
+				</bibl>
+				<bibl id="umldist" key="UML Distilled">
+					UML Distilled, Martin Fowler with Kendall Scott
+				</bibl>
+			</blist>
+		</div1>
+	</back>
+</spec>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 3 U (http://www.xmlspy.com) by andrew hinchley (HL7 Publications TC) -->
+<!-- edited with XML Spy v4.0 (http://www.xmlspy.com) by Sandy Boyer -->
+<div2 id="v3gstory">
+	<head>Storyboard and Storyboard Narrative</head>
+	<p>The storyboard concept is borrowed from the movie and animation industry, and is useful to the development of HL7 messages for the same reasons proven in that industry:</p>
+	<list role="unordered">
+		<item>
+			<p>A storyboard depicts a story using a series of "snapshots" or events in chronological sequence;</p>
+		</item>
+		<item>
+			<p>Each snapshot represents a recognizable, meaningful moment in the sequence of events that the reader must know about to understand the overall sequence and result;</p>
+		</item>
+		<item>
+			<p>Each snapshot illustrates the key participants in the storyboard and their interaction with other players;</p>
+		</item>
+		<item>
+			<p>The whole series of snapshots provides a coherent description of a complete process or activity.</p>
+		</item>
+	</list>
+	<p>A storyboard consists of a  short description of its purpose and an interaction diagram that shows the progression of interactions between the application roles. A storyboard narrative is a description of a real-life event that provides the necessary context for the development of a specific interaction described in the storyboard.  The process of storyboarding lays the foundation for describing HL7 messages and their content.</p>
+	<div3 id="v3gstoryfmt">
+		<head>Storyboard Format</head>
+		<p>The V3 Storyboards are comprised of the following sections:</p>
+		<list role="ordered">
+			<item>
+				<p>Name - The name is simply a short, descriptive phrase.</p>
+			</item>
+			<item>
+				<p>Artifact ID - The ID is a 16-character code with ST as the Artifact code.</p>
+			</item>
+			<item>
+				<p>Purpose - The purpose is a short narrative that describes the generic set of actions that the storyboard represents.</p>
+			</item>
+			<item>
+				<p>A sample showing the storyboard elements described above is provided in the figure below:</p>
+				<br/>
+				<p>
+					<graphic source="graphics/VG_2_2_02.jpg"/>
+				</p>
+			</item>
+			<item>
+				<p>Interaction Diagram - The Interaction Diagram shows the interactions between the application roles.  These interactions are typically depicted using a sequence diagram. A sample interaction diagram is provided below.  Note that the boxes at the top of the diagram and the vertical lines associated with them represent application roles (the types of systems that send and receive the messages).  Starting from the upper left corner and moving down to the lower right corner, the arrows show the interactions between the various application roles. The names and associated artifact codes of those interactions are noted within the arrowed lines.  </p>
+				<p>
+					<graphic source="graphics/T-HMRC_MR_ST00001.gif"/>
+				</p>
+			</item>
+			<item>
+				<p>List of interactions - Immediately following the Interaction Diagram is a list of the Interactions</p>
+				<p>
+					<graphic source="graphics/VG_2_2_022.gif"/>
+				</p>
+			</item>
+			<item>
+				<p> One or more Interaction Narratives - Following the list of interactions is a narrative description of each interaction contained in the interaction list.  Note that the Narrative has a name and an artifact number.  The narrative is a prose example of how the interaction may unfold in the real word.  A sample narrative is provided below:</p>
+				<p>
+					<graphic source="graphics/T-VG_2_2_03.gif"/>
+				</p>
+			</item>
+		</list>
+	</div3>
+</div2>

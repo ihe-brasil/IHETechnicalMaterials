@@ -1,0 +1,516 @@
+<!--<!DOCTYPE spec PUBLIC "DTDVersion-3" "../../support/dtd/v3m.dtd">-->
+<spec>
+	<header>
+		<title>Terminfo Glossary</title>
+		<version>0</version>
+		<date>02/11/2006</date>
+	</header>
+	<body>
+		<div1 id="glossary">
+			<head>Terminfo Alphabetic Index</head>
+			<div2 id="glossary-a">
+				<glist role="additionalitems">
+					<gitem id="ActRelationships">
+						<label>ActRelationships</label>
+						<def domainid="terminfo_glossary">
+							<p>a class in the HL7 clinical statement model. Used to be express links or associations between different clinical statements. These linkages may be of different types expressed using the typeCode attribute. Examples of typeCode values include “contains”, “pertain to”, “caused by”, and “reason for”.
+							</p>
+						</def>
+					</gitem>
+					<gitem id="assessment_scale">
+						<label>Assessment scale</label>
+						<def domainid="terminfo_glossary">
+							<p>a collection of observations that together yield a summary evaluation of a particular condition. Examples include the Braden Scale (used for assessing pressure ulcer risk), APGAR Score (used to assess the health of a newborn).
+							</p>
+						</def>
+					</gitem>
+					<gitem id="attribute_hl7">
+						<label>Attribute (HL7)</label>
+						<def domainid="terminfo_glossary">
+							<p>An abstraction of a particular aspect of a class. Attributes become the data values that are passed in HL7 messages. 
+For more information refer to the Attributes section of the V3 Guide.
+							</p>
+						</def>
+					</gitem>
+					<gitem id="attribute_sct">
+						<label>Attribute (SCT)</label>
+						<def domainid="terminfo_glossary">
+							<p>Attributes express characteristics of SNOMED CT concepts. Example:
+Concept Arthritis
+IS-A Arthropathy<br/>
+IS-A Inflammatory disorder<br/>
+FINDING-SITE Joint structure<br/>
+ASSOCIATED-MORPHOLOGY Inflammation<br/>
+In this example, Arthritis has two attributes: FINDING-SITE and ASSOCIATED-MORPHOLOGY. The value of the attribute FINDING-SITE is Joint structure.
+SNOMED CT concepts form relationships to each other through attributes.
+
+							</p>
+						</def>
+					</gitem>
+					<gitem id="attribute_xml">
+						<label>Attribute (XML)</label>
+						<def domainid="terminfo_glossary">
+							<p>Attributes are used to associate name-value pairs with elements.
+							</p>
+						</def>
+					</gitem>
+					<gitem id="cannonical_form">
+						<label>Canonical form</label>
+						<def domainid="terminfo_glossary">
+							<p>the standard or basic structure of a post coordinated expression, a set of linked concepts
+							</p>
+						</def>
+					</gitem>
+				</glist>
+			</div2>
+			<div2 id="glossary-c">
+				<glist>
+					<gitem id="cap">
+						<label>CAP</label>
+						<def domainid="terminfo_glossary">
+							<p>The College of American Pathologists. A not-for-profit medical society serving nearly 16,000 physician members and the laboratory community throughout the world. The College of American Pathologists, In collaboration with the United Kingdom’s National Health Service, developed SNOMED Clinical Terms.
+							</p>
+						</def>
+					</gitem>
+					<gitem id="clinical_finding_sct">
+						<label>Clinical finding  (SCT)</label>
+						<def domainid="terminfo_glossary">
+							<p>Concepts that represent the result of a clinical observation, assessment or judgment. These concepts are used for documenting clinical disorders and symptoms and examination findings.</p>
+							<p>
+Within the “clinical finding” hierarchy is the sub-hierarchy of “disease”. Concepts that are descendants of “disease” are always and necessarily abnormal.</p>
+							<p>Note: As expected, this definition includes concepts that would be used to represent HL7 Observations. However, it is worth noting that the definition of a finding in SNOMED CT is that it combines the question (see Observable entity) with the answering value.</p>
+						</def>
+					</gitem>
+					<gitem id="clin_statement_model">
+						<label>Clinical statement model HL7</label>
+						<def domainid="terminfo_glossary">
+							<p>
+							</p>
+						</def>
+					</gitem>
+					<gitem id="clin_statement_pattern">
+						<label>clinical statement pattern</label>
+						<def domainid="terminfo_glossary">
+							<p>
+							</p>
+						</def>
+					</gitem>
+					<gitem id="clin_statement_proj">
+						<label>clinical statement project HL7</label>
+						<def domainid="terminfo_glossary">
+							<p>
+							</p>
+						</def>
+					</gitem>
+					<gitem id="concept_sct">
+						<label>Concept (SCT)</label>
+						<def domainid="terminfo_glossary">
+							<p>A clinical concept to which a unique ConceptId has been assigned. 
+							</p>
+						</def>
+					</gitem>
+					<gitem id="concepts">
+						<label>Concepts </label>
+						<def domainid="terminfo_glossary">
+							<p>a member of a terminology; a defined or limited vocabulary of terms or concepts, for example: ICD, SNOMED, LOINC.
+							</p>
+						</def>
+					</gitem>
+					<gitem id="context_model">
+						<label>Context model</label>
+						<def domainid="terminfo_glossary">
+							<p>concepts can be placed in defined or refined in specific contexts related to subject (e.g. subject of record, family member, disease contact, etc.), time, finding (e.g. unknown, present, absent, goal, expectation, risk, etc.) or procedure (e.g. not done, not to be done, planned, requested, etc)
+							</p>
+						</def>
+					</gitem>
+				</glist>
+			</div2>
+			<div2 id="glossary-d">
+				<glist>
+					<gitem id="diagnosis">
+						<label>Diagnosis</label>
+						<def domainid="terminfo_glossary">
+							<p>result of a cognitive process whereby signs, symptoms, test results, and other relevant data are evaluated to determine the condition afflicting a patient,  directs administrative and clinical workflow, where for instance the assertion of an admission diagnosis establishes care paths, order sets, etc., something that is billed for in a clinical encounter. In such a scenario, an application typically has a defined context where the billable object gets entered. 
+							</p>
+						</def>
+					</gitem>
+				</glist>
+			</div2>
+			<div2 id="glossary-e">
+				<glist>
+					<gitem id="expression_sct">
+						<label>Expression (SCT)</label>
+						<def domainid="terminfo_glossary">
+							<p>A collection of references to one or more concepts used to express an instance of a clinical idea. </p>
+							<p>An expression containing a single concept identifier is referred to as a pre-coordinated expression. An expression that contains two or more concept identifiers is a post-coordinated expression. The concept identifiers within a post-coordinated expression are related to one another in accordance rules expressed in the SNOMED CT Concept Model. These rules allow concepts to be:</p>
+							<list role="unordered">
+								<item>combined to represent clinical ideas which are subtypes of all the referenced concepts<item>E.g. “tuberculosis” + “lung infection”</item>
+								</item>
+								<item>applied as refinements to specified attributes of a more general concept.<item>E.g. “asthma” : “severity” = “severe”</item>
+								</item>
+							</list>
+							<p>Notes:
+The SNOMED CT compositional grammar provides one way to represent an expression. 
+							</p>
+							<p>
+The HL7 messaging standard supports communication of SNOMED CT expressions using the “concept descriptor” (CD) data type.</p>
+						</def>
+					</gitem>
+				</glist>
+			</div2>
+			<div2 id="glossary-h">
+				<glist>
+					<gitem id="hl7">
+						<label>
+HL7
+</label>
+						<def domainid="terminfo_glossary">
+							<p>Health Level 7
+							</p>
+						</def>
+					</gitem>
+				</glist>
+			</div2>
+			<div2 id="glossary-i">
+				<glist>
+					<gitem id="icd">
+						<label>ICD(9 or 10)</label>
+						<def domainid="terminfo_glossary">
+							<p>International Classification of Diseases(version 9 or 10) is a terminology published by the National Center for Health Statistics which is a branch of the CDC. 
+							</p>
+						</def>
+					</gitem>
+					<gitem id="info_model">
+						<label>information model</label>
+						<def domainid="terminfo_glossary">
+							<p>a class model in object oriented programming
+							</p>
+						</def>
+					</gitem>
+					<gitem id="ihtsdo">
+						<label>IHTSDO</label>
+						<def domainid="terminfo_glossary">
+							<p>The International Health Terminology Standards Development Organisation. An international organisation established as an association under Danish Law. It has responsibility for the ongoing maintenance, development, quality assurance, and distribution of SNOMED CT
+							</p>
+						</def>
+					</gitem>
+					<gitem id="yyy">
+						<label>instances</label>
+						<def domainid="terminfo_glossary">
+							<p>in object oriented programming an instance is a real member of an abstract class
+							</p>
+						</def>
+					</gitem>
+				</glist>
+			</div2>
+			<div2 id="glossary-l">
+				<glist>
+					<gitem id="loinc">
+						<label>LOINC</label>
+						<def domainid="terminfo_glossary">
+							<p>Logical Observation Identifiers Names and Codes is terminology with a focus on clinical and laboratory observtions maintained by The Regenstrief Institute (www.regenstrief.org)
+							</p>
+						</def>
+					</gitem>
+				</glist>
+			</div2>
+			<div2 id="glossary-m">
+				<glist>
+					<gitem id="model_meaning">
+						<label>model of meaning</label>
+						<def domainid="terminfo_glossary">
+							<p>the universal sematic representation of an expression, distinguised from the “model of use” which may have local interpretations or context, for example an application my place some clincial statements in a “Negative” column meaning “ruled out”. Those statements would have to be modified (transformed into a cannonical form) to be correctly understood when transmitted to a third party.
+							</p>
+						</def>
+					</gitem>
+					<gitem id="model_use">
+						<label>Model of use </label>
+						<def domainid="terminfo_glossary">
+							<p>the “model of use” may have local interpretations or context, for example an application my place some clincial statements in a “Negative” column meaning “ruled out”. Those statements would have to be transformed into a cannonical form to be correctly understood when transmitted to a third party.  Distinguished from the “model of meaning” which stand on its own, which can be universally understood.
+							</p>
+						</def>
+					</gitem>
+					<gitem id="moodcode">
+						<label>moodCode</label>
+						<def domainid="terminfo_glossary">
+							<p>The HL7 Act.moodCode is defined as “a code distinguishing whether an Act is conceived of as a factual statement or in some other manner as a command, possibility, goal, etc”.
+							</p>
+						</def>
+					</gitem>
+				</glist>
+			</div2>
+			<div2 id="glossary-n">
+				<glist>
+					<gitem id="negotiationid">
+						<label>negationInd</label>
+						<def domainid="terminfo_glossary">
+							<p>Act.negationInd is defined by HL7 as “An indicator specifying that the Act statement is a negation of the Act as described by the descriptive attributes”.
+							</p>
+						</def>
+					</gitem>
+					<gitem id="nhs">
+						<label>NHS</label>
+						<def domainid="terminfo_glossary">
+							<p>United Kingdom’s National Health Service
+							</p>
+						</def>
+					</gitem>
+					<gitem id="normal_form">
+						<label>normal form</label>
+						<def domainid="terminfo_glossary">
+							<p>see cannonical form: the standard or basic structure of a post coordinated expression (set of linked concepts)
+							</p>
+						</def>
+					</gitem>
+				</glist>
+			</div2>
+			<div2 id="glossary-o">
+				<glist>
+					<gitem id="observable_entity">
+						<label>Observable entity (SCT)</label>
+						<def domainid="terminfo_glossary">
+							<p>Concepts in this hierarchy represent a question about something which may be observed or measure. An observable entity combined with a result, constitutes a finding. 
+For instance, the concept Left ventricular end-diastolic pressure (observable entity) in effect represent the question “What is the value of the left ventricular end diastolic pressure?”
+When Left ventricular end-diastolic pressure (observable entity) is given a value it represents a finding. </p>
+							<p>
+For example:</p>
+							<p>
+								<i>
+Increased left ventricular end-diastolic pressure is a finding with the value Increased.
+Left ventricular end-diastolic pressure combined with a separately expressed value such as 95 mmHg also behaves as a finding.</i>
+							</p>
+							<p>
+Note: This definition includes concepts that would be used to represent the code attribute of HL7 Observations.</p>
+						</def>
+					</gitem>
+					<gitem id="observation">
+						<label>Observation</label>
+						<def domainid="terminfo_glossary">
+							<p>An Act of recognizing and noting information about the subject, and whose immediate and primary outcome (post-condition) is new data about a subject. Observations often involve measurement or other elaborate methods of investigation, but may also be simply assertive statements.</p>
+							<p>
+
+Discussion: Structurally, many observations are name-value-pairs, where the Observation.code (inherited from Act) is the name and the Observation.value is the value of the property. Such a construct is also known as a “variable” (a named feature that can assume a value); hence, the Observation class is always used to hold generic name-value-pairs or variables, even though the variable valuation may not be the result of an elaborate observation method. It may be a simple answer to a question or it may be an assertion or setting of a parameter.
+As with all Act statements, Observation statements describe what was done, and in the case of Observations, this includes a description of what was actually observed (“results” or “answers”); and those “results” or “answers” are part of the observation and not split off into other objects. </p>
+							<p>
+Note: This definition refers to the action rather than the outcome of the observation but in the discussion continues to refer to the “results” or “answers” as being a part of the observation. The general idea of an HL7 Observation therefore includes three distinct types of concept from a SNOMED CT perspection “Observable entities” (things that can be measured), “Measurement procedures” (a type of procedure used to make a measurement or observation) and “Clinical finding” (expressing both the name of the observation and its value). </p>
+						</def>
+					</gitem>
+					<gitem id="observations">
+						<label>Observations</label>
+						<def domainid="terminfo_glossary">
+							<p>
+							</p>
+						</def>
+					</gitem>
+					<gitem id="organizer">
+						<label>Organizer</label>
+						<def domainid="terminfo_glossary">
+							<p>an object class in the HL7 Clinical Statement model, which can be an ActContainer, which is a navigational structure or heading used to group a set of acts sharing a common context, include such structures as folders, documents, document sections, and batteries. Values may be drawn from the SNOMED CT Care Record Elements hierarchy.
+							</p>
+						</def>
+					</gitem>
+				</glist>
+			</div2>
+			<div2 id="glossary-p">
+				<glist>
+					<gitem id="patterns">
+						<label>Patterns</label>
+						<def domainid="terminfo_glossary">
+							<p>a method or technique for solving a type of problem, an object model that is generally effective for a type of problem and can be easily adapted to your particular instance of the problem.
+							</p>
+						</def>
+					</gitem>
+					<gitem id="pmh">
+						<label>PMH</label>
+						<def domainid="terminfo_glossary">
+							<p>Past Medical History
+							</p>
+						</def>
+					</gitem>
+					<gitem id="post_coord">
+						<label>post-coordination</label>
+						<def domainid="terminfo_glossary">
+							<p>the linking of concepts or terms to refine or qualify, to represent more precise meanings. 
+							</p>
+						</def>
+					</gitem>
+					<gitem id="post_coord_hl7">
+						<label>Postcoordination (HL7)</label>
+						<def domainid="terminfo_glossary">
+							<p>Representation of the meaning of a class by a combination of different attributes.</p>
+							<p>
+(could be single attribute within CD datatype / single class / multi class)
+Note: This definition is not stated in HL7 documents but is inferred from usage in relation to particular attributes like Procedure.methodCode and Procedure.targetSiteCode.
+</p>
+							<p>
+Contrast this with the definition of post-coordination in SNOMED CT documentation which refers to a collection of concept identifiers which may be applied to a single HL7 attribute.</p>
+						</def>
+					</gitem>
+					<gitem id="post_coord_sct">
+						<label>Postcoordination (SCT)</label>
+						<def domainid="terminfo_glossary">
+							<p>Representation of a clinical idea using a combination of two or more concept identifiers. </p>
+							<p>
+A combination of concept identifiers used to represent a single clinical idea is referred to as a post-coordinated expression (see expression). Many clinical ideas can also be represented using a single SNOMED CT concept identifier (see pre-coordination). </p>
+							<p>
+Some clinical ideas may be represented in several different ways. SNOMED CT technical specifications include guidance of logical transformations that reduce equivalent expressions to a common canonical form.</p>
+							<p>
+Example: SNOMED CT includes the following concepts:
+Fracture of bone (conceptId= 125605004)<br/>
+Finding site (conceptId= 363698007)<br/>
+Bone structure of femur (conceptId= 181255000)<br/>
+SNOMED CT also includes a pre-coordinated concept for this procedure<br/>
+Fracture of femur (conceptId= 71620000)<br/>
+							</p>
+							<p>
+It is possible to represent “fracture of femur” in different ways:
+71620000 (pre-coordinated expression)
+125605004 : 363698007 = 181255000 (post-coordinated expression).
+</p>
+							<p>
+Note: In an HL7 representation a SNOMED CT expression is represented in a single HL7 attribute using the HL7 CD (Concept Descriptor) data type.
+
+							</p>
+						</def>
+					</gitem>
+					<gitem id="pre_coord">
+						<label>Pre-coordination</label>
+						<def domainid="terminfo_glossary">
+							<p>creation of a new Concept in a terminiology, often a post-coordinated expression that links or qualifies several concepts.
+							</p>
+						</def>
+					</gitem>
+					<gitem id="pre_coord_hl7">
+						<label>Precoordination (HL7)	</label>
+						<def domainid="terminfo_glossary">
+							<p>Representation of the meaning of a class by a single attribute.
+(as in SCT but also could cover single attribute post-coordination)
+							</p>
+							<p>
+							Note: This definition is not stated in HL7 documents but is inferred from usage in relation to particular attributes like Procedure.methodCode and Procedure.targetSiteCode.</p>
+							<p>
+Contrast this with the definition of pre-coordination in SNOMED CT documentation which implies a single concept identifier is used to represent a meaning.</p>
+						</def>
+					</gitem>
+					<gitem id="pre_coord_sct">
+						<label>Precoordination (SCT)</label>
+						<def domainid="terminfo_glossary">
+							<p>	Representation of a clinical idea using a single concept identifier. <p/>
+A single concept identifier used to represent a specific meaning is referred to as a pre-coordinated expression (see expression). SNOMED CT also allows the use of post-coordinated expressions (see post-coordination) to represent a meaning using a combination of two or more concept identifiers. </p>
+							<p>
+However, including commonly used concepts in a pre-coordinated form makes the terminology easier to use.</p>
+							<p>For examples see post-coordination.</p>
+						</def>
+					</gitem>
+					<gitem id="problem">
+						<label>Problem</label>
+						<def domainid="terminfo_glossary">
+							<p>a clinical statement that a clinician chooses to add to a problem list.
+							</p>
+						</def>
+					</gitem>
+					<gitem id="procedure">
+						<label>Procedure  (HL7)</label>
+						<def domainid="terminfo_glossary">
+							<p>An Act whose immediate and primary outcome (post-condition) is the alteration of the physical condition of the subject.</p>
+							<p>
+Discussion: Applied to clinical medicine, procedure is but one among several types of clinical activities such as observation, substance-administrations, and communicative interactions (e.g. teaching, advice, psychotherapy, represented simply as Acts without special attributes). Procedure does not subsume those other activities nor is procedure subsumed by them. Notably Procedure does not comprise all acts of whose intent is intervention or treatment. Whether the bodily alteration is appreciated or intended as beneficial to the subject is likewise irrelevant, what counts is that the act is essentially an alteration of the physical condition of the subject.</p>
+							<p>
+Note: This definition and the associated discussion exclude many activities which are subsumed by the more general sense of the word “procedure” which is used in the SNOMED CT definition.
+							</p>
+						</def>
+					</gitem>
+					<gitem id="procedure_sct">
+						<label>Procedure  (SCT)</label>
+						<def domainid="terminfo_glossary">
+							<p>	Concepts that represent the purposeful activities performed in the provision of health care. This hierarchy includes a broad variety of activities, including but not limited to invasive procedures (Excision of intracranial artery), administration of medicines (Pertussis vaccination), imaging procedures (Radiography of chest), education procedures (Instruction in use of inhaler), and administrative procedures (Medical records transfer).</p>
+							<p>
+Note: As expected, this definition includes concepts that would be used to represent HL7 Procedures. However, it also includes measurement procedures and actions that involve administration of a substance. Therefore, the code attribute of many HL7 Observations and SubstanceAdministration Acts may also be expressed using concepts from the SNOMED procedures hierarchy.</p>
+						</def>
+					</gitem>
+				</glist>
+			</div2>
+			<div2 id="glossary-r">
+				<glist>
+					<gitem id="rim">
+						<label>RIM	</label>
+						<def domainid="terminfo_glossary">
+							<p>
+							</p>
+						</def>
+					</gitem>
+				</glist>
+			</div2>
+			<div2 id="glossary-s">
+				<glist>
+					<gitem id="sct">
+						<label>SCT</label>
+						<def domainid="terminfo_glossary">
+							<p>SNOMED-CT Systematic Nomenclature of Medicine Clinical Term
+							</p>
+						</def>
+					</gitem>
+					<gitem id="semantic_interop">
+						<label>
+semantic interoperability</label>
+						<def domainid="terminfo_glossary">
+							<p>a receiving application should be able to retrieve and process communicated information, in the same way that it is able to retrieve and process information that originated within that application.
+							</p>
+						</def>
+					</gitem>
+					<gitem id="sitecode">
+						<label>SiteCode</label>
+						<def domainid="terminfo_glossary">
+							<p>the Concept code for the location on the body of an observation or procedure
+							</p>
+						</def>
+					</gitem>
+					<gitem id="snomed">
+						<label>SNOMED</label>
+						<def domainid="terminfo_glossary">
+							<p>Systematic Nomenclature of Medicine
+							</p>
+						</def>
+					</gitem>
+				</glist>
+			</div2>
+			<div2 id="glossary-t">
+				<glist>
+					<gitem id="terminfo">
+						<label>TermInfo</label>
+						<def domainid="terminfo_glossary">
+							<p>A project started by NASA and adopted by HL7 Vocabulary Committee to define how to use SNOMED in HL7 RIM record transfers.
+							</p>
+						</def>
+					</gitem>
+					<gitem id="terminonlogy">
+						<label>
+Terminology (model)</label>
+						<def domainid="terminfo_glossary">
+							<p>a defined or limited vocabulary of terms or concepts, for example: ICD, SNOMED, LOINC.
+							</p>
+						</def>
+					</gitem>
+					<gitem id="terms">
+						<label>Terms</label>
+						<def domainid="terminfo_glossary">
+							<p>a member of a terminology; a defined or limited vocabulary of terms or concepts, for example: ICD, SNOMED, LOINC.
+							</p>
+						</def>
+					</gitem>
+				</glist>
+			</div2>
+			<div2 id="glossary-u">
+				<glist>
+					<gitem id="uncertainty_code">
+						<label>uncertaintyCode</label>
+						<def domainid="terminfo_glossary">
+							<p>The Act.uncertaintyCode is defined by HL7 as “A code indicating whether the Act statement as a whole, with its subordinate components has been asserted to be uncertain in any way.”
+							</p>
+						</def>
+					</gitem>
+				</glist>
+			</div2>
+		</div1>
+	</body>
+</spec>

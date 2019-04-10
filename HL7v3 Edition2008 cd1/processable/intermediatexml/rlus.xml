@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE spec SYSTEM "../../support/dtd/v3m.dtd">
+<spec>
+	<header>
+		<title>Service Functional Model Specification: Retrieve, Locate, and Update Service (RLUS)</title>
+		<version>1.0.12</version>
+		<date>11 December 2006</date>
+		<authlist>
+			<author>
+				<role>Project Lead/Editor</role>
+				<name key="Koisch, John">John Koisch</name>
+			</author>
+			<author>
+				<role>Author</role>
+				<name key="Rubin, Ken">Ken Rubin</name>
+			</author>
+			<author>
+				<role>Author</role>
+				<name key="Honey, Alan">Alan P. Honey</name>
+			</author>
+			<author>
+				<role>Author</role>
+				<name key="Robertson, Scott">Scott Robertson</name>
+			</author>
+			<author>
+				<role>Author</role>
+				<name key="Kawamoto, Kensaku">Kensaku Kawamoto</name>
+			</author>
+		</authlist>
+			</header>
+	<body>
+		<div1 id="TerminfoIntro" ballotStatus="DSTU" ballotNumber="1">
+			<head>Preface</head>
+			<div2 id="Purpose">
+				<head>Service Description and Purpose</head>
+				<p>The Retrieve, Location, and Updating Service (RLUS) provides a set of interfaces through which information systems can access and manage information. RLUS allows health data to be located, accessed and updated regardless of underlying data structures, security concerns, or delivery mechanisms.</p>
+				<p>RLUS explicitly occupies the service space within an information processing environment. It is independent of but compatible with underlying structures, including local security implementations, data models, or delivery mechanisms. By separating and exposing those aspects of resources that facilitate inter-organization work flows in a service layer, this specification abstracts the problem of interoperability away from underlying systems. It is this abstraction and reconfiguration that allows interoperability and system durability independent of burdensome technology integration.</p>
+			</div2>
+			<div2 id="Scope">
+				<head>Scope</head>
+				<p>The Retrieve, Location, and Updating Service (RLUS) functional model specification seeks to define, at a service level, appropriate interfaces to locate, retrieve, and update resources among and between healthcare organizations. It is not intended to replace existing systems or implementations, but to create an interface standard for a service-oriented layer to expose those healthcare assets and resources within an organization that are needed to meet business or medical needs.</p>
+				<p>The manner in which services and interfaces are deployed, discovered, etc. is outside the scope of this functional model. All other interactions within the scenarios identified in Section 2 are considered in scope.</p>
+			</div2>
+			<p>To view the complete text of the DSTU document, please refer to the document linked below.</p>
+			<p><artref ref="file:RLUS_v1012_20061113_Final.pdf" alt="Click here to download a copy of the approved document."/>  (To download a copy to your desktop, right-click the link and select "Save Target As..." from the short-cut menu.)</p>
+		</div1>
+	</body>
+</spec>

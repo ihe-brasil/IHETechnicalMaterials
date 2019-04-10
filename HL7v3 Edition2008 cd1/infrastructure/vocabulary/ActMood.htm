@@ -1,0 +1,286 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:mif="urn:hl7-org:v3/mif2" xmlns:x="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>ActMood</title>
+      <link rel="stylesheet" type="text/css" href="../../support/css/V3m.css"><style type="text/css">
+					td {font-family: Verdana,Arial; text-align: left; vertical-align: top; font-size: 11}
+					th {font-family: Verdana,Arial; FONT-WEIGHT: bold; text-align: left; font-size: 11}
+					</style></head>
+   <body><a href="vocabulary.htm#voc-systems">Return to code system index</a><br><br><a name="ActMood"></a><table rules="all" border="1px" cellpadding="2" cellspacing="0" bordercolor="lightgrey" class="homepage">
+         <tbody>
+            <tr>
+               <td colspan="4"><font face="Arial" size="3"><strong>ActMood&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong> [2.16.840.1.113883.5.1001]</font><br></td>
+            </tr>
+            <tr bgcolor="cornflowerblue">
+               <th>Lvl- Typ</th>
+               <th>Concept&nbsp;Code<br>&nbsp;&nbsp;<i>Head&nbsp;Code-defined&nbsp;Value&nbsp;Set</i></th>
+               <th>Print Name</th>
+               <th>Definition</th>
+            </tr>
+            <tr>
+               <td><a name="_ActMoodCompletionTrack"></a>0-<strong>A</strong></td>
+               <td nowrap="yes"><font color="black"></font><strong>_ActMoodCompletionTrack</strong><br><i><font color="white"></font>
+                     						&nbsp;<i><a href="vs_ActMood.htm#ActMoodCompletionTrack">ActMoodCompletionTrack</a></i></i></td>
+               <td>ActMoodCompletionTrack</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">These are moods describing activities as they progress in the business cycle, from defined, through planned and ordered to
+                     completed.
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="DEF"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>DEF</strong><br><i><font color="white">.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ActMood.htm#ActMoodDefinition">ActMoodDefinition</a></i></i></td>
+               <td>definition</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">A definition of a service (master).</p>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Historical note: in previous RIM versions, the definition mood was captured as a separate class hierarchy, called Master_service.</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="EVN"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>EVN</strong><br><i><font color="white">.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ActMood.htm#ActMoodEventOccurrence">ActMoodEventOccurrence</a></i></i></td>
+               <td>event (occurrence)</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">A service that actually happens, may be an ongoing service or a documentation of a past service.</p>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Historical note: in previous RIM versions, the event mood was captured as a separate class hierarchy, called Patient_service_event,
+                     and later Service_event.
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="INT"></a>1-<strong>S</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>INT</strong><br><i><font color="white">.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ActMood.htm#ActMoodIntent">ActMoodIntent</a></i></i></td>
+               <td>intent</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">An intention or plan to perform a service. Historical note: in previous RIM versions, the intent mood was captured as a separate
+                     class hierarchy, called Service_intent_or_order.
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="APT"></a>2-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;.&nbsp;</font><strong>APT</strong><br><i><font color="white">.&nbsp;.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ActMood.htm#ActMoodAppointment">ActMoodAppointment</a></i></i></td>
+               <td>appointment</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">A planned Act for a specific time and place.</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="ARQ"></a>2-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;.&nbsp;</font><strong>ARQ</strong><br><i><font color="white">.&nbsp;.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ActMood.htm#ActMoodAppointmentRequest">ActMoodAppointmentRequest</a></i></i></td>
+               <td>appointment request</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">A request for the booking of an appointment.</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="PRMS"></a>2-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;.&nbsp;</font><strong>PRMS</strong><br><i><font color="white">.&nbsp;.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ActMood.htm#ActMoodPromise">ActMoodPromise</a></i></i></td>
+               <td>promise</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">An intent to perform a service that has the strength of a commitment, i.e., other parties may rely on the originator of such
+                     promise that said originator will see to it that the promised act will be fulfilled. A promise can be either solicited or
+                     unsolicited.
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="PRP"></a>2-<strong>S</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;.&nbsp;</font><strong>PRP</strong><br><i><font color="white">.&nbsp;.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ActMood.htm#ActMoodProposal">ActMoodProposal</a></i></i></td>
+               <td>proposal</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">A non-mandated intent to perform an act.  Used to record intents that are explicitly not Orders.  Professional responsibility
+                     for the 'proposal' may or may not be present.
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="RMD"></a>3-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;.&nbsp;.&nbsp;</font><strong>RMD</strong><br><i><font color="white">.&nbsp;.&nbsp;.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ActMood.htm#ActMoodRecommendation">ActMoodRecommendation</a></i></i></td>
+               <td>recommendation</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">A non-mandated intent to perform an act where a level of professional responsibility is being accepted by making the proposal.</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="RQO"></a>2-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;.&nbsp;</font><strong>RQO</strong><br><i><font color="white">.&nbsp;.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ActMood.htm#ActMoodRequest">ActMoodRequest</a></i></i></td>
+               <td>request</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">A request or order for a service is an intent directed from a placer (request author) to a fulfiller (service performer).</p>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc"><i class="vocDesc">Rationale:</i> The concepts of a "request" and an "order" are viewed as different, because there is an implication of a mandate associated
+                     with order.  In practice, however, this distinction has no general functional value in the inter-operation of health care
+                     computing.  "Orders" are commonly refused for a variety of clinical and business reasons, and the notion of a "request" obligates
+                     the recipient (the fulfiller) to respond to the sender (the author).  Indeed, in many regions, including Australia and Europe,
+                     the common term used is "request."
+                  </p>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Thus, the concept embodies both notions, as there is no useful distinction to be made.  If a mandate is to be associated with
+                     a request, this will be embodied in the "local" business rules applied to the transactions.  Should HL7 desire to provide
+                     a distinction between these in the future, the individual concepts could be added as specializations of this concept.
+                  </p>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">The critical distinction here, is the difference between this concept and an "intent", of which it is a specialization.  An
+                     intent involves decisions by a single party, the author.  A request, however, involves decisions by two parties, the author
+                     and the fulfiller, with an obligation on the part of the fulfiller to respond to the request indicating that the fulfiller
+                     will indeed fulfill the request.
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="SLOT"></a>2-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;.&nbsp;</font><strong>SLOT</strong><br><i><font color="white">.&nbsp;.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ActMood.htm#ActMoodResourceSlot">ActMoodResourceSlot</a></i></i></td>
+               <td>resource slot</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Periods of time on a schedule for a resource.  Appointments occupy sets of one or more booked slots.  A slot that is open
+                     for appointments is considered available and a slot that is held back for administrative purposes is considered blocked. 
+                     A Resource slot that is "tentatively" booked is referred to as reserved.
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="_ActMoodPredicate"></a>0-<strong>A</strong></td>
+               <td nowrap="yes"><font color="black"></font><strong>_ActMoodPredicate</strong><br><i><font color="white"></font>
+                     						&nbsp;<i><a href="vs_ActMood.htm#ActMoodPredicate">ActMoodPredicate</a></i></i></td>
+               <td>ActMoodPredicate</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Any of the above service moods (e.g., event, intent, or goal) can be turned into a predicate used as a criterion to express
+                     conditionals (or queries.)  However, currently we allow only criteria on service events.
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="CRT"></a>1-<strong>S</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>CRT</strong><br><i><font color="white">.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ActMood.htm#ActMoodCriterion">ActMoodCriterion</a></i></i></td>
+               <td>criterion</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">A criterion or condition over actual and potential services that must apply for an associated service to be considered.  Matches
+                     records any ActMoodCompletionTrack moods.
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="EVN.CRT"></a>2-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;.&nbsp;</font><strong>EVN.CRT</strong><br><i><font color="white">.&nbsp;.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ActMood.htm#ActMoodEventCriterion">ActMoodEventCriterion</a></i></i></td>
+               <td>event criterion</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">A criterion or condition over service events that must apply for an associated service to be considered.</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="EXPEC"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>EXPEC</strong><br><i><font color="white">.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ActMood.htm#ActMoodExpectation">ActMoodExpectation</a></i></i></td>
+               <td>expectation</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc"><b class="vocDesc">Definition:</b>An act that is considered likely to occur in the future. The essential feature of an act expressed in expectation mood is
+                     that it is likely to occur. An expectation may be desirable, undesirable or neutral in effect.
+                  </p>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc"><b class="vocDesc">Examples:</b>Prognosis of a condition, Expected date of discharge from hospital, patient will likely need an emergency decompression of
+                     the intracranial pressure by morning.
+                  </p>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc"><b class="vocDesc">Discussion:</b>INT (intent) reflects a plan for the future, which is a declaration to do something. This contrasts with expectation, which
+                     is a prediction that something will happen in the future. GOL (goal) reflects a hope rather than a prediction. RSK (risk)
+                     reflects a potential negative event that may or may not be expected to happen.
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="GOL"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>GOL</strong><br><i><font color="white">.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ActMood.htm#ActMoodGoal">ActMoodGoal</a></i></i></td>
+               <td>Goal</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc"><b class="vocDesc">Definition:</b>An observation that is considered to be desirable to occur in the future. The essential feature of a goal is that if it occurs
+                     it would be considered as a marker of a positive outcome or of progress towards a positive outcome.
+                  </p>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc"><b class="vocDesc">Examples:</b>Target weight below 80Kg, Stop smoking, Regain ability to walk, goal is to administer thrombolytics to candidate patients
+                     presenting with acute myocardial infarction.
+                  </p>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc"><b class="vocDesc">Discussion:</b> INT (intent) reflects a plan for the future, which is a declaration to do something.  This contrasts with goal which doesn't
+                     represent an intention to act, merely a hope for an eventual result.  A goal is distinct from the intended actions to reach
+                     that goal.  "I will reduce the dose of drug x to 20mg" is an intent.  "I hope to be able to get the patient to the point where
+                     I can reduce the dose of drug x to 20mg" is a goal. EXPEC (expectation) reflects a prediction rather than a hope. RSK (risk)
+                     reflects a potential negative event rather than a hope.
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="OPT"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>OPT</strong><br><i><font color="white">.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ActMood.htm#ActMoodOption">ActMoodOption</a></i></i></td>
+               <td>option</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">An option is an alternative set of property-value bindings.  Options specify alternative sets of values, typically used in
+                     definitions or orders to describe alternatives.  An option can only be used as a group, that is, all assigned values must
+                     be used together.
+                  </p>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">Historical note: in HL7 v2.x option existed in the special case for alternative medication routes (RXR segment).</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="PERM"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>PERM</strong><br><i><font color="white">.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ActMood.htm#ActMoodPermission">ActMoodPermission</a></i></i></td>
+               <td>permission</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">A kind of service which is authorized to be performed.</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="PERMRQ"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>PERMRQ</strong><br><i><font color="white">.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ActMood.htm#ActMoodPermissionRequest">ActMoodPermissionRequest</a></i></i></td>
+               <td>permission request</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">A request for authorization to perform a kind of service.</p>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">This is distinct from RQO which is a request for an actual act. PERMRQ is merely a request for permission to perform an act.<i class="vocDesc">Discussion:</i></p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="RSK"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>RSK</strong><br><i><font color="white">.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ActMood.htm#ActMoodRisk">ActMoodRisk</a></i></i></td>
+               <td>risk</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc"><b class="vocDesc">Definition:</b>An act that may occur in the future and which is regarded as undesirable. The essential feature of a risk is that if it occurs
+                     this would be regarded as a marker of a negative outcome or of deterioration towards a negative outcome. Recording a risk
+                     indicates that it is seen as more likely to occur in the subject than in a general member of the population but does not mean
+                     it is expected to occur.
+                  </p>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc"><b class="vocDesc">Examples:</b>Increased risk of DVT, at risk for sub-acute bacterial endocarditis.
+                  </p>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc"><b class="vocDesc">Discussion:</b>Note: An observation in RSK mood expresses the undesirable act, and not the underlying risk factor. A risk factor that is
+                     present (e.g. obesity, smoking, etc) should be expressed in event mood. INT (intent) reflects a plan for the future, which
+                     is a declaration to do something. This contrasts with RSK (risk), which is the potential that something negative will occur
+                     that may or may not ever happen. GOL (goal) reflects a hope to achieve something. EXPEC (expectation) is the prediction of
+                     a positive or negative event. This contrasts with RSK (risk), which is the potential that something negative will occur that
+                     may or may not ever happen, and may not be expected to happen.
+                  </p>
+               </td>
+            </tr>
+         </tbody>
+      </table><br><a href="vocabulary.htm#voc-systems">Return to code system index</a><br><br><p xmlns="http://www.w3.org/1999/xhtml" class="copyright">Last Published:&nbsp;06/17/2008&nbsp;10:39&nbsp;AM</p>
+      <p xmlns="http://www.w3.org/1999/xhtml" class="copyright">HL7&reg; Version 3 Standard, &copy; 2008 Health 
+         Level Seven&reg;, Inc.  All Rights Reserved.
+      </p>
+      <p xmlns="http://www.w3.org/1999/xhtml" class="copyright">HL7 and Health Level Seven are registered 
+         trademarks of Health Level Seven, Inc.  Reg. U.S. Pat &amp; TM Off
+      </p>
+   </body>
+</html>

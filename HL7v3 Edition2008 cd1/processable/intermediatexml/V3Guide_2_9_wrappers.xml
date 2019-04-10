@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 3 U (http://www.xmlspy.com) by andrew hinchley (HL7 Publications TC) -->
+<?xml-stylesheet type="text/xsl" href="D:\hl7\guide\mike-build\V3mLayoutHTML.xsl"?>
+<div2 id="v3 Infrastructure">
+	<head>V3 message wrappers and Infrastructure</head>
+	<p>HL7 V3 provides a substantial level of functionality in the provision of envelopes to support the transport of HL7 messages from sender to receiver. HL7 calls these wrappers. Inside the wrapper is Domain Content.
+
+Wrappers are all defined in the same way as for message content, by defining object classes and related relationships. These specifications can then be used to generate an XML schema, or other ITS-defined syntax to go on the wire. HL7 tools are being designed to automatically pick up the appropriate type of wrapper as part o the process of message generation.
+
+The infrastructure ballot is organised as four separate domains. The four domains are:- </p>
+	<p>
+			<list role="ordered">
+				<item>Transmission Infrastructure</item>
+				<item>Message Control Act</item>
+				<item>Query Infrastructure</item>
+				<item>Master File Infrastructure</item>
+			</list>
+	</p>
+	<p>
+This allows a common approach to defining these standards with how message content is defined in the various application domains. Making use of the normal message definition structure is particularly useful however in being able to define (application) roles and interactions, which are particularly applicable to more complex wrapper functionality.
+
+HL7 prefers to define such a rich set of functions within the HL7 standards scope because there is no de facto way of providing these functions in a single standard that could be adopted. HL7 is now defining transport specifications which indicate how underlying transports such as eBXML or Web Services can be used to transport HL7 messages.
+</p>
+	<head>HL7 Transmission wrapper (ballot: Infrastructure Domain)
+</head>
+	<p>The  HL7 Transmission wrapper is required for all V3 messages. It contains a large number of optional fields so the message overhead will vary from one context to another. Technical committees or realms who perform refinement on the transmission wrapper need to ensure that tooling is in place to pick up their modified wrapper rather than just  the default. For instance when using an XML ITS, the final output needs to be an  XML schema comprising  message content, the transmission wrapper, and, optionally, a Control Act wrapper.</p>
+	<p>Associated with use of the wrapper are a number of services that are available as needed:-
+</p>
+	<p>Three messages are defined to support these functions and each one has an R-MIM and HMD. The two acknowledgement message types with very different roles. One is to support reliable delivery at the network level. Increasingly however HL7 V3 messaging will make use of external transport services that do not require use of an HL7-defined network acknowledgement. The same is true of the optional message sequence number protocol. It is an essential component of supporting reliable delivery at the network level, but again not required if an external reliable transport is used such as the three HL7 transport profiles now all at DSTU.
+The application acknowledgement is very different. It is triggered only by inclusion in an Interaction and with a defined trigger event. It may carry domain content and therefore combine the general functionality of an application acknowledgement, with the specific response defined by the domain for this Interaction. </p>
+	<p>All the message structures in the Transmission Domain have  mandatory attributes which define the sending and receiving systems in a message transmission (DeviceID). Additional information about the Sender and Receiver in other classes, but the use of a mandatory attribute ensures that a transport protocol such as the ebXML DSTU can define an attribute copy procedure which will allow the values in Device ID to be also held in the ebXML wrappers. A later paragraph in this Section summarises the commonalities and differences between the three transport DSTU specifications.
+</p>
+	<p>The  Transmission wrapper offers an additional set of functions to support polling. These functions are included for compatibility with some early V2 use. Polling is probably a matter of limited  interest to implementors, other than those with particular legacy problems.
+</p>
+	<list role="ordered">
+		<item>Send Poll Response w/ Message
+</item>
+		<item>Send Accept Ack/Poll Next Msg</item>
+	</list>
+	<head>Control Act wrapper(ballot: Infrastructure Domain)
+</head>
+	<p>Additional richness in functionality is provided by the Control Act wrapper,which is used when information about the interaction which has triggered a message needs to be communicated within that message to the receiver. In some cases, these interactions will have been fully defined by the interaction model and therefore there is no need for such information to be included inthe message. Two particular areas of application are query sessions and registry interactions (such as Master Person Index). Technical committees will individually decide when a Control Act wrapper needs to be specified for a particular message. A generic wrapper definition is supplied as part of the Infrastructure ballot. Technical Committees may carry out refinement on the wrapper to meet their own needs. Future tooling will need to be able incorporate domain-specific wrappers when necessary. This is outside the capability of the current tooling.
+
+These wrappers are described in the HL7 ballot in three main groupings, described as separate domains:-
+</p>
+	<list role="ordered">
+		<item>Message Control Act Infrastructure (MCAI) -defining the Control Act itself.
+</item>
+		<item>Query Infrastructure (QUQI) -which describes how to use the wrapper to support queries</item>
+		<item>Master File Infrastructure (MFMI)</item>
+	</list>
+	<div3 id="v3MCAI">
+		<head>Message Control Act Infrastructure</head>
+		<p>MCAI defines the detail of the Control Act. Key uses are for Query and Master File applications, these are summarised in the next two paragraphs.
+</p>
+	</div3>
+	<div3 id="v3QUQI">
+		<head>Query Infrastructure</head>
+		<p>The objective is to set up a general structure for queries and their response. Three messages are defined along with appropriate roles and interactions.
+
+</p>
+		<list role="ordered">
+			<item>Query General Activate Query Continue
+</item>
+			<item>Query General Response</item>
+			<item>Query by Parameter specification</item>
+		</list>
+	</div3>
+	<div3 id="v3MFI">
+		<head>Master File  Infrastructure</head>
+		<p>A typical application is an MPI Master Patient Index. Again, the intention is to define a general set of messages that can be used to maintain any type of patient or professional database, or similar.
+
+In these functional areas, there are no specific messages against the message functionality required. The Control Act is used to define what is needed, together with a set of standard trigger events, and an appropriate state diagram.
+</p>
+	</div3>
+</div2>

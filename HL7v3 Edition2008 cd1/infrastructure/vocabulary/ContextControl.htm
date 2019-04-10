@@ -1,0 +1,189 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:mif="urn:hl7-org:v3/mif2" xmlns:x="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>ContextControl</title>
+      <link rel="stylesheet" type="text/css" href="../../support/css/V3m.css"><style type="text/css">
+					td {font-family: Verdana,Arial; text-align: left; vertical-align: top; font-size: 11}
+					th {font-family: Verdana,Arial; FONT-WEIGHT: bold; text-align: left; font-size: 11}
+					</style></head>
+   <body><a href="vocabulary.htm#voc-systems">Return to code system index</a><br><br><a name="ContextControl"></a><table rules="all" border="1px" cellpadding="2" cellspacing="0" bordercolor="lightgrey" class="homepage">
+         <tbody>
+            <tr>
+               <td colspan="4"><font face="Arial" size="3"><strong>ContextControl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong> [2.16.840.1.113883.5.1057]</font><br><p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">A code that specifies how an ActRelationship or Participation contributes to the context of an Act, and whether it may be
+                     propagated to descendent Acts whose association allows such propagation (see also attributes Participation.contextControlCode,
+                     ActRelationship.contextControlCode, ActRelationship.contextConductionInd).
+                  </p>
+               </td>
+            </tr>
+            <tr bgcolor="cornflowerblue">
+               <th>Lvl- Typ</th>
+               <th>Concept&nbsp;Code<br>&nbsp;&nbsp;<i>Head&nbsp;Code-defined&nbsp;Value&nbsp;Set</i></th>
+               <th>Print Name</th>
+               <th>Definition</th>
+            </tr>
+            <tr>
+               <td><a name="_ContextControlAdditive"></a>0-<strong>A</strong></td>
+               <td nowrap="yes"><font color="black"></font><strong>_ContextControlAdditive</strong><br><i><font color="white"></font>
+                     						&nbsp;<i><a href="vs_ContextControl.htm#ContextControlAdditive">ContextControlAdditive</a></i></i></td>
+               <td>ContextControlAdditive</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">The association adds to the existing context associated with the Act.  Both this association and any associations propagated
+                     from ancestor Acts are interpreted as being related to this Act.
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="AN"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>AN</strong><br><i><font color="white">.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ContextControl.htm#ContextControlAdditiveNon-propagating">ContextControlAdditiveNon-propagating</a></i></i></td>
+               <td>additive, non-propagating</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">The association adds to the existing context associated with the Act, but will not propagate to any descendant Acts reached
+                     by conducting ActRelationships (see contextControlCode). Examples: If an 'Author' Participation were marked as "Additive,
+                     Non-Propagating" it means that the author will be added to the set of author participations that have propagated from ancestor
+                     Acts for the purpose of this Act. However only the previously propagated authors will propagate to any child Acts that allow
+                     context to be propagated.
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="AP"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>AP</strong><br><i><font color="white">.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ContextControl.htm#ContextControlAdditivePropagating">ContextControlAdditivePropagating</a></i></i></td>
+               <td>additive, propagating</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">The association adds to the existing context associated with the Act, and will propagate to any descendant Acts reached by
+                     conducting ActRelationships (see contextControlCode). Examples: If an 'Author' Participation were marked as "Additive, Propagating"
+                     it means that the author will be added to the set of author participations that have propagated from ancestor Acts, and will
+                     itself propagate with the other authors to any child Acts that allow context to be propagated.
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="_ContextControlNonPropagating"></a>0-<strong>A</strong></td>
+               <td nowrap="yes"><font color="black"></font><strong>_ContextControlNonPropagating</strong><br><i><font color="white"></font>
+                     						&nbsp;<i><a href="vs_ContextControl.htm#ContextControlNonPropagating">ContextControlNonPropagating</a></i></i></td>
+               <td>ContextControlNonPropagating</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">The association applies only to the current Act and will not propagate to any child Acts that are related via a conducting
+                     ActRelationship (refer to contextConductionInd).
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="AN"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>AN</strong><br><i><font color="white">.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ContextControl.htm#ContextControlAdditiveNon-propagating">ContextControlAdditiveNon-propagating</a></i></i></td>
+               <td>additive, non-propagating</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">The association adds to the existing context associated with the Act, but will not propagate to any descendant Acts reached
+                     by conducting ActRelationships (see contextControlCode). Examples: If an 'Author' Participation were marked as "Additive,
+                     Non-Propagating" it means that the author will be added to the set of author participations that have propagated from ancestor
+                     Acts for the purpose of this Act. However only the previously propagated authors will propagate to any child Acts that allow
+                     context to be propagated.
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="ON"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>ON</strong><br><i><font color="white">.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ContextControl.htm#ContextControlOverridingNon-propagating">ContextControlOverridingNon-propagating</a></i></i></td>
+               <td>overriding, non-propagating</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">The association is added to the existing context associated with the Act, but overrides an association with the same typeCode.
+                     However, this overriding association will not propagate to any descendant Acts reached by conducting ActRelationships (see
+                     contextControlCode). Examples: If an 'Author' Participation were marked as "Overriding, Non-Propagating" it means that the
+                     author will replace the set of author participations that have propagated from ancestor Acts. Furthermore, no author participations
+                     whatsoever will propagate to any child Acts that allow context to be propagated.
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="_ContextControlOverriding"></a>0-<strong>A</strong></td>
+               <td nowrap="yes"><font color="black"></font><strong>_ContextControlOverriding</strong><br><i><font color="white"></font>
+                     						&nbsp;<i><a href="vs_ContextControl.htm#ContextControlOverriding">ContextControlOverriding</a></i></i></td>
+               <td>ContextControlOverriding</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">The association adds to the existing context associated with the Act, but replaces associations propagated from ancestor Acts
+                     whose typeCodes are the same or more specific.
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="ON"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>ON</strong><br><i><font color="white">.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ContextControl.htm#ContextControlOverridingNon-propagating">ContextControlOverridingNon-propagating</a></i></i></td>
+               <td>overriding, non-propagating</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">The association is added to the existing context associated with the Act, but overrides an association with the same typeCode.
+                     However, this overriding association will not propagate to any descendant Acts reached by conducting ActRelationships (see
+                     contextControlCode). Examples: If an 'Author' Participation were marked as "Overriding, Non-Propagating" it means that the
+                     author will replace the set of author participations that have propagated from ancestor Acts. Furthermore, no author participations
+                     whatsoever will propagate to any child Acts that allow context to be propagated.
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="OP"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>OP</strong><br><i><font color="white">.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ContextControl.htm#ContextControlOverridingPropagating">ContextControlOverridingPropagating</a></i></i></td>
+               <td>overriding, propagating</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">The association is added to the existing context associated with the Act, but overrides an association with the same typeCode.
+                     This overriding association will propagate to any descendant Acts reached by conducting ActRelationships (see contextControlCode).
+                     Examples: If an 'Author' Participation were marked as "Overriding, Propagating" it means that the author will replace the
+                     set of author participations that have propagated from ancestor Acts, and will itself be the only author to propagate to any
+                     child Acts that allow context to be propagated.
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="_ContextControlPropagating"></a>0-<strong>A</strong></td>
+               <td nowrap="yes"><font color="black"></font><strong>_ContextControlPropagating</strong><br><i><font color="white"></font>
+                     						&nbsp;<i><a href="vs_ContextControl.htm#ContextControlPropagating">ContextControlPropagating</a></i></i></td>
+               <td>ContextControlPropagating</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">The association propagates to any child Acts that are related via a conducting ActRelationship (refer to contextConductionInd).</p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="AP"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>AP</strong><br><i><font color="white">.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ContextControl.htm#ContextControlAdditivePropagating">ContextControlAdditivePropagating</a></i></i></td>
+               <td>additive, propagating</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">The association adds to the existing context associated with the Act, and will propagate to any descendant Acts reached by
+                     conducting ActRelationships (see contextControlCode). Examples: If an 'Author' Participation were marked as "Additive, Propagating"
+                     it means that the author will be added to the set of author participations that have propagated from ancestor Acts, and will
+                     itself propagate with the other authors to any child Acts that allow context to be propagated.
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td><a name="OP"></a>1-<strong>L</strong></td>
+               <td nowrap="yes"><font color="black">.&nbsp;</font><strong>OP</strong><br><i><font color="white">.&nbsp;</font>
+                     						&nbsp;<i><a href="vs_ContextControl.htm#ContextControlOverridingPropagating">ContextControlOverridingPropagating</a></i></i></td>
+               <td>overriding, propagating</td>
+               <td>
+                  <p xmlns="http://www.w3.org/1999/xhtml" class="vocDesc">The association is added to the existing context associated with the Act, but overrides an association with the same typeCode.
+                     This overriding association will propagate to any descendant Acts reached by conducting ActRelationships (see contextControlCode).
+                     Examples: If an 'Author' Participation were marked as "Overriding, Propagating" it means that the author will replace the
+                     set of author participations that have propagated from ancestor Acts, and will itself be the only author to propagate to any
+                     child Acts that allow context to be propagated.
+                  </p>
+               </td>
+            </tr>
+         </tbody>
+      </table><br><a href="vocabulary.htm#voc-systems">Return to code system index</a><br><br><p xmlns="http://www.w3.org/1999/xhtml" class="copyright">Last Published:&nbsp;06/17/2008&nbsp;10:39&nbsp;AM</p>
+      <p xmlns="http://www.w3.org/1999/xhtml" class="copyright">HL7&reg; Version 3 Standard, &copy; 2008 Health 
+         Level Seven&reg;, Inc.  All Rights Reserved.
+      </p>
+      <p xmlns="http://www.w3.org/1999/xhtml" class="copyright">HL7 and Health Level Seven are registered 
+         trademarks of Health Level Seven, Inc.  Reg. U.S. Pat &amp; TM Off
+      </p>
+   </body>
+</html>

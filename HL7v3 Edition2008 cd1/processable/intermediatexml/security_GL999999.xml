@@ -1,0 +1,796 @@
+<!--<!DOCTYPE spec PUBLIC "DTDVersion-3" "../../support/dtd/v3m.dtd">-->
+<spec>
+	<header>
+		<title>Glossary</title>
+		<version>0</version>
+		<date>11/15/2005</date>
+	</header>
+	<body>
+		<div1 id="glossary">
+			<head>HL7 Glossary Additions</head>
+			<div2 id="glossary-COCS_DM000000">
+				<head>COCS_DM000000 Glossary</head>
+			<glist role="additionalitems">
+				<gitem id="accounts_receivable">
+					<label>Accounts Receivable</label>
+					<def domainid="security_glossary">
+						<p>Processing patient and insurance company
+        payments.</p>
+						<p>Source: RBAC Task Force</p>
+					</def>
+				</gitem>
+				<gitem id="administrative_ad_hoc_report">
+					<label>Administrative Ad Hoc Report</label>
+					<def domainid="security_glossary">
+						<p>A report of information generated on an
+            ad hoc (one time) basis that contains administrative data; no clinical
+        data will be included.</p>
+						<p>Source: RBAC Task Force</p>
+					</def>
+				</gitem>
+				<gitem id="administrative_report">
+					<label>Administrative Report</label>
+					<def domainid="security_glossary">
+						<p>A collection of data (patient-specific
+        and/or summary) generated for a variety of administrative purposes.</p>
+						<p>Source: RBAC Task Force</p>
+					</def>
+				</gitem>
+				<gitem id="adt_functions">
+					<label>ADT Functions</label>
+					<def domainid="security_glossary">
+						<p>The administrative
+        functions of patient registration, admission, discharge, and transfer.</p>
+						<p>Source: Albany IRMFO</p>
+						<p>
+							<loc href="http://www.vmth.ucdavis.edu/m/vista/softserv/mip/adt/docs/mono.htm">http://www.vmth.ucdavis.edu/m/vista/softserv/mip/adt/docs/mono.htm</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="advance_directives">
+					<label>Advance Directives</label>
+					<def domainid="security_glossary">
+						<p>A living Will written by the patient to
+        the physician in case of incapacitation to give further instructions.</p>
+						<p>Source: ASTM E 1384 – 02a<br/>
+						Standard Practice for Content and Structure of the Electronic Health
+        Record</p>
+					</def>
+				</gitem>
+				<gitem id="alerts">
+					<label>Alerts</label>
+					<def domainid="security_glossary">
+						<p>Brief online notices that are issued to
+            users as they complete a cycle through the menu system.  Alerts are
+            designed to provide interactive notification of pending computing
+            activities, such as the need to reorder supplies or review a patient's
+        clinical test results.</p>
+						<p>Source: Computerized
+            Patient Record System (CPRS) TECHNICAL MANUAL Version 1.0, December
+            1997<br/>
+							<loc href="http://www.va.gov/vista/VistAdocs/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/CPRSLMTM.PDF">http://www.va.gov/vista/VistAdocs/Clinical/Comp_Patient_Recrd_Sys_(CPRS)/CPRSLMTM.PDF</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="appointment_schedule">
+					<label>Appointment Schedule</label>
+					<def domainid="security_glossary">
+						<list role="ordered">
+							<item>An appointment represents a booked
+            slot or group of slots on a schedule, relating to one or more services
+            or resources.  Two examples might include a patient visit scheduled
+            at a clinic, and a reservation for a piece of equipment.</item>
+							<item>Includes past, present, and future appointments.</item>
+						</list>
+						<p>Source: </p>
+						<list role="ordered">
+							<item>Health
+            Level Seven, Version 2.3 © 1997 <loc href="http://www2.dmi.columbia.edu/resources/hl7doc/hl72.3/APPE.PDFf">http://www2.dmi.columbia.edu/resources/hl7doc/hl72.3/APPE.PDF</loc>
+							</item>
+							<item>VHA RBAC Task Force</item>
+						</list>
+					</def>
+				</gitem>
+				<gitem id="appointment_schedule_functions">
+					<label>Appointment Schedule Functions</label>
+					<def domainid="security_glossary">
+						<p>For example, patient check-in, check-out,
+        no show, etc.</p>
+						<p>Source: VHA RBAC Task
+        Force</p>
+					</def>
+				</gitem>
+				<gitem id="billing">
+					<label>Billing</label>
+					<def domainid="security_glossary">
+						<p>Processing patient and insurance company
+        bills.</p>
+						<p>Source: RBAC Task Force</p>
+					</def>
+				</gitem>
+				<gitem id="chief_complaint">
+					<label>Chief Complaint</label>
+					<def domainid="security_glossary">
+						<p>The reason for the episode/encounter and
+            patient’s complaints and symptoms reflecting his/her own perceptions
+            of his needs.  The nature and duration of symptoms that caused the
+            patient to seek medical attention, as stated in the patient’s own
+        words.</p>
+						<p>Source: ASTM E 1384 – 02a<br/>
+							Standard Practice for Content and Structure of the Electronic Health
+        Record</p>
+					</def>
+				</gitem>
+				<gitem id="coding">
+					<label>Coding</label>
+					<def domainid="security_glossary">
+						<p>Coding is a process where medical records
+            produced by the health care provider are translated into a code that
+            identifies each diagnoses and procedure utilized in treating the
+            patient.  Coding uses special computer programs to determine insurance
+            reimbursements, and tabulate and analyze data. Health information
+            technicians work under the supervision of the health information
+        administrator.</p>
+						<p>Mississippi Hospital Association Health Career Center, <loc href="http://www.mshealthcareers.com/careers/healthinfo.htm">http://www.mshealthcareers.com/careers/healthinfo.htm</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="consents_and_authorizations">
+					<label>Consents and Authorizations</label>
+					<def domainid="security_glossary">
+						<p>Patient indicates in writing that (s)he
+            has been informed of the nature of the treatment, risks, complications,
+        alternative forms of treatment and treatment consequences.</p>
+						<p>Source: ASTM E 1384 – 02a<br/>
+							Standard Practice for Content and Structure of the Electronic Health
+        Record</p>
+					</def>
+				</gitem>
+				<gitem id="consult_order">
+					<label>Consult Order</label>
+					<def domainid="security_glossary">
+						<p>A request for a consult (service/sub-specialty
+            evaluation) or procedure (Electrocardiogram) to be completed for
+            a patient.  Referral of a patient by the primary care physician to
+            another hospital service/ specialty, to obtain a medical opinion
+            based on patient evaluation and completion of any procedures, modalities,
+            or treatments the consulting specialist deems necessary to render
+        a medical opinion. </p>
+						<p>Source: CONSULT/REQUEST TRACKING USER MANUAL Version
+            3.0, December 1997, June 2002, Update Department of Veterans Affairs
+            Technical Services Computerized Patient Record System Product Line</p>
+						<p>
+							<loc href="http://www.va.gov/vdl/VistA_Lib/Clinical/CPRS-Consult_Request_Tracking/CONSUM.pdf">http://www.va.gov/vdl/VistA_Lib/Clinical/CPRS-Consult_Request_Tracking/CONSUM.pdf</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="consultation_findings">
+					<label>Consultation Findings</label>
+					<def domainid="security_glossary">
+						<p>The text of the recommendations made by
+        the consulting practitioner.</p>
+						<p>Source: ASTM E 1384 – 02a<br/>
+							Standard Practice for Content and Structure of the Electronic Health
+        Record</p>
+					</def>
+				</gitem>
+				<gitem id="current_directory_of_provider_information">
+					<label>Current Directory of Provider Information</label>
+					<def domainid="security_glossary">
+						<p>Current directory of provider information
+            in accordance with relevant laws, regulations, and conventions, including
+            full name, address or physical location, and a 24x7 telecommunications
+            address (e.g. phone or pager access number) to support delivery of
+        effective healthcare.</p>
+						<p>Source: HL7 EHR System
+            Functional Model, Draft Standard for Trial Use, July 2004<br/>
+							<loc href="http://www.ihs.gov/cio/ehr/files/HL7_EHR_DSTU.pdf">http://www.ihs.gov/cio/ehr/files/HL7_EHR_DSTU.pdf</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="diet_order">
+					<label>Diet Order</label>
+					<def domainid="security_glossary">
+						<p>An order for a patient diet.  A patient
+        may have only one effective diet order at a time.</p>
+						<p>Source: Health Level
+            Seven, Version 2.3 © 1997<br/>
+							<loc href="http://www2.dmi.columbia.edu/resources/hl7doc/hl72.3/APPE.PDF">http://www2.dmi.columbia.edu/resources/hl7doc/hl72.3/APPE.PDF</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="discharge_summary">
+					<label>Discharge Summary</label>
+					<def domainid="security_glossary">
+						<p>The Discharge Summary is a concise summary
+            of hospitalization to the Primary Care Provider (PCP) who will follow
+            the patient in clinic after his/her stay or the admitting doctor
+        at next hospitalization</p>
+						<p>Source: OU-Tulsa Department of Internal Medicine
+            Discharge Summary Format<br/>
+							<loc href="http://tulsa.ou.edu/im/Discharge%20Summary%20Guide.pdf">http://tulsa.ou.edu/im/Discharge%20Summary%20Guide.pdf</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="dnr_order">
+					<label>DNR Order</label>
+					<def domainid="security_glossary">
+						<p>A do-not-resuscitate (DNR) order in the
+            patient's medical chart instructs the medical staff not to try to
+            revive the patient if breathing or heartbeat has stopped. This means
+            physicians, nurses and others will not initiate such emergency procedures
+            as mouth-to-mouth resuscitation, external chest compression, electric
+            shock, insertion of a tube to open the patient's airway, injection
+            of medication into the heart or open chest heart massage.  If the
+            patient is in a nursing home, a DNR order instructs the staff not
+            to perform emergency resuscitation and not to transfer the patient
+        to a hospital for such procedures. </p>
+						<p>Source: Stony
+            
+Brook University Hospital,
+
+New York<br/>
+							<loc href="http://www.stonybrookhospital.com/index.cfm?print=yes&amp;id=1388&amp;num">http://www.stonybrookhospital.com/index.cfm?print=yes&amp;id=1388&amp;num</loc>=</p>
+					</def>
+				</gitem>
+				<gitem id="encounter_data">
+					<label>Encounter Data</label>
+					<def domainid="security_glossary">
+						<list role="ordered">
+							<item>Data relating to treatment or service
+            rendered by a provider to a patient.  Used in determining the level
+            of service.</item>
+							<item>Encounter: (1) An instance of direct provider/practitioner to
+            patient interaction, regardless of the setting, between a patient
+            and a practitioner vested with primary responsibility for diagnosing,
+            evaluating or treating the patient’s condition, or both, or providing
+            social worker services. (2) A contact between a patient and a practitioner
+            who has primary responsibility for assessing and treating the patient
+        at a given contact, exercising independent judgment.</item>
+						</list>
+						<p>Source:</p>
+						<list role="ordered">
+							<item>Adapted from <loc href="http://www.pohly.com/terms.html">Glossary of Managed Care Terms</loc>
+								<br/>
+								<loc href="http://www.pohly.com/terms_e.html">http://www.pohly.com/terms_e.html</loc>
+							</item>
+							<item>ASTM E1384-02a -- Standard Guide for Content and Structure of
+        the Electronic Health Record</item>
+						</list>
+					</def>
+				</gitem>
+				<gitem id="health_status_data">
+					<label>Health Status Data</label>
+					<def domainid="security_glossary">
+						<list role="ordered">
+							<item>Health Status - the state of health
+            of a specified individual, group, or population. It may be measured
+            by obtaining proxies such as people's subjective assessments of their
+            health; by one or more indicators of mortality and morbidity in the
+            population, such as longevity or maternal and infant mortality; or
+            by using the incidence or prevalence of major diseases (communicable,
+            chronic, or nutritional). Conceptually, health status is the proper
+            outcome measure for the effectiveness of a specific population's
+            medical care system, although attempts to relate effects of available
+            medical care to variations in health status have proved difficult.</item>
+							<item>Health Status Data Elements and Indicators - this item lists
+            the data elements and indicators used in the data set to describe
+        the health status of an individual or target population(s).</item>
+						</list>
+						<p>Source:</p>
+						<list role="ordered">
+							<item>Management Resources for Healthcare &amp; Medical
+            Professionals<br/>
+								<loc href="http://www.pohly.com/terms_h.html">http://www.pohly.com/terms_h.html</loc>
+							</item>
+							<item>Department of Maternal and Child Health - School of Public Health - University of North Carolina-Chapel Hill<br/>
+								<loc href="http://mchneighborhood.ichp.edu/eds/901031809.html">http://mchneighborhood.ichp.edu/eds/901031809.html</loc>
+							</item>
+						</list>
+					</def>
+				</gitem>
+				<gitem id="history_and_physical">
+					<label>History and Physical</label>
+					<def domainid="security_glossary">
+						<p>A permanent record preserved in writing
+            in either printed or electronic form.  The written report of a history
+            and physical examination not only serves to supplement the memory
+            of the treating physician but may also provide essential information
+            to other physicians months, years, or decades later.  In addition,
+            it may assume great legal significance, documenting the thoroughness
+            and appropriateness of the physician’s evaluation and the accuracy
+            of the diagnosis, providing a basis for health insurance benefit
+            payments, or supplying data for disability determination or workers’
+        compensation.</p>
+						<p>Source: H &amp; P:
+            A Nonphysician’s Guide to the Medical History and Physical Examination,
+            John H. Dirckx, M.D., Health Professions Institute, Modesto, California
+            2001<br/>
+							<loc href="http://www.hpisum.com/downloads/H&amp;P3.pdf">http://www.hpisum.com/downloads/H&amp;P3.pdf</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="immunization">
+					<label>Immunization</label>
+					<def domainid="security_glossary">
+						<p>A treatment given
+            to a patient to confer immunity for a specific disease.</p>
+						<p>Source: VHA RBAC Task Force</p>
+					</def>
+				</gitem>
+				<gitem id="inpatient_medication_order">
+					<label>Inpatient Medication Order</label>
+					<def domainid="security_glossary">
+						<p>An inpatient medication order to the pharmacy
+            system might include (a) the identity of the drug to be administered,
+            (b) dosage of the drug, (c) route by which the drug is to be administered,
+            (d) time and/or frequency of administration, (e) registration number
+        and address for a controlled substance. </p>
+						<p>Source: Business Requirements for an Automated
+            Patient Medical Record<br/>
+							<loc href="http://www.uprforum.com/Chapter7.htm">http://www.uprforum.com/Chapter7.htm</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="interpractioner_communication">
+					<label>Inter-Practitioner Communication</label>
+					<def domainid="security_glossary">
+						<p>Support electronic messaging (inbound and
+            outbound) between providers to trigger or respond to pertinent actions
+            in the care process, document non-electronic communication (such
+            as phone calls, correspondence or other encounters) and generate
+            paper message artifacts where appropriate.  Messaging among providers
+            involved in the care process can range from real time communication
+            (for example, fulfillment of an injection while the patient is in
+            the exam room), to asynchronous communication (for example, consult
+            reports between physicians).  Some forms of inter-practitioner communication
+            will be paper based and the EHR must be able to produce appropriate
+        documents.</p>
+						<p>Source: HL7 EHR SIG Functional Descriptors<br/>
+							<loc href="http://www.ehrcollaborative.org/EHR_outline.doc">http://www.ehrcollaborative.org/EHR_outline.doc</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="laboratory_order">
+					<label>Laboratory Order</label>
+					<def domainid="security_glossary">
+						<p>A request for clinical laboratory services
+        for a specified patient.</p>
+						<p>Source: VHA RBAC Task Force</p>
+					</def>
+				</gitem>
+				<gitem id="master_patient_index">
+					<label>Master Patient Index</label>
+					<def domainid="security_glossary">
+						<p>A computer-based system that facilitates
+            the tracking of patient information by assigning each patient an
+        identifying series of characters.</p>
+						<p>Healthcare Informatics<br/>
+							<loc href="http://www.healthcare-informatics.com/issues/1997/04_97/merge.htm">http://www.healthcare-informatics.com/issues/1997/04_97/merge.htm</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="medical_history">
+					<label>Medical History</label>
+					<def domainid="security_glossary">
+						<p>The Medical History, along with a Physical
+            Exam, together referred to as an 'H and P', is a comprehensive evaluation
+        that forms the basis for diagnosis and treatment of patients.</p>
+					</def>
+				</gitem>
+				<gitem id="mydna">
+					<label>myDNA</label>
+					<def domainid="security_glossary">
+						<p>Source: 
+								<loc href="http://www.mydna.com/resources/tests/topics/tests/medical/medhistory">http://www.mydna.com/resources/tests/topics/tests/medical/medhistory</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="medication_administration_record">
+					<label>Medication Administration Record (M.A.R.)</label>
+					<def domainid="security_glossary">
+						<p>The medication administration record (MAR)
+            and other documents such as the patient care summary are generated
+            by the EHR, based upon the medical orders and the patient's plan
+            of care.  These documents are used to conduct rounds and dispense
+            medications.  The medication bar code, patient wristband, and the
+            provider bar are used to uniquely identify each administration of
+            a medication in the hospital and nursing home settings.  Medications
+            are provided in unit doses for each patient and stored in a cart
+            that includes a wireless laptop with a bar code reader to be used
+            for administration.  For each dosage, the electronic medication administration
+            record is used and the codes read for the medication, the patient,
+            and the person administering it.  Any conflicts between medication
+            or dosage and patient are noted electronically, and the medication
+            administration is ceased until resolved.  Missed doses and refusals
+            are recorded electronically in the electronic record, and all documentation
+            of administration is electronic.  Controlled substances also are
+        signed out electronically.</p>
+						<p>Source: 
+            U.S.
+            Department of Health and  Human Services - Assistant Secretary for
+            Planning and Evaluation - Office of Disability, Aging and Long-Term
+            Care Policy<br/>
+							<loc href="http://aspe.dhhs.gov/daltcp/reports/ehrpaltc.pdf">http://aspe.dhhs.gov/daltcp/reports/ehrpaltc.pdf</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="nursing_order">
+					<label>Nursing Order</label>
+					<def domainid="security_glossary">
+						<list role="ordered">
+							<item>Physician's
+            orders to a nurse in a ward regarding nursing procedures</item>
+							<item>Recorded in the worksheet etc. regarding
+            procedures to be carried out by a nurse</item>
+							<item>Unlike other orders, a nursing order
+            is placed not only by a physician but also by a nurse.</item>
+							<item>A physician in charge of a ward
+            has an obligation to give orders regarding nursing procedures as
+            a &quot;nursing order.&quot;</item>
+							<item>A nurse in charge of a ward has
+            authorization to record the nursing procedures upon the relevant
+            patient carried out by a nurse in charge of a ward on the worksheet
+            etc., as a “nursing order.”  A nursing order for a nurse (or a nurse
+            group) in order to carry out work is input by the nurse.  Using the
+            electronic patient record system, the worksheet regarding work flow
+            to be carried out by a nurse, such as nursing and induction to examinations,
+            is created, based on orders/nursing orders.</item>
+							<item>A nurse inputs a nurse order and
+            its implementation result into the electronic patient record system
+        terminal at the bedside or in a nurse station</item>
+						</list>
+						<p>Source: Electronic Patient Record System Enterprise Model for Tertiary Hospital , June 7, 2002, Japanese Association of Healthcare Information Systems Industry<br/>
+							<loc href="http://www.hl7.jp/work/epr-english/Enterprise.pdf">http://www.hl7.jp/work/epr-english/Enterprise.pdf</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="outpatient_prescription_order">
+					<label>Outpatient Prescription Order</label>
+					<def domainid="security_glossary">
+						<p>A request for a prescription medication
+        to be dispensed to an outpatient.</p>
+						<p>Source: VHA RBAC Task Force</p>
+					</def>
+				</gitem>
+				<gitem id="overbook">
+					<label>Overbook</label>
+					<def domainid="security_glossary">
+						<p>To assign a patient to an appointment slot
+            that is already booked by another patient in accordance with the
+        policy of the facility.</p>
+						<p>Source: VHA RBAC Task Force</p>
+					</def>
+				</gitem>
+				<gitem id="past_visits">
+					<label>Past Visits</label>
+					<def domainid="security_glossary">
+						<p>All prior “Provider Visit”
+        notes, “Non-Visit Encounter” notes, and “Non-Scheduled Provider Visit” notes.</p>
+						<p>Source: SmartDoctor
+            Automated Patient Care System - User Manual COPYRIGHT 2004<br/>
+							<loc href="http://www.intelligentmedical.com/Manual.pdf">http://www.intelligentmedical.com/Manual.pdf</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="patient_acuity">
+					<label>Patient Acuity</label>
+					<def domainid="security_glossary">
+						<p>The measurement of the intensity of care
+            required for a patient accomplished by a registered nurse. There
+            are six categories ranging from minimal care (f) to intensive care
+        (VI).</p>
+						<p>Source: Department of Defense Glossary of Healthcare
+            Terminology - Assistant Secretary of Defense Health Affairs -  Washington, DC 20301 - January 1999<br/>
+							<loc href="http://www.tricare.osd.mil/imtr/glossary.html#toc">http://www.tricare.osd.mil/imtr/glossary.html#toc</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="patient_allergies">
+					<label>Patient Allergies</label>
+					<def domainid="security_glossary">
+						<p>A misguided reaction to foreign substances
+            by the immune system, the body system of defense against foreign
+            invaders, particularly pathogens (the agents of infection).  The
+            allergic reaction is misguided in that these foreign substances are
+            usually harmless.  The substances that trigger allergy are called
+            allergen.  Examples include pollens, dust mite, molds, danders, and
+            certain foods.  People prone to allergies are said to be allergic
+        or atopic.</p>
+						<p>Source: 
+								<loc href="http://www.answers.com/topic/hay-fever">http://www.answers.com/topic/hay-fever</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="patient_allergy_or_adverse_reaction">
+					<label>Patient Allergy or Adverse Reaction</label>
+					<def domainid="security_glossary">
+						<p>Untoward noxious reaction associated with
+            drug use.  It may result from administration of over-the-counter,
+            prescription, or investigational/research drugs.  It includes adverse
+            events occurring from drug overdose, whether accidental or intentional,
+            drug abuse, drug withdrawal, and significant failure of expected
+            pharmacological action.  A proven cause-and-effect relationship between
+            the reaction and suspected drug(s) is not required before a reaction
+            is reportable; reasonable suspicion is sufficient.  Blood products
+            are specifically excluded from adverse drug event monitoring and
+            should be reported utilizing reporting mechanisms specifically designed
+            for these products.  An allergy is an adverse reaction mediated
+        by an immunologic mechanism.</p>
+						<p>Source: Department of Veterans Affairs - Network
+            Memorandum 10N2-120-03 - VA Healthcare Network -
+            July 31, 2003 - Upstate New York<br/>
+							<loc href="http://www1.va.gov/visns/visn02/network/policies/10n2-120-03.doc">http://www1.va.gov/visns/visn02/network/policies/10n2-120-03.doc</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="patient_education">
+					<label>Patient Education</label>
+					<def domainid="security_glossary">
+						<p>The teaching or training of patients concerning
+        their own health needs.</p>
+						<p>Source: Medical Dictionary Online<br/>
+							<loc href="http://www.online-medical-dictionary.org/Patient+Education.asp?q=Patient+Education">http://www.online-medical-dictionary.org/Patient+Education.asp?q=Patient+Education</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="patient_identification_and_lookup">
+					<label>Patient Identification and Lookup</label>
+					<def domainid="security_glossary">
+						<p>Patient Identification
+            contains permanent identifying and demographic information about
+            a patient used by applications as the main means of communicating
+        this information to other systems.</p>
+						<p>Source: LINKTools®
+            IDK Tutorial: Creating Mapper Template<br/>
+							<loc href="http://www.linkmed.com/Support/Content_15.htm">http://www.linkmed.com/Support/Content_15.htm</loc>
+						</p>
+					</def>
+					<def domainid="security_glossary">
+						<p>Patient look-up
+            functions enable the user to search by criteria such as name, date
+            of birth, last name, and sex. Patient data is retrieved from the
+            most recent visit or, upon request, recalls the patient's entire
+        visit history.</p>
+						<p>Source: MEDITECH.com, the corporate web site for
+            Medical Information Technology, Inc.<br/>
+							<loc href="http://www.meditech.com/ProductBriefs/Pages/ProductBriefsMagicUkWL.htm">http://www.meditech.com/ProductBriefs/Pages/ProductBriefsMagicUkWL.htm</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="patient_or_disease_specific_clinical_guidelines">
+					<label>Patient or Disease-Specific Clinical Guidelines</label>
+					<def domainid="security_glossary">
+						<p>Clinical practice guideline - Describes
+            the processes used to evaluate and treat a patient having a specific
+            diagnosis, condition, or symptom.  Clinical practice guidelines are
+            found in the literature under many names - practice parameters, practice
+            guidelines, patient care protocols, standards of practice, clinical
+            pathways or highways, care maps, and other descriptive names. Clinical
+            practice guidelines should be evidence-based, authoritative, efficacious
+        and effective within the targeted patient populations.</p>
+						<p>Source: Joint Commission
+            on Accreditation of Healthcare Organizations Disease-Specific Care
+            (DSC) Certification Program Clinical Practice Guideline Information
+            Form<br/>
+							<loc href="http://www.jcaho.org/dscc/dsc/application/dsc_cpg_info_form.pdf">http://www.jcaho.org/dscc/dsc/application/dsc_cpg_info_form.pdf</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="patient_testing_reports">
+					<label>Patient Testing Reports</label>
+					<def domainid="security_glossary">
+						<p>Results of any tests or procedures performed
+        on a patient or patient specimen.</p>
+						<p>Source: VHA RBAC Task
+        Force</p>
+					</def>
+				</gitem>
+				<gitem id="patient_family_preferences">
+					<label>Patient/Family Preferences</label>
+					<def domainid="security_glossary">
+						<p>Patient/family preferences and concerns,
+            such as with language, medication choice, invasive testing, and advance
+            directives.  Improves patient safety and facilitates self-health
+            management.  (Capture patient and family preferences at the time
+            of information intake and integrate them into clinical - decision
+        support at all appropriate opportunities.)</p>
+						<p>Source: HL7 EHR SIG Functional Descriptors<br/>
+							<loc href="http://www.ehrcollaborative.org/EHR_outline.docs">http://www.ehrcollaborative.org/EHR_outline.doc</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="point_of_care_testing_results">
+					<label>Point of Care Testing Results</label>
+					<def domainid="security_glossary">
+						<list role="ordered">
+							<item>Diagnostic testing
+            performed at or near the site of patient care.</item>
+							<item>Analytical patient activities provided within
+            the institution, but performed outside the physical facilities of
+            the clinical laboratories.  It does not require permanent dedicated
+            space but instead includes kits and instruments, which are either
+            hand carried or transported to the vicinity of the patient for immediate
+        testing at that site</item>
+						</list>
+						<p>Source: </p>
+						<list role="ordered">
+							<item>Kost, GJ.  Guidelines
+            for point-of-care testing: improving patient outcomes.  American
+            Journal of Clinical Pathology 1995. 104 (Sup1);S111-S127</item>
+							<item>College of American Pathologists</item>
+						</list>
+					</def>
+				</gitem>
+				<gitem id="prescription_costing_information">
+					<label>Prescription Costing Information</label>
+					<def domainid="security_glossary">
+						<p>The cost of a prescription.</p>
+						<p>Source: VHA RBAC Task Force</p>
+					</def>
+				</gitem>
+				<gitem id="problem_list">
+					<label>Problem List</label>
+					<def domainid="security_glossary">
+						<p>A series of brief statements that catalog
+            a patient’s medical, nursing, dental, social, preventative and psychiatric
+            events and issues that are relevant to that patient’s health care
+        (e.g. signs, symptoms, and defined conditions).</p>
+						<p>Source: Consolidated Health Initiative</p>
+					</def>
+				</gitem>
+				<gitem id="progress_notes">
+					<label>Progress Notes</label>
+					<def domainid="security_glossary">
+						<p>A textual description of the health care
+            provider’s observations, their interpretations and conclusions about
+            the clinical course of the patient or the steps taken, or to be taken,
+        in the care of the patient.</p>
+						<p>ASTM E 1384 – 02a<br/>
+							Standard Practice for Content and Structure of the Electronic Health
+        Record</p>
+					</def>
+				</gitem>
+				<gitem id="prosthetic_order">
+					<label>Prosthetic Order</label>
+					<def domainid="security_glossary">
+						<p>A prosthetic order is an appropriate prosthetic
+        request that affects the care and treatment of the beneficiary.</p>
+						<p>Source: Department
+            of Veterans Affairs VHA HANDBOOK 1173.1, Veterans Health Administration
+            Transmittal Sheet, Washington, DC 20420 November 2, 2000<br/>
+							<loc href="http://www1.va.gov/vhapublications/ViewPublication.asp?pub_ID=337">http://www1.va.gov/vhapublications/ViewPublication.asp?pub_ID=337</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="radiology_order">
+					<label>Radiology Order</label>
+					<def domainid="security_glossary">
+						<p>A request for radiology and diagnostic
+        services for a specified patient.</p>
+						<p>Source: Australian Radiology Messaging, Implementation
+            of HL7 Version 2.3.1, January 20, 2004</p>
+					</def>
+				</gitem>
+				<gitem id="record_tracking">
+					<label>Record Tracking</label>
+					<def domainid="security_glossary">
+						<p>Managing and tracking the location of patient
+        medical records.</p>
+						<p>Source: RBAC Task Force</p>
+					</def>
+				</gitem>
+				<gitem id="registration">
+					<label>Registration</label>
+					<def domainid="security_glossary">
+						<p>The process of interviewing persons to
+        compile information for legal or other records.</p>
+						<p>Source: Dictionary of Occupational Titles, <br/>
+							<loc href="http://www.occupationalinfo.org/20/205367042.html">http://www.occupationalinfo.org/20/205367042.html</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="release_of_information">
+					<label>Release of Information</label>
+					<def domainid="security_glossary">
+						<p>A request by a patient or patient representative
+        to release specified medical information to a third party.</p>
+						<p>Source: VHA RBAC Task Force</p>
+					</def>
+				</gitem>
+				<gitem id="skin_test">
+					<label>Skin Test</label>
+					<def domainid="security_glossary">
+						<p>Epicutaneous or intradermal application
+            of a sensitizer for demonstration of either delayed or immediate
+            hypersensitivity.  Used in diagnosis of hypersensitivity or as a
+        test for cellular immunity.</p>
+						<p>The Medical Dictionary Online<br/>
+							<loc href="http://www.online-medical-dictionary.org/Skin+Test.asp?q=Skin+Test">http://www.online-medical-dictionary.org/Skin+Test.asp?q=Skin+Test</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="standing_order_prn">
+					<label>Standing Order(s) PRN</label>
+					<def domainid="security_glossary">
+						<p>Standing Orders - carried out until the
+            physician cancels it</p>
+						<p>PRN orders - as needed</p>
+						<p>Source: Business Requirements for an Automated
+            Patient Medical Record<br/>
+							<loc href="http://www.uprforum.com/Chapter7.htm">http://www.uprforum.com/Chapter7.htm</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="supply_order">
+					<label>Supply Order</label>
+					<def domainid="security_glossary">
+						<p>Allows for a quantity of manufactured material
+        to be specified either by name, id, or optionally, the manufacturer.</p>
+						<p>Source: HL7® Version 3 Standard, ©
+            2004 Health Level Seven®, Inc. All Rights Reserved<br/>
+							<loc href="http://64.233.187.104/search?q=cache:LiFe_ewg5FcJ:www.hl7.org/v3ballot/html/sectioncontent/sc/amprsc.htm+HL7+%22Supply+Order%22+object&amp;hl=en">http://64.233.187.104/search?q=cache:LiFe_ewg5FcJ:www.hl7.org/v3ballot/html/sectioncontent/sc/amprsc.htm+HL7+%22Supply+Order%22+object&amp;hl=en</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="surgical_report">
+					<label>Surgical Report</label>
+					<def domainid="security_glossary">
+						<p>Surgical report contains the surgical team,
+        diagnoses, surgical interventions, and the method of anesthesia.</p>
+						<p>Source: WebDoctor -
+            Doctor's Assistant in Providing Service to Patients<br/>
+							<loc href="http://www.marand.com/files/webdoctor.pdf">http://www.marand.com/files/webdoctor.pdf</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="transcription">
+					<label>Transcription</label>
+					<def domainid="security_glossary">
+						<p>Something written, especially copied from
+        one medium to another, as a typewritten version of dictation.</p>
+						<p>Source: Ask.com<br/>
+							<loc href="http://webk.ask.com/dc?q=define+transcription&amp;qsrc=8">http://webk.ask.com/dc?q=define+transcription&amp;qsrc=8</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="verbal_and_telephone_order">
+					<label>Verbal and Telephone Order</label>
+					<def domainid="security_glossary">
+						<p>Telephone or verbal orders are taken only
+            by a pharmacist, registered nurse, or licensed practical nurse, transcribed
+            into the patient record, noted as a telephone or verbal order, and
+            countersigned by the attending physician within 72 hours.  The authority
+            to receive telephone or verbal orders must be officially granted
+            in the institution's rules and regulations or medical staff bylaws.  A
+            telephone or verbal order is a valid order when reduced to writing
+            in the patient's medical record by the pharmacist, nurse, or other
+            practitioner and may be regarded by nurses, or others as a valid
+            order to be executed as if it had been written directly in the medical
+        record by the prescriber.</p>
+						<p>Source: Vermont State Profile<br/>
+							<loc href="http://www.go2ec.org/ProfileVermont.htm">http://www.go2ec.org/ProfileVermont.htm</loc>
+						</p>
+					</def>
+				</gitem>
+				<gitem id="vital_signs_patient_measurements">
+					<label>Vital Signs/Patient Measurements</label>
+					<def domainid="security_glossary">
+						<p>Vital signs are physical signs that indicate
+            an individual is alive, such as heart beat, breathing rate, temperature,
+            and blood pressure.  These signs may be observed, measured, and monitored
+            to assess an individual's level of physical functioning.  Normal
+            vital signs change with age, sex, weight, exercise tolerance, and
+        condition.</p>
+						<p>Source: Medline Plus - US National Library of Medicine
+            and the National Institutes of Health<br/>
+							<loc href="http://www.nlm.nih.go/medlinepluss">www.nlm.nih.go/medlineplus</loc>
+						</p>
+					</def>
+				</gitem>
+			</glist>
+
+			</div2>
+		</div1>
+	</body>
+</spec>

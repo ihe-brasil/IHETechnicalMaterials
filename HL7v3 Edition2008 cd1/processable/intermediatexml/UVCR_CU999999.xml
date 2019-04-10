@@ -1,0 +1,1237 @@
+<!--<!DOCTYPE usage PUBLIC "DTDVersion-1" "../../../support/dtd/V3mCMETusage.dtd">-->
+<!--CMET Usage collected and expressed by RoseTree 4.2.7-->
+<!--Example copyright 2008 by Health Level Seven, Inc. -->
+<usage rendered="5/1/2008 9:56:39 PM">
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300100UV02-hmd" refname="Authorization Request Generic" refidentifier="FICR_HD300100UV02"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300200UV01-hmd" refname="Authorization Request Pharmacy" refidentifier="FICR_HD300200UV01"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300300UV02-hmd" refname="Authorization Request Preferred Accommodation" refidentifier="FICR_HD300300UV02"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300400UV02-hmd" refname="Authorization Request Chiro/Physio" refidentifier="FICR_HD300400UV02"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300500UV03-hmd" refname="Authorization Request Oral Health" refidentifier="FICR_HD300500UV03"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300600UV03-hmd" refname="Authorization Request Vision Care" refidentifier="FICR_HD300600UV03"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300700UV03-hmd" refname="Authorization Request Physician" refidentifier="FICR_HD300700UV03"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310100UV02-hmd" refname="Authorization Results Generic" refidentifier="FICR_HD310100UV02"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310200UV01-hmd" refname="Authorization Results Pharmacy" refidentifier="FICR_HD310200UV01"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310300UV02-hmd" refname="Authorization Results Preferred Accommodation" refidentifier="FICR_HD310300UV02"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310400UV02-hmd" refname="Authorization Results Chiro/Physio" refidentifier="FICR_HD310400UV02"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310500UV03-hmd" refname="Authorization Results Oral Health" refidentifier="FICR_HD310500UV03"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310600UV03-hmd" refname="Authorization Results Vision Care" refidentifier="FICR_HD310600UV03"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310700UV03-hmd" refname="Authorization Results Physician" refidentifier="FICR_HD310700UV03"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500100UV01-hmd" refname="Pre-Determination Request Generic" refidentifier="FICR_HD500100UV01"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500200UV01-hmd" refname="Pre-Determination Request Pharmacy" refidentifier="FICR_HD500200UV01"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500300UV01-hmd" refname="Pre-Determination Request Preferred Accommodation" refidentifier="FICR_HD500300UV01"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500400UV02-hmd" refname="Pre-Determination Request Chiro/Physio" refidentifier="FICR_HD500400UV02"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500500UV03-hmd" refname="Pre-Determination Request Oral Health" refidentifier="FICR_HD500500UV03"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500600UV03-hmd" refname="Pre-Determination Request Vision Care" refidentifier="FICR_HD500600UV03"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500700UV03-hmd" refname="Pre-Determination Request Physician" refidentifier="FICR_HD500700UV03"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510100UV01-hmd" refname="Pre-Determination Results Generic" refidentifier="FICR_HD510100UV01"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510200UV01-hmd" refname="Pre-Determination Results Pharmacy" refidentifier="FICR_HD510200UV01"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510300UV01-hmd" refname="Pre-Determination Results Preferred Accommodation" refidentifier="FICR_HD510300UV01"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510400UV01-hmd" refname="Pre-Determination Results Chiro/Physio" refidentifier="FICR_HD510400UV01"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510500UV03-hmd" refname="Pre-Determination Results Oral Health" refidentifier="FICR_HD510500UV03"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510600UV03-hmd" refname="Pre-Determination Results Vision Care" refidentifier="FICR_HD510600UV03"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510700UV03-hmd" refname="Pre-Determination Results Physician" refidentifier="FICR_HD510700UV03"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600100UV01-hmd" refname="Invoice Adjudication Request Generic" refidentifier="FICR_HD600100UV01"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600200UV01-hmd" refname="Invoice Adjudication Request Pharmacy" refidentifier="FICR_HD600200UV01"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600300UV01-hmd" refname="Invoice Adjudication Request Preferred Accommodation" refidentifier="FICR_HD600300UV01"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600400UV02-hmd" refname="Invoice Adjudication Request Chiro/Physio" refidentifier="FICR_HD600400UV02"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600500UV03-hmd" refname="Invoice Adjudication Request Oral Health" refidentifier="FICR_HD600500UV03"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600600UV03-hmd" refname="Invoice Adjudication Request Vision Care" refidentifier="FICR_HD600600UV03"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600700UV03-hmd" refname="Invoice Adjudication Request Physician" refidentifier="FICR_HD600700UV03"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600800UV03-hmd" refname="Invoice Adjudication Request Hospital" refidentifier="FICR_HD600800UV03"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610100UV01-hmd" refname="Invoice Adjudication Results Generic" refidentifier="FICR_HD610100UV01"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610200UV01-hmd" refname="Invoice Adjudication Results Pharmacy" refidentifier="FICR_HD610200UV01"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610300UV01-hmd" refname="Invoice Adjudication Results Preferred Accommodation" refidentifier="FICR_HD610300UV01"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610400UV02-hmd" refname="Invoice Adjudication Results Chiro/Physio" refidentifier="FICR_HD610400UV02"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610500UV03-hmd" refname="Invoice Adjudication Results Oral Health" refidentifier="FICR_HD610500UV03"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610600UV03-hmd" refname="Invoice Adjudication Results Vision Care" refidentifier="FICR_HD610600UV03"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610700UV03-hmd" refname="Invoice Adjudication Results Physician" refidentifier="FICR_HD610700UV03"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610800UV03-hmd" refname="Invoice Adjudication Results Hospital" refidentifier="FICR_HD610800UV03"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD630100UV01-hmd" refname="Invoice Nullify Results" refidentifier="FICR_HD630100UV01"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD700100UV01-hmd" refname="Payment Advice Summary" refidentifier="FICR_HD700100UV01"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD710100UV01-hmd" refname="Payment Advice Detail" refidentifier="FICR_HD710100UV01"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="QUCR_HD810100UV01-hmd" refname="SOFA Payment Advice Query Results" refidentifier="QUCR_HD810100UV01"/>
+<cmetref ref="COCT_MT110200UV04-msg" refname="A_AccountPayeeUniversal" refidentifier="COCT_MT110200UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310100UV02-hmd" refname="Authorization Results Generic" refidentifier="FICR_HD310100UV02"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310200UV01-hmd" refname="Authorization Results Pharmacy" refidentifier="FICR_HD310200UV01"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310300UV02-hmd" refname="Authorization Results Preferred Accommodation" refidentifier="FICR_HD310300UV02"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310400UV02-hmd" refname="Authorization Results Chiro/Physio" refidentifier="FICR_HD310400UV02"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310500UV03-hmd" refname="Authorization Results Oral Health" refidentifier="FICR_HD310500UV03"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310600UV03-hmd" refname="Authorization Results Vision Care" refidentifier="FICR_HD310600UV03"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310700UV03-hmd" refname="Authorization Results Physician" refidentifier="FICR_HD310700UV03"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510100UV01-hmd" refname="Pre-Determination Results Generic" refidentifier="FICR_HD510100UV01"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510200UV01-hmd" refname="Pre-Determination Results Pharmacy" refidentifier="FICR_HD510200UV01"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510300UV01-hmd" refname="Pre-Determination Results Preferred Accommodation" refidentifier="FICR_HD510300UV01"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510400UV01-hmd" refname="Pre-Determination Results Chiro/Physio" refidentifier="FICR_HD510400UV01"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510500UV03-hmd" refname="Pre-Determination Results Oral Health" refidentifier="FICR_HD510500UV03"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510600UV03-hmd" refname="Pre-Determination Results Vision Care" refidentifier="FICR_HD510600UV03"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510700UV03-hmd" refname="Pre-Determination Results Physician" refidentifier="FICR_HD510700UV03"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600800UV03-hmd" refname="Invoice Adjudication Request Hospital" refidentifier="FICR_HD600800UV03"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610100UV01-hmd" refname="Invoice Adjudication Results Generic" refidentifier="FICR_HD610100UV01"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610200UV01-hmd" refname="Invoice Adjudication Results Pharmacy" refidentifier="FICR_HD610200UV01"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610300UV01-hmd" refname="Invoice Adjudication Results Preferred Accommodation" refidentifier="FICR_HD610300UV01"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610400UV02-hmd" refname="Invoice Adjudication Results Chiro/Physio" refidentifier="FICR_HD610400UV02"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610500UV03-hmd" refname="Invoice Adjudication Results Oral Health" refidentifier="FICR_HD610500UV03"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610600UV03-hmd" refname="Invoice Adjudication Results Vision Care" refidentifier="FICR_HD610600UV03"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610700UV03-hmd" refname="Invoice Adjudication Results Physician" refidentifier="FICR_HD610700UV03"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610800UV03-hmd" refname="Invoice Adjudication Results Hospital" refidentifier="FICR_HD610800UV03"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD630100UV01-hmd" refname="Invoice Nullify Results" refidentifier="FICR_HD630100UV01"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD700100UV01-hmd" refname="Payment Advice Summary" refidentifier="FICR_HD700100UV01"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD710100UV01-hmd" refname="Payment Advice Detail" refidentifier="FICR_HD710100UV01"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="QUCR_HD810100UV01-hmd" refname="SOFA Payment Advice Query Results" refidentifier="QUCR_HD810100UV01"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310100UV02-hmd" refname="Authorization Results Generic" refidentifier="FICR_HD310100UV02"/>
+<cmetref ref="COCT_MT320000UV04-msg" refname="A_AdjudicationObservationUniversal" refidentifier="COCT_MT320000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310200UV01-hmd" refname="Authorization Results Pharmacy" refidentifier="FICR_HD310200UV01"/>
+<cmetref ref="COCT_MT320000UV04-msg" refname="A_AdjudicationObservationUniversal" refidentifier="COCT_MT320000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310300UV02-hmd" refname="Authorization Results Preferred Accommodation" refidentifier="FICR_HD310300UV02"/>
+<cmetref ref="COCT_MT320000UV04-msg" refname="A_AdjudicationObservationUniversal" refidentifier="COCT_MT320000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310400UV02-hmd" refname="Authorization Results Chiro/Physio" refidentifier="FICR_HD310400UV02"/>
+<cmetref ref="COCT_MT320000UV04-msg" refname="A_AdjudicationObservationUniversal" refidentifier="COCT_MT320000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310500UV03-hmd" refname="Authorization Results Oral Health" refidentifier="FICR_HD310500UV03"/>
+<cmetref ref="COCT_MT320000UV04-msg" refname="A_AdjudicationObservationUniversal" refidentifier="COCT_MT320000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310600UV03-hmd" refname="Authorization Results Vision Care" refidentifier="FICR_HD310600UV03"/>
+<cmetref ref="COCT_MT320000UV04-msg" refname="A_AdjudicationObservationUniversal" refidentifier="COCT_MT320000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310700UV03-hmd" refname="Authorization Results Physician" refidentifier="FICR_HD310700UV03"/>
+<cmetref ref="COCT_MT320000UV04-msg" refname="A_AdjudicationObservationUniversal" refidentifier="COCT_MT320000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510100UV01-hmd" refname="Pre-Determination Results Generic" refidentifier="FICR_HD510100UV01"/>
+<cmetref ref="COCT_MT320000UV04-msg" refname="A_AdjudicationObservationUniversal" refidentifier="COCT_MT320000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510200UV01-hmd" refname="Pre-Determination Results Pharmacy" refidentifier="FICR_HD510200UV01"/>
+<cmetref ref="COCT_MT320000UV04-msg" refname="A_AdjudicationObservationUniversal" refidentifier="COCT_MT320000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510300UV01-hmd" refname="Pre-Determination Results Preferred Accommodation" refidentifier="FICR_HD510300UV01"/>
+<cmetref ref="COCT_MT320000UV04-msg" refname="A_AdjudicationObservationUniversal" refidentifier="COCT_MT320000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510400UV01-hmd" refname="Pre-Determination Results Chiro/Physio" refidentifier="FICR_HD510400UV01"/>
+<cmetref ref="COCT_MT320000UV04-msg" refname="A_AdjudicationObservationUniversal" refidentifier="COCT_MT320000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510500UV03-hmd" refname="Pre-Determination Results Oral Health" refidentifier="FICR_HD510500UV03"/>
+<cmetref ref="COCT_MT320000UV04-msg" refname="A_AdjudicationObservationUniversal" refidentifier="COCT_MT320000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510600UV03-hmd" refname="Pre-Determination Results Vision Care" refidentifier="FICR_HD510600UV03"/>
+<cmetref ref="COCT_MT320000UV04-msg" refname="A_AdjudicationObservationUniversal" refidentifier="COCT_MT320000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510700UV03-hmd" refname="Pre-Determination Results Physician" refidentifier="FICR_HD510700UV03"/>
+<cmetref ref="COCT_MT320000UV04-msg" refname="A_AdjudicationObservationUniversal" refidentifier="COCT_MT320000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610100UV01-hmd" refname="Invoice Adjudication Results Generic" refidentifier="FICR_HD610100UV01"/>
+<cmetref ref="COCT_MT320000UV04-msg" refname="A_AdjudicationObservationUniversal" refidentifier="COCT_MT320000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610200UV01-hmd" refname="Invoice Adjudication Results Pharmacy" refidentifier="FICR_HD610200UV01"/>
+<cmetref ref="COCT_MT320000UV04-msg" refname="A_AdjudicationObservationUniversal" refidentifier="COCT_MT320000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610300UV01-hmd" refname="Invoice Adjudication Results Preferred Accommodation" refidentifier="FICR_HD610300UV01"/>
+<cmetref ref="COCT_MT320000UV04-msg" refname="A_AdjudicationObservationUniversal" refidentifier="COCT_MT320000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610400UV02-hmd" refname="Invoice Adjudication Results Chiro/Physio" refidentifier="FICR_HD610400UV02"/>
+<cmetref ref="COCT_MT320000UV04-msg" refname="A_AdjudicationObservationUniversal" refidentifier="COCT_MT320000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610500UV03-hmd" refname="Invoice Adjudication Results Oral Health" refidentifier="FICR_HD610500UV03"/>
+<cmetref ref="COCT_MT320000UV04-msg" refname="A_AdjudicationObservationUniversal" refidentifier="COCT_MT320000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610600UV03-hmd" refname="Invoice Adjudication Results Vision Care" refidentifier="FICR_HD610600UV03"/>
+<cmetref ref="COCT_MT320000UV04-msg" refname="A_AdjudicationObservationUniversal" refidentifier="COCT_MT320000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610700UV03-hmd" refname="Invoice Adjudication Results Physician" refidentifier="FICR_HD610700UV03"/>
+<cmetref ref="COCT_MT320000UV04-msg" refname="A_AdjudicationObservationUniversal" refidentifier="COCT_MT320000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610800UV03-hmd" refname="Invoice Adjudication Results Hospital" refidentifier="FICR_HD610800UV03"/>
+<cmetref ref="COCT_MT320000UV04-msg" refname="A_AdjudicationObservationUniversal" refidentifier="COCT_MT320000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300100UV02-hmd" refname="Authorization Request Generic" refidentifier="FICR_HD300100UV02"/>
+<cmetref ref="COCT_MT280000UV04-msg" refname="A_BillableUniversal" refidentifier="COCT_MT280000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300200UV01-hmd" refname="Authorization Request Pharmacy" refidentifier="FICR_HD300200UV01"/>
+<cmetref ref="COCT_MT280000UV04-msg" refname="A_BillableUniversal" refidentifier="COCT_MT280000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300300UV02-hmd" refname="Authorization Request Preferred Accommodation" refidentifier="FICR_HD300300UV02"/>
+<cmetref ref="COCT_MT280000UV04-msg" refname="A_BillableUniversal" refidentifier="COCT_MT280000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300400UV02-hmd" refname="Authorization Request Chiro/Physio" refidentifier="FICR_HD300400UV02"/>
+<cmetref ref="COCT_MT280000UV04-msg" refname="A_BillableUniversal" refidentifier="COCT_MT280000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300500UV03-hmd" refname="Authorization Request Oral Health" refidentifier="FICR_HD300500UV03"/>
+<cmetref ref="COCT_MT280000UV04-msg" refname="A_BillableUniversal" refidentifier="COCT_MT280000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300600UV03-hmd" refname="Authorization Request Vision Care" refidentifier="FICR_HD300600UV03"/>
+<cmetref ref="COCT_MT280000UV04-msg" refname="A_BillableUniversal" refidentifier="COCT_MT280000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300700UV03-hmd" refname="Authorization Request Physician" refidentifier="FICR_HD300700UV03"/>
+<cmetref ref="COCT_MT280000UV04-msg" refname="A_BillableUniversal" refidentifier="COCT_MT280000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD400100UV01-hmd" refname="Coverage Extension Request Generic" refidentifier="FICR_HD400100UV01"/>
+<cmetref ref="COCT_MT280000UV04-msg" refname="A_BillableUniversal" refidentifier="COCT_MT280000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD400200UV01-hmd" refname="Coverage Extension Request Pharmacy" refidentifier="FICR_HD400200UV01"/>
+<cmetref ref="COCT_MT280000UV04-msg" refname="A_BillableUniversal" refidentifier="COCT_MT280000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500100UV01-hmd" refname="Pre-Determination Request Generic" refidentifier="FICR_HD500100UV01"/>
+<cmetref ref="COCT_MT280000UV04-msg" refname="A_BillableUniversal" refidentifier="COCT_MT280000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500200UV01-hmd" refname="Pre-Determination Request Pharmacy" refidentifier="FICR_HD500200UV01"/>
+<cmetref ref="COCT_MT280000UV04-msg" refname="A_BillableUniversal" refidentifier="COCT_MT280000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500300UV01-hmd" refname="Pre-Determination Request Preferred Accommodation" refidentifier="FICR_HD500300UV01"/>
+<cmetref ref="COCT_MT280000UV04-msg" refname="A_BillableUniversal" refidentifier="COCT_MT280000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500400UV02-hmd" refname="Pre-Determination Request Chiro/Physio" refidentifier="FICR_HD500400UV02"/>
+<cmetref ref="COCT_MT280000UV04-msg" refname="A_BillableUniversal" refidentifier="COCT_MT280000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500500UV03-hmd" refname="Pre-Determination Request Oral Health" refidentifier="FICR_HD500500UV03"/>
+<cmetref ref="COCT_MT280000UV04-msg" refname="A_BillableUniversal" refidentifier="COCT_MT280000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500600UV03-hmd" refname="Pre-Determination Request Vision Care" refidentifier="FICR_HD500600UV03"/>
+<cmetref ref="COCT_MT280000UV04-msg" refname="A_BillableUniversal" refidentifier="COCT_MT280000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500700UV03-hmd" refname="Pre-Determination Request Physician" refidentifier="FICR_HD500700UV03"/>
+<cmetref ref="COCT_MT280000UV04-msg" refname="A_BillableUniversal" refidentifier="COCT_MT280000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600100UV01-hmd" refname="Invoice Adjudication Request Generic" refidentifier="FICR_HD600100UV01"/>
+<cmetref ref="COCT_MT280000UV04-msg" refname="A_BillableUniversal" refidentifier="COCT_MT280000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600200UV01-hmd" refname="Invoice Adjudication Request Pharmacy" refidentifier="FICR_HD600200UV01"/>
+<cmetref ref="COCT_MT280000UV04-msg" refname="A_BillableUniversal" refidentifier="COCT_MT280000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600300UV01-hmd" refname="Invoice Adjudication Request Preferred Accommodation" refidentifier="FICR_HD600300UV01"/>
+<cmetref ref="COCT_MT280000UV04-msg" refname="A_BillableUniversal" refidentifier="COCT_MT280000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600400UV02-hmd" refname="Invoice Adjudication Request Chiro/Physio" refidentifier="FICR_HD600400UV02"/>
+<cmetref ref="COCT_MT280000UV04-msg" refname="A_BillableUniversal" refidentifier="COCT_MT280000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600500UV03-hmd" refname="Invoice Adjudication Request Oral Health" refidentifier="FICR_HD600500UV03"/>
+<cmetref ref="COCT_MT280000UV04-msg" refname="A_BillableUniversal" refidentifier="COCT_MT280000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600600UV03-hmd" refname="Invoice Adjudication Request Vision Care" refidentifier="FICR_HD600600UV03"/>
+<cmetref ref="COCT_MT280000UV04-msg" refname="A_BillableUniversal" refidentifier="COCT_MT280000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600700UV03-hmd" refname="Invoice Adjudication Request Physician" refidentifier="FICR_HD600700UV03"/>
+<cmetref ref="COCT_MT280000UV04-msg" refname="A_BillableUniversal" refidentifier="COCT_MT280000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600800UV03-hmd" refname="Invoice Adjudication Request Hospital" refidentifier="FICR_HD600800UV03"/>
+<cmetref ref="COCT_MT280000UV04-msg" refname="A_BillableUniversal" refidentifier="COCT_MT280000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610800UV03-hmd" refname="Invoice Adjudication Results Hospital" refidentifier="FICR_HD610800UV03"/>
+<cmetref ref="COCT_MT280000UV04-msg" refname="A_BillableUniversal" refidentifier="COCT_MT280000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300100UV02-hmd" refname="Authorization Request Generic" refidentifier="FICR_HD300100UV02"/>
+<cmetref ref="COCT_MT750000UV04-msg" refname="A_BillingSupportInformationUniversal" refidentifier="COCT_MT750000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300200UV01-hmd" refname="Authorization Request Pharmacy" refidentifier="FICR_HD300200UV01"/>
+<cmetref ref="COCT_MT750000UV04-msg" refname="A_BillingSupportInformationUniversal" refidentifier="COCT_MT750000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300300UV02-hmd" refname="Authorization Request Preferred Accommodation" refidentifier="FICR_HD300300UV02"/>
+<cmetref ref="COCT_MT750000UV04-msg" refname="A_BillingSupportInformationUniversal" refidentifier="COCT_MT750000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300400UV02-hmd" refname="Authorization Request Chiro/Physio" refidentifier="FICR_HD300400UV02"/>
+<cmetref ref="COCT_MT750000UV04-msg" refname="A_BillingSupportInformationUniversal" refidentifier="COCT_MT750000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300500UV03-hmd" refname="Authorization Request Oral Health" refidentifier="FICR_HD300500UV03"/>
+<cmetref ref="COCT_MT750000UV04-msg" refname="A_BillingSupportInformationUniversal" refidentifier="COCT_MT750000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300600UV03-hmd" refname="Authorization Request Vision Care" refidentifier="FICR_HD300600UV03"/>
+<cmetref ref="COCT_MT750000UV04-msg" refname="A_BillingSupportInformationUniversal" refidentifier="COCT_MT750000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300700UV03-hmd" refname="Authorization Request Physician" refidentifier="FICR_HD300700UV03"/>
+<cmetref ref="COCT_MT750000UV04-msg" refname="A_BillingSupportInformationUniversal" refidentifier="COCT_MT750000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD400100UV01-hmd" refname="Coverage Extension Request Generic" refidentifier="FICR_HD400100UV01"/>
+<cmetref ref="COCT_MT750000UV04-msg" refname="A_BillingSupportInformationUniversal" refidentifier="COCT_MT750000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD400200UV01-hmd" refname="Coverage Extension Request Pharmacy" refidentifier="FICR_HD400200UV01"/>
+<cmetref ref="COCT_MT750000UV04-msg" refname="A_BillingSupportInformationUniversal" refidentifier="COCT_MT750000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500100UV01-hmd" refname="Pre-Determination Request Generic" refidentifier="FICR_HD500100UV01"/>
+<cmetref ref="COCT_MT750000UV04-msg" refname="A_BillingSupportInformationUniversal" refidentifier="COCT_MT750000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500200UV01-hmd" refname="Pre-Determination Request Pharmacy" refidentifier="FICR_HD500200UV01"/>
+<cmetref ref="COCT_MT750000UV04-msg" refname="A_BillingSupportInformationUniversal" refidentifier="COCT_MT750000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500300UV01-hmd" refname="Pre-Determination Request Preferred Accommodation" refidentifier="FICR_HD500300UV01"/>
+<cmetref ref="COCT_MT750000UV04-msg" refname="A_BillingSupportInformationUniversal" refidentifier="COCT_MT750000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500400UV02-hmd" refname="Pre-Determination Request Chiro/Physio" refidentifier="FICR_HD500400UV02"/>
+<cmetref ref="COCT_MT750000UV04-msg" refname="A_BillingSupportInformationUniversal" refidentifier="COCT_MT750000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500500UV03-hmd" refname="Pre-Determination Request Oral Health" refidentifier="FICR_HD500500UV03"/>
+<cmetref ref="COCT_MT750000UV04-msg" refname="A_BillingSupportInformationUniversal" refidentifier="COCT_MT750000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500600UV03-hmd" refname="Pre-Determination Request Vision Care" refidentifier="FICR_HD500600UV03"/>
+<cmetref ref="COCT_MT750000UV04-msg" refname="A_BillingSupportInformationUniversal" refidentifier="COCT_MT750000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500700UV03-hmd" refname="Pre-Determination Request Physician" refidentifier="FICR_HD500700UV03"/>
+<cmetref ref="COCT_MT750000UV04-msg" refname="A_BillingSupportInformationUniversal" refidentifier="COCT_MT750000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600100UV01-hmd" refname="Invoice Adjudication Request Generic" refidentifier="FICR_HD600100UV01"/>
+<cmetref ref="COCT_MT750000UV04-msg" refname="A_BillingSupportInformationUniversal" refidentifier="COCT_MT750000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600200UV01-hmd" refname="Invoice Adjudication Request Pharmacy" refidentifier="FICR_HD600200UV01"/>
+<cmetref ref="COCT_MT750000UV04-msg" refname="A_BillingSupportInformationUniversal" refidentifier="COCT_MT750000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600300UV01-hmd" refname="Invoice Adjudication Request Preferred Accommodation" refidentifier="FICR_HD600300UV01"/>
+<cmetref ref="COCT_MT750000UV04-msg" refname="A_BillingSupportInformationUniversal" refidentifier="COCT_MT750000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600400UV02-hmd" refname="Invoice Adjudication Request Chiro/Physio" refidentifier="FICR_HD600400UV02"/>
+<cmetref ref="COCT_MT750000UV04-msg" refname="A_BillingSupportInformationUniversal" refidentifier="COCT_MT750000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600500UV03-hmd" refname="Invoice Adjudication Request Oral Health" refidentifier="FICR_HD600500UV03"/>
+<cmetref ref="COCT_MT750000UV04-msg" refname="A_BillingSupportInformationUniversal" refidentifier="COCT_MT750000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600600UV03-hmd" refname="Invoice Adjudication Request Vision Care" refidentifier="FICR_HD600600UV03"/>
+<cmetref ref="COCT_MT750000UV04-msg" refname="A_BillingSupportInformationUniversal" refidentifier="COCT_MT750000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600700UV03-hmd" refname="Invoice Adjudication Request Physician" refidentifier="FICR_HD600700UV03"/>
+<cmetref ref="COCT_MT750000UV04-msg" refname="A_BillingSupportInformationUniversal" refidentifier="COCT_MT750000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600800UV03-hmd" refname="Invoice Adjudication Request Hospital" refidentifier="FICR_HD600800UV03"/>
+<cmetref ref="COCT_MT750000UV04-msg" refname="A_BillingSupportInformationUniversal" refidentifier="COCT_MT750000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300100UV02-hmd" refname="Authorization Request Generic" refidentifier="FICR_HD300100UV02"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300200UV01-hmd" refname="Authorization Request Pharmacy" refidentifier="FICR_HD300200UV01"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300300UV02-hmd" refname="Authorization Request Preferred Accommodation" refidentifier="FICR_HD300300UV02"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300400UV02-hmd" refname="Authorization Request Chiro/Physio" refidentifier="FICR_HD300400UV02"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300500UV03-hmd" refname="Authorization Request Oral Health" refidentifier="FICR_HD300500UV03"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300600UV03-hmd" refname="Authorization Request Vision Care" refidentifier="FICR_HD300600UV03"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300700UV03-hmd" refname="Authorization Request Physician" refidentifier="FICR_HD300700UV03"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310100UV02-hmd" refname="Authorization Results Generic" refidentifier="FICR_HD310100UV02"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310200UV01-hmd" refname="Authorization Results Pharmacy" refidentifier="FICR_HD310200UV01"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310300UV02-hmd" refname="Authorization Results Preferred Accommodation" refidentifier="FICR_HD310300UV02"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310400UV02-hmd" refname="Authorization Results Chiro/Physio" refidentifier="FICR_HD310400UV02"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310500UV03-hmd" refname="Authorization Results Oral Health" refidentifier="FICR_HD310500UV03"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310600UV03-hmd" refname="Authorization Results Vision Care" refidentifier="FICR_HD310600UV03"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310700UV03-hmd" refname="Authorization Results Physician" refidentifier="FICR_HD310700UV03"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500100UV01-hmd" refname="Pre-Determination Request Generic" refidentifier="FICR_HD500100UV01"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500200UV01-hmd" refname="Pre-Determination Request Pharmacy" refidentifier="FICR_HD500200UV01"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500300UV01-hmd" refname="Pre-Determination Request Preferred Accommodation" refidentifier="FICR_HD500300UV01"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500400UV02-hmd" refname="Pre-Determination Request Chiro/Physio" refidentifier="FICR_HD500400UV02"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500500UV03-hmd" refname="Pre-Determination Request Oral Health" refidentifier="FICR_HD500500UV03"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500600UV03-hmd" refname="Pre-Determination Request Vision Care" refidentifier="FICR_HD500600UV03"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500700UV03-hmd" refname="Pre-Determination Request Physician" refidentifier="FICR_HD500700UV03"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510100UV01-hmd" refname="Pre-Determination Results Generic" refidentifier="FICR_HD510100UV01"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510200UV01-hmd" refname="Pre-Determination Results Pharmacy" refidentifier="FICR_HD510200UV01"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510300UV01-hmd" refname="Pre-Determination Results Preferred Accommodation" refidentifier="FICR_HD510300UV01"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510400UV01-hmd" refname="Pre-Determination Results Chiro/Physio" refidentifier="FICR_HD510400UV01"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510500UV03-hmd" refname="Pre-Determination Results Oral Health" refidentifier="FICR_HD510500UV03"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510600UV03-hmd" refname="Pre-Determination Results Vision Care" refidentifier="FICR_HD510600UV03"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510700UV03-hmd" refname="Pre-Determination Results Physician" refidentifier="FICR_HD510700UV03"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600100UV01-hmd" refname="Invoice Adjudication Request Generic" refidentifier="FICR_HD600100UV01"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600200UV01-hmd" refname="Invoice Adjudication Request Pharmacy" refidentifier="FICR_HD600200UV01"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600300UV01-hmd" refname="Invoice Adjudication Request Preferred Accommodation" refidentifier="FICR_HD600300UV01"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600400UV02-hmd" refname="Invoice Adjudication Request Chiro/Physio" refidentifier="FICR_HD600400UV02"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600500UV03-hmd" refname="Invoice Adjudication Request Oral Health" refidentifier="FICR_HD600500UV03"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600600UV03-hmd" refname="Invoice Adjudication Request Vision Care" refidentifier="FICR_HD600600UV03"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600700UV03-hmd" refname="Invoice Adjudication Request Physician" refidentifier="FICR_HD600700UV03"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600800UV03-hmd" refname="Invoice Adjudication Request Hospital" refidentifier="FICR_HD600800UV03"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610100UV01-hmd" refname="Invoice Adjudication Results Generic" refidentifier="FICR_HD610100UV01"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610200UV01-hmd" refname="Invoice Adjudication Results Pharmacy" refidentifier="FICR_HD610200UV01"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610300UV01-hmd" refname="Invoice Adjudication Results Preferred Accommodation" refidentifier="FICR_HD610300UV01"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610400UV02-hmd" refname="Invoice Adjudication Results Chiro/Physio" refidentifier="FICR_HD610400UV02"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610500UV03-hmd" refname="Invoice Adjudication Results Oral Health" refidentifier="FICR_HD610500UV03"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610600UV03-hmd" refname="Invoice Adjudication Results Vision Care" refidentifier="FICR_HD610600UV03"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610700UV03-hmd" refname="Invoice Adjudication Results Physician" refidentifier="FICR_HD610700UV03"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610800UV03-hmd" refname="Invoice Adjudication Results Hospital" refidentifier="FICR_HD610800UV03"/>
+<cmetref ref="COCT_MT680000UV04-msg" refname="A_InvoiceCoordinationUniversal" refidentifier="COCT_MT680000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD700100UV01-hmd" refname="Payment Advice Summary" refidentifier="FICR_HD700100UV01"/>
+<cmetref ref="COCT_MT240000UV01-msg" refname="R_LocationServiceDeliveryUniversal" refidentifier="COCT_MT240000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD710100UV01-hmd" refname="Payment Advice Detail" refidentifier="FICR_HD710100UV01"/>
+<cmetref ref="COCT_MT240000UV01-msg" refname="R_LocationServiceDeliveryUniversal" refidentifier="COCT_MT240000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="QUCR_HD730100UV01-hmd" refname="Payment Advice Query Results" refidentifier="QUCR_HD730100UV01"/>
+<cmetref ref="COCT_MT240000UV01-msg" refname="R_LocationServiceDeliveryUniversal" refidentifier="COCT_MT240000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="QUCR_HD810100UV01-hmd" refname="SOFA Payment Advice Query Results" refidentifier="QUCR_HD810100UV01"/>
+<cmetref ref="COCT_MT240000UV01-msg" refname="R_LocationServiceDeliveryUniversal" refidentifier="COCT_MT240000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300100UV02-hmd" refname="Authorization Request Generic" refidentifier="FICR_HD300100UV02"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300200UV01-hmd" refname="Authorization Request Pharmacy" refidentifier="FICR_HD300200UV01"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300300UV02-hmd" refname="Authorization Request Preferred Accommodation" refidentifier="FICR_HD300300UV02"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300400UV02-hmd" refname="Authorization Request Chiro/Physio" refidentifier="FICR_HD300400UV02"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300500UV03-hmd" refname="Authorization Request Oral Health" refidentifier="FICR_HD300500UV03"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300600UV03-hmd" refname="Authorization Request Vision Care" refidentifier="FICR_HD300600UV03"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300700UV03-hmd" refname="Authorization Request Physician" refidentifier="FICR_HD300700UV03"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310100UV02-hmd" refname="Authorization Results Generic" refidentifier="FICR_HD310100UV02"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310200UV01-hmd" refname="Authorization Results Pharmacy" refidentifier="FICR_HD310200UV01"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310300UV02-hmd" refname="Authorization Results Preferred Accommodation" refidentifier="FICR_HD310300UV02"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310400UV02-hmd" refname="Authorization Results Chiro/Physio" refidentifier="FICR_HD310400UV02"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310500UV03-hmd" refname="Authorization Results Oral Health" refidentifier="FICR_HD310500UV03"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310600UV03-hmd" refname="Authorization Results Vision Care" refidentifier="FICR_HD310600UV03"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310700UV03-hmd" refname="Authorization Results Physician" refidentifier="FICR_HD310700UV03"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500100UV01-hmd" refname="Pre-Determination Request Generic" refidentifier="FICR_HD500100UV01"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500200UV01-hmd" refname="Pre-Determination Request Pharmacy" refidentifier="FICR_HD500200UV01"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500300UV01-hmd" refname="Pre-Determination Request Preferred Accommodation" refidentifier="FICR_HD500300UV01"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500400UV02-hmd" refname="Pre-Determination Request Chiro/Physio" refidentifier="FICR_HD500400UV02"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500500UV03-hmd" refname="Pre-Determination Request Oral Health" refidentifier="FICR_HD500500UV03"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500600UV03-hmd" refname="Pre-Determination Request Vision Care" refidentifier="FICR_HD500600UV03"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500700UV03-hmd" refname="Pre-Determination Request Physician" refidentifier="FICR_HD500700UV03"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510100UV01-hmd" refname="Pre-Determination Results Generic" refidentifier="FICR_HD510100UV01"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510200UV01-hmd" refname="Pre-Determination Results Pharmacy" refidentifier="FICR_HD510200UV01"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510300UV01-hmd" refname="Pre-Determination Results Preferred Accommodation" refidentifier="FICR_HD510300UV01"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510400UV01-hmd" refname="Pre-Determination Results Chiro/Physio" refidentifier="FICR_HD510400UV01"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510500UV03-hmd" refname="Pre-Determination Results Oral Health" refidentifier="FICR_HD510500UV03"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510600UV03-hmd" refname="Pre-Determination Results Vision Care" refidentifier="FICR_HD510600UV03"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510700UV03-hmd" refname="Pre-Determination Results Physician" refidentifier="FICR_HD510700UV03"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600100UV01-hmd" refname="Invoice Adjudication Request Generic" refidentifier="FICR_HD600100UV01"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600200UV01-hmd" refname="Invoice Adjudication Request Pharmacy" refidentifier="FICR_HD600200UV01"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600300UV01-hmd" refname="Invoice Adjudication Request Preferred Accommodation" refidentifier="FICR_HD600300UV01"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600400UV02-hmd" refname="Invoice Adjudication Request Chiro/Physio" refidentifier="FICR_HD600400UV02"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600500UV03-hmd" refname="Invoice Adjudication Request Oral Health" refidentifier="FICR_HD600500UV03"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600600UV03-hmd" refname="Invoice Adjudication Request Vision Care" refidentifier="FICR_HD600600UV03"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600700UV03-hmd" refname="Invoice Adjudication Request Physician" refidentifier="FICR_HD600700UV03"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610100UV01-hmd" refname="Invoice Adjudication Results Generic" refidentifier="FICR_HD610100UV01"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610200UV01-hmd" refname="Invoice Adjudication Results Pharmacy" refidentifier="FICR_HD610200UV01"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610300UV01-hmd" refname="Invoice Adjudication Results Preferred Accommodation" refidentifier="FICR_HD610300UV01"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610400UV02-hmd" refname="Invoice Adjudication Results Chiro/Physio" refidentifier="FICR_HD610400UV02"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610500UV03-hmd" refname="Invoice Adjudication Results Oral Health" refidentifier="FICR_HD610500UV03"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610600UV03-hmd" refname="Invoice Adjudication Results Vision Care" refidentifier="FICR_HD610600UV03"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610700UV03-hmd" refname="Invoice Adjudication Results Physician" refidentifier="FICR_HD610700UV03"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD630100UV01-hmd" refname="Invoice Nullify Results" refidentifier="FICR_HD630100UV01"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD700100UV01-hmd" refname="Payment Advice Summary" refidentifier="FICR_HD700100UV01"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD710100UV01-hmd" refname="Payment Advice Detail" refidentifier="FICR_HD710100UV01"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="QUCR_HD810100UV01-hmd" refname="SOFA Payment Advice Query Results" refidentifier="QUCR_HD810100UV01"/>
+<cmetref ref="COCT_MT110202UV04-msg" refname="SubTypeOf(A_AccountPayeeUniversal)" refidentifier="COCT_MT110202UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310100UV02-hmd" refname="Authorization Results Generic" refidentifier="FICR_HD310100UV02"/>
+<cmetref ref="COCT_MT110101UV04-msg" refname="SubTypeOf(A_AccountPayorUniversal)" refidentifier="COCT_MT110101UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310200UV01-hmd" refname="Authorization Results Pharmacy" refidentifier="FICR_HD310200UV01"/>
+<cmetref ref="COCT_MT110101UV04-msg" refname="SubTypeOf(A_AccountPayorUniversal)" refidentifier="COCT_MT110101UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310300UV02-hmd" refname="Authorization Results Preferred Accommodation" refidentifier="FICR_HD310300UV02"/>
+<cmetref ref="COCT_MT110101UV04-msg" refname="SubTypeOf(A_AccountPayorUniversal)" refidentifier="COCT_MT110101UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310400UV02-hmd" refname="Authorization Results Chiro/Physio" refidentifier="FICR_HD310400UV02"/>
+<cmetref ref="COCT_MT110101UV04-msg" refname="SubTypeOf(A_AccountPayorUniversal)" refidentifier="COCT_MT110101UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310500UV03-hmd" refname="Authorization Results Oral Health" refidentifier="FICR_HD310500UV03"/>
+<cmetref ref="COCT_MT110101UV04-msg" refname="SubTypeOf(A_AccountPayorUniversal)" refidentifier="COCT_MT110101UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310600UV03-hmd" refname="Authorization Results Vision Care" refidentifier="FICR_HD310600UV03"/>
+<cmetref ref="COCT_MT110101UV04-msg" refname="SubTypeOf(A_AccountPayorUniversal)" refidentifier="COCT_MT110101UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310700UV03-hmd" refname="Authorization Results Physician" refidentifier="FICR_HD310700UV03"/>
+<cmetref ref="COCT_MT110101UV04-msg" refname="SubTypeOf(A_AccountPayorUniversal)" refidentifier="COCT_MT110101UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510100UV01-hmd" refname="Pre-Determination Results Generic" refidentifier="FICR_HD510100UV01"/>
+<cmetref ref="COCT_MT110101UV04-msg" refname="SubTypeOf(A_AccountPayorUniversal)" refidentifier="COCT_MT110101UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510200UV01-hmd" refname="Pre-Determination Results Pharmacy" refidentifier="FICR_HD510200UV01"/>
+<cmetref ref="COCT_MT110101UV04-msg" refname="SubTypeOf(A_AccountPayorUniversal)" refidentifier="COCT_MT110101UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510300UV01-hmd" refname="Pre-Determination Results Preferred Accommodation" refidentifier="FICR_HD510300UV01"/>
+<cmetref ref="COCT_MT110101UV04-msg" refname="SubTypeOf(A_AccountPayorUniversal)" refidentifier="COCT_MT110101UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510400UV01-hmd" refname="Pre-Determination Results Chiro/Physio" refidentifier="FICR_HD510400UV01"/>
+<cmetref ref="COCT_MT110101UV04-msg" refname="SubTypeOf(A_AccountPayorUniversal)" refidentifier="COCT_MT110101UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510500UV03-hmd" refname="Pre-Determination Results Oral Health" refidentifier="FICR_HD510500UV03"/>
+<cmetref ref="COCT_MT110101UV04-msg" refname="SubTypeOf(A_AccountPayorUniversal)" refidentifier="COCT_MT110101UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510600UV03-hmd" refname="Pre-Determination Results Vision Care" refidentifier="FICR_HD510600UV03"/>
+<cmetref ref="COCT_MT110101UV04-msg" refname="SubTypeOf(A_AccountPayorUniversal)" refidentifier="COCT_MT110101UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510700UV03-hmd" refname="Pre-Determination Results Physician" refidentifier="FICR_HD510700UV03"/>
+<cmetref ref="COCT_MT110101UV04-msg" refname="SubTypeOf(A_AccountPayorUniversal)" refidentifier="COCT_MT110101UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610100UV01-hmd" refname="Invoice Adjudication Results Generic" refidentifier="FICR_HD610100UV01"/>
+<cmetref ref="COCT_MT110101UV04-msg" refname="SubTypeOf(A_AccountPayorUniversal)" refidentifier="COCT_MT110101UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610200UV01-hmd" refname="Invoice Adjudication Results Pharmacy" refidentifier="FICR_HD610200UV01"/>
+<cmetref ref="COCT_MT110101UV04-msg" refname="SubTypeOf(A_AccountPayorUniversal)" refidentifier="COCT_MT110101UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610300UV01-hmd" refname="Invoice Adjudication Results Preferred Accommodation" refidentifier="FICR_HD610300UV01"/>
+<cmetref ref="COCT_MT110101UV04-msg" refname="SubTypeOf(A_AccountPayorUniversal)" refidentifier="COCT_MT110101UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610400UV02-hmd" refname="Invoice Adjudication Results Chiro/Physio" refidentifier="FICR_HD610400UV02"/>
+<cmetref ref="COCT_MT110101UV04-msg" refname="SubTypeOf(A_AccountPayorUniversal)" refidentifier="COCT_MT110101UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610500UV03-hmd" refname="Invoice Adjudication Results Oral Health" refidentifier="FICR_HD610500UV03"/>
+<cmetref ref="COCT_MT110101UV04-msg" refname="SubTypeOf(A_AccountPayorUniversal)" refidentifier="COCT_MT110101UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610600UV03-hmd" refname="Invoice Adjudication Results Vision Care" refidentifier="FICR_HD610600UV03"/>
+<cmetref ref="COCT_MT110101UV04-msg" refname="SubTypeOf(A_AccountPayorUniversal)" refidentifier="COCT_MT110101UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610700UV03-hmd" refname="Invoice Adjudication Results Physician" refidentifier="FICR_HD610700UV03"/>
+<cmetref ref="COCT_MT110101UV04-msg" refname="SubTypeOf(A_AccountPayorUniversal)" refidentifier="COCT_MT110101UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD630100UV01-hmd" refname="Invoice Nullify Results" refidentifier="FICR_HD630100UV01"/>
+<cmetref ref="COCT_MT110101UV04-msg" refname="SubTypeOf(A_AccountPayorUniversal)" refidentifier="COCT_MT110101UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD700100UV01-hmd" refname="Payment Advice Summary" refidentifier="FICR_HD700100UV01"/>
+<cmetref ref="COCT_MT110101UV04-msg" refname="SubTypeOf(A_AccountPayorUniversal)" refidentifier="COCT_MT110101UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD710100UV01-hmd" refname="Payment Advice Detail" refidentifier="FICR_HD710100UV01"/>
+<cmetref ref="COCT_MT110101UV04-msg" refname="SubTypeOf(A_AccountPayorUniversal)" refidentifier="COCT_MT110101UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="QUCR_HD810100UV01-hmd" refname="SOFA Payment Advice Query Results" refidentifier="QUCR_HD810100UV01"/>
+<cmetref ref="COCT_MT110101UV04-msg" refname="SubTypeOf(A_AccountPayorUniversal)" refidentifier="COCT_MT110101UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300100UV02-hmd" refname="Authorization Request Generic" refidentifier="FICR_HD300100UV02"/>
+<cmetref ref="COCT_MT6800003-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT6800003"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300400UV02-hmd" refname="Authorization Request Chiro/Physio" refidentifier="FICR_HD300400UV02"/>
+<cmetref ref="COCT_MT680002UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680002UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500400UV02-hmd" refname="Pre-Determination Request Chiro/Physio" refidentifier="FICR_HD500400UV02"/>
+<cmetref ref="COCT_MT680002UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680002UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600400UV02-hmd" refname="Invoice Adjudication Request Chiro/Physio" refidentifier="FICR_HD600400UV02"/>
+<cmetref ref="COCT_MT680002UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680002UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300200UV01-hmd" refname="Authorization Request Pharmacy" refidentifier="FICR_HD300200UV01"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300300UV02-hmd" refname="Authorization Request Preferred Accommodation" refidentifier="FICR_HD300300UV02"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300500UV03-hmd" refname="Authorization Request Oral Health" refidentifier="FICR_HD300500UV03"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300600UV03-hmd" refname="Authorization Request Vision Care" refidentifier="FICR_HD300600UV03"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD300700UV03-hmd" refname="Authorization Request Physician" refidentifier="FICR_HD300700UV03"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310100UV02-hmd" refname="Authorization Results Generic" refidentifier="FICR_HD310100UV02"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310200UV01-hmd" refname="Authorization Results Pharmacy" refidentifier="FICR_HD310200UV01"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310300UV02-hmd" refname="Authorization Results Preferred Accommodation" refidentifier="FICR_HD310300UV02"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310400UV02-hmd" refname="Authorization Results Chiro/Physio" refidentifier="FICR_HD310400UV02"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310500UV03-hmd" refname="Authorization Results Oral Health" refidentifier="FICR_HD310500UV03"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310600UV03-hmd" refname="Authorization Results Vision Care" refidentifier="FICR_HD310600UV03"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD310700UV03-hmd" refname="Authorization Results Physician" refidentifier="FICR_HD310700UV03"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500100UV01-hmd" refname="Pre-Determination Request Generic" refidentifier="FICR_HD500100UV01"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500200UV01-hmd" refname="Pre-Determination Request Pharmacy" refidentifier="FICR_HD500200UV01"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500300UV01-hmd" refname="Pre-Determination Request Preferred Accommodation" refidentifier="FICR_HD500300UV01"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500500UV03-hmd" refname="Pre-Determination Request Oral Health" refidentifier="FICR_HD500500UV03"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500600UV03-hmd" refname="Pre-Determination Request Vision Care" refidentifier="FICR_HD500600UV03"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD500700UV03-hmd" refname="Pre-Determination Request Physician" refidentifier="FICR_HD500700UV03"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510100UV01-hmd" refname="Pre-Determination Results Generic" refidentifier="FICR_HD510100UV01"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510200UV01-hmd" refname="Pre-Determination Results Pharmacy" refidentifier="FICR_HD510200UV01"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510300UV01-hmd" refname="Pre-Determination Results Preferred Accommodation" refidentifier="FICR_HD510300UV01"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510400UV01-hmd" refname="Pre-Determination Results Chiro/Physio" refidentifier="FICR_HD510400UV01"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510500UV03-hmd" refname="Pre-Determination Results Oral Health" refidentifier="FICR_HD510500UV03"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510600UV03-hmd" refname="Pre-Determination Results Vision Care" refidentifier="FICR_HD510600UV03"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD510700UV03-hmd" refname="Pre-Determination Results Physician" refidentifier="FICR_HD510700UV03"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600100UV01-hmd" refname="Invoice Adjudication Request Generic" refidentifier="FICR_HD600100UV01"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600200UV01-hmd" refname="Invoice Adjudication Request Pharmacy" refidentifier="FICR_HD600200UV01"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600300UV01-hmd" refname="Invoice Adjudication Request Preferred Accommodation" refidentifier="FICR_HD600300UV01"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600500UV03-hmd" refname="Invoice Adjudication Request Oral Health" refidentifier="FICR_HD600500UV03"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600600UV03-hmd" refname="Invoice Adjudication Request Vision Care" refidentifier="FICR_HD600600UV03"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD600700UV03-hmd" refname="Invoice Adjudication Request Physician" refidentifier="FICR_HD600700UV03"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610100UV01-hmd" refname="Invoice Adjudication Results Generic" refidentifier="FICR_HD610100UV01"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610200UV01-hmd" refname="Invoice Adjudication Results Pharmacy" refidentifier="FICR_HD610200UV01"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610300UV01-hmd" refname="Invoice Adjudication Results Preferred Accommodation" refidentifier="FICR_HD610300UV01"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610400UV02-hmd" refname="Invoice Adjudication Results Chiro/Physio" refidentifier="FICR_HD610400UV02"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610500UV03-hmd" refname="Invoice Adjudication Results Oral Health" refidentifier="FICR_HD610500UV03"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610600UV03-hmd" refname="Invoice Adjudication Results Vision Care" refidentifier="FICR_HD610600UV03"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610700UV03-hmd" refname="Invoice Adjudication Results Physician" refidentifier="FICR_HD610700UV03"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FICR_HD610800UV03-hmd" refname="Invoice Adjudication Results Hospital" refidentifier="FICR_HD610800UV03"/>
+<cmetref ref="COCT_MT680003UV04-msg" refname="SubTypeOf(A_InvoiceCoordinationUniversal)" refidentifier="COCT_MT680003UV04"/>
+</cmetuse>
+</usage>

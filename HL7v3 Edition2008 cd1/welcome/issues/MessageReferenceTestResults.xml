@@ -1,0 +1,1412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results>
+   <unmatchedCMETs/>
+   <unmatchedDefs/>
+   <undefinedMsgs>
+      <error test="noDefnForMsg" ListNoteOrName="Clinical Statement Element"
+             msgDefnOrRef="--"
+             messageOrRefSrce="COCS_MT100000UV01"
+             resolution="OK. Design is documented but not defined as a message type in the PubDb"/>
+   </undefinedMsgs>
+   <unsatisfiedRefs/>
+   <unmatchedVocDomains>
+      <undefinedCodeSystem name="ObservationDiagnosisIntolerance" code="" rimRef="Act.code"
+                           resolution="Need Proposal"
+                           firstUse="COCT_MT120300UV"
+                           referredFrom="CT "
+                           count="1"/>
+      <undefinedCode name="ActCode" code="" rimRef="Act.code" resolution="Use D:ActCode"
+                     firstUse="COCT_MT600000UV06"
+                     referredFrom="CT "
+                     count="1"/>
+      <undefinedCode name="ActCode" code="ORALHEALTH" rimRef="Act.code" resolution="Need proposal"
+                     firstUse="COCT_MT760000UV04"
+                     referredFrom="CT "
+                     count="1"/>
+      <undefinedCode name="ActCode" code="ObservationDiagnosisTypes" rimRef="Act.code"
+                     resolution="Use V:ObservationDiagnosisTypes"
+                     firstUse="COCT_MT610000UV06"
+                     referredFrom="CT "
+                     count="2"/>
+      <undefinedCode name="ActUncertainty" code="" rimRef="Act.uncertaintyCode"
+                     resolution="Change to D:ActUncertainty"
+                     firstUse="COCT_MT120300UV"
+                     referredFrom="CT "
+                     count="1"/>
+      <undefinedCode name="Confidentiality" code="" rimRef="Act.confidentialityCode"
+                     resolution="Change to D:Confidentiality"
+                     firstUse="COCT_MT120300UV"
+                     referredFrom="CT "
+                     count="1"/>
+      <undefinedCode name="EntityClass" code="MMAT " rimRef="Entity.classCode"
+                     resolution="Remove extra space from end of code."
+                     firstUse="COCT_MT250000UV03"
+                     referredFrom="CT "
+                     count="2"/>
+      <undefinedCode name="ObservationValue" code="IndicationValue" rimRef="Observation.value"
+                     resolution="Use D:IndicationValue"
+                     firstUse="COCT_MT610000UV06"
+                     referredFrom="CT "
+                     count="1"/>
+      <undefinedConceptDomain name="&lt;AFFL&gt;" rimRef="Role.classCode" resolution="RoleClass.AFFL"
+                              firstUse="PRPM_HD401010UV01"
+                              referredFrom="PM "
+                              count="1"/>
+      <undefinedConceptDomain name="&lt;AffiliationRoleType&gt;" rimRef="Role.code"
+                              resolution="Use D:AffiliationRoleType "
+                              firstUse="PRPM_HD401010UV01"
+                              referredFrom="PM "
+                              count="1"/>
+      <undefinedConceptDomain name="&lt;AuditAttribute&gt;" rimRef="Act.code" resolution="Need Proposal"
+                              firstUse="PRPM_HD306110UV01"
+                              referredFrom="PM "
+                              count="2"/>
+      <undefinedConceptDomain name="&lt;ControlActReason&gt;" rimRef="Act.reasonCode"
+                              resolution="Use D:ControlActReason"
+                              firstUse="PRPM_HD306110UV01"
+                              referredFrom="PM "
+                              count="2"/>
+      <undefinedConceptDomain name="&lt;JurisdictionTypeCode&gt;" rimRef="Entity.code" resolution="Need Proposal"
+                              firstUse="PRPM_HD401010UV01"
+                              referredFrom="PM "
+                              count="1"/>
+      <undefinedConceptDomain name="&lt;TerritorialAuthorityRoleType&gt;" rimRef="Role.code"
+                              resolution="Need Proposal for Domain linked to RoleClass.TERR"
+                              firstUse="PRPM_HD401010UV01"
+                              referredFrom="PM "
+                              count="1"/>
+      <undefinedConceptDomain name="ActAllergyIntoleranceListCode" rimRef="Act.code"
+                              resolution="Use ActCode.INTOLIST"
+                              firstUse="REPC_HD000322UV01"
+                              referredFrom="PC "
+                              count="1"/>
+      <undefinedConceptDomain name="ActBillableCode" rimRef="Act.code"
+                              resolution="Use V:ActBillableServiceCode"
+                              firstUse="COCT_MT510005UV06"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="ActCareEventType" rimRef="ParameterItem.value"
+                              resolution="Need Proposal - non norm"
+                              firstUse="COCT_MT520001UV"
+                              referredFrom="CT PC "
+                              count="2"/>
+      <undefinedConceptDomain name="ActChemicalDependencyCode" rimRef="Act.code"
+                              resolution="Need domain proposal"
+                              firstUse="COCT_MT610000UV06"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="ActClaimAttachmentCode" rimRef="Act.code"
+                              resolution="Propose Domain ActClaimAttachmentCode with definition from ActCode ._ActClaimAttachmentCode"
+                              firstUse="FICR_HD300100UV02"
+                              referredFrom="CR "
+                              count="24"/>
+      <undefinedConceptDomain name="ActCognitiveProcedureCategoryList" rimRef="ParameterItem.value"
+                              resolution="Need Proposal"
+                              firstUse="REPC_HD610004UV01"
+                              referredFrom="PC "
+                              count="1"/>
+      <undefinedConceptDomain name="ActConsentInformationAccessReason" rimRef="Act.reasonCode"
+                              resolution="Need Proposal"
+                              firstUse="RCMR_HD010001UV01"
+                              referredFrom="MR "
+                              count="1"/>
+      <undefinedConceptDomain name="ActCoverageLimitObservationCode" rimRef="Act.code"
+                              resolution="Need Proposal"
+                              firstUse="COCT_MT510005UV06"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="ActFinancialPatientConsentCode" rimRef="Act.code"
+                              resolution="Need Proposal"
+                              firstUse="FICR_HD300100UV02"
+                              referredFrom="CR "
+                              count="24"/>
+      <undefinedConceptDomain name="ActHealthConditionType" rimRef="ParameterItem.value"
+                              resolution="Need Proposal"
+                              firstUse="REPC_HD610004UV01"
+                              referredFrom="PC "
+                              count="1"/>
+      <undefinedConceptDomain name="ActInEligibilityReason" rimRef="Act.reasonCode"
+                              resolution="Need Proposal"
+                              firstUse="QUCR_HD210100UV01"
+                              referredFrom="CR "
+                              count="2"/>
+      <undefinedConceptDomain name="ActIndicationType" rimRef="ParameterItem.value"
+                              resolution="Use D:ObservationIndicationType"
+                              firstUse="REPC_HD610004UV01"
+                              referredFrom="PC "
+                              count="1"/>
+      <undefinedConceptDomain name="ActInformationAccessTypeCode" rimRef="Act.code"
+                              resolution="Use D:ActInformationAccessCode or Need Proposal"
+                              firstUse="RCMR_HD010001UV01"
+                              referredFrom="MR "
+                              count="2"/>
+      <undefinedConceptDomain name="ActMedicineApproval" rimRef="Act.code"
+                              resolution="Need proposal, non-norm"
+                              firstUse="COCT_MT220300UV"
+                              referredFrom="CT RP "
+                              count="3"/>
+      <undefinedConceptDomain name="ActOralHealthReferralReason" rimRef="Act.reasonCode"
+                              resolution="Need proposal"
+                              firstUse="COCT_MT740000UV04"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="ActOralHealthSite" rimRef="Observation.targetSiteCode"
+                              resolution="Need proposal"
+                              firstUse="COCT_MT760000UV04"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="ActProfessionalServiceCode" rimRef="Act.code"
+                              resolution="Use D: ActCognitiveProfessionalServiceCode or Need Proposal"
+                              firstUse="REPC_MT610001UV01"
+                              referredFrom="PC "
+                              count="2"/>
+      <undefinedConceptDomain name="ActRegistryCode" rimRef="ParameterItem.value" resolution="Need Proposal"
+                              firstUse="QUMT_HD020020UV01"
+                              referredFrom="MT "
+                              count="1"/>
+      <undefinedConceptDomain name="ActRelationshipPosts" rimRef="ActRelationship.typeCode"
+                              resolution="Use V:ActRelationshipPosting"
+                              firstUse="FIAB_HD020100UV02"
+                              referredFrom="AB "
+                              count="1"/>
+      <undefinedConceptDomain name="ActRelationshipReplacement" rimRef="ActRelationship.typeCode"
+                              resolution="Refere to code RPLC, or V:ActRelationshipReplaces"
+                              firstUse="PORP_HD050032UV03"
+                              referredFrom="RP "
+                              count="1"/>
+      <undefinedConceptDomain name="ActS" rimRef="Procedure.approachSiteCode" resolution="Use D:ActSite"
+                              firstUse="REPC_MT610001UV01"
+                              referredFrom="PC "
+                              count="2"/>
+      <undefinedConceptDomain name="ActStatusCode" rimRef="Act.statusCode" resolution="use D:ActStatus"
+                              firstUse="REPC_HD000300UV01"
+                              referredFrom="PC "
+                              count="1"/>
+      <undefinedConceptDomain name="ActVerificationReason" rimRef="Act.reasonCode" resolution="Need Proposal"
+                              firstUse="COCT_MT810000UV"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="ActVisionSupplyCode" rimRef="Act.code" resolution="Need Proposal"
+                              firstUse="COCT_MT600000UV06"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="AgentRoleType" rimRef="Role.code" resolution="Need Proposal"
+                              firstUse="COCT_MT040008UV"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="AssessedClientRoleType" rimRef="Role.code" resolution="Need Proposal"
+                              firstUse="COCT_MT610000UV06"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="AssessmentObservationCode" rimRef="Act.code"
+                              resolution="Need proposal - assessment of what?"
+                              firstUse="COCT_MT610000UV06"
+                              referredFrom="CT "
+                              count="2"/>
+      <undefinedConceptDomain name="AuditAttribute" rimRef="Act.code" resolution="Need Proposal"
+                              firstUse="PRPM_HD301010UV01"
+                              referredFrom="PM "
+                              count="6"/>
+      <undefinedConceptDomain name="CardiacDevicePatientObservationType" rimRef="Act.code"
+                              resolution="Need Proposal"
+                              firstUse="POTD_HD000001UV02"
+                              referredFrom="TD "
+                              count="1"/>
+      <undefinedConceptDomain name="CardiacDeviceSelfObservationType" rimRef="Act.code"
+                              resolution="Need Proposal"
+                              firstUse="POTD_HD000001UV02"
+                              referredFrom="TD "
+                              count="1"/>
+      <undefinedConceptDomain name="Chemical " rimRef="Entity.code" resolution="Need Proposal"
+                              firstUse="COCT_MT250000UV03"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="ContainerForm" rimRef="Material.formCode" resolution="Need Proposal"
+                              firstUse="PORP_HD050032UV03"
+                              referredFrom="RP "
+                              count="1"/>
+      <undefinedConceptDomain name="CoordinateObservationMethod" rimRef="Observation.methodCode"
+                              resolution="Need Proposal"
+                              firstUse="COCT_MT960000UV05"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="CountryCode" rimRef="Entity.code"
+                              resolution="Use domain:Country - non norm?"
+                              firstUse="COCT_MT220300UV"
+                              referredFrom="CT RP RR "
+                              count="5"/>
+      <undefinedConceptDomain name="CoverageAdministratorRoleType" rimRef="Role.code"
+                              resolution="Need Proposal"
+                              firstUse="COCT_MT510000UV06"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="CoverageLimitObservationCode" rimRef="Act.code"
+                              resolution="Need Proposal"
+                              firstUse="COCT_MT510000UV06"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="CoverageLimitObservationValue" rimRef="Observation.value"
+                              resolution="Need Proposal"
+                              firstUse="COCT_MT510000UV06"
+                              referredFrom="CT "
+                              count="2"/>
+      <undefinedConceptDomain name="DeviceInterrogation" rimRef="Act.code" resolution="Need Proposal"
+                              firstUse="POTD_HD000001UV02"
+                              referredFrom="TD "
+                              count="1"/>
+      <undefinedConceptDomain name="Entitycode" rimRef="ParameterItem.value" resolution="Use D:EntityCode"
+                              firstUse="PRPM_HD306810UV01"
+                              referredFrom="PM "
+                              count="1"/>
+      <undefinedConceptDomain name="ExposureAgentEntity" rimRef="Entity.code"
+                              resolution="Use D:ExposureAgentEntityType"
+                              firstUse="REPC_HD000100UV01"
+                              referredFrom="PC "
+                              count="1"/>
+      <undefinedConceptDomain name="ExposureAgentPartEntity" rimRef="Entity.code"
+                              resolution="Propose or use D:ExposureAgentEntityType"
+                              firstUse="REPC_HD000100UV01"
+                              referredFrom="PC "
+                              count="3"/>
+      <undefinedConceptDomain name="FormType" rimRef="Entity.code" resolution="Need Proposal"
+                              firstUse="FICR_HD310100UV02"
+                              referredFrom="CR "
+                              count="24"/>
+      <undefinedConceptDomain name="HealthCareProviderRoleType" rimRef="Role.code"
+                              resolution="Propose D:HealthcareProviderRoleType based on and linked to RoleCode. _HealthcareProviderRoleType"
+                              firstUse="PRPM_HD301010UV01"
+                              referredFrom="PM "
+                              count="4"/>
+      <undefinedConceptDomain name="INFA" rimRef="Act.code" resolution="C:ActCode.INFA"
+                              firstUse="RCMR_HD010002UV01"
+                              referredFrom="MR "
+                              count="1"/>
+      <undefinedConceptDomain name="ImplantedCardiacDeviceControlVariable" rimRef="Act.code"
+                              resolution="Need Proposal"
+                              firstUse="POTD_HD000001UV02"
+                              referredFrom="TD "
+                              count="1"/>
+      <undefinedConceptDomain name="ImplantedCardiacDeviceTherapy" rimRef="Act.code"
+                              resolution="Need Proposal"
+                              firstUse="POTD_HD000001UV02"
+                              referredFrom="TD "
+                              count="1"/>
+      <undefinedConceptDomain name="JurisdictionTypeCode" rimRef="ParameterItem.value"
+                              resolution="Need Proposal"
+                              firstUse="PRPM_HD306010UV01"
+                              referredFrom="PM "
+                              count="4"/>
+      <undefinedConceptDomain name="LocationRoleType" rimRef="Role.code"
+                              resolution="Need proposal, AND use of LOCE in this role seems to be wrongly modeled since LOCE locates and entity, and an injury is NOT an entity. Should be SDLOC"
+                              firstUse="COCT_MT290000UV06"
+                              referredFrom="CT "
+                              count="3"/>
+      <undefinedConceptDomain name="ManufacturerItemCode" rimRef="Role.code"
+                              resolution="Need proposal for this domain"
+                              firstUse="COCT_MT290000UV06"
+                              referredFrom="CT "
+                              count="3"/>
+      <undefinedConceptDomain name="MaterialEntityClassType " rimRef="Entity.code"
+                              resolution="Remove space from end of Domain name"
+                              firstUse="COCT_MT490000UV04"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="MedicalDeviceAct" rimRef="Act.code" resolution="Need Proposal"
+                              firstUse="POTD_HD000001UV02"
+                              referredFrom="TD "
+                              count="1"/>
+      <undefinedConceptDomain name="MedicationObservation" rimRef="Act.code"
+                              resolution="Correct to read D:MedicationObservationType"
+                              firstUse="PORP_HD050032UV03"
+                              referredFrom="RP "
+                              count="1"/>
+      <undefinedConceptDomain name="ObservationEligibilityIndicatorType" rimRef="Act.code"
+                              resolution="Need proposal"
+                              firstUse="COCT_MT510000UV06"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="OralHealthHumanActSite" rimRef="Procedure.targetSiteCode"
+                              resolution="Need proposal"
+                              firstUse="COCT_MT740000UV04"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="OralHealthObservationValue" rimRef="Observation.value"
+                              resolution="Need proposal"
+                              firstUse="COCT_MT760000UV04"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="OralHealthReasonCode" rimRef="Act.reasonCode" resolution="Need proposal"
+                              firstUse="COCT_MT740000UV04"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="OralHealthSubstanceAdministrationReason" rimRef="Act.reasonCode"
+                              resolution="Need proposal"
+                              firstUse="COCT_MT740000UV04"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="PackagedDrugProductEntity" rimRef="Entity.code"
+                              resolution="Need proposal"
+                              firstUse="PORR_MT049009UV01"
+                              referredFrom="RR "
+                              count="1"/>
+      <undefinedConceptDomain name="PackagedMedication" rimRef="Entity.code" resolution="Need proposal"
+                              firstUse="PORP_HD050032UV03"
+                              referredFrom="RP "
+                              count="1"/>
+      <undefinedConceptDomain name="PositionAccuracyCode" rimRef="Act.code"
+                              resolution="Need Proposal -- Perhaps D:GISSpatialAccuracyTiers"
+                              firstUse="COCT_MT960000UV05"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="PositionCoordinateObservationCode" rimRef="Act.code"
+                              resolution="Need Proposal"
+                              firstUse="COCT_MT960000UV05"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="PositionObservationCode" rimRef="Act.code" resolution="Need Proposal"
+                              firstUse="COCT_MT960000UV05"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="PractitionerCertifiedEntityType" rimRef="Role.code"
+                              resolution="Needs proposal, there is no RoleClass for either certified or practitioner"
+                              firstUse="COCT_MT490000UV04"
+                              referredFrom="CT "
+                              count="2"/>
+      <undefinedConceptDomain name="ProductRoleType" rimRef="Role.code"
+                              resolution="Need proposal for ManufacturedProductRoleType linked to MANU RoleClass"
+                              firstUse="COCT_MT490000UV04"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="RegulationPolicyActCode" rimRef="Act.code"
+                              resolution="Need proposal, non-norm"
+                              firstUse="COCT_MT220300UV"
+                              referredFrom="CT RP "
+                              count="3"/>
+      <undefinedConceptDomain name="ResponsiblePartyRoleType" rimRef="Role.code"
+                              resolution="Use domain ResponsibleParty"
+                              firstUse="COCT_MT510000UV06"
+                              referredFrom="CT "
+                              count="2"/>
+      <undefinedConceptDomain name="SLOT" rimRef="Act.moodCode"
+                              resolution="Use C:ActMood.SLOT or V:ActMoodResourceSlot"
+                              firstUse="PRSC_HD010100UV01"
+                              referredFrom="SC "
+                              count="2"/>
+      <undefinedConceptDomain name="SeverityObservationValue" rimRef="Observation.value"
+                              resolution="Use V:SeverityObservation"
+                              firstUse="PORP_HD050032UV03"
+                              referredFrom="RP "
+                              count="1"/>
+      <undefinedConceptDomain name="SpecimenType" rimRef="Entity.code"
+                              resolution="Need harmonization proposal"
+                              firstUse="COCT_MT080100UV"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="SponsorRoleType" rimRef="Role.code"
+                              resolution="Use D:CoverageSponsorRoleType"
+                              firstUse="COCT_MT510000UV06"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="State" rimRef="Entity.classCode" resolution="use C:EntityClass.STATE"
+                              firstUse="PORP_HD050032UV03"
+                              referredFrom="RP "
+                              count="1"/>
+      <undefinedConceptDomain name="SubstanceAdministrationClass" rimRef="Act.code"
+                              resolution="Use D: ActSubstanceAdministrationCode"
+                              firstUse="PORP_HD050032UV03"
+                              referredFrom="RP "
+                              count="1"/>
+      <undefinedConceptDomain name="SubstanceAdministrationMethod"
+                              rimRef="SubstanceAdministration.methodCode"
+                              resolution="MandM Error add SubstanceAdministrationMethod as Domain with definition synonymous with SubstanceAdministration .methodCode"
+                              firstUse="COCT_MT610000UV06"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="SymptomFrequency" rimRef="Observation.value" resolution="Need Proposal"
+                              firstUse="PORP_HD050032UV03"
+                              referredFrom="RP "
+                              count="1"/>
+      <undefinedConceptDomain name="Uncertainty" rimRef="Act.uncertaintyCode"
+                              resolution="Use D:ActUncertainty"
+                              firstUse="POCG_HD000010UV01"
+                              referredFrom="CG "
+                              count="1"/>
+      <undefinedConceptDomain name="UnderwriterRoleType" rimRef="Role.code"
+                              resolution="Propose UnderwriterRoleType domain linked to UNDWRT RoleClass"
+                              firstUse="COCT_MT510000UV06"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="VerificationOutcome" rimRef="Observation.value"
+                              resolution="Use D:VerificationOutcomeValue"
+                              firstUse="COCT_MT810000UV"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="VisionPrescriptionObservationCode" rimRef="Act.code"
+                              resolution="Define D: ObservationVisionPrescriptionType or use V: ObservationVisionPrescriptionType"
+                              firstUse="COCT_MT600000UV06"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="VisionProductRoleType" rimRef="Role.code"
+                              resolution="Define D: VisionProductEntityType or use V: VisionProductEntityType"
+                              firstUse="COCT_MT600000UV06"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="_ActCoverageTypeCode" rimRef="Act.code"
+                              resolution="Use V:ActCoverageTypeCodeS"
+                              firstUse="COCT_MT510000UV06"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="normal" rimRef="Role.statusCode" resolution="Use V:RoleStatusNormal"
+                              firstUse="COCT_MT610000UV06"
+                              referredFrom="CT "
+                              count="1"/>
+      <undefinedConceptDomain name="obsolete" rimRef="Act.statusCode" resolution="Use V:ActStatusObsolete"
+                              firstUse="COCT_MT510000UV06"
+                              referredFrom="CT "
+                              count="2"/>
+      <undefinedConceptDomain name="x_ActInvoiceDetailChiroPhysioCode" rimRef="Act.code"
+                              resolution="Need Proposal"
+                              firstUse="FICR_HD300400UV02"
+                              referredFrom="CR "
+                              count="6"/>
+      <undefinedConceptDomain name="x_ActInvoiceDetailOralHealthCode" rimRef="Act.code"
+                              resolution="Need Proposal"
+                              firstUse="FICR_HD300500UV03"
+                              referredFrom="CR "
+                              count="6"/>
+      <undefinedConceptDomain name="x_ActInvoiceDetailPhysicianCode" rimRef="Act.code"
+                              resolution="Need Proposal"
+                              firstUse="FICR_HD300700UV03"
+                              referredFrom="CR "
+                              count="6"/>
+      <undefinedConceptDomain name="x_ActInvoiceDetailVisionCareCode" rimRef="Act.code"
+                              resolution="Need Proposal"
+                              firstUse="FICR_HD300600UV03"
+                              referredFrom="CR "
+                              count="6"/>
+      <undefinedConceptDomain name="x_ActPriorityPharmacy" rimRef="Act.priorityCode"
+                              resolution="Need proposal, intent not clear"
+                              firstUse="COCT_MT300000UV04"
+                              referredFrom="CT "
+                              count="2"/>
+      <undefinedConceptDomain name="x_AdverseEventReporterQualificationRoleCode" rimRef="Role.code"
+                              resolution="Need Proposal"
+                              firstUse="PORR_HD040001UV01"
+                              referredFrom="RR "
+                              count="2"/>
+      <undefinedConceptDomain name="x_DeterminerInstanceKind " rimRef="Entity.determinerCode"
+                              resolution="Use ValueSet of same name"
+                              firstUse="COCT_MT490000UV04"
+                              referredFrom="CT "
+                              count="1"/>
+   </unmatchedVocDomains>
+   <unmatchedVocDomainsBySource>
+      <errantVocReferenceSource srceHmd="COCT_MT040008UV">
+         <undefinedConceptDomain name="AgentRoleType" rimRef="Role.code" resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="COCT_MT080100UV">
+         <undefinedConceptDomain name="SpecimenType" rimRef="Entity.code"
+                                 resolution="Need harmonization proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="COCT_MT120300UV">
+         <undefinedCode name="ActUncertainty" code="" rimRef="Act.uncertaintyCode"
+                        resolution="Change to D:ActUncertainty"/>
+         <undefinedCode name="Confidentiality" code="" rimRef="Act.confidentialityCode"
+                        resolution="Change to D:Confidentiality"/>
+         <undefinedCodeSystem name="ObservationDiagnosisIntolerance" code="" rimRef="Act.code"
+                              resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="COCT_MT220300UV">
+         <undefinedConceptDomain name="ActMedicineApproval" rimRef="Act.code"
+                                 resolution="Need proposal, non-norm"/>
+         <undefinedConceptDomain name="CountryCode" rimRef="Entity.code"
+                                 resolution="Use domain:Country - non norm?"/>
+         <undefinedConceptDomain name="RegulationPolicyActCode" rimRef="Act.code"
+                                 resolution="Need proposal, non-norm"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="COCT_MT230100UV">
+         <undefinedConceptDomain name="ActMedicineApproval" rimRef="Act.code"
+                                 resolution="Need proposal, non-norm"/>
+         <undefinedConceptDomain name="CountryCode" rimRef="Entity.code"
+                                 resolution="Use domain:Country - non norm?"/>
+         <undefinedConceptDomain name="RegulationPolicyActCode" rimRef="Act.code"
+                                 resolution="Need proposal, non-norm"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="COCT_MT250000UV03">
+         <undefinedCode name="EntityClass" code="MMAT " rimRef="Entity.classCode"
+                        resolution="Remove extra space from end of code."/>
+         <undefinedConceptDomain name="Chemical " rimRef="Entity.code" resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="COCT_MT290000UV06">
+         <undefinedConceptDomain name="LocationRoleType" rimRef="Role.code"
+                                 resolution="Need proposal, AND use of LOCE in this role seems to be wrongly modeled since LOCE locates and entity, and an injury is NOT an entity. Should be SDLOC"/>
+         <undefinedConceptDomain name="ManufacturerItemCode" rimRef="Role.code"
+                                 resolution="Need proposal for this domain"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="COCT_MT290002UV06">
+         <undefinedConceptDomain name="ManufacturerItemCode" rimRef="Role.code"
+                                 resolution="Need proposal for this domain"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="COCT_MT300000UV04">
+         <undefinedConceptDomain name="x_ActPriorityPharmacy" rimRef="Act.priorityCode"
+                                 resolution="Need proposal, intent not clear"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="COCT_MT300001UV04">
+         <undefinedConceptDomain name="x_ActPriorityPharmacy" rimRef="Act.priorityCode"
+                                 resolution="Need proposal, intent not clear"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="COCT_MT490000UV04">
+         <undefinedCode name="EntityClass" code="MMAT " rimRef="Entity.classCode"
+                        resolution="Remove extra space from end of code."/>
+         <undefinedConceptDomain name="MaterialEntityClassType " rimRef="Entity.code"
+                                 resolution="Remove space from end of Domain name"/>
+         <undefinedConceptDomain name="PractitionerCertifiedEntityType" rimRef="Role.code"
+                                 resolution="Needs proposal, there is no RoleClass for either certified or practitioner"/>
+         <undefinedConceptDomain name="ProductRoleType" rimRef="Role.code"
+                                 resolution="Need proposal for ManufacturedProductRoleType linked to MANU RoleClass"/>
+         <undefinedConceptDomain name="x_DeterminerInstanceKind " rimRef="Entity.determinerCode"
+                                 resolution="Use ValueSet of same name"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="COCT_MT510000UV06">
+         <undefinedConceptDomain name="CoverageAdministratorRoleType" rimRef="Role.code"
+                                 resolution="Need Proposal"/>
+         <undefinedConceptDomain name="CoverageLimitObservationCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+         <undefinedConceptDomain name="CoverageLimitObservationValue" rimRef="Observation.value"
+                                 resolution="Need Proposal"/>
+         <undefinedConceptDomain name="ObservationEligibilityIndicatorType" rimRef="Act.code"
+                                 resolution="Need proposal"/>
+         <undefinedConceptDomain name="ResponsiblePartyRoleType" rimRef="Role.code"
+                                 resolution="Use domain ResponsibleParty"/>
+         <undefinedConceptDomain name="SponsorRoleType" rimRef="Role.code"
+                                 resolution="Use D:CoverageSponsorRoleType"/>
+         <undefinedConceptDomain name="UnderwriterRoleType" rimRef="Role.code"
+                                 resolution="Propose UnderwriterRoleType domain linked to UNDWRT RoleClass"/>
+         <undefinedConceptDomain name="_ActCoverageTypeCode" rimRef="Act.code"
+                                 resolution="Use V:ActCoverageTypeCodeS"/>
+         <undefinedConceptDomain name="obsolete" rimRef="Act.statusCode" resolution="Use V:ActStatusObsolete"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="COCT_MT510005UV06">
+         <undefinedConceptDomain name="ActBillableCode" rimRef="Act.code"
+                                 resolution="Use V:ActBillableServiceCode"/>
+         <undefinedConceptDomain name="ActCoverageLimitObservationCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+         <undefinedConceptDomain name="CoverageLimitObservationValue" rimRef="Observation.value"
+                                 resolution="Need Proposal"/>
+         <undefinedConceptDomain name="ResponsiblePartyRoleType" rimRef="Role.code"
+                                 resolution="Use domain ResponsibleParty"/>
+         <undefinedConceptDomain name="obsolete" rimRef="Act.statusCode" resolution="Use V:ActStatusObsolete"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="COCT_MT520001UV">
+         <undefinedConceptDomain name="ActCareEventType" rimRef="ParameterItem.value"
+                                 resolution="Need Proposal - non norm"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="COCT_MT600000UV06">
+         <undefinedCode name="ActCode" code="" rimRef="Act.code" resolution="Use D:ActCode"/>
+         <undefinedConceptDomain name="ActVisionSupplyCode" rimRef="Act.code" resolution="Need Proposal"/>
+         <undefinedConceptDomain name="VisionPrescriptionObservationCode" rimRef="Act.code"
+                                 resolution="Define D: ObservationVisionPrescriptionType or use V: ObservationVisionPrescriptionType"/>
+         <undefinedConceptDomain name="VisionProductRoleType" rimRef="Role.code"
+                                 resolution="Define D: VisionProductEntityType or use V: VisionProductEntityType"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="COCT_MT610000UV06">
+         <undefinedCode name="ActCode" code="ObservationDiagnosisTypes" rimRef="Act.code"
+                        resolution="Use V:ObservationDiagnosisTypes"/>
+         <undefinedCode name="ObservationValue" code="IndicationValue" rimRef="Observation.value"
+                        resolution="Use D:IndicationValue"/>
+         <undefinedConceptDomain name="ActChemicalDependencyCode" rimRef="Act.code"
+                                 resolution="Need domain proposal"/>
+         <undefinedConceptDomain name="AssessedClientRoleType" rimRef="Role.code" resolution="Need Proposal"/>
+         <undefinedConceptDomain name="AssessmentObservationCode" rimRef="Act.code"
+                                 resolution="Need proposal - assessment of what?"/>
+         <undefinedConceptDomain name="AssessmentObservationCode" rimRef="Act.code"
+                                 resolution="Need proposal - assessment of what?"/>
+         <undefinedConceptDomain name="LocationRoleType" rimRef="Role.code"
+                                 resolution="Need proposal, AND use of LOCE in this role seems to be wrongly modeled since LOCE locates and entity, and an injury is NOT an entity. Should be SDLOC"/>
+         <undefinedConceptDomain name="LocationRoleType" rimRef="Role.code"
+                                 resolution="Need proposal, AND use of LOCE in this role seems to be wrongly modeled since LOCE locates and entity, and an injury is NOT an entity. Should be SDLOC"/>
+         <undefinedConceptDomain name="ManufacturerItemCode" rimRef="Role.code"
+                                 resolution="Need proposal for this domain"/>
+         <undefinedConceptDomain name="SubstanceAdministrationMethod"
+                                 rimRef="SubstanceAdministration.methodCode"
+                                 resolution="MandM Error add SubstanceAdministrationMethod as Domain with definition synonymous with SubstanceAdministration .methodCode"/>
+         <undefinedConceptDomain name="normal" rimRef="Role.statusCode" resolution="Use V:RoleStatusNormal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="COCT_MT740000UV04">
+         <undefinedCode name="ActCode" code="ObservationDiagnosisTypes" rimRef="Act.code"
+                        resolution="Use V:ObservationDiagnosisTypes"/>
+         <undefinedConceptDomain name="ActOralHealthReferralReason" rimRef="Act.reasonCode"
+                                 resolution="Need proposal"/>
+         <undefinedConceptDomain name="OralHealthHumanActSite" rimRef="Procedure.targetSiteCode"
+                                 resolution="Need proposal"/>
+         <undefinedConceptDomain name="OralHealthReasonCode" rimRef="Act.reasonCode" resolution="Need proposal"/>
+         <undefinedConceptDomain name="OralHealthSubstanceAdministrationReason" rimRef="Act.reasonCode"
+                                 resolution="Need proposal"/>
+         <undefinedConceptDomain name="PractitionerCertifiedEntityType" rimRef="Role.code"
+                                 resolution="Needs proposal, there is no RoleClass for either certified or practitioner"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="COCT_MT760000UV04">
+         <undefinedCode name="ActCode" code="ORALHEALTH" rimRef="Act.code" resolution="Need proposal"/>
+         <undefinedConceptDomain name="ActOralHealthSite" rimRef="Observation.targetSiteCode"
+                                 resolution="Need proposal"/>
+         <undefinedConceptDomain name="OralHealthObservationValue" rimRef="Observation.value"
+                                 resolution="Need proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="COCT_MT810000UV">
+         <undefinedConceptDomain name="ActVerificationReason" rimRef="Act.reasonCode" resolution="Need Proposal"/>
+         <undefinedConceptDomain name="VerificationOutcome" rimRef="Observation.value"
+                                 resolution="Use D:VerificationOutcomeValue"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="COCT_MT960000UV05">
+         <undefinedConceptDomain name="CoordinateObservationMethod" rimRef="Observation.methodCode"
+                                 resolution="Need Proposal"/>
+         <undefinedConceptDomain name="PositionAccuracyCode" rimRef="Act.code"
+                                 resolution="Need Proposal -- Perhaps D:GISSpatialAccuracyTiers"/>
+         <undefinedConceptDomain name="PositionCoordinateObservationCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+         <undefinedConceptDomain name="PositionObservationCode" rimRef="Act.code" resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FIAB_HD020100UV02">
+         <undefinedConceptDomain name="ActRelationshipPosts" rimRef="ActRelationship.typeCode"
+                                 resolution="Use V:ActRelationshipPosting"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD300100UV02">
+         <undefinedConceptDomain name="ActClaimAttachmentCode" rimRef="Act.code"
+                                 resolution="Propose Domain ActClaimAttachmentCode with definition from ActCode ._ActClaimAttachmentCode"/>
+         <undefinedConceptDomain name="ActFinancialPatientConsentCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD300200UV01">
+         <undefinedConceptDomain name="ActClaimAttachmentCode" rimRef="Act.code"
+                                 resolution="Propose Domain ActClaimAttachmentCode with definition from ActCode ._ActClaimAttachmentCode"/>
+         <undefinedConceptDomain name="ActFinancialPatientConsentCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD300300UV02">
+         <undefinedConceptDomain name="ActClaimAttachmentCode" rimRef="Act.code"
+                                 resolution="Propose Domain ActClaimAttachmentCode with definition from ActCode ._ActClaimAttachmentCode"/>
+         <undefinedConceptDomain name="ActFinancialPatientConsentCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD300400UV02">
+         <undefinedConceptDomain name="ActClaimAttachmentCode" rimRef="Act.code"
+                                 resolution="Propose Domain ActClaimAttachmentCode with definition from ActCode ._ActClaimAttachmentCode"/>
+         <undefinedConceptDomain name="ActFinancialPatientConsentCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+         <undefinedConceptDomain name="x_ActInvoiceDetailChiroPhysioCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD300500UV03">
+         <undefinedConceptDomain name="ActClaimAttachmentCode" rimRef="Act.code"
+                                 resolution="Propose Domain ActClaimAttachmentCode with definition from ActCode ._ActClaimAttachmentCode"/>
+         <undefinedConceptDomain name="ActFinancialPatientConsentCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+         <undefinedConceptDomain name="x_ActInvoiceDetailOralHealthCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD300600UV03">
+         <undefinedConceptDomain name="ActClaimAttachmentCode" rimRef="Act.code"
+                                 resolution="Propose Domain ActClaimAttachmentCode with definition from ActCode ._ActClaimAttachmentCode"/>
+         <undefinedConceptDomain name="ActFinancialPatientConsentCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+         <undefinedConceptDomain name="x_ActInvoiceDetailVisionCareCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD300700UV03">
+         <undefinedConceptDomain name="ActClaimAttachmentCode" rimRef="Act.code"
+                                 resolution="Propose Domain ActClaimAttachmentCode with definition from ActCode ._ActClaimAttachmentCode"/>
+         <undefinedConceptDomain name="ActFinancialPatientConsentCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+         <undefinedConceptDomain name="x_ActInvoiceDetailPhysicianCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD310100UV02">
+         <undefinedConceptDomain name="FormType" rimRef="Entity.code" resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD310200UV01">
+         <undefinedConceptDomain name="FormType" rimRef="Entity.code" resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD310300UV02">
+         <undefinedConceptDomain name="FormType" rimRef="Entity.code" resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD310400UV02">
+         <undefinedConceptDomain name="FormType" rimRef="Entity.code" resolution="Need Proposal"/>
+         <undefinedConceptDomain name="x_ActInvoiceDetailChiroPhysioCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD310500UV03">
+         <undefinedConceptDomain name="FormType" rimRef="Entity.code" resolution="Need Proposal"/>
+         <undefinedConceptDomain name="x_ActInvoiceDetailOralHealthCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD310600UV03">
+         <undefinedConceptDomain name="FormType" rimRef="Entity.code" resolution="Need Proposal"/>
+         <undefinedConceptDomain name="x_ActInvoiceDetailVisionCareCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD310700UV03">
+         <undefinedConceptDomain name="FormType" rimRef="Entity.code" resolution="Need Proposal"/>
+         <undefinedConceptDomain name="x_ActInvoiceDetailPhysicianCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD400100UV01">
+         <undefinedConceptDomain name="ActClaimAttachmentCode" rimRef="Act.code"
+                                 resolution="Propose Domain ActClaimAttachmentCode with definition from ActCode ._ActClaimAttachmentCode"/>
+         <undefinedConceptDomain name="ActFinancialPatientConsentCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD400200UV01">
+         <undefinedConceptDomain name="ActClaimAttachmentCode" rimRef="Act.code"
+                                 resolution="Propose Domain ActClaimAttachmentCode with definition from ActCode ._ActClaimAttachmentCode"/>
+         <undefinedConceptDomain name="ActFinancialPatientConsentCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD410100UV01">
+         <undefinedConceptDomain name="FormType" rimRef="Entity.code" resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD410200UV01">
+         <undefinedConceptDomain name="FormType" rimRef="Entity.code" resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD500100UV01">
+         <undefinedConceptDomain name="ActClaimAttachmentCode" rimRef="Act.code"
+                                 resolution="Propose Domain ActClaimAttachmentCode with definition from ActCode ._ActClaimAttachmentCode"/>
+         <undefinedConceptDomain name="ActFinancialPatientConsentCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD500200UV01">
+         <undefinedConceptDomain name="ActClaimAttachmentCode" rimRef="Act.code"
+                                 resolution="Propose Domain ActClaimAttachmentCode with definition from ActCode ._ActClaimAttachmentCode"/>
+         <undefinedConceptDomain name="ActFinancialPatientConsentCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD500300UV01">
+         <undefinedConceptDomain name="ActClaimAttachmentCode" rimRef="Act.code"
+                                 resolution="Propose Domain ActClaimAttachmentCode with definition from ActCode ._ActClaimAttachmentCode"/>
+         <undefinedConceptDomain name="ActFinancialPatientConsentCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD500400UV02">
+         <undefinedConceptDomain name="ActClaimAttachmentCode" rimRef="Act.code"
+                                 resolution="Propose Domain ActClaimAttachmentCode with definition from ActCode ._ActClaimAttachmentCode"/>
+         <undefinedConceptDomain name="ActFinancialPatientConsentCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+         <undefinedConceptDomain name="x_ActInvoiceDetailChiroPhysioCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD500500UV03">
+         <undefinedConceptDomain name="ActClaimAttachmentCode" rimRef="Act.code"
+                                 resolution="Propose Domain ActClaimAttachmentCode with definition from ActCode ._ActClaimAttachmentCode"/>
+         <undefinedConceptDomain name="ActFinancialPatientConsentCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+         <undefinedConceptDomain name="x_ActInvoiceDetailOralHealthCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD500600UV03">
+         <undefinedConceptDomain name="ActClaimAttachmentCode" rimRef="Act.code"
+                                 resolution="Propose Domain ActClaimAttachmentCode with definition from ActCode ._ActClaimAttachmentCode"/>
+         <undefinedConceptDomain name="ActFinancialPatientConsentCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+         <undefinedConceptDomain name="x_ActInvoiceDetailVisionCareCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD500700UV03">
+         <undefinedConceptDomain name="ActClaimAttachmentCode" rimRef="Act.code"
+                                 resolution="Propose Domain ActClaimAttachmentCode with definition from ActCode ._ActClaimAttachmentCode"/>
+         <undefinedConceptDomain name="ActFinancialPatientConsentCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+         <undefinedConceptDomain name="x_ActInvoiceDetailPhysicianCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD510100UV01">
+         <undefinedConceptDomain name="FormType" rimRef="Entity.code" resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD510200UV01">
+         <undefinedConceptDomain name="FormType" rimRef="Entity.code" resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD510300UV01">
+         <undefinedConceptDomain name="FormType" rimRef="Entity.code" resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD510400UV01">
+         <undefinedConceptDomain name="FormType" rimRef="Entity.code" resolution="Need Proposal"/>
+         <undefinedConceptDomain name="x_ActInvoiceDetailChiroPhysioCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD510500UV03">
+         <undefinedConceptDomain name="FormType" rimRef="Entity.code" resolution="Need Proposal"/>
+         <undefinedConceptDomain name="x_ActInvoiceDetailOralHealthCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD510600UV03">
+         <undefinedConceptDomain name="FormType" rimRef="Entity.code" resolution="Need Proposal"/>
+         <undefinedConceptDomain name="x_ActInvoiceDetailVisionCareCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD510700UV03">
+         <undefinedConceptDomain name="FormType" rimRef="Entity.code" resolution="Need Proposal"/>
+         <undefinedConceptDomain name="x_ActInvoiceDetailPhysicianCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD600100UV01">
+         <undefinedConceptDomain name="ActClaimAttachmentCode" rimRef="Act.code"
+                                 resolution="Propose Domain ActClaimAttachmentCode with definition from ActCode ._ActClaimAttachmentCode"/>
+         <undefinedConceptDomain name="ActFinancialPatientConsentCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD600200UV01">
+         <undefinedConceptDomain name="ActClaimAttachmentCode" rimRef="Act.code"
+                                 resolution="Propose Domain ActClaimAttachmentCode with definition from ActCode ._ActClaimAttachmentCode"/>
+         <undefinedConceptDomain name="ActFinancialPatientConsentCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD600300UV01">
+         <undefinedConceptDomain name="ActClaimAttachmentCode" rimRef="Act.code"
+                                 resolution="Propose Domain ActClaimAttachmentCode with definition from ActCode ._ActClaimAttachmentCode"/>
+         <undefinedConceptDomain name="ActFinancialPatientConsentCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD600400UV02">
+         <undefinedConceptDomain name="ActClaimAttachmentCode" rimRef="Act.code"
+                                 resolution="Propose Domain ActClaimAttachmentCode with definition from ActCode ._ActClaimAttachmentCode"/>
+         <undefinedConceptDomain name="ActFinancialPatientConsentCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+         <undefinedConceptDomain name="x_ActInvoiceDetailChiroPhysioCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD600500UV03">
+         <undefinedConceptDomain name="ActClaimAttachmentCode" rimRef="Act.code"
+                                 resolution="Propose Domain ActClaimAttachmentCode with definition from ActCode ._ActClaimAttachmentCode"/>
+         <undefinedConceptDomain name="ActFinancialPatientConsentCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+         <undefinedConceptDomain name="x_ActInvoiceDetailOralHealthCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD600600UV03">
+         <undefinedConceptDomain name="ActClaimAttachmentCode" rimRef="Act.code"
+                                 resolution="Propose Domain ActClaimAttachmentCode with definition from ActCode ._ActClaimAttachmentCode"/>
+         <undefinedConceptDomain name="ActFinancialPatientConsentCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+         <undefinedConceptDomain name="x_ActInvoiceDetailVisionCareCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD600700UV03">
+         <undefinedConceptDomain name="ActClaimAttachmentCode" rimRef="Act.code"
+                                 resolution="Propose Domain ActClaimAttachmentCode with definition from ActCode ._ActClaimAttachmentCode"/>
+         <undefinedConceptDomain name="ActFinancialPatientConsentCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+         <undefinedConceptDomain name="x_ActInvoiceDetailPhysicianCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD600800UV03">
+         <undefinedConceptDomain name="ActClaimAttachmentCode" rimRef="Act.code"
+                                 resolution="Propose Domain ActClaimAttachmentCode with definition from ActCode ._ActClaimAttachmentCode"/>
+         <undefinedConceptDomain name="ActFinancialPatientConsentCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD610100UV01">
+         <undefinedConceptDomain name="FormType" rimRef="Entity.code" resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD610200UV01">
+         <undefinedConceptDomain name="FormType" rimRef="Entity.code" resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD610300UV01">
+         <undefinedConceptDomain name="FormType" rimRef="Entity.code" resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD610400UV02">
+         <undefinedConceptDomain name="FormType" rimRef="Entity.code" resolution="Need Proposal"/>
+         <undefinedConceptDomain name="x_ActInvoiceDetailChiroPhysioCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD610500UV03">
+         <undefinedConceptDomain name="FormType" rimRef="Entity.code" resolution="Need Proposal"/>
+         <undefinedConceptDomain name="x_ActInvoiceDetailOralHealthCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD610600UV03">
+         <undefinedConceptDomain name="FormType" rimRef="Entity.code" resolution="Need Proposal"/>
+         <undefinedConceptDomain name="x_ActInvoiceDetailVisionCareCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD610700UV03">
+         <undefinedConceptDomain name="FormType" rimRef="Entity.code" resolution="Need Proposal"/>
+         <undefinedConceptDomain name="x_ActInvoiceDetailPhysicianCode" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="FICR_HD610800UV03">
+         <undefinedConceptDomain name="FormType" rimRef="Entity.code" resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="POCG_HD000010UV01">
+         <undefinedConceptDomain name="Uncertainty" rimRef="Act.uncertaintyCode"
+                                 resolution="Use D:ActUncertainty"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="PORP_HD050032UV03">
+         <undefinedConceptDomain name="ActMedicineApproval" rimRef="Act.code"
+                                 resolution="Need proposal, non-norm"/>
+         <undefinedConceptDomain name="ActRelationshipReplacement" rimRef="ActRelationship.typeCode"
+                                 resolution="Refere to code RPLC, or V:ActRelationshipReplaces"/>
+         <undefinedConceptDomain name="ContainerForm" rimRef="Material.formCode" resolution="Need Proposal"/>
+         <undefinedConceptDomain name="CountryCode" rimRef="Entity.code"
+                                 resolution="Use domain:Country - non norm?"/>
+         <undefinedConceptDomain name="MedicationObservation" rimRef="Act.code"
+                                 resolution="Correct to read D:MedicationObservationType"/>
+         <undefinedConceptDomain name="PackagedMedication" rimRef="Entity.code" resolution="Need proposal"/>
+         <undefinedConceptDomain name="RegulationPolicyActCode" rimRef="Act.code"
+                                 resolution="Need proposal, non-norm"/>
+         <undefinedConceptDomain name="SeverityObservationValue" rimRef="Observation.value"
+                                 resolution="Use V:SeverityObservation"/>
+         <undefinedConceptDomain name="State" rimRef="Entity.classCode" resolution="use C:EntityClass.STATE"/>
+         <undefinedConceptDomain name="SubstanceAdministrationClass" rimRef="Act.code"
+                                 resolution="Use D: ActSubstanceAdministrationCode"/>
+         <undefinedConceptDomain name="SymptomFrequency" rimRef="Observation.value" resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="PORR_HD040001UV01">
+         <undefinedConceptDomain name="x_AdverseEventReporterQualificationRoleCode" rimRef="Role.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="PORR_HD040006UV01">
+         <undefinedConceptDomain name="x_AdverseEventReporterQualificationRoleCode" rimRef="Role.code"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="PORR_MT049009UV01">
+         <undefinedConceptDomain name="CountryCode" rimRef="Entity.code"
+                                 resolution="Use domain:Country - non norm?"/>
+         <undefinedConceptDomain name="PackagedDrugProductEntity" rimRef="Entity.code"
+                                 resolution="Need proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="PORR_MT049011UV01">
+         <undefinedConceptDomain name="CountryCode" rimRef="Entity.code"
+                                 resolution="Use domain:Country - non norm?"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="POTD_HD000001UV02">
+         <undefinedConceptDomain name="CardiacDevicePatientObservationType" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+         <undefinedConceptDomain name="CardiacDeviceSelfObservationType" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+         <undefinedConceptDomain name="DeviceInterrogation" rimRef="Act.code" resolution="Need Proposal"/>
+         <undefinedConceptDomain name="ImplantedCardiacDeviceControlVariable" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+         <undefinedConceptDomain name="ImplantedCardiacDeviceTherapy" rimRef="Act.code"
+                                 resolution="Need Proposal"/>
+         <undefinedConceptDomain name="MedicalDeviceAct" rimRef="Act.code" resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="PRPM_HD301010UV01">
+         <undefinedConceptDomain name="AuditAttribute" rimRef="Act.code" resolution="Need Proposal"/>
+         <undefinedConceptDomain name="HealthCareProviderRoleType" rimRef="Role.code"
+                                 resolution="Propose D:HealthcareProviderRoleType based on and linked to RoleCode. _HealthcareProviderRoleType"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="PRPM_HD303010UV01">
+         <undefinedConceptDomain name="AuditAttribute" rimRef="Act.code" resolution="Need Proposal"/>
+         <undefinedConceptDomain name="HealthCareProviderRoleType" rimRef="Role.code"
+                                 resolution="Propose D:HealthcareProviderRoleType based on and linked to RoleCode. _HealthcareProviderRoleType"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="PRPM_HD306010UV01">
+         <undefinedConceptDomain name="JurisdictionTypeCode" rimRef="ParameterItem.value"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="PRPM_HD306110UV01">
+         <undefinedConceptDomain name="&lt;AuditAttribute&gt;" rimRef="Act.code" resolution="Need Proposal"/>
+         <undefinedConceptDomain name="&lt;ControlActReason&gt;" rimRef="Act.reasonCode"
+                                 resolution="Use D:ControlActReason"/>
+         <undefinedConceptDomain name="HealthCareProviderRoleType" rimRef="Role.code"
+                                 resolution="Propose D:HealthcareProviderRoleType based on and linked to RoleCode. _HealthcareProviderRoleType"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="PRPM_HD306610UV01">
+         <undefinedConceptDomain name="JurisdictionTypeCode" rimRef="ParameterItem.value"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="PRPM_HD306810UV01">
+         <undefinedConceptDomain name="Entitycode" rimRef="ParameterItem.value" resolution="Use D:EntityCode"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="PRPM_HD309010UV01">
+         <undefinedConceptDomain name="AuditAttribute" rimRef="Act.code" resolution="Need Proposal"/>
+         <undefinedConceptDomain name="HealthCareProviderRoleType" rimRef="Role.code"
+                                 resolution="Propose D:HealthcareProviderRoleType based on and linked to RoleCode. _HealthcareProviderRoleType"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="PRPM_HD401010UV01">
+         <undefinedConceptDomain name="&lt;AFFL&gt;" rimRef="Role.classCode" resolution="RoleClass.AFFL"/>
+         <undefinedConceptDomain name="&lt;AffiliationRoleType&gt;" rimRef="Role.code"
+                                 resolution="Use D:AffiliationRoleType "/>
+         <undefinedConceptDomain name="&lt;AuditAttribute&gt;" rimRef="Act.code" resolution="Need Proposal"/>
+         <undefinedConceptDomain name="&lt;ControlActReason&gt;" rimRef="Act.reasonCode"
+                                 resolution="Use D:ControlActReason"/>
+         <undefinedConceptDomain name="&lt;JurisdictionTypeCode&gt;" rimRef="Entity.code" resolution="Need Proposal"/>
+         <undefinedConceptDomain name="&lt;TerritorialAuthorityRoleType&gt;" rimRef="Role.code"
+                                 resolution="Need Proposal for Domain linked to RoleClass.TERR"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="PRPM_HD403010UV01">
+         <undefinedConceptDomain name="AuditAttribute" rimRef="Act.code" resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="PRPM_HD406010UV01">
+         <undefinedConceptDomain name="JurisdictionTypeCode" rimRef="ParameterItem.value"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="PRPM_HD406110UV01">
+         <undefinedConceptDomain name="AuditAttribute" rimRef="Act.code" resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="PRPM_HD406210UV01">
+         <undefinedConceptDomain name="JurisdictionTypeCode" rimRef="ParameterItem.value"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="PRPM_HD409010UV01">
+         <undefinedConceptDomain name="AuditAttribute" rimRef="Act.code" resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="PRSC_HD010100UV01">
+         <undefinedConceptDomain name="SLOT" rimRef="Act.moodCode"
+                                 resolution="Use C:ActMood.SLOT or V:ActMoodResourceSlot"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="PRSC_HD010200UV01">
+         <undefinedConceptDomain name="SLOT" rimRef="Act.moodCode"
+                                 resolution="Use C:ActMood.SLOT or V:ActMoodResourceSlot"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="QUCR_HD210100UV01">
+         <undefinedConceptDomain name="ActInEligibilityReason" rimRef="Act.reasonCode"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="QUCR_HD210800UV03">
+         <undefinedConceptDomain name="ActInEligibilityReason" rimRef="Act.reasonCode"
+                                 resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="QUMT_HD020020UV01">
+         <undefinedConceptDomain name="ActRegistryCode" rimRef="ParameterItem.value" resolution="Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="RCMR_HD010001UV01">
+         <undefinedConceptDomain name="ActConsentInformationAccessReason" rimRef="Act.reasonCode"
+                                 resolution="Need Proposal"/>
+         <undefinedConceptDomain name="ActInformationAccessTypeCode" rimRef="Act.code"
+                                 resolution="Use D:ActInformationAccessCode or Need Proposal"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="RCMR_HD010002UV01">
+         <undefinedConceptDomain name="ActInformationAccessTypeCode" rimRef="Act.code"
+                                 resolution="Use D:ActInformationAccessCode or Need Proposal"/>
+         <undefinedConceptDomain name="INFA" rimRef="Act.code" resolution="C:ActCode.INFA"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="REPC_HD000100UV01">
+         <undefinedConceptDomain name="ExposureAgentEntity" rimRef="Entity.code"
+                                 resolution="Use D:ExposureAgentEntityType"/>
+         <undefinedConceptDomain name="ExposureAgentPartEntity" rimRef="Entity.code"
+                                 resolution="Propose or use D:ExposureAgentEntityType"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="REPC_HD000200UV">
+         <undefinedConceptDomain name="ExposureAgentPartEntity" rimRef="Entity.code"
+                                 resolution="Propose or use D:ExposureAgentEntityType"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="REPC_HD000300UV01">
+         <undefinedConceptDomain name="ActStatusCode" rimRef="Act.statusCode" resolution="use D:ActStatus"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="REPC_HD000322UV01">
+         <undefinedConceptDomain name="ActAllergyIntoleranceListCode" rimRef="Act.code"
+                                 resolution="Use ActCode.INTOLIST"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="REPC_HD000324UV01">
+         <undefinedConceptDomain name="ExposureAgentPartEntity" rimRef="Entity.code"
+                                 resolution="Propose or use D:ExposureAgentEntityType"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="REPC_HD610004UV01">
+         <undefinedConceptDomain name="ActCareEventType" rimRef="ParameterItem.value"
+                                 resolution="Need Proposal - non norm"/>
+         <undefinedConceptDomain name="ActCognitiveProcedureCategoryList" rimRef="ParameterItem.value"
+                                 resolution="Need Proposal"/>
+         <undefinedConceptDomain name="ActHealthConditionType" rimRef="ParameterItem.value"
+                                 resolution="Need Proposal"/>
+         <undefinedConceptDomain name="ActIndicationType" rimRef="ParameterItem.value"
+                                 resolution="Use D:ObservationIndicationType"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="REPC_MT610001UV01">
+         <undefinedConceptDomain name="ActProfessionalServiceCode" rimRef="Act.code"
+                                 resolution="Use D: ActCognitiveProfessionalServiceCode or Need Proposal"/>
+         <undefinedConceptDomain name="ActS" rimRef="Procedure.approachSiteCode" resolution="Use D:ActSite"/>
+         <undefinedConceptDomain name="ActS" rimRef="Procedure.approachSiteCode" resolution="Use D:ActSite"/>
+      </errantVocReferenceSource>
+      <errantVocReferenceSource srceHmd="REPC_MT610002UV01">
+         <undefinedConceptDomain name="ActProfessionalServiceCode" rimRef="Act.code"
+                                 resolution="Use D: ActCognitiveProfessionalServiceCode or Need Proposal"/>
+      </errantVocReferenceSource>
+   </unmatchedVocDomainsBySource>
+   <bindingFailures>
+      <failedInteractions>
+         <failedInteraction id="MCAI_IN700201UV01" transmission="MCCI_MT000100UV01" controlact=""
+                            payload="MCAI_MT700201UV01"
+                            querydef=""
+                            resolution="ControlAct wrapper not specified"/>
+         <failedInteraction id="MCCI_IN000000UV01" transmission="" controlact=""
+                            payload="MCCI_MT000100UV01"
+                            querydef=""
+                            resolution="Neither ControlAct wrapper nor Payload specified"/>
+         <failedInteraction id="MCCI_IN000001UV01" transmission="" controlact=""
+                            payload="MCCI_MT000100UV01"
+                            querydef=""
+                            resolution="Neither ControlAct wrapper nor Payload specified"/>
+         <failedInteraction id="MCCI_IN000002UV01" transmission="" controlact=""
+                            payload="MCCI_MT000200UV01"
+                            querydef=""
+                            resolution="Neither ControlAct wrapper nor Payload specified"/>
+         <failedInteraction id="MCCI_IN000003UV01" transmission="" controlact=""
+                            payload="MCCI_MT000100UV01"
+                            querydef=""
+                            resolution="Neither ControlAct wrapper nor Payload specified"/>
+         <failedInteraction id="MCCI_IN000004UV01" transmission="" controlact=""
+                            payload="MCCI_MT000300UV01"
+                            querydef=""
+                            resolution="Neither ControlAct wrapper nor Payload specified"/>
+         <failedInteraction id="MCCI_IN000005UV01" transmission="" controlact=""
+                            payload="MCCI_MT000100UV01"
+                            querydef=""
+                            resolution="Neither ControlAct wrapper nor Payload specified"/>
+         <failedInteraction id="MCCI_IN000006UV01" transmission="" controlact=""
+                            payload="MCCI_MT000200UV01"
+                            querydef=""
+                            resolution="Neither ControlAct wrapper nor Payload specified"/>
+         <failedInteraction id="MCCI_IN000007UV01" transmission="" controlact=""
+                            payload="MCCI_MT000300UV01"
+                            querydef=""
+                            resolution="Neither ControlAct wrapper nor Payload specified"/>
+         <failedInteraction id="MCCI_IN000008UV01" transmission="" controlact=""
+                            payload="MCCI_MT000200UV01"
+                            querydef=""
+                            resolution="Neither ControlAct wrapper nor Payload specified"/>
+         <failedInteraction id="MCCI_IN000009UV01" transmission="" controlact=""
+                            payload="MCCI_MT000100UV01"
+                            querydef=""
+                            resolution="Neither ControlAct wrapper nor Payload specified"/>
+         <failedInteraction id="MCCI_IN000010UV01" transmission="" controlact=""
+                            payload="MCCI_MT000300UV01"
+                            querydef=""
+                            resolution="Neither ControlAct wrapper nor Payload specified"/>
+         <failedInteraction id="MCCI_IN000011UV01" transmission="" controlact=""
+                            payload="MCCI_MT000300UV01"
+                            querydef=""
+                            resolution="Neither ControlAct wrapper nor Payload specified"/>
+         <failedInteraction id="MCCI_IN000012UV01" transmission="" controlact=""
+                            payload="MCCI_MT000100UV01"
+                            querydef=""
+                            resolution="Neither ControlAct wrapper nor Payload specified"/>
+         <failedInteraction id="MCCI_IN000013UV01" transmission="" controlact=""
+                            payload="MCCI_MT000200UV01"
+                            querydef=""
+                            resolution="Neither ControlAct wrapper nor Payload specified"/>
+         <failedInteraction id="MCCI_IN000014UV01" transmission="" controlact=""
+                            payload="MCCI_MT000300UV01"
+                            querydef=""
+                            resolution="Neither ControlAct wrapper nor Payload specified"/>
+         <failedInteraction id="MCCI_IN000015UV01" transmission="" controlact=""
+                            payload="MCCI_MT000200UV01"
+                            querydef=""
+                            resolution="Neither ControlAct wrapper nor Payload specified"/>
+         <failedInteraction id="MCCI_IN000016UV01" transmission="" controlact=""
+                            payload="MCCI_MT000300UV01"
+                            querydef=""
+                            resolution="Neither ControlAct wrapper nor Payload specified"/>
+         <failedInteraction id="MCCI_IN000017UV01" transmission="" controlact=""
+                            payload="MCCI_MT000200UV01"
+                            querydef=""
+                            resolution="Neither ControlAct wrapper nor Payload specified"/>
+         <failedInteraction id="MCCI_IN100001UV01" transmission="" controlact=""
+                            payload="MCCI_MT100100UV01"
+                            querydef=""
+                            resolution="Neither ControlAct wrapper nor Payload specified"/>
+         <failedInteraction id="MCCI_IN100002UV01" transmission="" controlact=""
+                            payload="MCCI_MT100300UV01"
+                            querydef=""
+                            resolution="Neither ControlAct wrapper nor Payload specified"/>
+         <failedInteraction id="MCCI_IN100003UV01" transmission="" controlact=""
+                            payload="MCCI_MT000200UV01"
+                            querydef=""
+                            resolution="Neither ControlAct wrapper nor Payload specified"/>
+         <failedInteraction id="MCCI_IN100004UV01" transmission="" controlact=""
+                            payload="MCCI_MT100200UV01"
+                            querydef=""
+                            resolution="Neither ControlAct wrapper nor Payload specified"/>
+         <failedInteraction id="MCCI_IN100005UV01" transmission="" controlact=""
+                            payload="MCCI_MT000200UV01"
+                            querydef=""
+                            resolution="Neither ControlAct wrapper nor Payload specified"/>
+         <failedInteraction id="POCG_IN000001UV01" transmission="MCCI_MT000100UV01"
+                            controlact="MCAI_MT700201UV01"
+                            payload="POCG_MT000040UV01"
+                            querydef=""
+                            resolution="This arises because of a FLAW in the error analysis.  The Interaction is FINE.">
+            <bindingpair wrapperKind="controlact" wrapperID="MCAI_MT700201UV01" stubType="Act"
+                         targetKind="payload"
+                         targetID="POCG_MT000040UV01"
+                         targetRoot="Observation Observation"
+                         note="RIM type (class) at target root is not a child of any of the stub targets."/>
+         </failedInteraction>
+         <failedInteraction id="PORP_IN050001UV03" transmission="" controlact=""
+                            payload="PORP_MT050032UV03"
+                            querydef=""
+                            resolution="Neither ControlAct wrapper nor Payload specified"/>
+         <failedInteraction id="QUMT_IN020010UV01" transmission="MCCI_MT000100UV01" controlact=""
+                            payload="QUMT_MT020020UV01"
+                            querydef=""
+                            resolution="ControlAct wrapper not specified"/>
+         <failedInteraction id="QUMT_IN020020UV01" transmission="MCCI_MT000300UV01" controlact=""
+                            payload="MFMT_MT002001UV01"
+                            querydef=""
+                            resolution="ControlAct wrapper not specified"/>
+         <failedInteraction id="QUMT_IN020030UV01" transmission="MCCI_MT000100UV01"
+                            controlact="QUQI_MT020001UV01"
+                            payload="QUMT_MT020010UV01"
+                            querydef=""
+                            resolution="Inappropriate Referfence to Control Act Wrapper in this example interaction.">
+            <bindingpair wrapperKind="controlact" wrapperID="QUQI_MT020001UV01" stubType="ParameterList"
+                         targetKind="payload"
+                         targetID="QUMT_MT020010UV01"
+                         targetRoot="QueryByParameter"
+                         note="RIM type (class) at target root is not a child of any of the stub targets."/>
+         </failedInteraction>
+         <failedInteraction id="QUMT_IN020050UV01" transmission="MCCI_MT000100UV01"
+                            controlact="QUQI_MT020001UV01"
+                            payload="QUMT_MT020010UV01"
+                            querydef=""
+                            resolution="Inappropriate Referfence to Control Act Wrapper in this example interaction.">
+            <bindingpair wrapperKind="controlact" wrapperID="QUQI_MT020001UV01" stubType="ParameterList"
+                         targetKind="payload"
+                         targetID="QUMT_MT020010UV01"
+                         targetRoot="QueryByParameter"
+                         note="RIM type (class) at target root is not a child of any of the stub targets."/>
+         </failedInteraction>
+         <failedInteraction id="QUMT_IN020070UV01" transmission="MCCI_MT000100UV01"
+                            controlact="QUQI_MT020001UV01"
+                            payload="QUMT_MT020010UV01"
+                            querydef=""
+                            resolution="Inappropriate Referfence to Control Act Wrapper in this example interaction.">
+            <bindingpair wrapperKind="controlact" wrapperID="QUQI_MT020001UV01" stubType="ParameterList"
+                         targetKind="payload"
+                         targetID="QUMT_MT020010UV01"
+                         targetRoot="QueryByParameter"
+                         note="RIM type (class) at target root is not a child of any of the stub targets."/>
+         </failedInteraction>
+         <failedInteraction id="QUPC_IN040200UV01" transmission="MCCI_MT000300UV01"
+                            controlact="MFMI_MT700712UV01"
+                            payload="REPC_MT004000UV01"
+                            querydef="QUPC_MT040000UV01"
+                            resolution="Ooops - NOT Fixed with correction to MFMI_MT700712UV01 - Needs ParameterList">
+            <bindingpair wrapperKind="controlact" wrapperID="MFMI_MT700712UV01"
+                         stubType="Role Act QueryByParameter "
+                         targetKind="querydef"
+                         targetID="QUPC_MT040000UV01"
+                         targetRoot="ParameterList"
+                         note="RIM type (class) at target root is not a child of any of the stub targets."/>
+         </failedInteraction>
+         <failedInteraction id="QUPC_IN041200UV01" transmission="MCCI_MT000300UV01"
+                            controlact="MFMI_MT700712UV01"
+                            payload="REPC_MT004005UV01"
+                            querydef="QUPC_MT040100UV01"
+                            resolution="Ooops - NOT Fixed with correction to MFMI_MT700712UV01 - Needs ParameterList">
+            <bindingpair wrapperKind="controlact" wrapperID="MFMI_MT700712UV01"
+                         stubType="Role Act QueryByParameter "
+                         targetKind="querydef"
+                         targetID="QUPC_MT040100UV01"
+                         targetRoot="ParameterList"
+                         note="RIM type (class) at target root is not a child of any of the stub targets."/>
+         </failedInteraction>
+         <failedInteraction id="QUPC_IN043200UV01" transmission="MCCI_MT000300UV01"
+                            controlact="MFMI_MT700712UV01"
+                            payload="REPC_MT004000UV01"
+                            querydef="QUPC_MT040300UV01"
+                            resolution="Ooops - NOT Fixed with correction to MFMI_MT700712UV01 - Needs ParameterList">
+            <bindingpair wrapperKind="controlact" wrapperID="MFMI_MT700712UV01"
+                         stubType="Role Act QueryByParameter "
+                         targetKind="querydef"
+                         targetID="QUPC_MT040300UV01"
+                         targetRoot="ParameterList"
+                         note="RIM type (class) at target root is not a child of any of the stub targets."/>
+         </failedInteraction>
+         <failedInteraction id="QUQI_IN000001UV01" transmission="MCCI_MT000100UV01" controlact=""
+                            payload="QUQI_MT020001UV01"
+                            querydef=""
+                            resolution="ControlAct wrapper not specified"/>
+         <failedInteraction id="QUQI_IN000002UV01" transmission="MCCI_MT000300UV01" controlact=""
+                            payload="QUQI_MT120001UV01"
+                            querydef=""
+                            resolution="ControlAct wrapper not specified"/>
+         <failedInteraction id="QUQI_IN000003UV01" transmission="MCCI_MT000300UV01" controlact=""
+                            payload="QUQI_MT000001UV01"
+                            querydef=""
+                            resolution="ControlAct wrapper not specified"/>
+         <failedInteraction id="RCMR_IN010002UV01" transmission="MCCI_MT000300UV01"
+                            controlact="MCAI_MT700201UV01"
+                            payload=""
+                            querydef=""
+                            resolution="Payload not specified"/>
+         <failedInteraction id="RCMR_IN010012UV01" transmission="MCCI_MT000300UV01"
+                            controlact="MCAI_MT700201UV01"
+                            payload=""
+                            querydef=""
+                            resolution="Payload not specified"/>
+         <failedInteraction id="REPC_IN000014UV01" transmission="MCCI_MT000300UV01"
+                            controlact="MCAI_MT700201UV01"
+                            payload=""
+                            querydef=""
+                            resolution="Payload not specified"/>
+         <failedInteraction id="REPC_IN000042UV01" transmission="MCCI_MT000300UV01"
+                            controlact="QUQI_MT120001UV01"
+                            payload="REPC_MT610002UV01"
+                            querydef="REPC_MT610004UV01"
+                            resolution="QBP wants PL">
+            <bindingpair wrapperKind="controlact" wrapperID="QUQI_MT120001UV01"
+                         stubType="Act QueryByParameter "
+                         targetKind="querydef"
+                         targetID="REPC_MT610004UV01"
+                         targetRoot="ParameterList"
+                         note="RIM type (class) at target root is not a child of any of the stub targets."/>
+         </failedInteraction>
+         <failedInteraction id="REPC_IN000046UV01" transmission="MCCI_MT000300UV01"
+                            controlact="MCAI_MT700201UV01"
+                            payload=""
+                            querydef=""
+                            resolution="Payload not specified"/>
+         <failedInteraction id="REPC_IN003930UV01" transmission="MCCI_MT000200UV01"
+                            controlact="MCAI_MT700201UV01"
+                            payload="REPC_MT003000UV01"
+                            querydef=""
+                            resolution="BAD - Wromg Transmission Wrapper??">
+            <bindingpair wrapperKind="transmission" wrapperID="MCCI_MT000200UV01" stubType=""
+                         targetKind="controlact"
+                         targetID="MCAI_MT700201UV01"
+                         targetRoot="ControlAct"
+                         note="Source shell has no declared stubs."/>
+         </failedInteraction>
+      </failedInteractions>
+      <failedBindingPairs>
+         <bindingpair wrapperKind="transmission" wrapperID="MCCI_MT000200UV01" stubType=""
+                      targetKind="controlact"
+                      targetID="MCAI_MT700201UV01"
+                      targetRoot="ControlAct"
+                      note="Source shell has no declared stubs."/>
+         <bindingpair wrapperKind="controlact" wrapperID="MCAI_MT700201UV01" stubType="Act"
+                      targetKind="payload"
+                      targetID="POCG_MT000040UV01"
+                      targetRoot="Observation Observation"
+                      note="RIM type (class) at target root is not a child of any of the stub targets."/>
+         <bindingpair wrapperKind="controlact" wrapperID="MFMI_MT700712UV01"
+                      stubType="Role Act QueryByParameter "
+                      targetKind="querydef"
+                      targetID="QUPC_MT040000UV01"
+                      targetRoot="ParameterList"
+                      note="RIM type (class) at target root is not a child of any of the stub targets."/>
+         <bindingpair wrapperKind="controlact" wrapperID="MFMI_MT700712UV01"
+                      stubType="Role Act QueryByParameter "
+                      targetKind="querydef"
+                      targetID="QUPC_MT040300UV01"
+                      targetRoot="ParameterList"
+                      note="RIM type (class) at target root is not a child of any of the stub targets."/>
+         <bindingpair wrapperKind="controlact" wrapperID="MFMI_MT700712UV01"
+                      stubType="Role Act QueryByParameter "
+                      targetKind="querydef"
+                      targetID="QUPC_MT040100UV01"
+                      targetRoot="ParameterList"
+                      note="RIM type (class) at target root is not a child of any of the stub targets."/>
+         <bindingpair wrapperKind="controlact" wrapperID="QUQI_MT020001UV01" stubType="ParameterList"
+                      targetKind="payload"
+                      targetID="QUMT_MT020010UV01"
+                      targetRoot="QueryByParameter"
+                      note="RIM type (class) at target root is not a child of any of the stub targets."/>
+         <bindingpair wrapperKind="controlact" wrapperID="QUQI_MT120001UV01"
+                      stubType="Act QueryByParameter "
+                      targetKind="querydef"
+                      targetID="REPC_MT610004UV01"
+                      targetRoot="ParameterList"
+                      note="RIM type (class) at target root is not a child of any of the stub targets."/>
+      </failedBindingPairs>
+   </bindingFailures>
+</results>

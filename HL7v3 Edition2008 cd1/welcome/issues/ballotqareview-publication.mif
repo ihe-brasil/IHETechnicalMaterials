@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<publication packageKind="version" name="Edition2008" title="HL7 Edition/Ballot Quality Review" schemaVersion="2.1.1" xmlns:x="http://www.w3.org/1999/xhtml">
+	<packageLocation root="PUB" artifact="VO" realmNamespace="UV" version="Edition2008"/>
+	<header>
+		<renderingInformation application="Manual by gwb" renderingTime="2008-06-11T09:53:01"/>
+		<legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2008"/>
+		<contributor>
+			<role>V3 Publishing Co-Chair</role>
+			<name name="George Beeler" key="Beeler, George"/>
+			<affiliation>Beeler Consulting LLC</affiliation>
+		</contributor>
+		<contributor>
+			<role>V3 Publishing Co-Chair</role>
+			<name name="Dick Harding" key="Harding, Dick"/>
+		</contributor>
+		<contributor>
+			<role>Technical Publications Manager</role>
+			<name name="Don Lloyd" key="Lloyd, Don"/>
+			<affiliation>Health Level Seven, Inc.</affiliation>
+		</contributor>
+	</header>
+	<annotations>
+		<documentation>
+			<otherAnnotation type="introduction" id="rv-intro" name="introduction">
+				<text>
+					<div title="Overview" xmlns="http://www.w3.org/1999/xhtml" hl7Id="introOverview">
+						<p>In early 2006, the V3 Generator became a more integral part of preparing each V3 Publication.  This vehicle draws upon a comprehensive collection of files containing the domain artifacts being processed.  As a consequence the Publishing Committee created an analysis of the cross-references embedded in these files, since the "failure" of any cross-reference represents incomplete linkages in the published content, and, therefore, a publication quality issue.
+</p>
+						<p>The resulting quality review files have been used to guide the creation of each ballot publication, identifying potential problems or places where the "wrong" source file has been provided.  They have also guided the modification of generator processes to correct systematic errors in the content.  These files have been provided to the publishing facilitators in the raw XML form.  This document represents this content in a form that can guide implementers of the standards and the individual Work Groups responsible for creating the content in their efforts to adapt and improve the content</p>
+					</div>
+					<div title="Reference Types Being Checked" xmlns="http://www.w3.org/1999/xhtml" hl7Id="introRefTypes">
+						<p>At present, the principle forms of reference that have been tested are:</p>
+						<ul>
+							<li>
+								<strong>Vocabulary References</strong>
+								<p>Almost half of the attributes used in HL7 static model (message) designs are coded attributes.  Each of these carries a constraint specification that constitutes a reference to an element defined in the HL7 Vocabulary.  In the HL7 "parallel development" environment these references are frequently inserted in model designs before their "target" has been added to the Vocabulary Content.  This portion of the review looks for places where the necessary target is not in the Vocabulary.  These arise for one of two reasons:</p>
+								<ol>
+									<li>The reference may be incorrectly entered.</li>
+									<li>The necessary target has not been defined and approved (through Harmonization) in the Vocabulary.<br/>
+									</li>
+								</ol>
+							</li>
+							<li>
+								<strong>Dynamic Model Bindings (Wrappers)</strong>
+								<p>Within the messaging dynamic model, HL7 static models are assembled into complete communicable models by "wrapping" models within models.  Thus, a transmission wrapper surrounds a control act wrapper that surrounds a payload. These are bindings from "stubs" to their corresponding payload. In the HL7 "parallel development" environment these references are asserted by one Work Group while another Work Group is creating the target.  Thus, it is necessary to check that the referenced target exists and that the "type" of the stub matches the type of the root element being bound to that stub.</p>
+							</li>
+							<li>
+								<strong>CMET References</strong>
+								<p>HL7 static models include a significant amount of "re-use" in the form of Common Model Element Type (CMET) references. In the HL7 "parallel development" environment these references are asserted by one Work Group while another Work Group is creating the target.  Thus, it is necessary to check that the referenced target exists.</p>
+							</li>
+							<li>
+								<strong>Static Model Design-to-Definition References</strong>
+								<p>HL7 static models are designed in a graphic-editor environment (currently the RMIM Designer in Visio), but the relations of these static models to the rest of the "dynamic model" is documented separately in a "publication data base".  This set of reference checks verifies that each static model design being distributed is "defined" in a dynamic model, and, conversely, that there is a static model design for each model defined in a publication data base.</p>
+							</li>
+						</ul>
+					</div>
+				</text>
+				<businessName name="Introduction"/>
+			</otherAnnotation>
+		</documentation>
+	</annotations>
+	<publishedGroup name="vocabRefGroup">
+		<businessName name="Vocabulary Reference Failure Tests">
+			<realmNamespace value="UV"/>
+		</businessName>
+		<precedingText>
+			<div xmlns="http://www.w3.org/1999/xhtml" title="Vocabulary Testing Overview" hl7Id="vr-intro">
+				<div xmlns="http://www.w3.org/1999/xhtml" title="Reference Testing" hl7Id="vr-intro-testing">
+					<p>The following sections list Vocabulary domain specifications for which a reference cannot be found in the current Vocabulary content. Almost half of the attributes used in HL7 static model (message) designs are coded attributes, and each of these requires a constraint specification that constitutes a reference to an element defined in the HL7 Vocabulary. As a consequence, an HL7 NormativeEdition will contain 50,000 to 100,000  (estimate) vocabulary constraint references.  Many of these references are the same. Nevertheless, there are almost 10,000 (measured) unique reference expressions in these designs.</p>
+					<div xmlns="http://www.w3.org/1999/xhtml" title="Sources of Error" hl7Id="vr-intro-sources">
+						<p>In the HL7 "parallel development" environment these references are frequently inserted in model designs before their "target" has been added to the Vocabulary Content.  This portion of the quality review looks for places where the necessary target is not in the Vocabulary.  These arise for one of three reasons:</p>
+						<ol>
+							<li>The reference may be incorrectly entered.</li>
+							<li>The necessary target has not been defined and approved (through Harmonization) in the Vocabulary.<br/>
+							</li>
+							<li>The necessary target has been approved through Harmonization, but has not yet been posted to the Vocabulary content.<br/>
+							</li>
+						</ol>
+						<p>
+							<strong>Note:</strong> For Normative Edition 2006, there are 103 reference errors (just over one per-cent of the unique instances).  Of these, over 1/3 (35) are incorrectly entered, and can be "fixed" by editing the static model design.  The remainder have either not been proposed (majority) or have been approved but not posted.</p>
+					</div>
+					<div xmlns="http://www.w3.org/1999/xhtml" title="Error Analysis" hl7Id="vr-intro-analysis">
+						<p>The current analysis is based on a complete list of all vocabulary constraints cited in static model designs.  These are extracted from the "Visio" output (xml) files or the "hmd" files exported from RoseTree.  The MIF representation for all static model designs is drawn from one of these two sources.  The design process specifies whether the constraint is asserted as:</p>
+						<ul>
+							<li>A Code System constraint, usually with a specific code reference as well. (These are correct representations for constraints of structural attributes.)</li>
+							<li>A Value Set constraint.</li>
+							<li>A Concept Domain constraint.</li>
+						</ul>
+						<p>In matching these constraints, the mapping process takes into consideration the fact that early constraints were <strong>all expressed as domain constraints</strong>, whereas more recent tooling and vocabulary directions have made it easier to constrain directly to value sets or codes.  Thus, any reference to a "domain" for which there is currently no Concept Domain is also tested to see if there is a Value Set of the same name.  If there is, this is treated as a correct reference.</p>
+					</div>
+				</div>
+				<div xmlns="http://www.w3.org/1999/xhtml" title="Vocabulary Reference Correction" hl7Id="vr-intro-correction">
+					<p>In preparing a Normative Edition. an attempt is made to analyze <b>each unique error</b> and recommend a "resolution" for the error.  These resolutions may be specific corrections, such as"Use D:ControlActReason" or a simple "Need Proposal" for cases where no appropriate target can be identified in the current vocabulary content. As noted above, over a third of the errors represented invalid expressions for which a correct target could be identified.  In selected cases (a total of about 50 static model designs), these corrections were made as a "technical correction" to the Normative Edition content before publications.  The requirements for making such a technical correction were:</p>
+					<ol>
+						<li>
+							<strong>All</strong> of the vocabulary reference errors for that design must be correctable with simple editing of the reference expression</li>
+						<li>The static model design must have been presented as "design xml" file from Visio, rather than having been processed through the design repository into an "hmd" file. (In this case, one can be sure that other design elements of the model were not affected by the correction.).<br/>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</precedingText>
+		<publishedItem name="vocRefErrors">
+			<businessName name="Vocabulary Reference Errors">
+				<realmNamespace value="UV"/>
+			</businessName>
+			<precedingText>
+				<p xmlns="http://www.w3.org/1999/xhtml">The invalid vocabulary constraint references are divided into one of four tables depending upon the type of error.  The columns for the tables are:</p>
+				<ul xmlns="http://www.w3.org/1999/xhtml">
+					<li>For <b> invalid Code System references</b>
+						<ol>
+							<li>Invalid Code System name</li>
+							<li>Code reference (if any)</li>
+							<li>RIM <i>Class.attribute</i> being constrained</li>
+							<li>Identifier of first design with this error</li>
+							<li>List of content domains in which this error occurs</li>
+							<li>Total number of designs with this error</li>
+							<li>Guidance, if available, on how to resolve the error.</li>
+						</ol>
+					</li>
+					<li>For <b>invalid Code references</b> within a valid Code System
+						<ol>
+							<li>Code System name (correct)</li>
+							<li>Invalid Code reference</li>
+							<li>RIM <i>Class.attribute</i> being constrained</li>
+							<li>Identifier of first design with this error</li>
+							<li>List of content domains in which this error occurs</li>
+							<li>Total number of designs with this error</li>
+							<li>Guidance, if available, on how to resolve the error.</li>
+						</ol>
+					</li>
+					<li>For <b>invalid Value Set references</b>
+						<ol>
+							<li>Invalid Value Set name</li>
+							<li>RIM <i>Class.attribute</i> being constrained</li>
+							<li>Identifier of first design with this error</li>
+							<li>List of content domains in which this error occurs</li>
+							<li>Total number of designs with this error</li>
+							<li>Guidance, if available, on how to resolve the error.</li>
+						</ol>
+					</li>
+					<li>For <b>invalid Concept Domain references</b>
+						<ol>
+							<li>Invalid Concept Domain name</li>
+							<li>RIM <i>Class.attribute</i> being constrained</li>
+							<li>Identifier of first design with this error</li>
+							<li>List of content domains in which this error occurs</li>
+							<li>Total number of designs with this error</li>
+							<li>Guidance, if available, on how to resolve the error.</li>
+						</ol>
+					</li>
+				</ul>
+			</precedingText>
+			<itemReference root="PUB" name="vocRefs" releaseDate="2008-06-11"/>
+		</publishedItem>
+		<publishedItem name="errantStaticModels">
+			<businessName name="Static Models with Vocabulary Reference Errors">
+				<realmNamespace value="UV"/>
+			</businessName>
+			<precedingText>
+				<p xmlns="http://www.w3.org/1999/xhtml">The previous listing showed the existing unique vocabulary reference errors and, if available, possible solutions.  The following table lists all of the defined static models that have erroneous vocabulary references, along with the specific errors and, if available, their resolution.  There are <strong>no new errors</strong> introduced in this table, rather it represents formulation that will facilitate repairing the flawed static models. The columns in the following table are:</p>
+				<ol xmlns="http://www.w3.org/1999/xhtml">
+					<li>The identifier of flawed static model.  This entry appears <strong>only in the "header" row</strong> for the sub-table that holds the flawed references </li>
+					<li>The Name of the Code System, Concept Domain or Value Set that was referenced.  This name is prefaced with "C:", "D:", or "V:" to indicate which kind of reference was being made. If the name listed here is erroneous, it will be displayed in <strong>bold face</strong> type.</li>
+					<li>The Code being referenced within a Code System (if any).  If the code reference is erroneous, it will be displayed in <strong>bold face</strong> type. If the error is that the code value is empty, this column will show <strong>
+							<i>--blank--</i>
+						</strong>.</li>
+					<li>RIM <strong>
+							<i>Class.attribute</i>
+						</strong> being constrained</li>
+					<li>Guidance, if available, on how to resolve the error.</li>
+				</ol>
+			</precedingText>
+			<itemReference root="PUB" name="staticModelVocRefs" releaseDate="2008-06-11"/>
+		</publishedItem>
+	</publishedGroup>
+	<publishedGroup name="bindingRefGroup">
+		<businessName name="Dynamic Model Binding Reference Failures">
+			<realmNamespace value="UV"/>
+		</businessName>
+		<precedingText>
+			<div xmlns="http://www.w3.org/1999/xhtml" title="Binding Reference Analysis" hl7Id="br-Intro">
+				<p>The following sections list message-to-message binding specifications from the dynamic models (interactions) in this package for which a target cannot be found in the current package content.</p>
+				<p>As defined in the interaction specifications of the dynamic model, HL7 static models are assembled into complete communicable models by &quot;wrapping&quot; models within models.  Thus, a transmission wrapper surrounds a control act wrapper that surrounds a payload. These are bindings from &quot;stubs&quot; to their corresponding payload. In the HL7 &quot;parallel development&quot; environment these references are asserted by one Work Group while another Work Group is creating the target.  Thus, it is necessary to check that the referenced target exists.</p>
+				<p>The incomplete bindings are presented in three categories, in declining order of severity.</p>
+				<ol>
+					<li>Complete interactions from a domain but where the binding fails owing to a mismatch between the &quot;stub&quot; type of the wrapper, and the root element type of the target</li>
+					<li>Interactions that lack a pay-load, but that are probably &quot;OK&quot;.  Check documentation of interaction,</li>
+					<li>Incomplete interactions that lack either or both of a Transmission wrapper or ControlAct wrapper and that were probably created to illustrate a story board</li>
+				</ol>
+			</div>
+		</precedingText>
+		<publishedItem name="failedInteractions">
+			<businessName name="Interaction Binding Reference Failures">
+				<realmNamespace value="UV"/>
+			</businessName>
+			<precedingText>
+				<div xmlns="http://www.w3.org/1999/xhtml" title="Failed Binding of &quot;Complete&quot; Interactions" hl7Id="br-failed">
+					<p>The is table lists complete interactions from a domain, where the binding fails owing to a mismatch between the &quot;stub&quot; type of the wrapper, and the root element type of the target.</p>
+				</div>
+			</precedingText>
+			<itemReference root="PUB" name="failedInts" releaseDate="2008-06-11"/>
+		</publishedItem>
+		<publishedItem name="warningInteractions">
+			<businessName name="Interaction Binding Reference Warnings">
+				<realmNamespace value="UV"/>
+			</businessName>
+			<precedingText>
+				<div xmlns="http://www.w3.org/1999/xhtml" title="Warning on Interactions Without Payload" hl7Id="br-warned">
+					<p>The is table lists interactions from a domain that lack a pay-load, but that are probably &quot;OK&quot;.  Check documentation of interaction,</p>
+				</div>
+			</precedingText>
+			<itemReference root="PUB" name="warnedInts" releaseDate="2008-06-11"/>
+		</publishedItem>
+		<publishedItem name="exampleInteractions">
+			<businessName name="Example Interactions with Incomplete Bindings">
+				<realmNamespace value="UV"/>
+			</businessName>
+			<precedingText>
+				<div xmlns="http://www.w3.org/1999/xhtml" title="Incomplete Example Interactions" hl7Id="br-example">
+					<p>This table lists incomplete interactions that lack either or both of a Transmission wrapper or ControlAct wrapper.  Almost all of these are from &quot;infrastructure&quot; domains and were created to illustrate a story board.</p>
+				</div>
+			</precedingText>
+			<itemReference root="PUB" name="exampleInts" releaseDate="2008-06-11"/>
+		</publishedItem>
+	</publishedGroup>
+	<publishedGroup name="cmetRefGroup">
+		<businessName name="CMET Reference Failures">
+			<realmNamespace value="UV"/>
+		</businessName>
+		<precedingText>
+			<div xmlns="http://www.w3.org/1999/xhtml" title="CMET Reference List" hl7Id="cr-Intro">
+				<p>The following section lists CMET references for which a target cannot be found in the current ballot content. HL7 static models include a significant amount of "re-use" in the form of Common Model Element Type (CMET) references. In the HL7 "parallel development" environment these references are asserted by one Work Group while another Work Group is creating the target.  Thus, it is necessary to check that the referenced target exists.</p>
+				<p>In the case of CMETs, there are three different sources that should agree.  Specifically:</p>
+				<ol>
+					<li>Every CMET should be listed in the "CMETinfo" file that defines the package of reusable artifacts from which designers can draw.</li>
+					<li>Each CMET must have a valid static model design, in order that its schema may be defined and linked to the schemas that refers to it.</li>
+					<li>Each CMET must be defined in the context of a publication database.</li>
+				</ol>
+				<p>The CMET reference checking looks at these three sources seeking to determine that each CMET is listed in all three places, and, further, that each design that references a CMET points to one of these documented designs.  The listings below show instances where a CMET is missing from one or more of these places.  (NOTE: There is no test that confirms whether or not a CMET is actually referenced or used within another static model.)</p>
+			</div>
+		</precedingText>
+		<publishedItem name="cr-item1">
+			<businessName name="Incomplete Specification of Listed CMETs">
+				<realmNamespace value="UV"/>
+			</businessName>
+			<precedingText>
+				<div xmlns="http://www.w3.org/1999/xhtml" title="CMET Reference List" hl7Id="cr-listErrs">
+					<p>This report summarizes those CMETs that are listed in CMETinfo, but for which there is incomplete specification (design or definition) or where the version numbers of the listing, design and definition do not match.</p>
+				</div>
+			</precedingText>
+			<itemReference root="PUB" name="cmetSpecErrors" releaseDate="2008-06-11"/>
+		</publishedItem>
+		<publishedItem name="cr-item2">
+			<businessName name="Incomplete Listing of Referenced CMETs">
+				<realmNamespace value="UV"/>
+			</businessName>
+			<precedingText>
+				<div xmlns="http://www.w3.org/1999/xhtml" title="CMET List Omissions" hl7Id="cr-listOmissions">
+					<p>This report summarizes those CMETs that are referred to in another static model, but for which there is no listing in CMETinfo.  This listing includes a flag as to whether a static model for the referenced exists.</p>
+				</div>
+			</precedingText>
+			<itemReference root="PUB" name="cmetListErrors" releaseDate="2008-06-11"/>
+		</publishedItem>
+	</publishedGroup>
+	<publishedGroup name="staticDesignDefnLinks">
+		<businessName name="Static Model Design-to-Definition Reference Failures">
+			<realmNamespace value="UV"/>
+		</businessName>
+		<precedingText>
+			<div xmlns="http://www.w3.org/1999/xhtml" title="Design-to-Definition Reference List" hl7Id="sr-Intro">
+				<p> The following section lists circumstances in which the package content shows a mismatch between a static model design and a corresponding reference definition (from a Publication Database).  There are three variants of his mismatch</p>
+				<ol>
+					<li>A static model design exists (as part of a "Visio xml" or "hmd" file), but there is no equivalent definition in from a publication data base</li>
+					<li>A definition is provided in a publication data base for which there is no corresponding static model design as part of a "Visio xml" or "hmd" file</li>
+					<li>There is both a static model design and a definition whose base identifiers are the same (such as "REAL_MT987123UV") but where the version number (final two digits) do not match.</li>
+				</ol>
+			</div>
+		</precedingText>
+		<publishedItem name="stref-item1">
+			<businessName name="Missing or Mismatched Static Model Designs">
+				<realmNamespace value="UV"/>
+			</businessName>
+			<precedingText>
+				<div xmlns="http://www.w3.org/1999/xhtml" title="Missing Static Models" hl7Id="sr-missingStatic">
+					<p>This report summarizes those cases where a definition in a publication data base does not have a matching static model design, either because the static model is missing entirely, or because the static model has a different version.</p>
+				</div>
+			</precedingText>
+			<itemReference root="PUB" name="missingStatic" releaseDate="2008-06-11"/>
+		</publishedItem>
+		<publishedItem name="stref-item2">
+			<businessName name="Missing Definition for Static Model">
+				<realmNamespace value="UV"/>
+			</businessName>
+			<precedingText>
+				<div xmlns="http://www.w3.org/1999/xhtml" title="Missing Definition" hl7Id="sr-missingDefn">
+					<p>This report summarizes those cases there is no definition in a publication data base for an existing static model design.</p>
+				</div>
+			</precedingText>
+			<itemReference root="PUB" name="missingDefn" releaseDate="2008-06-11"/>
+		</publishedItem>
+	</publishedGroup>
+	<publishedItem name="errorSummary">
+		<businessName name="Summary of Raw Reference Errors Data">
+			<realmNamespace value="UV"/>
+		</businessName>
+		<precedingText>
+			<div xmlns="http://www.w3.org/1999/xhtml" title="Summary Table" hl7Id="raw-Intro">
+				<p> 
+The following is a summary report for this package that appears in the console output stream of the V3 Generator.</p>
+			</div>
+		</precedingText>
+		<itemReference root="PUB" name="rawContent" releaseDate="2008-06-11"/>
+	</publishedItem>
+</publication>

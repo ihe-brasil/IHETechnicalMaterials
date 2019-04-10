@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="uri:hl7.org::template" targetNamespace="uri:hl7.org::template"
+      elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:sch="http://www.ascc.net/xml/schematron">
+  <xsd:complexType name="Artefact">
+    <xsd:sequence>
+      <xsd:element name="constraint" type="Constraint" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+    <xsd:attribute name="name" type="xsd:string" use="required" />
+  </xsd:complexType>
+  <xsd:complexType name="Constraint">
+    <xsd:attribute name="name" type="xsd:string" use="optional" />
+    <xsd:attribute name="source" type="xsd:string" use="required" />
+    <xsd:attribute name="language" type="ConstraintLanguage" use="required" />
+  </xsd:complexType>
+  <xsd:simpleType name="ConstraintLanguage">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="OCL" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="ClassArtefact">
+    <xsd:complexContent>
+      <xsd:extension base="Artefact">
+        <xsd:sequence>
+          <xsd:element name="feature" type="Feature" minOccurs="0" maxOccurs="unbounded" />
+        </xsd:sequence>
+        <xsd:attribute name="category" type="RimClassCategory" use="required" />
+        <xsd:attribute name="sourceModel" type="xsd:string" use="required" />
+        <xsd:attribute name="id" type="xsd:ID" use="required" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="RimClassCategory">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="ENTITY" />
+      <xsd:enumeration value="ROLE" />
+      <xsd:enumeration value="ROLE_LINK" />
+      <xsd:enumeration value="PARTICIPATION" />
+      <xsd:enumeration value="ACT_RELATIONSHIP" />
+      <xsd:enumeration value="ACT" />
+      <xsd:enumeration value="DOCUMENT" />
+      <xsd:enumeration value="INFRASTRUCTURE" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="Feature">
+    <xsd:complexContent>
+      <xsd:extension base="Artefact">
+        <xsd:attribute name="conformance" type="Conformance" use="optional" />
+        <xsd:attribute name="mandatory" type="xsd:boolean" use="required" />
+        <xsd:attribute name="min" type="xsd:int" use="required" />
+        <xsd:attribute name="max" type="xsd:int" use="required" />
+        <xsd:attribute name="updateModes" type="set_UpdateMode" use="optional" />
+        <xsd:attribute name="extensibilityNamespace" type="xsd:string" use="optional" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="Conformance">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="R" />
+      <xsd:enumeration value="NP" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="UpdateMode">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="A" />
+      <xsd:enumeration value="D" />
+      <xsd:enumeration value="R" />
+      <xsd:enumeration value="AR" />
+      <xsd:enumeration value="N" />
+      <xsd:enumeration value="U" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="set_UpdateMode">
+    <xsd:list itemType="UpdateMode" />
+  </xsd:simpleType>
+  <xsd:complexType name="Attribute">
+    <xsd:complexContent>
+      <xsd:extension base="Feature">
+        <xsd:sequence>
+          <xsd:element name="possibleValue" type="xsd:string" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element name="vocabulary" type="VocabularyConstraints" minOccurs="0" maxOccurs="1" />
+        </xsd:sequence>
+        <xsd:attribute name="datatype" type="xsd:string" use="required" />
+        <xsd:attribute name="flavor" type="xsd:string" use="optional" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="VocabularyConstraints">
+    <xsd:attribute name="extensions" type="xsd:boolean" use="required" />
+    <xsd:attribute name="domain" type="xsd:string" use="optional" />
+    <xsd:attribute name="valueSet" type="xsd:string" use="optional" />
+    <xsd:attribute name="code" type="xsd:string" use="optional" />
+  </xsd:complexType>
+  <xsd:complexType name="Association">
+    <xsd:complexContent>
+      <xsd:extension base="Feature">
+        <xsd:sequence>
+          <xsd:choice>
+            <xsd:element name="targetReference" type="XReference" />
+            <xsd:element name="target" type="ClassArtefact" />
+          </xsd:choice>
+        </xsd:sequence>
+        <xsd:attribute name="rimName" type="xsd:string" use="required" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="XReference">
+    <xsd:attribute name="xref" type="xsd:IDREF" use="required" />
+  </xsd:complexType>
+  <xsd:complexType name="CloneClass">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <sch:pattern name="abstract">
+          <sch:rule abstract="true" id="CloneClass-0">
+            <sch:assert test="(@abstract=&#34;true&#34;) or not choices" />
+          </sch:rule>
+        </sch:pattern>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ClassArtefact">
+        <xsd:sequence>
+          <xsd:element name="choice" type="CloneClass" minOccurs="0" maxOccurs="unbounded" />
+        </xsd:sequence>
+        <xsd:attribute name="abstract" type="xsd:boolean" use="required" />
+        <xsd:attribute name="typeName" type="xsd:string" use="required" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="RimClass">
+    <xsd:complexContent>
+      <xsd:extension base="ClassArtefact">
+        <xsd:sequence>
+          <xsd:element name="super" type="XReference" />
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:ID" use="required" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="RIM">
+    <xsd:sequence>
+      <xsd:element name="class" type="RimClass" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+    <xsd:attribute name="version" type="xsd:string" use="required" />
+  </xsd:complexType>
+  <xsd:complexType name="Template">
+    <xsd:complexContent>
+      <xsd:extension base="TemplateMetadata">
+        <xsd:sequence>
+          <xsd:element name="model" type="CloneClass" />
+          <xsd:element name="rim" type="RIM" />
+          <xsd:element name="attachment" type="Attachment" minOccurs="0" maxOccurs="unbounded" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="TemplateMetadata">
+    <xsd:sequence>
+      <xsd:element name="id" type="Identifier" minOccurs="1" maxOccurs="1" />
+      <xsd:element name="derivationModel" type="Identifier" minOccurs="1" maxOccurs="1" />
+      <xsd:element name="referenceModelId" type="Identifier" minOccurs="1" maxOccurs="1" />
+      <xsd:element name="publisher" type="NameAndContact" minOccurs="0" maxOccurs="1" />
+      <xsd:element name="revision" type="Revision" minOccurs="1" maxOccurs="unbounded" />
+      <xsd:element name="supercededBy" type="Identifier" minOccurs="0" maxOccurs="1" />
+    </xsd:sequence>
+    <xsd:attribute name="name" type="xsd:string" use="required" />
+    <xsd:attribute name="intention" type="xsd:string" use="required" />
+    <xsd:attribute name="version" type="xsd:string" use="required" />
+    <xsd:attribute name="repositoryURL" type="xsd:anyURI" use="optional" />
+    <xsd:attribute name="format" type="xsd:string" fixed="HL7.Template.V1" use="required" />
+    <xsd:attribute name="descriptionLanguage" type="set_string" use="required" />
+    <xsd:attribute name="description" type="xsd:string" use="required" />
+    <xsd:attribute name="detailedDescription" type="xsd:string" use="optional" />
+    <xsd:attribute name="evidenceSource" type="xsd:anyURI" use="optional" />
+    <xsd:attribute name="cautionPoints" type="xsd:string" use="optional" />
+    <xsd:attribute name="publicationStatus" type="PublicationStatus" use="required" />
+    <xsd:attribute name="publicationStatusChangeDate" type="xsd:dateTime" use="required" />
+    <xsd:attribute name="effectiveDate" type="xsd:dateTime" use="optional" />
+  </xsd:complexType>
+  <xsd:complexType name="Identifier">
+    <xsd:attribute name="root" type="xsd:string" use="required" />
+    <xsd:attribute name="extension" type="xsd:string" use="optional" />
+  </xsd:complexType>
+  <xsd:simpleType name="URL">
+    <xsd:restriction base="xsd:anyURI" />
+  </xsd:simpleType>
+  <xsd:simpleType name="set_string">
+    <xsd:list itemType="xsd:string" />
+  </xsd:simpleType>
+  <xsd:simpleType name="PublicationStatus">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="DRAFT" />
+      <xsd:enumeration value="NOT_FOR_USE" />
+      <xsd:enumeration value="PRODUCTION" />
+      <xsd:enumeration value="WITHDRAWN" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="NameAndContact">
+    <xsd:sequence>
+      <xsd:element name="address" type="xsd:string" minOccurs="0" maxOccurs="1" />
+      <xsd:element name="id" type="Identifier" minOccurs="0" maxOccurs="1" />
+    </xsd:sequence>
+    <xsd:attribute name="name" type="xsd:string" use="required" />
+    <xsd:attribute name="email" type="xsd:string" use="optional" />
+  </xsd:complexType>
+  <xsd:complexType name="Revision">
+    <xsd:sequence>
+      <xsd:element name="author" type="NameAndContact" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+    <xsd:attribute name="comment" type="xsd:string" use="required" />
+    <xsd:attribute name="date" type="xsd:dateTime" use="required" />
+  </xsd:complexType>
+  <xsd:complexType name="Attachment">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <sch:pattern name="content">
+          <sch:rule abstract="true" id="Attachment-0">
+            <sch:assert test="content or @reference" />
+          </sch:rule>
+        </sch:pattern>
+        <sch:pattern name="mediatype">
+          <sch:rule abstract="true" id="Attachment-1">
+            <sch:assert test="not(content) or (content and @mediatype)" />
+          </sch:rule>
+        </sch:pattern>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="content" type="xsd:base64Binary" minOccurs="0" maxOccurs="1" />
+    </xsd:sequence>
+    <xsd:attribute name="type" type="AttachmentType" use="required" />
+    <xsd:attribute name="mediatype" type="xsd:string" use="optional" />
+    <xsd:attribute name="reference" type="xsd:anyURI" use="optional" />
+  </xsd:complexType>
+  <xsd:simpleType name="AttachmentType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="STATIC_MODEL" />
+      <xsd:enumeration value="STATIC_MODEL_IMAGE" />
+      <xsd:enumeration value="SCHEMATRON" />
+      <xsd:enumeration value="SCHEMA" />
+      <xsd:enumeration value="ADL" />
+      <xsd:enumeration value="DOCUMENTATION" />
+      <xsd:enumeration value="ENDORSEMENT" />
+      <xsd:enumeration value="EXAMPLE" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="Template" type="Template" />
+</xsd:schema>

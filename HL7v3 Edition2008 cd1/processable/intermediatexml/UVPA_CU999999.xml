@@ -1,0 +1,2055 @@
+<usage><!--Have 341 CMET usage sets for PRPA and UV--><cmetuse role="uses">
+      <hmdref ref="PRPA_HD101301UV02-hmd" refname="Person Activate"
+              refidentifier="PRPA_HD101301UV02"/>
+      <cmetref ref="COCT_MT030207UV-msg" refname="E_PersonInformational"
+               refidentifier="COCT_MT030207UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101301UV02-hmd" refname="Person Activate"
+              refidentifier="PRPA_HD101301UV02"/>
+      <cmetref ref="COCT_MT150002UV01-msg" refname="E_OrganizationIdentified-confirmable"
+               refidentifier="COCT_MT150002UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101301UV02-hmd" refname="Person Activate"
+              refidentifier="PRPA_HD101301UV02"/>
+      <cmetref ref="COCT_MT150003UV03-msg" refname="E_OrganizationContact"
+               refidentifier="COCT_MT150003UV03"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101301UV02-hmd" refname="Person Activate"
+              refidentifier="PRPA_HD101301UV02"/>
+      <cmetref ref="COCT_MT150007UV-msg" refname="E_OrganizationInformational"
+               refidentifier="COCT_MT150007UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101301UV02-hmd" refname="Person Activate"
+              refidentifier="PRPA_HD101301UV02"/>
+      <cmetref ref="COCT_MT710007UV-msg" refname="E_PlaceInformational"
+               refidentifier="COCT_MT710007UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101301UV02-hmd" refname="Person Activate"
+              refidentifier="PRPA_HD101301UV02"/>
+      <cmetref ref="COCT_MT960000UV05-msg" refname="A_SpatialCoordinateUniversal"
+               refidentifier="COCT_MT960000UV05"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101302UV02-hmd" refname="Person Revise"
+              refidentifier="PRPA_HD101302UV02"/>
+      <cmetref ref="COCT_MT030207UV-msg" refname="E_PersonInformational"
+               refidentifier="COCT_MT030207UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101302UV02-hmd" refname="Person Revise"
+              refidentifier="PRPA_HD101302UV02"/>
+      <cmetref ref="COCT_MT150002UV01-msg" refname="E_OrganizationIdentified-confirmable"
+               refidentifier="COCT_MT150002UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101302UV02-hmd" refname="Person Revise"
+              refidentifier="PRPA_HD101302UV02"/>
+      <cmetref ref="COCT_MT150003UV03-msg" refname="E_OrganizationContact"
+               refidentifier="COCT_MT150003UV03"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101302UV02-hmd" refname="Person Revise"
+              refidentifier="PRPA_HD101302UV02"/>
+      <cmetref ref="COCT_MT150007UV-msg" refname="E_OrganizationInformational"
+               refidentifier="COCT_MT150007UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101302UV02-hmd" refname="Person Revise"
+              refidentifier="PRPA_HD101302UV02"/>
+      <cmetref ref="COCT_MT710007UV-msg" refname="E_PlaceInformational"
+               refidentifier="COCT_MT710007UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101302UV02-hmd" refname="Person Revise"
+              refidentifier="PRPA_HD101302UV02"/>
+      <cmetref ref="COCT_MT960000UV05-msg" refname="A_SpatialCoordinateUniversal"
+               refidentifier="COCT_MT960000UV05"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101303UV02-hmd" refname="Person Demographics"
+              refidentifier="PRPA_HD101303UV02"/>
+      <cmetref ref="COCT_MT030207UV-msg" refname="E_PersonInformational"
+               refidentifier="COCT_MT030207UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101303UV02-hmd" refname="Person Demographics"
+              refidentifier="PRPA_HD101303UV02"/>
+      <cmetref ref="COCT_MT150002UV01-msg" refname="E_OrganizationIdentified-confirmable"
+               refidentifier="COCT_MT150002UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101303UV02-hmd" refname="Person Demographics"
+              refidentifier="PRPA_HD101303UV02"/>
+      <cmetref ref="COCT_MT150003UV03-msg" refname="E_OrganizationContact"
+               refidentifier="COCT_MT150003UV03"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101303UV02-hmd" refname="Person Demographics"
+              refidentifier="PRPA_HD101303UV02"/>
+      <cmetref ref="COCT_MT150007UV-msg" refname="E_OrganizationInformational"
+               refidentifier="COCT_MT150007UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101303UV02-hmd" refname="Person Demographics"
+              refidentifier="PRPA_HD101303UV02"/>
+      <cmetref ref="COCT_MT710007UV-msg" refname="E_PlaceInformational"
+               refidentifier="COCT_MT710007UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101303UV02-hmd" refname="Person Demographics"
+              refidentifier="PRPA_HD101303UV02"/>
+      <cmetref ref="COCT_MT960000UV05-msg" refname="A_SpatialCoordinateUniversal"
+               refidentifier="COCT_MT960000UV05"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101304UV02-hmd" refname="Person Identifiers"
+              refidentifier="PRPA_HD101304UV02"/>
+      <cmetref ref="COCT_MT150002UV01-msg" refname="E_OrganizationIdentified-confirmable"
+               refidentifier="COCT_MT150002UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101304UV02-hmd" refname="Person Identifiers"
+              refidentifier="PRPA_HD101304UV02"/>
+      <cmetref ref="COCT_MT150003UV03-msg" refname="E_OrganizationContact"
+               refidentifier="COCT_MT150003UV03"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101304UV02-hmd" refname="Person Identifiers"
+              refidentifier="PRPA_HD101304UV02"/>
+      <cmetref ref="COCT_MT150007UV-msg" refname="E_OrganizationInformational"
+               refidentifier="COCT_MT150007UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101305UV02-hmd" refname="Person Nullify"
+              refidentifier="PRPA_HD101305UV02"/>
+      <cmetref ref="COCT_MT150003UV03-msg" refname="E_OrganizationContact"
+               refidentifier="COCT_MT150003UV03"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101305UV02-hmd" refname="Person Nullify"
+              refidentifier="PRPA_HD101305UV02"/>
+      <cmetref ref="COCT_MT710007UV-msg" refname="E_PlaceInformational"
+               refidentifier="COCT_MT710007UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101305UV02-hmd" refname="Person Nullify"
+              refidentifier="PRPA_HD101305UV02"/>
+      <cmetref ref="COCT_MT960000UV05-msg" refname="A_SpatialCoordinateUniversal"
+               refidentifier="COCT_MT960000UV05"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101310UV02-hmd" refname="Person Registry Find Candidates Response"
+              refidentifier="PRPA_HD101310UV02"/>
+      <cmetref ref="COCT_MT030207UV-msg" refname="E_PersonInformational"
+               refidentifier="COCT_MT030207UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101310UV02-hmd" refname="Person Registry Find Candidates Response"
+              refidentifier="PRPA_HD101310UV02"/>
+      <cmetref ref="COCT_MT150002UV01-msg" refname="E_OrganizationIdentified-confirmable"
+               refidentifier="COCT_MT150002UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101310UV02-hmd" refname="Person Registry Find Candidates Response"
+              refidentifier="PRPA_HD101310UV02"/>
+      <cmetref ref="COCT_MT150003UV03-msg" refname="E_OrganizationContact"
+               refidentifier="COCT_MT150003UV03"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101310UV02-hmd" refname="Person Registry Find Candidates Response"
+              refidentifier="PRPA_HD101310UV02"/>
+      <cmetref ref="COCT_MT150007UV-msg" refname="E_OrganizationInformational"
+               refidentifier="COCT_MT150007UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101310UV02-hmd" refname="Person Registry Find Candidates Response"
+              refidentifier="PRPA_HD101310UV02"/>
+      <cmetref ref="COCT_MT710007UV-msg" refname="E_PlaceInformational"
+               refidentifier="COCT_MT710007UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD101310UV02-hmd" refname="Person Registry Find Candidates Response"
+              refidentifier="PRPA_HD101310UV02"/>
+      <cmetref ref="COCT_MT960000UV05-msg" refname="A_SpatialCoordinateUniversal"
+               refidentifier="COCT_MT960000UV05"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201301UV02-hmd" refname="Patient Activate"
+              refidentifier="PRPA_HD201301UV02"/>
+      <cmetref ref="COCT_MT030007UV-msg" refname="E_LivingSubjectInformational"
+               refidentifier="COCT_MT030007UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201301UV02-hmd" refname="Patient Activate"
+              refidentifier="PRPA_HD201301UV02"/>
+      <cmetref ref="COCT_MT030207UV-msg" refname="E_PersonInformational"
+               refidentifier="COCT_MT030207UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201301UV02-hmd" refname="Patient Activate"
+              refidentifier="PRPA_HD201301UV02"/>
+      <cmetref ref="COCT_MT150002UV01-msg" refname="E_OrganizationIdentified-confirmable"
+               refidentifier="COCT_MT150002UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201301UV02-hmd" refname="Patient Activate"
+              refidentifier="PRPA_HD201301UV02"/>
+      <cmetref ref="COCT_MT150003UV03-msg" refname="E_OrganizationContact"
+               refidentifier="COCT_MT150003UV03"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201301UV02-hmd" refname="Patient Activate"
+              refidentifier="PRPA_HD201301UV02"/>
+      <cmetref ref="COCT_MT150007UV-msg" refname="E_OrganizationInformational"
+               refidentifier="COCT_MT150007UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201301UV02-hmd" refname="Patient Activate"
+              refidentifier="PRPA_HD201301UV02"/>
+      <cmetref ref="COCT_MT180000UV04-msg" refname="A_CoverageUniversal"
+               refidentifier="COCT_MT180000UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201301UV02-hmd" refname="Patient Activate"
+              refidentifier="PRPA_HD201301UV02"/>
+      <cmetref ref="COCT_MT670000UV04-msg" refname="R_GuarantorUniversal"
+               refidentifier="COCT_MT670000UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201301UV02-hmd" refname="Patient Activate"
+              refidentifier="PRPA_HD201301UV02"/>
+      <cmetref ref="COCT_MT710007UV-msg" refname="E_PlaceInformational"
+               refidentifier="COCT_MT710007UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201301UV02-hmd" refname="Patient Activate"
+              refidentifier="PRPA_HD201301UV02"/>
+      <cmetref ref="COCT_MT820000UV-msg" refname="A_PrincipalCareProvisionUniversal"
+               refidentifier="COCT_MT820000UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201301UV02-hmd" refname="Patient Activate"
+              refidentifier="PRPA_HD201301UV02"/>
+      <cmetref ref="COCT_MT960000UV05-msg" refname="A_SpatialCoordinateUniversal"
+               refidentifier="COCT_MT960000UV05"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201302UV02-hmd" refname="Patient Revise"
+              refidentifier="PRPA_HD201302UV02"/>
+      <cmetref ref="COCT_MT030007UV-msg" refname="E_LivingSubjectInformational"
+               refidentifier="COCT_MT030007UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201302UV02-hmd" refname="Patient Revise"
+              refidentifier="PRPA_HD201302UV02"/>
+      <cmetref ref="COCT_MT030207UV-msg" refname="E_PersonInformational"
+               refidentifier="COCT_MT030207UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201302UV02-hmd" refname="Patient Revise"
+              refidentifier="PRPA_HD201302UV02"/>
+      <cmetref ref="COCT_MT150002UV01-msg" refname="E_OrganizationIdentified-confirmable"
+               refidentifier="COCT_MT150002UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201302UV02-hmd" refname="Patient Revise"
+              refidentifier="PRPA_HD201302UV02"/>
+      <cmetref ref="COCT_MT150003UV03-msg" refname="E_OrganizationContact"
+               refidentifier="COCT_MT150003UV03"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201302UV02-hmd" refname="Patient Revise"
+              refidentifier="PRPA_HD201302UV02"/>
+      <cmetref ref="COCT_MT150007UV-msg" refname="E_OrganizationInformational"
+               refidentifier="COCT_MT150007UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201302UV02-hmd" refname="Patient Revise"
+              refidentifier="PRPA_HD201302UV02"/>
+      <cmetref ref="COCT_MT180000UV04-msg" refname="A_CoverageUniversal"
+               refidentifier="COCT_MT180000UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201302UV02-hmd" refname="Patient Revise"
+              refidentifier="PRPA_HD201302UV02"/>
+      <cmetref ref="COCT_MT670000UV04-msg" refname="R_GuarantorUniversal"
+               refidentifier="COCT_MT670000UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201302UV02-hmd" refname="Patient Revise"
+              refidentifier="PRPA_HD201302UV02"/>
+      <cmetref ref="COCT_MT710007UV-msg" refname="E_PlaceInformational"
+               refidentifier="COCT_MT710007UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201302UV02-hmd" refname="Patient Revise"
+              refidentifier="PRPA_HD201302UV02"/>
+      <cmetref ref="COCT_MT820000UV-msg" refname="A_PrincipalCareProvisionUniversal"
+               refidentifier="COCT_MT820000UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201302UV02-hmd" refname="Patient Revise"
+              refidentifier="PRPA_HD201302UV02"/>
+      <cmetref ref="COCT_MT960000UV05-msg" refname="A_SpatialCoordinateUniversal"
+               refidentifier="COCT_MT960000UV05"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201303UV02-hmd" refname="Patient Demographics"
+              refidentifier="PRPA_HD201303UV02"/>
+      <cmetref ref="COCT_MT030007UV-msg" refname="E_LivingSubjectInformational"
+               refidentifier="COCT_MT030007UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201303UV02-hmd" refname="Patient Demographics"
+              refidentifier="PRPA_HD201303UV02"/>
+      <cmetref ref="COCT_MT030207UV-msg" refname="E_PersonInformational"
+               refidentifier="COCT_MT030207UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201303UV02-hmd" refname="Patient Demographics"
+              refidentifier="PRPA_HD201303UV02"/>
+      <cmetref ref="COCT_MT150002UV01-msg" refname="E_OrganizationIdentified-confirmable"
+               refidentifier="COCT_MT150002UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201303UV02-hmd" refname="Patient Demographics"
+              refidentifier="PRPA_HD201303UV02"/>
+      <cmetref ref="COCT_MT150003UV03-msg" refname="E_OrganizationContact"
+               refidentifier="COCT_MT150003UV03"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201303UV02-hmd" refname="Patient Demographics"
+              refidentifier="PRPA_HD201303UV02"/>
+      <cmetref ref="COCT_MT150007UV-msg" refname="E_OrganizationInformational"
+               refidentifier="COCT_MT150007UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201303UV02-hmd" refname="Patient Demographics"
+              refidentifier="PRPA_HD201303UV02"/>
+      <cmetref ref="COCT_MT180000UV04-msg" refname="A_CoverageUniversal"
+               refidentifier="COCT_MT180000UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201303UV02-hmd" refname="Patient Demographics"
+              refidentifier="PRPA_HD201303UV02"/>
+      <cmetref ref="COCT_MT670000UV04-msg" refname="R_GuarantorUniversal"
+               refidentifier="COCT_MT670000UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201303UV02-hmd" refname="Patient Demographics"
+              refidentifier="PRPA_HD201303UV02"/>
+      <cmetref ref="COCT_MT710007UV-msg" refname="E_PlaceInformational"
+               refidentifier="COCT_MT710007UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201303UV02-hmd" refname="Patient Demographics"
+              refidentifier="PRPA_HD201303UV02"/>
+      <cmetref ref="COCT_MT820000UV-msg" refname="A_PrincipalCareProvisionUniversal"
+               refidentifier="COCT_MT820000UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201303UV02-hmd" refname="Patient Demographics"
+              refidentifier="PRPA_HD201303UV02"/>
+      <cmetref ref="COCT_MT960000UV05-msg" refname="A_SpatialCoordinateUniversal"
+               refidentifier="COCT_MT960000UV05"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201304UV02-hmd" refname="Patient Identifiers"
+              refidentifier="PRPA_HD201304UV02"/>
+      <cmetref ref="COCT_MT150002UV01-msg" refname="E_OrganizationIdentified-confirmable"
+               refidentifier="COCT_MT150002UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201304UV02-hmd" refname="Patient Identifiers"
+              refidentifier="PRPA_HD201304UV02"/>
+      <cmetref ref="COCT_MT150003UV03-msg" refname="E_OrganizationContact"
+               refidentifier="COCT_MT150003UV03"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201304UV02-hmd" refname="Patient Identifiers"
+              refidentifier="PRPA_HD201304UV02"/>
+      <cmetref ref="COCT_MT150007UV-msg" refname="E_OrganizationInformational"
+               refidentifier="COCT_MT150007UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201304UV02-hmd" refname="Patient Identifiers"
+              refidentifier="PRPA_HD201304UV02"/>
+      <cmetref ref="COCT_MT180000UV04-msg" refname="A_CoverageUniversal"
+               refidentifier="COCT_MT180000UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201304UV02-hmd" refname="Patient Identifiers"
+              refidentifier="PRPA_HD201304UV02"/>
+      <cmetref ref="COCT_MT820000UV-msg" refname="A_PrincipalCareProvisionUniversal"
+               refidentifier="COCT_MT820000UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201305UV02-hmd" refname="Patient Nullify"
+              refidentifier="PRPA_HD201305UV02"/>
+      <cmetref ref="COCT_MT150003UV03-msg" refname="E_OrganizationContact"
+               refidentifier="COCT_MT150003UV03"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201305UV02-hmd" refname="Patient Nullify"
+              refidentifier="PRPA_HD201305UV02"/>
+      <cmetref ref="COCT_MT710007UV-msg" refname="E_PlaceInformational"
+               refidentifier="COCT_MT710007UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201305UV02-hmd" refname="Patient Nullify"
+              refidentifier="PRPA_HD201305UV02"/>
+      <cmetref ref="COCT_MT960000UV05-msg" refname="A_SpatialCoordinateUniversal"
+               refidentifier="COCT_MT960000UV05"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201310UV02-hmd" refname="Patient Registry Find Candidates Response"
+              refidentifier="PRPA_HD201310UV02"/>
+      <cmetref ref="COCT_MT030007UV-msg" refname="E_LivingSubjectInformational"
+               refidentifier="COCT_MT030007UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201310UV02-hmd" refname="Patient Registry Find Candidates Response"
+              refidentifier="PRPA_HD201310UV02"/>
+      <cmetref ref="COCT_MT030207UV-msg" refname="E_PersonInformational"
+               refidentifier="COCT_MT030207UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201310UV02-hmd" refname="Patient Registry Find Candidates Response"
+              refidentifier="PRPA_HD201310UV02"/>
+      <cmetref ref="COCT_MT150002UV01-msg" refname="E_OrganizationIdentified-confirmable"
+               refidentifier="COCT_MT150002UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201310UV02-hmd" refname="Patient Registry Find Candidates Response"
+              refidentifier="PRPA_HD201310UV02"/>
+      <cmetref ref="COCT_MT150003UV03-msg" refname="E_OrganizationContact"
+               refidentifier="COCT_MT150003UV03"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201310UV02-hmd" refname="Patient Registry Find Candidates Response"
+              refidentifier="PRPA_HD201310UV02"/>
+      <cmetref ref="COCT_MT150007UV-msg" refname="E_OrganizationInformational"
+               refidentifier="COCT_MT150007UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201310UV02-hmd" refname="Patient Registry Find Candidates Response"
+              refidentifier="PRPA_HD201310UV02"/>
+      <cmetref ref="COCT_MT180000UV04-msg" refname="A_CoverageUniversal"
+               refidentifier="COCT_MT180000UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201310UV02-hmd" refname="Patient Registry Find Candidates Response"
+              refidentifier="PRPA_HD201310UV02"/>
+      <cmetref ref="COCT_MT670000UV04-msg" refname="R_GuarantorUniversal"
+               refidentifier="COCT_MT670000UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201310UV02-hmd" refname="Patient Registry Find Candidates Response"
+              refidentifier="PRPA_HD201310UV02"/>
+      <cmetref ref="COCT_MT710007UV-msg" refname="E_PlaceInformational"
+               refidentifier="COCT_MT710007UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201310UV02-hmd" refname="Patient Registry Find Candidates Response"
+              refidentifier="PRPA_HD201310UV02"/>
+      <cmetref ref="COCT_MT820000UV-msg" refname="A_PrincipalCareProvisionUniversal"
+               refidentifier="COCT_MT820000UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD201310UV02-hmd" refname="Patient Registry Find Candidates Response"
+              refidentifier="PRPA_HD201310UV02"/>
+      <cmetref ref="COCT_MT960000UV05-msg" refname="A_SpatialCoordinateUniversal"
+               refidentifier="COCT_MT960000UV05"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD202301UV02-hmd" refname="Service Delivery Location Activate"
+              refidentifier="PRPA_HD202301UV02"/>
+      <cmetref ref="COCT_MT150000UV02-msg" refname="E_OrganizationUniversal"
+               refidentifier="COCT_MT150000UV02"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD202301UV02-hmd" refname="Service Delivery Location Activate"
+              refidentifier="PRPA_HD202301UV02"/>
+      <cmetref ref="COCT_MT960000UV05-msg" refname="A_SpatialCoordinateUniversal"
+               refidentifier="COCT_MT960000UV05"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD202302UV02-hmd" refname="Service Delivery Location Revise"
+              refidentifier="PRPA_HD202302UV02"/>
+      <cmetref ref="COCT_MT150000UV02-msg" refname="E_OrganizationUniversal"
+               refidentifier="COCT_MT150000UV02"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD202302UV02-hmd" refname="Service Delivery Location Revise"
+              refidentifier="PRPA_HD202302UV02"/>
+      <cmetref ref="COCT_MT960000UV05-msg" refname="A_SpatialCoordinateUniversal"
+               refidentifier="COCT_MT960000UV05"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD202303UV02-hmd" refname="Service Delivery Location Details"
+              refidentifier="PRPA_HD202303UV02"/>
+      <cmetref ref="COCT_MT150000UV02-msg" refname="E_OrganizationUniversal"
+               refidentifier="COCT_MT150000UV02"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD202303UV02-hmd" refname="Service Delivery Location Details"
+              refidentifier="PRPA_HD202303UV02"/>
+      <cmetref ref="COCT_MT960000UV05-msg" refname="A_SpatialCoordinateUniversal"
+               refidentifier="COCT_MT960000UV05"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD202304UV02-hmd" refname="Service Delivery Location Identifiers"
+              refidentifier="PRPA_HD202304UV02"/>
+      <cmetref ref="COCT_MT150001UV01-msg" refname="E_OrganizationIdentified"
+               refidentifier="COCT_MT150001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD202305UV02-hmd" refname="Service Delivery Location Nullify"
+              refidentifier="PRPA_HD202305UV02"/>
+      <cmetref ref="COCT_MT150003UV03-msg" refname="E_OrganizationContact"
+               refidentifier="COCT_MT150003UV03"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD202310UV02-hmd"
+              refname="Location Registry Find Candidates Response"
+              refidentifier="PRPA_HD202310UV02"/>
+      <cmetref ref="COCT_MT150000UV02-msg" refname="E_OrganizationUniversal"
+               refidentifier="COCT_MT150000UV02"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD202310UV02-hmd"
+              refname="Location Registry Find Candidates Response"
+              refidentifier="PRPA_HD202310UV02"/>
+      <cmetref ref="COCT_MT960000UV05-msg" refname="A_SpatialCoordinateUniversal"
+               refidentifier="COCT_MT960000UV05"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD301011UV02-hmd" refname="Attending Practitioner Change"
+              refidentifier="PRPA_HD301011UV02"/>
+      <cmetref ref="COCT_MT050001UV01-msg" refname="R_PatientIdentified"
+               refidentifier="COCT_MT050001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD301011UV02-hmd" refname="Attending Practitioner Change"
+              refidentifier="PRPA_HD301011UV02"/>
+      <cmetref ref="COCT_MT090103UV01-msg" refname="R_AssignedPersonContact"
+               refidentifier="COCT_MT090103UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD302011UV02-hmd" refname="Assigned Patient Location Change"
+              refidentifier="PRPA_HD302011UV02"/>
+      <cmetref ref="COCT_MT050001UV01-msg" refname="R_PatientIdentified"
+               refidentifier="COCT_MT050001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD302011UV02-hmd" refname="Assigned Patient Location Change"
+              refidentifier="PRPA_HD302011UV02"/>
+      <cmetref ref="COCT_MT150001UV01-msg" refname="E_OrganizationIdentified"
+               refidentifier="COCT_MT150001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD302011UV02-hmd" refname="Assigned Patient Location Change"
+              refidentifier="PRPA_HD302011UV02"/>
+      <cmetref ref="COCT_MT710000UV01-msg" refname="E_PlaceUniversal"
+               refidentifier="COCT_MT710000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD303011UV02-hmd" refname="Responsible Organization Change"
+              refidentifier="PRPA_HD303011UV02"/>
+      <cmetref ref="COCT_MT050001UV01-msg" refname="R_PatientIdentified"
+               refidentifier="COCT_MT050001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD303011UV02-hmd" refname="Responsible Organization Change"
+              refidentifier="PRPA_HD303011UV02"/>
+      <cmetref ref="COCT_MT090203UV01-msg" refname="R_AssignedOrganizationContact"
+               refidentifier="COCT_MT090203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401001UV02-hmd" refname="Ambulatory Encounter Event Activate"
+              refidentifier="PRPA_HD401001UV02"/>
+      <cmetref ref="COCT_MT010000UV01-msg" refname="A_EncounterUniversal"
+               refidentifier="COCT_MT010000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401001UV02-hmd" refname="Ambulatory Encounter Event Activate"
+              refidentifier="PRPA_HD401001UV02"/>
+      <cmetref ref="COCT_MT020000UV01-msg" refname="A_AppointmentUniversal"
+               refidentifier="COCT_MT020000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401001UV02-hmd" refname="Ambulatory Encounter Event Activate"
+              refidentifier="PRPA_HD401001UV02"/>
+      <cmetref ref="COCT_MT040203UV01-msg" refname="R_NotificationPartyContact"
+               refidentifier="COCT_MT040203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401001UV02-hmd" refname="Ambulatory Encounter Event Activate"
+              refidentifier="PRPA_HD401001UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401001UV02-hmd" refname="Ambulatory Encounter Event Activate"
+              refidentifier="PRPA_HD401001UV02"/>
+      <cmetref ref="COCT_MT070003UV02-msg" refname="R_LocationLocatedEntityContact"
+               refidentifier="COCT_MT070003UV02"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401001UV02-hmd" refname="Ambulatory Encounter Event Activate"
+              refidentifier="PRPA_HD401001UV02"/>
+      <cmetref ref="COCT_MT090003UV01-msg" refname="R_AssignedEntityContact"
+               refidentifier="COCT_MT090003UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401001UV02-hmd" refname="Ambulatory Encounter Event Activate"
+              refidentifier="PRPA_HD401001UV02"/>
+      <cmetref ref="COCT_MT090103UV01-msg" refname="R_AssignedPersonContact"
+               refidentifier="COCT_MT090103UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401001UV02-hmd" refname="Ambulatory Encounter Event Activate"
+              refidentifier="PRPA_HD401001UV02"/>
+      <cmetref ref="COCT_MT090203UV01-msg" refname="R_AssignedOrganizationContact"
+               refidentifier="COCT_MT090203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401001UV02-hmd" refname="Ambulatory Encounter Event Activate"
+              refidentifier="PRPA_HD401001UV02"/>
+      <cmetref ref="COCT_MT110001UV01-msg" refname="A_AccountIdentified"
+               refidentifier="COCT_MT110001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401001UV02-hmd" refname="Ambulatory Encounter Event Activate"
+              refidentifier="PRPA_HD401001UV02"/>
+      <cmetref ref="COCT_MT120104UV-msg" refname="A_ObservationDxMinimal"
+               refidentifier="COCT_MT120104UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401001UV02-hmd" refname="Ambulatory Encounter Event Activate"
+              refidentifier="PRPA_HD401001UV02"/>
+      <cmetref ref="COCT_MT150001UV01-msg" refname="E_OrganizationIdentified"
+               refidentifier="COCT_MT150001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401001UV02-hmd" refname="Ambulatory Encounter Event Activate"
+              refidentifier="PRPA_HD401001UV02"/>
+      <cmetref ref="COCT_MT470000UV-msg" refname="A_ConsentUniversal"
+               refidentifier="COCT_MT470000UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401001UV02-hmd" refname="Ambulatory Encounter Event Activate"
+              refidentifier="PRPA_HD401001UV02"/>
+      <cmetref ref="COCT_MT710000UV01-msg" refname="E_PlaceUniversal"
+               refidentifier="COCT_MT710000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401002UV02-hmd" refname="Ambulatory Encounter Event Revise"
+              refidentifier="PRPA_HD401002UV02"/>
+      <cmetref ref="COCT_MT010000UV01-msg" refname="A_EncounterUniversal"
+               refidentifier="COCT_MT010000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401002UV02-hmd" refname="Ambulatory Encounter Event Revise"
+              refidentifier="PRPA_HD401002UV02"/>
+      <cmetref ref="COCT_MT020000UV01-msg" refname="A_AppointmentUniversal"
+               refidentifier="COCT_MT020000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401002UV02-hmd" refname="Ambulatory Encounter Event Revise"
+              refidentifier="PRPA_HD401002UV02"/>
+      <cmetref ref="COCT_MT040203UV01-msg" refname="R_NotificationPartyContact"
+               refidentifier="COCT_MT040203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401002UV02-hmd" refname="Ambulatory Encounter Event Revise"
+              refidentifier="PRPA_HD401002UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401002UV02-hmd" refname="Ambulatory Encounter Event Revise"
+              refidentifier="PRPA_HD401002UV02"/>
+      <cmetref ref="COCT_MT070003UV02-msg" refname="R_LocationLocatedEntityContact"
+               refidentifier="COCT_MT070003UV02"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401002UV02-hmd" refname="Ambulatory Encounter Event Revise"
+              refidentifier="PRPA_HD401002UV02"/>
+      <cmetref ref="COCT_MT090003UV01-msg" refname="R_AssignedEntityContact"
+               refidentifier="COCT_MT090003UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401002UV02-hmd" refname="Ambulatory Encounter Event Revise"
+              refidentifier="PRPA_HD401002UV02"/>
+      <cmetref ref="COCT_MT090103UV01-msg" refname="R_AssignedPersonContact"
+               refidentifier="COCT_MT090103UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401002UV02-hmd" refname="Ambulatory Encounter Event Revise"
+              refidentifier="PRPA_HD401002UV02"/>
+      <cmetref ref="COCT_MT090203UV01-msg" refname="R_AssignedOrganizationContact"
+               refidentifier="COCT_MT090203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401002UV02-hmd" refname="Ambulatory Encounter Event Revise"
+              refidentifier="PRPA_HD401002UV02"/>
+      <cmetref ref="COCT_MT110001UV01-msg" refname="A_AccountIdentified"
+               refidentifier="COCT_MT110001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401002UV02-hmd" refname="Ambulatory Encounter Event Revise"
+              refidentifier="PRPA_HD401002UV02"/>
+      <cmetref ref="COCT_MT120104UV-msg" refname="A_ObservationDxMinimal"
+               refidentifier="COCT_MT120104UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401002UV02-hmd" refname="Ambulatory Encounter Event Revise"
+              refidentifier="PRPA_HD401002UV02"/>
+      <cmetref ref="COCT_MT150001UV01-msg" refname="E_OrganizationIdentified"
+               refidentifier="COCT_MT150001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401002UV02-hmd" refname="Ambulatory Encounter Event Revise"
+              refidentifier="PRPA_HD401002UV02"/>
+      <cmetref ref="COCT_MT470000UV-msg" refname="A_ConsentUniversal"
+               refidentifier="COCT_MT470000UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401002UV02-hmd" refname="Ambulatory Encounter Event Revise"
+              refidentifier="PRPA_HD401002UV02"/>
+      <cmetref ref="COCT_MT710000UV01-msg" refname="E_PlaceUniversal"
+               refidentifier="COCT_MT710000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401003UV02-hmd" refname="Ambulatory Encounter Event Complete"
+              refidentifier="PRPA_HD401003UV02"/>
+      <cmetref ref="COCT_MT010000UV01-msg" refname="A_EncounterUniversal"
+               refidentifier="COCT_MT010000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401003UV02-hmd" refname="Ambulatory Encounter Event Complete"
+              refidentifier="PRPA_HD401003UV02"/>
+      <cmetref ref="COCT_MT020000UV01-msg" refname="A_AppointmentUniversal"
+               refidentifier="COCT_MT020000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401003UV02-hmd" refname="Ambulatory Encounter Event Complete"
+              refidentifier="PRPA_HD401003UV02"/>
+      <cmetref ref="COCT_MT040203UV01-msg" refname="R_NotificationPartyContact"
+               refidentifier="COCT_MT040203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401003UV02-hmd" refname="Ambulatory Encounter Event Complete"
+              refidentifier="PRPA_HD401003UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401003UV02-hmd" refname="Ambulatory Encounter Event Complete"
+              refidentifier="PRPA_HD401003UV02"/>
+      <cmetref ref="COCT_MT070003UV02-msg" refname="R_LocationLocatedEntityContact"
+               refidentifier="COCT_MT070003UV02"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401003UV02-hmd" refname="Ambulatory Encounter Event Complete"
+              refidentifier="PRPA_HD401003UV02"/>
+      <cmetref ref="COCT_MT090003UV01-msg" refname="R_AssignedEntityContact"
+               refidentifier="COCT_MT090003UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401003UV02-hmd" refname="Ambulatory Encounter Event Complete"
+              refidentifier="PRPA_HD401003UV02"/>
+      <cmetref ref="COCT_MT090103UV01-msg" refname="R_AssignedPersonContact"
+               refidentifier="COCT_MT090103UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401003UV02-hmd" refname="Ambulatory Encounter Event Complete"
+              refidentifier="PRPA_HD401003UV02"/>
+      <cmetref ref="COCT_MT090203UV01-msg" refname="R_AssignedOrganizationContact"
+               refidentifier="COCT_MT090203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401003UV02-hmd" refname="Ambulatory Encounter Event Complete"
+              refidentifier="PRPA_HD401003UV02"/>
+      <cmetref ref="COCT_MT110001UV01-msg" refname="A_AccountIdentified"
+               refidentifier="COCT_MT110001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401003UV02-hmd" refname="Ambulatory Encounter Event Complete"
+              refidentifier="PRPA_HD401003UV02"/>
+      <cmetref ref="COCT_MT120104UV-msg" refname="A_ObservationDxMinimal"
+               refidentifier="COCT_MT120104UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401003UV02-hmd" refname="Ambulatory Encounter Event Complete"
+              refidentifier="PRPA_HD401003UV02"/>
+      <cmetref ref="COCT_MT150001UV01-msg" refname="E_OrganizationIdentified"
+               refidentifier="COCT_MT150001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401003UV02-hmd" refname="Ambulatory Encounter Event Complete"
+              refidentifier="PRPA_HD401003UV02"/>
+      <cmetref ref="COCT_MT470000UV-msg" refname="A_ConsentUniversal"
+               refidentifier="COCT_MT470000UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401003UV02-hmd" refname="Ambulatory Encounter Event Complete"
+              refidentifier="PRPA_HD401003UV02"/>
+      <cmetref ref="COCT_MT710000UV01-msg" refname="E_PlaceUniversal"
+               refidentifier="COCT_MT710000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401004UV02-hmd" refname="Ambulatory Encounter Event Abort"
+              refidentifier="PRPA_HD401004UV02"/>
+      <cmetref ref="COCT_MT040203UV01-msg" refname="R_NotificationPartyContact"
+               refidentifier="COCT_MT040203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401004UV02-hmd" refname="Ambulatory Encounter Event Abort"
+              refidentifier="PRPA_HD401004UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401004UV02-hmd" refname="Ambulatory Encounter Event Abort"
+              refidentifier="PRPA_HD401004UV02"/>
+      <cmetref ref="COCT_MT070003UV02-msg" refname="R_LocationLocatedEntityContact"
+               refidentifier="COCT_MT070003UV02"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401004UV02-hmd" refname="Ambulatory Encounter Event Abort"
+              refidentifier="PRPA_HD401004UV02"/>
+      <cmetref ref="COCT_MT090103UV01-msg" refname="R_AssignedPersonContact"
+               refidentifier="COCT_MT090103UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401004UV02-hmd" refname="Ambulatory Encounter Event Abort"
+              refidentifier="PRPA_HD401004UV02"/>
+      <cmetref ref="COCT_MT090203UV01-msg" refname="R_AssignedOrganizationContact"
+               refidentifier="COCT_MT090203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401004UV02-hmd" refname="Ambulatory Encounter Event Abort"
+              refidentifier="PRPA_HD401004UV02"/>
+      <cmetref ref="COCT_MT150001UV01-msg" refname="E_OrganizationIdentified"
+               refidentifier="COCT_MT150001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401004UV02-hmd" refname="Ambulatory Encounter Event Abort"
+              refidentifier="PRPA_HD401004UV02"/>
+      <cmetref ref="COCT_MT710000UV01-msg" refname="E_PlaceUniversal"
+               refidentifier="COCT_MT710000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD401005UV02-hmd" refname="Ambulatory Encounter Event Nullify"
+              refidentifier="PRPA_HD401005UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402001UV02-hmd" refname="Active Inpatient Encounter"
+              refidentifier="PRPA_HD402001UV02"/>
+      <cmetref ref="COCT_MT010000UV01-msg" refname="A_EncounterUniversal"
+               refidentifier="COCT_MT010000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402001UV02-hmd" refname="Active Inpatient Encounter"
+              refidentifier="PRPA_HD402001UV02"/>
+      <cmetref ref="COCT_MT020000UV01-msg" refname="A_AppointmentUniversal"
+               refidentifier="COCT_MT020000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402001UV02-hmd" refname="Active Inpatient Encounter"
+              refidentifier="PRPA_HD402001UV02"/>
+      <cmetref ref="COCT_MT040203UV01-msg" refname="R_NotificationPartyContact"
+               refidentifier="COCT_MT040203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402001UV02-hmd" refname="Active Inpatient Encounter"
+              refidentifier="PRPA_HD402001UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402001UV02-hmd" refname="Active Inpatient Encounter"
+              refidentifier="PRPA_HD402001UV02"/>
+      <cmetref ref="COCT_MT070003UV02-msg" refname="R_LocationLocatedEntityContact"
+               refidentifier="COCT_MT070003UV02"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402001UV02-hmd" refname="Active Inpatient Encounter"
+              refidentifier="PRPA_HD402001UV02"/>
+      <cmetref ref="COCT_MT090000UV01-msg" refname="R_AssignedEntityUniversal"
+               refidentifier="COCT_MT090000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402001UV02-hmd" refname="Active Inpatient Encounter"
+              refidentifier="PRPA_HD402001UV02"/>
+      <cmetref ref="COCT_MT090100UV01-msg" refname="R_AssignedPersonUniversal"
+               refidentifier="COCT_MT090100UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402001UV02-hmd" refname="Active Inpatient Encounter"
+              refidentifier="PRPA_HD402001UV02"/>
+      <cmetref ref="COCT_MT090200UV01-msg" refname="R_AssignedOrganizationUniversal"
+               refidentifier="COCT_MT090200UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402001UV02-hmd" refname="Active Inpatient Encounter"
+              refidentifier="PRPA_HD402001UV02"/>
+      <cmetref ref="COCT_MT110300UV04-msg" refname="A_AccountGuarantorUniversal"
+               refidentifier="COCT_MT110300UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402001UV02-hmd" refname="Active Inpatient Encounter"
+              refidentifier="PRPA_HD402001UV02"/>
+      <cmetref ref="COCT_MT120104UV-msg" refname="A_ObservationDxMinimal"
+               refidentifier="COCT_MT120104UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402001UV02-hmd" refname="Active Inpatient Encounter"
+              refidentifier="PRPA_HD402001UV02"/>
+      <cmetref ref="COCT_MT150001UV01-msg" refname="E_OrganizationIdentified"
+               refidentifier="COCT_MT150001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402001UV02-hmd" refname="Active Inpatient Encounter"
+              refidentifier="PRPA_HD402001UV02"/>
+      <cmetref ref="COCT_MT470000UV-msg" refname="A_ConsentUniversal"
+               refidentifier="COCT_MT470000UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402001UV02-hmd" refname="Active Inpatient Encounter"
+              refidentifier="PRPA_HD402001UV02"/>
+      <cmetref ref="COCT_MT520001UV-msg" refname="A_CareEventIdentified"
+               refidentifier="COCT_MT520001UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402001UV02-hmd" refname="Active Inpatient Encounter"
+              refidentifier="PRPA_HD402001UV02"/>
+      <cmetref ref="COCT_MT710000UV01-msg" refname="E_PlaceUniversal"
+               refidentifier="COCT_MT710000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402002UV02-hmd" refname="Revised Inpatient Encounter"
+              refidentifier="PRPA_HD402002UV02"/>
+      <cmetref ref="COCT_MT010000UV01-msg" refname="A_EncounterUniversal"
+               refidentifier="COCT_MT010000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402002UV02-hmd" refname="Revised Inpatient Encounter"
+              refidentifier="PRPA_HD402002UV02"/>
+      <cmetref ref="COCT_MT020000UV01-msg" refname="A_AppointmentUniversal"
+               refidentifier="COCT_MT020000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402002UV02-hmd" refname="Revised Inpatient Encounter"
+              refidentifier="PRPA_HD402002UV02"/>
+      <cmetref ref="COCT_MT040203UV01-msg" refname="R_NotificationPartyContact"
+               refidentifier="COCT_MT040203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402002UV02-hmd" refname="Revised Inpatient Encounter"
+              refidentifier="PRPA_HD402002UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402002UV02-hmd" refname="Revised Inpatient Encounter"
+              refidentifier="PRPA_HD402002UV02"/>
+      <cmetref ref="COCT_MT070003UV02-msg" refname="R_LocationLocatedEntityContact"
+               refidentifier="COCT_MT070003UV02"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402002UV02-hmd" refname="Revised Inpatient Encounter"
+              refidentifier="PRPA_HD402002UV02"/>
+      <cmetref ref="COCT_MT090000UV01-msg" refname="R_AssignedEntityUniversal"
+               refidentifier="COCT_MT090000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402002UV02-hmd" refname="Revised Inpatient Encounter"
+              refidentifier="PRPA_HD402002UV02"/>
+      <cmetref ref="COCT_MT090100UV01-msg" refname="R_AssignedPersonUniversal"
+               refidentifier="COCT_MT090100UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402002UV02-hmd" refname="Revised Inpatient Encounter"
+              refidentifier="PRPA_HD402002UV02"/>
+      <cmetref ref="COCT_MT090200UV01-msg" refname="R_AssignedOrganizationUniversal"
+               refidentifier="COCT_MT090200UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402002UV02-hmd" refname="Revised Inpatient Encounter"
+              refidentifier="PRPA_HD402002UV02"/>
+      <cmetref ref="COCT_MT110300UV04-msg" refname="A_AccountGuarantorUniversal"
+               refidentifier="COCT_MT110300UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402002UV02-hmd" refname="Revised Inpatient Encounter"
+              refidentifier="PRPA_HD402002UV02"/>
+      <cmetref ref="COCT_MT120104UV-msg" refname="A_ObservationDxMinimal"
+               refidentifier="COCT_MT120104UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402002UV02-hmd" refname="Revised Inpatient Encounter"
+              refidentifier="PRPA_HD402002UV02"/>
+      <cmetref ref="COCT_MT150001UV01-msg" refname="E_OrganizationIdentified"
+               refidentifier="COCT_MT150001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402002UV02-hmd" refname="Revised Inpatient Encounter"
+              refidentifier="PRPA_HD402002UV02"/>
+      <cmetref ref="COCT_MT470000UV-msg" refname="A_ConsentUniversal"
+               refidentifier="COCT_MT470000UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402002UV02-hmd" refname="Revised Inpatient Encounter"
+              refidentifier="PRPA_HD402002UV02"/>
+      <cmetref ref="COCT_MT520001UV-msg" refname="A_CareEventIdentified"
+               refidentifier="COCT_MT520001UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402002UV02-hmd" refname="Revised Inpatient Encounter"
+              refidentifier="PRPA_HD402002UV02"/>
+      <cmetref ref="COCT_MT710000UV01-msg" refname="E_PlaceUniversal"
+               refidentifier="COCT_MT710000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402003UV02-hmd" refname="Completed Inpatient Encounter"
+              refidentifier="PRPA_HD402003UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402003UV02-hmd" refname="Completed Inpatient Encounter"
+              refidentifier="PRPA_HD402003UV02"/>
+      <cmetref ref="COCT_MT070003UV02-msg" refname="R_LocationLocatedEntityContact"
+               refidentifier="COCT_MT070003UV02"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402003UV02-hmd" refname="Completed Inpatient Encounter"
+              refidentifier="PRPA_HD402003UV02"/>
+      <cmetref ref="COCT_MT090100UV01-msg" refname="R_AssignedPersonUniversal"
+               refidentifier="COCT_MT090100UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402003UV02-hmd" refname="Completed Inpatient Encounter"
+              refidentifier="PRPA_HD402003UV02"/>
+      <cmetref ref="COCT_MT120104UV-msg" refname="A_ObservationDxMinimal"
+               refidentifier="COCT_MT120104UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402004UV02-hmd" refname="Aborted Inpatient Encounter"
+              refidentifier="PRPA_HD402004UV02"/>
+      <cmetref ref="COCT_MT040203UV01-msg" refname="R_NotificationPartyContact"
+               refidentifier="COCT_MT040203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402004UV02-hmd" refname="Aborted Inpatient Encounter"
+              refidentifier="PRPA_HD402004UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD402004UV02-hmd" refname="Aborted Inpatient Encounter"
+              refidentifier="PRPA_HD402004UV02"/>
+      <cmetref ref="COCT_MT070003UV02-msg" refname="R_LocationLocatedEntityContact"
+               refidentifier="COCT_MT070003UV02"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403001UV02-hmd" refname="Emergency Encounter Event Activate"
+              refidentifier="PRPA_HD403001UV02"/>
+      <cmetref ref="COCT_MT010000UV01-msg" refname="A_EncounterUniversal"
+               refidentifier="COCT_MT010000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403001UV02-hmd" refname="Emergency Encounter Event Activate"
+              refidentifier="PRPA_HD403001UV02"/>
+      <cmetref ref="COCT_MT040203UV01-msg" refname="R_NotificationPartyContact"
+               refidentifier="COCT_MT040203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403001UV02-hmd" refname="Emergency Encounter Event Activate"
+              refidentifier="PRPA_HD403001UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403001UV02-hmd" refname="Emergency Encounter Event Activate"
+              refidentifier="PRPA_HD403001UV02"/>
+      <cmetref ref="COCT_MT070003UV02-msg" refname="R_LocationLocatedEntityContact"
+               refidentifier="COCT_MT070003UV02"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403001UV02-hmd" refname="Emergency Encounter Event Activate"
+              refidentifier="PRPA_HD403001UV02"/>
+      <cmetref ref="COCT_MT090003UV01-msg" refname="R_AssignedEntityContact"
+               refidentifier="COCT_MT090003UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403001UV02-hmd" refname="Emergency Encounter Event Activate"
+              refidentifier="PRPA_HD403001UV02"/>
+      <cmetref ref="COCT_MT090103UV01-msg" refname="R_AssignedPersonContact"
+               refidentifier="COCT_MT090103UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403001UV02-hmd" refname="Emergency Encounter Event Activate"
+              refidentifier="PRPA_HD403001UV02"/>
+      <cmetref ref="COCT_MT090203UV01-msg" refname="R_AssignedOrganizationContact"
+               refidentifier="COCT_MT090203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403001UV02-hmd" refname="Emergency Encounter Event Activate"
+              refidentifier="PRPA_HD403001UV02"/>
+      <cmetref ref="COCT_MT110001UV01-msg" refname="A_AccountIdentified"
+               refidentifier="COCT_MT110001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403001UV02-hmd" refname="Emergency Encounter Event Activate"
+              refidentifier="PRPA_HD403001UV02"/>
+      <cmetref ref="COCT_MT120104UV-msg" refname="A_ObservationDxMinimal"
+               refidentifier="COCT_MT120104UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403001UV02-hmd" refname="Emergency Encounter Event Activate"
+              refidentifier="PRPA_HD403001UV02"/>
+      <cmetref ref="COCT_MT150001UV01-msg" refname="E_OrganizationIdentified"
+               refidentifier="COCT_MT150001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403001UV02-hmd" refname="Emergency Encounter Event Activate"
+              refidentifier="PRPA_HD403001UV02"/>
+      <cmetref ref="COCT_MT470000UV-msg" refname="A_ConsentUniversal"
+               refidentifier="COCT_MT470000UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403001UV02-hmd" refname="Emergency Encounter Event Activate"
+              refidentifier="PRPA_HD403001UV02"/>
+      <cmetref ref="COCT_MT710000UV01-msg" refname="E_PlaceUniversal"
+               refidentifier="COCT_MT710000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403002UV02-hmd" refname="Emergency Encounter Event Revise"
+              refidentifier="PRPA_HD403002UV02"/>
+      <cmetref ref="COCT_MT010000UV01-msg" refname="A_EncounterUniversal"
+               refidentifier="COCT_MT010000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403002UV02-hmd" refname="Emergency Encounter Event Revise"
+              refidentifier="PRPA_HD403002UV02"/>
+      <cmetref ref="COCT_MT040203UV01-msg" refname="R_NotificationPartyContact"
+               refidentifier="COCT_MT040203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403002UV02-hmd" refname="Emergency Encounter Event Revise"
+              refidentifier="PRPA_HD403002UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403002UV02-hmd" refname="Emergency Encounter Event Revise"
+              refidentifier="PRPA_HD403002UV02"/>
+      <cmetref ref="COCT_MT070003UV02-msg" refname="R_LocationLocatedEntityContact"
+               refidentifier="COCT_MT070003UV02"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403002UV02-hmd" refname="Emergency Encounter Event Revise"
+              refidentifier="PRPA_HD403002UV02"/>
+      <cmetref ref="COCT_MT090003UV01-msg" refname="R_AssignedEntityContact"
+               refidentifier="COCT_MT090003UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403002UV02-hmd" refname="Emergency Encounter Event Revise"
+              refidentifier="PRPA_HD403002UV02"/>
+      <cmetref ref="COCT_MT090103UV01-msg" refname="R_AssignedPersonContact"
+               refidentifier="COCT_MT090103UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403002UV02-hmd" refname="Emergency Encounter Event Revise"
+              refidentifier="PRPA_HD403002UV02"/>
+      <cmetref ref="COCT_MT090203UV01-msg" refname="R_AssignedOrganizationContact"
+               refidentifier="COCT_MT090203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403002UV02-hmd" refname="Emergency Encounter Event Revise"
+              refidentifier="PRPA_HD403002UV02"/>
+      <cmetref ref="COCT_MT110001UV01-msg" refname="A_AccountIdentified"
+               refidentifier="COCT_MT110001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403002UV02-hmd" refname="Emergency Encounter Event Revise"
+              refidentifier="PRPA_HD403002UV02"/>
+      <cmetref ref="COCT_MT120104UV-msg" refname="A_ObservationDxMinimal"
+               refidentifier="COCT_MT120104UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403002UV02-hmd" refname="Emergency Encounter Event Revise"
+              refidentifier="PRPA_HD403002UV02"/>
+      <cmetref ref="COCT_MT150001UV01-msg" refname="E_OrganizationIdentified"
+               refidentifier="COCT_MT150001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403002UV02-hmd" refname="Emergency Encounter Event Revise"
+              refidentifier="PRPA_HD403002UV02"/>
+      <cmetref ref="COCT_MT470000UV-msg" refname="A_ConsentUniversal"
+               refidentifier="COCT_MT470000UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403002UV02-hmd" refname="Emergency Encounter Event Revise"
+              refidentifier="PRPA_HD403002UV02"/>
+      <cmetref ref="COCT_MT710000UV01-msg" refname="E_PlaceUniversal"
+               refidentifier="COCT_MT710000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403003UV02-hmd" refname="Emergency Encounter Event Complete"
+              refidentifier="PRPA_HD403003UV02"/>
+      <cmetref ref="COCT_MT010000UV01-msg" refname="A_EncounterUniversal"
+               refidentifier="COCT_MT010000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403003UV02-hmd" refname="Emergency Encounter Event Complete"
+              refidentifier="PRPA_HD403003UV02"/>
+      <cmetref ref="COCT_MT040203UV01-msg" refname="R_NotificationPartyContact"
+               refidentifier="COCT_MT040203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403003UV02-hmd" refname="Emergency Encounter Event Complete"
+              refidentifier="PRPA_HD403003UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403003UV02-hmd" refname="Emergency Encounter Event Complete"
+              refidentifier="PRPA_HD403003UV02"/>
+      <cmetref ref="COCT_MT070003UV02-msg" refname="R_LocationLocatedEntityContact"
+               refidentifier="COCT_MT070003UV02"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403003UV02-hmd" refname="Emergency Encounter Event Complete"
+              refidentifier="PRPA_HD403003UV02"/>
+      <cmetref ref="COCT_MT090003UV01-msg" refname="R_AssignedEntityContact"
+               refidentifier="COCT_MT090003UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403003UV02-hmd" refname="Emergency Encounter Event Complete"
+              refidentifier="PRPA_HD403003UV02"/>
+      <cmetref ref="COCT_MT090103UV01-msg" refname="R_AssignedPersonContact"
+               refidentifier="COCT_MT090103UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403003UV02-hmd" refname="Emergency Encounter Event Complete"
+              refidentifier="PRPA_HD403003UV02"/>
+      <cmetref ref="COCT_MT090203UV01-msg" refname="R_AssignedOrganizationContact"
+               refidentifier="COCT_MT090203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403003UV02-hmd" refname="Emergency Encounter Event Complete"
+              refidentifier="PRPA_HD403003UV02"/>
+      <cmetref ref="COCT_MT110001UV01-msg" refname="A_AccountIdentified"
+               refidentifier="COCT_MT110001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403003UV02-hmd" refname="Emergency Encounter Event Complete"
+              refidentifier="PRPA_HD403003UV02"/>
+      <cmetref ref="COCT_MT120104UV-msg" refname="A_ObservationDxMinimal"
+               refidentifier="COCT_MT120104UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403003UV02-hmd" refname="Emergency Encounter Event Complete"
+              refidentifier="PRPA_HD403003UV02"/>
+      <cmetref ref="COCT_MT150001UV01-msg" refname="E_OrganizationIdentified"
+               refidentifier="COCT_MT150001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403003UV02-hmd" refname="Emergency Encounter Event Complete"
+              refidentifier="PRPA_HD403003UV02"/>
+      <cmetref ref="COCT_MT470000UV-msg" refname="A_ConsentUniversal"
+               refidentifier="COCT_MT470000UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403003UV02-hmd" refname="Emergency Encounter Event Complete"
+              refidentifier="PRPA_HD403003UV02"/>
+      <cmetref ref="COCT_MT710000UV01-msg" refname="E_PlaceUniversal"
+               refidentifier="COCT_MT710000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403004UV02-hmd" refname="Emergency Encounter Event Abort"
+              refidentifier="PRPA_HD403004UV02"/>
+      <cmetref ref="COCT_MT040203UV01-msg" refname="R_NotificationPartyContact"
+               refidentifier="COCT_MT040203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403004UV02-hmd" refname="Emergency Encounter Event Abort"
+              refidentifier="PRPA_HD403004UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403004UV02-hmd" refname="Emergency Encounter Event Abort"
+              refidentifier="PRPA_HD403004UV02"/>
+      <cmetref ref="COCT_MT070003UV02-msg" refname="R_LocationLocatedEntityContact"
+               refidentifier="COCT_MT070003UV02"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403004UV02-hmd" refname="Emergency Encounter Event Abort"
+              refidentifier="PRPA_HD403004UV02"/>
+      <cmetref ref="COCT_MT090103UV01-msg" refname="R_AssignedPersonContact"
+               refidentifier="COCT_MT090103UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403004UV02-hmd" refname="Emergency Encounter Event Abort"
+              refidentifier="PRPA_HD403004UV02"/>
+      <cmetref ref="COCT_MT090203UV01-msg" refname="R_AssignedOrganizationContact"
+               refidentifier="COCT_MT090203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403004UV02-hmd" refname="Emergency Encounter Event Abort"
+              refidentifier="PRPA_HD403004UV02"/>
+      <cmetref ref="COCT_MT150001UV01-msg" refname="E_OrganizationIdentified"
+               refidentifier="COCT_MT150001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403004UV02-hmd" refname="Emergency Encounter Event Abort"
+              refidentifier="PRPA_HD403004UV02"/>
+      <cmetref ref="COCT_MT710000UV01-msg" refname="E_PlaceUniversal"
+               refidentifier="COCT_MT710000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD403005UV02-hmd" refname="Emergency Encounter Event Nullify"
+              refidentifier="PRPA_HD403005UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404001UV02-hmd" refname="Home Health Encounter Event Activate"
+              refidentifier="PRPA_HD404001UV02"/>
+      <cmetref ref="COCT_MT010000UV01-msg" refname="A_EncounterUniversal"
+               refidentifier="COCT_MT010000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404001UV02-hmd" refname="Home Health Encounter Event Activate"
+              refidentifier="PRPA_HD404001UV02"/>
+      <cmetref ref="COCT_MT020000UV01-msg" refname="A_AppointmentUniversal"
+               refidentifier="COCT_MT020000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404001UV02-hmd" refname="Home Health Encounter Event Activate"
+              refidentifier="PRPA_HD404001UV02"/>
+      <cmetref ref="COCT_MT040203UV01-msg" refname="R_NotificationPartyContact"
+               refidentifier="COCT_MT040203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404001UV02-hmd" refname="Home Health Encounter Event Activate"
+              refidentifier="PRPA_HD404001UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404001UV02-hmd" refname="Home Health Encounter Event Activate"
+              refidentifier="PRPA_HD404001UV02"/>
+      <cmetref ref="COCT_MT090003UV01-msg" refname="R_AssignedEntityContact"
+               refidentifier="COCT_MT090003UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404001UV02-hmd" refname="Home Health Encounter Event Activate"
+              refidentifier="PRPA_HD404001UV02"/>
+      <cmetref ref="COCT_MT090103UV01-msg" refname="R_AssignedPersonContact"
+               refidentifier="COCT_MT090103UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404001UV02-hmd" refname="Home Health Encounter Event Activate"
+              refidentifier="PRPA_HD404001UV02"/>
+      <cmetref ref="COCT_MT090203UV01-msg" refname="R_AssignedOrganizationContact"
+               refidentifier="COCT_MT090203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404001UV02-hmd" refname="Home Health Encounter Event Activate"
+              refidentifier="PRPA_HD404001UV02"/>
+      <cmetref ref="COCT_MT110001UV01-msg" refname="A_AccountIdentified"
+               refidentifier="COCT_MT110001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404001UV02-hmd" refname="Home Health Encounter Event Activate"
+              refidentifier="PRPA_HD404001UV02"/>
+      <cmetref ref="COCT_MT120104UV-msg" refname="A_ObservationDxMinimal"
+               refidentifier="COCT_MT120104UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404001UV02-hmd" refname="Home Health Encounter Event Activate"
+              refidentifier="PRPA_HD404001UV02"/>
+      <cmetref ref="COCT_MT150001UV01-msg" refname="E_OrganizationIdentified"
+               refidentifier="COCT_MT150001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404001UV02-hmd" refname="Home Health Encounter Event Activate"
+              refidentifier="PRPA_HD404001UV02"/>
+      <cmetref ref="COCT_MT470000UV-msg" refname="A_ConsentUniversal"
+               refidentifier="COCT_MT470000UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404001UV02-hmd" refname="Home Health Encounter Event Activate"
+              refidentifier="PRPA_HD404001UV02"/>
+      <cmetref ref="COCT_MT710000UV01-msg" refname="E_PlaceUniversal"
+               refidentifier="COCT_MT710000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404002UV02-hmd" refname="Home Health Encounter Event Revise"
+              refidentifier="PRPA_HD404002UV02"/>
+      <cmetref ref="COCT_MT010000UV01-msg" refname="A_EncounterUniversal"
+               refidentifier="COCT_MT010000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404002UV02-hmd" refname="Home Health Encounter Event Revise"
+              refidentifier="PRPA_HD404002UV02"/>
+      <cmetref ref="COCT_MT020000UV01-msg" refname="A_AppointmentUniversal"
+               refidentifier="COCT_MT020000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404002UV02-hmd" refname="Home Health Encounter Event Revise"
+              refidentifier="PRPA_HD404002UV02"/>
+      <cmetref ref="COCT_MT040203UV01-msg" refname="R_NotificationPartyContact"
+               refidentifier="COCT_MT040203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404002UV02-hmd" refname="Home Health Encounter Event Revise"
+              refidentifier="PRPA_HD404002UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404002UV02-hmd" refname="Home Health Encounter Event Revise"
+              refidentifier="PRPA_HD404002UV02"/>
+      <cmetref ref="COCT_MT090003UV01-msg" refname="R_AssignedEntityContact"
+               refidentifier="COCT_MT090003UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404002UV02-hmd" refname="Home Health Encounter Event Revise"
+              refidentifier="PRPA_HD404002UV02"/>
+      <cmetref ref="COCT_MT090103UV01-msg" refname="R_AssignedPersonContact"
+               refidentifier="COCT_MT090103UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404002UV02-hmd" refname="Home Health Encounter Event Revise"
+              refidentifier="PRPA_HD404002UV02"/>
+      <cmetref ref="COCT_MT090203UV01-msg" refname="R_AssignedOrganizationContact"
+               refidentifier="COCT_MT090203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404002UV02-hmd" refname="Home Health Encounter Event Revise"
+              refidentifier="PRPA_HD404002UV02"/>
+      <cmetref ref="COCT_MT110001UV01-msg" refname="A_AccountIdentified"
+               refidentifier="COCT_MT110001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404002UV02-hmd" refname="Home Health Encounter Event Revise"
+              refidentifier="PRPA_HD404002UV02"/>
+      <cmetref ref="COCT_MT120104UV-msg" refname="A_ObservationDxMinimal"
+               refidentifier="COCT_MT120104UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404002UV02-hmd" refname="Home Health Encounter Event Revise"
+              refidentifier="PRPA_HD404002UV02"/>
+      <cmetref ref="COCT_MT150001UV01-msg" refname="E_OrganizationIdentified"
+               refidentifier="COCT_MT150001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404002UV02-hmd" refname="Home Health Encounter Event Revise"
+              refidentifier="PRPA_HD404002UV02"/>
+      <cmetref ref="COCT_MT470000UV-msg" refname="A_ConsentUniversal"
+               refidentifier="COCT_MT470000UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404002UV02-hmd" refname="Home Health Encounter Event Revise"
+              refidentifier="PRPA_HD404002UV02"/>
+      <cmetref ref="COCT_MT710000UV01-msg" refname="E_PlaceUniversal"
+               refidentifier="COCT_MT710000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404003UV02-hmd" refname="Home Health Encounter Event Complete"
+              refidentifier="PRPA_HD404003UV02"/>
+      <cmetref ref="COCT_MT010000UV01-msg" refname="A_EncounterUniversal"
+               refidentifier="COCT_MT010000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404003UV02-hmd" refname="Home Health Encounter Event Complete"
+              refidentifier="PRPA_HD404003UV02"/>
+      <cmetref ref="COCT_MT020000UV01-msg" refname="A_AppointmentUniversal"
+               refidentifier="COCT_MT020000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404003UV02-hmd" refname="Home Health Encounter Event Complete"
+              refidentifier="PRPA_HD404003UV02"/>
+      <cmetref ref="COCT_MT040203UV01-msg" refname="R_NotificationPartyContact"
+               refidentifier="COCT_MT040203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404003UV02-hmd" refname="Home Health Encounter Event Complete"
+              refidentifier="PRPA_HD404003UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404003UV02-hmd" refname="Home Health Encounter Event Complete"
+              refidentifier="PRPA_HD404003UV02"/>
+      <cmetref ref="COCT_MT090003UV01-msg" refname="R_AssignedEntityContact"
+               refidentifier="COCT_MT090003UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404003UV02-hmd" refname="Home Health Encounter Event Complete"
+              refidentifier="PRPA_HD404003UV02"/>
+      <cmetref ref="COCT_MT090103UV01-msg" refname="R_AssignedPersonContact"
+               refidentifier="COCT_MT090103UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404003UV02-hmd" refname="Home Health Encounter Event Complete"
+              refidentifier="PRPA_HD404003UV02"/>
+      <cmetref ref="COCT_MT090203UV01-msg" refname="R_AssignedOrganizationContact"
+               refidentifier="COCT_MT090203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404003UV02-hmd" refname="Home Health Encounter Event Complete"
+              refidentifier="PRPA_HD404003UV02"/>
+      <cmetref ref="COCT_MT110001UV01-msg" refname="A_AccountIdentified"
+               refidentifier="COCT_MT110001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404003UV02-hmd" refname="Home Health Encounter Event Complete"
+              refidentifier="PRPA_HD404003UV02"/>
+      <cmetref ref="COCT_MT120104UV-msg" refname="A_ObservationDxMinimal"
+               refidentifier="COCT_MT120104UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404003UV02-hmd" refname="Home Health Encounter Event Complete"
+              refidentifier="PRPA_HD404003UV02"/>
+      <cmetref ref="COCT_MT150001UV01-msg" refname="E_OrganizationIdentified"
+               refidentifier="COCT_MT150001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404003UV02-hmd" refname="Home Health Encounter Event Complete"
+              refidentifier="PRPA_HD404003UV02"/>
+      <cmetref ref="COCT_MT470000UV-msg" refname="A_ConsentUniversal"
+               refidentifier="COCT_MT470000UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404003UV02-hmd" refname="Home Health Encounter Event Complete"
+              refidentifier="PRPA_HD404003UV02"/>
+      <cmetref ref="COCT_MT710000UV01-msg" refname="E_PlaceUniversal"
+               refidentifier="COCT_MT710000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404004UV02-hmd" refname="Home Health Encounter Event Abort"
+              refidentifier="PRPA_HD404004UV02"/>
+      <cmetref ref="COCT_MT040203UV01-msg" refname="R_NotificationPartyContact"
+               refidentifier="COCT_MT040203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404004UV02-hmd" refname="Home Health Encounter Event Abort"
+              refidentifier="PRPA_HD404004UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404004UV02-hmd" refname="Home Health Encounter Event Abort"
+              refidentifier="PRPA_HD404004UV02"/>
+      <cmetref ref="COCT_MT090103UV01-msg" refname="R_AssignedPersonContact"
+               refidentifier="COCT_MT090103UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404004UV02-hmd" refname="Home Health Encounter Event Abort"
+              refidentifier="PRPA_HD404004UV02"/>
+      <cmetref ref="COCT_MT090203UV01-msg" refname="R_AssignedOrganizationContact"
+               refidentifier="COCT_MT090203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404004UV02-hmd" refname="Home Health Encounter Event Abort"
+              refidentifier="PRPA_HD404004UV02"/>
+      <cmetref ref="COCT_MT150001UV01-msg" refname="E_OrganizationIdentified"
+               refidentifier="COCT_MT150001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404004UV02-hmd" refname="Home Health Encounter Event Abort"
+              refidentifier="PRPA_HD404004UV02"/>
+      <cmetref ref="COCT_MT710000UV01-msg" refname="E_PlaceUniversal"
+               refidentifier="COCT_MT710000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD404005UV02-hmd" refname="Home Health Encounter Event Nullify"
+              refidentifier="PRPA_HD404005UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411001UV02-hmd" refname="Ambulatory Encounter Intent Activate"
+              refidentifier="PRPA_HD411001UV02"/>
+      <cmetref ref="COCT_MT010000UV01-msg" refname="A_EncounterUniversal"
+               refidentifier="COCT_MT010000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411001UV02-hmd" refname="Ambulatory Encounter Intent Activate"
+              refidentifier="PRPA_HD411001UV02"/>
+      <cmetref ref="COCT_MT040203UV01-msg" refname="R_NotificationPartyContact"
+               refidentifier="COCT_MT040203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411001UV02-hmd" refname="Ambulatory Encounter Intent Activate"
+              refidentifier="PRPA_HD411001UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411001UV02-hmd" refname="Ambulatory Encounter Intent Activate"
+              refidentifier="PRPA_HD411001UV02"/>
+      <cmetref ref="COCT_MT070003UV02-msg" refname="R_LocationLocatedEntityContact"
+               refidentifier="COCT_MT070003UV02"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411001UV02-hmd" refname="Ambulatory Encounter Intent Activate"
+              refidentifier="PRPA_HD411001UV02"/>
+      <cmetref ref="COCT_MT090003UV01-msg" refname="R_AssignedEntityContact"
+               refidentifier="COCT_MT090003UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411001UV02-hmd" refname="Ambulatory Encounter Intent Activate"
+              refidentifier="PRPA_HD411001UV02"/>
+      <cmetref ref="COCT_MT090103UV01-msg" refname="R_AssignedPersonContact"
+               refidentifier="COCT_MT090103UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411001UV02-hmd" refname="Ambulatory Encounter Intent Activate"
+              refidentifier="PRPA_HD411001UV02"/>
+      <cmetref ref="COCT_MT090203UV01-msg" refname="R_AssignedOrganizationContact"
+               refidentifier="COCT_MT090203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411001UV02-hmd" refname="Ambulatory Encounter Intent Activate"
+              refidentifier="PRPA_HD411001UV02"/>
+      <cmetref ref="COCT_MT110001UV01-msg" refname="A_AccountIdentified"
+               refidentifier="COCT_MT110001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411001UV02-hmd" refname="Ambulatory Encounter Intent Activate"
+              refidentifier="PRPA_HD411001UV02"/>
+      <cmetref ref="COCT_MT120104UV-msg" refname="A_ObservationDxMinimal"
+               refidentifier="COCT_MT120104UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411001UV02-hmd" refname="Ambulatory Encounter Intent Activate"
+              refidentifier="PRPA_HD411001UV02"/>
+      <cmetref ref="COCT_MT150001UV01-msg" refname="E_OrganizationIdentified"
+               refidentifier="COCT_MT150001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411001UV02-hmd" refname="Ambulatory Encounter Intent Activate"
+              refidentifier="PRPA_HD411001UV02"/>
+      <cmetref ref="COCT_MT470000UV-msg" refname="A_ConsentUniversal"
+               refidentifier="COCT_MT470000UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411001UV02-hmd" refname="Ambulatory Encounter Intent Activate"
+              refidentifier="PRPA_HD411001UV02"/>
+      <cmetref ref="COCT_MT710000UV01-msg" refname="E_PlaceUniversal"
+               refidentifier="COCT_MT710000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411002UV02-hmd" refname="Ambulatory Encounter Intent Revise"
+              refidentifier="PRPA_HD411002UV02"/>
+      <cmetref ref="COCT_MT010000UV01-msg" refname="A_EncounterUniversal"
+               refidentifier="COCT_MT010000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411002UV02-hmd" refname="Ambulatory Encounter Intent Revise"
+              refidentifier="PRPA_HD411002UV02"/>
+      <cmetref ref="COCT_MT040203UV01-msg" refname="R_NotificationPartyContact"
+               refidentifier="COCT_MT040203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411002UV02-hmd" refname="Ambulatory Encounter Intent Revise"
+              refidentifier="PRPA_HD411002UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411002UV02-hmd" refname="Ambulatory Encounter Intent Revise"
+              refidentifier="PRPA_HD411002UV02"/>
+      <cmetref ref="COCT_MT070003UV02-msg" refname="R_LocationLocatedEntityContact"
+               refidentifier="COCT_MT070003UV02"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411002UV02-hmd" refname="Ambulatory Encounter Intent Revise"
+              refidentifier="PRPA_HD411002UV02"/>
+      <cmetref ref="COCT_MT090003UV01-msg" refname="R_AssignedEntityContact"
+               refidentifier="COCT_MT090003UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411002UV02-hmd" refname="Ambulatory Encounter Intent Revise"
+              refidentifier="PRPA_HD411002UV02"/>
+      <cmetref ref="COCT_MT090103UV01-msg" refname="R_AssignedPersonContact"
+               refidentifier="COCT_MT090103UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411002UV02-hmd" refname="Ambulatory Encounter Intent Revise"
+              refidentifier="PRPA_HD411002UV02"/>
+      <cmetref ref="COCT_MT090203UV01-msg" refname="R_AssignedOrganizationContact"
+               refidentifier="COCT_MT090203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411002UV02-hmd" refname="Ambulatory Encounter Intent Revise"
+              refidentifier="PRPA_HD411002UV02"/>
+      <cmetref ref="COCT_MT110001UV01-msg" refname="A_AccountIdentified"
+               refidentifier="COCT_MT110001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411002UV02-hmd" refname="Ambulatory Encounter Intent Revise"
+              refidentifier="PRPA_HD411002UV02"/>
+      <cmetref ref="COCT_MT120104UV-msg" refname="A_ObservationDxMinimal"
+               refidentifier="COCT_MT120104UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411002UV02-hmd" refname="Ambulatory Encounter Intent Revise"
+              refidentifier="PRPA_HD411002UV02"/>
+      <cmetref ref="COCT_MT150001UV01-msg" refname="E_OrganizationIdentified"
+               refidentifier="COCT_MT150001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411002UV02-hmd" refname="Ambulatory Encounter Intent Revise"
+              refidentifier="PRPA_HD411002UV02"/>
+      <cmetref ref="COCT_MT470000UV-msg" refname="A_ConsentUniversal"
+               refidentifier="COCT_MT470000UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411002UV02-hmd" refname="Ambulatory Encounter Intent Revise"
+              refidentifier="PRPA_HD411002UV02"/>
+      <cmetref ref="COCT_MT710000UV01-msg" refname="E_PlaceUniversal"
+               refidentifier="COCT_MT710000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411003UV02-hmd" refname="Ambulatory Encounter Intent Abort"
+              refidentifier="PRPA_HD411003UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411003UV02-hmd" refname="Ambulatory Encounter Intent Abort"
+              refidentifier="PRPA_HD411003UV02"/>
+      <cmetref ref="COCT_MT090103UV01-msg" refname="R_AssignedPersonContact"
+               refidentifier="COCT_MT090103UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411003UV02-hmd" refname="Ambulatory Encounter Intent Abort"
+              refidentifier="PRPA_HD411003UV02"/>
+      <cmetref ref="COCT_MT090203UV01-msg" refname="R_AssignedOrganizationContact"
+               refidentifier="COCT_MT090203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411003UV02-hmd" refname="Ambulatory Encounter Intent Abort"
+              refidentifier="PRPA_HD411003UV02"/>
+      <cmetref ref="COCT_MT150001UV01-msg" refname="E_OrganizationIdentified"
+               refidentifier="COCT_MT150001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411003UV02-hmd" refname="Ambulatory Encounter Intent Abort"
+              refidentifier="PRPA_HD411003UV02"/>
+      <cmetref ref="COCT_MT710000UV01-msg" refname="E_PlaceUniversal"
+               refidentifier="COCT_MT710000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411004UV02-hmd"
+              refname="Ambulatory Encounter Intent Revise Reschedule"
+              refidentifier="PRPA_HD411004UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411004UV02-hmd"
+              refname="Ambulatory Encounter Intent Revise Reschedule"
+              refidentifier="PRPA_HD411004UV02"/>
+      <cmetref ref="COCT_MT070003UV02-msg" refname="R_LocationLocatedEntityContact"
+               refidentifier="COCT_MT070003UV02"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411004UV02-hmd"
+              refname="Ambulatory Encounter Intent Revise Reschedule"
+              refidentifier="PRPA_HD411004UV02"/>
+      <cmetref ref="COCT_MT090103UV01-msg" refname="R_AssignedPersonContact"
+               refidentifier="COCT_MT090103UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411004UV02-hmd"
+              refname="Ambulatory Encounter Intent Revise Reschedule"
+              refidentifier="PRPA_HD411004UV02"/>
+      <cmetref ref="COCT_MT150001UV01-msg" refname="E_OrganizationIdentified"
+               refidentifier="COCT_MT150001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD411004UV02-hmd"
+              refname="Ambulatory Encounter Intent Revise Reschedule"
+              refidentifier="PRPA_HD411004UV02"/>
+      <cmetref ref="COCT_MT710000UV01-msg" refname="E_PlaceUniversal"
+               refidentifier="COCT_MT710000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD412001UV02-hmd" refname="Active Inpatient Encounter Appointment"
+              refidentifier="PRPA_HD412001UV02"/>
+      <cmetref ref="COCT_MT010000UV01-msg" refname="A_EncounterUniversal"
+               refidentifier="COCT_MT010000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD412001UV02-hmd" refname="Active Inpatient Encounter Appointment"
+              refidentifier="PRPA_HD412001UV02"/>
+      <cmetref ref="COCT_MT040203UV01-msg" refname="R_NotificationPartyContact"
+               refidentifier="COCT_MT040203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD412001UV02-hmd" refname="Active Inpatient Encounter Appointment"
+              refidentifier="PRPA_HD412001UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD412001UV02-hmd" refname="Active Inpatient Encounter Appointment"
+              refidentifier="PRPA_HD412001UV02"/>
+      <cmetref ref="COCT_MT070003UV02-msg" refname="R_LocationLocatedEntityContact"
+               refidentifier="COCT_MT070003UV02"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD412001UV02-hmd" refname="Active Inpatient Encounter Appointment"
+              refidentifier="PRPA_HD412001UV02"/>
+      <cmetref ref="COCT_MT090000UV01-msg" refname="R_AssignedEntityUniversal"
+               refidentifier="COCT_MT090000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD412001UV02-hmd" refname="Active Inpatient Encounter Appointment"
+              refidentifier="PRPA_HD412001UV02"/>
+      <cmetref ref="COCT_MT090100UV01-msg" refname="R_AssignedPersonUniversal"
+               refidentifier="COCT_MT090100UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD412001UV02-hmd" refname="Active Inpatient Encounter Appointment"
+              refidentifier="PRPA_HD412001UV02"/>
+      <cmetref ref="COCT_MT090200UV01-msg" refname="R_AssignedOrganizationUniversal"
+               refidentifier="COCT_MT090200UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD412001UV02-hmd" refname="Active Inpatient Encounter Appointment"
+              refidentifier="PRPA_HD412001UV02"/>
+      <cmetref ref="COCT_MT110300UV04-msg" refname="A_AccountGuarantorUniversal"
+               refidentifier="COCT_MT110300UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD412001UV02-hmd" refname="Active Inpatient Encounter Appointment"
+              refidentifier="PRPA_HD412001UV02"/>
+      <cmetref ref="COCT_MT120104UV-msg" refname="A_ObservationDxMinimal"
+               refidentifier="COCT_MT120104UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD412001UV02-hmd" refname="Active Inpatient Encounter Appointment"
+              refidentifier="PRPA_HD412001UV02"/>
+      <cmetref ref="COCT_MT150001UV01-msg" refname="E_OrganizationIdentified"
+               refidentifier="COCT_MT150001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD412001UV02-hmd" refname="Active Inpatient Encounter Appointment"
+              refidentifier="PRPA_HD412001UV02"/>
+      <cmetref ref="COCT_MT470000UV-msg" refname="A_ConsentUniversal"
+               refidentifier="COCT_MT470000UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD412001UV02-hmd" refname="Active Inpatient Encounter Appointment"
+              refidentifier="PRPA_HD412001UV02"/>
+      <cmetref ref="COCT_MT710000UV01-msg" refname="E_PlaceUniversal"
+               refidentifier="COCT_MT710000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD414001UV02-hmd" refname="Home Health Encounter Intent Activate"
+              refidentifier="PRPA_HD414001UV02"/>
+      <cmetref ref="COCT_MT040203UV01-msg" refname="R_NotificationPartyContact"
+               refidentifier="COCT_MT040203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD414001UV02-hmd" refname="Home Health Encounter Intent Activate"
+              refidentifier="PRPA_HD414001UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD414001UV02-hmd" refname="Home Health Encounter Intent Activate"
+              refidentifier="PRPA_HD414001UV02"/>
+      <cmetref ref="COCT_MT090003UV01-msg" refname="R_AssignedEntityContact"
+               refidentifier="COCT_MT090003UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD414001UV02-hmd" refname="Home Health Encounter Intent Activate"
+              refidentifier="PRPA_HD414001UV02"/>
+      <cmetref ref="COCT_MT090103UV01-msg" refname="R_AssignedPersonContact"
+               refidentifier="COCT_MT090103UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD414001UV02-hmd" refname="Home Health Encounter Intent Activate"
+              refidentifier="PRPA_HD414001UV02"/>
+      <cmetref ref="COCT_MT090203UV01-msg" refname="R_AssignedOrganizationContact"
+               refidentifier="COCT_MT090203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD414001UV02-hmd" refname="Home Health Encounter Intent Activate"
+              refidentifier="PRPA_HD414001UV02"/>
+      <cmetref ref="COCT_MT110001UV01-msg" refname="A_AccountIdentified"
+               refidentifier="COCT_MT110001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD414001UV02-hmd" refname="Home Health Encounter Intent Activate"
+              refidentifier="PRPA_HD414001UV02"/>
+      <cmetref ref="COCT_MT120104UV-msg" refname="A_ObservationDxMinimal"
+               refidentifier="COCT_MT120104UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD414001UV02-hmd" refname="Home Health Encounter Intent Activate"
+              refidentifier="PRPA_HD414001UV02"/>
+      <cmetref ref="COCT_MT150001UV01-msg" refname="E_OrganizationIdentified"
+               refidentifier="COCT_MT150001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD414001UV02-hmd" refname="Home Health Encounter Intent Activate"
+              refidentifier="PRPA_HD414001UV02"/>
+      <cmetref ref="COCT_MT470000UV-msg" refname="A_ConsentUniversal"
+               refidentifier="COCT_MT470000UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD414001UV02-hmd" refname="Home Health Encounter Intent Activate"
+              refidentifier="PRPA_HD414001UV02"/>
+      <cmetref ref="COCT_MT710000UV01-msg" refname="E_PlaceUniversal"
+               refidentifier="COCT_MT710000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD414002UV02-hmd" refname="Home Health Encounter Intent Revise"
+              refidentifier="PRPA_HD414002UV02"/>
+      <cmetref ref="COCT_MT040203UV01-msg" refname="R_NotificationPartyContact"
+               refidentifier="COCT_MT040203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD414002UV02-hmd" refname="Home Health Encounter Intent Revise"
+              refidentifier="PRPA_HD414002UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD414002UV02-hmd" refname="Home Health Encounter Intent Revise"
+              refidentifier="PRPA_HD414002UV02"/>
+      <cmetref ref="COCT_MT090003UV01-msg" refname="R_AssignedEntityContact"
+               refidentifier="COCT_MT090003UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD414002UV02-hmd" refname="Home Health Encounter Intent Revise"
+              refidentifier="PRPA_HD414002UV02"/>
+      <cmetref ref="COCT_MT090103UV01-msg" refname="R_AssignedPersonContact"
+               refidentifier="COCT_MT090103UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD414002UV02-hmd" refname="Home Health Encounter Intent Revise"
+              refidentifier="PRPA_HD414002UV02"/>
+      <cmetref ref="COCT_MT090203UV01-msg" refname="R_AssignedOrganizationContact"
+               refidentifier="COCT_MT090203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD414002UV02-hmd" refname="Home Health Encounter Intent Revise"
+              refidentifier="PRPA_HD414002UV02"/>
+      <cmetref ref="COCT_MT110001UV01-msg" refname="A_AccountIdentified"
+               refidentifier="COCT_MT110001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD414002UV02-hmd" refname="Home Health Encounter Intent Revise"
+              refidentifier="PRPA_HD414002UV02"/>
+      <cmetref ref="COCT_MT120104UV-msg" refname="A_ObservationDxMinimal"
+               refidentifier="COCT_MT120104UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD414002UV02-hmd" refname="Home Health Encounter Intent Revise"
+              refidentifier="PRPA_HD414002UV02"/>
+      <cmetref ref="COCT_MT150001UV01-msg" refname="E_OrganizationIdentified"
+               refidentifier="COCT_MT150001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD414002UV02-hmd" refname="Home Health Encounter Intent Revise"
+              refidentifier="PRPA_HD414002UV02"/>
+      <cmetref ref="COCT_MT470000UV-msg" refname="A_ConsentUniversal"
+               refidentifier="COCT_MT470000UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD414002UV02-hmd" refname="Home Health Encounter Intent Revise"
+              refidentifier="PRPA_HD414002UV02"/>
+      <cmetref ref="COCT_MT710000UV01-msg" refname="E_PlaceUniversal"
+               refidentifier="COCT_MT710000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD414003UV02-hmd" refname="Home Health Encounter Intent Abort"
+              refidentifier="PRPA_HD414003UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD414003UV02-hmd" refname="Home Health Encounter Intent Abort"
+              refidentifier="PRPA_HD414003UV02"/>
+      <cmetref ref="COCT_MT090103UV01-msg" refname="R_AssignedPersonContact"
+               refidentifier="COCT_MT090103UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD414003UV02-hmd" refname="Home Health Encounter Intent Abort"
+              refidentifier="PRPA_HD414003UV02"/>
+      <cmetref ref="COCT_MT090203UV01-msg" refname="R_AssignedOrganizationContact"
+               refidentifier="COCT_MT090203UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD414003UV02-hmd" refname="Home Health Encounter Intent Abort"
+              refidentifier="PRPA_HD414003UV02"/>
+      <cmetref ref="COCT_MT150001UV01-msg" refname="E_OrganizationIdentified"
+               refidentifier="COCT_MT150001UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD414003UV02-hmd" refname="Home Health Encounter Intent Abort"
+              refidentifier="PRPA_HD414003UV02"/>
+      <cmetref ref="COCT_MT710000UV01-msg" refname="E_PlaceUniversal"
+               refidentifier="COCT_MT710000UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD414004UV02-hmd"
+              refname="Home Health Encounter Intent Revise Reschedule"
+              refidentifier="PRPA_HD414004UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD900101UV02-hmd" refname="Document Validity Verification Request"
+              refidentifier="PRPA_HD900101UV02"/>
+      <cmetref ref="COCT_MT040008UV-msg" refname="R_ResponsibleIdentified-informational"
+               refidentifier="COCT_MT040008UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD900102UV02-hmd" refname="Document Validity Verification Response"
+              refidentifier="PRPA_HD900102UV02"/>
+      <cmetref ref="COCT_MT090008UV-msg" refname="R_AssignedEntityIdentified-informational"
+               refidentifier="COCT_MT090008UV"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD900350UV02-hmd" refname="Find Encounters Query Response"
+              refidentifier="PRPA_HD900350UV02"/>
+      <cmetref ref="COCT_MT050002UV04-msg" refname="R_PatientIdentified-confirmable"
+               refidentifier="COCT_MT050002UV04"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD900350UV02-hmd" refname="Find Encounters Query Response"
+              refidentifier="PRPA_HD900350UV02"/>
+      <cmetref ref="COCT_MT090100UV01-msg" refname="R_AssignedPersonUniversal"
+               refidentifier="COCT_MT090100UV01"/>
+   </cmetuse>
+   <cmetuse role="uses">
+      <hmdref ref="PRPA_HD900350UV02-hmd" refname="Find Encounters Query Response"
+              refidentifier="PRPA_HD900350UV02"/>
+      <cmetref ref="COCT_MT090200UV01-msg" refname="R_AssignedOrganizationUniversal"
+               refidentifier="COCT_MT090200UV01"/>
+   </cmetuse>
+</usage>

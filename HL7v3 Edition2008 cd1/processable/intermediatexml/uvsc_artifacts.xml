@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<spec id="PRSC_DO000002UV-ic" type="dependencyTree" sectionCode="UVSC">
+   <header>
+      <title> Scheduling Dependency Annex
+				</title>
+      <version>V 00-00</version>
+      <ballot type="NormativeStandard" number="1"/>
+      <date>6/31/2008</date>
+      <legalese copyRightDate="2008"/>
+   </header>
+   <body>
+      <div1 id="all-sortOrder">
+         <head> Scheduling in Structured Sort Order</head>
+         <artree role="ssn">
+            <artreeitem>
+               <stref id="d0e22141" role="tree-intro" sectID="UVSC" sectType="SB" refName="Domain: Scheduling" refFamiliarName="Domain: Scheduling" refIdentifier="PRSC_DO000002UV"/>
+               <artreeitem>
+                  <stref id="d0e22141" role="tree-intro" sectID="" sectType="SB" refName="Domain Story Boards" refFamiliarName="Domain Story Boards" refIdentifier=""/>
+                  <artreeitem>
+                     <stref id="treeRef-DOSC_ST000001UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Appointment Introduction" refFamiliarName="Appointment Introduction" refIdentifier="DOSC_ST000001UV01"/>
+                     <artreeitem>
+                        <stref id="treeRef-DOSC_SN100002UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Appointment Notifications" refFamiliarName="Appointment Notifications" refIdentifier="DOSC_SN100002UV01"/>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+               <artreeitem>
+                  <rmimref id="treeRef-PRSC_DM000000UV" role="tree-element" sectID="UVSC" sectType="SB" refName="Scheduling Domain Model" refFamiliarName="Scheduling Domain Model" refIdentifier="PRSC_DM000000UV"/>
+               </artreeitem>
+               <artreeitem>
+                  <stref id="d0e22150" role="tree-intro" sectID="UVSC" sectType="SB" refName="Topic: Appointment" refFamiliarName="Topic: Appointment" refIdentifier="PRSC_DO000002UV"/>
+                  <artreeitem>
+                     <stref id="d0e22150" role="tree-intro" sectID="" sectType="SB" refName=" Story Boards" refFamiliarName=" Story Boards" refIdentifier=""/>
+                     <artreeitem>
+                        <stref id="treeRef-PRSC_ST000002UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Appointment Notification" refFamiliarName="Appointment Notification" refIdentifier="PRSC_ST000002UV01"/>
+                        <artreeitem>
+                           <stref id="treeRef-PRSC_SN010002UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Physician Arranges For An Inpatient Stay" refFamiliarName="Physician Arranges For An Inpatient Stay" refIdentifier="PRSC_SN010002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PRSC_SN010003UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Patient Reschedules Outpatient Appointment" refFamiliarName="Patient Reschedules Outpatient Appointment" refIdentifier="PRSC_SN010003UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PRSC_SN010004UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Patient Revises Outpatient Appointment" refFamiliarName="Patient Revises Outpatient Appointment" refIdentifier="PRSC_SN010004UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PRSC_SN010005UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Physician Cancels Inpatient Stay for Patient" refFamiliarName="Physician Cancels Inpatient Stay for Patient" refIdentifier="PRSC_SN010005UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PRSC_SN010101UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Patient Makes Outpatient Appointment" refFamiliarName="Patient Makes Outpatient Appointment" refIdentifier="PRSC_SN010101UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PRSC_IN010101UV01" role="dependency" sectID="UVSC" sectType="SB" refName="New Appointment Notification" refFamiliarName="New Appointment Notification" refIdentifier="PRSC_IN010101UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PRSC_IN010201UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Revise Appointment Notification" refFamiliarName="Revise Appointment Notification" refIdentifier="PRSC_IN010201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PRSC_IN020101UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Cancel Appointment Notification" refFamiliarName="Cancel Appointment Notification" refIdentifier="PRSC_IN020101UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22150" role="tree-intro" sectID="" sectType="SB" refName=" Application Roles" refFamiliarName=" Application Roles" refIdentifier=""/>
+                     <artreeitem>
+                        <arref id="treeRef-PRSC_AR010100UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Appointment Informer" refFamiliarName="Appointment Informer" refIdentifier="PRSC_AR010100UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-PRSC_IN010101UV01" role="dependency" sectID="UVSC" sectType="SB" refName="New Appointment Notification" refFamiliarName="New Appointment Notification" refIdentifier="PRSC_IN010101UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PRSC_IN010201UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Revise Appointment Notification" refFamiliarName="Revise Appointment Notification" refIdentifier="PRSC_IN010201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PRSC_IN020101UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Cancel Appointment Notification" refFamiliarName="Cancel Appointment Notification" refIdentifier="PRSC_IN020101UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <arref id="treeRef-PRSC_AR020000UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Appointment Tracker" refFamiliarName="Appointment Tracker" refIdentifier="PRSC_AR020000UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-PRSC_IN010101UV01" role="dependency" sectID="UVSC" sectType="SB" refName="New Appointment Notification" refFamiliarName="New Appointment Notification" refIdentifier="PRSC_IN010101UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PRSC_IN010201UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Revise Appointment Notification" refFamiliarName="Revise Appointment Notification" refIdentifier="PRSC_IN010201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PRSC_IN020101UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Cancel Appointment Notification" refFamiliarName="Cancel Appointment Notification" refIdentifier="PRSC_IN020101UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22150" role="tree-intro" sectID="" sectType="SB" refName=" Trigger Events" refFamiliarName=" Trigger Events" refIdentifier=""/>
+                     <artreeitem>
+                        <teref id="treeRef-PRSC_TE010100UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="New Appointment Notification" refFamiliarName="New Appointment Notification" refIdentifier="PRSC_TE010100UV01"/>
+                     </artreeitem>
+                     <artreeitem>
+                        <teref id="treeRef-PRSC_TE020100UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Appointment Cancel Notification" refFamiliarName="Appointment Cancel Notification" refIdentifier="PRSC_TE020100UV01"/>
+                     </artreeitem>
+                     <artreeitem>
+                        <teref id="treeRef-PRSC_TE010200UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Appointment Revise Notification" refFamiliarName="Appointment Revise Notification" refIdentifier="PRSC_TE010200UV01"/>
+                     </artreeitem>
+                     <artreeitem>
+                        <teref id="treeRef-PRSC_TE020200UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Appointment Reschedule Notification" refFamiliarName="Appointment Reschedule Notification" refIdentifier="PRSC_TE020200UV01"/>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22150" role="tree-intro" sectID="" sectType="SB" refName=" Refined Message Information Models" refFamiliarName=" Refined Message Information Models" refIdentifier=""/>
+                     <artreeitem>
+                        <rmimref id="treeRef-PRSC_RM010000UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Full Appointment RMIM" refFamiliarName="Full Appointment RMIM" refIdentifier="PRSC_RM010000UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-PRSC_HD010100UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="New Appointment" refFamiliarName="New Appointment" refIdentifier="PRSC_HD010100UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-PRSC_MT010101UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="New Appointment Notification" refFamiliarName="New Appointment Notification" refIdentifier="PRSC_MT010101UV01"/>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT050002UV04" role="dependency" sectID="UVCT" sectType="SB" refName="R_PatientIdentified-confirmable" refFamiliarName="R_PatientIdentified-confirmable" refIdentifier="COCT_MT050002UV04"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT150000UV02" role="dependency" sectID="UVCT" sectType="SB" refName="E_OrganizationUniversal" refFamiliarName="E_OrganizationUniversal" refIdentifier="COCT_MT150000UV02"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090100UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedPersonUniversal" refFamiliarName="R_AssignedPersonUniversal" refIdentifier="COCT_MT090100UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT240000UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_ServiceDeliveryLocationUniversal" refFamiliarName="R_ServiceDeliveryLocationUniversal" refIdentifier="COCT_MT240000UV01"/>
+                              </artreeitem>
+                           </artreeitem>
+                        </artreeitem>
+                        <artreeitem>
+                           <hmdref id="treeRef-PRSC_HD010200UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Revise Appointment" refFamiliarName="Revise Appointment" refIdentifier="PRSC_HD010200UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-PRSC_MT010201UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Revise Appointment Notification" refFamiliarName="Revise Appointment Notification" refIdentifier="PRSC_MT010201UV01"/>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT050002UV04" role="dependency" sectID="UVCT" sectType="SB" refName="R_PatientIdentified-confirmable" refFamiliarName="R_PatientIdentified-confirmable" refIdentifier="COCT_MT050002UV04"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT150000UV02" role="dependency" sectID="UVCT" sectType="SB" refName="E_OrganizationUniversal" refFamiliarName="E_OrganizationUniversal" refIdentifier="COCT_MT150000UV02"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090100UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedPersonUniversal" refFamiliarName="R_AssignedPersonUniversal" refIdentifier="COCT_MT090100UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT240000UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_ServiceDeliveryLocationUniversal" refFamiliarName="R_ServiceDeliveryLocationUniversal" refIdentifier="COCT_MT240000UV01"/>
+                              </artreeitem>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <rmimref id="treeRef-PRSC_RM020000UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Minimum Appointment RMIM" refFamiliarName="Minimum Appointment RMIM" refIdentifier="PRSC_RM020000UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-PRSC_HD020100UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Cancel Appointment" refFamiliarName="Cancel Appointment" refIdentifier="PRSC_HD020100UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-PRSC_MT020101UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Cancel Appointment Notification" refFamiliarName="Cancel Appointment Notification" refIdentifier="PRSC_MT020101UV01"/>
+                           </artreeitem>
+                        </artreeitem>
+                        <artreeitem>
+                           <hmdref id="treeRef-PRSC_HD020200UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Reschedule Appointment" refFamiliarName="Reschedule Appointment" refIdentifier="PRSC_HD020200UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-PRSC_MT020201UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Reschedule Appointment Notification" refFamiliarName="Reschedule Appointment Notification" refIdentifier="PRSC_MT020201UV01"/>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22150" role="tree-intro" sectID="" sectType="SB" refName=" Interactions" refFamiliarName=" Interactions" refIdentifier=""/>
+                     <artreeitem>
+                        <intref id="treeRef-PRSC_IN010101UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="New Appointment Notification" refFamiliarName="New Appointment Notification" refIdentifier="PRSC_IN010101UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PRSC_AR010100UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Appointment Informer" refFamiliarName="Appointment Informer" refIdentifier="PRSC_AR010100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PRSC_AR020000UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Appointment Tracker" refFamiliarName="Appointment Tracker" refIdentifier="PRSC_AR020000UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PRSC_TE010100UV01" role="dependency" sectID="UVSC" sectType="SB" refName="New Appointment Notification" refFamiliarName="New Appointment Notification" refIdentifier="PRSC_TE010100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PRSC_MT010101UV01" role="dependency" sectID="UVSC" sectType="SB" refName="New Appointment Notification" refFamiliarName="New Appointment Notification" refIdentifier="PRSC_MT010101UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <intref id="treeRef-PRSC_IN010201UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Revise Appointment Notification" refFamiliarName="Revise Appointment Notification" refIdentifier="PRSC_IN010201UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PRSC_AR010100UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Appointment Informer" refFamiliarName="Appointment Informer" refIdentifier="PRSC_AR010100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PRSC_AR020000UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Appointment Tracker" refFamiliarName="Appointment Tracker" refIdentifier="PRSC_AR020000UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PRSC_TE010200UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Appointment Revise Notification" refFamiliarName="Appointment Revise Notification" refIdentifier="PRSC_TE010200UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PRSC_MT010201UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Revise Appointment Notification" refFamiliarName="Revise Appointment Notification" refIdentifier="PRSC_MT010201UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <intref id="treeRef-PRSC_IN020201UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Reschedule Appointment Notification" refFamiliarName="Reschedule Appointment Notification" refIdentifier="PRSC_IN020201UV01"/>
+                        <artreeitem>
+                           <teref id="treeRef-PRSC_TE020200UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Appointment Reschedule Notification" refFamiliarName="Appointment Reschedule Notification" refIdentifier="PRSC_TE020200UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PRSC_MT020201UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Reschedule Appointment Notification" refFamiliarName="Reschedule Appointment Notification" refIdentifier="PRSC_MT020201UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <intref id="treeRef-PRSC_IN020101UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Cancel Appointment Notification" refFamiliarName="Cancel Appointment Notification" refIdentifier="PRSC_IN020101UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PRSC_AR010100UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Appointment Informer" refFamiliarName="Appointment Informer" refIdentifier="PRSC_AR010100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PRSC_AR020000UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Appointment Tracker" refFamiliarName="Appointment Tracker" refIdentifier="PRSC_AR020000UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PRSC_TE020100UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Appointment Cancel Notification" refFamiliarName="Appointment Cancel Notification" refIdentifier="PRSC_TE020100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PRSC_MT020101UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Cancel Appointment Notification" refFamiliarName="Cancel Appointment Notification" refIdentifier="PRSC_MT020101UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+            </artreeitem>
+         </artree>
+      </div1>
+      <div1 id="all-codeOrder">
+         <head> Scheduling in Artifact Code Order</head>
+         <artree role="code">
+            <artreeitem>
+               <stref id="d0e22141" role="tree-intro" sectID="UVSC" sectType="SB" refName="Domain: Scheduling" refFamiliarName="Domain: Scheduling" refIdentifier="PRSC_DO000002UV"/>
+               <artreeitem>
+                  <stref id="d0e22141" role="tree-intro" sectID="" sectType="SB" refName="Domain Story Boards" refFamiliarName="Domain Story Boards" refIdentifier=""/>
+                  <artreeitem>
+                     <stref id="treeRef-DOSC_ST000001UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Appointment Introduction" refFamiliarName="Appointment Introduction" refIdentifier="DOSC_ST000001UV01"/>
+                     <artreeitem>
+                        <stref id="treeRef-DOSC_SN100002UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Appointment Notifications" refFamiliarName="Appointment Notifications" refIdentifier="DOSC_SN100002UV01"/>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+               <artreeitem>
+                  <rmimref id="treeRef-PRSC_DM000000UV" role="tree-element" sectID="UVSC" sectType="SB" refName="Scheduling Domain Model" refFamiliarName="Scheduling Domain Model" refIdentifier="PRSC_DM000000UV"/>
+               </artreeitem>
+               <artreeitem>
+                  <stref id="d0e22150" role="tree-intro" sectID="UVSC" sectType="SB" refName="Topic: Appointment" refFamiliarName="Topic: Appointment" refIdentifier="PRSC_DO000002UV"/>
+                  <artreeitem>
+                     <stref id="d0e22150" role="tree-intro" sectID="" sectType="SB" refName=" Story Boards" refFamiliarName=" Story Boards" refIdentifier=""/>
+                     <artreeitem>
+                        <stref id="treeRef-PRSC_ST000002UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Appointment Notification" refFamiliarName="Appointment Notification" refIdentifier="PRSC_ST000002UV01"/>
+                        <artreeitem>
+                           <stref id="treeRef-PRSC_SN010002UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Physician Arranges For An Inpatient Stay" refFamiliarName="Physician Arranges For An Inpatient Stay" refIdentifier="PRSC_SN010002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PRSC_SN010003UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Patient Reschedules Outpatient Appointment" refFamiliarName="Patient Reschedules Outpatient Appointment" refIdentifier="PRSC_SN010003UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PRSC_SN010004UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Patient Revises Outpatient Appointment" refFamiliarName="Patient Revises Outpatient Appointment" refIdentifier="PRSC_SN010004UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PRSC_SN010005UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Physician Cancels Inpatient Stay for Patient" refFamiliarName="Physician Cancels Inpatient Stay for Patient" refIdentifier="PRSC_SN010005UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PRSC_SN010101UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Patient Makes Outpatient Appointment" refFamiliarName="Patient Makes Outpatient Appointment" refIdentifier="PRSC_SN010101UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PRSC_IN010101UV01" role="dependency" sectID="UVSC" sectType="SB" refName="New Appointment Notification" refFamiliarName="New Appointment Notification" refIdentifier="PRSC_IN010101UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PRSC_IN010201UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Revise Appointment Notification" refFamiliarName="Revise Appointment Notification" refIdentifier="PRSC_IN010201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PRSC_IN020101UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Cancel Appointment Notification" refFamiliarName="Cancel Appointment Notification" refIdentifier="PRSC_IN020101UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22150" role="tree-intro" sectID="" sectType="SB" refName=" Application Roles" refFamiliarName=" Application Roles" refIdentifier=""/>
+                     <artreeitem>
+                        <arref id="treeRef-PRSC_AR010100UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Appointment Informer" refFamiliarName="Appointment Informer" refIdentifier="PRSC_AR010100UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-PRSC_IN010101UV01" role="dependency" sectID="UVSC" sectType="SB" refName="New Appointment Notification" refFamiliarName="New Appointment Notification" refIdentifier="PRSC_IN010101UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PRSC_IN010201UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Revise Appointment Notification" refFamiliarName="Revise Appointment Notification" refIdentifier="PRSC_IN010201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PRSC_IN020101UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Cancel Appointment Notification" refFamiliarName="Cancel Appointment Notification" refIdentifier="PRSC_IN020101UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <arref id="treeRef-PRSC_AR020000UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Appointment Tracker" refFamiliarName="Appointment Tracker" refIdentifier="PRSC_AR020000UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-PRSC_IN010101UV01" role="dependency" sectID="UVSC" sectType="SB" refName="New Appointment Notification" refFamiliarName="New Appointment Notification" refIdentifier="PRSC_IN010101UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PRSC_IN010201UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Revise Appointment Notification" refFamiliarName="Revise Appointment Notification" refIdentifier="PRSC_IN010201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PRSC_IN020101UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Cancel Appointment Notification" refFamiliarName="Cancel Appointment Notification" refIdentifier="PRSC_IN020101UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22150" role="tree-intro" sectID="" sectType="SB" refName=" Trigger Events" refFamiliarName=" Trigger Events" refIdentifier=""/>
+                     <artreeitem>
+                        <teref id="treeRef-PRSC_TE010100UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="New Appointment Notification" refFamiliarName="New Appointment Notification" refIdentifier="PRSC_TE010100UV01"/>
+                     </artreeitem>
+                     <artreeitem>
+                        <teref id="treeRef-PRSC_TE010200UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Appointment Revise Notification" refFamiliarName="Appointment Revise Notification" refIdentifier="PRSC_TE010200UV01"/>
+                     </artreeitem>
+                     <artreeitem>
+                        <teref id="treeRef-PRSC_TE020100UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Appointment Cancel Notification" refFamiliarName="Appointment Cancel Notification" refIdentifier="PRSC_TE020100UV01"/>
+                     </artreeitem>
+                     <artreeitem>
+                        <teref id="treeRef-PRSC_TE020200UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Appointment Reschedule Notification" refFamiliarName="Appointment Reschedule Notification" refIdentifier="PRSC_TE020200UV01"/>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22150" role="tree-intro" sectID="" sectType="SB" refName=" Refined Message Information Models" refFamiliarName=" Refined Message Information Models" refIdentifier=""/>
+                     <artreeitem>
+                        <rmimref id="treeRef-PRSC_RM010000UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Full Appointment RMIM" refFamiliarName="Full Appointment RMIM" refIdentifier="PRSC_RM010000UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-PRSC_HD010100UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="New Appointment" refFamiliarName="New Appointment" refIdentifier="PRSC_HD010100UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-PRSC_MT010101UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="New Appointment Notification" refFamiliarName="New Appointment Notification" refIdentifier="PRSC_MT010101UV01"/>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT050002UV04" role="dependency" sectID="UVCT" sectType="SB" refName="R_PatientIdentified-confirmable" refFamiliarName="R_PatientIdentified-confirmable" refIdentifier="COCT_MT050002UV04"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT150000UV02" role="dependency" sectID="UVCT" sectType="SB" refName="E_OrganizationUniversal" refFamiliarName="E_OrganizationUniversal" refIdentifier="COCT_MT150000UV02"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090100UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedPersonUniversal" refFamiliarName="R_AssignedPersonUniversal" refIdentifier="COCT_MT090100UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT240000UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_ServiceDeliveryLocationUniversal" refFamiliarName="R_ServiceDeliveryLocationUniversal" refIdentifier="COCT_MT240000UV01"/>
+                              </artreeitem>
+                           </artreeitem>
+                        </artreeitem>
+                        <artreeitem>
+                           <hmdref id="treeRef-PRSC_HD010200UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Revise Appointment" refFamiliarName="Revise Appointment" refIdentifier="PRSC_HD010200UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-PRSC_MT010201UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Revise Appointment Notification" refFamiliarName="Revise Appointment Notification" refIdentifier="PRSC_MT010201UV01"/>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT050002UV04" role="dependency" sectID="UVCT" sectType="SB" refName="R_PatientIdentified-confirmable" refFamiliarName="R_PatientIdentified-confirmable" refIdentifier="COCT_MT050002UV04"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT150000UV02" role="dependency" sectID="UVCT" sectType="SB" refName="E_OrganizationUniversal" refFamiliarName="E_OrganizationUniversal" refIdentifier="COCT_MT150000UV02"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090100UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedPersonUniversal" refFamiliarName="R_AssignedPersonUniversal" refIdentifier="COCT_MT090100UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT240000UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_ServiceDeliveryLocationUniversal" refFamiliarName="R_ServiceDeliveryLocationUniversal" refIdentifier="COCT_MT240000UV01"/>
+                              </artreeitem>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <rmimref id="treeRef-PRSC_RM020000UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Minimum Appointment RMIM" refFamiliarName="Minimum Appointment RMIM" refIdentifier="PRSC_RM020000UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-PRSC_HD020100UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Cancel Appointment" refFamiliarName="Cancel Appointment" refIdentifier="PRSC_HD020100UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-PRSC_MT020101UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Cancel Appointment Notification" refFamiliarName="Cancel Appointment Notification" refIdentifier="PRSC_MT020101UV01"/>
+                           </artreeitem>
+                        </artreeitem>
+                        <artreeitem>
+                           <hmdref id="treeRef-PRSC_HD020200UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Reschedule Appointment" refFamiliarName="Reschedule Appointment" refIdentifier="PRSC_HD020200UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-PRSC_MT020201UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Reschedule Appointment Notification" refFamiliarName="Reschedule Appointment Notification" refIdentifier="PRSC_MT020201UV01"/>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22150" role="tree-intro" sectID="" sectType="SB" refName=" Interactions" refFamiliarName=" Interactions" refIdentifier=""/>
+                     <artreeitem>
+                        <intref id="treeRef-PRSC_IN010101UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="New Appointment Notification" refFamiliarName="New Appointment Notification" refIdentifier="PRSC_IN010101UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PRSC_AR010100UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Appointment Informer" refFamiliarName="Appointment Informer" refIdentifier="PRSC_AR010100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PRSC_AR020000UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Appointment Tracker" refFamiliarName="Appointment Tracker" refIdentifier="PRSC_AR020000UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PRSC_TE010100UV01" role="dependency" sectID="UVSC" sectType="SB" refName="New Appointment Notification" refFamiliarName="New Appointment Notification" refIdentifier="PRSC_TE010100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PRSC_MT010101UV01" role="dependency" sectID="UVSC" sectType="SB" refName="New Appointment Notification" refFamiliarName="New Appointment Notification" refIdentifier="PRSC_MT010101UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <intref id="treeRef-PRSC_IN010201UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Revise Appointment Notification" refFamiliarName="Revise Appointment Notification" refIdentifier="PRSC_IN010201UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PRSC_AR010100UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Appointment Informer" refFamiliarName="Appointment Informer" refIdentifier="PRSC_AR010100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PRSC_AR020000UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Appointment Tracker" refFamiliarName="Appointment Tracker" refIdentifier="PRSC_AR020000UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PRSC_TE010200UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Appointment Revise Notification" refFamiliarName="Appointment Revise Notification" refIdentifier="PRSC_TE010200UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PRSC_MT010201UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Revise Appointment Notification" refFamiliarName="Revise Appointment Notification" refIdentifier="PRSC_MT010201UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <intref id="treeRef-PRSC_IN020101UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Cancel Appointment Notification" refFamiliarName="Cancel Appointment Notification" refIdentifier="PRSC_IN020101UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PRSC_AR010100UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Appointment Informer" refFamiliarName="Appointment Informer" refIdentifier="PRSC_AR010100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PRSC_AR020000UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Appointment Tracker" refFamiliarName="Appointment Tracker" refIdentifier="PRSC_AR020000UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PRSC_TE020100UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Appointment Cancel Notification" refFamiliarName="Appointment Cancel Notification" refIdentifier="PRSC_TE020100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PRSC_MT020101UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Cancel Appointment Notification" refFamiliarName="Cancel Appointment Notification" refIdentifier="PRSC_MT020101UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <intref id="treeRef-PRSC_IN020201UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Reschedule Appointment Notification" refFamiliarName="Reschedule Appointment Notification" refIdentifier="PRSC_IN020201UV01"/>
+                        <artreeitem>
+                           <teref id="treeRef-PRSC_TE020200UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Appointment Reschedule Notification" refFamiliarName="Appointment Reschedule Notification" refIdentifier="PRSC_TE020200UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PRSC_MT020201UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Reschedule Appointment Notification" refFamiliarName="Reschedule Appointment Notification" refIdentifier="PRSC_MT020201UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+            </artreeitem>
+         </artree>
+      </div1>
+      <div1 id="all-nameOrder">
+         <head> Scheduling in Name Order</head>
+         <artree role="name">
+            <artreeitem>
+               <stref id="d0e22141" role="tree-intro" sectID="UVSC" sectType="SB" refName="Domain: Scheduling" refFamiliarName="Domain: Scheduling" refIdentifier="PRSC_DO000002UV"/>
+               <artreeitem>
+                  <stref id="d0e22141" role="tree-intro" sectID="" sectType="SB" refName="Domain Story Boards" refFamiliarName="Domain Story Boards" refIdentifier=""/>
+                  <artreeitem>
+                     <stref id="treeRef-DOSC_ST000001UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Appointment Introduction" refFamiliarName="Appointment Introduction" refIdentifier="DOSC_ST000001UV01"/>
+                     <artreeitem>
+                        <stref id="treeRef-DOSC_SN100002UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Appointment Notifications" refFamiliarName="Appointment Notifications" refIdentifier="DOSC_SN100002UV01"/>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+               <artreeitem>
+                  <rmimref id="treeRef-PRSC_DM000000UV" role="tree-element" sectID="UVSC" sectType="SB" refName="Scheduling Domain Model" refFamiliarName="Scheduling Domain Model" refIdentifier="PRSC_DM000000UV"/>
+               </artreeitem>
+               <artreeitem>
+                  <stref id="d0e22150" role="tree-intro" sectID="UVSC" sectType="SB" refName="Topic: Appointment" refFamiliarName="Topic: Appointment" refIdentifier="PRSC_DO000002UV"/>
+                  <artreeitem>
+                     <stref id="d0e22150" role="tree-intro" sectID="" sectType="SB" refName=" Story Boards" refFamiliarName=" Story Boards" refIdentifier=""/>
+                     <artreeitem>
+                        <stref id="treeRef-PRSC_ST000002UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Appointment Notification" refFamiliarName="Appointment Notification" refIdentifier="PRSC_ST000002UV01"/>
+                        <artreeitem>
+                           <stref id="treeRef-PRSC_SN010002UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Physician Arranges For An Inpatient Stay" refFamiliarName="Physician Arranges For An Inpatient Stay" refIdentifier="PRSC_SN010002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PRSC_SN010003UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Patient Reschedules Outpatient Appointment" refFamiliarName="Patient Reschedules Outpatient Appointment" refIdentifier="PRSC_SN010003UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PRSC_SN010004UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Patient Revises Outpatient Appointment" refFamiliarName="Patient Revises Outpatient Appointment" refIdentifier="PRSC_SN010004UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PRSC_SN010005UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Physician Cancels Inpatient Stay for Patient" refFamiliarName="Physician Cancels Inpatient Stay for Patient" refIdentifier="PRSC_SN010005UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PRSC_SN010101UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Patient Makes Outpatient Appointment" refFamiliarName="Patient Makes Outpatient Appointment" refIdentifier="PRSC_SN010101UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PRSC_IN010101UV01" role="dependency" sectID="UVSC" sectType="SB" refName="New Appointment Notification" refFamiliarName="New Appointment Notification" refIdentifier="PRSC_IN010101UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PRSC_IN010201UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Revise Appointment Notification" refFamiliarName="Revise Appointment Notification" refIdentifier="PRSC_IN010201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PRSC_IN020101UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Cancel Appointment Notification" refFamiliarName="Cancel Appointment Notification" refIdentifier="PRSC_IN020101UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22150" role="tree-intro" sectID="" sectType="SB" refName=" Application Roles" refFamiliarName=" Application Roles" refIdentifier=""/>
+                     <artreeitem>
+                        <arref id="treeRef-PRSC_AR010100UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Appointment Informer" refFamiliarName="Appointment Informer" refIdentifier="PRSC_AR010100UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-PRSC_IN010101UV01" role="dependency" sectID="UVSC" sectType="SB" refName="New Appointment Notification" refFamiliarName="New Appointment Notification" refIdentifier="PRSC_IN010101UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PRSC_IN010201UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Revise Appointment Notification" refFamiliarName="Revise Appointment Notification" refIdentifier="PRSC_IN010201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PRSC_IN020101UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Cancel Appointment Notification" refFamiliarName="Cancel Appointment Notification" refIdentifier="PRSC_IN020101UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <arref id="treeRef-PRSC_AR020000UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Appointment Tracker" refFamiliarName="Appointment Tracker" refIdentifier="PRSC_AR020000UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-PRSC_IN010101UV01" role="dependency" sectID="UVSC" sectType="SB" refName="New Appointment Notification" refFamiliarName="New Appointment Notification" refIdentifier="PRSC_IN010101UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PRSC_IN010201UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Revise Appointment Notification" refFamiliarName="Revise Appointment Notification" refIdentifier="PRSC_IN010201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PRSC_IN020101UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Cancel Appointment Notification" refFamiliarName="Cancel Appointment Notification" refIdentifier="PRSC_IN020101UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22150" role="tree-intro" sectID="" sectType="SB" refName=" Trigger Events" refFamiliarName=" Trigger Events" refIdentifier=""/>
+                     <artreeitem>
+                        <teref id="treeRef-PRSC_TE020100UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Appointment Cancel Notification" refFamiliarName="Appointment Cancel Notification" refIdentifier="PRSC_TE020100UV01"/>
+                     </artreeitem>
+                     <artreeitem>
+                        <teref id="treeRef-PRSC_TE020200UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Appointment Reschedule Notification" refFamiliarName="Appointment Reschedule Notification" refIdentifier="PRSC_TE020200UV01"/>
+                     </artreeitem>
+                     <artreeitem>
+                        <teref id="treeRef-PRSC_TE010200UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Appointment Revise Notification" refFamiliarName="Appointment Revise Notification" refIdentifier="PRSC_TE010200UV01"/>
+                     </artreeitem>
+                     <artreeitem>
+                        <teref id="treeRef-PRSC_TE010100UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="New Appointment Notification" refFamiliarName="New Appointment Notification" refIdentifier="PRSC_TE010100UV01"/>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22150" role="tree-intro" sectID="" sectType="SB" refName=" Refined Message Information Models" refFamiliarName=" Refined Message Information Models" refIdentifier=""/>
+                     <artreeitem>
+                        <rmimref id="treeRef-PRSC_RM010000UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Full Appointment RMIM" refFamiliarName="Full Appointment RMIM" refIdentifier="PRSC_RM010000UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-PRSC_HD010100UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="New Appointment" refFamiliarName="New Appointment" refIdentifier="PRSC_HD010100UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-PRSC_MT010101UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="New Appointment Notification" refFamiliarName="New Appointment Notification" refIdentifier="PRSC_MT010101UV01"/>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT050002UV04" role="dependency" sectID="UVCT" sectType="SB" refName="R_PatientIdentified-confirmable" refFamiliarName="R_PatientIdentified-confirmable" refIdentifier="COCT_MT050002UV04"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT150000UV02" role="dependency" sectID="UVCT" sectType="SB" refName="E_OrganizationUniversal" refFamiliarName="E_OrganizationUniversal" refIdentifier="COCT_MT150000UV02"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090100UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedPersonUniversal" refFamiliarName="R_AssignedPersonUniversal" refIdentifier="COCT_MT090100UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT240000UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_ServiceDeliveryLocationUniversal" refFamiliarName="R_ServiceDeliveryLocationUniversal" refIdentifier="COCT_MT240000UV01"/>
+                              </artreeitem>
+                           </artreeitem>
+                        </artreeitem>
+                        <artreeitem>
+                           <hmdref id="treeRef-PRSC_HD010200UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Revise Appointment" refFamiliarName="Revise Appointment" refIdentifier="PRSC_HD010200UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-PRSC_MT010201UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Revise Appointment Notification" refFamiliarName="Revise Appointment Notification" refIdentifier="PRSC_MT010201UV01"/>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT050002UV04" role="dependency" sectID="UVCT" sectType="SB" refName="R_PatientIdentified-confirmable" refFamiliarName="R_PatientIdentified-confirmable" refIdentifier="COCT_MT050002UV04"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT150000UV02" role="dependency" sectID="UVCT" sectType="SB" refName="E_OrganizationUniversal" refFamiliarName="E_OrganizationUniversal" refIdentifier="COCT_MT150000UV02"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090100UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedPersonUniversal" refFamiliarName="R_AssignedPersonUniversal" refIdentifier="COCT_MT090100UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT240000UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_ServiceDeliveryLocationUniversal" refFamiliarName="R_ServiceDeliveryLocationUniversal" refIdentifier="COCT_MT240000UV01"/>
+                              </artreeitem>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <rmimref id="treeRef-PRSC_RM020000UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Minimum Appointment RMIM" refFamiliarName="Minimum Appointment RMIM" refIdentifier="PRSC_RM020000UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-PRSC_HD020100UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Cancel Appointment" refFamiliarName="Cancel Appointment" refIdentifier="PRSC_HD020100UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-PRSC_MT020101UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Cancel Appointment Notification" refFamiliarName="Cancel Appointment Notification" refIdentifier="PRSC_MT020101UV01"/>
+                           </artreeitem>
+                        </artreeitem>
+                        <artreeitem>
+                           <hmdref id="treeRef-PRSC_HD020200UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Reschedule Appointment" refFamiliarName="Reschedule Appointment" refIdentifier="PRSC_HD020200UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-PRSC_MT020201UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Reschedule Appointment Notification" refFamiliarName="Reschedule Appointment Notification" refIdentifier="PRSC_MT020201UV01"/>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22150" role="tree-intro" sectID="" sectType="SB" refName=" Interactions" refFamiliarName=" Interactions" refIdentifier=""/>
+                     <artreeitem>
+                        <intref id="treeRef-PRSC_IN020101UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Cancel Appointment Notification" refFamiliarName="Cancel Appointment Notification" refIdentifier="PRSC_IN020101UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PRSC_AR010100UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Appointment Informer" refFamiliarName="Appointment Informer" refIdentifier="PRSC_AR010100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PRSC_AR020000UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Appointment Tracker" refFamiliarName="Appointment Tracker" refIdentifier="PRSC_AR020000UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PRSC_TE020100UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Appointment Cancel Notification" refFamiliarName="Appointment Cancel Notification" refIdentifier="PRSC_TE020100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PRSC_MT020101UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Cancel Appointment Notification" refFamiliarName="Cancel Appointment Notification" refIdentifier="PRSC_MT020101UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <intref id="treeRef-PRSC_IN010101UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="New Appointment Notification" refFamiliarName="New Appointment Notification" refIdentifier="PRSC_IN010101UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PRSC_AR010100UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Appointment Informer" refFamiliarName="Appointment Informer" refIdentifier="PRSC_AR010100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PRSC_AR020000UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Appointment Tracker" refFamiliarName="Appointment Tracker" refIdentifier="PRSC_AR020000UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PRSC_TE010100UV01" role="dependency" sectID="UVSC" sectType="SB" refName="New Appointment Notification" refFamiliarName="New Appointment Notification" refIdentifier="PRSC_TE010100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PRSC_MT010101UV01" role="dependency" sectID="UVSC" sectType="SB" refName="New Appointment Notification" refFamiliarName="New Appointment Notification" refIdentifier="PRSC_MT010101UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <intref id="treeRef-PRSC_IN020201UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Reschedule Appointment Notification" refFamiliarName="Reschedule Appointment Notification" refIdentifier="PRSC_IN020201UV01"/>
+                        <artreeitem>
+                           <teref id="treeRef-PRSC_TE020200UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Appointment Reschedule Notification" refFamiliarName="Appointment Reschedule Notification" refIdentifier="PRSC_TE020200UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PRSC_MT020201UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Reschedule Appointment Notification" refFamiliarName="Reschedule Appointment Notification" refIdentifier="PRSC_MT020201UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <intref id="treeRef-PRSC_IN010201UV01" role="tree-element" sectID="UVSC" sectType="SB" refName="Revise Appointment Notification" refFamiliarName="Revise Appointment Notification" refIdentifier="PRSC_IN010201UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PRSC_AR010100UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Appointment Informer" refFamiliarName="Appointment Informer" refIdentifier="PRSC_AR010100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PRSC_AR020000UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Appointment Tracker" refFamiliarName="Appointment Tracker" refIdentifier="PRSC_AR020000UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PRSC_TE010200UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Appointment Revise Notification" refFamiliarName="Appointment Revise Notification" refIdentifier="PRSC_TE010200UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PRSC_MT010201UV01" role="dependency" sectID="UVSC" sectType="SB" refName="Revise Appointment Notification" refFamiliarName="Revise Appointment Notification" refIdentifier="PRSC_MT010201UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+            </artreeitem>
+         </artree>
+      </div1>
+   </body>
+</spec>

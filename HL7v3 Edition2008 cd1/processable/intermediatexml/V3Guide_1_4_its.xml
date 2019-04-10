@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 3 U (http://www.xmlspy.com) by andrew hinchley (HL7 Publications TC) -->
+<div2 id="v3gits">
+	<head>Implementation Technology Specifications</head>
+	<p>The Implementation Technology Specification, or ITS, defines how to represent RIM objects for transmission in messages.  It covers ISO levels 6 and 5.  HL7 has adopted XML for its initially balloted ITS.The Guide text summarises the XML ITS. A UML ITS has recently been developed and is part of current ballots.</p>
+	<p>HL7 defines its messages at an abstract level.  The "7" in HL7 stands for the Application level of the ISO communication model -- ISO level 7. This level emphasizes the semantic content of the messages, not how they are represented, nor how these representations are encoded for transmission.</p>
+	<p>The HL7 Version 2 abstract message model has the notions of segments and fields.  It defines a particular encoding scheme to represent instances of abstract messages -- the so called "vertical bar encoding."  Information from the Health domain (the semantic level 7) is represented in Version 2 as segments and fields and represented as ASCII characters with plenty of vertical bars. Consistent with this approach, the new XML encoding of V2 is mostly a direct replacement for the vertical bar encoding</p>
+	<p>The V3 abstract message model is based on the RIM.  HL7 Version 3 messages can be thought of as the communication of graphs of RIM objects from sender to receiver.  The ITS can best deal with representing these messages by having appropriate representations for objects, attributes and Data Types.</p>
+	<p>The public XML standard specifies the wire format for HL7 messages.  The XML standard defines how to represent XML documents as streams of 8-bit bytes and how opening and closing tags must match.  This corresponds to ISO level 5. The XML Document Object Model defines the abstract parse tree of XML documents and corresponds to ISO level 6. </p>
+	<p>The ITS needs to provide encodings for all the types of component that are defined in an HL7 message. the XML schema Recommendation has been selected as the best method within the XML family of standards to achieve this. Schemas specify what is acceptable in an XML document through defining constraints. the resulting schema for an HL7 message can be used by standard XML tools to determine whether any particular HL7 message is valid according to that particular schema. The most extensive part of the ITS definition is for data types where specific schema fragments have been defined against all the 42  Data Types that HL7 supports. The main other areas to be supported in the ITS are:-</p>
+	<p>
+		<list role="unordered">
+			<item>
+				<p>Class names</p>
+			</item>
+			<item>
+				<p>Associations between classes</p>
+			</item>
+			<item>
+				<p>Attribute Names</p>
+			</item>
+		</list>
+	</p>
+	<p>In a working implementation of schema, there are some other practical considerations:-</p>
+	<p>
+		<list role="unordered">
+			<item>
+				<p>A sub-directory of schema fragment for RIM classes means that the relevant classes can be easily referenced in a specific message schema</p>
+			</item>
+			<item>
+				<p>Similarly a sub-directory for Data Types means that these schema fragments can also easily be included</p>
+			</item>
+			<item>
+				<p>A sub-directory for vocabulary allows all the domains that are fully defined by HL7 itself, can be included as part of a further schema sub-directory</p>
+			</item>
+		</list>
+	</p>
+	<p> An XML Structures document defines how the ITS uses XML</p>
+	<p>All the HL7 schema work is defined as being within a single XML namespace. Although other options were considered, a single name space is believed to offer the most benefit.</p>
+	<p>The set of XML instances that are conformant for each message type described by an HMD has a structure with elements corresponding to class clones, and both element and attributes corresponding to class clone attributes. HL7 structural attributes of the class clone are represented as XML attributes, all other HL7 attributes are represented as child elements in the XML instance. The association names determine the names of the elements that represent the class clones. 
+</p>
+	<p>
+Some Message Type definitions refer to CMETs. This specification describes how embedded CMETs are encoded in a message instance as well. 
+</p>
+	<p>
+CDA documents are all derived from a single message type, however to encode an HL7 message, more information is needed.
+</p>
+	<p> Wrappers are defined to provide additional generic information both for message transmission (Transmission Wrapper) and for semantic interpretation (Control Act Wrapper). An HL7 Interaction defines a complete message including the Message Type and associated Transmission Wrapper and Control Act Wrapper. The specification describes how the wrappers are represented in an XML Message Instance. 
+</p>
+	<p>Each HL7 attribute has a Data Type associated with it. The XML implementation of these data types is described in a separate ballot document - the XML ITS datatypes document 
+</p>
+	<p>The steps for using the ITS to send information objects from the sending systems database to the receiving system's database ITS is represented in the diagram below and described as follows.</p>
+	<list role="ordered">
+		<item>The sending application ("sender") stores its information in its own database format</item>
+		<item>The sender logically represents this information as a graph of RIM objects</item>
+		<item>Using the form of the messages defined in the HMD and the algorithm defined by the ITS, the sender represents the RIM objects as an XML document, for example, by building a DOM tree</item>
+		<item>The sender serializes the DOM tree, creating an XML Domain Content</item>
+		<item>The sender transmits the Domain Content to the receiving application ("receiver") using TCP/IP, EMAIL, or some other message transport layer</item>
+		<item>The receiver then unpacks the HL7 Domain Content from the transport layer</item>
+		<item>The receiver removes the V3 message wrapper (s) and  parses the encoded Domain Content using an off-the-shelf parser to create the DOM tree</item>
+		<item>The receiver then interprets the DOM tree by "reversing" the ITS mapping, and perhaps building a RIM graph of received objects</item>
+		<item>Finally, the receiver stores the data in its own database format</item>
+	</list>
+	<p>
+		<graphic source="graphics/VG_1_4_01.gif"/>
+	</p>
+</div2>

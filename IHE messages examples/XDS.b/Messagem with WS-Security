@@ -1,0 +1,341 @@
+<S:Envelope
+	xmlns:S="http://www.w3.org/2003/05/soap-envelope">
+	<S:Header>
+		<To
+			xmlns="http://www.w3.org/2005/08/addressing">https://ecw28:18184/IHEServer/services/xdsregistryb
+		</To>
+		<Action
+			xmlns="http://www.w3.org/2005/08/addressing" S:mustUnderstand="true">urn:ihe:iti:2007:RegisterDocumentSet-b
+		</Action>
+		<ReplyTo
+			xmlns="http://www.w3.org/2005/08/addressing">
+			<Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+		</ReplyTo>
+		<MessageID
+			xmlns="http://www.w3.org/2005/08/addressing">uuid:eef28d4a-c31e-422b-8b6e-efcbcdbaec61
+		</MessageID>
+		<wsse:Security
+			xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" S:mustUnderstand="true">
+			<saml2:Assertion
+				xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion"
+				xmlns:xacml-context="urn:oasis:names:tc:xacml:2.0:context:schema:os"
+				xmlns:xacml-saml="urn:oasis:names:tc:xacml:2.0:profile:saml2.0:v2:schema:assertion"
+				xmlns:xacml="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
+				xmlns:exc14n="http://www.w3.org/2001/10/xml-exc-c14n#"
+				xmlns:del="urn:oasis:names:tc:SAML:2.0:conditions:delegation"
+				xmlns:xenc="http://www.w3.org/2001/04/xmlenc#"
+				xmlns:hl7v3="urn:hl7-org:v3"
+				xmlns:xs="http://www.w3.org/2001/XMLSchema"
+				xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="_28536ea0-8530-49e3-947b-64a5a3ff737a" IssueInstant="2019-01-23T16:23:22.372Z" Version="2.0">
+				<saml2:Issuer>urn:oid:1.2.4</saml2:Issuer>
+				<ds:Signature>
+					<ds:SignedInfo>
+						<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+						<ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+						<ds:Reference URI="#_28536ea0-8530-49e3-947b-64a5a3ff737a">
+							<ds:Transforms>
+								<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+								<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+							</ds:Transforms>
+							<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+							<ds:DigestValue>CZIIC5CXJ7Z5QG39icBmq4qr1kyEr+nXmMUtTW6kltQ=</ds:DigestValue>
+						</ds:Reference>
+					</ds:SignedInfo>
+					<ds:SignatureValue>um1H+QLmgu1ugCCU17R08KQwc9viSsiObbZakABkOXWUL9hc1+EcwvivjgMg7faPyI9JBoRtC9Z4
+    A470nhCuLafe7mCiCLL8HOahePNIoCiHdKaRcspPDkM7JdUQA+OX4lSiwNLd3qsFwvqWlv94LcZf
+    wdCzUT3z7PX5if43Yri+GW81Kk+o17tdqizBJVyXuoS3IGYqz3GM0cWA9iKm2k3wT8FoS94SNZLU
+    ZyZ/pwQaH8d3Eq7SiC2CkovjWbqjlEXvnNoxi394dqvuUMkXxNFcXkceKU7fP7B8sd8Hq7jxB0Ur
+    6IG/ln+1tA02EBGuKeApvvUBYJ9jZfr5wXufFw==</ds:SignatureValue>
+					<ds:KeyInfo>
+						<ds:X509Data>
+							<ds:X509Certificate>MIIDpDCCAw2gAwIBAgIBKjANBgkqhkiG9w0BAQUFADCBlzELMAkGA1UEBhMCTkwxEDAOBgNVBAgT
+        B1V0cmVjaHQxDjAMBgNVBAcTBVplaXN0MRUwEwYDVQQKEwxGb3JjYXJlIEIuVi4xFDASBgNVBAsT
+        C0VuZ2luZWVyaW5nMRswGQYDVQQDExJGb3JjYXJlIFRlc3RpbmcgQ0ExHDAaBgkqhkiG9w0BCQEW
+        DWl0QGZvcmNhcmUubmwwHhcNMTUxMjE1MTAwNDAwWhcNMjEwMjI2MTcyNTAwWjCBozELMAkGA1UE
+        BhMCTkwxEDAOBgNVBAgTB1V0cmVjaHQxDjAMBgNVBAcTBVplaXN0MR0wGwYDVQQKExRGb3JjYXJl
+        IEhvbGRpbmcgQi5WLjEUMBIGA1UECxMLRW5naW5lZXJpbmcxHzAdBgNVBAMTFnNhbXBsZUlkZW50
+        aXR5UHJvdmlkZXIxHDAaBgkqhkiG9w0BCQEWDWl0QGZvcmNhcmUubmwwggEiMA0GCSqGSIb3DQEB
+        AQUAA4IBDwAwggEKAoIBAQDFybedqISXpKkzP2DY1S1fHWrCncy8hCclkqiQ107jnLTaDE3PvvTv
+        /bnssc3aXgGyDKWjWy2bO1oL37YgB/7oyuJ83HZuEnmwL633fWy62hsfsf2EbOckRQX8fWDQgBtz
+        qAXvdUg8AEJA/ZV1DcQ8NAXQ2UnWrx/zwOkepqHkGBHMfPhTU1aB19PK3eMVJsxrziqh7x26lgbD
+        4/6EYZrSw/+Rtv/wgmnBLWxI470CBL3e5/JwyWMOjAX3dLkqmaKzxgrTNckVc6wDmXc/Mrph7HH7
+        pSuwWyJwfy10SUxK6gViGsuESF+OXrbme4hJy+97ke24CZ1ejHXYlkit5KbTAgMBAAGjbjBsMAwG
+        A1UdEwEB/wQCMAAwHQYDVR0OBBYEFOeN6F+mtGB0zAnY/eoLkuxdWANyMAsGA1UdDwQEAwIE8DAd
+        BgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwEQYJYIZIAYb4QgEBBAQDAgXgMA0GCSqGSIb3
+        DQEBBQUAA4GBAJBVCt2Jq9VegNU/zuC3prsxc3QUcyxk4hyTfsVEwa4QgBPWyVtox8hlmd/WsJGX
+        wLbTD2/5ydvsBIfXK+xWeIYv+Sd+A0921DbrQ0CcrYN0oQmyogOc2KisApfumsoePjjZG+aKT8SG
+        EUO3BDoGNovMLriLxBVJQ5wjswlzK6FO</ds:X509Certificate>
+						</ds:X509Data>
+					</ds:KeyInfo>
+				</ds:Signature>
+				<saml2:Subject>
+					<saml2:NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName">store</saml2:NameID>
+					<saml2:SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
+						<saml2:SubjectConfirmationData NotBefore="2019-01-23T16:22:52.372Z" NotOnOrAfter="2019-01-23T16:28:22.372Z" Recipient="http://localhost:8080/viewer" />
+					</saml2:SubjectConfirmation>
+				</saml2:Subject>
+				<saml2:Conditions NotBefore="2019-01-23T16:22:52.372Z" NotOnOrAfter="2019-01-23T16:28:22.372Z">
+					<saml2:AudienceRestriction>
+						<saml2:Audience>http://localhost:8080/viewer</saml2:Audience>
+					</saml2:AudienceRestriction>
+				</saml2:Conditions>
+				<saml2:AuthnStatement AuthnInstant="2019-01-23T16:23:22.372Z">
+					<saml2:AuthnContext>
+						<saml2:AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:Password</saml2:AuthnContextClassRef>
+					</saml2:AuthnContext>
+				</saml2:AuthnStatement>
+				<saml2:AttributeStatement>
+					<saml2:Attribute Name="urn:oasis:names:tc:xacml:2.0:subject:role" />
+					<saml2:Attribute Name="urn:oasis:names:tc:xacml:2.0:resource:resource-id">
+						<saml2:AttributeValue xsi:type="xs:string">IHEBLUE-2617^^^&amp;1.3.6.1.4.1.21367.13.20.3000&amp;ISO</saml2:AttributeValue>
+					</saml2:Attribute>
+				</saml2:AttributeStatement>
+			</saml2:Assertion>
+		</wsse:Security>
+		<wsse:Security
+			xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+			xmlns:a="http://www.w3.org/2005/08/addressing"
+			xmlns:s="http://www.w3.org/2003/05/soap-envelope"
+			xmlns:wsse11="http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd"
+			xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
+			xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+			<wsu:Timestamp wsu:Id="Timestamp-1">
+				<wsu:Created>2019-01-23T16:25:48.6448995Z</wsu:Created>
+				<wsu:Expires>2019-01-23T16:25:48.6448995Z</wsu:Expires>
+			</wsu:Timestamp>
+		</wsse:Security>
+	</S:Header>
+	<S:Body>
+		<SubmitObjectsRequest
+			xmlns="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0">
+			<RegistryObjectList
+				xmlns="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0">
+				<RegistryPackage id="urn:uuid:c880ebba-bce7-4fe4-a77c-020aefd63761">
+					<Slot name="submissionTime">
+						<ValueList>
+							<Value>20190123162548</Value>
+						</ValueList>
+					</Slot>
+					<Slot name="intendedRecipient">
+						<ValueList>
+							<Value>Nextgen Medical Practice^^^^^^^^^|provider@testexternal.com^Test^Mirth^^^^^&amp;1.3.6.1.4.1.21367.3100.1&amp;ISO|^^Internet^provider@testexternal.com</Value>
+						</ValueList>
+					</Slot>
+					<Name>
+						<LocalizedString value="Submission Set" />
+					</Name>
+					<Description>
+						<LocalizedString value="Tes Doc For Replace" />
+					</Description>
+					<Classification classificationScheme="urn:uuid:a7058bb9-b4e4-4307-ba5b-e3f0ab85e12d" classifiedObject="urn:uuid:c880ebba-bce7-4fe4-a77c-020aefd63761" id="urn:uuid:9e7b56c6-2bb2-4777-9a12-adec17e24893" nodeRepresentation="">
+						<Slot name="authorPerson">
+							<ValueList>
+								<Value>1982609053^Mirth^Test^^^^^^&amp;2.16.840.1.113883.4.6&amp;ISO</Value>
+							</ValueList>
+						</Slot>
+						<Slot name="authorRole">
+							<ValueList>
+								<Value>PCP</Value>
+							</ValueList>
+						</Slot>
+						<Slot name="authorSpecialty">
+							<ValueList>
+								<Value>Family Practice</Value>
+							</ValueList>
+						</Slot>
+						<Slot name="authorTelecommunication">
+							<ValueList>
+								<Value>^^Internet^provider@testexternal.com</Value>
+							</ValueList>
+						</Slot>
+					</Classification>
+					<Classification classificationScheme="urn:uuid:aa543740-bdda-424e-8c96-df4873be8500" classifiedObject="urn:uuid:c880ebba-bce7-4fe4-a77c-020aefd63761" id="urn:uuid:847a9bb9-b8da-4782-8b62-75d020fbd29e" nodeRepresentation="22232009">
+						<Slot name="codingScheme">
+							<ValueList>
+								<Value>2.16.840.1.113883.6.96</Value>
+							</ValueList>
+						</Slot>
+						<Name>
+							<LocalizedString value="22232009" />
+						</Name>
+						<Description>
+							<LocalizedString value="Hospital" />
+						</Description>
+					</Classification>
+					<ExternalIdentifier id="urn:uuid:6157cf4f-29f9-4e69-b635-fae56bdb2dc3" identificationScheme="urn:uuid:96fdda7c-d067-4183-912e-bf5ee74998a8" registryObject="urn:uuid:c880ebba-bce7-4fe4-a77c-020aefd63761" value="1.3.6.1.4.1.21367.2008.1.2.176.2627">
+						<Name>
+							<LocalizedString value="XDSSubmissionSet.uniqueId" />
+						</Name>
+					</ExternalIdentifier>
+					<ExternalIdentifier id="urn:uuid:76b72d7f-bba5-4e87-9966-a14a0b20aca3" identificationScheme="urn:uuid:6b5aea1a-874d-4603-a4bc-96a0a7b38446" registryObject="urn:uuid:c880ebba-bce7-4fe4-a77c-020aefd63761" value="IHEBLUE-2617^^^&amp;1.3.6.1.4.1.21367.13.20.3000&amp;ISO">
+						<Name>
+							<LocalizedString value="XDSSubmissionSet.patientId" />
+						</Name>
+					</ExternalIdentifier>
+					<ExternalIdentifier id="urn:uuid:4624991f-dff9-4750-ae02-ce66d820f68f" identificationScheme="urn:uuid:554ac39e-e3fe-47fe-b233-965d2a147832" registryObject="urn:uuid:c880ebba-bce7-4fe4-a77c-020aefd63761" value="1.3.6.1.4.1.21367.2008.1.2.176">
+						<Name>
+							<LocalizedString value="XDSSubmissionSet.sourceId" />
+						</Name>
+					</ExternalIdentifier>
+				</RegistryPackage>
+				<Classification classificationNode="urn:uuid:a54d6aa5-d40d-43f9-88c5-b4633d873bdd" classifiedObject="urn:uuid:c880ebba-bce7-4fe4-a77c-020aefd63761" id="rc01" />
+				<ExtrinsicObject id="urn:uuid:4101b524-0e45-49a2-aef9-e0315b1c719b" mimeType="text/xml" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1">
+					<Slot name="repositoryUniqueId">
+						<ValueList>
+							<Value>1.3.6.1.4.1.21367.13.40.286</Value>
+						</ValueList>
+					</Slot>
+					<Slot name="creationTime">
+						<ValueList>
+							<Value>20190123162533</Value>
+						</ValueList>
+					</Slot>
+					<Slot name="serviceStartTime">
+						<ValueList>
+							<Value>20180124161500</Value>
+						</ValueList>
+					</Slot>
+					<Slot name="serviceStopTime">
+						<ValueList>
+							<Value>20180417154100</Value>
+						</ValueList>
+					</Slot>
+					<Slot name="sourcePatientId">
+						<ValueList>
+							<Value>2251^^^&amp;1.3.6.1.4.1.21367.13.50.300228&amp;ISO</Value>
+						</ValueList>
+					</Slot>
+					<Slot name="languageCode">
+						<ValueList>
+							<Value>en-us</Value>
+						</ValueList>
+					</Slot>
+					<Slot name="hash">
+						<ValueList>
+							<Value>34a6136211566c78ac568e85eaaf37a157f64d60</Value>
+						</ValueList>
+					</Slot>
+					<Slot name="size">
+						<ValueList>
+							<Value>243413</Value>
+						</ValueList>
+					</Slot>
+					<Slot name="sourcePatientInfo">
+						<ValueList>
+							<Value>PID-3|2251^^^&amp;1.3.6.1.4.1.21367.13.50.300228&amp;ISO</Value>
+							<Value>PID-5|SOURCE_TWELVE^Drusilla^^^</Value>
+							<Value>PID-7|20000101</Value>
+							<Value>PID-8|M</Value>
+							<Value>PID-11|1 First St^^Horsham^PA^19044^US</Value>
+						</ValueList>
+					</Slot>
+					<Name>
+						<LocalizedString value="Tes Doc For Replace" />
+					</Name>
+					<Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:4101b524-0e45-49a2-aef9-e0315b1c719b" id="urn:uuid:3fa4fe29-4138-4f00-a445-c53acc6084f1" nodeRepresentation="">
+						<Slot name="authorPerson">
+							<ValueList>
+								<Value>1982609053^Mirth^Test^^^^^^&amp;2.16.840.1.113883.4.6&amp;ISO</Value>
+							</ValueList>
+						</Slot>
+						<Slot name="authorRole">
+							<ValueList>
+								<Value>PCP</Value>
+							</ValueList>
+						</Slot>
+						<Slot name="authorSpecialty">
+							<ValueList>
+								<Value>Family Practice</Value>
+							</ValueList>
+						</Slot>
+						<Slot name="authorTelecommunication">
+							<ValueList>
+								<Value>^^Internet^provider@testexternal.com</Value>
+							</ValueList>
+						</Slot>
+					</Classification>
+					<Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:4101b524-0e45-49a2-aef9-e0315b1c719b" id="urn:uuid:d668f05d-435f-48d8-855e-f42d06dff13e" nodeRepresentation="11488-4">
+						<Slot name="codingScheme">
+							<ValueList>
+								<Value>2.16.840.1.113883.6.1</Value>
+							</ValueList>
+						</Slot>
+						<Name>
+							<LocalizedString value="Consultation Note" />
+						</Name>
+					</Classification>
+					<Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:4101b524-0e45-49a2-aef9-e0315b1c719b" id="urn:uuid:2532ad12-29cd-42eb-aeec-4941695e5766" nodeRepresentation="SUMMARY">
+						<Slot name="codingScheme">
+							<ValueList>
+								<Value>1.3.6.1.4.1.19376.1.2.6.1</Value>
+							</ValueList>
+						</Slot>
+						<Name>
+							<LocalizedString value="Summary" />
+						</Name>
+					</Classification>
+					<Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:4101b524-0e45-49a2-aef9-e0315b1c719b" id="urn:uuid:b64dc8c8-c998-4199-8964-5bec1c0d8756" nodeRepresentation="N">
+						<Slot name="codingScheme">
+							<ValueList>
+								<Value>2.16.840.1.113883.5.25</Value>
+							</ValueList>
+						</Slot>
+						<Name>
+							<LocalizedString value="Normal Sharing" />
+						</Name>
+					</Classification>
+					<Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:4101b524-0e45-49a2-aef9-e0315b1c719b" id="urn:uuid:d8407edf-00cd-4a51-a04a-1a0348a13f0d" nodeRepresentation="urn:hl7-org:sdwg:ccda-structuredBody:2.1">
+						<Slot name="codingScheme">
+							<ValueList>
+								<Value>1.3.6.1.4.1.19376.1.2.3</Value>
+							</ValueList>
+						</Slot>
+						<Name>
+							<LocalizedString value="For documents following C-CDA 2.1 constraints using a structured body." />
+						</Name>
+					</Classification>
+					<Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:4101b524-0e45-49a2-aef9-e0315b1c719b" id="urn:uuid:fddee44c-4b96-4028-8068-73cf79a217b4" nodeRepresentation="22232009">
+						<Slot name="codingScheme">
+							<ValueList>
+								<Value>2.16.840.1.113883.6.96</Value>
+							</ValueList>
+						</Slot>
+						<Name>
+							<LocalizedString value="Hospital" />
+						</Name>
+					</Classification>
+					<Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:4101b524-0e45-49a2-aef9-e0315b1c719b" id="urn:uuid:9259a22a-bbdf-4cdf-8e22-fcbffddbe0f4" nodeRepresentation="Practice-B">
+						<Slot name="codingScheme">
+							<ValueList>
+								<Value>1.3.6.1.4.1.21367.2017.3</Value>
+							</ValueList>
+						</Slot>
+						<Name>
+							<LocalizedString value="Cardiology" />
+						</Name>
+					</Classification>
+					<ExternalIdentifier id="urn:uuid:7f23abff-fe08-4217-9b69-be0fb72427b1" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" registryObject="urn:uuid:4101b524-0e45-49a2-aef9-e0315b1c719b" value="1.3.6.1.4.1.21367.2008.1.2.176.2626">
+						<Name>
+							<LocalizedString value="XDSDocumentEntry.uniqueId" />
+						</Name>
+					</ExternalIdentifier>
+					<ExternalIdentifier id="urn:uuid:b720c411-6142-495d-89f5-c259ce994dd4" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" registryObject="urn:uuid:4101b524-0e45-49a2-aef9-e0315b1c719b" value="IHEBLUE-2617^^^&amp;1.3.6.1.4.1.21367.13.20.3000&amp;ISO">
+						<Name>
+							<LocalizedString value="XDSDocumentEntry.patientId" />
+						</Name>
+					</ExternalIdentifier>
+				</ExtrinsicObject>
+				<Association associationType="urn:oasis:names:tc:ebxml-regrep:AssociationType:HasMember" id="urn:uuid:55ebc7c7-dba4-40fb-99f0-113404e45fc5" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Association" sourceObject="urn:uuid:c880ebba-bce7-4fe4-a77c-020aefd63761" targetObject="urn:uuid:4101b524-0e45-49a2-aef9-e0315b1c719b">
+					<Slot name="SubmissionSetStatus">
+						<ValueList>
+							<Value>Original</Value>
+						</ValueList>
+					</Slot>
+				</Association>
+			</RegistryObjectList>
+		</SubmitObjectsRequest>
+	</S:Body>
+</S:Envelope>

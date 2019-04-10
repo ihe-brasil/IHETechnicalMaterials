@@ -1,0 +1,17 @@
+<!--<!DOCTYPE usage PUBLIC "DTDVersion-1" "../../../support/dtd/V3mCMETusage.dtd">-->
+<!--CMET Usage collected and expressed by RoseTree 4.2.7-->
+<!--Example copyright 2008 by Health Level Seven, Inc. -->
+<usage rendered="5/1/2008 9:54:37 PM">
+<cmetuse role="uses">
+<hmdref ref="MCAI_HD700200UV01-hmd" refname="Trigger Event Control Act" refidentifier="MCAI_HD700200UV01"/>
+<cmetref ref="MCAI_MT900001UV01-msg" refname="A_DetectedIssueUniversal" refidentifier="MCAI_MT900001UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="MCAI_HD700200UV01-hmd" refname="Trigger Event Control Act" refidentifier="MCAI_HD700200UV01"/>
+<cmetref ref="COCT_MT090300UV01-msg" refname="R_AssignedDeviceUniversal" refidentifier="COCT_MT090300UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="MCAI_HD700200UV01-hmd" refname="Trigger Event Control Act" refidentifier="MCAI_HD700200UV01"/>
+<cmetref ref="COCT_MT090100UV01-msg" refname="R_AssignedPersonUniversal" refidentifier="COCT_MT090100UV01"/>
+</cmetuse>
+</usage>

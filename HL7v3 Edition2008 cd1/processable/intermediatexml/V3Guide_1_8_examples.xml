@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 2 (http://www.xmlspy.com) by andrew hinchley (HL7 Publications TC) -->
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by George W Beeler (Beeler Consulting LLC) -->
+<div2 id="v3gexamples">
+	<head>Examples</head>
+	<p>This chapter contains an example of a V2.4 message, and an equivalent V3 representation of that message using the XML ITS with annotations. The chapter is based upon the revised XML ITS.  However, the schema generator for this ITS is still somewhat unstable.  Hence the example herein is subject to uncertainties caused by an interpretation of the ITS that may be flawed.  The Publishing Committee will continue to refine this exemplary chapter and may re-issue it as a "patch" during the course of this ballot.  The chapter will note those places where uncertain assumptions were made.</p>
+	<p>This chapter shows a V2.4 ORU^R01 for serum glucose and an equivalent V3 message instance. The various schema documents are not shown. Some of the significant mappings and content derivations are noted in comments in the V3 XML.</p>
+	<div3 id="v3gex1">
+		<head>The V2.4 Message</head>
+		<eg role="example"><![CDATA[	MSH|^~\&|GHH LAB|ELAB-3|GHH OE|BLDG4|200202150930||ORU^R01
+	     |CNTRL-3456|P|2.4<cr>
+	PID|||555-44-4444||EVERYWOMAN^EVE^E^^^^L|JONES
+	     |196203520|F|||153 FERNWOOD DR.^^STATESVILLE^OH^35292||
+	     (206)3345232|(206)752-121||||
+	     AC555444444||67-A4335^OH^20030520<cr>
+	OBR|1|845439^GHH OE|1045813^GHH LAB|1554-5^GLUCOSE|||200202150730|||||||||
+	     555-55-5555^PRIMARY^PATRICIA P^^^^MD^^LEVEL SEVEN HEALTHCARE, INC.
+	     |||||||||F||||||444-44-4444^HIPPOCRATES^HOWARD H^^^^MD<cr>
+	OBX|1|SN|1554-5^GLUCOSE^POST 12H CFST:MCNC:PT:SER/PLAS:QN||^182|mg/dl|
+	     70_105|H|||F<cr>]]></eg>
+	</div3>
+	<div3 id="v3gex2">
+		<head>The Root Element</head>
+		<p>The root element of the XML instance contains information necessary for its proper validation. The root element is Message, which is defined in the schema MCCI_MT000101.xsd.  This release of the ITS (Ballot #3) uses a single Version 3 namespace for all instances.</p>
+		<eg role="example"><![CDATA[	<?xml version="1.0" encoding="utf-8" standalone="no"?>
+	<!--Example copyright 2002 by Health Level Seven, Inc. -->
+	<Message xmlns="urn:hl7-org:v3" 
+	   xmlns:xsi="http://www.w3.org/2002/XMLSchema-instance" 
+	   xsi:schemaLocation="urn:hl7-org:v3/MCCI_MT000101 
+	      MCCI_MT000101.xsd">]]></eg>
+		<p>The element content of the root defines the sender and receiver in terms of applications, and also in terms of the organizations that are exchanging data. All IDs use OIDs as the method of ensuring global uniqueness. For the purposes of this example, all OIDs are identical – in a real message they would be unique. </p>
+		<p>Note that the root element uniquely identifies the message’s interaction identifier, in this case, POLB_IN004410, which identifies the message type, the trigger event, and the application roles. </p>
+		<p>The receiving application and organization are described in the executedByRcvApp element, the executedByRespondToOrg element and executedBySendApp identify the sending person, application, and organization. The receiver is the GHH_OE system in Bldg4. The sender is GHH_LAB at location E-LAB3.</p>
+		<p>The root element wraps the payload, which is the message control event  for this message. It is contained in the has_payload_ControlActEvent. </p>
+		<eg role="example"><![CDATA[	   ...
+	   <id root="2.16.840.1.113883.1122" extension="CNTRL-3456"/>
+	   <!-- message ID, [msh.10]  -->
+	   <creation_time value="2002-08-16T14:30:35.16-06:00"/>
+	   <!-- [msh.7]  -->
+	   <version_id>3.0</version_id>
+	   <interaction_id root="2.16.840.1.113883" 
+	      extension="POLB_IN004410"/>
+	   <!-- interaction id= Observation Event Complete, 
+	      Notification  (POLB_IN004410) source=ORU^R01-->
+	            Notification  (POLB_IN004410) source=ORU^R01-->
+   <!-- [msh.9]  -->
+   <processingCode code="P"/>
+   <!-- processing code, [msh.11] -->
+   <processingModeCode code="I"/>
+   <!-- processing ID, [msh.11] -->
+   <acceptAckCode code="ER"/>
+   <!-- [msh.15]  -->
+   <!-- errors only -->
+   <applicationAckCode code="ER"/>
+   <!-- [msh.16]  -->
+	    <communicationFunctionRsp>
+	      <!-- presume "respond_to" is a sending contact -->
+	      <type_cd code="RSP"/>
+	      <telecom use="WP" url="555-555-5555"/>
+	      <servedBy>
+	         <nm xsi:type="dt:PN">
+	            <dt:family>Hippocrates</dt:family>
+	            <dt:given>Harold</dt:given>
+	            <dt:given>H</dt:given>
+	            <dt:suffix qualifier="AC">MD</dt:suffix>
+	         </nm>
+	         <telecom use="WP" url="555-555-5555"/>
+	      </servedBy>
+	   </executedByRespondToOrg>
+	   <executedBySendApp>
+	      <type_cd code="SND"/>
+	      <telecom value="127.127.127.255"/>
+	      <servedBy>
+	         <!-- sending application, [msh.3] -->
+	         <id extension="GHH LAB" root="2.16.840.1.113883.1122"/>
+	         <nm use="L">
+	            <given>An Entity Name</given>
+	         </nm>
+	         <telecom value="555-555-2005" use="H"/>
+	         <agencyFor>
+	            <!-- sending facility [msh.4]  -->
+	            <representedOrganization>
+	               <id nullFlavor="OTH"/>
+	            </representedOrganization>
+	         </agencyFor>
+	         <presence>
+	            <location>
+	               <id root="2.16.840.1.113883.1122" 
+	                  extension="ELAB-3"/>
+	               <nm xsi:type="dt:TN">GHH Lab</nm>
+	            </location>
+	         </presence>
+	      </servedBy>
+	   </executedBySendApp>
+	   <executedByRcvApp>
+	      <type_cd code="RCV"/>
+	      <telecom value="127.127.127.0"/>
+	      <servedBy>
+	         <!-- Receiving application, [msh.5] -->
+	         <id root="2.16.840.1.113883.1122" 
+	            extension="GHH OE"/>
+	         <nm use="L">
+	            <given>An Entity Name</given>
+	         </nm>
+	         <telecom value="555-555-2005" use="H"/>
+	         <agencyFor>
+	            <representedOrganization>
+	               <id root="2.16.840.1.113883.19.3.1001"/>
+	               <nm xsi:type="TN">GHH Outpatient Clinic</nm>
+	            </representedOrganization>
+	         </agencyFor>
+	         <presence>
+	            <location>
+	               <id root="2.16.840.1.113883.1122" 
+	                  extension="BLDG4"/>
+	               <nm xsi:type="TN">GHH Outpatient Clinic</nm>
+	            </location>
+	         </presence>
+	      </servedBy>
+	   </executedByRcvApp>
+	   <has_payload_ControlActEvent xsi:type="MCAI_HD700200">
+	      ...
+	   </has_payload_ControlActEvent>
+	</Message>]]></eg>
+	</div3>
+	<div3 id="v3gex3">
+		<head>The Control Act</head>
+		<p>The message control act is yet another wrapper around the actual message. This has a class_cd of CEVN, and indicates no response to the message is expected. The element tags verifier denote the supervisor or responsible person for this lab result, and the interactionTarget act relationship ties the control event wrapper to the target message, of type POLB_MT004401. </p>
+		<eg role="example"><![CDATA[	   <has_payload_ControlActEvent xsi:type="MCAI_HD700200">
+	      <!--  Message interaction control event wrapper, 
+	         substituted by the sender -->
+	      <!-- act control event  -->
+	      <response_cd code="N"/>
+	      <verifier>
+	         <participant_COCT_MT090100>
+	            <id root="2.16.840.1.113883.1122" 
+	               extension="444-444-4444"/>
+	         </participant_COCT_MT090100>
+	      </verifier>
+	      <interactionTarget xsi:type="POLB_MT004101">
+	         ...
+	      </interactionTarget>
+	   </has_payload_ControlActEvent>]]></eg>
+	</div3>
+	<div3 id="v3gex5">
+		<head>The Message Body</head>
+		<p>The "Domain Content" starts with its own root element – interactionTarget. The elements within specify the type of observation, the ID, the time of the observation, status_cd, and the results.  The value for the actual result is shown in the value element. The interpretation_cd element shows that the value has been interpreted as high (H), while referenceRange provides the normal values for this particular observation.</p>
+		<p>The patient and the responsible provider parts are discussed further in their own sections, while the rest of the information is shown here:</p>
+		<eg role="example"><![CDATA[	<interactionTarget xsi:type="POLB_MT004101">
+	   <ObservationEvent>
+	      <!--- ID is the filler order number ... -->
+	      <id root="2.16.840.1.113883.1122" 
+	         extension="1045813" 
+	         assigningAuthorityName="GHH LAB"/>
+	      <cd code="1554-5" codeSystemName="LN" 
+	         displayName="GLUCOSE^POST 12H
+	            CFST:MCNC:PT:SER/PLAS:QN"/>
+	      <status_cd code="completed"/>
+	      <!-- time the sample was taken -->
+	      <effective_time>
+	         <dt:center value="2002-02-15T07:30:00"/>
+	      </effective_time>
+	      <!-- time of the actual lab test -->
+	      <activity_time>
+	         <dt:center value="2002-02-15T08:30:00"/>
+	      </activity_time>
+	      <priority_cd code="R"/>
+	      <value xsi:type="dt:PQ" value="182" unit="mg/dL"/>
+	      <interpretation_cd code="H"/>
+	      <participant>
+	         ...
+	      </participant>
+	      <patient>
+	         <!-- PID -->
+	         <patient>
+	            ...
+	         </patient>
+	      </patient>
+	      <inFulfillmentOf>
+	         <!-- placer order -->
+	         <priorObservationOrder>
+	            ...
+	         </priorObservationOrder>
+	      </inFulfillmentOf>
+	      <referenceRange>
+	         <referenceObservationEventCriterion>
+	            <value xsi:type="dt:IVL_PQ">
+	               <dt:low value="70" unit="mg/dL"/>
+	               <dt:high value="105" unit="mg/dL"/>
+	            </value>
+	         </referenceObservationEventCriterion>
+	      </referenceRange>
+	   </ObservationEvent>
+	</interactionTarget]]></eg>
+	</div3>
+	<div3 id="v3gex6">
+		<head>The Original Order </head>
+		<p>The original order for the laboratory observation is referenced by the FLFS act relationship named  priorObservationOrder, which identifies the order by placer numbe.  This number should be used by the receiver to match the results to the order. The ordering provider, Dr. Patricia Provider, is included with her ID and name. Note that there are two levels of information present, the practitioner level and the person level. The ID is on the practitioner level, while the name is on the person level.</p>
+		<eg role="example"><![CDATA[	<inFulfillmentOf>
+	   <!-- placer order -->
+	   <priorObservationOrder>
+	      <id root="2.16.840.1.113883.1122" 
+	         extension="845439" 
+	         assigningAuthorityName="GHH OE"/>
+	      <cd code="1554-5" codeSystemName="LN" 
+	         displayName="Serum Glucose"/>
+	      <participant>
+	         <type_cd code="RESP"/>
+	         <assignedEntity>
+	            <id root="2.16.840.1.113883.1122" 
+	               extension="555-555-5555"/>
+	            <assignee_Person>
+	               <nm use="L" xsi:type="dt:PN">
+	                  <dt:family>Primary</dt:family>
+	                  <dt:given>Patricia</dt:given>
+	                  <dt:given>P</dt:given>
+	                  <dt:suffix qualifier="AC"> 
+	                     MD</dt:suffix>
+	               </nm>
+	            </assignee_Person>
+	         </assignedEntity>
+	      </participant>
+	   </priorObservationOrder>
+	</inFulfillmentOf>]]></eg>
+	</div3>
+	<div3 id="v3gex7">
+		<head>The Performing Provider</head>
+		<p>The performing provider, Mr. Harold H Hippocrates, is included with his ID and name. In a similar fashion to that of the ordering provider, there are two levels of information present, the practitioner level and the person level. The ID is on the practitioner level, while the name is on the person level.</p>
+		<eg role="example"><![CDATA[	<participant>
+	   <!-- this is the signatory -->
+	   <type_cd code="AUT"/>
+	   <!-- time of signature -->
+	   <time value="2002-08-16T09:30:00"/>
+	   <mode_cd code="WRITTEN"/>
+	   <!-- signature is on file -->
+	   <signature_cd code="S"/>
+	   <assignedEntity>
+	      <id root="2.16.840.1.113883.1122" 
+	         extension="444-444-4444"/>
+	      <assignee_Person>
+	         <nm use="L" xsi:type="dt:PN">
+	            <dt:family>Hippocrates</dt:family>
+	            <dt:given>Harold</dt:given>
+	            <dt:given>H</dt:given>
+	            <dt:suffix qualifier="AC">MD</dt:suffix>
+	         </nm>
+	      </assignee_Person>
+	   </assignedEntity>
+	</participant>]]></eg>
+	</div3>
+	<div3 id="v3gex8">
+		<head>The Patient</head>
+		<p>The patient, Eve E. Everywoman, is also represented with two levels - the patient and the person. The available elements within the patient element are few since this is part of a closely-coupled message (e.g. there is no space for an address). On the other hand, the id is required with the name, thus providing for at least some form of error checking. Again,  there are IDs on each level - the pre-assigned patient ID is on the patient level, while a driver’s license number is present on the person level as a person ID. </p>
+		<eg role="example"><![CDATA[	<patient>
+	   <patient>
+	      <id root="2.16.840.1.113883.1122" 
+	         extension="375913"/>
+	      <patient_Person>
+	         <!-- Ohio DL -->
+	         <pat:id root="2.16.840.1.113883.1122" 
+	            extension="444-22-2222" 
+	            validTime="-2003-05-20" 
+	            assigningAuthorityName="OH"/>
+	         <pat:nm use="L" xsi:type="PN">
+	            <dt:family>Everywoman</dt:family>
+	            <dt:given>Eve</dt:given>
+	            <dt:given>E</dt:given>
+	         </pat:nm>
+	      </patient_Person>
+	   </patient>
+	</patient>]]></eg>
+	</div3>
+	<div3 id="v3gex9">
+		<head>The Complete observation.xml Example</head>
+		<eg role="example"><![CDATA[	<?xml version="1.0" encoding="utf-8" standalone="no"?>
+	<!--Example copyright 2002 by Health Level Seven, Inc. -->
+	<Message xmlns="urn:hl7-org:v3" 
+	   xmlns:xsi="http://www.w3.org/2002/XMLSchema-instance" 
+	   xsi:schemaLocation="urn:hl7-org:v3/MCCI_MT000101 
+	      MCCI_MT000101.xsd">
+	   <id root="2.16.840.1.113883.1122" extension="CNTRL-3456"/>
+	   <!-- message ID, [msh.10]  -->
+	   <creation_time value="2002-08-16T14:30:35.16-06:00"/>
+	   <!-- [msh.7]  -->
+	   <version_id>3.0</version_id>
+	   <interaction_id root="2.16.840.1.113883" 
+	      extension="POLB_IN004410"/>
+	   <!-- interaction id= Observation Event Complete, 
+	      Notification  (POLB_IN004410) source=ORU^R01-->
+	   <processing_cd code="P"/>
+	   <!-- processing code, [msh.11] -->
+	   <accept_ack_cd code="ER"/>
+	   <!-- errors only -->
+	   <application_ack_cd code="ER"/>
+	   <executedByRespondToOrg>
+	      <!-- presume "respond_to" is a sending contact -->
+	      <type_cd code="RSP"/>
+	      <telecom use="WP" url="555-555-5555"/>
+	      <servedBy>
+	         <nm xsi:type="dt:PN">
+	            <dt:family>Hippocrates</dt:family>
+	            <dt:given>Harold</dt:given>
+	            <dt:given>H</dt:given>
+	            <dt:suffix qualifier="AC">MD</dt:suffix>
+	         </nm>
+	         <telecom use="WP" url="555-555-5555"/>
+	      </servedBy>
+	   </executedByRespondToOrg>
+	   <executedBySendApp>
+	      <type_cd code="SND"/>
+	      <telecom value="127.127.127.255"/>
+	      <servedBy>
+	         <!-- sending application, [msh.3] -->
+	         <id extension="GHH LAB" root="2.16.840.1.113883.1122"/>
+	         <nm use="L">
+	            <given>An Entity Name</given>
+	         </nm>
+	         <telecom value="555-555-2005" use="H"/>
+	         <agencyFor>
+	            <!-- sending facility [msh.4]  -->
+	            <representedOrganization>
+	               <id nullFlavor="OTH"/>
+	            </representedOrganization>
+	         </agencyFor>
+	         <presence>
+	            <location>
+	               <id root="2.16.840.1.113883.1122" 
+	                  extension="ELAB-3"/>
+	               <nm xsi:type="dt:TN">GHH Lab</nm>
+	            </location>
+	         </presence>
+	      </servedBy>
+	   </executedBySendApp>
+	   <executedByRcvApp>
+	      <type_cd code="RCV"/>
+	      <telecom value="127.127.127.0"/>
+	      <servedBy>
+	         <!-- Receiving application, [msh.5] -->
+	         <id root="2.16.840.1.113883.1122" 
+	            extension="GHH OE"/>
+	         <nm use="L">
+	            <given>An Entity Name</given>
+	         </nm>
+	         <telecom value="555-555-2005" use="H"/>
+	         <agencyFor>
+	            <representedOrganization>
+	               <id root="2.16.840.1.113883.19.3.1001"/>
+	               <nm xsi:type="TN">GHH Outpatient Clinic</nm>
+	            </representedOrganization>
+	         </agencyFor>
+	         <presence>
+	            <location>
+	               <id root="2.16.840.1.113883.1122" 
+	                  extension="BLDG4"/>
+	               <nm xsi:type="TN">GHH Outpatient Clinic</nm>
+	            </location>
+	         </presence>
+	      </servedBy>
+	   </executedByRcvApp>
+	   <has_payload_ControlActEvent xsi:type="MCAI_HD700200">
+	      <!--  Message interaction control event wrapper, 
+	         substituted by the sender -->
+	      <!-- act control event  -->
+	      <response_cd code="N"/>
+	      <verifier>
+	         <participant_COCT_MT090100>
+	            <id root="2.16.840.1.113883.1122" 
+	               extension="444-444-4444"/>
+	         </participant_COCT_MT090100>
+	      </verifier>
+	      <interactionTarget xsi:type="POLB_MT004101">
+	         <ObservationEvent>
+	            <!--- ID is the filler order number ... -->
+	            <id root="2.16.840.1.113883.1122" 
+	               extension="1045813" 
+	               assigningAuthorityName="GHH LAB"/>
+	            <cd code="1554-5" codeSystemName="LN" 
+	               displayName="GLUCOSE^POST 12H
+	                  CFST:MCNC:PT:SER/PLAS:QN"/>
+	            <status_cd code="completed"/>
+	            <!-- time the sample was taken -->
+	            <effective_time>
+	               <dt:center value="2002-02-15T07:30:00"/>
+	            </effective_time>
+	            <!-- time of the actual lab test -->
+	            <activity_time>
+	               <dt:center value="2002-02-15T08:30:00"/>
+	            </activity_time>
+	            <priority_cd code="R"/>
+	            <value xsi:type="dt:PQ" value="182" unit="mg/dL"/>
+	            <interpretation_cd code="H"/>
+	            <participant>
+	               <!-- this is the signatory -->
+	               <type_cd code="AUT"/>
+	               <!-- time of signature -->
+	               <time value="2002-08-16T09:30:00"/>
+	               <mode_cd code="WRITTEN"/>
+	               <!-- signature is on file -->
+	               <signature_cd code="S"/>
+	               <assignedEntity>
+	                  <id root="2.16.840.1.113883.1122" 
+	                     extension="444-444-4444"/>
+	                  <assignee_Person>
+	                     <nm use="L" xsi:type="dt:PN">
+	                        <dt:family>Hippocrates</dt:family>
+	                        <dt:given>Harold</dt:given>
+	                        <dt:given>H</dt:given>
+	                        <dt:suffix qualifier="AC">MD</dt:suffix>
+	                     </nm>
+	                  </assignee_Person>
+	               </assignedEntity>
+	            </participant>
+	            <patient>
+	               <!-- PID -->
+	               <patient>
+	                  <id root="2.16.840.1.113883.1122" 
+	                     extension="375913"/>
+	                  <patient_Person>
+	                     <!-- Ohio DL -->
+	                     <pat:id root="2.16.840.1.113883.1122" 
+	                        extension="444-22-2222" 
+	                        validTime="-2003-05-20" 
+	                        assigningAuthorityName="OH"/>
+	                     <pat:nm use="L" xsi:type="PN">
+	                        <dt:family>Everywoman</dt:family>
+	                        <dt:given>Eve</dt:given>
+	                        <dt:given>E</dt:given>
+	                     </pat:nm>
+	                  </patient_Person>
+	               </patient>
+	            </patient>
+	            <inFulfillmentOf>
+	               <!-- placer order -->
+	               <priorObservationOrder>
+	                  <id root="2.16.840.1.113883.1122" 
+	                     extension="845439" 
+	                     assigningAuthorityName="GHH OE"/>
+	                  <cd code="1554-5" codeSystemName="LN" 
+	                     displayName="Serum Glucose"/>
+	                  <participant>
+	                     <type_cd code="RESP"/>
+	                     <assignedEntity>
+	                        <id root="2.16.840.1.113883.1122" 
+	                           extension="555-555-5555"/>
+	                        <assignee_Person>
+	                           <nm use="L" xsi:type="dt:PN">
+	                              <dt:family>Primary</dt:family>
+	                              <dt:given>Patricia</dt:given>
+	                              <dt:given>P</dt:given>
+	                              <dt:suffix qualifier="AC"> 
+	                                 MD</dt:suffix>
+	                           </nm>
+	                        </assignee_Person>
+	                     </assignedEntity>
+	                  </participant>
+	               </priorObservationOrder>
+	            </inFulfillmentOf>
+	            <referenceRange>
+	               <referenceObservationEventCriterion>
+	                  <value xsi:type="dt:IVL_PQ">
+	                     <dt:low value="70" unit="mg/dL"/>
+	                     <dt:high value="105" unit="mg/dL"/>
+	                  </value>
+	               </referenceObservationEventCriterion>
+	            </referenceRange>
+	         </ObservationEvent>
+	      </interactionTarget>
+	   </has_payload_ControlActEvent>
+	</Message>
+]]></eg>
+	</div3>
+</div2>

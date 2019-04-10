@@ -1,0 +1,1408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 2 U (http://www.xmlspy.com) by Registred (Registred) -->
+<!--URGENT FROM LISA - There is a left pointed bracket that is used in the example in in the fixed declaration section.  I'm assuming that Mike has an escape sequence for this character.  If not, then we can remove the example-->
+<!-- MIKE CRAIG  USE THIS DEFINITION DOCTYPE spec SYSTEM "../../support/dtd/v3m.dtd"-->
+<!DOCTYPE spec SYSTEM "../../support/dtd/v3m.dtd">
+<spec>
+	<header ballotStatus="NormativeStandard" ballotNumber="2">
+		<title>Refinement, Constraint and Localization, Release 2</title>
+		<version>2.0</version>
+		<date>1/12/2008</date>
+		<authlist>
+			<author>
+				<role>Implementation&amp;Conformance Co-Chair</role>
+				<name key="Carnahan, Lisa">Lisa Carnahan</name>
+				<affiliation>National Institute of Standards &amp; Technology</affiliation>
+			</author>
+			<author>
+				<role>Primary Contributor</role>
+				<name key="Gallagher, Len">Len Gallagher</name>
+				<affiliation>National Institute of Standards &amp; Technology</affiliation>
+			</author>
+			<author>
+				<role>Primary Contributor</role>
+				<name key="Lyons, John">John Lyons</name>
+				<affiliation>Siemens Medical Solutions Health Services</affiliation>
+			</author>
+			<author>
+				<role>Implementation&amp;Conformance Co-Chair</role>
+				<name key="McCay, Charlie">Charlie McCay Oemig</name>
+				<affiliation>Ramsey Systems</affiliation>
+			</author>
+			<author>
+				<role>Primary Contributor</role>
+				<name key="McKenzie, Lloyd">Lloyd McKenzie</name>
+				<affiliation>Lloyd McKenzie &amp; Assoc. Consulting Ltd.</affiliation>
+			</author>
+			<author>
+				<role>Implementation&amp;Conformance Co-Chair</role>
+				<name key="Oemig, Frank">Frank Oemig</name>
+				<affiliation>Agfa HealthCare GmbH</affiliation>
+			</author>
+			<author>
+				<role>Implementation&amp;Conformance Co-Chair</role>
+				<name key="Puyenbroek, Jennifer">Jennifer Puyenbroek</name>
+				<affiliation>SAIC - Science Applications International Corp</affiliation>
+			</author>
+			<author>
+				<role>Primary Contributor</role>
+				<name key="van Poppel, Bas">Bas Van Poppel</name>
+				<affiliation>iSOFT Nederland</affiliation>
+			</author>
+		</authlist>
+	</header>
+	<front>
+		<div1 id="prefNotes" title="Notes to Readers" numberSectionInd="true">
+			<head>Notes to Readers</head>
+			<p>This following document constitutes Release 2 of Refinement, Constraint, and Localization.
+			</p>
+			<p>The aim of this release is to remove ambiguity regarding some of the "rules" expressed the Version 3, Release 1 material.</p>
+			<p>One serious issue that is still pending resolution is the allowance for CMET substitution by Affiliates.  (<specref ref="CEClocaltypescmet3"/>)The language for this allowance has been updated based on input from the International Committee.</p>
+			<p>A number of comments were received during balloting of this document regarding the synchronization of the concepts and terms of this chapter with the same concepts and terms as discussed in the HDF.  This issue was discussed in both Conformance and Modeling and Methodology work group meetings.  An agreement was reached that the normative 'source of truth' for any given concept will reside in only one document.  All other documents will reference the normative language. Work continues to be done by the Conformance work group to synchronise this document, the HDF and other relevant documents in this regard. </p>
+		</div1>
+		<div1 id="prefChange" title="Changes from Previous Release" numberSectionInd="true">
+			<head>Changed from Previous Release</head>
+			<p>
+				<emph role="strong">Summary of Changes from Version 3, Release 2, Membership Ballot 1</emph>
+			</p>
+			<p>
+				<list role="unordered">
+					<item>Typographical corrections.
+					</item>
+					<item>Clarification of Implementable Profile in section 1.1.
+					</item>
+					<item>Added new graphic to section 1.2.
+					</item>
+					<item>Previous section 2.2 and 2.2.1 were moved to 2.1.
+					</item>
+					<item>Clarification of CMET substitution and CMET constraint hierarchy in section 2.4.2.
+					</item>
+					<item>Introduced new section 2.4.3.
+					</item>
+					<item>Clarification of Definition Annotation type and clarification of invoking contraints on annotations in section 2.7.
+					</item>
+					<item>Clarification of ITS specific specification in section 5.3.2.2.
+					</item>
+				</list>
+			</p>
+			<p>
+				<emph role="strong">Summary of Changes from Version 3, Release 2, Committee Ballot 2</emph>
+			</p>
+			<p>
+				<list role="unordered">
+					<item>Typographical corrections.
+					</item>
+					<item>Changes to Section 1.1 to include the use of Binding Realm.
+					</item>
+					<item>Clarification in section 1.2 Refinement Process.
+					</item>
+					<item>Clarification for section 2.1.2 Conformance Indicators.
+					</item>
+					<item>Added new columns to Data Types Specialization table in section 2.4.1.  Also separated the promotion and demotion table.
+					</item>
+					<item>Clarification of section 2.5 Vocabulary Constraints.
+					</item>
+					<item>Clarification of Fixed and Default values in section 2.6.1 and 2.6.2.
+					</item>
+					<item>Renamed Co-Occurrence Constraints to Explicit Constraint Statements in section 2.6.3.
+					</item>
+					<item>Added new annotation type References to table in section 2.7.
+					</item>
+					<item>Clarification of section 5.3.3.1 and the Data Type Specialization Specification table.
+					</item>
+				</list>
+			</p>
+			<p>
+				<emph role="strong">Summary of Changes from Version 3, Release 2, Committee Ballot 1</emph>
+			</p>
+			<p>
+				<list role="unordered">
+					<item>Typographical corrections
+					</item>
+				</list>
+			</p>
+			<p>
+				<emph role="strong">Summary of Changes from Version 3, Release 1</emph>
+			</p>
+			<p>
+				<list role="unordered">
+					<item>Clarified the definition for default values and the rules for assigning and using. (<specref ref="CECdefault3"/>)
+					</item>
+					<item>Added a definition for the concept of defining a fixed value for an attribute and the rules for using. (<specref ref="CECfixed3"/>)
+					</item>
+					<item>Removed the sentence regarding the HL7 adoption of OCL. (<specref ref="CECtext3"/>)</item>
+					<item>Clarified the need to submit informal extensions to an HL7 Committee.  Informal extensions of the type implementation-specific extensions shall not be subject to submittal to an HL7 Committee for possible standardization. (<specref ref="CECinformalextensions3"/>)
+					</item>
+					<item>Clarified that the registration process for localizations is currently not supported by HL7 and therefore is not required in this release. (<specref ref="CEClocaloverprocess3"/>)
+					</item>
+					<item>Clarified the meaning of conformance statement and conformance profile. (<specref ref="confworkdprod"/>)
+					</item>
+					<item>Provided an initial listing for the contents of a conformance profile (<specref ref="confworkdprod"/>) </item>
+				</list>
+			</p>
+		</div1>
+		<div1 id="prefNotes2" title="Open Issues" numberSectionInd="true">
+			<head>Open Issues</head>
+			<p>
+				<emph role="strong">Data Type Specialization Requirements</emph>
+			</p>
+			<p>To ensure international interoperability the names of specializations which are not defined in the abstract data types specification SHOULD NOT replace the base data type for a RIM attribute where this is communicated in an instance, but may be sent in addition to this. The base data type is communicated in a way that is determined by the ITS, and for the XML ITS, this is achieved using the XML attribute “xsi:type”. 
+Referencing of user-defined data type specializations could be achieved by the addition of a new property to the abstract type DataValue, alias ANY, in the next revision of the V3 Data Type Specification, currently scheduled for near term balloting. A new property of specializationType could complement the existing property dataType so that both the base type and any user-defined named specialization could be represented in an ITS appropriate way in any message.
+			</p>
+			<p>
+				<emph role="strong">Handling of Default (and Fixed) Values</emph>
+			</p>
+			<p>According to the current methodology, the structural attributes represent the interpretation of the classes in the model. In the current XML ITS these structural attributes are represented as attributes within an element. As such, an attribute of an element does have a higher priority than a name of an (XML) element (tag) itself. Therefore, one cannot trust the implied semantics of element names as they are used in an XML document (instance). This prevents using XML schemas for their original intent, i.e. validation of an XML document.
+In order to avoid the encouragement to use schemas for validation, it is highly recommended that within an instance all values SHALL be populated, whether default or fixed values have been assigned or not.
+Secondly. current use of the XML ITS implicitly requires that sender and receiver SHALL have access to the appropriate schemas to interpret the messages/documents correctly.
+</p>
+		</div1>
+
+	</front>
+	<body>
+		<div1 id="CECintro"  ballotStatus="NormativeStandard" ballotNumber="2">
+			<head>Introduction</head>
+			<div2 id="CECintroOvw2">
+				<head>Overview</head>
+				<p>The Version 3 standard provides a rich set of messages to support communications in a variety of clinical and other health related domains. Moreover, HL7 Version 3 messages will be specific enough to permit strong conformance claims to be asserted and verified.  Refer to <specref ref="v3gconfclaims"/> for more details. Nevertheless, any standard faces two challenges.  First, it can always be made more specific in order to provide a more precise solution to a particular requirement.  Second, it will not contain all of the data needed in every environment, particularly when international requirements are considered.  These challenges lead to a pair of complementary requirements:  the ability to constrain the standard in more detail, and the ability to extend the standard in a controlled fashion.</p>
+				<p>The <specref ref=" CECconstraints1"/> section documents, in a normative fashion, what the HL7 Technical Committees are permitted to do as part of the Version 3 <specref ref=" CECprocess2"/>.
+				</p>
+				<p>Intertwined with the notions of constraining and extending the standard are two critical capabilities  the ability to establish a testable statement of conformance to the standard, and the ability to create a "profile" of the standard that formally defines how the standard will be implemented in a particular setting.</p>
+				<p>A <emph role="strong">profile</emph> is a set of information used to document system requirements or capabilities from an information exchange perspective.  The documentation is expressed in terms of constraints, extensions, or other alterations to a referenced standard or another profile.  </p>
+				<!--LISA modified the sentence below beginning with Profiles-->
+				<p>Profiles of the HL7 Version 3 standard must be derived, directly or indirectly, from a Version 3 specification, as balloted either by HL7 or by one of its affiliates.</p>
+				<p>A <emph role="strong">binding realm</emph> manages the bindings/substitutions of Valuesets and CMETs (and templates and data type specializations if and when substitution rules for these are agreed) to reflect local rules. The realm is communicated by InfrastructureRoot.realmCode and determines conformance rules for vocabulary, data type, etc. Each binding realm has a <emph role="strong">binding realm owner</emph>: this organization must be an Affiliate. In some exceptional cases the binding realm owner may be a group of Affiliates (if they have an agreement to share ownership), e.g. for binding realms like "Dutch-German cross-border hospitalisation", "European-Indian dental tourism" or "US-Canadian Pharmacy".</p>
+				<p>The categories and use of profiles include:</p>
+				<list role="unordered">
+					<item>
+						<p>
+							<emph role="strong">Annotation</emph> profiles documents exactly the standard but with more information (these profiles will not be discussed further here).</p>
+						<p>An annotation profile is used to further explain the base document to educate prospective users and/or implementers. An annotation profile will usually enhance the descriptions of the elements of the base specification in order to relate them to a particular context.</p>
+					</item>
+					<item>
+						<p>
+							<emph role="strong">Constraint</emph> profiles may contain unchanged and constrained elements.</p>
+						<p>A constraint profile reduces the optionality and cardinality of the base specification (i.e., the HL7 V3 standard)  in order to make the specification more exact and to approach "plug-and-play" interoperability.</p>
+					</item>
+					<item>
+						<p>
+							<emph role="strong">Implementable</emph> profiles are the most constrained constraint profiles.</p>
+						<p>An implementable profile eliminates all optionality of the base specification (i.e., the HL7 V3 standard) in order to make the specification exact and to approach "plug-and-play" interoperability.  Optionality for a profile is eliminated when the conformance indicator for every attribute and association is something other than Unspecified (namely Required or Not Permitted) and every vocabulary domain is bound to a value-set. (see section 2.1.2 for conformance indicator and 2.5 for vocabulary domain) </p>
+					</item>
+					<item>
+						<p>
+							<emph role="strong">Conformance</emph> profiles are used to articulate a system's conformance claim to a set of interactions (or optionally application roles). </p>
+						<p>A conformance profile can be either a constrained profile or an implementable profile.</p>
+					</item>
+					<item>
+						<p>
+							<emph role="strong">Localization</emph> profiles may contain unchanged, constrained, or extended elements.</p>
+						<p>A localization profile is usually designed to meet the same objectives as a constraint profile, except that the demands of the intended implementation context mandate additional elements, as represented in the extensions.  Normally, extensions will represent the minimum changes to the base specification (i.e., the HL7 V3 standard) needed to meet those requirements.  Furthermore Data Type Specializations can also be used to adapt a profile to local needs.</p>
+					</item>
+					<item>
+						<p>
+							<emph role="strong">Conflicting</emph> profiles may contain unchanged, constrained, or extended elements  as well as elements that violate the HL7 refinement, constraint, and localization rules (these profiles will not be discussed further here).</p>
+						<p>By definition, a conflicting profile represents an implementation that cannot reliably interoperate with other implementations of the same base standard or base profile.  The reason for creating such a profile is to document the incompatibilities.</p>
+					</item>
+				</list>
+				<p>This document specifies the rules and principles that govern the definition of profiles, but does not state how to represent these profiles.  A formal representation of profiles is required in order to allow the creation of tooling to assist in development, documentation, comparison, and testing.  Such representation is outside the scope of this standard. </p>
+				<p>A <emph role="strong">Conformance Statement</emph> is the documentation of the degree to which a particular application conforms to the specification.   Part of that document will be a conformance profile expressing the system's capabilities relevant to a particular standard.</p>
+				<p>The Refinement, Constraint and Localization document of the standard addresses:</p>
+				<list role="unordered">
+					<item>the "rules" and processes for refining the standard through constraint and extension, including which standard artifacts are subject to constraint or extension</item>
+					<item>the definition of constraint and localization profiles</item>
+					<item>the criteria for establishing a conformance statement</item>
+					<item>the principles guiding who may define extensions to the standards and under what circumstances</item>
+				</list>
+			</div2>
+			<div2 id="CECprocess2">
+				<head>Refinement process</head>
+				<p>The HL7 methodology uses the <ilxspecref spec="&v3guidefile;" ref="v3ginfomdl">Reference Information Model (RIM)</ilxspecref> and the HL7-specified <ilxspecref spec="&datatypesfile;">Vocabulary Domains, and the Version 3 Data Type Specification </ilxspecref> as its starting point.  It then establishes the rules for refining these base standards to arrive at the information structures that specify Message Types and equivalent structures in Version 3.</p>
+				<p>The strategy for development of Version 3 messages and related information structures, as discussed in the <ilxspecref spec="&v3guidefile;">Version 3 Guide</ilxspecref>, is based upon the consistent application of constraints to a pair of base specifications  the <ilxspecref spec="&rimfile;">HL7 Reference Information Model (RIM)</ilxspecref> and the <ilxspecref spec="&vocabfile;">HL7 Vocabulary Domains</ilxspecref>  and upon the extension of those specifications to create representations constrained to address a specific health care requirement.  The processes described are precisely the processes that the HL7 Technical Committees followed in developing Version 3 standards.  Thus, this section also serves as a reference work for the core standard.</p>
+				<p>Just as the standard is developed using a series of constraints and targeted extensions, the design of applications to implement these messages, the definition of conformance claims, and the definition of localization specifications, will all require further constraint and extension of the base standard.</p>
+				<p>The following figure shows the refinement process specified in the methodology. Each red arrow in the diagram represents an application of the processes detailed in this section of the ballot. As diagrammed, the processes are used to derive one or more <ilxspecref spec="&v3guidefile;" ref="v3dmim">Domain Message Information Models (D-MIM)</ilxspecref> from the RIM. Each such model represents the set of concepts applicable to a particular health care domain of interest.</p>
+				<graphic source="ConstraintCycle.gif" alt="Refinement Process  for defining messages based on the HL7 RIM"/>
+				<graphic source="ConstraintCycle2.gif"/>
+				<p>Within the domain, the Technical Committees use the same constraint process to derive one or more <ilxspecref spec="&v3guidefile;" ref="v3grmim">Refined Message Information Models (R-MIM)</ilxspecref>  from the D-MIM for their domain.</p>
+				<p>Finally, the committee applies the same constraints, coupled with a traversal of the information model graph, to arrive at the specification for an <ilxspecref spec="&v3guidefile;" ref="v3ghmd">Hierarchical Message Descriptions (HMD) and its resulting Message Types</ilxspecref>.  In reality, as discussed in the Version 3 Guide, some of the Message Types derived from a single HMD may represent a further constraint on the common, or base, Message Type for that HMD.  Although this is not shown in the diagram above, this constraint also follows the rules outlined in this section.</p>
+				<p>The fundamental rules of constraint, cloning and extension remain the same at each stage. This is true even though: the documentation of the constraints may vary stage to stage; the results may be documented in different forms; and the constraint process may be coupled with other processes, such as those for generating an HMD, and its resulting Message Type, from an R-MIM.  Refer to section 1.1 of the HDF which replaces section 10.3.3 of the  <loc href="http://www.hl7.org/library/mdf99/mdf99.pdf" target="_blank">Message Development Framework (MDF)</loc> v3.3 document, published December 1999.
+</p>
+			</div2>
+			<div2 id="CECprofiles3">
+				<head>Constraint Process</head>
+				<p>The Refinement Process Diagram also shows a recursive loop whereby the constraint process can be used to further refine an R-MIM to arrive at a new R-MIM to be used to define alternative messages.  All of these processes will be used by implementers of the Version 3 messaging standards to define profiles of messages to be implemented.  These profiles have a variety of anticipated uses.  They may be: </p>
+				<list role="unordered">
+					<item>Created by an HL7 Affiliate organization to specify the localization of the Version 3 standards to be used in the affiliates context.</item>
+					<item>Used by an application vendor to document the conformance of their application to the Version 3 specifications. </item>
+					<item>Created by a user to document the specific implementation of communications between the users systems or to specify the requirements to be followed in a planned implementation.</item>
+				</list>
+			</div2>
+		</div1>
+		<div1 id="CECconstraints1"  ballotStatus="NormativeStandard">
+			<head>Constraints and Annotations</head>
+			<p>Constraints are the central feature of the refinement process, as they reduce the generality of the specification and focus it on a particular requirement. The constraints that may be asserted against a model element , e.g., attribute or association, fall into six broad categories:</p>
+			<p>
+				<emph role="strong">Appearance constraints</emph> determine whether a particular element must appear in models or messages derived from the base model, and/or whether the element is precluded from appearing therein.</p>
+			<p>
+				<emph role="strong">Cardinality constraints</emph> define the number of repetitions that may occur for a given element.</p>
+			<p>
+				<emph role="strong">Type constraints</emph> limit the structure or "type" of the element in question.  These are constraints placed upon the data types for attributes and upon the use of <ilxspecref spec="&v3guidefile;" ref="v3gcmet">Common Message Element Types (CMET)</ilxspecref>  for associations. </p>
+			<p>
+				<emph role="strong">Vocabulary constraints</emph> limit the set of concepts that can be taken as valid values in an instance of a coded attribute or data type.</p>
+			<p>
+				<emph role="strong">Other value constraints</emph> provide for the declaration of constraints stated as text and, optionally, as testable expressions to establish "business rules", and for the assertion of default or fixed values.</p>
+			<p>
+				<emph role="strong">Annotations</emph> provide further explanations to educate prospective users and/or implementers. These are usually used to enhance the descriptions of the elements of the base specification in order to relate them to a particular Context.</p>
+			<div2 id="CECcard2">
+				<head>Cardinality constraint</head>
+				<p>
+					Cardinality constraints apply only to attributes and associations. Every attribute or association element in a model has an explicit or implicit cardinality. The cardinality expresses the number of times an attribute or association may appear in a derived model or message. Since associations in HL7 models are directional, the cardinality constraint of an association is equal to its destination multiplicity, i.e. the minimum and maximum number of times instances of the target class may be referenced.
+				</p>
+				<p>
+					Cardinality constraints are constraints on the repetitions of a model element. Attributes may be constrained by more specific minimum and maximum cardinality values and associations may be constrained by more specific source and destination multiplicities. The rules for applying such constraints are articulated in the following section.
+				</p>
+				<div3 id="CECcard3">
+					<head>Cardinality</head>
+					<p>
+						<emph role="strong">Values</emph>
+						<br/>Cardinality is expressed as a minimum and a maximum value separated by .., e.g., 0..1.</p>
+					<p>The minimum cardinality is expressed as an integer that is equal to or greater than zero.  If the minimum cardinality is zero, the element need only appear in message instances when the sending application has data with which to value the element.  Mandatory elements must have a minimum cardinality greater than zero.</p>
+					<p>The maximum cardinality is expressed either as a positive integer (greater than zero and greater than or equal to the minimum cardinality) or as unlimited using an asterisk ("*").  If the maximum cardinality is greater than one, the type for the associated message element must include one of the "collection types"  SET, LIST, or BAG.</p>
+					<p>
+						<emph role="strong">Invoking the constraint</emph>
+						<br/>Both the minimum and maximum cardinality may be constrained in a way that narrows the range of possible occurrences.  Thus, either end of the cardinality range may be set to a new value within the closed range defined by the minimum and maximum values in the source model's range.  Two rules further constrain a cardinality change: (a) the minimum cardinality of the resulting range must be less than or equal to the maximum cardinality; and (b) the maximum cardinality must be greater than or equal to the new minimum cardinality.</p>
+				</div3>
+			</div2>
+			<div2 id="CECappearance2">
+				<head>Appearance constraints and cloning</head>
+				<p>Appearance constraints apply to attributes and associations. The presence of a model element in a constrained model depends upon the appearance constraints that are asserted or implied for that element in the source model, other constraints that are declared or implied in the constrained model, and upon the rules for "cloning" elements from a source model to a target model.</p>
+				<p>There are two forms of appearance constraints that may be set in a model: the declaration that an element is mandatory for HL7 messaging; and the assertion of a conformance indicator.</p>
+				<div3 id="CECmandatory3">
+					<head>Mandatory Inclusion Flag</head>
+					<p>The mandatory inclusion flag indicates whether or not a particular element must be present in each instance of an HL7 message.  In HL7 designs this constraint is applied primarily to structural attributes  those attributes whose coded values are needed to fully interpret the classes that they classify.  According to the HDF, if an attribute or association is described as mandatory in a model, then in all message instances that are derived from this model, the element must be present and non-null.  In some explicitly allowed situations, a sending application may omit a mandatory attribute if the default value is not null.  To avoid default ambiguities, only HL7 technical committees and Affiliates are permitted to declare default values for <ilxspecref spec="&vocabfile;">RIM structural attributes</ilxspecref>.  </p>
+					<p>
+						<emph role="strong">Values</emph>
+						<br/>Mandatory (M) -  If the flag is set to &quot;M&quot;, the element is mandatory. </p>
+					<p>
+						<emph role="strong">Invoking the constraint</emph>
+						<br/>If an element is declared to be Mandatory, then all elements that derive from it in derived models SHALL also be Mandatory.
+					</p>
+				</div3>
+				<div3 id="CECconformInd3">
+					<head>Conformance Indicator</head>
+					<p>The conformance indicator constraint specifies how a model element must be handled by sending or receiving applications. Every attribute and association element in a model has an explicit or implicit conformance indicator constraint. 
+				 	</p>
+					<p>
+						<emph role="strong">Values</emph>
+						<br/>The constraint has one of three values: Required, Unspecified or Not Permitted.
+						<br/>
+						<emph role="strong">Required</emph> (R) - When doing modelling the element must appear in all instances of derived models and must be declared as "Required" in derived models.</p>
+					<p>
+						In message instances, a required element need not always be sent by an application. If the data exists, the sending application SHALL send it as a non-null value or a non-empty element. If the data does not exist and if the minimum cardinality is greater than zero, then the sending application SHALL send an appropriate null value or null association instance.  In all cases, if a required element is present in a message received by an application claiming conformance, then it shall be correctly processed by the receiving application. A receiving application shall not raise an error due to the absence of a required element with a cardinality of 0, although it may issue a warning that required information is missing.
+					</p>
+					<p>
+						In messages, the element must be communicated if its minimum cardinality is one.  In the case where the element is not mandatory, it may be communicated with a null value.  Note that any element declared to be "Mandatory" must also be "Required" and have a minimum cardinality of one. If the minimum cardinality is zero, and the element is "Required", conforming applications need not send the element if data does not exist.  For required elements, conforming applications must demonstrate their ability to provide and communicate not null values.  Receiving applications must demonstrate their ability to receive and process (eg. Store, display to users) not null values for required elements.
+					</p>
+					<p>
+						Any element declared as required in a model shall also be required in all HL7 message profiles derived from that standard message.	</p>
+					<!-- Lisa added the statement below.-->
+					<p><emph role="strong">Note:</emph> The allowance for the inclusion of a null instance for the association places a derived requirement on all ITSs to be able to represent a null association.</p>
+					<p>
+						<emph role="strong">Note:</emph> If an application adheres to an implementation profile declaring that the application supports an attribute or association, the application must be able to send or receive that attribute or association if the application has a value for it.</p>
+					<p>
+						<emph role="strong">Unspecified</emph> (U) - The appearance of this element in instances of derived models or messages is unconstrained.  In instances of derived models or messages, an element may retain "Unspecified" status, or it may be declared "Required" or "Not Permitted". "Unspecified" is the default value for this constraint.</p>
+					
+					<p><emph role="strong">Not Permitted</emph> (NP) - This element SHALL not appear in instances of derived models or messages and must also be "Not permitted" in derived models.</p>
+					<p>
+						Any element designated as not permitted in a standard HL7 message definition shall also be not permitted in all HL7 message profiles of that standard message.</p>
+					<p><emph role="strong">Invoking the constraint</emph>
+						<br/>If an element is Required, then all elements that derive from it in derived models SHALL also be Required. 
+					</p>
+					<p>
+						If an element is Not Permitted, then all elements that derive from it in derived models SHALL also be Not Permitted.
+					</p>
+					<p>
+						The "Not Permitted" value may also be expressed in a derived model by simply omitting that element from the model. Thus, an attribute or association that is not "Required" in a source model may be omitted from a derived model, thereby creating a de facto declaration of "Not Permitted."
+					</p>
+				</div3>
+				<div3 id="CECcloning3">
+					<head>Cloning classes</head>
+					<p>Whenever an information model is derived by constraining another information model, it is permissible to "clone" the classes of the base model. This is true whether one is deriving a D-MIM from the RIM, an R-MIM from a D-MIM, or an R-MIM from another R-MIM.</p>
+					<p>Class cloning is the creation of one or more copies of a base class contained in the source model into the new model.  The clone classes SHALL have a new name to assure that they have unique names within the derived model.</p>
+					<p>Cloning is the only form of model "extension" permitted under the terms of this section.  In order to qualify as a valid clone of a source class, the clone must obey the following rules:</p>
+					<list role="unordered">
+						<item>The clone may contain only attributes that are also part of the source class</item>
+						<item>The clone shall only use associations that are valid for the source class</item>
+						<item>The cardinality and mandatory constraints for elements in the clone class cannot be less constrained than the equivalent elements in the source class</item>
+						<item>The vocabulary domains declared for any coded attributes in the clone must be identical to, or a subset of, the domain asserted in the source class, and if the coded attribute is "CNE" the cloned attribute must also be "CNE"</item>
+						<item>The clone need not include attributes or associations unless they are "Required" or "Mandatory" in the source model, regardless of their cardinality</item>
+						<item>The clone may not include attributes or associations that are listed as "Not Permitted" in the source model</item>
+					</list>
+				</div3>
+			</div2>
+			<div2 id="CECAppAndCard">
+				<head>Appearance Constraints and Cardinality Combinations
+				<br/> The following table represents the valid combinations:</head>
+				<table>
+					<tbody>
+						<tr>
+							<th>Mandatory</th>
+							<th>Conformance</th>
+							<th>Minimum Cardinality</th>
+							<th>Null O.K?</th>
+							<th>Comment</th>
+						</tr>
+						<tr>
+							<td>M</td>
+							<td>R</td>
+							<td>1</td>
+							<td>No</td>
+							<td>be present and valued in a message.<p/>
+							</td>
+						</tr>
+						<tr>
+							<td>(not mandatory)</td>
+							<td>R</td>
+							<td>0</td>
+							<td>Yes</td>
+							<td>If no information is available, just don't send it!</td>
+						</tr>
+						<tr>
+							<td>(not mandatory)</td>
+							<td>R</td>
+							<td>1</td>
+							<td>Yes</td>
+							<td><p/>
+							</td>
+						</tr>
+						<tr>
+							<td>(not mandatory)</td>
+							<td>NP</td>
+							<td>n/a</td>
+							<td>No</td>
+							<td/>
+						</tr>
+						<tr>
+							<td>(not mandatory)</td>
+							<td>(unspecified)</td>
+							<td>0</td>
+							<td>Yes</td>
+							<td/>
+						</tr>
+					</tbody>
+				</table>
+				<p/>
+			</div2>
+			<div2 id="CECtypes2">
+				<head>Type constraints</head>
+				<p>
+					Type constraints apply to attributes and associations. Each of these model elements has a type explicitly or implicitly derived from information in the model specification. The type of a class or class clone can be determined either from the classCode or typeCode attribute of the class.. The type of an attribute is the data type declared for that attribute in the model. Since associations in HL7 models are directional, the type of an association is defined to be the type of its target element. If the target element is a Choice of classes, then the type of the association is Choice.
+				</p>
+				<p>
+					Type constraints are constraints on the type of a model element. Classes may be constrained by more specific classes or class clones, attributes may be constrained by more specific data types, and associations may be constrained by more specific target classes. If the target class of an association is a <ilxspecref spec="&v3guidefile;" ref="v3gcmet">Common Message Element Types (CMETs)</ilxspecref>, then the association can only be constrained to another defined CMET that is a constrained version of the current CMET.  The following sections address allowed data type or CMET hierarchies that can be used for determining more specific type constraints.</p>
+				<div3 id="CECdatatypes3">
+					<head>Data types</head>
+					<p>Each attribute of the RIM is assigned a base data type that represents the values the attribute may assume. If model B is defined as a refinement of model A, and if model A specifies a data type for an attribute, then model B may keep the same data type for that attribute and possibly constrain its values and properties, or model B may make a type substitution to one of the allowable types as defined by the derivation substitution table below. In either case the data type for model B may be further constrained by applying additional constraints expressed in some constraint language. Such constraints may be applied to the values of the data type or to its properties.</p>
+					<p>The <ilxspecref spec="&datatypesfile;">Version 3 Data Type Specification</ilxspecref> defines all HL7 data types and their properties. It also defines a specialization hierarchy of data types with the understanding that any specialized data type in the hierarchy may be substituted for its more general parent data type in the refinement process. The following incomplete table represents the data type specialization hierarchy defined in the V3 Data Type Specification of the Normative Edition 2005.</p>
+					<table border="1">
+						<thead>
+							<tr>
+								<th>
+									<emph role="strong">Mnemonic</emph>
+								</th>
+								<th>
+									<emph role="strong">DataTypeName</emph>
+								</th>
+								<th>
+									<emph role="strong">Type</emph>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td> ANY</td>
+								<td>DataValue (ANY)</td>
+								<td>Abstract</td>
+							</tr>
+							<tr>
+								<td> BAG</td>
+								<td>     &#160;Bag (BAG)</td>
+								<td>Generic</td>
+							</tr>
+							<tr>
+								<td> BL</td>
+								<td>     &#160;Boolean (BL)</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td> BN</td>
+								<td>          &#160;&#160;BooleanNonNull</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td> CD</td>
+								<td>     &#160;Concept Descriptor </td>
+								<td></td>
+							</tr>
+							<tr>
+								<td> CE</td>
+								<td>          &#160;&#160;Coded With Equivalents </td>
+								<td></td>
+							</tr>
+							<tr>
+								<td> CV</td>
+								<td>               &#160;&#160;&#160;Coded Value </td>
+								<td></td>
+							</tr>
+							<tr>
+								<td> CO</td>
+								<td>                    &#160;&#160;&#160;&#160;Coded Ordinal </td>
+								<td></td>
+							</tr>
+							<tr>
+								<td> CS</td>
+								<td>                    &#160;&#160;&#160;&#160;Coded Simple Value </td>
+								<td></td>
+							</tr>
+							<tr>
+								<td> HXIT</td>
+								<td>     &#160;History Item </td>
+								<td>Generic Type Extension</td>
+							</tr>
+							<tr>
+								<td> II</td>
+								<td>     &#160;Instance Identifier </td>
+								<td></td>
+							</tr>
+							<tr>
+								<td> LIST</td>
+								<td>     &#160;Sequence </td>
+								<td>Generic</td>
+							</tr>
+							<tr>
+								<td> GLIST</td>
+								<td>          &#160;&#160;GeneratedSequence </td>
+								<td>Generic</td>
+							</tr>
+							<tr>
+								<td> AD</td>
+								<td>               &#160;&#160;&#160;Postal Address </td>
+								<td></td>
+							</tr>
+							<tr>
+								<td> ED</td>
+								<td>                    &#160;&#160;&#160;&#160;Encapsulated Data </td>
+								<td></td>
+							</tr>
+							<tr>
+								<td> ST</td>
+								<td>                         &#160;&#160;&#160;&#160;&#160;Character String </td>
+								<td></td>
+							</tr>
+							<tr>
+								<td> SC</td>
+								<td>                              &#160;&#160;&#160;&#160;&#160;&#160;Character String with Code </td>
+								<td></td>
+							</tr>
+							<tr>
+								<td> UID</td>
+								<td>                              &#160;&#160;&#160;&#160;&#160;&#160;Unique Identifier String </td>
+								<td></td>
+							</tr>
+							<tr>
+								<td> EN</td>
+								<td>               &#160;&#160;&#160;Entity Name </td>
+								<td></td>
+							</tr>
+							<tr>
+								<td> ON</td>
+								<td>                    &#160;&#160;&#160;&#160;Organization Name </td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td> PN</td>
+								<td>                    &#160;&#160;&#160;&#160;Person Name </td>
+								<td></td>
+							</tr>
+							<tr>
+								<td> TN</td>
+								<td>                    &#160;&#160;&#160;&#160;Trivial Name </td>
+								<td></td>
+							</tr>
+							<tr>
+								<td> SLIST</td>
+								<td>          &#160;&#160;SampledSequence </td>
+								<td>Generic</td>
+							</tr>
+							<tr>
+								<td> PPD</td>
+								<td>     &#160;Parametric Probability Distribution </td>
+								<td>Generic Type Extension</td>
+							</tr>
+							<tr>
+								<td> QTY</td>
+								<td>     &#160;Abstract Type Quantity </td>
+								<td>Abstract</td>
+							</tr>
+							<tr>
+								<td> INT</td>
+								<td>          &#160;&#160;Integer Number </td>
+								<td></td>
+							</tr>
+							<tr>
+								<td> MO</td>
+								<td>          &#160;Monetary Amount </td>
+								<td></td>
+							</tr>
+							<tr>
+								<td> PQ</td>
+								<td>          &#160;&#160;Physical Quantity </td>
+								<td></td>
+							</tr>
+							<tr>
+								<td> REAL</td>
+								<td>          &#160;&#160;Real Number </td>
+								<td></td>
+							</tr>
+							<tr>
+								<td> RTO</td>
+								<td>          &#160;&#160;Ratio </td>
+								<td>Generic</td>
+							</tr>
+							<tr>
+								<td> TS</td>
+								<td>          &#160;&#160;Point in Time </td>
+								<td></td>
+							</tr>
+							<tr>
+								<td> SET</td>
+								<td>     &#160;Set </td>
+								<td>Generic</td>
+							</tr>
+							<tr>
+								<td> EIVL</td>
+								<td>          &#160;&#160;Event-Related Periodic Interval of Time </td>
+								<td></td>
+							</tr>
+							<tr>
+								<td> IVL</td>
+								<td>          &#160;&#160;Interval </td>
+								<td>Generic</td>
+							</tr>
+							<tr>
+								<td> PIVL</td>
+								<td>          &#160;&#160;Periodic Interval of Time </td>
+								<td></td>
+							</tr>
+							<tr>
+								<td> HIST</td>
+								<td>               &#160;&#160;&#160;History </td>
+								<td>Generic Type Extension</td>
+							</tr>
+							<tr>
+								<td> NPPD</td>
+								<td>               &#160;&#160;&#160;Non-Parametric Probability Distribution </td>
+								<td>Generic Type Extension</td>
+							</tr>
+							<tr>
+								<td> TEL</td>
+								<td>          &#160;&#160;Telecommunication Address </td>
+								<td></td>
+							</tr>
+							<tr>
+								<td> UVP</td>
+								<td>     &#160;Uncertain Value - Probabilistic </td>
+								<td>Generic Type Extension</td>
+							</tr>
+						</tbody>
+					</table>
+					<p>Some of the data types in this hierarchy are <emph role="strong">abstract</emph> types (e.g. ANY, QTY) and would normally not appear in a refinement intended for direct implementation. Others are generic types (e.g. BAG, LIST, SET, RTO) and would normally not appear in a model without indication of the specific types T involved in the construction (e.g. LIST&lt;PQ&gt;, RTO&lt;PQ,PQ&gt;). Others (e.g. CS) have specific usage rules that may preclude their substitution for any other data type.</p>
+					<p>The following table defines the allowable dataype substitutions when deriving a new model from an existing model.</p>
+					<table border="1">
+						<thead>
+							<tr>
+								<th>
+									<emph role="strong">Type in Model A</emph>
+								</th>
+								<th>
+									<emph role="strong">Allowable substitution types in Model B</emph>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>ANY</td>
+								<td>Any datatype from the above table, including Generic Type Extensions</td>
+							</tr>
+							<tr>
+								<td>ED</td>
+								<td>ST, UID</td>
+							</tr>
+							<tr>
+								<td>ST</td>
+								<td>UID</td>
+							</tr>
+							<tr>
+								<td>CD</td>
+								<td>CV, CE, CO</td>
+							</tr>
+							<tr>
+								<td>CE</td>
+								<td>CV, CO</td>
+							</tr>
+							<tr>
+								<td>SC</td>
+								<td>ST</td>
+							</tr>
+							<tr>
+								<td>EN</td>
+								<td>PN, ON</td>
+							</tr>
+							<tr>
+								<td>PN</td>
+								<td>TN</td>
+							</tr>
+							<tr>
+								<td>ON</td>
+								<td>TN</td>
+							</tr>
+							<tr>
+								<td>QTY</td>
+								<td>TS, MO, REAL, INT, TS, RTO &lt;QTY, QTY&gt;, PQ</td>
+							</tr>
+							<tr>
+								<td>REAL</td>
+								<td>INT</td>
+							</tr>
+							<tr>
+								<td>PQ</td>
+								<td>REAL</td>
+							</tr>
+							<tr>
+								<td>SET&lt;T&gt;</td>
+								<td>T, substitutions of T, LIST&lt;T&gt; and IVL&lt;T&gt;</td>
+							</tr>
+							<tr>
+								<td>LIST&lt;T&gt;</td>
+								<td>T</td>
+							</tr>
+							<tr>
+								<td>GLIST&lt;T&gt;</td>
+								<td>T</td>
+							</tr>
+							<tr>
+								<td>SLIST&lt;T&gt;</td>
+								<td>T</td>
+							</tr>
+							<tr>
+								<td>BAG&lt;T&gt;</td>
+								<td>T</td>
+							</tr>
+							<tr>
+								<td>IVL&lt;T&gt;</td>
+								<td>T</td>
+							</tr>
+							<tr>
+								<td>HIST&lt;T&gt;</td>
+								<td>HXIT&lt;T&gt;</td>
+							</tr>
+							<tr>
+								<td>UVP&lt;T&gt; </td>
+								<td>T</td>
+							</tr>
+							<tr>
+								<td>NPPD&lt;T&gt;</td>
+								<td>T</td>
+							</tr>
+							<tr>
+								<td>PPD&lt;T&gt;</td>
+								<td>T</td>
+							</tr>
+							<tr>
+								<td>EIVL&lt;TS&gt;</td>
+								<td>IVL&lt;TS&gt;</td>
+							</tr>
+							<tr>
+								<td>PIVL&lt;TS&gt;</td>
+								<td>IVL&lt;TS&gt;</td>
+							</tr>
+							<tr>
+								<td>GTS</td>
+								<td>SET&lt;PIVL&lt;TS&gt;&gt;, SET&lt;EIVL&lt;TS&gt;&gt;</td>
+							</tr>
+						</tbody>
+					</table>
+					<p>These substitutions are transitive. For example, since SET&lt;PIVL&lt;TS&gt;&gt; can be substituted for GTS, and T for SET&lt;T&gt;, PIVL&lt;TS&gt; can be substituted for GTS.</p>
+					<p>In addition, a derived model can always add a generic Type extension to a datatype. For example, if the type of an attribute is PQ in model A, it can be set to PPD&lt;PQ&gt; in model B.</p>
+					<p>This table is partially based on the specialization, promotion and demotions defined in the abstract datatypes specification, Normative Edition 2005. This table is the normative master definition of which datatypes can be substituted when deriving models.</p>
+					<p>In addition to the normative data types, further data type specializations may be defined and used to express further constraints on the permitted content of HL7 attributes.  The way that such specializations are defined and used is discussed in the <specref ref=" CEClocaltypes2"/> section below.</p>
+				</div3>
+				<div3 id="CECcmets3">
+					<head>Common Message Element Types (CMETs)</head>
+					<p>When an information model is converted to a serialized  information structure such as a message, each association in the information model will be assigned a type based upon the class or clone to which the association connects.  This is analogous to the assignment of data types to attributes of the information model.  </p>
+					<p>Although the type for an association may be defined by a type within an R-MIM, it is also possible to constrain the association by assigning it a formally-defined type.  These formally-defined types are the Common Message Element Types or CMETs. Refer to <ilxspecref spec="&v3guidefile;" ref="v3gcmet">Common Message Element Types (CMETs)</ilxspecref> for more information.</p>
+					<p>Each CMET is based on a specific RIM class and a particular set of codes for the structural attributes (eg. classCode, moodCode, typeCode and/or determinerCode) that characterize the class. The CMETs themselves are defined using a restriction hierarchy allowing CMETs to be constrained as part of the overall model refinement process.</p>
+					<list role="unordered">
+						<item>
+							<p>
+								<emph role="strong">CMET substitution</emph>
+								<br/>When a model is being refined, a CMET may be substituted for a class or a class clone, provided that (a) the CMET is based on either the same class as the class being substituted or on a sub-type of that class, and (b) the values for the structural codes for the CMET fall within the vocabulary domains specified for those attributes in the source model, and (c) that the body of the CMET that is substituted uses the constraint and extension rules described by this document for the model being refined.  Realms are allowed to define CMETs that extend the base CMET according to standard realm extension permissions. When a realm formally adopts by ballot a localized version of an international CMET, all artifacts (messages, documents, etc.) that declare conformance in that realm SHALL use that localized version.</p>
+						</item>
+						<item>
+							<p>
+								<emph role="strong">CMET constraint hierarchy</emph>
+								<br/>When a model or Message Type is constrained, the CMETs within that model may be further constrained along the defined restriction hierarchy for CMETs.  The hierarchy is based on a general to specific refinement.  The hierarchy begins with the general Universal CMET and ends with the Identified CMET. </p>
+							<list role="unordered">
+								<item>
+									<p>
+									A <emph role="strong">Universal</emph> CMET is the basis for the CMET restriction hierarchy.  Each other level of constraint is a proper sub-set of &quot;Universal&quot;.  Thus &quot;Universal&quot; may be constrained to any of the other CMET types.</p>
+								</item>
+								<item>
+									<p>
+									A <emph role="strong">Detailed</emph> CMET provides an intermediate level of information. Frequently this means that it provides sufficient information to recognize and manage a new instance of an item by loosely coupled systems.  Thus &quot;Detailed&quot; may be constrained to &quot;Identified&quot;.    There is no implied hierarchy between two different Detailed CMETs constrained from the same Universal CMET.  Note that the use of &quot;Detailed&quot; here is descriptive rather than prescriptive – it simply includes other CMET types that have been defined as restrictions on the &quot;Universal&quot; type which also may also be further constrained, i.e. the constraint hierarchy is not limited to the levels described here</p>
+								</item>
+								<item>
+									<p>
+									An <emph role="strong">Identified</emph> CMET provides only enough information to allow identification of the instances between tightly coupled systems.  The &quot;Identified&quot; CMET is a proper sub-set of &quot;Detailed&quot;</p>
+								</item>
+							</list>
+						</item>
+					</list>
+					<p>Beside this hierarchy defining the least to most constrained CMETs, an <emph role="strong">Abstract</emph> CMET may be used as a modeling tool, but must be substituted with a Universal, Detailed or Identified type in the final model. It can be used when only the class and structural codes for the CMET are known.
+					</p>
+					<p>
+						<emph role="strong">Other</emph> CMET types have been defined as restrictions on the "Universal" type as well.  These other types may also be further constrained.</p>
+				</div3>
+				<div3 id="CECChoiceConstraints3">
+				<head>Choice element constraints</head>
+				<p>An HL7 v3 static model may contain a Choice element in the model. The Choice element is treated as if it were a class itself. The Choice element contains a finite number of other classes. Choices do not contain attributes; however both the Choice and any class contained in the Choice may participate as the source or target of associations.</p>
+                <p><emph role="strong">Example</emph>: A Laboratory Result Event (POLB_RM004000) has an ObservationEventChoice element that contains four Act classes: ObservationReport, ObservationBattery, SpecimenObservationCluster, and ObservationEvent. The ObservationEventChoice has a number of act relationships that apply to any of the classes in the Choice, e.g. pertinentInformation, component, etc. In addition, some of the classes in the Choice have associations that apply only to that class and not to the other classes in the Choice, e.g. derivedFrom and referenceRange apply only to ObservationEvent. The model also has a FufillmentChoice element that contains a choice of three classes, but only the FulfillerPromise class may participate as the source of the second inFulfillmentOf act relationship.</p>
+				<p><emph role="strong">Invoking the constraint</emph></p>
+				<p>If model X contains a Choice element and if model Y is a refinement of model X, then model Y may contain a simplification of the Choice according to the following rules.</p>
+				<list role="unordered">
+				<item>Y may eliminate an entire Choice element, and any associations with the Choice as source or target, provided that the result is still a complete model.</item>
+				<item>Y may eliminate any class from a Choice element, and all associations with only that class as source or target, provided that at least one class remains in the Choice.</item>
+				<item>Y may reduce a Choice to a single class, and then may substitute that class for the Choice in the model, retaining the Choice associations as associations for the class.</item>
+				</list>
+				<p><emph role="strong">Examples:</emph>
+				<br />A refinement of Laboratory Result Event may delete FulfillmentChoice, thereby eliminating three classes and two associations.  A refinement of Laboratory Result Event may not delete the ObservationEventChoice, for then the refinement would be empty and not a complete model.</p>
+				<p>A refinement of Laboratory Result Event could replace the ObservationEventChoice by only ObservationEvent, thereby eliminating three classes and the Choice element, but not eliminating any of the defined participations or act relationships.</p>
+				</div3>
+			</div2>
+			<div2 id="CECvalueset2">
+				<head>Vocabulary constraints</head>
+				<p>Vocabulary constraints limit the values that coded attributes or data type properties may take on. In the following paragraphs the term attribute means either a class attribute or a data type property. If an attribute is derived from data type CD, or if the declared data type can be constrained to CD, then it is a potential coded attribute and is subject to vocabulary constraints. Vocabulary constraints depend upon vocabulary terminology defined by the Vocabulary Technical Committee, and include terms such as vocabulary domain, code system and value set. </p>
+				<p>In general, a potential coded attribute will be bound to a vocabulary domain at the time of first definition.  A vocabulary domain is like a semantic type that abstractly identifies the type of concepts that will be included in the domain. It does not itself define specific coded concepts.  At some point in the refinement process, an attribute may be bound to a sub-domain of a vocabulary domain or to a value set. A value set is a collection of specific codes from one or more code systems, where the codes within a value set each have a distinct meaning defined by the code system. If an attribute is bound to a value-set, then further constraints on an attribute by sub-domains is not useful.</p>
+				<p>An attribute has a <emph role="strong"> coding strength </emph> that determines whether or not a user of the HL7 v3 standard may communicate a coded value that is not of the defined domain or from the defined value set. The HL7 RIM and data type documents define coding strengths of Coded with Exceptions (CWE) and Coded, No Exceptions (CNE). CWE allows the end user to send a term from an arbitrary coding system in place of a term from the specified value set in the circumstance when the concept being encoded is not represented in the specified value set, whereas CNE requires that the primary code in a message instance be from the specified value set. Committees that are contemplating tightening the coding strength from CWE to CNE SHOULD consider whether the value set in question is sufficiently stable and comprehensive that it can support such constraint.  Each coded attribute will carry one of these two coding strengths. By default, data type properties are of coding strength CNE.  Attributes constraints expressed in universal specifications should be constrained only to vocabulary domains and not bound to value sets.  The sole exception to this principle is the constraint &quot;structural attributes&quot;.</p>
+				<p>Coded attributes in the RIM are identified with a flag that indicates whether or not they are <emph role="strong">realm-specializable</emph>. This property of an attribute remains fixed throughout the refinement process. The term realm used in this context means <emph role="strong"> binding realm</emph> as defined in the HL7 glossary. A binding realm is under the direct control of HL7 or an HL7 affiliate. All structural coded attributes in the RIM and all data type coded properties are by definition <emph role="strong">not realm-specializable</emph>. </p>
+				<p>Vocabulary domains that are bound to a coded attribute inherit the realm-specializable property of that attribute. Some vocabulary domains are classified as <emph role="strong">universal</emph>, which means that a single universal value set is bound to the domain at domain definition. Every attribute that is not realm-specializable will eventually be bound to a universal vocabulary domain and a single universal value set at some point in the technical committee refinement process. Additional or alternative value set bindings for such attributes are not permitted. All vocabulary domains associated with RIM structural attributes and data type properties are universal. Realm-specializable vocabulary domains may be bound to a specific value set in a binding realm. If a realm-specializable vocabulary domain is bound to a value set, then any attribute bound to that vocabulary domain will also be bound to that specific value set for any model defined within that binding realm. Any attribute bound to a value set may still be further constrained and bound to a subset of that value set in subsequent refinements or in profiles or templates.</p>
+				<p>During the refinement process, a child model may be defined with certain vocabulary constraints enforced on a parent model. Such vocabulary constraints may be applied to a vocabulary domain, a value-set, or a coding strength, with some limitations.</p>
+				<div3 id="CECdomains3">
+					<head>Vocabulary domain</head>
+					<p>For purposes of Conformance a vocabulary domain acts as a place holder to enable the constraint process to later bind a value set to an attribute.  The allowed semantic space for an attribute’s values can be constrained by defining a sub domain which is a portion of the semantic space of the parent vocabulary domain and binding the attribute to the sub domain.</p>
+					<p>
+						<emph role="strong">Invoking the constraint</emph>
+						<br/>If the parent model coded attribute is already bound to a value-set, then the child model may not bind the attribute to a vocabulary domain. If the parent model coded attribute is bound to a vocabulary domain, but is not yet bound to a value set, then the designer of the child model has the following options:</p>
+					<list role="unordered">
+						<item>
+							<p>Leave the vocabulary domain that is bound to the child attribute the same as the vocabulary domain that is bound to the attribute in the parent model.</p>
+						</item>
+						<item>
+							<p>Constrain the allowed semantic space of the child attribute by binding it to a sub domain that represents a portion of the semantic space of the parent vocabulary domain. If the parent domain is non-realm-specializable, then the child domain will also be non-realm-specializable.</p>
+						</item>
+						<item>
+							<p>Define a value set and bind the value set to the vocabulary domain, thereby binding the child attribute to that value set. This binding process is subject to the following restrictions:</p>
+							<list role="unordered">
+								<item>
+									<p>If the parent attribute is not realm-specializable, then the value set becomes the unique universal value set bound to that vocabulary domain. Such bindings may only be defined by technical committees, must be approved through harmonization, and are subject to HL7 ballot.</p>
+								</item>
+								<item>
+									<p>If the parent attribute is realm-specializable, then the child model must itself be bound to a single binding realm where that realm has not bound the vocabulary domain of the parent attribute to a specific value set.</p>
+								</item>
+								<item>
+									<p>The value set defined for the child attribute must be the same as the value set bound to the parent attribute based on realm, or a subset thereof.</p>
+								</item>
+							</list>
+						</item>
+					</list>
+				</div3>
+				<div3 id="CEValueset1">
+					<head>Value-set</head>
+					<p>A value set may be constrained by defining a new value set that is a narrower collection than the parent value set. A value-set may also be constrained by using a formal constraint language as specified by the emerging HL7 constraint language project (<specref ref="CECtext3"/>). The Vocabulary TC defines the process for defining new value-sets. A new value-set may be derived directly as a collection of coded concepts from a code system, or by a collection of codes from one or more existing value sets, or by a combination of these methods. </p>
+					<p>
+						<emph role="strong">Invoking the constraint</emph>
+						<br/> If the parent model coded attribute is bound to a value set, then the designer of the child model may leave the child value-set the same as the parent value-set, or may use the new value-set definition process, or the constraint process referenced in Section 2.6.3, to produce a new value-set that is strictly a subset of the parent value-set. </p>
+				</div3>
+				<div3 id="CECcodestrength3">
+					<head>Coding Strength</head>
+					<p>The coding strength constraint is always expressed as one of two values, CWE or CNE. For CWE coding strength, an exceptional value may be sent if the specified domain/value-set does not include the concept being encoded. For CNE coding strength a code from the specified domain/value-set SHALL be sent.  If the underlying data type allows translations, then translations of that code may be sent in addition regardless of coding strength.</p>
+					<p>
+						<emph role="strong">Invoking the constraint</emph>
+						<br/>If the coding strength of an attribute in the parent model is CNE, then the coding strength of the attribute in the child must also be CNE. If the coding strength of the parent is CWE, then the child may have a coding strength of CWE or CNE.</p>
+				</div3>
+				<div3 id="CECValuesetusage">
+					<head>Value set usage</head>
+					<p>When validating an attribute instance, the value-set to be bound against is determined as follows:</p>
+					<list role="unordered">
+						<item>
+							<p>The allowed value-set is the intersection of the value-sets of the balloted static model for the interaction transmitted as well as any profiles or templates that apply to the scope of the attribute being validated.
+						</p>
+						</item>
+						<item>
+							<p>If a balloted static model or template/profile binds to a domain, then the value-set is determined by the binding-realm that is effective at instance creation (either as declared within the instance, or as inferred from the jurisdiction of the sending system).</p>
+						</item>
+					</list>
+					<p>Attributes that are realm-specializable would normally not be bound to specific value sets by HL7 technical committees; that task should be left to the definers of binding realms, or more refined data models, or to conformance profiles. This practice encourages more general application and use of the artifacts so constrained.</p>
+				</div3>
+			</div2>
+			<div2 id="CECother2">
+				<head>Other value constraints</head>
+				<p>This group is made up of constraints that limit the value for an attribute or association in ways not covered above. These are the assertion of a default value, the declaration that an attribute is Fixed, and the textual expression of a business rule constraint. </p>
+				<div3 id="CECdefault3">
+					<head>Default value</head>
+					<p>A default value may be declared for an attribute of an HL7 class. The default is a single value that the receiver shall use when it receives a message instance that does not contain the attribute. If the default is unspecified, the &apos;default default&apos; is the simple form of null (NI). The meaning of a default value is that in the absence of any explicit value for an attribute in a message instance, the default value is assumed. A Default value has no impact on what explicit values may be assigned to the attribute in a message instance.</p>
+					<p>The value asserted may be any value that is valid for the data type and, if applicable, for the vocabulary domain of that attribute.  Once a default is assigned to an attribute, a different default cannot be assigned for the same attribute in a derived model.  For example, if a default is assigned in a D-MIM, a different default shall not be assigned in a derived D-MIM, R-MIM or Message Type.</p>
+					<p>
+						<emph role="strong">Invoking the constraint</emph>
+						<br/>To avoid the ambiguity of receivers having to choose from among multiple defaults, the assertion of default values may only be done by an HL7 Technical Committee as it prepares a ballot or by an HL7 Affiliate that is preparing a context-specific profile. For example, a declaration of Act.classCode DEFAULT OBS means that any Act class code can be inserted into a message instance, including one not below OBS in the class code hierarchy, but that the absence of the attribute message element implies that the assumed value is OBS.</p>
+				</div3>
+				<div3 id="CECfixed3">
+					<head>Fixed Declaration</head>
+					<p>In a static model an attribute of an HL7 class may be declared as Fixed, and optionally, a value or a constraint may be specified for a Fixed attribute. The meaning of Fixed is that the attribute value, once set in a model refinement remains unchanged in any subordinate refined models.  Unlike a default value, there are no assumptions about default meaning when the attribute is missing.</p>
+					<p>A fixed value, if specified, may be any value that is valid for the data type and, if applicable, for the vocabulary domain of that attribute. </p>
+					<p>Fixed and default values asserted in the RIM and abstract data type specifications may optionally be communicated over the wire.  Fixed or default values asserted elsewhere (D-MIM, R-MIM, CMET, profile, template,  etc.) SHALL be transmitted over the wire. As a corollary, data type CS may not be used for any attribute or property where it is not already specified in the RIM or ADT specification because of its characteristic of fixing the codeset.</p>
+					<p>
+						<emph role="strong">Invoking the constraint</emph>
+						<!-- Lisa modified the para below to reflect that this is focused on the refinement process rather than message instance-->
+						<br/> In most situations there will be no difference between a textual constraint (<specref ref="CECtext3"/>) that constrains an attribute to a single value and a Fixed declaration for that attribute that specifies a single fixed value. In either case, the value is always the same and it cannot be changed to a different value in the refinement process. However, when Fixed is applied to an attribute along with a constraint that allows multiple values, e.g. Act.classCode FIXED &lt;= Act, the meaning is that the creator of a refinement may choose any value from this set that satisfies the constraint, but the value is then fixed both for the refined model and any subsequent refinement.</p>
+				</div3>
+				<div3 id="CECtext3">
+					<head>Explicit Constraint Statements</head>
+					<p>Statements of constraints may be made in a textual form that expresses the business rule being applied. For example, if attribute A has the value X, then attribute B must have the value Y or Z.  Translation to other languages may be provided. A formal constraint language may be adopted by HL7 in a future version of this standard based on the HL7 Informative DRAFT Document &quot;HL7 Version 3 Constraints Applied in Designs and Profiles&quot;.  Please note that Explicit Constraints should only be used when the modeling mechanisms do not allow a more formal specification of the constraint. </p>
+					<p>
+						<emph role="strong">Invoking the constraint</emph>
+						<br/>If an attribute or association has no textual constraint, a new constraint may be asserted as the model is refined. If the source model includes a textual constraint, this constraint may be altered to a form that is more restrictive than the previous entry.  </p>
+				</div3>
+			</div2>
+			<div2 id="CECannotation2">
+				<head>Annotations</head>
+				<p>
+					The final group is made up of further explanations to educate prospective users and/or implementers. These are usually used to enhance the descriptions of the elements of the base specification in order to relate them to a particular Context.  Note to reviewers: The list of annotations below is taken directly from the Model Interchange Format. These will most likely change as the MIF is evolved. </p>
+				<p>
+					<emph role="strong">Values</emph>
+					<br/>
+					<table>
+						<tbody>
+							<tr>
+								<th>Annotation Type</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>Definition</td>
+								<td>An explanation of the meaning of the element.  The definition should align with all constraints expressed in the element.</td>
+							</tr>
+							<tr>
+								<td>Description</td>
+								<td>An explanation of the associated element.  This may contain formatting markup.</td>
+							</tr>
+							<tr>
+								<td>Usage Notes</td>
+								<td>Advice to designers on how to make use of an element and/or how *not* to make use of an element.</td>
+							</tr>
+							<tr>
+								<td>Rationale</td>
+								<td>An explanation of why the element is necessary or potentially useful within this Context.</td>
+							</tr>
+							<tr>
+								<td>Requirements</td>
+								<td>Documents the requirements that drove the specification of the artifact.  May include references to other standards or literature describing the appropriate data elements and constraints.</td>
+							</tr>
+							<tr>
+								<td>Design Comments</td>
+								<td>Internal development notes about why particular design decisions were made, outstanding issues and remaining work.  They may contain formatting markup.  Not intended for external publication.</td>
+							</tr>
+							<tr>
+								<td>Walkthrough</td>
+								<td>An overview of the primary and most important contents of the element.  Used to provide broad understanding of the content without detailed review.  It may contain formatting markup.</td>
+							</tr>
+							<tr>
+								<td>Open Issues</td>
+								<td>Notes to designers, balloters and implementers about outstanding concerns that remain to be resolved.</td>
+							</tr>
+							<tr>
+								<td>Other Annotation</td>
+								<td>Additional content related to the element that may include such items as the realm, or business name associated with the element.</td>
+							</tr>
+							<tr>
+								<td>Appendix</td>
+								<td>Documentation that supports or relates to the current element.</td>
+							</tr>
+							<tr>
+								<td>App Info</td>
+								<td>Supporting programmatic information related to the model element and can include mappings, constraints, a static example in a particular ITS and change requests.</td>
+							</tr>
+							<tr>
+								<td>References</td>
+								<td>References to other important information.</td>
+							</tr>
+						</tbody>
+					</table>
+				</p>
+				<p>
+					<emph role="strong">Invoking the constraint</emph>
+					<br/>
+					These annotations are placed in the models and Message Types utilizing the available tools. 
+				</p>
+				<p>Most annotations can be added, removed or constrained when developing a constrained model.  However, caution must be taken when revising Definition annotations.  Changing a definition could represent a constraint, extension or even a conflict with the original content depending on whether the new definition encompasses concepts that are narrower than, broader than or inconsistent with the original definition.  A definition in a constraint profile should always be a narrower than the definition it constrains.</p>
+				<p>
+					<emph role="strong">Note to TC: </emph>Not all these annotations are presently available in the tools.
+				</p>
+			</div2>
+		</div1>
+		<div1 id="CECprofiles1"  ballotStatus="NormativeStandard">
+			<head>Constraint Profiles</head>
+			<!--Lisa modified this section to help clarify (hopefully) the definition and purpose of constraint profiles per comment suggestions.-->
+			<p>Section 1 and Section 2 of this Chapter have discussed the rules whereby information models (RIM, D-MIM and R-MIM) and message designs in HMDs may be successively constrained to define more specific designs.  This process of refinement from RIM to D-MIM to R-MIM to HMD to Message Type is the primary development process followed by the HL7 Technical Committees in defining the artifacts that are balloted as HL7 Version 3 specifications. </p>
+			<p>Once an HL7 specification has been balloted and formally published, it may be further constrained for a variety of purposes, including:</p>
+			<list role="unordered">
+				<item>realm-specific localizations by an HL7 Affiliate</item>
+				<item>for use in communities of interest (for example, a set of collaborating health care institutions, a community of vendors or an external standards organization)</item>
+				<item>for a specific project</item>
+				<item>to define a vendor's capability or a consumer's requirements</item>
+				<item>to define content templates to be used when communicating HL7 messages </item>
+			</list>
+			<p> The constraints derived from the purposes listed above, and for all other purposes are documented using a constraint profile.</p>
+			<p>A constraint profile is an expression of local constraints applied to an HL7 standard RMIM, HMD, or Message Type or to another constraint profile.  Every instance message that is valid for the Message Type defined by the profile must also be valid for the base Message Type.</p>
+			<p>These profile types are described below.  Each uses the constraint mechanisms described previously, but with varying limitations on which constraints they may invoke.</p>
+			<p>The constraint profile design process starts with the lowest-level R-MIM or the HMD that defines the profile's base Message Type.  The process then uses the constraint refinement rules detailed previously to define a new Message Type.</p>
+			<p>A constraint profile is to be documented as a Message Type derived from an HMD. A simple constraint profile may be derived from the same HMD from which the base Message Type is derived. More complex constraint profiles will be based on a new R-MIM. In that case, the profile will be documented as a new Message Type derived from a new HMD which, in turn, is derived from the refined R-MIM. </p>
+			<div2 id="CECrmimrefine3">
+				<head>R-MIM refinement</head>
+				<p>The previous discussion of <specref ref="CECcloning3"/> introduced the notion of creating additional constrained copies (clones) of the classes that are present in the RIM, a D-MIM or an R-MIM.</p>
+				<p>Cloning may occur wherever there is an association with maximum cardinality greater than one.  This includes both recursive associations, such as an act relationship "component" association and other repeats such as SET&lt;Participation>.</p>
+				<p>
+					<emph role="strong">Instance validation</emph>
+					<!--Lisa modified to remove unclear use of the phrase "obligation to reset"-->
+					<br/>To be a conformant message instance, a message instance based on the refinement must be valid according to the original (base) specification from which the refinement was derived, even if the use of cloning requires that a translation or transformation is necessary.  In order for an application to be conformant, it must only send conformant message instances.</p>
+				<p>Any message instance that can be validated against a more constrained static model should still validate against the base model.  In an XML ITS, ensuring that the instance can be validated against the base model involves transforming the XML element tag names to be those of the parent model  the semantics do not change, just the labels. 
+</p>
+				<p>
+					<emph role="strong">Documentation</emph>
+					<br/>The refined R-MIM should be documented with a new R-MIM diagram that explicitly displays the new clones derived from the R-MIM clones of the base diagram, and a new HMD from which one or more  new, restrictive, Message Types can be derived.</p>
+			</div2>
+			<div2 id="CECconfprofile2">
+				<head>Other forms of constraints</head>
+				<p>A constraint profile can be used to define the capability of a specific application  either one that is sold by a vendor, or one that is sought by a potential buyer.  This profile is defined against a balloted HL7 message type, and involves only three of the constraint 
+				 discussed previously.</p>
+				<div3 id="CECconfindicator3">
+					<head>Conformance Indicator</head>
+					<p>The primary constraint asserted within this profile is the conformance indicator.  For an implementable profile (vendor statement of application capability), the profile shall have the conformance indicator values as either "Required" or "Not Permitted" for every element in the message, Constrainable profiles (eg. user-defined profiles) may leave some elements declared as "Unspecified."</p>
+				</div3>
+				<div3 id="CECdt3">
+					<head>Data Type Constraint</head>
+					<p>The data type constraint may be asserted in the constraint profile.  When asserted by a vendor, it indicates which data types the application can support for each attribute.  When asserted by a user, it indicates the minimum level of data type support required.</p>
+				</div3>
+				<div3 id="CECcmet3">
+					<head>CMET Constraint</head>
+					<p>A Constraint profile may not declare a CMET type for an association unless that association is represented by a CMET in the base message. The assertion of CMET constraints for associations is analogous to the data type constraints.  A vendor assertion indicates the form of CMETs the application supports, while a user assertion expresses the minimum desired capability for the application.</p>
+				</div3>
+			</div2>
+		</div1>
+		<div1 id="v3gconfclaims"  ballotStatus="NormativeStandard">
+			<head>Conformance Statements</head>
+			<div2 id="confoverview">
+				<head>Conformance Overview</head>
+				<p>Declaring the implementation of an application role(s) is the basis for claiming conformance to the HL7 V3 standard.  Despite the fact that the application roles are documented in the normative domain specifications, the HL7 Technical Steering Committee has declared that applications roles shall be informative, not normative, in this release of Version 3. The reason for this declaration is that HL7 wishes to see a number of Version 3 implementations before it specifies the content and granularity of application roles.  Because application roles are informative in this release, the focus of declaring conformance rests with the declaration of the interaction(s) supported by an implementation.  Optionally application roles may be declared. </p>
+				<p>The parties that need to communicate about conformance are the sponsors and users. The sponsor of an information system is the vendor, in-house developer, or provider of public domain software.  The user of a health care information system is the organization that buys, leases or employs an information system for which the software was developed.  </p>
+				<p>With respect to messaging, the specifications created by the HL7 Technical Committees are informatively bundled by application roles.  These application roles (i.e., the set of interactions) can be the basis for users stating requirements and sponsors declaring implementation capabilities.    The common mechanism both parties may use is the profile.  Users can create a profile to articulate their proposed system requirements.  Sponsors can create a profile to describe its systems implementation of application roles (i.e., the set of interactions).  With both parties using the same profile mechanism, the profile can become the common language used between parties to articulate requirements, articulate the capabilities of an implementation, and measure conformance.  The profile used by sponsors to describe their capabilities for conformance purposes is called a <emph role="strong">conformance profile</emph>.  The conformance profile, used in conjunction with the appropriate HL7 application role specifications, may be used as conformance criteria.</p>
+				<p>The definition of formal conformance specification rules and the requirement for using a formal V3 conformance registry process will appear in the same release declaring application roles normative. </p>
+				<p>When certification methods are developed for V3, conformance tests will be used to determine whether a sponsors system has correctly implemented the specification. These will not be available until application roles are declared normative. </p>
+			</div2>
+			<div2 id="confworkdprod">
+				<head>Conformance Profiles, Conformance Statements and Conformance Claims</head>
+				<p> A conformance statement is a document that shall contain a conformance profile and may contain declarative statements asserting a conformance claim.   The conformance profile may be either a constraint profile or an implementable profile.  A declarative statement asserting a conformance claim may be made against a third-party developed profile (e.g., vendor, provider, Affiliate), thus linking the conformance profile to the third-partys profile.  If an explicit declarative conformance claim does not exist in the conformance statement, then the sponsor is making an implicit conformance claim against the HL7 V3 specification included in the conformance profile.</p>
+				<p>For this release of V3, the author of the conformance profile and conformance statement determines the formal structure of the document.   In future releases, a formal structure for a conformance statement and a conformance profile will be defined.  The intent is that this formal structure will be machine processable.</p>
+				<p>A conformance profile shall indicate the set of interactions (and optionally the set of informative application roles) that the system supports.  When HL7 declares application roles normative, a conformance profile shall indicate the set of application roles that the system supports.  </p>
+				<p>The conformance profile implies a commitment to fulfill the responsibilities of the set of interactions specified, faithfully implement the artifacts that constitute the interactions, and any further constraints or extensions. Specifically the conformance profile shall include:</p>
+				<list role="unordered">
+					<item>
+						<p>the interactions that the system will send based upon identified trigger events;</p>
+					</item>
+					<item>
+						<p>the interactions that the system is capable of receiving;</p>
+					</item>
+					<item>
+						<p>for each interaction, the subset of attributes and associations the system supports;</p>
+					</item>
+					<item>
+						<p>for each domain, the supporting value set the system supports;</p>
+					</item>
+					<item>
+						<p>data type specializations the system supports;</p>
+					</item>
+					<item>
+						<p>any extensions - conformant and conflicting  the system supports;</p>
+					</item>
+				</list>
+				<p>The conformance profile shall identify for each message element:</p>
+				<list role="unordered">
+					<item>Whether the application can send or receive the message element;</item>
+					<item>Which of the media types the application supports if the message element is of data type Encapsulated Data (ED) free text;</item>
+					<item>What extent the attribute is populated for each of the CMETs in the message and for the base Message Types.  Refer to section Common Message Element Types (CMETs) (&amp;2.3.2) <specref ref="CECcmets3"/>for details. </item>
+					<item>A conformance indicator value of either &quot;Required&quot;, &quot;Not Permitted&quot; or &quot;Unspecified&quot; for every element in the message; and</item>
+					<item>The data types the application supports for each attribute.</item>
+				</list>
+				<p>The conformance profile shall identify:</p>
+				<list role="unordered">
+					<item>a description of all trigger events associated with the interactions and how the events are bound to the system;</item>
+					<item>the transport(s) supported;</item>
+					<item>a storyboard or use-case;</item>
+					<item>the realm(s) in which the application is intended to be used; and</item>
+					<item>the ITS(s) supported. The conditions under which a particular ITS is used if multiple ITSs are supported.</item>
+				</list>
+				<div3 id="confgop">
+					<head>Vocabulary Conformance</head>
+					<p>A sponsor of a system shall create a Statement of Vocabulary Conformance.  The format and structure of the Statement of Vocabulary Conformance shall be determined by the author of the document.  Future releases will provide a formal format and structure for the Statement of Vocabulary Conformance.  The Statement of Vocabulary Conformance shall declare the vocabulary domain extensions supported by the system, using the following principles suggested by the Vocabulary Technical Committee.</p>
+					<list role="unordered">
+						<item>
+							<!-- Lisa updated this paragraph to clarify the use of CWE-->
+							<p>The organization shall use standard codes if they exist in the version of the RIM corresponding to the standard.  If the concept to be sent exists in the domain specification for the data type, a code from the domain shall be sent.  If the attribute has a coding strength of CWE (<specref ref="CECcodestrength3"/>) and the domain does not contain the concept to be encoded, a local code may be sent.  A local code shall not be sent as a replacement for a standard code.  An equivalent local code may be sent in addition to the standard code.  Usage of local codes will be specified in the Statement of Vocabulary Conformance</p>
+							<p>Only domains of the Coded Simple (CS) data type are being balloted for inclusion in the standard.  By definition, the allowable values are limited to what is included in the standard.  Changes to a CS value set require another ballot of the standard.  Constraints that refer to CS value sets are bound to the vocabulary release that was in effect when the artifact in which the constraint is contained was ballot approved.  Regarding domains using the Coded with Equivalent (CE) data type where the coding strength is CWE, they will grow/change more frequently than ballots via a harmonization process by the Vocabulary Technical Committee.  After each harmonization, these domains will be published in a numbered release.  An organization will document the vocabulary version in their statement of vocabulary conformance.</p>
+						</item>
+						<item>
+							<p>The organization will not use a code from a standard set and give it a new meaning.</p>
+						</item>
+						<item>
+							<p>Where the organization uses a local code, it will use one that is consistent with the semantic type of the standard codes and consistent with the semantic type or types covered by the Vocabulary Domain of the attribute carrying the coded value assigned to the same data field.  In other words, if the data field is "Eye Color" with values of "blue," "hazel", and "brown, it would be inappropriate to send a code meaning "Arm."  Note: A violation of this principle can only be detected by human review.</p>
+						</item>
+						<item>
+							<p>Where the organization finds the necessity to use local codes, it shall submit them to HL7 for review and addition.  HL7 will share these proposed concept additions with HL7 vocabulary source providers.  Usage of local codes will be specified in the Statement of Vocabulary Conformance.</p>
+						</item>
+						<item>
+							<p>An organization should promptly begin using new codes when it upgrades its systems.</p>
+						</item>
+						<item>
+							<p>When an organization has submitted a local code requesting that it be added to the set of  standard codes, and the responsible standards organization denies the creation of a new standard code, and the denial provides an alternative method to meet the need, the organization should promptly begin using the alternative method when it upgrades its systems.</p>
+						</item>
+						<item>
+							<p>An organization will identify the coding system in any coded data type other than coded simple (CS) using the registered OID (Object Identifier) for that coding system as published in the HL7 OID registry.  If an OID does not exist for a coding system defining codes that an organization wishes to use in a message, the organization will develop an OID as needed.  It is expected that the organization will undertake to have the OID for the coding system registered in the HL7 OID registry. </p>
+						</item>
+						<item>
+							<p>An organization will populate a coded data type in a message from the subset of codes from the defined vocabulary
+domain defined by the Value Set indicated by the Context for the message, as registered and published as part of HL7 Vocabulary.  There is a Universal Context that does not restrict the codes in a Vocabulary Domain; other Contexts may restrict the set of permissible codes used in a particular Realm (eg US, Japan, Australia, UK, etc) or a particular using community (eg Public Health, Veterinary Medicine, etc.).</p>
+						</item>
+						<item>
+							<p>If an appropriate Context does not exist to restrict the codes for a coded attribute in the way that an organization wishes them to be restricted, the organization SHALL submit a new Context for registration with HL7 or one of its affiliates so that the appropriate restrictions are available to all.</p>
+						</item>
+					</list>
+					<p>The Statement of Vocabulary Conformance may be used to objectively measure whether a system adheres to the vocabulary domain extensions declared. It will also provide information on areas where local codes or other extensions to the published HL7 domains and value sets are being supported.</p>
+				</div3>
+			</div2>
+		</div1>
+		<div1 id="CEClocal1"  ballotStatus="NormativeStandard">
+			<head>Localization</head>
+			<div2 id="CEClocalover2">
+				<head>Localization Overview</head>
+				<p>Localization is the process of defining new HL7 Version 3 Message Types by a process that includes both the constraint process listed previously, and an extension process that adds new concepts to the base, balloted Message Type.  This section covers the rules that govern localization of the Version 3 Standards by conformant applications.</p>
+				<div3 id="CEClocaltarget3">
+					<head>Target audiences</head>
+					<p>HL7 anticipates that localization will be undertaken by a variety of constituents, including the HL7 Affiliates, system purchasers, system vendors, and end users.  HL7 Affiliate organizations are permitted to use several forms of localization that are precluded to the other constituent groups because they have formal, consensus-based approval processes within their membership.  In the following paragraphs, when localization capabilities are expressly permitted for use by the HL7 Affiliates, they are implicitly <emph role="strong">prohibited</emph> from use by the other constituencies that claim conformance to HL7.</p>
+					<p> While constituencies other than HL7 Affiliates are prohibited from formal localization, it is recognized that these other constituencies may encounter functional requirements that can only be supported by the extension processes of localization.  These requirements may reflect:
+					</p>
+					<list role="unordered">
+						<item>
+							<p>Extensions of general utility within healthcare messaging that should be brought forward to HL7 for consideration within the next version of the standard 
+							</p>
+						</item>
+						<item>
+							<p>Extensions that are meaningful and relevant only to the specific implementation
+							</p>
+						</item>
+					</list>
+				</div3>
+				<div3 id="CECinformalextensions3">
+					<head>Informal Extensions</head>
+					<p>Extensions with general utility should be proposed to HL7, or an HL7 Affiliate, for inclusion in the next version of the standard.  For example, if during the development of a laboratory interface it was determined that some tests require information that is not contained within the defined messages (such as the last menstrual period relative to a hormone assay), then it would be reasonable to develop an extension to support this requirement.  As a generally useful concept, this extension should be proposed for consideration.  Even if the proposal is not accepted, consideration of the concept(s) may be a path for continued evolution of the standard.
+					</p>
+					<p>Implementation-specific extensions that are not relevant to the general healthcare community might not benefit the standard as a proposal.  For example, extensions may be necessary if an interface message needed to include display-positioning terms so that the receiving application can emulate a prior display layout.  Such display-positioning terms may not be relevant beyond the specific implementation. <emph role="strong"> Implementation-specific extensions shall not be subject to submittal to an HL7 Committee for possible standardization.</emph>
+					</p>
+					<p>Informal extensions can be employed to address implementation-specific requirements as long as such extensions can be isolated within the message. This isolation provides a means for a receiving system to ignore all non-standard content. "Isolation" of informal extensions is accomplished on an Implementation Technology Specific (ITS) basis and is described in the relevant ITS.
+					</p>
+					<div4 id="CECinfextlimit4">
+						<head>Limitations on informal extensions</head>
+						<list role="ordered">
+							<item>
+								<p>The informal extension cannot alter the intent of the standard message.  For example, a local extension in an order message cannot be used to indicate that the order should not be performed.
+							</p>
+							</item>
+							<item>
+								<p>The informal extensions are meaningless unless there exists a site-specific agreement to utilize that extension.  Thus, the sender cannot assume that the receiver will understand or act upon informal extensions.  Receiver actions and responsibilities relative to local extensions must be defined on a site-specific basis.
+							</p>
+							</item>
+							<item>
+								<p> While registration of informal extensions may not seem necessary, it is encouraged as a means to share operational solutions even when those solutions are not formally introduced into the standard.
+							</p>
+							</item>
+							<item>
+								<p>
+								The receiver cannot require an informal extension and claim conformance with the V3 standard.
+							</p>
+							</item>
+							<item>
+								<p>
+								The receiver must ignore informal extensions it does not support.</p>
+							</item>
+						</list>
+					</div4>
+					<div4 id="CECinfextduration4">
+						<head>Duration of informal extensions</head>
+						<p>When a committee accepts a proposal to introduce an informal extension into the standard, that extension is subject to the ballot and publication process before it is included in the standard.  Implementers may choose to incorporate these extensions into their interface development prior to publication within the standard.  This approach should be taken with caution as these extensions may undergo some changes during the ballot resolution process.  If the resulting standard meets the local requirements of the implementer, the implementer shall use the standard in lieu of the informal extension.  However if the standard does not meet the local requirements of the implementer, the implementer may continue to use the informal extension.
+					</p>
+						<p>
+						If the committee does not have the resources and/or does not want to take on the work associated with the proposal, the proposal may be presented to the appropriate affiliate committee or may stay an informal extension. </p>
+						<p>If the outcome of the HL7 committee process does not result in a standard that meets the local requirements of the submitter or the proposed informal extension, the submitter may choose to re-define the general utility informal extension as an implementation-specific information extension.</p>
+						<p>Once a registration process is in place, any informal extension encountered in a message that has not been registered is, by definition, a non-conformant extension.  Implementers may choose to review non-conformant extensions as possible solutions to non-standard requirements.  While using non-conformant extensions is not part of the standard, they may provide a consistent means to address non-standard requirements.
+					</p>
+					</div4>
+				</div3>
+				<div3 id="CEClocaloverprocess3">
+					<head>Approval Processes</head>
+					<p>The rules appearing in this section pertaining to localization presuppose the existence of several formal approval processes.</p>
+					<p>
+						<emph role="strong">Registration</emph>
+					<br/>Registration is intended to assure that all of the HL7 constituents are aware of localizations that are being developed, and have access to the definitions thereof.  In this release, HL7 does not support a formal registration process.  Future releases of HL7 V3 will require, and HL7 will support, a formal registration process.  The registration process shall:</p>
+					<list role="unordered">
+						<item>be facilitated via an on-line resource</item>
+						<item>result in the automatic notification of the registration</item>
+						<item>require the provision of data to support subsequent harmonization</item>
+						<item>include an obligation to consult on the most closely relevant listserver prior to proceeding</item>
+						<item>be subject to review by the relevant Technical Committee for potential subsequent submission in an HL7 ballot (the status of a registration entry shall accordingly be marked as pending decision, approved or rejected).</item>
+					</list>
+					<p>
+						<emph role="strong">Affiliate Ballot</emph>
+						<br/>Each HL7 Affiliate maintains a consensus voting procedure for approval of HL7 specifications. These processes are specified by the Affiliates in their own bylaws (or equivalent documents).  Several of the localization items listed below are subject to an affiliate consensus ballot.</p>
+					<p>
+						<emph role="strong">Harmonization</emph>
+						<br/>Harmonization is a set of processes adopted by the Methodology &amp; Modeling Technical Committee and the Vocabulary Technical Committee to provide for the review and adoption of the HL7 Vocabulary Domains and changes to the HL7 Reference Information Model. </p>
+					<p>
+						<emph role="strong">Realm</emph>
+						<br/>Some localization practices permitted for affiliates may negatively affect (break) interoperability between realms and other Affiliates.  For example, specifying different default values for different realms may cause issues when communicating between realms.
+</p>
+					<p>
+						One message can contain content from multiple realms.  For example, HL7 Canada might have realms for different regions in Canada.  A message containing Electronic Health Record (EHR) extracts from different regions could well make use of the different realms.  
+					</p>
+					<p>
+						A sending application communicates, as part of a conformance statement, what realms they support for each interaction.  If they receive something from a realm they don't support, they can reject it.
+					</p>
+				</div3>
+				<div3 id="CEClocaloverorgn3">
+					<head>Organization of section</head>
+					<p>The presentation of concepts in this section is organized according to the HL7 Version 3 design artifacts being localized.  These are organized as: Information models, including the RIM and R-MIMs; type structures, including data types, Message Types and CMETs; vocabulary; and interaction design elements, including interactions, trigger events and application roles.</p>
+				</div3>
+			</div2>
+			<div2 id="CEClocalmodels2">
+				<head>Information models</head>
+				<div3 id="CEClocalmodelsRIM3">
+					<head>RIM</head>
+					<p>Localization may not add new classes, associations or attributes to the RIM. This may only be done through the established RIM harmonization process.</p>
+				</div3>
+				<div3 id="CEClocalmodelsRMIM3">
+					<head>R-MIM</head>
+					<p>The HL7 Affiliates may undertake localization of R-MIMs by the addition of RIM-derived classes, attributes or associations between ballot cycles.  Such localization shall be subject to registration and international ballot. This form of localization is restricted to the affiliates.</p>
+				</div3>
+			</div2>
+			<div2 id="CEClocaltypes2">
+				<head>Data Types Specialization Constraints</head>
+				<div3 id="CECDTFSummary">
+					<head>Summary</head>
+					<p>This section describes how to define local data types and data type specializations that can be referenced in profiles and instances.  The way that this is done is described in this section.</p>
+					<p>HL7 Version 3 data type specializations are localized constraints that restrict data types, resulting in data types which are applicable to a specific region, project or other localization. This section documents the requirements for these constraints, and discusses methods to assert their use in models and instances.</p>
+				</div3>
+				<div3 id="CECReqForProvSpec">
+					<head>Requirements for providing specializations of HL7 data types</head>
+					<div4 id="CECDTFDefs">
+						<head>Definitions</head>
+						<p>Data type Specializations are localized constraints that can be used to restrict HL7 data type definitions in specific HL7 Contexts. For example, AD.UK.BSI7766 might be a constrained subset (specialization) of the HL7 address data type (AD) that applies the rules defined in BSI standard 7766 to localize addresses that are to be used within the UK. Such a specialization may be defined within a package balloted by the HL7UK affiliate, and referenced by specifications approved by that affiliate, and message profiles produced for use in the UK.</p>
+						<p>Data type Specializations may be flagged as ‘abstract’ and where this is the case they cannot be used in message instances. Abstract data type specializations refine an HL7 data type for use within a specific application and/or context. Abstract data type specializations are always based on one normative HL7 data type. An abstract data type specialization can be used to group a set of choices based on different data types, providing that all of the choices are valid refinements of the grouping specialization (The grouping specialization can be a refinement of the general purpose HL7 ANY data type that identifies the full set of HL7 data types).  While abstract data type specializations may not be referenced in the instances, they may be included in model specifications to constraint the type of a RIM attribute. </p>
+						<p>A concrete data type specialization identifies a model that can be used to validate instance of a localized model. A concrete data type is a refinement of a single HL7 data type. A concrete data type may be, but need not be, a refinement of an abstract data type specialization. Where a concrete data type specialization is a refinement of an abstract data type specialization it identifies which member of the set of choices permitted by the abstract data type has been/should be used to validate the component.</p>
+					</div4>
+					<div4 id="CECDTFDetReq">
+						<head>Detailed Requirements</head>
+						<list role="ordered">
+							<item>
+								<p>It must be possible to express in a message instance that a named data type specialization MAY be used by the receiver to validate the contents of the RM attribute. </p>
+								<p>To ensure international interoperability the names of specializations which are not defined in the abstract data types specification SHOULD NOT replace the  base data type for a RIM attribute where this is communicated in an instance, but may be sent in addition to this. The base data type is communicated in a way that is determined by the ITS, and for the XML ITS, this is achieved using the XML attribute “xsi:type”.  </p>
+								<p>Referencing of user-defined data type specializations could be achieved by the addition of a new property to the abstract type DataValue, alias ANY, in the next revision of the V3 Data Type Specification, currently scheduled for near term balloting. A new property of specializationType (as of June 2007 flavorId) could complement the existing property dataType so that both the base type and any user-defined named specialization could be represented in an ITS appropriate way in any message.</p>
+							</item>
+							<item>
+								<p>Data type specializations can be defined at different levels.
+								<br/>These levels include:
+				<list role="unordered">
+										<item>By HL7 (within the Abstract Data Type Specification)</item>
+										<item>National/regional HL7 Organizations</item>
+										<item>Specific national/regional projects.</item>
+									</list>
+								</p>
+								<p>Data type specializations shall identify those data types of which they are known to be a valid refinement.</p>
+								<p>Example: In UK, addresses used in the healthcare context could be defined using a specialization identified as AD.UK.BSI7766 while in the Australian addresses could be defined as AS4819address, both being specializations of the HL7 defined data type AD</p>
+							</item>
+							<item>
+								<p>It must be possible to maintain packages of data type specializations for each HL7 context.</p>
+								<p>Where two or more contexts define  data type specializations with matching sets of constraints then the creation of a standard data type specialization within the abstract data types specification, a universal context package, or an affiliate balloted package should be considered.</p>
+								<p>Example: If CS.UK.UserTypes and CS.FI.UserTypes were identical the appropriate HL7 committee would create a UserTypes specialization.</p>
+							</item>
+							<item>
+								<p>It must be possible to define more than one data type specialization for each underlying HL7 data type.</p>
+								<p>Example: See multiple specializations of the AD data type illustrated above. </p>
+							</item>
+							<item>
+								<p>A data type specialization may be defined as a choice of other base data types. All options within the choice must be valid refinements of the data type.</p>
+								<p>Example: ShortString and ResultCodes could be defined as speciaizations of ST and CV respectively, with LabResult (a specialization of ANY) being defined as a choice of ShortString, ResultCodes, and INT.</p>
+							</item>
+							<item>
+								<p>Where a static model allows more than one data type specialization to be used for a particular RIM attribute, the data type specialization against which the value could be validated by the receiver may be expressed in the instance. This is done by supplying the data type specialization name in the “typeSpecialization” property of the data type ANY.</p>
+							</item>
+							<item>
+								<p>More than one data type specialization may be asserted in the instance for each RIM attribute.  The ”typeSpecialization” property can take a list of values, which must be the names of concrete data type specializations.</p>
+							</item>
+							<item>
+								<p>Data type specializations may be defined as restrictions of basic types, generic types, or instantiated generic types, not be independently parameterized and all generic types shall be fully expanded in the specialization definition.</p>
+								<p>Example: If an interval (of Time) needs to be constrained through a specialization, it may be fully specified by defining all attributes and named as IVL_TSComplete, rather than a specialization of the generic type IVL being defined.  Alternatively a specialization IVLcomplete may be defined that requires a high and low component, and the type IVLcomplete&lt;TS&gt; be used in the model specification. </p>
+							</item>
+							<item>
+								<p>It must be possible to use a named data type specialization as specified in the static model or the instance with a standard validation tool to validate conformance.  This is a design principle for this specification, and a criteria that should be followed when evaluating changes for future versions of the document, as well as by authors of data type specialization specifications..   The requirement applies to instance validation in any approved ITS at the time that a specification is produced.</p>
+							</item>
+							<item>
+								<p>The following table contains the information items to be included in a data type specialization specification. It does not mandate the format of such a specification, which is to be determined elsewhere, and in the absence of other direction from HL7 is at the discretion of the publishers of such specifications. Generic type extensions can ONLY be used when they are allowed in a model approved by HL7 or by an HL7 Affiliate,  e.g., if an attribute is of type TS in a model you can't send HIST&lt;TS&gt;, even though they are substitutable. You could only do that if the committee explicitly said the type of the attribute was HIST&lt;TS&gt;.</p>
+							</item>
+						</list>
+						<table>
+							<thead>
+							<tr>
+								<th>
+									<emph role="strong">Content</emph>
+								</th>
+								<th>
+									<emph role="strong">Description</emph>
+								</th>
+								<th>
+									<emph role="strong">Inclusion</emph>
+								</th>
+							</tr>
+						</thead>
+							<tbody>
+								<tr>
+									<td>name/title</td>
+									<td>A name expressed as a plain text human readable title.</td>
+									<td>M</td>
+								</tr>
+								<tr>
+									<td>Formal name</td>
+									<td>
+										<p>The formal name must be unique within the context of the package that contains the definition of the data type specialization.</p>
+										<p>It is the responsibility of the author of the package to ensure that unique formal names are assigned to data type specializations defined within the package.  Tooling support for this may be available.</p>
+									</td>
+									<td>M</td>
+								</tr>
+								<tr>
+									<td>Description</td>
+									<td>A textual description of the content and usage of this data type specialization.</td>
+									<td>M</td>
+								</tr>
+								<tr>
+									<td>Specification</td>
+									<td>Specification covering each property individually, with cardinality, optionality, value refinements, etc, or other specialization specifications.</td>
+									<td>M</td>
+								</tr>
+								<tr>
+									<td>ITS-Specific Specification</td>
+									<td>
+										<p>An ITS specific description of the representation of the constrained data type that is compatible with the ITS representation of the unconstrained data type.</p>
+										<p>NOTE: A schema fragment is required if the data type specialization is to be used  with the XML ITS  because the data types schemas published by HL7 alongside the XML ITS  are not generated directly from the abstract data types specification.</p>
+									</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td>Example</td>
+									<td>An instance example if using the XML ITS  conforming to the schema fragment.</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td>Rationale</td>
+									<td>Description of the reason for specifying this as a separate data type specialization. For example, to conform to UK NHS Data Dictionary.  Also references to other sources or specifications.</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td>Base Type</td>
+									<td>The base balloted HL7 data type with which all instances of this specialization conform.</td>
+									<td>M</td>
+								</tr>
+								<tr>
+									<td>Specialization derivation</td>
+									<td>Other data type specializations of which this is known to be a valid refinement. For example, a coded specialization that requires a single translation may be a refinement of one that allows one or two translations.</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td>Version</td>
+									<td>A version number. It is assumed that versioning will apply to a package of data type specializations rather than individually. Thus the formal name will not change but the version number and unique ID will change. Propagation to data type schemas and message specifications will be based on a given version of a package of data type specializations. </td>
+									<td>M</td>
+								</tr>
+								<tr>
+									<td>History</td>
+									<td>A log of changes to this data type. Until and unless changes are made this will just be its creation date.</td>
+									<td>M</td>
+								</tr>
+								<tr>
+									<td>Is abstract?</td>
+									<td>A flag indicating whether the specialization may not be referenced within an instance</td>
+									<td>M</td>
+								</tr>
+							</tbody>
+						</table>
+				</div4>
+				</div3>
+			</div2>
+			<div2 id="CECRimderivedtypestruc">
+				<head>RIM derived type structures</head>
+				<div3 id="CEClocaltypesmsg3">
+					<head>Message Types</head>
+					<p>
+						Using the processes detailed in section <specref ref="CECprocess2"/> and <specref ref="CECappearance2"/> processes, it shall be possible to identify a new message type based on an existing R-MIM or HMD between ballot cycles. Each such identification shall be subject to Ballot and Registration. 
+					</p>
+					<p>
+						An HL7 Affiliate may substitute the standard message constraints to accommodate realm-specific needs.  
+					</p>
+					<p>
+						<emph role="strong">Note: </emph>By substituting the standard message constraints, the affiliate introduces compatibility issues when communicating outside their realm.
+					</p>
+				</div3>
+				<div3 id="CEClocaltypescmet3">
+					<head>CMETs</head>
+					<p>
+						<emph role="strong">Substitution</emph>
+						<br/>An HL7 Affiliate may substitute CMETS developed to meet realm-specific requirements provided that these changes are derived from CMET being substituted using the constraint and extension rules described in this document for RMIMs in general. Such substitution is subject to Registration under the authority of HL7 or the HL7 Affiliate that owns the realm. A CMET that is substituted will apply in every circumstance where the original CMET appears in a universal model for that realm.</p>
+					<p>
+						<emph role="strong">Note: </emph>By substituting the standard CMET, the affiliate introduces compatibility issues when communicating outside their affiliate.
+					</p>
+					<p>At implementation, any user may choose from a family of registered CMETs relating to the same concept, as outlined in section <specref ref="CECcmets3"/>.</p>
+					<p>
+						<emph role="strong">Constraint</emph>
+						<br/>Since CMETs are simply shared Message Types, the localization of CMETs may be undertaken following the rules listed for <specref ref="CEClocaltypesmsg3"/>.</p>
+					<p>
+						<emph role="strong">Extension</emph>
+						<br/>CMETs are defined from an R-MIM.  Thus extending CMETs by adding attributes and classes from the RIM are subject to rules for <specref ref="CEClocalmodelsRMIM3"/> extension, of which this is a special case.</p>
+				</div3>
+			</div2>
+			<div2 id="CEClocalvocab2">
+				<head>Vocabulary</head>
+				<p>HL7 will maintain its vocabulary domain specifications following a harmonization process that is not subject to ballot cycle limitations.  Vendors and users should follow <specref ref="confgop"/>.</p>
+				<p>HL7 Affiliates will establish their own procedures to define and maintain realm-specific variations for vocabulary domains.</p>
+			</div2>
+			<div2 id="CEClocalinteract2">
+				<head>Interaction design elements</head>
+				<p>HL7 Affiliates may identify new <ilxspecref spec="&v3guidefile;" ref="v3gintact">interactions</ilxspecref>, <ilxspecref spec="&v3guidefile;" ref="v3gtrigger">trigger events</ilxspecref> and <ilxspecref spec="&v3guidefile;" ref="v3gapprole">application roles</ilxspecref>. Each such identification shall be subject both to registration and subsequent international ballot.</p>
+			</div2>
+		</div1>
+	</body>
+</spec>

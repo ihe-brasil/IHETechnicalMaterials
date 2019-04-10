@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body><h1>Data Consent RCMR_RM010001 Walk through</h1>
+
+
+<p>The Data Consent RMIM captures the data and associations needed to record a patient’s granting or revocation of consent, or a provider’s decision to override a patient’s consent directives relating to the collection, access, or use of patient health information. </p>  
+
+<p>The types on patient information that may be the subject of a Data Consent message include orders and results for lab, medication, diagnostic imaging; records relating to allergy and intolerance, medical condition, observations, demographics and immunizations.   The current vocabulary may be extended to include provider and encounter type records. </p>   
+
+<p>The actClass “consent” has a much broader definition than is currently supported in this RMIM:  “The Consent class represents informed consents and all similar medico-legal transactions between the patient (or his legal guardian) and the provider. Examples are informed consent for surgical procedures, informed consent for clinical trials, advanced beneficiary notice, against medical advice decline from service, release of information agreement, etc.”  Here, the classCode refers only to consent related to the collection, access, use, and disclosure of patient information.  However, this pattern could be reused with modification to support other types of consent. </p>  
+
+<p>Currently supported interactions are requests, refusals and notifications relating to the recording of consents, revocations, or overrides. </p>   
+
+<p><b>The Attributes of the Focal Class ConsentEvent <b/></p>  
+
+
+<p>The ConsentEvent <b>classCode</b><i>CONS</i>:  The act type “consent” refers in this context to consent related to the collection, access, use, and disclosure of patient information.</p>  
+
+<p>The ConsentEvent <b>moodCode</b> event <i>ENV</i> indicates that the consent is actually happened. </p>  
+
+<p>The ConsentEvent <b>id</b>:   A consent form or consent directive identifier is required to be sent if known.  This identifies a description of the type of health information collection, access, use or disclosure directive to which a patient is consenting, is revoking consent, or is being overridden represented in a form or electronically as a consent directive. </p>    
+
+<p>The ConsentEvent <b>code</b> <i>ActConsentType</i>:   The type of consent being granted, revoked, or overridden shall be specified by a code from the ActConsentType domain, e.g.,  consent to access, collect, or use for research purposes.  Note:  If the consent type is granting permission to access health information, then the type of information to which access is granted must be specified. </p>  
+
+<p>The ConsentEvent <b>negationIND</b> with default set to “false”:    The presence of the negation indicator set to “false” indicates that the patient did not refuse to grant the permission indicated by the ActConsentType.  If a patient had previously consented to access, that permission may be revoked by sending a second Data Consent message with the negationIND set to “true”.   Note that the negationIND must either be non-null or not sent, the later case may be an indication that the patient’s consent was deemed or implied, i.e., the patient did not have an opportunity to actively grant or refuse permission. </p>   
+
+<p>The ConsentEvent <b>statusCode</b>:  A statusCode set to <i>completed</i> must be sent. </p>  
+
+<p>The ConsentEvent <b>effectiveTime</b>:   The Consent Effective and End Time is required to be sent if known. </p>  
+
+<p>The ConsentEvent <b>reasonCode</b>:   If the ConsentEvent author is a provider or other authorized assigned entity, then the a code from the <i>ActConsentInformationAccessReason</i> domain must be sent if known to indicate the provider’s reason for overriding a patient’s limited consent or refusal to consent. Note that this is a constraint. </p>  
+
+<p>The ConsentEvent shall be linked with the subject participation <b>typeCode</b> <i>SBJ</i> to the R_Patient (universal) CMET indicating that one and only one patient shall be the subject of the ConsentEvent. </p>  
+
+<p>The subject participation <b>contextControlCode</b> <i>OP</i> indicates that any  party participating as a subject in the ConsentEvent overrides all subjects from any ancestral subject participations and propagate to all descendant acts reached by conducting ActRelationships. </p>  
+
+<p>Constraint:  The ConsentEvent must be linked by an author participation to one and only one type of authoring role, either a consenting party or an assigned entity. </p>  
+
+<p>The author1 participation <b>typeCode</b> <i>AUT</i> is required to link the ConsentEvent to zero or one consenting party, which may be either a Patient of <b>roleClass</b> <i>PAT</i> or a responsible party conveyed by the R_ResponsibleParty (universal) CMET. </p>    
+
+<p>The author participation <b>contextControlCode</b> <i>OP</i> indicates that any consenting party participating as an author in the ConsentEvent overrides all authors from any ancestral author participations and propagate to all descendant acts reached by conducting ActRelationships. </p>  
+
+<p>The author2 participation <b>typeCode</b> <i>AUT</i> is required to link the ConsentEvent to zero or one assignedEntity, which is conveyed by the R_AssignedEntity (universal) CMET. </p>  
+
+<p>The author participation <b>contextControlCode</b> <i>OP</i> indicates that any assigned entity participating as an author in the ConsentEvent overrides all authors from any ancestral author participations and propagate to all descendant acts reached by conducting ActRelationships. </p>  
+
+<p>The ConsentEvent must have a component relationship <b>typeCode</b> <i>COMP</i> to zero or one <b>PermissionToInform</b>:   The ConsentEvent is comprised of at least one permission to inform zero to many recipients. </p>  
+
+<p><b>Attributes of PermissionToInform </b></p>
+
+<p>The PermissionToInform <b>classCode<b/>:  This class has an act type of <i>INFRM</i> or “inform”, which is defined as “The act of transmitting information and understanding about a topic to a subject”. </p>  
+
+<p>The PermissionToInform <b>moodCode</b>:  The mood of this act is permission <i>PERM</i>, indicating that informing recipients about the subject act is authorized by the ConsentEvent author. </p>  
+
+<p>The PermissionToInform shall have a relationship <b>typeCode</b> <i>SUBJ</i> with one to many subject RecordType acts.  The <b>contextControlCode</b> <i>OP</i> indicates that the permitted release of information applies only to the target RecordType and overrides any propagating ancestor acts to which it is subject, e.g., a previous refusal to permit release of information, but will not propagate further.  The <b>contextConductInd</b> is a Boolean set to “false” meaning that the target RecordType may not have the PermissionToInform as a subject. </p>  
+
+<p><b>Attributes of RecordType</b></p>
+
+<p>The RecordType <b>classCode</b> <i>ACT<i/>:  This act type indicates that any act in definition mood <i>DEF</i> may be the subject of a permitted release of information.
+
+<p>The RecordType <b>code</b> shall be specified with a code from the <i>ActInformationAccessTypeCode</b> domain to provide more precise description of the type of information within the RecordType that is the subject of the permitted disclosure. </p>  
+
+<p>The receiver participation <b>typeCode</b> <i>RCV</i> is required to link the PermissionToInform to zero or more recipients being granted permission, which may be either an assigned person conveyed by the R_AssignedPerson (universal) CMET or a service delivery location conveyed by the R_ServiceDeliveryLocation (universal) CMET. </p>  
+
+<p>The receiver participation <b>contextControlCode</b> <i>OP</i> indicates that any recipients receiving permission to be informed override all recipients from any ancestral receiver participation and propagate to all descendant acts reached by conducting ActRelationships.  Note:  Where a user may gain access to a patient’s record due to the user’s role based access rights, there would be no need to link the permission to release information to that user as a recipient. </p>  
+
+</body>
+</html>

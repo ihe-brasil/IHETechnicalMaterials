@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><html><head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/><title>FICR_HD660100UV01 - Hierarchical Message Description</title><meta name="Entry" content="Provider Details Query Response"/><meta name="Identifier" content="FICR_HD660100UV01"/><style type="text/css">table {empty-cells: show}</style><script language="JavaScript1.2">
+
+var isNew=0;
+var isNS4=0;
+var isIE4=0;
+
+var brow=((navigator.appName) + (parseInt(navigator.appVersion)));
+
+//alert(brow);
+if (parseInt(navigator.appVersion)&gt;=5)
+{
+	isNew=1
+}
+else
+{
+	if(brow=="Netscape4")
+	{
+		isNS4=1;
+		document.captureEvents(Event.ONMOUSEOVER);
+	}
+	else
+	{
+		if(brow=="Microsoft Internet Explorer4")
+		{
+			isIE4=1;
+		}
+	}
+		
+}
+
+// thats ok
+
+
+if(isNS4||isIE4||isNew)
+{
+	docObj=(isNS4) ? 'document' : 'document.all';
+	
+	styleObj=(isNS4) ? ' ' : '.style';
+}
+
+function checkDOM(elementName)
+{
+	if(isNS4||isIE4||isNew)
+	{
+		dom=eval(docObj + '.' + elementName + styleObj);
+		//alert('This browser uses the ' + dom + 'Document Object Model.');
+		dom.left =0;
+		dom.top =0;
+	}
+}
+
+function popUp(evt,currElem)
+{
+
+	if((isNS4 &amp;&amp; currElem !=0) || (isIE4 &amp;&amp; currElem !=0))
+	{
+		dom =eval(docObj +'.' +currElem+styleObj);
+		state=dom.visibility;
+		if ((state == "visible") || (state=="show"))
+		{
+			dom.visibility="hidden";
+		}
+		else
+		{
+			if(isNS4)
+			{
+				topVal=eval(evt.pageY);
+				leftVal=eval(evt.pageX);
+				/*if(((document.body.scrollLeft+document.body.clientWidth)-leftVal)&lt; 150)
+				{
+					leftVal=(document.body.clientWidth+document.body.scrollLeft-151);
+				}
+				if(((document.body.scrollTop+document.body.clientHeight)-topVal)&lt; 30)
+				{
+					topVal=(document.body.clientHeight+document.body.scrollTop-80);
+				}*/
+
+			}
+			if(isIE4)
+			{
+				topVal=eval(event.clientY)  + document.body.scrollTop+20;
+				leftVal=eval(event.clientX) + document.body.scrollLeft;
+				
+				if(((document.body.scrollLeft+document.body.clientWidth)-leftVal)&lt; 150)
+				{
+					leftVal=(document.body.clientWidth+document.body.scrollLeft-151);
+				}
+				if(((document.body.scrollTop+document.body.clientHeight)-topVal)&lt; 30)
+				{
+					topVal=(document.body.clientHeight+document.body.scrollTop-80);
+				}
+			}
+			if(leftVal &lt; 2)
+			{
+				leftVal=2;
+			}
+			dom.top=topVal;
+			dom.left=leftVal;
+			dom.visibility="visible";
+		}
+	}
+}
+</script><style>
+#ds
+{
+	position: absolute;
+	visibility: hidden;
+	z-index: 100;
+	top: 10px;
+	left: 10px;
+}
+#cwe
+{
+	position: absolute;
+	visibility: hidden;
+	z-index: 100;
+	top: 10px;
+	left: 10px;
+}
+
+#cne
+{
+	position: absolute;
+	visibility: hidden;
+	z-index: 100;
+	top: 10px;
+	left: 10px;
+}
+
+.hypertext
+{
+position: absolute;
+	background-color: white;
+	layer-background-colour: cornflowerblue;
+	padding: 3px;
+	border: 3px solid blue;
+	width: 150px;
+	font:normal 10pt/13pt helvetica, sans-serif;
+	text-align: left;
+	color: blue;
+
+	
+}
+td {font-family: verdana,arial; text-align: left; font-size: 8pt;border-style:solid;border-width=1pt;}
+				</style></head><body onload="checkDOM('ds')"><span id="ds" class="hypertext">No Current Link To Vocabulary</span><span id="cwe" class="hypertext">Coded With Extensions</span><span id="cne" class="hypertext">Coded No Extensions</span><table border="3" frame="vsides" rules="cols" cellpadding="2" cellspacing="0" bordercolor="black" style="border-width: 2px;border-style: solid"><tr valign="top"><td height="35"><b><font size="+1">FICR_HD660100UV01</font><br/>Invoice Re-Adjudication Request</b></td><td height="35" class="lightBoundary"><b><i>Description: </i></b><p>Entry Point for Invoice Re-Adjudication message</p>  <br/><a href="FICR_HD660100UV.xls">(Link to Excel View)</a><br/>Derived from RMIM: <a href="FICR_RM660000UV.htm">FICR_RM660000UV</a></td></tr><tr><td height="3" colspan="10" style="font-size=4pt;"> </td></tr><tr class="hmd" valign="top"><td bgcolor="lightblue"><b><a name="InvoiceElementGroup">InvoiceElementGroup</a></b></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="FICR_HD660100UV01:InvoiceElementGroup"><b><i>Design Comments: </i></b><p>MoodCode: PRP - auth, pre-det, cov ext RQO - invoice</p>  </div></td></tr><tr valign="top" class="ConfomanceR"><td><b>classCode</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Act-cls">Act</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActClass.htm"><b>ActClass</b></a>:<a href="../../../infrastructure/vocabulary/ActClass.htm#INVE"><b>INVE</b></a>}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="FICR_HD660100UV01:InvoiceElementGroup.classCode"/></td></td></tr><tr valign="top" class="ConfomanceR"><td><b>moodCode</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Act-cls">Act</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActMood.htm"><b>ActMood</b></a>:<a href="../../../infrastructure/vocabulary/ActMood.htm#RQO"><b>RQO</b></a>}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="FICR_HD660100UV01:InvoiceElementGroup.moodCode"/></td></td></tr><tr valign="top" class="ConfomanceR"><td><b>id</b><font color="green"> [1..*]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Act-cls">Act</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-SET">SET</a>&lt;<a href="../../../infrastructure/datatypes/datatypes.htm#dt-II">II</a>&gt;)<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="FICR_HD660100UV01:InvoiceElementGroup.id"><b><i>Design Comments: </i></b><p>may include data centre and sequence numbers</p>  </div></td></td></tr><tr valign="top" class="ConfomanceR"><td><b>code</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Act-cls">Act</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CS">CS</a>) {CNE:V:<a href="../../../infrastructure/vocabulary/vs_ActCode.htm#ActInvoiceGroupCode"><b>ActInvoiceGroupCode</b></a>}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="FICR_HD660100UV01:InvoiceElementGroup.code"><b><i>Design Comments: </i></b><p>Invoice Type e.g. Healthcare Services, Rx Dispense, Rx Compound, Healthcare Goods, Preferred Accomodation</p>  </div></td></td></tr><tr valign="top" class="ConfomanceR"><td><b>netAmt</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#InvoiceElement-cls">InvoiceElement</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-MO">MO</a>)<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="FICR_HD660100UV01:InvoiceElementGroup.netAmt"/></td></td></tr><tr valign="top" class="ConfomanceR"><td bgcolor="lightgrey"><b>triggerFor<font color="green"> [1..*]</font><font color="gray"> (<a href="#Trigger">Trigger</a>)</font></b></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="FICR_HD660100UV01:InvoiceElementGroup.triggerFor"/></td></tr><tr><td height="3" colspan="10" style="font-size=4pt;"> </td></tr><tr class="hmd" valign="top"><td bgcolor="lightblue"><b><a name="Trigger">Trigger</a></b></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="FICR_HD660100UV01:Trigger"/></td></tr><tr valign="top" class="ConfomanceR"><td><b>typeCode</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#ActRelationship-cls">ActRelationship</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActRelationshipType.htm"><b>ActRelationshipType</b></a>:<a href="../../../infrastructure/vocabulary/ActRelationshipType.htm#TRIG"><b>TRIG</b></a>}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="FICR_HD660100UV01:Trigger.typeCode"/></td></td></tr><tr valign="top" class="ConfomanceR"><td bgcolor="lightgrey"><b>invoiceElementOverride<font color="green"> [1..1]</font><font color="gray"> (<a href="#InvoiceElementOverride">InvoiceElementOverride</a>)</font></b></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="FICR_HD660100UV01:Trigger.invoiceElementOverride"/></td></tr><tr><td height="3" colspan="10" style="font-size=4pt;"> </td></tr><tr class="hmd" valign="top"><td bgcolor="lightblue"><b><a name="InvoiceElementOverride">InvoiceElementOverride</a></b></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="FICR_HD660100UV01:InvoiceElementOverride"/></td></tr><tr valign="top" class="ConfomanceR"><td><b>classCode</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Act-cls">Act</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActClass.htm"><b>ActClass</b></a>:<a href="../../../infrastructure/vocabulary/ActClass.htm#ACT"><b>ACT</b></a>}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="FICR_HD660100UV01:InvoiceElementOverride.classCode"/></td></td></tr><tr valign="top" class="ConfomanceR"><td><b>moodCode</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Act-cls">Act</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActMood.htm"><b>ActMood</b></a>:<a href="../../../infrastructure/vocabulary/ActMood.htm#EVN"><b>EVN</b></a>}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="FICR_HD660100UV01:InvoiceElementOverride.moodCode"/></td></td></tr><tr valign="top" class="ConfomanceR"><td><b>code</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Act-cls">Act</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CS">CS</a>) {CNE:V:<a href="../../../infrastructure/vocabulary/vs_ActCode.htm#ActInvoiceOverrideCode"><b>ActInvoiceOverrideCode</b></a>}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="FICR_HD660100UV01:InvoiceElementOverride.code"/></td></td></tr><tr valign="top" class="ConfomanceR"><td>text<font color="green"> [0..1]</font><br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Act-cls">Act</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-ST">ST</a>)<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="FICR_HD660100UV01:InvoiceElementOverride.text"/></td></td></tr></table></body></html>

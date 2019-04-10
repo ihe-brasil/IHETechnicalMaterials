@@ -1,0 +1,1303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="urn://hl7.org/CTSVAPI" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="urn://hl7.org/CTSVAPI" xmlns:intf="urn://hl7.org/CTSVAPI" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.2RC2
+Built on Nov 16, 2004 (12:19:44 EST)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="urn://hl7.org/CTSVAPI" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getSupportedMatchAlgorithms">
+    <complexType/>
+   </element>
+   <element name="getSupportedMatchAlgorithmsResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getSupportedMatchAlgorithmsReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="UnexpectedError">
+    <sequence>
+     <element name="possible_cause" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="fault" type="impl:UnexpectedError"/>
+   <element name="getSupportedCodeSystems">
+    <complexType>
+     <sequence>
+      <element name="in0" type="xsd:int"/>
+      <element name="in1" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getSupportedCodeSystemsResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getSupportedCodeSystemsReturn" type="impl:CodeSystemIdAndVersions"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ArrayOf_xsd_string">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="CodeSystemIdAndVersions">
+    <sequence>
+     <element name="codeSystem_id" nillable="true" type="xsd:string"/>
+     <element name="codeSystem_name" nillable="true" type="xsd:string"/>
+     <element name="copyright" nillable="true" type="xsd:string"/>
+     <element name="codeSystem_versions" nillable="true" type="impl:ArrayOf_xsd_string"/>
+    </sequence>
+   </complexType>
+   <complexType name="TimeoutError">
+    <sequence/>
+   </complexType>
+   <element name="fault1" type="impl:TimeoutError"/>
+   <element name="lookupConceptCodesByDesignation">
+    <complexType>
+     <sequence>
+      <element name="in0" type="xsd:string"/>
+      <element name="in1" type="xsd:string"/>
+      <element name="in2" type="xsd:string"/>
+      <element name="in3" type="xsd:string"/>
+      <element name="in4" type="xsd:boolean"/>
+      <element name="in5" type="xsd:int"/>
+      <element name="in6" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="lookupConceptCodesByDesignationResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="lookupConceptCodesByDesignationReturn" type="impl:ConceptId"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ConceptId">
+    <sequence>
+     <element name="codeSystem_id" nillable="true" type="xsd:string"/>
+     <element name="concept_code" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="UnknownCodeSystem">
+    <sequence>
+     <element name="codeSystem_id" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="fault2" type="impl:UnknownCodeSystem"/>
+   <complexType name="BadlyFormedMatchText">
+    <sequence>
+     <element name="matchText" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="fault3" type="impl:BadlyFormedMatchText"/>
+   <complexType name="UnknownMatchAlgorithm">
+    <sequence>
+     <element name="matchAlgorithm_code" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="fault4" type="impl:UnknownMatchAlgorithm"/>
+   <complexType name="UnknownLanguageCode">
+    <sequence>
+     <element name="language_code" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="fault5" type="impl:UnknownLanguageCode"/>
+   <element name="lookupConceptCodesByProperty">
+    <complexType>
+     <sequence>
+      <element name="in0" type="xsd:string"/>
+      <element name="in1" type="xsd:string"/>
+      <element name="in2" type="xsd:string"/>
+      <element name="in3" type="xsd:string"/>
+      <element name="in4" type="xsd:boolean"/>
+      <element maxOccurs="unbounded" name="in5" type="xsd:string"/>
+      <element maxOccurs="unbounded" name="in6" type="xsd:string"/>
+      <element name="in7" type="xsd:int"/>
+      <element name="in8" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="lookupConceptCodesByPropertyResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="lookupConceptCodesByPropertyReturn" type="impl:ConceptId"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="UnknownPropertyCode">
+    <sequence>
+     <element name="property_code" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="fault6" type="impl:UnknownPropertyCode"/>
+   <complexType name="UnknownMimeTypeCode">
+    <sequence>
+     <element name="mimeType_code" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="fault7" type="impl:UnknownMimeTypeCode"/>
+   <element name="lookupCompleteCodedConcept">
+    <complexType>
+     <sequence>
+      <element name="in0" type="impl:ConceptId"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="lookupCompleteCodedConceptResponse">
+    <complexType>
+     <sequence>
+      <element name="lookupCompleteCodedConceptReturn" type="impl:CompleteCodedConceptDescription"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ConceptDesignation">
+    <sequence>
+     <element name="designation" nillable="true" type="xsd:string"/>
+     <element name="language_code" nillable="true" type="xsd:string"/>
+     <element name="preferredForLanguage" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfConceptDesignation">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="impl:ConceptDesignation"/>
+    </sequence>
+   </complexType>
+   <complexType name="ConceptProperty">
+    <sequence>
+     <element name="property_code" nillable="true" type="xsd:string"/>
+     <element name="propertyValue" nillable="true" type="xsd:string"/>
+     <element name="language_code" nillable="true" type="xsd:string"/>
+     <element name="mimeType_code" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfConceptProperty">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="impl:ConceptProperty"/>
+    </sequence>
+   </complexType>
+   <complexType name="ConceptRelationship">
+    <sequence>
+     <element name="sourceConcept_id" nillable="true" type="impl:ConceptId"/>
+     <element name="relationship_code" nillable="true" type="xsd:string"/>
+     <element name="relationQualifiers" nillable="true" type="impl:ArrayOf_xsd_string"/>
+     <element name="targetConcept_id" nillable="true" type="impl:ConceptId"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfConceptRelationship">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="impl:ConceptRelationship"/>
+    </sequence>
+   </complexType>
+   <complexType name="CompleteCodedConceptDescription">
+    <sequence>
+     <element name="concept_id" nillable="true" type="impl:ConceptId"/>
+     <element name="conceptStatus_code" nillable="true" type="xsd:string"/>
+     <element name="codeSystem_version" nillable="true" type="xsd:string"/>
+     <element name="designatedBy" nillable="true" type="impl:ArrayOfConceptDesignation"/>
+     <element name="hasProperties" nillable="true" type="impl:ArrayOfConceptProperty"/>
+     <element name="sourceFor" nillable="true" type="impl:ArrayOfConceptRelationship"/>
+     <element name="targetOf" nillable="true" type="impl:ArrayOfConceptRelationship"/>
+    </sequence>
+   </complexType>
+   <complexType name="UnknownConceptCode">
+    <sequence>
+     <element name="concept_code" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="fault8" type="impl:UnknownConceptCode"/>
+   <element name="lookupDesignations">
+    <complexType>
+     <sequence>
+      <element name="in0" type="impl:ConceptId"/>
+      <element name="in1" type="xsd:string"/>
+      <element name="in2" type="xsd:string"/>
+      <element name="in3" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="lookupDesignationsResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="lookupDesignationsReturn" type="impl:ConceptDesignation"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="lookupProperties">
+    <complexType>
+     <sequence>
+      <element name="in0" type="impl:ConceptId"/>
+      <element maxOccurs="unbounded" name="in1" type="xsd:string"/>
+      <element name="in2" type="xsd:string"/>
+      <element name="in3" type="xsd:string"/>
+      <element name="in4" type="xsd:string"/>
+      <element maxOccurs="unbounded" name="in5" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="lookupPropertiesResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="lookupPropertiesReturn" type="impl:ConceptProperty"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="lookupCodeExpansion">
+    <complexType>
+     <sequence>
+      <element name="in0" type="impl:ConceptId"/>
+      <element name="in1" type="xsd:string"/>
+      <element name="in2" type="xsd:boolean"/>
+      <element name="in3" type="xsd:boolean"/>
+      <element name="in4" type="xsd:string"/>
+      <element name="in5" type="xsd:int"/>
+      <element name="in6" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="lookupCodeExpansionResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="lookupCodeExpansionReturn" type="impl:RelatedCode"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="RelatedCode">
+    <sequence>
+     <element name="pathLength" type="xsd:short"/>
+     <element name="concept_code" nillable="true" type="xsd:string"/>
+     <element name="designation" nillable="true" type="xsd:string"/>
+     <element name="relationQualifiers" nillable="true" type="impl:ArrayOf_xsd_string"/>
+     <element name="canExpand" type="xsd:boolean"/>
+     <element name="expansionContext" type="xsd:base64Binary"/>
+    </sequence>
+   </complexType>
+   <complexType name="UnknownRelationshipCode">
+    <sequence>
+     <element name="relationship_code" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="fault9" type="impl:UnknownRelationshipCode"/>
+   <element name="expandCodeExpansionContext">
+    <complexType>
+     <sequence>
+      <element name="in0" type="xsd:base64Binary"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="expandCodeExpansionContextResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="expandCodeExpansionContextReturn" type="impl:RelatedCode"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="InvalidExpansionContext">
+    <sequence/>
+   </complexType>
+   <element name="fault10" type="impl:InvalidExpansionContext"/>
+   <element name="getServiceName">
+    <complexType/>
+   </element>
+   <element name="getServiceNameResponse">
+    <complexType>
+     <sequence>
+      <element name="getServiceNameReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getServiceVersion">
+    <complexType/>
+   </element>
+   <element name="getServiceVersionResponse">
+    <complexType>
+     <sequence>
+      <element name="getServiceVersionReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getServiceDescription">
+    <complexType/>
+   </element>
+   <element name="getServiceDescriptionResponse">
+    <complexType>
+     <sequence>
+      <element name="getServiceDescriptionReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getCTSVersion">
+    <complexType/>
+   </element>
+   <element name="getCTSVersionResponse">
+    <complexType>
+     <sequence>
+      <element name="getCTSVersionReturn" type="impl:CTSVersionId"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="CTSVersionId">
+    <sequence>
+     <element name="major" type="xsd:short"/>
+     <element name="minor" type="xsd:short"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="expandCodeExpansionContextResponse">
+
+      <wsdl:part element="impl:expandCodeExpansionContextResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSupportedMatchAlgorithmsRequest">
+
+      <wsdl:part element="impl:getSupportedMatchAlgorithms" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupDesignationsRequest">
+
+      <wsdl:part element="impl:lookupDesignations" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServiceVersionRequest">
+
+      <wsdl:part element="impl:getServiceVersion" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupConceptCodesByDesignationResponse">
+
+      <wsdl:part element="impl:lookupConceptCodesByDesignationResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="TimeoutError">
+
+      <wsdl:part element="impl:fault1" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSupportedCodeSystemsResponse">
+
+      <wsdl:part element="impl:getSupportedCodeSystemsResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCTSVersionRequest">
+
+      <wsdl:part element="impl:getCTSVersion" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="InvalidExpansionContext">
+
+      <wsdl:part element="impl:fault10" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSupportedMatchAlgorithmsResponse">
+
+      <wsdl:part element="impl:getSupportedMatchAlgorithmsResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="UnknownPropertyCode">
+
+      <wsdl:part element="impl:fault6" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupCompleteCodedConceptResponse">
+
+      <wsdl:part element="impl:lookupCompleteCodedConceptResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCTSVersionResponse">
+
+      <wsdl:part element="impl:getCTSVersionResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupDesignationsResponse">
+
+      <wsdl:part element="impl:lookupDesignationsResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServiceVersionResponse">
+
+      <wsdl:part element="impl:getServiceVersionResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupCodeExpansionRequest">
+
+      <wsdl:part element="impl:lookupCodeExpansion" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="UnknownRelationshipCode">
+
+      <wsdl:part element="impl:fault9" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupConceptCodesByDesignationRequest">
+
+      <wsdl:part element="impl:lookupConceptCodesByDesignation" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="UnknownMatchAlgorithm">
+
+      <wsdl:part element="impl:fault4" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="UnknownLanguageCode">
+
+      <wsdl:part element="impl:fault5" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupConceptCodesByPropertyRequest">
+
+      <wsdl:part element="impl:lookupConceptCodesByProperty" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupPropertiesResponse">
+
+      <wsdl:part element="impl:lookupPropertiesResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="expandCodeExpansionContextRequest">
+
+      <wsdl:part element="impl:expandCodeExpansionContext" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServiceDescriptionResponse">
+
+      <wsdl:part element="impl:getServiceDescriptionResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupCodeExpansionResponse">
+
+      <wsdl:part element="impl:lookupCodeExpansionResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSupportedCodeSystemsRequest">
+
+      <wsdl:part element="impl:getSupportedCodeSystems" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="UnknownConceptCode">
+
+      <wsdl:part element="impl:fault8" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="UnexpectedError">
+
+      <wsdl:part element="impl:fault" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="UnknownCodeSystem">
+
+      <wsdl:part element="impl:fault2" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServiceNameResponse">
+
+      <wsdl:part element="impl:getServiceNameResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupCompleteCodedConceptRequest">
+
+      <wsdl:part element="impl:lookupCompleteCodedConcept" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupPropertiesRequest">
+
+      <wsdl:part element="impl:lookupProperties" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServiceDescriptionRequest">
+
+      <wsdl:part element="impl:getServiceDescription" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServiceNameRequest">
+
+      <wsdl:part element="impl:getServiceName" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupConceptCodesByPropertyResponse">
+
+      <wsdl:part element="impl:lookupConceptCodesByPropertyResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="BadlyFormedMatchText">
+
+      <wsdl:part element="impl:fault3" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="UnknownMimeTypeCode">
+
+      <wsdl:part element="impl:fault7" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="BrowserOperations">
+
+      <wsdl:operation name="getSupportedMatchAlgorithms">
+
+         <wsdl:input message="impl:getSupportedMatchAlgorithmsRequest" name="getSupportedMatchAlgorithmsRequest"/>
+
+         <wsdl:output message="impl:getSupportedMatchAlgorithmsResponse" name="getSupportedMatchAlgorithmsResponse"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSupportedCodeSystems">
+
+         <wsdl:input message="impl:getSupportedCodeSystemsRequest" name="getSupportedCodeSystemsRequest"/>
+
+         <wsdl:output message="impl:getSupportedCodeSystemsResponse" name="getSupportedCodeSystemsResponse"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+         <wsdl:fault message="impl:TimeoutError" name="TimeoutError"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupConceptCodesByDesignation">
+
+         <wsdl:input message="impl:lookupConceptCodesByDesignationRequest" name="lookupConceptCodesByDesignationRequest"/>
+
+         <wsdl:output message="impl:lookupConceptCodesByDesignationResponse" name="lookupConceptCodesByDesignationResponse"/>
+
+         <wsdl:fault message="impl:UnknownMatchAlgorithm" name="UnknownMatchAlgorithm"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+         <wsdl:fault message="impl:BadlyFormedMatchText" name="BadlyFormedMatchText"/>
+
+         <wsdl:fault message="impl:TimeoutError" name="TimeoutError"/>
+
+         <wsdl:fault message="impl:UnknownCodeSystem" name="UnknownCodeSystem"/>
+
+         <wsdl:fault message="impl:UnknownLanguageCode" name="UnknownLanguageCode"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupConceptCodesByProperty">
+
+         <wsdl:input message="impl:lookupConceptCodesByPropertyRequest" name="lookupConceptCodesByPropertyRequest"/>
+
+         <wsdl:output message="impl:lookupConceptCodesByPropertyResponse" name="lookupConceptCodesByPropertyResponse"/>
+
+         <wsdl:fault message="impl:UnknownMatchAlgorithm" name="UnknownMatchAlgorithm"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+         <wsdl:fault message="impl:UnknownMimeTypeCode" name="UnknownMimeTypeCode"/>
+
+         <wsdl:fault message="impl:BadlyFormedMatchText" name="BadlyFormedMatchText"/>
+
+         <wsdl:fault message="impl:TimeoutError" name="TimeoutError"/>
+
+         <wsdl:fault message="impl:UnknownCodeSystem" name="UnknownCodeSystem"/>
+
+         <wsdl:fault message="impl:UnknownPropertyCode" name="UnknownPropertyCode"/>
+
+         <wsdl:fault message="impl:UnknownLanguageCode" name="UnknownLanguageCode"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupCompleteCodedConcept">
+
+         <wsdl:input message="impl:lookupCompleteCodedConceptRequest" name="lookupCompleteCodedConceptRequest"/>
+
+         <wsdl:output message="impl:lookupCompleteCodedConceptResponse" name="lookupCompleteCodedConceptResponse"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+         <wsdl:fault message="impl:UnknownConceptCode" name="UnknownConceptCode"/>
+
+         <wsdl:fault message="impl:UnknownCodeSystem" name="UnknownCodeSystem"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupDesignations">
+
+         <wsdl:input message="impl:lookupDesignationsRequest" name="lookupDesignationsRequest"/>
+
+         <wsdl:output message="impl:lookupDesignationsResponse" name="lookupDesignationsResponse"/>
+
+         <wsdl:fault message="impl:UnknownMatchAlgorithm" name="UnknownMatchAlgorithm"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+         <wsdl:fault message="impl:BadlyFormedMatchText" name="BadlyFormedMatchText"/>
+
+         <wsdl:fault message="impl:UnknownConceptCode" name="UnknownConceptCode"/>
+
+         <wsdl:fault message="impl:UnknownCodeSystem" name="UnknownCodeSystem"/>
+
+         <wsdl:fault message="impl:UnknownLanguageCode" name="UnknownLanguageCode"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupProperties">
+
+         <wsdl:input message="impl:lookupPropertiesRequest" name="lookupPropertiesRequest"/>
+
+         <wsdl:output message="impl:lookupPropertiesResponse" name="lookupPropertiesResponse"/>
+
+         <wsdl:fault message="impl:UnknownMatchAlgorithm" name="UnknownMatchAlgorithm"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+         <wsdl:fault message="impl:UnknownMimeTypeCode" name="UnknownMimeTypeCode"/>
+
+         <wsdl:fault message="impl:BadlyFormedMatchText" name="BadlyFormedMatchText"/>
+
+         <wsdl:fault message="impl:UnknownConceptCode" name="UnknownConceptCode"/>
+
+         <wsdl:fault message="impl:UnknownCodeSystem" name="UnknownCodeSystem"/>
+
+         <wsdl:fault message="impl:UnknownPropertyCode" name="UnknownPropertyCode"/>
+
+         <wsdl:fault message="impl:UnknownLanguageCode" name="UnknownLanguageCode"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupCodeExpansion">
+
+         <wsdl:input message="impl:lookupCodeExpansionRequest" name="lookupCodeExpansionRequest"/>
+
+         <wsdl:output message="impl:lookupCodeExpansionResponse" name="lookupCodeExpansionResponse"/>
+
+         <wsdl:fault message="impl:UnknownRelationshipCode" name="UnknownRelationshipCode"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+         <wsdl:fault message="impl:UnknownConceptCode" name="UnknownConceptCode"/>
+
+         <wsdl:fault message="impl:TimeoutError" name="TimeoutError"/>
+
+         <wsdl:fault message="impl:UnknownCodeSystem" name="UnknownCodeSystem"/>
+
+         <wsdl:fault message="impl:UnknownLanguageCode" name="UnknownLanguageCode"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="expandCodeExpansionContext">
+
+         <wsdl:input message="impl:expandCodeExpansionContextRequest" name="expandCodeExpansionContextRequest"/>
+
+         <wsdl:output message="impl:expandCodeExpansionContextResponse" name="expandCodeExpansionContextResponse"/>
+
+         <wsdl:fault message="impl:InvalidExpansionContext" name="InvalidExpansionContext"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+         <wsdl:fault message="impl:TimeoutError" name="TimeoutError"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServiceName">
+
+         <wsdl:input message="impl:getServiceNameRequest" name="getServiceNameRequest"/>
+
+         <wsdl:output message="impl:getServiceNameResponse" name="getServiceNameResponse"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServiceVersion">
+
+         <wsdl:input message="impl:getServiceVersionRequest" name="getServiceVersionRequest"/>
+
+         <wsdl:output message="impl:getServiceVersionResponse" name="getServiceVersionResponse"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServiceDescription">
+
+         <wsdl:input message="impl:getServiceDescriptionRequest" name="getServiceDescriptionRequest"/>
+
+         <wsdl:output message="impl:getServiceDescriptionResponse" name="getServiceDescriptionResponse"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCTSVersion">
+
+         <wsdl:input message="impl:getCTSVersionRequest" name="getCTSVersionRequest"/>
+
+         <wsdl:output message="impl:getCTSVersionResponse" name="getCTSVersionResponse"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="VocabBrowserServiceSoapBinding" type="impl:BrowserOperations">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getSupportedMatchAlgorithms">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSupportedMatchAlgorithmsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSupportedMatchAlgorithmsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSupportedCodeSystems">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSupportedCodeSystemsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSupportedCodeSystemsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="TimeoutError">
+
+            <wsdlsoap:fault name="TimeoutError" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupConceptCodesByDesignation">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="lookupConceptCodesByDesignationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="lookupConceptCodesByDesignationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnknownMatchAlgorithm">
+
+            <wsdlsoap:fault name="UnknownMatchAlgorithm" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="BadlyFormedMatchText">
+
+            <wsdlsoap:fault name="BadlyFormedMatchText" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="TimeoutError">
+
+            <wsdlsoap:fault name="TimeoutError" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownCodeSystem">
+
+            <wsdlsoap:fault name="UnknownCodeSystem" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownLanguageCode">
+
+            <wsdlsoap:fault name="UnknownLanguageCode" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupConceptCodesByProperty">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="lookupConceptCodesByPropertyRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="lookupConceptCodesByPropertyResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnknownMatchAlgorithm">
+
+            <wsdlsoap:fault name="UnknownMatchAlgorithm" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownMimeTypeCode">
+
+            <wsdlsoap:fault name="UnknownMimeTypeCode" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="BadlyFormedMatchText">
+
+            <wsdlsoap:fault name="BadlyFormedMatchText" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="TimeoutError">
+
+            <wsdlsoap:fault name="TimeoutError" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownCodeSystem">
+
+            <wsdlsoap:fault name="UnknownCodeSystem" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownPropertyCode">
+
+            <wsdlsoap:fault name="UnknownPropertyCode" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownLanguageCode">
+
+            <wsdlsoap:fault name="UnknownLanguageCode" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupCompleteCodedConcept">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="lookupCompleteCodedConceptRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="lookupCompleteCodedConceptResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownConceptCode">
+
+            <wsdlsoap:fault name="UnknownConceptCode" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownCodeSystem">
+
+            <wsdlsoap:fault name="UnknownCodeSystem" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupDesignations">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="lookupDesignationsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="lookupDesignationsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnknownMatchAlgorithm">
+
+            <wsdlsoap:fault name="UnknownMatchAlgorithm" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="BadlyFormedMatchText">
+
+            <wsdlsoap:fault name="BadlyFormedMatchText" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownConceptCode">
+
+            <wsdlsoap:fault name="UnknownConceptCode" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownCodeSystem">
+
+            <wsdlsoap:fault name="UnknownCodeSystem" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownLanguageCode">
+
+            <wsdlsoap:fault name="UnknownLanguageCode" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupProperties">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="lookupPropertiesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="lookupPropertiesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnknownMatchAlgorithm">
+
+            <wsdlsoap:fault name="UnknownMatchAlgorithm" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownMimeTypeCode">
+
+            <wsdlsoap:fault name="UnknownMimeTypeCode" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="BadlyFormedMatchText">
+
+            <wsdlsoap:fault name="BadlyFormedMatchText" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownConceptCode">
+
+            <wsdlsoap:fault name="UnknownConceptCode" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownCodeSystem">
+
+            <wsdlsoap:fault name="UnknownCodeSystem" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownPropertyCode">
+
+            <wsdlsoap:fault name="UnknownPropertyCode" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownLanguageCode">
+
+            <wsdlsoap:fault name="UnknownLanguageCode" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupCodeExpansion">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="lookupCodeExpansionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="lookupCodeExpansionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnknownRelationshipCode">
+
+            <wsdlsoap:fault name="UnknownRelationshipCode" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownConceptCode">
+
+            <wsdlsoap:fault name="UnknownConceptCode" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="TimeoutError">
+
+            <wsdlsoap:fault name="TimeoutError" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownCodeSystem">
+
+            <wsdlsoap:fault name="UnknownCodeSystem" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownLanguageCode">
+
+            <wsdlsoap:fault name="UnknownLanguageCode" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="expandCodeExpansionContext">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="expandCodeExpansionContextRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="expandCodeExpansionContextResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="InvalidExpansionContext">
+
+            <wsdlsoap:fault name="InvalidExpansionContext" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="TimeoutError">
+
+            <wsdlsoap:fault name="TimeoutError" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServiceName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getServiceNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getServiceNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServiceVersion">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getServiceVersionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getServiceVersionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServiceDescription">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getServiceDescriptionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getServiceDescriptionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCTSVersion">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getCTSVersionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getCTSVersionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="BrowserOperationsService">
+
+      <wsdl:port binding="impl:VocabBrowserServiceSoapBinding" name="VocabBrowserService">
+
+         <wsdlsoap:address location="http://localhost:8080/axis/services/VocabBrowserService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

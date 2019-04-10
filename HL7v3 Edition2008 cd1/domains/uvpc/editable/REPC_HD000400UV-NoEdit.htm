@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><html><head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/><title>REPC_HD000400UV01 - Hierarchical Message Description</title><meta name="Entry" content="Provider Details Query Response"/><meta name="Identifier" content="REPC_HD000400UV01"/><style type="text/css">table {empty-cells: show}</style><script language="JavaScript1.2">
+
+var isNew=0;
+var isNS4=0;
+var isIE4=0;
+
+var brow=((navigator.appName) + (parseInt(navigator.appVersion)));
+
+//alert(brow);
+if (parseInt(navigator.appVersion)&gt;=5)
+{
+	isNew=1
+}
+else
+{
+	if(brow=="Netscape4")
+	{
+		isNS4=1;
+		document.captureEvents(Event.ONMOUSEOVER);
+	}
+	else
+	{
+		if(brow=="Microsoft Internet Explorer4")
+		{
+			isIE4=1;
+		}
+	}
+		
+}
+
+// thats ok
+
+
+if(isNS4||isIE4||isNew)
+{
+	docObj=(isNS4) ? 'document' : 'document.all';
+	
+	styleObj=(isNS4) ? ' ' : '.style';
+}
+
+function checkDOM(elementName)
+{
+	if(isNS4||isIE4||isNew)
+	{
+		dom=eval(docObj + '.' + elementName + styleObj);
+		//alert('This browser uses the ' + dom + 'Document Object Model.');
+		dom.left =0;
+		dom.top =0;
+	}
+}
+
+function popUp(evt,currElem)
+{
+
+	if((isNS4 &amp;&amp; currElem !=0) || (isIE4 &amp;&amp; currElem !=0))
+	{
+		dom =eval(docObj +'.' +currElem+styleObj);
+		state=dom.visibility;
+		if ((state == "visible") || (state=="show"))
+		{
+			dom.visibility="hidden";
+		}
+		else
+		{
+			if(isNS4)
+			{
+				topVal=eval(evt.pageY);
+				leftVal=eval(evt.pageX);
+				/*if(((document.body.scrollLeft+document.body.clientWidth)-leftVal)&lt; 150)
+				{
+					leftVal=(document.body.clientWidth+document.body.scrollLeft-151);
+				}
+				if(((document.body.scrollTop+document.body.clientHeight)-topVal)&lt; 30)
+				{
+					topVal=(document.body.clientHeight+document.body.scrollTop-80);
+				}*/
+
+			}
+			if(isIE4)
+			{
+				topVal=eval(event.clientY)  + document.body.scrollTop+20;
+				leftVal=eval(event.clientX) + document.body.scrollLeft;
+				
+				if(((document.body.scrollLeft+document.body.clientWidth)-leftVal)&lt; 150)
+				{
+					leftVal=(document.body.clientWidth+document.body.scrollLeft-151);
+				}
+				if(((document.body.scrollTop+document.body.clientHeight)-topVal)&lt; 30)
+				{
+					topVal=(document.body.clientHeight+document.body.scrollTop-80);
+				}
+			}
+			if(leftVal &lt; 2)
+			{
+				leftVal=2;
+			}
+			dom.top=topVal;
+			dom.left=leftVal;
+			dom.visibility="visible";
+		}
+	}
+}
+</script><style>
+#ds
+{
+	position: absolute;
+	visibility: hidden;
+	z-index: 100;
+	top: 10px;
+	left: 10px;
+}
+#cwe
+{
+	position: absolute;
+	visibility: hidden;
+	z-index: 100;
+	top: 10px;
+	left: 10px;
+}
+
+#cne
+{
+	position: absolute;
+	visibility: hidden;
+	z-index: 100;
+	top: 10px;
+	left: 10px;
+}
+
+.hypertext
+{
+position: absolute;
+	background-color: white;
+	layer-background-colour: cornflowerblue;
+	padding: 3px;
+	border: 3px solid blue;
+	width: 150px;
+	font:normal 10pt/13pt helvetica, sans-serif;
+	text-align: left;
+	color: blue;
+
+	
+}
+td {font-family: verdana,arial; text-align: left; font-size: 8pt;border-style:solid;border-width=1pt;}
+				</style></head><body onload="checkDOM('ds')"><span id="ds" class="hypertext">No Current Link To Vocabulary</span><span id="cwe" class="hypertext">Coded With Extensions</span><span id="cne" class="hypertext">Coded No Extensions</span><table border="3" frame="vsides" rules="cols" cellpadding="2" cellspacing="0" bordercolor="black" style="border-width: 2px;border-style: solid"><tr valign="top"><td height="35"><b><font size="+1">REPC_HD000400UV01</font><br/>A_StatementCollector</b></td><td height="35" class="lightBoundary"><b><i>Description: </i></b><p>A collection of care statements</p>  <br/><a href="REPC_HD000400UV.xls">(Link to Excel View)</a><br/>Derived from RMIM: <a href="REPC_RM000400UV.htm">REPC_RM000400UV</a></td></tr><tr><td height="3" colspan="10" style="font-size=4pt;"> </td></tr><tr class="hmd" valign="top"><td bgcolor="lightblue"><b><a name="StatementCollector">StatementCollector</a></b></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:StatementCollector"><b><i>Design Comments: </i></b><p>Can be any kind of list for Patient Care, eg medication, observations, activities, encounters, variances</p>  </div></td></tr><tr valign="top" class="Confomance"><td bgcolor="lightgrey">author<font color="green"> [0..*]</font><font color="gray"> (<a href="#Author5">Author5</a>)</font></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:StatementCollector.author"/></td></tr><tr valign="top" class="Confomance"><td bgcolor="lightgrey">component<font color="green"> [0..*]</font><font color="gray"> (<a href="#Component4">Component4</a>)</font></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:StatementCollector.component"/></td></tr><tr valign="top" class="Confomance"><td bgcolor="lightgrey">choice of <font color="gray"><a href="#ActCategory">ActCategory</a></font></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:ActCategory"/></td></tr><tr valign="top" class="Confomance"><td bgcolor="lightgrey">          or <font color="gray"><a href="#ActList">ActList</a></font></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:ActList"/></td></tr><tr><td height="3" colspan="10" style="font-size=4pt;"> </td></tr><tr class="hmd" valign="top"><td bgcolor="lightblue"><b><a name="Author5">Author5</a></b></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:Author5"/></td></tr><tr valign="top" class="ConfomanceR"><td><b>typeCode</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Participation-cls">Participation</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ParticipationType.htm"><b>ParticipationType</b></a>:<a href="../../../infrastructure/vocabulary/ParticipationType.htm#AUT"><b>AUT</b></a>}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:Author5.typeCode"/></td></td></tr><tr valign="top" class="ConfomanceR"><td>contextControlCode<font color="green"> [1..1]</font><br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Participation-cls">Participation</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ContextControl.htm"><b>ContextControl</b></a>, default= "OP"}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:Author5.contextControlCode"/></td></td></tr><tr valign="top" class="Confomance"><td>noteText<font color="green"> [0..1]</font><br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Participation-cls">Participation</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-ST">ST</a>)<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:Author5.noteText"/></td></td></tr><tr valign="top" class="ConfomanceR"><td>time<font color="green"> [1..1]</font><br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Participation-cls">Participation</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-TS">TS</a>)<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:Author5.time"/></td></td></tr><tr valign="top" class="Confomance"><td>modeCode<font color="green"> [1..1]</font><br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Participation-cls">Participation</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CE">CE</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ParticipationMode.htm"><b>ParticipationMode</b></a>, default= "ELECTRONIC"}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:Author5.modeCode"/></td></td></tr><tr valign="top" class="ConfomanceR"><td>signatureCode<font color="green"> [1..1]</font><br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Participation-cls">Participation</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CS">CS</a>) {CNE:D:<a href="../../../infrastructure/vocabulary/voc_ConceptDomains.htm#ParticipationSignature"><b>ParticipationSignature</b></a>}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:Author5.signatureCode"/></td></td></tr><tr valign="top" class="Confomance"><td>signatureText<font color="green"> [0..1]</font><br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Participation-cls">Participation</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-ED">ED</a>)<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:Author5.signatureText"/></td></td></tr><tr valign="top" class="Confomance"><td bgcolor="lightgrey">assignedPerson<font color="green"> [1..1]</font><font color="gray"> (<a href="../../uvct/editable/COCT_MT090100UV-NoEdit.htm">R_AssignedPersonUniversal</a>)</font></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:Author5.assignedPerson"/></td></tr><tr><td height="3" colspan="10" style="font-size=4pt;"> </td></tr><tr class="hmd" valign="top"><td bgcolor="lightblue"><b><a name="Component4">Component4</a></b></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:Component4"/></td></tr><tr valign="top" class="ConfomanceR"><td><b>typeCode</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#ActRelationship-cls">ActRelationship</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActRelationshipType.htm"><b>ActRelationshipType</b></a>:<a href="../../../infrastructure/vocabulary/ActRelationshipType.htm#COMP"><b>COMP</b></a>}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:Component4.typeCode"/></td></td></tr><tr valign="top" class="ConfomanceR"><td>contextControlCode<font color="green"> [1..1]</font><br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#ActRelationship-cls">ActRelationship</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ContextControl.htm"><b>ContextControl</b></a>, default= "AN"}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:Component4.contextControlCode"/></td></td></tr><tr valign="top" class="ConfomanceR"><td><b>contextConductionInd</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#ActRelationship-cls">ActRelationship</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-BL">BL</a>){default= "true"}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:Component4.contextConductionInd"/></td></td></tr><tr valign="top" class="Confomance"><td>sequenceNumber<font color="green"> [0..1]</font><br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#ActRelationship-cls">ActRelationship</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-INT">INT</a>)<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:Component4.sequenceNumber"/></td></td></tr><tr valign="top" class="Confomance"><td bgcolor="lightgrey"><i>careStatement<font color="green"> [1..1]</font><font color="gray"> (<a href="../../uvpc/editable/REPC_MT000100UV-NoEdit.htm">A_CareStatementUniversal</a>)</font></i></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:Component4.careStatement"/></td></tr><tr><td height="3" colspan="10" style="font-size=4pt;"> </td></tr><tr class="hmd" valign="top"><td bgcolor="lightblue"><b><a name="ActCategory">ActCategory</a></b></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:ActCategory"/></td></tr><tr valign="top" class="ConfomanceR"><td><b>classCode</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Act-cls">Act</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActClass.htm"><b>ActClass</b></a>:<a href="../../../infrastructure/vocabulary/ActClass.htm#CATEGORY"><b>CATEGORY</b></a>}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:ActCategory.classCode"/></td></td></tr><tr valign="top" class="ConfomanceR"><td><b>moodCode</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Act-cls">Act</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActMood.htm"><b>ActMood</b></a>:<a href="../../../infrastructure/vocabulary/ActMood.htm#EVN"><b>EVN</b></a>}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:ActCategory.moodCode"/></td></td></tr><tr valign="top" class="ConfomanceR"><td>code<font color="green"> [1..1]</font><br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Act-cls">Act</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CS">CS</a>) {CNE:D:<a href="../../../infrastructure/vocabulary/voc_ConceptDomains.htm#ActCode"><b>ActCode</b></a>}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:ActCategory.code"/></td></td></tr><tr valign="top" class="Confomance"><td bgcolor="lightgrey"><i>Inherits associations from <font color="gray"><a href="#StatementCollector">StatementCollector</a></font></i></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:StatementCollector"><b><i>Design Comments: </i></b><p>Can be any kind of list for Patient Care, eg medication, observations, activities, encounters, variances</p>  </div></td></tr><tr><td height="3" colspan="10" style="font-size=4pt;"> </td></tr><tr class="hmd" valign="top"><td bgcolor="lightblue"><b><a name="ActList">ActList</a></b></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:ActList"/></td></tr><tr valign="top" class="ConfomanceR"><td><b>classCode</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Act-cls">Act</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActClass.htm"><b>ActClass</b></a>:<a href="../../../infrastructure/vocabulary/ActClass.htm#LIST"><b>LIST</b></a>}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:ActList.classCode"/></td></td></tr><tr valign="top" class="ConfomanceR"><td><b>moodCode</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Act-cls">Act</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActMood.htm"><b>ActMood</b></a>:<a href="../../../infrastructure/vocabulary/ActMood.htm#EVN"><b>EVN</b></a>}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:ActList.moodCode"/></td></td></tr><tr valign="top" class="ConfomanceR"><td><b>code</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Act-cls">Act</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CD">CD</a>) {CWE:D:<a href="../../../infrastructure/vocabulary/voc_ConceptDomains.htm#ActListCode"><b>ActListCode</b></a>}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:ActList.code"/></td></td></tr><tr valign="top" class="Confomance"><td>effectiveTime<font color="green"> [0..1]</font><br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Act-cls">Act</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-IVL">IVL</a>&lt;<a href="../../../infrastructure/datatypes/datatypes.htm#dt-TS">TS</a>&gt;)<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:ActList.effectiveTime"/></td></td></tr><tr valign="top" class="Confomance"><td bgcolor="lightgrey">custodian<font color="green"> [0..*]</font><font color="gray"> (<a href="#Custodian">Custodian</a>)</font></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:ActList.custodian"><b><i>Design Comments: </i></b><p>Owner of the list. Replaces ListOwnershipCategory attribute</p>  </div></td></tr><tr valign="top" class="Confomance"><td bgcolor="lightgrey"><i>Inherits associations from <font color="gray"><a href="#StatementCollector">StatementCollector</a></font></i></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:StatementCollector"><b><i>Design Comments: </i></b><p>Can be any kind of list for Patient Care, eg medication, observations, activities, encounters, variances</p>  </div></td></tr><tr><td height="3" colspan="10" style="font-size=4pt;"> </td></tr><tr class="hmd" valign="top"><td bgcolor="lightblue"><b><a name="Custodian">Custodian</a></b></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:Custodian"><b><i>Design Comments: </i></b><p>Owner of the list. Replaces ListOwnershipCategory attribute</p>  </div></td></tr><tr valign="top" class="ConfomanceR"><td><b>typeCode</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Participation-cls">Participation</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ParticipationType.htm"><b>ParticipationType</b></a>:<a href="../../../infrastructure/vocabulary/ParticipationType.htm#CST"><b>CST</b></a>}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:Custodian.typeCode"/></td></td></tr><tr valign="top" class="Confomance"><td>time<font color="green"> [0..1]</font><br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Participation-cls">Participation</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-IVL">IVL</a>&lt;<a href="../../../infrastructure/datatypes/datatypes.htm#dt-TS">TS</a>&gt;)<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:Custodian.time"/></td></td></tr><tr valign="top" class="Confomance"><td bgcolor="lightgrey">responsibleParty<font color="green"> [1..1]</font><font color="gray"> (<a href="../../uvct/editable/COCT_MT040200UV-NoEdit.htm">R_ResponsiblePartyUniversal</a>)</font></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="REPC_HD000400UV01:Custodian.responsibleParty"/></td></tr></table></body></html>

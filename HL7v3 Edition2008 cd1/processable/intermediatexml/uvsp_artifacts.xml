@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<spec id="POSP_DO000000UV-ic" type="dependencyTree" sectionCode="UVSP">
+   <header>
+      <title> Specimen Domain Dependency Annex
+				</title>
+      <version>V 00-00</version>
+      <ballot type="NormativeStandard" number="1"/>
+      <date>6/31/2008</date>
+      <legalese copyRightDate="2008"/>
+   </header>
+   <body>
+      <div1 id="all-sortOrder">
+         <head> Specimen Domain in Structured Sort Order</head>
+         <artree role="ssn">
+            <artreeitem>
+               <stref id="d0e22299" role="tree-intro" sectID="UVSP" sectType="SB" refName="Domain: Specimen Domain" refFamiliarName="Domain: Specimen Domain" refIdentifier="POSP_DO000000UV"/>
+               <artreeitem>
+                  <rmimref id="treeRef-POSP_DM000000UV" role="tree-element" sectID="UVSP" sectType="SB" refName="Specimen" refFamiliarName="Specimen" refIdentifier="POSP_DM000000UV"/>
+               </artreeitem>
+            </artreeitem>
+         </artree>
+      </div1>
+      <div1 id="all-codeOrder">
+         <head> Specimen Domain in Artifact Code Order</head>
+         <artree role="code">
+            <artreeitem>
+               <stref id="d0e22299" role="tree-intro" sectID="UVSP" sectType="SB" refName="Domain: Specimen Domain" refFamiliarName="Domain: Specimen Domain" refIdentifier="POSP_DO000000UV"/>
+               <artreeitem>
+                  <rmimref id="treeRef-POSP_DM000000UV" role="tree-element" sectID="UVSP" sectType="SB" refName="Specimen" refFamiliarName="Specimen" refIdentifier="POSP_DM000000UV"/>
+               </artreeitem>
+            </artreeitem>
+         </artree>
+      </div1>
+      <div1 id="all-nameOrder">
+         <head> Specimen Domain in Name Order</head>
+         <artree role="name">
+            <artreeitem>
+               <stref id="d0e22299" role="tree-intro" sectID="UVSP" sectType="SB" refName="Domain: Specimen Domain" refFamiliarName="Domain: Specimen Domain" refIdentifier="POSP_DO000000UV"/>
+               <artreeitem>
+                  <rmimref id="treeRef-POSP_DM000000UV" role="tree-element" sectID="UVSP" sectType="SB" refName="Specimen" refFamiliarName="Specimen" refIdentifier="POSP_DM000000UV"/>
+               </artreeitem>
+            </artreeitem>
+         </artree>
+      </div1>
+   </body>
+</spec>

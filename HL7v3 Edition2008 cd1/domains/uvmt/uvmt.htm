@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <link rel="stylesheet" type="text/css" href="../../support/css/v3m.css" title="v3m" /><script src="../../support/js/tree.js" type="text/javascript"></script><script src="../../support/js/setTopFrameText.js" type="text/javascript"></script><script src="../../support/js/swapcss.js" type="text/javascript"></script><script type="text/javascript">
+			if (find('heading')) setHeadingTextFromFileName(document.location.href);
+			</script><title>Domain: Shared  Messages</title>
+   </head>
+   <body>
+      <div class="section">
+         <h1>Domain: Shared  Messages</h1>
+         <table cellspacing="0" cellpadding="3" border="1">
+            <tr>
+               <td align="center"><img src="../../support/graphics/ansilogo.gif" alt="ANSI" /><br />ANSI/HL7 V3 COMT, R2-2005<br />HL7 Version 3 Standard: Shared Messages, Release 2<br />8/11/2005<img width="5" alt="spacer" src="../../support/graphics/spacer.gif" /></td>
+            </tr>
+         </table>
+         <table style="border-width:0" width="100%" cellpadding="6">
+            <tr>
+               <td valign="top" align="left">Control Query Co-Chair</td>
+               <td valign="top" align="left">Graham Grieve<br />Kestral Computing Pty Ltd.
+               </td>
+            </tr>
+            <tr>
+               <td valign="top" align="left">Control Query Co-Chair</td>
+               <td valign="top" align="left">Mike Henderson<br />Eastern Informatics
+               </td>
+            </tr>
+            <tr>
+               <td valign="top" align="left">Control Query Co-Chair</td>
+               <td valign="top" align="left">Joann Larson<br />Kaiser Permanente
+               </td>
+            </tr>
+            <tr>
+               <td valign="top" align="left">Control Query Co-Chair</td>
+               <td valign="top" align="left">Jennifer Puyenbroek<br />McKesson Information Solutions
+               </td>
+            </tr>
+            <tr>
+               <td valign="top" align="left">Control Query Co-Chair</td>
+               <td valign="top" align="left">Rene Spronk<br />Ringholm GmbH
+               </td>
+            </tr>
+         </table>
+         <p class="copyright">Last Published: 06/23/2008 2:00 PM</p>
+         <p class="lastEdit">Content Last Edited: 6/20/2005 7:00:42 PM</p>
+         <p class="copyright">HL7® Version 3 Standard, © 2008 Health 
+            Level Seven®, Inc.  All Rights Reserved.
+         </p>
+         <p class="copyright">HL7 and Health Level Seven are registered 
+            trademarks of Health Level Seven, Inc.  Reg. U.S. Pat &amp; TM Off
+         </p>
+         <hr title="Separator for header" />
+         <h2><a name="contents">Table of Contents</a></h2><br /><a href="#prefBegin">Preface</a><br /><span>    i  <a href="UVMT.htm#prefNotes">Notes to Readers</a><br /></span><span>    ii  <a href="UVMT.htm#navigate-divs">Message Design Element Navigation</a><br /></span>1  <a href="UVMT.htm#intro-COMT_DO000000UV-ic">Overview</a><br />    1.1  <a href="UVMT.htm#spec-scope">Introduction &amp; Scope</a><br />
+         			    1.2  <a href="UVMT.htm#dmims-COMT_DO000000UV-ic">Domain Message Information Models</a><br />2.  <a href="UVMT_ActStatus.htm#COMT_DO000000UV-ActStatus-ic">Act Status Topic</a><br /><span>    2.1  <a href="UVMT_ActStatus.htm#sbs-COMT_DO000000UV-ActStatus-ic">Storyboards</a><br /></span><span>    2.2  <a href="UVMT_ActStatus.htm#roles-COMT_DO000000UV-ActStatus-ic">Application Roles</a><br /></span><span>    2.3  <a href="UVMT_ActStatus.htm#tes-COMT_DO000000UV-ActStatus-ic">Trigger Events</a><br /></span><span>    2.4  <a href="UVMT_ActStatus.htm#rmims-COMT_DO000000UV-ActStatus-ic">Refined Message Information Models</a><br /></span><span>    2.5  <a href="UVMT_ActStatus.htm#hmds-COMT_DO000000UV-ActStatus-ic">Hierarchical Message Descriptions</a><br /></span><span>    2.6  <a href="UVMT_ActStatus.htm#ints-COMT_DO000000UV-ActStatus-ic">Interactions</a><br /></span>3.  <a href="UVMT_ActReference.htm#COMT_DO000000UV-ActReference-ic">Act Reference Topic</a><br /><span>    3.1  <a href="UVMT_ActReference.htm#sbs-COMT_DO000000UV-ActReference-ic">Storyboards</a><br /></span><span>    3.2  <a href="UVMT_ActReference.htm#roles-COMT_DO000000UV-ActReference-ic">Application Roles</a><br /></span><span>    3.3  <a href="UVMT_ActReference.htm#tes-COMT_DO000000UV-ActReference-ic">Trigger Events</a><br /></span><span>    3.4  <a href="UVMT_ActReference.htm#rmims-COMT_DO000000UV-ActReference-ic">Refined Message Information Models</a><br /></span><span>    3.5  <a href="UVMT_ActReference.htm#hmds-COMT_DO000000UV-ActReference-ic">Hierarchical Message Descriptions</a><br /></span><span>    3.6  <a href="UVMT_ActReference.htm#ints-COMT_DO000000UV-ActReference-ic">Interactions</a><br /></span>4.  <a href="UVMT_DO_CT.htm#COMT_DO000000UV-ic">Common Message Elements Annex<br /></a>
+         		    4.1  <a href="UVMT_DO_CT.htm#COMT_DO000000UV-icc2id">CMETs Used In This Domain</a><br />5.  <a href="UVMT_DO_XX.htm#indx-COMT_DO000000UV-ic">Interaction Annex</a><br />
+         		    5.1  <a href="UVMT_DO_XX.htm#COMT_DO000000UV-ic1id">By Application Role</a><br />
+         		    5.2  <a href="UVMT_DO_XX.htm#COMT_DO000000UV-ic2id">By Trigger Event</a><br />
+         		    5.3  <a href="UVMT_DO_XX.htm#COMT_DO000000UV-ic3id">By Message Type</a><br />6.  <a href="uvmt_glossary.htm#">Glossary</a><br /><div class="body">
+            <div class="subSection">
+               <div class="header">
+                  <h3><a name="prefBegin">Preface</a></h3>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">i </span><span class="title"><a name="prefNotes">Notes to Readers</a></span></div>
+               <div class="body">
+                  <p>Shared Messages, <strong>Version 3, Release 2</strong> added support for <strong>queries </strong>and <strong>master files / registries </strong>to the Version 3, Release 1 material. 
+                  </p>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">ii </span><span class="title"><a name="navigate-divs">Message Design Element Navigation</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e68" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong>Act Status Find Act Status Query&nbsp;<a href="../../domains/uvmt/uvmt_ActStatus.htm#QUMT_RM020010UV01-rmi" class="toc_link">QUMT_RM020010UV01</a></strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td class="toc_indent_flag_gap"> </td>
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                                       <tr id="d0e70" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                          <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong>Act Status Query&nbsp;<a href="../../domains/uvmt/uvmt_ActStatus.htm#QUMT_HD020010UV01-hmd" class="toc_link">QUMT_HD020010UV01</a></strong></span></td>
+                                       </tr>
+                                       <tr class="toc_row_master">
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td valign="top">
+                                             <table cellpadding="0" cellspacing="0" style="border:0px">
+                                                <tr>
+                                                   <td>
+                                                      <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                         <tr>
+                                                            <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                            <td valign="top" align="left" class="general">Act Status Query&nbsp;<a href="../../domains/uvmt/uvmt_ActStatus.htm#QUMT_MT020010UV01-msg" class="">QUMT_MT020010UV01</a></td>
+                                                         </tr>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e74" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong>Act Status Generic&nbsp;<a href="../../domains/uvmt/uvmt_ActStatus.htm#COMT_RM001000UV01-rmi" class="toc_link">COMT_RM001000UV01</a></strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td class="toc_indent_flag_gap"> </td>
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                                       <tr id="d0e76" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                          <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong>Act Generic Status&nbsp;<a href="../../domains/uvmt/uvmt_ActStatus.htm#COMT_HD001100UV01-hmd" class="toc_link">COMT_HD001100UV01</a></strong></span></td>
+                                       </tr>
+                                       <tr class="toc_row_master">
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td valign="top">
+                                             <table cellpadding="0" cellspacing="0" style="border:0px">
+                                                <tr>
+                                                   <td>
+                                                      <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                         <tr>
+                                                            <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                            <td valign="top" align="left" class="general">Act Generic Status - Order&nbsp;<a href="../../domains/uvmt/uvmt_ActStatus.htm#COMT_MT001101UV01-msg" class="">COMT_MT001101UV01</a></td>
+                                                         </tr>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                             <table cellpadding="0" cellspacing="0" style="border:0px">
+                                                <tr>
+                                                   <td>
+                                                      <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                         <tr>
+                                                            <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                            <td valign="top" align="left" class="general">Act Generic Status - Intent&nbsp;<a href="../../domains/uvmt/uvmt_ActStatus.htm#COMT_MT001102UV01-msg" class="">COMT_MT001102UV01</a></td>
+                                                         </tr>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                             <table cellpadding="0" cellspacing="0" style="border:0px">
+                                                <tr>
+                                                   <td>
+                                                      <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                         <tr>
+                                                            <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                            <td valign="top" align="left" class="general">Act Generic Status - Event&nbsp;<a href="../../domains/uvmt/uvmt_ActStatus.htm#COMT_MT001103UV01-msg" class="">COMT_MT001103UV01</a></td>
+                                                         </tr>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e84" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong>Act Reference&nbsp;<a href="../../domains/uvmt/uvmt_ActReference.htm#MFMT_RM002000UV01-rmi" class="toc_link">MFMT_RM002000UV01</a></strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td class="toc_indent_flag_gap"> </td>
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                                       <tr id="d0e86" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                          <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong>Act Reference&nbsp;<a href="../../domains/uvmt/uvmt_ActReference.htm#MFMT_HD002000UV01-hmd" class="toc_link">MFMT_HD002000UV01</a></strong></span></td>
+                                       </tr>
+                                       <tr class="toc_row_master">
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td valign="top">
+                                             <table cellpadding="0" cellspacing="0" style="border:0px">
+                                                <tr>
+                                                   <td>
+                                                      <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                         <tr>
+                                                            <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                            <td valign="top" align="left" class="general">Act Reference Optional Participations&nbsp;<a href="../../domains/uvmt/uvmt_ActReference.htm#MFMT_MT002001UV01-msg" class="">MFMT_MT002001UV01</a></td>
+                                                         </tr>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                             <table cellpadding="0" cellspacing="0" style="border:0px">
+                                                <tr>
+                                                   <td>
+                                                      <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                         <tr>
+                                                            <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                            <td valign="top" align="left" class="general">Act Reference Required Participations&nbsp;<a href="../../domains/uvmt/uvmt_ActReference.htm#MFMT_MT002002UV01-msg" class="">MFMT_MT002002UV01</a></td>
+                                                         </tr>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e92" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong>Act Reference Registry Find Acts Query&nbsp;<a href="../../domains/uvmt/uvmt_ActReference.htm#QUMT_RM020020UV01-rmi" class="toc_link">QUMT_RM020020UV01</a></strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td class="toc_indent_flag_gap"> </td>
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                                       <tr id="d0e94" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                          <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong>Act Reference Registry Find Acts&nbsp;<a href="../../domains/uvmt/uvmt_ActReference.htm#QUMT_HD020020UV01-hmd" class="toc_link">QUMT_HD020020UV01</a></strong></span></td>
+                                       </tr>
+                                       <tr class="toc_row_master">
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td valign="top">
+                                             <table cellpadding="0" cellspacing="0" style="border:0px">
+                                                <tr>
+                                                   <td>
+                                                      <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                         <tr>
+                                                            <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                            <td valign="top" align="left" class="general">Act Reference Registry Find Acts&nbsp;<a href="../../domains/uvmt/uvmt_ActReference.htm#QUMT_MT020020UV01-msg" class="">QUMT_MT020020UV01</a></td>
+                                                         </tr>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table><br /></div>
+            </div>
+            <hr title="Separator from body" />
+            <div class="subSection">
+               <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">1 </span><span class="title"><a name="intro-COMT_DO000000UV-ic">Overview</a></span></div>
+               <div class="body">
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number">1.1 </span><span class="title"><a name="spec-scope">Introduction &amp; Scope</a></span></div>
+                     <div class="body">
+                        <p><strong>Introduction</strong></p>
+                        <p>Shared Messages are a work product produced for expressing common, useful and reusable message types. A Shared Message can
+                           be envisioned as a message type that is reusable in interactions in any of the domains within the HL7 standard.   
+                        </p>
+                        <p><strong>Scope</strong></p>
+                        <p>The scope of the Shared Messages Domain includes message types shared by all the clinical domains. The domain model consists
+                           of a minimalistic Act payload used to convey generic information related to an Act and its associated classes. Although CMET
+                           terminology does not apply to Message Types, the Common Messages domain model can be thought of as an<em> Act CMET [minimal]</em>.    
+                        </p>
+                        <p>The Act in the Shared Message DMIM can be thought of as a reference to, or as a summary version of, an act. This includes
+                           use-cases such as the notification of a status change of an act, the sending of application level accept/reject messages,
+                           the registration of acts in repositories, and responding to Act-related queries.
+                        </p>
+                        <p><strong>Note: </strong>The Shared Messages domain will include storyboards, application roles, trigger events, interactions, and message types shared
+                           by any of the healthcare domains.  Some of these will be for example purposes only. The examples will not be used in their
+                           own right but as a reusable payload in various domains.  When used in this fashion, the message is transmitted as a result
+                           of a domain interaction and between two domain application roles.   Artifacts will be documented as to whether they are examples
+                           or can be used in their own right.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">1.2</span><span class="title"><a name="dmims-COMT_DO000000UV-ic">Domain Message Information Models</a></span><hr class="sectionrule" />
+               </div>
+               <div class="body">
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number"></span><span class="title"><a name="COMT_DM000001UV-rmi">Shared Interactions Domain Model  (COMT_DM000001UV) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/COMT_DM000001UV.htm" target="_blank"><img class="graphic" src="editable/images/T-COMT_DM000001UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><p></p>
+                        <div class="heading">Description</div>
+                        <p>The Act Generic Reference is used to convey generic information related to an Act and its associated classes. This is used
+                           for messages which adjust the status of an Act, by application level acknowledgement accept/reject messages, by act registry
+                           messages, and by act-related query response messages.  Refer to the the R-MIM walkthroughs for clarification for details on
+                           these uses.
+                        </p>
+                        <p><strong>Note to Technical Committees</strong>: Technical committees  can either use one of  the shared messages as defined in this domain, or create a new R-MIM based
+                           on the D-MIM contained in this domain.
+                        </p>
+                        <div class="heading"><br /><b class="heading">Design Walk-through</b></div>
+                        <p>The base class of the D-MIM is <strong>ActGenericReference</strong> based on the Act class. Refer to the R-MIM walkthrough for the clone name used for derived messages from that R-MIM.  This
+                           class and its associations contain generic information, which is why the descriptions below are generic in nature.
+                        </p>
+                        <p><strong>Note</strong>: The reason for this interaction is identified in the Trigger Event Control Act. 
+                        </p>
+                        <p>The following <strong>attributes</strong> are contained in the ActGenericReference act: 	
+                        </p>
+                        <ul>
+                           <li>
+                              <p><strong>classCode:</strong> A code specifying the class or category of Acts that the specific Act represents (required)
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>moodCode:</strong> Specifies whether the Act is an activity that has happened, can happen, is happening, is intended to happen, or is requested/demanded
+                                 to happen (required)
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>id:</strong> A unique identifier for the Act (required)
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>code:</strong> A code specifying which particular kind of Act that the Act represents within its class.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>text:</strong> The text attribute can be used to convey a textual or multimedia description of the Act. 
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>statusCode:</strong> A code specifying the state of the Act
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>effectiveTime: </strong>The data and time the act occurred; the clinically relevant date and time.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>activityTime:</strong> The date and time the act occurred; the date and time relevant for administrative purposes, scheduling or billing.   
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>confidentialityCode:</strong> A code that controls the disclosure of information about this Act, regardless of mood.
+                              </p>
+                           </li>
+                        </ul>
+                        <p>The following <strong>associations</strong> are defined for the ActGenericReference class:
+                        </p>
+                        <ul>
+                           <li>
+                              <p><strong>authorOrPerformer:</strong> There are zero to many parties recorded as author or performer for the act. The author of any act is the person who takes
+                                 responsibility for its creation. In some cases, it is desirable to indicate a performer as well as an author, for an act.
+                                 The performer is the party who actually performs the act. At the same time, while it is generally assumed that only a single
+                                 author is allowed, many performers can be specified. The authors or performers identified via this participation are the authors/performers
+                                 of the act that is effected by the status change; not the authors/performers of the status update request. <strong>Note</strong>: The authors/performers of the status update request are identified by means of the authorOrPerformer participation associated
+                                 with the Trigger Event Control Act.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>recordTarget:</strong> Indicates the patient(s) whose medical record(s) holds the documentation of the ActGenericStatus act.  This is especially
+                                 important when the subject of a service is an assoicated patient. 
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>overseer:</strong> There are zero to many overseers for the act. In some cases but by no means all, it is relevant to record information about
+                                 a person who oversees the work of the acts author or performer. This is particularly relevant in instructional situations.
+                                 It is possible, but unlikely for there to be many parties acting as overseer. The overseers identified via this participation
+                                 are the overseers of the act that is effected by the status change; not the overseers of the status update request. <strong>Note</strong>: The overseers of the status update request are identified by means of the overseer participation associated with the Trigger
+                                 Event Control Act.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>dataEnterer:</strong> If relevant, the party who enters data associated with the act may be recorded. It is possible for multiple parties to provide
+                                 data entry. The data enterers identified via this participation are the data enterers of the act that is effected by the status
+                                 change; not the data enterers of the status update request.  <strong>Note</strong>: The data enterers of the status update request are identified by means of the dataEnterer participation associated with
+                                 the Trigger Event Control Act.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>componentOf:</strong> Identifies the encounter to which this pertains. 
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>definition:</strong> Defines the service. Example: contains an identification of the service taken from a service catalog.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>inFulfillmentOf:</strong> Identifies zero or more Acts that are fulfilled by the focal Act of this message. In most cases the Act that is fulfilled
+                                 will be an order, a promise or an appointment.  <strong>Example</strong>: a lab result fullfills both the lab order as well as the lab promise acts.
+                              </p>
+                           </li>
+                        </ul>
+                        <p><strong>Other Classes:</strong></p>
+                        <ul>
+                           <li>
+                              <p><strong>ActIntent:</strong> Identifies the Act to which this pertains. Typically this will be used to identify the Request (Order) if the ActGenericReference
+                                 is the Observation related to the request.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>ActDefinition:</strong> Identifies the act by means of a reference to a master file record. Typically this will be used to identify a specific service
+                                 (e.g., diagnostic/laboratory test, medication, procedure).
+                              </p>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <p>
+               <table>
+                  <tbody>
+                     <tr>
+                        <td><a class="custombutton" href="#top">Return to top of page</a></td>
+                     </tr>
+                  </tbody>
+               </table>
+            </p>
+         </div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <link rel="stylesheet" type="text/css" href="../../support/css/v3m.css" title="v3m" /><script src="../../support/js/tree.js" type="text/javascript"></script><script src="../../support/js/setTopFrameText.js" type="text/javascript"></script><script src="../../support/js/swapcss.js" type="text/javascript"></script><script type="text/javascript">
+			if (find('heading')) setHeadingTextFromFileName(document.location.href);
+			</script><title>Domain: Scheduling</title>
+   </head>
+   <body>
+      <div class="section">
+         <h1>Domain: Scheduling</h1>
+         <table cellspacing="0" cellpadding="3" border="1">
+            <tr>
+               <td align="center"><img src="../../support/graphics/ansilogo.gif" alt="ANSI" /><br />ANSI/HL7 V3 SC, R1-2003<br />HL7 Version 3 Standard: Scheduling, Release 1<br />12/17/2003<img width="5" alt="spacer" src="../../support/graphics/spacer.gif" /></td>
+            </tr>
+         </table>
+         <table style="border-width:0" width="100%" cellpadding="6">
+            <tr>
+               <td valign="top" align="left">Scheduling &amp; Logistics Co-Chair</td>
+               <td valign="top" align="left">Anita Benson<br />Datascene
+               </td>
+            </tr>
+            <tr>
+               <td valign="top" align="left">Primary Contributor</td>
+               <td valign="top" align="left">Tom de Jong<br />ChipSoft B.V.
+               </td>
+            </tr>
+            <tr>
+               <td valign="top" align="left">Scheduling &amp; Logistics Co-Chair</td>
+               <td valign="top" align="left">Jane Foard<br />McKesson Information Solutions
+               </td>
+            </tr>
+            <tr>
+               <td valign="top" align="left">Primary Contributor</td>
+               <td valign="top" align="left">Melvin Reynolds<br />AMS Consulting
+               </td>
+            </tr>
+         </table>
+         <p class="copyright">Last Published: 06/23/2008 2:32 PM</p>
+         <p class="lastEdit">Content Last Edited: 6/5/2008 5:23:04 PM</p>
+         <p class="copyright">HL7® Version 3 Standard, © 2008 Health 
+            Level Seven®, Inc.  All Rights Reserved.
+         </p>
+         <p class="copyright">HL7 and Health Level Seven are registered 
+            trademarks of Health Level Seven, Inc.  Reg. U.S. Pat &amp; TM Off
+         </p>
+         <hr title="Separator for header" />
+         <h2><a name="contents">Table of Contents</a></h2><br /><a href="#prefBegin">Preface</a><br /><span>    i  <a href="UVSC.htm#prefNotes">Notes to Readers</a><br /></span><span>    ii  <a href="UVSC.htm#prefAck">Acknowledgements</a><br /></span><span>    iii  <a href="UVSC.htm#prefAssump">Prerequisites, Assumptions &amp; Conventions</a><br /></span><span>    iv  <a href="UVSC.htm#prefIssue">Known Issues &amp; Planned Changes</a><br /></span><span>    v  <a href="UVSC.htm#navigate-divs">Message Design Element Navigation</a><br /></span>1  <a href="UVSC.htm#intro-PRSC_DO000002UV-ic">Overview</a><br />    1.1  <a href="UVSC.htm#spec-scope">Introduction &amp; Scope</a><br />
+         			    1.2  <a href="UVSC.htm#dmims-PRSC_DO000002UV-ic">Domain Message Information Models</a><br />
+         			    1.3 
+         			<a href="UVSC.htm#dlsbs-PRSC_DO000002UV-ic">Storyboards</a><br />2.  <a href="UVSC_Appointment.htm#PRSC_DO000002UV-Appointment-ic">Appointment Topic</a><br /><span>    2.1  <a href="UVSC_Appointment.htm#sbs-PRSC_DO000002UV-Appointment-ic">Storyboards</a><br /></span><span>    2.2  <a href="UVSC_Appointment.htm#roles-PRSC_DO000002UV-Appointment-ic">Application Roles</a><br /></span><span>    2.3  <a href="UVSC_Appointment.htm#tes-PRSC_DO000002UV-Appointment-ic">Trigger Events</a><br /></span><span>    2.4  <a href="UVSC_Appointment.htm#rmims-PRSC_DO000002UV-Appointment-ic">Refined Message Information Models</a><br /></span><span>    2.5  <a href="UVSC_Appointment.htm#hmds-PRSC_DO000002UV-Appointment-ic">Hierarchical Message Descriptions</a><br /></span><span>    2.6  <a href="UVSC_Appointment.htm#ints-PRSC_DO000002UV-Appointment-ic">Interactions</a><br /></span>3.  <a href="UVSC_do_cmets.htm#">CMETs Defined by this Domain
+            			</a><br />4.  <a href="UVSC_DO_CT.htm#PRSC_DO000002UV-ic">Common Message Elements Annex<br /></a>
+         		    4.1  <a href="UVSC_DO_CT.htm#PRSC_DO000002UV-icc2id">CMETs Used In This Domain</a><br />5.  <a href="UVSC_DO_XX.htm#indx-PRSC_DO000002UV-ic">Interaction Annex</a><br />
+         		    5.1  <a href="UVSC_DO_XX.htm#PRSC_DO000002UV-ic1id">By Application Role</a><br />
+         		    5.2  <a href="UVSC_DO_XX.htm#PRSC_DO000002UV-ic2id">By Trigger Event</a><br />
+         		    5.3  <a href="UVSC_DO_XX.htm#PRSC_DO000002UV-ic3id">By Message Type</a><br />6.  <a href="uvsc_glossary.htm#">Glossary</a><br /><div class="body">
+            <div class="subSection">
+               <div class="header">
+                  <h3><a name="prefBegin">Preface</a></h3>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">i </span><span class="title"><a name="prefNotes">Notes to Readers</a></span></div>
+               <div class="body">
+                  <p>This first release of Scheduling supports the simple scenario of a scheduling application sending basic notifications to an
+                     auxiliary application.  The intent is to establish a standard for the minimum functionaity that is useful and comprehensive
+                     enough to explore the important concepts.  This miimum functionality is notifications of new appointments, revised appontments,
+                     cancelled appointments, and rescheduled appointments.  Later releases will build upon this basic set of interactins to include
+                     requests and queries.  In addition to appointments, Scheduling also includes the concepts of resource time slots. Slots will
+                     also be supported in later releases.
+                  </p>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">ii </span><span class="title"><a name="prefAck">Acknowledgements</a></span></div>
+               <div class="body">
+                  <p>In addition to the authors, the Scheudling and Logistics Techinical Committee would like to thank Dave McDowell of Chartlinks
+                     for his cotributions in the early days and later the helpful comments from the VA and Oracle.
+                  </p>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">iii </span><span class="title"><a name="prefAssump">Prerequisites, Assumptions &amp; Conventions</a></span></div>
+               <div class="body">
+                  <p>The following prerequisites, assumptions, and conventions apply to this first release of Scheduling.</p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number">iii - a </span><span class="title"><a name="prefPrereq">Prerequisites</a></span></div>
+                     <div class="body">
+                        <p>A Scheduling message can specify individual resources associated with an appointment.  A prerequisite for exchanging messages
+                           about resources is a synchronized catalog of locations, equipment, supply items, and staff.  These resources can be identified
+                           by ID, name or type.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number">iii - b </span><span class="title"><a name="prefAssumpts">Assumtions</a></span></div>
+                     <div class="body">
+                        <p>Scheduling messages are genereic and can be used to schedule any type of activity.  The basic assumption behind Scheduling
+                           messages is that these messages can be customized.  Therefore, the class code and Act.code for the Appointment is not constrained.
+                           The assumption is that they will be specified during implementation or at run time according to the type of activity being
+                           scheduled.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number">iii - c </span><span class="title"><a name="prefConven">Conventions</a></span></div>
+                     <div class="body">
+                        <p>There are some conventions used by Scheduling that are slightly different from other domains.  Since Scheduling is active
+                           before the actual service is performed, some of the prototypical state and transition names are misleading when used within
+                           the Scheduing context.  Therefore, Scheduling follows the convention of using New rather than Activate to indicate that a
+                           new appointment has been booked.  Also, Scheduling uses Cancel rather than Abort to indicate that an appoiintment is no longer
+                           booked.
+                        </p>
+                        <p>In addition to naming conventions, revising the time of an appointment is a frequent and special case of appointment revisions.
+                           For this reason, there is a separate trigger event and interaction for Reschedule Appointment in addition to Revise Appointment.
+                        </p>
+                        <p>Another convention is the use of the participation effective times to indicate when a resource is needed before or after the
+                           actual Appointment time.  In other domain messages, activity time may be used for this purpose.  The effective time in the
+                           Appointment is the default and usually, the patient's time.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">iv </span><span class="title"><a name="prefIssue">Known Issues &amp; Planned Changes</a></span></div>
+               <div class="body">
+                  <p>There are two known issues that have been discovered since Release 1 was finalized.  The first is the timing of participations
+                     in the Reschedule Appointment message.  Since each participation may have a different effective time from the effective time
+                     of the Appointment, the Reschedule message must contain these participation times also.  The second issue is the lack of a
+                     Supply Order ID.  These issues are easily remedied without viololating backwards compatibility and will be part of Release
+                     2. 
+                  </p>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">v </span><span class="title"><a name="navigate-divs">Message Design Element Navigation</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e86" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong>Full Appointment RMIM&nbsp;<a href="../../domains/uvsc/uvsc_Appointment.htm#PRSC_RM010000UV01-rmi" class="toc_link">PRSC_RM010000UV01</a></strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td class="toc_indent_flag_gap"> </td>
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                                       <tr id="d0e88" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                          <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong>New Appointment&nbsp;<a href="../../domains/uvsc/uvsc_Appointment.htm#PRSC_HD010100UV01-hmd" class="toc_link">PRSC_HD010100UV01</a></strong></span></td>
+                                       </tr>
+                                       <tr class="toc_row_master">
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td valign="top">
+                                             <table cellpadding="0" cellspacing="0" style="border:0px">
+                                                <tr>
+                                                   <td>
+                                                      <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                         <tr>
+                                                            <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                            <td valign="top" align="left" class="general">New Appointment Notification&nbsp;<a href="../../domains/uvsc/uvsc_Appointment.htm#PRSC_MT010101UV01-msg" class="">PRSC_MT010101UV01</a></td>
+                                                         </tr>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                                       <tr id="d0e92" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                          <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong>Revise Appointment&nbsp;<a href="../../domains/uvsc/uvsc_Appointment.htm#PRSC_HD010200UV01-hmd" class="toc_link">PRSC_HD010200UV01</a></strong></span></td>
+                                       </tr>
+                                       <tr class="toc_row_master">
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td valign="top">
+                                             <table cellpadding="0" cellspacing="0" style="border:0px">
+                                                <tr>
+                                                   <td>
+                                                      <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                         <tr>
+                                                            <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                            <td valign="top" align="left" class="general">Revise Appointment Notification&nbsp;<a href="../../domains/uvsc/uvsc_Appointment.htm#PRSC_MT010201UV01-msg" class="">PRSC_MT010201UV01</a></td>
+                                                         </tr>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e96" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong>Minimum Appointment RMIM&nbsp;<a href="../../domains/uvsc/uvsc_Appointment.htm#PRSC_RM020000UV01-rmi" class="toc_link">PRSC_RM020000UV01</a></strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td class="toc_indent_flag_gap"> </td>
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                                       <tr id="d0e98" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                          <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong>Cancel Appointment&nbsp;<a href="../../domains/uvsc/uvsc_Appointment.htm#PRSC_HD020100UV01-hmd" class="toc_link">PRSC_HD020100UV01</a></strong></span></td>
+                                       </tr>
+                                       <tr class="toc_row_master">
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td valign="top">
+                                             <table cellpadding="0" cellspacing="0" style="border:0px">
+                                                <tr>
+                                                   <td>
+                                                      <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                         <tr>
+                                                            <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                            <td valign="top" align="left" class="general">Cancel Appointment Notification&nbsp;<a href="../../domains/uvsc/uvsc_Appointment.htm#PRSC_MT020101UV01-msg" class="">PRSC_MT020101UV01</a></td>
+                                                         </tr>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                                       <tr id="d0e102" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                          <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong>Reschedule Appointment&nbsp;<a href="../../domains/uvsc/uvsc_Appointment.htm#PRSC_HD020200UV01-hmd" class="toc_link">PRSC_HD020200UV01</a></strong></span></td>
+                                       </tr>
+                                       <tr class="toc_row_master">
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td valign="top">
+                                             <table cellpadding="0" cellspacing="0" style="border:0px">
+                                                <tr>
+                                                   <td>
+                                                      <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                         <tr>
+                                                            <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                            <td valign="top" align="left" class="general">Reschedule Appointment Notification&nbsp;<a href="../../domains/uvsc/uvsc_Appointment.htm#PRSC_MT020201UV01-msg" class="">PRSC_MT020201UV01</a></td>
+                                                         </tr>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table><br /></div>
+            </div>
+            <hr title="Separator from body" />
+            <div class="subSection">
+               <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">1 </span><span class="title"><a name="intro-PRSC_DO000002UV-ic">Overview</a></span></div>
+               <div class="body">
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number">1.1 </span><span class="title"><a name="spec-scope">Introduction &amp; Scope</a></span></div>
+                     <div class="body">
+                        <p>In Version 3, Scheduling is both a domain and a process.  As a domain, Scheduling offers a generic set of messages and behavior
+                           to implement any number of Scheduling scenarios. As a process, Scheduling offers an abstract data model and a set of operations
+                           to any domain within HL7 that utilizes scheduling concepts.  We can consider Scheduling as a <em>service</em> and the use of that service as an <em>interface</em>.  This release of V3 contains generic scheduling messages that can be implemented by themselves or they can be used as a
+                           pattern for domain-specific messages.
+                        </p>
+                        <p>The scheduling  messages in this section are designed to communicate various events related to the scheduling of generic appointments
+                           for healthcare services.  There are three basic types of interactions defined in the scheduling domain:
+                        </p>
+                        <ul style="margin-left:20px;">
+                           <li>
+                              <p>Request messages and their responses </p>
+                           </li>
+                           <li>
+                              <p>Query messages and their responses, and </p>
+                           </li>
+                           <li>
+                              <p>Unsolicited notifications </p>
+                           </li>
+                        </ul>
+                        <p>Request transactions communicate requests for the scheduling of appointments for healthcare services or for the booking of
+                           resource slots.  These transactions occur between placer (requesting) applications and fulfiller (scheduling) applications.
+                           The query transactions allow any application to query the current schedule of booked and available slots or booked appointments.
+                           Unsolicited transactions provide for the notification of scheduling information between systems.
+                        </p>
+                        <p>For this publication of the HL7 Scheduling standard, we are limiting the scope to four basic appointment notification interactions:
+                           New Appointment, Revise Appointment, Cancel Appointment. and Reschedule Appointment  Future releases will expand the scope
+                           to include additional scenarios, including requests, queries and slot management.
+                        </p>
+                        <p><strong>Scheduling as an Interface to Services</strong></p>
+                        <p>To understand Scheduling as a service, consider the Unified Modeling Language (UML) concept of an interface in the graphic
+                           below.  In object terminology, an <em>interface</em> is a collection of operations that are used to specify a <em>service</em> of a class or component.  In HL7 Version 3, the ActAppointment class is the focus class for all scheduling notification messages.
+                           The initial operations offered by the ActAppointment class are the four interactions listed above.  The domain classes that
+                           might interface to Scheduling are Encounter, Procedure, Observation, etc. as listed along the right-hand side of the graphic.
+                        </p>
+                        <p><br /><img class="graphic" src="graphics/PRSC_NA000003.gif" alt="Scheduling is a Service offered by the generic ActAppointment class." /><br />Scheduling is a Service offered by the generic ActAppointment class.<br /></p>
+                        <p>The interface concept defines a service that is realized by an object through its operations.  These operations are the interactions
+                           listed inside the <em>interface</em> object in the graphic.  
+                        </p>
+                        <p><strong>Definitions and Relationships</strong></p>
+                        <p>In this section, a generic scheduling service is defined using abstract concepts that apply equally well to any scheduling
+                           activity.  While some of the following concepts are not supported in this first release, it is important to understand the
+                           entire Scheduling domain first by reviewing the definitions.  In addition to the Patient, which is defined as elsewhere in
+                           this standard, the following terms have a special meaning within the context of HL7 V3 Scheduling:
+                        </p>
+                        <ul style="margin-left:20px;">
+                           <li>
+                              <p><strong>Schedules</strong> control the allocation of slots to certain services and the use of particular resources.  They consist of a set of open,
+                                 booked, reserved, and blocked slots for one particular service or resource.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>Slots</strong> are identifiable periods of time that can be scheduled. 		
+                              </p>
+                              <ul>
+                                 <li>
+                                    <p><strong>Open slots</strong> are periods of time on a schedule during which a service may occur and/or a resource is available for use.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p><strong>Booked slots</strong> are periods of time on a schedule that have already been reserved.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p><strong>Reserved slots</strong> are periods of time on a schedule that have been tentatively or generally reserved (for example, a block of time set aside
+                                       for new patients)
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p><strong>Blocked slots</strong> on a schedule are periods of time during which a service or resource is unavailable for reasons other than booked appointments
+                                       (for example, a piece of equipment may be unavailable for maintenance reasons).
+                                    </p>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li>
+                              <p><strong>Appointments</strong> occupy sets of one or more booked slots on a schedule.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>Repeating appointments</strong> are repetitions of the same appointment occurring at later slots but sharing the same patient, service and resource characteristics
+                                 as the first appointment in the repeating series.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>Services</strong> are real-world events, such as clinic appointments, the performance of which is controlled by a schedule. 
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>Resources</strong> are tangible items whose use is controlled by a schedule.  These items are often people, locations, or things low in supply
+                                 but high in demand.
+                              </p>
+                           </li>
+                        </ul>
+                        <p>This Scheduling standard supports both closely and loosely-coupled systems.  In general, closely-coupled systems will need
+                           to exchange slot information frequently in order to stay synchronized, while more loosely-coupled systems can exchange appointment
+                           information without needing to be constantly synchronized.  The Patient can be identified with an ID or by name and the resources
+                           can be specified by ID or by type.
+                        </p>
+                        <p><strong>Application Roles</strong></p>
+                        <p>Many application roles have been identified within the scheduling process.  Shown below are the definitions of these application
+                           roles.  For this publication of the HL7 Scheduling standard, all application roles are not supported due to the limited scope.
+                           It is important to note that a scheduling application can fulfill multiple roles.  For example, the application can be both
+                           an informer of an appointment as well as a requestor for an appointment from another application.  .
+                        </p>
+                        <ul style="margin-left:20px;">
+                           <li>
+                              <p><strong>Appointment Informer</strong> - In this role, the application notifies a tracking system that an appointment has been booked or modified in some way.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>Appointment Tracker</strong> - In this role the application is only a receiver of scheduling information.  In other words, the application does not generate
+                                 any messages, but receives notifications.
+                              </p>
+                           </li>
+                        </ul>
+                        <p>The following application roles are planned for future releases:</p>
+                        <ul style="margin-left:20px;">
+                           <li>
+                              <p><strong>Slot Requester</strong> - In a tightly-coupled environment where applications share knowledge about slots, the requesting application can request
+                                 booking by slots.  In this application role, a system can request a new appointment, modify an appointment, or request slot
+                                 status changes.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>Slot Request Responder</strong> - In this role, the owner of the schedule or an intermediary responds to a request to book an appointment by specific slots.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>Slot Informer</strong> - In the role of Slot Notifier, the owner of the schedule or an intermediary sends out unsolicited notifications about changes
+                                 in slot status information.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>Slot Tracker</strong> - In this role, the application is receiviing unsolicited information about slots.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>Appointment Requestor</strong> - In this role, the application requests a new appointment or modifications to an existing appointment from the request responder.
+                                 Usually, the request responder is the owner of the schedule.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>Appointment Request Responder</strong> - The schedule owner or an intermediary responds to a request from another application.  For example, another application
+                                 sends an appointment request and the request responder returns with a confirmed appointment or a denial.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>Appointment Inquirer</strong> - In this role, the application makes inquires to the schedule owner application.  For example, it inquires for a list of
+                                 all patients booked from 8 AM till 5 PM, for hearing examinations.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>Appointment Query Responder</strong> - In this role,  the schedule owner or intermediary responds to a query submitted by an Appointment Inquirer role.  An example
+                                 of the inquiry responder role is the case where an application requests a list of all booked slots for Dr. Miller and the
+                                 Appointment Query Responder responds with that information.
+                              </p>
+                           </li>
+                        </ul>
+                        <p><strong>Types of Interactions</strong></p>
+                        <p>There are three basic types of interactions in the Scheduling domain:</p>
+                        <ul style="margin-left:20px;">
+                           <li>
+                              <p><strong>Notifications</strong> are unsolicited messages from an Informer application notifying a Tracking application of changes in the owner's schedule.
+                                 In the case of notifications, the only obligation of the tracker is to acknowledge receipt of the message. 
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>Requests/responses</strong> are the messages and trigger events used between requesting applications and the schedule owner.  The requesting application
+                                 initiates a message requesting that the schedule owner modify its schedule with the given trigger event and information. 
+                                 The schedule owner  responds to these requests to either grant or deny the request and to supply additional details about
+                                 the confirmed request.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>Queries/responses</strong> are the messages and trigger events used between querying applications and schedule owner applications.  Querying applications
+                                 initiate the interaction by sending a query transaction.  The owner or an intermediary then responds to the query with the
+                                 appropriate appointment ot slot information.
+                              </p>
+                           </li>
+                        </ul>
+                        <p>As mentioned above, this first release only supports Notifications for New, Revised, Cancelled, and Rescheduled Appointments..</p>
+                        <p><strong>Relationship Between Order, Appointment and Encounter or Service</strong></p>
+                        <p>An order is what begins the entire scheduling process.  An order may cause one or more requests for the booking of resources.
+                           When the scheduling application receives the request(s), it creates the appointment by booking slot(s) in the schedule associated
+                           with the particular resource.  Now the appointment has been booked.
+                        </p>
+                        <p>In an outpatient scenario, when the patient arrives for an appointment with the physician, the outpatient encounter starts
+                           and the appointment is complete.  If the patient does not arrive, the appointment is marked as a no show.  When the visit
+                           is complete, the encounter is completed.
+                        </p>
+                        <p>In the case of an inpatient visit, where multiple services are required, when the patient arrives at the hospital, the inpatient
+                           encounter is started, but the encounter is not complete until all necessary services have been rendered and the patient is
+                           discharged from the hospital.
+                        </p>
+                        <p>Procedures and observations, as well as other clinical and non-clinical activities may be controlled by a schedule.  In cases
+                           where the target of the scheduling process is a clinical activity, it may be preceded by an order or it may be part of a larger
+                           ordered service.  In either case, the order would precede the appointment request, which in turn, would precede the appointment.
+                           When the service begins, the appointment is complete.
+                        </p>
+                        <p><strong>Scheduling Status Codes Mapped to V3 Act Status Codes</strong></p>
+                        <p>The prototypical status codes for Act.status_cd in the RIM may be interpreted as shown in the following tables:</p>
+                        <p><strong>Appointment Status Code                            RIM Status Codes</strong></p>
+                        <table width="90%" cellspacing="0" cellpadding="5" border="1" style="border-color:blue">
+                           <tbody>
+                              <tr>
+                                 <td>Complete</td>
+                                 <td>Complete</td>
+                              </tr>
+                              <tr>
+                                 <td>Delete</td>
+                                 <td>Nullify</td>
+                              </tr>
+                              <tr>
+                                 <td>Discontinue</td>
+                                 <td>Abort</td>
+                              </tr>
+                              <tr>
+                                 <td>Cancelled</td>
+                                 <td>Abort</td>
+                              </tr>
+                              <tr>
+                                 <td>Booked</td>
+                                 <td>Active</td>
+                              </tr>
+                              <tr>
+                                 <td>To Be Rescheduled</td>
+                                 <td>Hold</td>
+                              </tr>
+                              <tr>
+                                 <td>No Show</td>
+                                 <td>Complete</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <p>In V2, two additional status codes exist:  Pending and Waitlist. The corresponding V3 messages are not included in the scope
+                           of this publication, but will be included in a future V3 release.   The V2 'Pending' filler status code will be equivalent
+                           to the V3 Appointment Request status code of 'Active'.  The V2 Waitlist filler status code will be equivalent to the V3 Appointment
+                           Request status of 'Suspend'.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">1.2</span><span class="title"><a name="dmims-PRSC_DO000002UV-ic">Domain Message Information Models</a></span><hr class="sectionrule" />
+               </div>
+               <div class="body">
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number"></span><span class="title"><a name="PRSC_DM000000UV-rmi">Scheduling Domain Model  (PRSC_DM000000UV) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/PRSC_DM000000UV.htm" target="_blank"><img class="graphic" src="editable/images/T-PRSC_DM000000UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><p></p>
+                        <div class="heading">Description</div>
+                        <p>The Scheduling DMIM has a central focus on the ActAppointment class.  This class represents the activity being scheduled.
+                           It has a mood of APT for Appointment and a class_code of ACT for any kind of Act.  This is a generic appointment and can be
+                           used for any sub-class of Act, including Encounters, Procedures, and Observations, among others.  An appointment can also
+                           be a battery where multiple services are scheduled as a group.  This is accomplished through the recursive act-relationship
+                           of an ActAppointment with itself.
+                        </p>
+                        <p>This generic model represents the arguments of a Scheduling service.  In other words, if a specialization of Act in another
+                           domain wants to realize scheduling services, this abstract model describes the data needed to perform scheduling operations.
+                           Another domain may also wish to associate domain-specific information with the appointment messages.  This can be accomplished
+                           by enhancing one of the Scheduling RMIMs and publishing those enhancements within the other domain.
+                        </p>
+                        <p>ActAppointment is a booked appointment.  It may have been previously requested by a "placer application" in an ActAppointmentRequest.
+                           Additionally, the originating Order  may also be referenced from a booked appointment.  The difference between the ActOrder
+                           and the ActAppointmentRequest is that the order is authored by a healthcare practitioner and carries a professional  responsibility
+                           while the request is merely asking to reserve the resources.  Not all appointments are initiated by orders, as in the case
+                           of a patient-initiated request.  This chain of references is for identification purposes only and does not contain detailed
+                           information about the request or the order. 
+                        </p>
+                        <p>The subject (usually the patient) participates directly or indirectly in the appointment.  The cardinality is 1..* patients
+                           to allow for group appointments and the Participation.modeCode is included to allow for appointments where the patient is
+                           not physically present.  The subject Participation.time attribute allows the patient's appointment start time and duration
+                           to take place within the start time and duration for the whole appointment.  Both the subject and the performer participations
+                           have a modeCode attribute to indicate a physical or remote presence.
+                        </p>
+                        <p>The performer, location, and reusable device participations associate the resources being reserved in this appointment.  These
+                           are practitioners and high-use items that are typically controlled by a schedule.  Each resource can have its own effective
+                           time interval or it can default to the time interval of the appointment.  The Participation.performInd is a boolean indicating
+                           that this participation is controlled by a schedule and must be reserved before use.  A participation that does not have this
+                           indicator set is not actively scheduled, i.e., for information purposes only.  Consumables can also be associated with the
+                           appointment.  The Supply Order allows for a quantity of consumables (i.e., manufactured material) to be specified either by
+                           name, id, or optionally, the manufacturer.  
+                        </p>
+                        <p>The author is the person who originated the appointment and who must confirm changes or substitutions.  This participation
+                           is optional and should be a duplicate of the author participation in the Control Act wrapper for a new appointment.  For all
+                           other interactions, the author of the Control Act could be different from the author of the Appointment.  Of course, they
+                           could also be the same.
+                        </p>
+                        <p>A Schedule is a set of slots associated with a resource and may be used here to designate which schedule(s) the appointment
+                           is occupying (for example, a physician's OR session schedule and his/her office schedule.  A Schedule may also be used for
+                           any time block which is further divided into slots.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">1.3</span><span class="title"><a name="dlsbs-PRSC_DO000002UV-ic">Storyboards</a></span><hr class="sectionrule" />
+               </div>
+               <div class="body">
+                  <p><a href="#">Go To Top</a></p>
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e354" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Storyboards (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Appointment Introduction(<a href="../../domains/uvsc/uvsc.htm#DOSC_ST000001UV01-str" class="">DOSC_ST000001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e3542" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Storyboards (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Appointment Introduction(<a href="../../domains/uvsc/uvsc.htm#DOSC_ST000001UV01-str" class="">DOSC_ST000001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e3543" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Storyboards (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Appointment Introduction(<a href="../../domains/uvsc/uvsc.htm#DOSC_ST000001UV01-str" class="">DOSC_ST000001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e413" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Appointment Topic Storyboards (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="changed">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general changed">Appointment Notification(<a href="../../domains/uvsc/uvsc_Appointment.htm#PRSC_ST000002UV01-str" class="">PRSC_ST000002UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <p></p>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3gstory">the storyboard discussion</a> in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">1.3.1</span><span class="title"><a name="DOSC_ST000001UV01-str">Appointment Introduction  (DOSC_ST000001UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Purpose</b></div>
+                        <p>The Scheduling domain storyboards are structured according to the focus of the interaction:  Appointments or Resource Slots.
+                           If the applications are tightly-coupled, they will want to synchronize schedules at the slot level, while more loosely-coupled
+                           applications will stay at the appointment level.
+                        </p>
+                        <p>In this second release of Version 3, the Scheduling and Logistics TC is publishing Appointment Notifications and Slot Booking
+                           interactions.  More interactions, including Appointment Requests without slots and Queries are planned for subsequent releases.
+                        </p>
+                        <p>Scheduling interactions assume there is one owner or manager of a schedule that knows the current status of an appointment
+                           or the availablity of a resource slot.  Depending on the focus of the message, this is either the <strong>Appointment Manager</strong> or the <strong>Slot Manager</strong>.  The Manager has sub-roles depending on the type of interaction.  For Notifications, the sub-role is <strong>Informer</strong>.  For Requests and Queries, the sub-roles are <strong>Request Responder</strong> and <strong>Query Responder</strong> respectively.
+                        </p>
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a href="graphics/L-DOSC_ST000001UV01.gif" target="_blank" style="border:0px">Link to wide graphic (opens in a new window)</a><p></p>
+                        <div class="subSubSubSection">
+                           <div class="header"><span class="icon"> </span><span class="number">1.3.1.1</span><span class="title"><a name="DOSC_ST000001UV01-DOSC_SN100002UV01-stex">Appointment Notifications (DOSC_SN100002UV01) </a></span></div>
+                           <div class="body">
+                              <p>The scheduling process is not limited to any specific domain in healthcare, but applies to any situation where reservations
+                                 for scarce resources have to be made in advance. All kinds of healthcare activities can be scheduled such as in- and outpatient
+                                 encounters, procedures, observations, food and transportation services.
+                              </p>
+                              <p>The storyboards in this domain illustrate several different scenarios for scheduling. The scenarios illustrated under the
+                                 Appointment topic are typical loosely-coupled applications communicating for mutual benefit, but with a minimum of required
+                                 responsibility.  In these scenarios, various systems may be interested in maintaining the status of a certain category of
+                                 patient appointments. The appointment data may be used as auxiliary information within their database, or serve as input for
+                                 their software process (external triggers).
+                                 
+                              </p>
+                              <p>The scenario under the Slot topic is for a tightly-coupled cinfiguration where systems must maintain scheduling information
+                                 in near-real time.  Schedules of slots are maintained in separate systems and synchronized through frequent communication.
+                                 Slots are requested for booking and the response must be timely.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <p>
+               <table>
+                  <tbody>
+                     <tr>
+                        <td><a class="custombutton" href="#top">Return to top of page</a></td>
+                     </tr>
+                  </tbody>
+               </table>
+            </p>
+         </div>
+      </div>
+   </body>
+</html>

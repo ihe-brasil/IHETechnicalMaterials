@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><html><head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/><title>COCT_MT510001UV06 - Hierarchical Message Description</title><meta name="Entry" content="Provider Details Query Response"/><meta name="Identifier" content="COCT_MT510001UV06"/><style type="text/css">table {empty-cells: show}</style><script language="JavaScript1.2">
+
+var isNew=0;
+var isNS4=0;
+var isIE4=0;
+
+var brow=((navigator.appName) + (parseInt(navigator.appVersion)));
+
+//alert(brow);
+if (parseInt(navigator.appVersion)&gt;=5)
+{
+	isNew=1
+}
+else
+{
+	if(brow=="Netscape4")
+	{
+		isNS4=1;
+		document.captureEvents(Event.ONMOUSEOVER);
+	}
+	else
+	{
+		if(brow=="Microsoft Internet Explorer4")
+		{
+			isIE4=1;
+		}
+	}
+		
+}
+
+// thats ok
+
+
+if(isNS4||isIE4||isNew)
+{
+	docObj=(isNS4) ? 'document' : 'document.all';
+	
+	styleObj=(isNS4) ? ' ' : '.style';
+}
+
+function checkDOM(elementName)
+{
+	if(isNS4||isIE4||isNew)
+	{
+		dom=eval(docObj + '.' + elementName + styleObj);
+		//alert('This browser uses the ' + dom + 'Document Object Model.');
+		dom.left =0;
+		dom.top =0;
+	}
+}
+
+function popUp(evt,currElem)
+{
+
+	if((isNS4 &amp;&amp; currElem !=0) || (isIE4 &amp;&amp; currElem !=0))
+	{
+		dom =eval(docObj +'.' +currElem+styleObj);
+		state=dom.visibility;
+		if ((state == "visible") || (state=="show"))
+		{
+			dom.visibility="hidden";
+		}
+		else
+		{
+			if(isNS4)
+			{
+				topVal=eval(evt.pageY);
+				leftVal=eval(evt.pageX);
+				/*if(((document.body.scrollLeft+document.body.clientWidth)-leftVal)&lt; 150)
+				{
+					leftVal=(document.body.clientWidth+document.body.scrollLeft-151);
+				}
+				if(((document.body.scrollTop+document.body.clientHeight)-topVal)&lt; 30)
+				{
+					topVal=(document.body.clientHeight+document.body.scrollTop-80);
+				}*/
+
+			}
+			if(isIE4)
+			{
+				topVal=eval(event.clientY)  + document.body.scrollTop+20;
+				leftVal=eval(event.clientX) + document.body.scrollLeft;
+				
+				if(((document.body.scrollLeft+document.body.clientWidth)-leftVal)&lt; 150)
+				{
+					leftVal=(document.body.clientWidth+document.body.scrollLeft-151);
+				}
+				if(((document.body.scrollTop+document.body.clientHeight)-topVal)&lt; 30)
+				{
+					topVal=(document.body.clientHeight+document.body.scrollTop-80);
+				}
+			}
+			if(leftVal &lt; 2)
+			{
+				leftVal=2;
+			}
+			dom.top=topVal;
+			dom.left=leftVal;
+			dom.visibility="visible";
+		}
+	}
+}
+</script><style>
+#ds
+{
+	position: absolute;
+	visibility: hidden;
+	z-index: 100;
+	top: 10px;
+	left: 10px;
+}
+#cwe
+{
+	position: absolute;
+	visibility: hidden;
+	z-index: 100;
+	top: 10px;
+	left: 10px;
+}
+
+#cne
+{
+	position: absolute;
+	visibility: hidden;
+	z-index: 100;
+	top: 10px;
+	left: 10px;
+}
+
+.hypertext
+{
+position: absolute;
+	background-color: white;
+	layer-background-colour: cornflowerblue;
+	padding: 3px;
+	border: 3px solid blue;
+	width: 150px;
+	font:normal 10pt/13pt helvetica, sans-serif;
+	text-align: left;
+	color: blue;
+
+	
+}
+td {font-family: verdana,arial; text-align: left; font-size: 8pt;border-style:solid;border-width=1pt;}
+				</style></head><body onload="checkDOM('ds')"><span id="ds" class="hypertext">No Current Link To Vocabulary</span><span id="cwe" class="hypertext">Coded With Extensions</span><span id="cne" class="hypertext">Coded No Extensions</span><table border="3" frame="vsides" rules="cols" cellpadding="2" cellspacing="0" bordercolor="black" style="border-width: 2px;border-style: solid"><tr valign="top"><td height="35"><b><font size="+1">COCT_MT510001UV06</font><br/></b></td><td height="35" class="lightBoundary"><b><i>Description: </i></b>  <br/>Derived from RMIM: <a href="COCT_RM510001UV.htm">COCT_RM510001UV06</a> and HMD: <a href="COCT_HD510001UV-NoEdit.htm">COCT_HD510001UV06</a></td></tr><tr><td height="3" colspan="10" style="font-size=4pt;"> </td></tr><tr class="hmd" valign="top"><td bgcolor="lightblue"><b><a name="CoverageRecord">CoverageRecord</a></b></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="COCT_MT510001UV06:CoverageRecord"/></td></tr><tr valign="top" class="ConfomanceR"><td><b>classCode</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#FinancialContract-cls">FinancialContract</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActClass.htm"><b>ActClass</b></a>:<a href="../../../infrastructure/vocabulary/ActClass.htm#COV"><b>COV</b></a>}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="COCT_MT510001UV06:CoverageRecord.classCode"/></td></td></tr><tr valign="top" class="ConfomanceR"><td><b>moodCode</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#FinancialContract-cls">FinancialContract</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActMood.htm"><b>ActMood</b></a>:<a href="../../../infrastructure/vocabulary/ActMood.htm#EVN"><b>EVN</b></a>}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="COCT_MT510001UV06:CoverageRecord.moodCode"/></td></td></tr><tr valign="top" class="Confomance"><td>id<font color="green"> [1..*]</font><br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#FinancialContract-cls">FinancialContract</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-SET">SET</a>&lt;<a href="../../../infrastructure/datatypes/datatypes.htm#dt-II">II</a>&gt;)<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="COCT_MT510001UV06:CoverageRecord.id"/></td></td></tr><tr valign="top" class="Confomance"><td bgcolor="lightgrey">component<font color="green"> [0..*]</font><font color="gray"> (<a href="#Component">Component</a>)</font></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="COCT_MT510001UV06:CoverageRecord.component"/></td></tr><tr><td height="3" colspan="10" style="font-size=4pt;"> </td></tr><tr class="hmd" valign="top"><td bgcolor="lightblue"><b><a name="Component">Component</a></b></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="COCT_MT510001UV06:Component"/></td></tr><tr valign="top" class="ConfomanceR"><td><b>typeCode</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#ActRelationship-cls">ActRelationship</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActRelationshipType.htm"><b>ActRelationshipType</b></a>:<a href="../../../infrastructure/vocabulary/ActRelationshipType.htm#COMP"><b>COMP</b></a>}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="COCT_MT510001UV06:Component.typeCode"/></td></td></tr><tr valign="top" class="Confomance"><td>priorityNumber<font color="green"> [0..1]</font><br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#ActRelationship-cls">ActRelationship</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-INT">INT</a>)<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="COCT_MT510001UV06:Component.priorityNumber"/></td></td></tr><tr valign="top" class="Confomance"><td bgcolor="lightgrey">policyOrProgram<font color="green"> [1..1]</font><font color="gray"> (<a href="#PolicyOrProgram">PolicyOrProgram</a>)</font></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="COCT_MT510001UV06:Component.policyOrProgram"/></td></tr><tr><td height="3" colspan="10" style="font-size=4pt;"> </td></tr><tr class="hmd" valign="top"><td bgcolor="lightblue"><b><a name="PolicyOrProgram">PolicyOrProgram</a></b></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="COCT_MT510001UV06:PolicyOrProgram"/></td></tr><tr valign="top" class="ConfomanceR"><td><b>classCode</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#FinancialContract-cls">FinancialContract</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActClass.htm"><b>ActClass</b></a>:<a href="../../../infrastructure/vocabulary/ActClass.htm#COV"><b>COV</b></a>}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="COCT_MT510001UV06:PolicyOrProgram.classCode"/></td></td></tr><tr valign="top" class="ConfomanceR"><td><b>moodCode</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#FinancialContract-cls">FinancialContract</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ActMood.htm"><b>ActMood</b></a>:<a href="../../../infrastructure/vocabulary/ActMood.htm#EVN"><b>EVN</b></a>}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="COCT_MT510001UV06:PolicyOrProgram.moodCode"/></td></td></tr><tr valign="top" class="ConfomanceR"><td>id<font color="green"> [1..*]</font><br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#FinancialContract-cls">FinancialContract</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-SET">SET</a>&lt;<a href="../../../infrastructure/datatypes/datatypes.htm#dt-II">II</a>&gt;)<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="COCT_MT510001UV06:PolicyOrProgram.id"/></td></td></tr><tr valign="top" class="ConfomanceR"><td><b>code</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#FinancialContract-cls">FinancialContract</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CD">CD</a>) {CWE:D:<a href="../../../infrastructure/vocabulary/voc_ConceptDomains.htm#ActCoverageTypeCode"><b>ActCoverageTypeCode</b></a>}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="COCT_MT510001UV06:PolicyOrProgram.code"/></td></td></tr><tr valign="top" class="Confomance"><td>statusCode<font color="green"> [0..1]</font><br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#FinancialContract-cls">FinancialContract</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CS">CS</a>) {CNE:D:<a href="../../../infrastructure/vocabulary/voc_ConceptDomains.htm#ActStatus"><b>ActStatus</b></a>}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="COCT_MT510001UV06:PolicyOrProgram.statusCode"/></td></td></tr><tr valign="top" class="Confomance"><td>effectiveTime<font color="green"> [0..1]</font><br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#FinancialContract-cls">FinancialContract</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-IVL">IVL</a>&lt;<a href="../../../infrastructure/datatypes/datatypes.htm#dt-TS">TS</a>&gt;)<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="COCT_MT510001UV06:PolicyOrProgram.effectiveTime"/></td></td></tr><tr valign="top" class="ConfomanceR"><td bgcolor="lightgrey">coveredParty<font color="green"> [1..1]</font><font color="gray"> (<a href="#CoveredParty2">CoveredParty2</a>)</font></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="COCT_MT510001UV06:PolicyOrProgram.coveredParty"/></td></tr><tr><td height="3" colspan="10" style="font-size=4pt;"> </td></tr><tr class="hmd" valign="top"><td bgcolor="lightblue"><b><a name="CoveredParty2">CoveredParty2</a></b></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="COCT_MT510001UV06:CoveredParty2"/></td></tr><tr valign="top" class="ConfomanceR"><td><b>typeCode</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Participation-cls">Participation</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/ParticipationType.htm"><b>ParticipationType</b></a>:<a href="../../../infrastructure/vocabulary/ParticipationType.htm#COV"><b>COV</b></a>}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="COCT_MT510001UV06:CoveredParty2.typeCode"/></td></td></tr><tr valign="top" class="ConfomanceR"><td bgcolor="lightgrey">coveredParty<font color="green"> [1..1]</font><font color="gray"> (<a href="#CoveredParty">CoveredParty</a>)</font></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="COCT_MT510001UV06:CoveredParty2.coveredParty"/></td></tr><tr><td height="3" colspan="10" style="font-size=4pt;"> </td></tr><tr class="hmd" valign="top"><td bgcolor="lightblue"><b><a name="CoveredParty">CoveredParty</a></b></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="COCT_MT510001UV06:CoveredParty"/></td></tr><tr valign="top" class="ConfomanceR"><td><b>classCode</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Role-cls">Role</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CS">CS</a>) {CNE:C:<a href="../../../infrastructure/vocabulary/RoleClass.htm"><b>RoleClass</b></a>:<a href="../../../infrastructure/vocabulary/RoleClass.htm#COVPTY"><b>COVPTY</b></a>}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="COCT_MT510001UV06:CoveredParty.classCode"/></td></td></tr><tr valign="top" class="ConfomanceR"><td>id<font color="green"> [1..1]</font><br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Role-cls">Role</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-II">II</a>)<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="COCT_MT510001UV06:CoveredParty.id"/></td></td></tr><tr valign="top" class="Confomance"><td>effectiveTime<font color="green"> [0..1]</font><br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Role-cls">Role</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-IVL">IVL</a>&lt;<a href="../../../infrastructure/datatypes/datatypes.htm#dt-TS">TS</a>&gt;)<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="COCT_MT510001UV06:CoveredParty.effectiveTime"/></td></td></tr></table></body></html>

@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<spec id="QUQI_DO000003UV-ic" type="dependencyTree" sectionCode="UVQI">
+   <header>
+      <title> Query Infrastructure Dependency Annex
+				</title>
+      <version>V 00-00</version>
+      <ballot type="NormativeStandard" number="1"/>
+      <date>6/31/2008</date>
+      <legalese copyRightDate="2008"/>
+   </header>
+   <body>
+      <div1 id="all-sortOrder">
+         <head> Query Infrastructure in Structured Sort Order</head>
+         <artree role="ssn">
+            <artreeitem>
+               <stref id="d0e21006" role="tree-intro" sectID="UVQI" sectType="SB" refName="Domain: Query Infrastructure" refFamiliarName="Domain: Query Infrastructure" refIdentifier="QUQI_DO000003UV"/>
+               <artreeitem>
+                  <rmimref id="treeRef-QUQI_DM000000UV" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act" refFamiliarName="Query Control Act" refIdentifier="QUQI_DM000000UV"/>
+               </artreeitem>
+               <artreeitem>
+                  <stref id="d0e21010" role="tree-intro" sectID="UVQI" sectType="SB" refName="Topic: Query By Parameter" refFamiliarName="Topic: Query By Parameter" refIdentifier="QUQI_DO000003UV"/>
+                  <artreeitem>
+                     <stref id="d0e21010" role="tree-intro" sectID="" sectType="SB" refName=" Story Boards" refFamiliarName=" Story Boards" refIdentifier=""/>
+                     <artreeitem>
+                        <stref id="treeRef-QUQI_ST000000UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Generic Query by Parameter Query Session" refFamiliarName="Generic Query by Parameter Query Session" refIdentifier="QUQI_ST000000UV01"/>
+                        <artreeitem>
+                           <stref id="treeRef-QUQI_SN000000UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Generic Query by Parameter Session" refFamiliarName="Generic Query by Parameter Session" refIdentifier="QUQI_SN000000UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query by Parameter Query Specification" refFamiliarName="Query by Parameter Query Specification" refIdentifier="QUQI_IN000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Complete Query Response" refFamiliarName="General Query Complete Query Response" refIdentifier="QUQI_IN000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000003UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Activate Query Continue" refFamiliarName="General Query Activate Query Continue" refIdentifier="QUQI_IN000003UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Complete Query Response" refFamiliarName="General Query Complete Query Response" refIdentifier="QUQI_IN000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000003UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Activate Query Continue" refFamiliarName="General Query Activate Query Continue" refIdentifier="QUQI_IN000003UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21010" role="tree-intro" sectID="" sectType="SB" refName=" Application Roles" refFamiliarName=" Application Roles" refIdentifier=""/>
+                     <artreeitem>
+                        <arref id="treeRef-QUQI_AR000001UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query by Parameter Placer" refFamiliarName="Query by Parameter Placer" refIdentifier="QUQI_AR000001UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query by Parameter Query Specification" refFamiliarName="Query by Parameter Query Specification" refIdentifier="QUQI_IN000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Complete Query Response" refFamiliarName="General Query Complete Query Response" refIdentifier="QUQI_IN000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000003UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Activate Query Continue" refFamiliarName="General Query Activate Query Continue" refIdentifier="QUQI_IN000003UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <arref id="treeRef-QUQI_AR000002UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query by Parameter Fulfiller" refFamiliarName="Query by Parameter Fulfiller" refIdentifier="QUQI_AR000002UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Complete Query Response" refFamiliarName="General Query Complete Query Response" refIdentifier="QUQI_IN000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000003UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Activate Query Continue" refFamiliarName="General Query Activate Query Continue" refIdentifier="QUQI_IN000003UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query by Parameter Query Specification" refFamiliarName="Query by Parameter Query Specification" refIdentifier="QUQI_IN000001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21010" role="tree-intro" sectID="" sectType="SB" refName=" Trigger Events" refFamiliarName=" Trigger Events" refIdentifier=""/>
+                     <artreeitem>
+                        <teref id="treeRef-QUQI_TE000001UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query General Execute Query Specification" refFamiliarName="Query General Execute Query Specification" refIdentifier="QUQI_TE000001UV01"/>
+                     </artreeitem>
+                     <artreeitem>
+                        <teref id="treeRef-QUQI_TE000004UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query General Complete Query Response Continuation" refFamiliarName="Query General Complete Query Response Continuation" refIdentifier="QUQI_TE000004UV01"/>
+                     </artreeitem>
+                     <artreeitem>
+                        <teref id="treeRef-QUQI_TE000003UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query General Activate Query Continuation" refFamiliarName="Query General Activate Query Continuation" refIdentifier="QUQI_TE000003UV01"/>
+                     </artreeitem>
+                     <artreeitem>
+                        <teref id="treeRef-QUQI_TE000002UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query General Complete Query Response" refFamiliarName="Query General Complete Query Response" refIdentifier="QUQI_TE000002UV01"/>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21010" role="tree-intro" sectID="" sectType="SB" refName=" Refined Message Information Models" refFamiliarName=" Refined Message Information Models" refIdentifier=""/>
+                     <artreeitem>
+                        <rmimref id="treeRef-QUQI_RM020000UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Request : Parameter List" refFamiliarName="Query Control Act Request : Parameter List" refIdentifier="QUQI_RM020000UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-QUQI_HD020000UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Request : Parameter List" refFamiliarName="Query Control Act Request : Parameter List" refIdentifier="QUQI_HD020000UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-QUQI_MT020001UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Request : Parameter List" refFamiliarName="Query Control Act Request : Parameter List" refIdentifier="QUQI_MT020001UV01"/>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090300UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedDeviceUniversal" refFamiliarName="R_AssignedDeviceUniversal" refIdentifier="COCT_MT090300UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090100UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedPersonUniversal" refFamiliarName="R_AssignedPersonUniversal" refIdentifier="COCT_MT090100UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-MCAI_MT900001UV01" role="dependency" sectID="UVAI" sectType="SB" refName="A_DetectedIssueUniversal" refFamiliarName="A_DetectedIssueUniversal" refIdentifier="MCAI_MT900001UV01"/>
+                              </artreeitem>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <rmimref id="treeRef-QUQI_RM021000UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Request : Query By Parameter" refFamiliarName="Query Control Act Request : Query By Parameter" refIdentifier="QUQI_RM021000UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-QUQI_HD021000UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Request : Query By Parameter" refFamiliarName="Query Control Act Request : Query By Parameter" refIdentifier="QUQI_HD021000UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-QUQI_MT021001UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Request : Query By Parameter" refFamiliarName="Query Control Act Request : Query By Parameter" refIdentifier="QUQI_MT021001UV01"/>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090300UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedDeviceUniversal" refFamiliarName="R_AssignedDeviceUniversal" refIdentifier="COCT_MT090300UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090100UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedPersonUniversal" refFamiliarName="R_AssignedPersonUniversal" refIdentifier="COCT_MT090100UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-MCAI_MT900001UV01" role="dependency" sectID="UVAI" sectType="SB" refName="A_DetectedIssueUniversal" refFamiliarName="A_DetectedIssueUniversal" refIdentifier="MCAI_MT900001UV01"/>
+                              </artreeitem>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <rmimref id="treeRef-QUQI_RM000001UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Request Continue / Cancel" refFamiliarName="Query Control Act Request Continue / Cancel" refIdentifier="QUQI_RM000001UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-QUQI_HD000001UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Request Continue / Cancel" refFamiliarName="Query Control Act Request Continue / Cancel" refIdentifier="QUQI_HD000001UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-QUQI_MT000001UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Request Continue / Cancel" refFamiliarName="Query Control Act Request Continue / Cancel" refIdentifier="QUQI_MT000001UV01"/>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090300UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedDeviceUniversal" refFamiliarName="R_AssignedDeviceUniversal" refIdentifier="COCT_MT090300UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090100UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedPersonUniversal" refFamiliarName="R_AssignedPersonUniversal" refIdentifier="COCT_MT090100UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-MCAI_MT900001UV01" role="dependency" sectID="UVAI" sectType="SB" refName="A_DetectedIssueUniversal" refFamiliarName="A_DetectedIssueUniversal" refIdentifier="MCAI_MT900001UV01"/>
+                              </artreeitem>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <rmimref id="treeRef-QUQI_RM120000UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Response / Acknowledgement" refFamiliarName="Query Control Act Response / Acknowledgement" refIdentifier="QUQI_RM120000UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-QUQI_HD120000UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Response / Acknowledgement" refFamiliarName="Query Control Act Response / Acknowledgement" refIdentifier="QUQI_HD120000UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-QUQI_MT120001UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Response / Acknowledgement" refFamiliarName="Query Control Act Response / Acknowledgement" refIdentifier="QUQI_MT120001UV01"/>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090300UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedDeviceUniversal" refFamiliarName="R_AssignedDeviceUniversal" refIdentifier="COCT_MT090300UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090100UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedPersonUniversal" refFamiliarName="R_AssignedPersonUniversal" refIdentifier="COCT_MT090100UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-MCAI_MT900001UV01" role="dependency" sectID="UVAI" sectType="SB" refName="A_DetectedIssueUniversal" refFamiliarName="A_DetectedIssueUniversal" refIdentifier="MCAI_MT900001UV01"/>
+                              </artreeitem>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21010" role="tree-intro" sectID="" sectType="SB" refName=" Interactions" refFamiliarName=" Interactions" refIdentifier=""/>
+                     <artreeitem>
+                        <intref id="treeRef-QUQI_IN000001UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query by Parameter Query Specification" refFamiliarName="Query by Parameter Query Specification" refIdentifier="QUQI_IN000001UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-QUQI_AR000001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query by Parameter Placer" refFamiliarName="Query by Parameter Placer" refIdentifier="QUQI_AR000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-QUQI_AR000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query by Parameter Fulfiller" refFamiliarName="Query by Parameter Fulfiller" refIdentifier="QUQI_AR000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-QUQI_TE000001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query General Execute Query Specification" refFamiliarName="Query General Execute Query Specification" refIdentifier="QUQI_TE000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-QUQI_MT020001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query Control Act Request : Parameter List" refFamiliarName="Query Control Act Request : Parameter List" refIdentifier="QUQI_MT020001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-QUQI_TE000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query General Complete Query Response" refFamiliarName="Query General Complete Query Response" refIdentifier="QUQI_TE000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Complete Query Response" refFamiliarName="General Query Complete Query Response" refIdentifier="QUQI_IN000002UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <intref id="treeRef-QUQI_IN000003UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="General Query Activate Query Continue" refFamiliarName="General Query Activate Query Continue" refIdentifier="QUQI_IN000003UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-QUQI_AR000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query by Parameter Fulfiller" refFamiliarName="Query by Parameter Fulfiller" refIdentifier="QUQI_AR000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-QUQI_AR000001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query by Parameter Placer" refFamiliarName="Query by Parameter Placer" refIdentifier="QUQI_AR000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-QUQI_TE000003UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query General Activate Query Continuation" refFamiliarName="Query General Activate Query Continuation" refIdentifier="QUQI_TE000003UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000300UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Application Level Acknowledgement" refFamiliarName="Application Level Acknowledgement" refIdentifier="MCCI_MT000300UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-QUQI_MT000001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query Control Act Request Continue / Cancel" refFamiliarName="Query Control Act Request Continue / Cancel" refIdentifier="QUQI_MT000001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <intref id="treeRef-QUQI_IN000002UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="General Query Complete Query Response" refFamiliarName="General Query Complete Query Response" refIdentifier="QUQI_IN000002UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-QUQI_AR000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query by Parameter Fulfiller" refFamiliarName="Query by Parameter Fulfiller" refIdentifier="QUQI_AR000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-QUQI_AR000001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query by Parameter Placer" refFamiliarName="Query by Parameter Placer" refIdentifier="QUQI_AR000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-QUQI_TE000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query General Complete Query Response" refFamiliarName="Query General Complete Query Response" refIdentifier="QUQI_TE000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000300UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Application Level Acknowledgement" refFamiliarName="Application Level Acknowledgement" refIdentifier="MCCI_MT000300UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-QUQI_MT120001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query Control Act Response / Acknowledgement" refFamiliarName="Query Control Act Response / Acknowledgement" refIdentifier="QUQI_MT120001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-QUQI_TE000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query General Complete Query Response" refFamiliarName="Query General Complete Query Response" refIdentifier="QUQI_TE000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Complete Query Response" refFamiliarName="General Query Complete Query Response" refIdentifier="QUQI_IN000002UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+            </artreeitem>
+         </artree>
+      </div1>
+      <div1 id="all-codeOrder">
+         <head> Query Infrastructure in Artifact Code Order</head>
+         <artree role="code">
+            <artreeitem>
+               <stref id="d0e21006" role="tree-intro" sectID="UVQI" sectType="SB" refName="Domain: Query Infrastructure" refFamiliarName="Domain: Query Infrastructure" refIdentifier="QUQI_DO000003UV"/>
+               <artreeitem>
+                  <rmimref id="treeRef-QUQI_DM000000UV" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act" refFamiliarName="Query Control Act" refIdentifier="QUQI_DM000000UV"/>
+               </artreeitem>
+               <artreeitem>
+                  <stref id="d0e21010" role="tree-intro" sectID="UVQI" sectType="SB" refName="Topic: Query By Parameter" refFamiliarName="Topic: Query By Parameter" refIdentifier="QUQI_DO000003UV"/>
+                  <artreeitem>
+                     <stref id="d0e21010" role="tree-intro" sectID="" sectType="SB" refName=" Story Boards" refFamiliarName=" Story Boards" refIdentifier=""/>
+                     <artreeitem>
+                        <stref id="treeRef-QUQI_ST000000UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Generic Query by Parameter Query Session" refFamiliarName="Generic Query by Parameter Query Session" refIdentifier="QUQI_ST000000UV01"/>
+                        <artreeitem>
+                           <stref id="treeRef-QUQI_SN000000UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Generic Query by Parameter Session" refFamiliarName="Generic Query by Parameter Session" refIdentifier="QUQI_SN000000UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query by Parameter Query Specification" refFamiliarName="Query by Parameter Query Specification" refIdentifier="QUQI_IN000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Complete Query Response" refFamiliarName="General Query Complete Query Response" refIdentifier="QUQI_IN000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000003UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Activate Query Continue" refFamiliarName="General Query Activate Query Continue" refIdentifier="QUQI_IN000003UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Complete Query Response" refFamiliarName="General Query Complete Query Response" refIdentifier="QUQI_IN000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000003UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Activate Query Continue" refFamiliarName="General Query Activate Query Continue" refIdentifier="QUQI_IN000003UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21010" role="tree-intro" sectID="" sectType="SB" refName=" Application Roles" refFamiliarName=" Application Roles" refIdentifier=""/>
+                     <artreeitem>
+                        <arref id="treeRef-QUQI_AR000001UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query by Parameter Placer" refFamiliarName="Query by Parameter Placer" refIdentifier="QUQI_AR000001UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query by Parameter Query Specification" refFamiliarName="Query by Parameter Query Specification" refIdentifier="QUQI_IN000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Complete Query Response" refFamiliarName="General Query Complete Query Response" refIdentifier="QUQI_IN000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000003UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Activate Query Continue" refFamiliarName="General Query Activate Query Continue" refIdentifier="QUQI_IN000003UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <arref id="treeRef-QUQI_AR000002UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query by Parameter Fulfiller" refFamiliarName="Query by Parameter Fulfiller" refIdentifier="QUQI_AR000002UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Complete Query Response" refFamiliarName="General Query Complete Query Response" refIdentifier="QUQI_IN000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000003UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Activate Query Continue" refFamiliarName="General Query Activate Query Continue" refIdentifier="QUQI_IN000003UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query by Parameter Query Specification" refFamiliarName="Query by Parameter Query Specification" refIdentifier="QUQI_IN000001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21010" role="tree-intro" sectID="" sectType="SB" refName=" Trigger Events" refFamiliarName=" Trigger Events" refIdentifier=""/>
+                     <artreeitem>
+                        <teref id="treeRef-QUQI_TE000001UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query General Execute Query Specification" refFamiliarName="Query General Execute Query Specification" refIdentifier="QUQI_TE000001UV01"/>
+                     </artreeitem>
+                     <artreeitem>
+                        <teref id="treeRef-QUQI_TE000002UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query General Complete Query Response" refFamiliarName="Query General Complete Query Response" refIdentifier="QUQI_TE000002UV01"/>
+                     </artreeitem>
+                     <artreeitem>
+                        <teref id="treeRef-QUQI_TE000003UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query General Activate Query Continuation" refFamiliarName="Query General Activate Query Continuation" refIdentifier="QUQI_TE000003UV01"/>
+                     </artreeitem>
+                     <artreeitem>
+                        <teref id="treeRef-QUQI_TE000004UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query General Complete Query Response Continuation" refFamiliarName="Query General Complete Query Response Continuation" refIdentifier="QUQI_TE000004UV01"/>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21010" role="tree-intro" sectID="" sectType="SB" refName=" Refined Message Information Models" refFamiliarName=" Refined Message Information Models" refIdentifier=""/>
+                     <artreeitem>
+                        <rmimref id="treeRef-QUQI_RM000001UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Request Continue / Cancel" refFamiliarName="Query Control Act Request Continue / Cancel" refIdentifier="QUQI_RM000001UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-QUQI_HD000001UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Request Continue / Cancel" refFamiliarName="Query Control Act Request Continue / Cancel" refIdentifier="QUQI_HD000001UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-QUQI_MT000001UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Request Continue / Cancel" refFamiliarName="Query Control Act Request Continue / Cancel" refIdentifier="QUQI_MT000001UV01"/>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090300UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedDeviceUniversal" refFamiliarName="R_AssignedDeviceUniversal" refIdentifier="COCT_MT090300UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090100UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedPersonUniversal" refFamiliarName="R_AssignedPersonUniversal" refIdentifier="COCT_MT090100UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-MCAI_MT900001UV01" role="dependency" sectID="UVAI" sectType="SB" refName="A_DetectedIssueUniversal" refFamiliarName="A_DetectedIssueUniversal" refIdentifier="MCAI_MT900001UV01"/>
+                              </artreeitem>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <rmimref id="treeRef-QUQI_RM020000UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Request : Parameter List" refFamiliarName="Query Control Act Request : Parameter List" refIdentifier="QUQI_RM020000UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-QUQI_HD020000UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Request : Parameter List" refFamiliarName="Query Control Act Request : Parameter List" refIdentifier="QUQI_HD020000UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-QUQI_MT020001UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Request : Parameter List" refFamiliarName="Query Control Act Request : Parameter List" refIdentifier="QUQI_MT020001UV01"/>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090300UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedDeviceUniversal" refFamiliarName="R_AssignedDeviceUniversal" refIdentifier="COCT_MT090300UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090100UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedPersonUniversal" refFamiliarName="R_AssignedPersonUniversal" refIdentifier="COCT_MT090100UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-MCAI_MT900001UV01" role="dependency" sectID="UVAI" sectType="SB" refName="A_DetectedIssueUniversal" refFamiliarName="A_DetectedIssueUniversal" refIdentifier="MCAI_MT900001UV01"/>
+                              </artreeitem>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <rmimref id="treeRef-QUQI_RM021000UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Request : Query By Parameter" refFamiliarName="Query Control Act Request : Query By Parameter" refIdentifier="QUQI_RM021000UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-QUQI_HD021000UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Request : Query By Parameter" refFamiliarName="Query Control Act Request : Query By Parameter" refIdentifier="QUQI_HD021000UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-QUQI_MT021001UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Request : Query By Parameter" refFamiliarName="Query Control Act Request : Query By Parameter" refIdentifier="QUQI_MT021001UV01"/>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090300UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedDeviceUniversal" refFamiliarName="R_AssignedDeviceUniversal" refIdentifier="COCT_MT090300UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090100UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedPersonUniversal" refFamiliarName="R_AssignedPersonUniversal" refIdentifier="COCT_MT090100UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-MCAI_MT900001UV01" role="dependency" sectID="UVAI" sectType="SB" refName="A_DetectedIssueUniversal" refFamiliarName="A_DetectedIssueUniversal" refIdentifier="MCAI_MT900001UV01"/>
+                              </artreeitem>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <rmimref id="treeRef-QUQI_RM120000UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Response / Acknowledgement" refFamiliarName="Query Control Act Response / Acknowledgement" refIdentifier="QUQI_RM120000UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-QUQI_HD120000UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Response / Acknowledgement" refFamiliarName="Query Control Act Response / Acknowledgement" refIdentifier="QUQI_HD120000UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-QUQI_MT120001UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Response / Acknowledgement" refFamiliarName="Query Control Act Response / Acknowledgement" refIdentifier="QUQI_MT120001UV01"/>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090300UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedDeviceUniversal" refFamiliarName="R_AssignedDeviceUniversal" refIdentifier="COCT_MT090300UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090100UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedPersonUniversal" refFamiliarName="R_AssignedPersonUniversal" refIdentifier="COCT_MT090100UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-MCAI_MT900001UV01" role="dependency" sectID="UVAI" sectType="SB" refName="A_DetectedIssueUniversal" refFamiliarName="A_DetectedIssueUniversal" refIdentifier="MCAI_MT900001UV01"/>
+                              </artreeitem>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21010" role="tree-intro" sectID="" sectType="SB" refName=" Interactions" refFamiliarName=" Interactions" refIdentifier=""/>
+                     <artreeitem>
+                        <intref id="treeRef-QUQI_IN000001UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query by Parameter Query Specification" refFamiliarName="Query by Parameter Query Specification" refIdentifier="QUQI_IN000001UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-QUQI_AR000001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query by Parameter Placer" refFamiliarName="Query by Parameter Placer" refIdentifier="QUQI_AR000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-QUQI_AR000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query by Parameter Fulfiller" refFamiliarName="Query by Parameter Fulfiller" refIdentifier="QUQI_AR000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-QUQI_TE000001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query General Execute Query Specification" refFamiliarName="Query General Execute Query Specification" refIdentifier="QUQI_TE000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-QUQI_MT020001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query Control Act Request : Parameter List" refFamiliarName="Query Control Act Request : Parameter List" refIdentifier="QUQI_MT020001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-QUQI_TE000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query General Complete Query Response" refFamiliarName="Query General Complete Query Response" refIdentifier="QUQI_TE000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Complete Query Response" refFamiliarName="General Query Complete Query Response" refIdentifier="QUQI_IN000002UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <intref id="treeRef-QUQI_IN000002UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="General Query Complete Query Response" refFamiliarName="General Query Complete Query Response" refIdentifier="QUQI_IN000002UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-QUQI_AR000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query by Parameter Fulfiller" refFamiliarName="Query by Parameter Fulfiller" refIdentifier="QUQI_AR000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-QUQI_AR000001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query by Parameter Placer" refFamiliarName="Query by Parameter Placer" refIdentifier="QUQI_AR000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-QUQI_TE000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query General Complete Query Response" refFamiliarName="Query General Complete Query Response" refIdentifier="QUQI_TE000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000300UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Application Level Acknowledgement" refFamiliarName="Application Level Acknowledgement" refIdentifier="MCCI_MT000300UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-QUQI_MT120001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query Control Act Response / Acknowledgement" refFamiliarName="Query Control Act Response / Acknowledgement" refIdentifier="QUQI_MT120001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-QUQI_TE000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query General Complete Query Response" refFamiliarName="Query General Complete Query Response" refIdentifier="QUQI_TE000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Complete Query Response" refFamiliarName="General Query Complete Query Response" refIdentifier="QUQI_IN000002UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <intref id="treeRef-QUQI_IN000003UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="General Query Activate Query Continue" refFamiliarName="General Query Activate Query Continue" refIdentifier="QUQI_IN000003UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-QUQI_AR000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query by Parameter Fulfiller" refFamiliarName="Query by Parameter Fulfiller" refIdentifier="QUQI_AR000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-QUQI_AR000001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query by Parameter Placer" refFamiliarName="Query by Parameter Placer" refIdentifier="QUQI_AR000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-QUQI_TE000003UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query General Activate Query Continuation" refFamiliarName="Query General Activate Query Continuation" refIdentifier="QUQI_TE000003UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000300UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Application Level Acknowledgement" refFamiliarName="Application Level Acknowledgement" refIdentifier="MCCI_MT000300UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-QUQI_MT000001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query Control Act Request Continue / Cancel" refFamiliarName="Query Control Act Request Continue / Cancel" refIdentifier="QUQI_MT000001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+            </artreeitem>
+         </artree>
+      </div1>
+      <div1 id="all-nameOrder">
+         <head> Query Infrastructure in Name Order</head>
+         <artree role="name">
+            <artreeitem>
+               <stref id="d0e21006" role="tree-intro" sectID="UVQI" sectType="SB" refName="Domain: Query Infrastructure" refFamiliarName="Domain: Query Infrastructure" refIdentifier="QUQI_DO000003UV"/>
+               <artreeitem>
+                  <rmimref id="treeRef-QUQI_DM000000UV" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act" refFamiliarName="Query Control Act" refIdentifier="QUQI_DM000000UV"/>
+               </artreeitem>
+               <artreeitem>
+                  <stref id="d0e21010" role="tree-intro" sectID="UVQI" sectType="SB" refName="Topic: Query By Parameter" refFamiliarName="Topic: Query By Parameter" refIdentifier="QUQI_DO000003UV"/>
+                  <artreeitem>
+                     <stref id="d0e21010" role="tree-intro" sectID="" sectType="SB" refName=" Story Boards" refFamiliarName=" Story Boards" refIdentifier=""/>
+                     <artreeitem>
+                        <stref id="treeRef-QUQI_ST000000UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Generic Query by Parameter Query Session" refFamiliarName="Generic Query by Parameter Query Session" refIdentifier="QUQI_ST000000UV01"/>
+                        <artreeitem>
+                           <stref id="treeRef-QUQI_SN000000UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Generic Query by Parameter Session" refFamiliarName="Generic Query by Parameter Session" refIdentifier="QUQI_SN000000UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query by Parameter Query Specification" refFamiliarName="Query by Parameter Query Specification" refIdentifier="QUQI_IN000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Complete Query Response" refFamiliarName="General Query Complete Query Response" refIdentifier="QUQI_IN000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000003UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Activate Query Continue" refFamiliarName="General Query Activate Query Continue" refIdentifier="QUQI_IN000003UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Complete Query Response" refFamiliarName="General Query Complete Query Response" refIdentifier="QUQI_IN000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000003UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Activate Query Continue" refFamiliarName="General Query Activate Query Continue" refIdentifier="QUQI_IN000003UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21010" role="tree-intro" sectID="" sectType="SB" refName=" Application Roles" refFamiliarName=" Application Roles" refIdentifier=""/>
+                     <artreeitem>
+                        <arref id="treeRef-QUQI_AR000002UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query by Parameter Fulfiller" refFamiliarName="Query by Parameter Fulfiller" refIdentifier="QUQI_AR000002UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Complete Query Response" refFamiliarName="General Query Complete Query Response" refIdentifier="QUQI_IN000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000003UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Activate Query Continue" refFamiliarName="General Query Activate Query Continue" refIdentifier="QUQI_IN000003UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query by Parameter Query Specification" refFamiliarName="Query by Parameter Query Specification" refIdentifier="QUQI_IN000001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <arref id="treeRef-QUQI_AR000001UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query by Parameter Placer" refFamiliarName="Query by Parameter Placer" refIdentifier="QUQI_AR000001UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query by Parameter Query Specification" refFamiliarName="Query by Parameter Query Specification" refIdentifier="QUQI_IN000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Complete Query Response" refFamiliarName="General Query Complete Query Response" refIdentifier="QUQI_IN000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000003UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Activate Query Continue" refFamiliarName="General Query Activate Query Continue" refIdentifier="QUQI_IN000003UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21010" role="tree-intro" sectID="" sectType="SB" refName=" Trigger Events" refFamiliarName=" Trigger Events" refIdentifier=""/>
+                     <artreeitem>
+                        <teref id="treeRef-QUQI_TE000003UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query General Activate Query Continuation" refFamiliarName="Query General Activate Query Continuation" refIdentifier="QUQI_TE000003UV01"/>
+                     </artreeitem>
+                     <artreeitem>
+                        <teref id="treeRef-QUQI_TE000002UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query General Complete Query Response" refFamiliarName="Query General Complete Query Response" refIdentifier="QUQI_TE000002UV01"/>
+                     </artreeitem>
+                     <artreeitem>
+                        <teref id="treeRef-QUQI_TE000004UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query General Complete Query Response Continuation" refFamiliarName="Query General Complete Query Response Continuation" refIdentifier="QUQI_TE000004UV01"/>
+                     </artreeitem>
+                     <artreeitem>
+                        <teref id="treeRef-QUQI_TE000001UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query General Execute Query Specification" refFamiliarName="Query General Execute Query Specification" refIdentifier="QUQI_TE000001UV01"/>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21010" role="tree-intro" sectID="" sectType="SB" refName=" Refined Message Information Models" refFamiliarName=" Refined Message Information Models" refIdentifier=""/>
+                     <artreeitem>
+                        <rmimref id="treeRef-QUQI_RM020000UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Request : Parameter List" refFamiliarName="Query Control Act Request : Parameter List" refIdentifier="QUQI_RM020000UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-QUQI_HD020000UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Request : Parameter List" refFamiliarName="Query Control Act Request : Parameter List" refIdentifier="QUQI_HD020000UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-QUQI_MT020001UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Request : Parameter List" refFamiliarName="Query Control Act Request : Parameter List" refIdentifier="QUQI_MT020001UV01"/>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090300UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedDeviceUniversal" refFamiliarName="R_AssignedDeviceUniversal" refIdentifier="COCT_MT090300UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090100UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedPersonUniversal" refFamiliarName="R_AssignedPersonUniversal" refIdentifier="COCT_MT090100UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-MCAI_MT900001UV01" role="dependency" sectID="UVAI" sectType="SB" refName="A_DetectedIssueUniversal" refFamiliarName="A_DetectedIssueUniversal" refIdentifier="MCAI_MT900001UV01"/>
+                              </artreeitem>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <rmimref id="treeRef-QUQI_RM021000UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Request : Query By Parameter" refFamiliarName="Query Control Act Request : Query By Parameter" refIdentifier="QUQI_RM021000UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-QUQI_HD021000UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Request : Query By Parameter" refFamiliarName="Query Control Act Request : Query By Parameter" refIdentifier="QUQI_HD021000UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-QUQI_MT021001UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Request : Query By Parameter" refFamiliarName="Query Control Act Request : Query By Parameter" refIdentifier="QUQI_MT021001UV01"/>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090300UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedDeviceUniversal" refFamiliarName="R_AssignedDeviceUniversal" refIdentifier="COCT_MT090300UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090100UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedPersonUniversal" refFamiliarName="R_AssignedPersonUniversal" refIdentifier="COCT_MT090100UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-MCAI_MT900001UV01" role="dependency" sectID="UVAI" sectType="SB" refName="A_DetectedIssueUniversal" refFamiliarName="A_DetectedIssueUniversal" refIdentifier="MCAI_MT900001UV01"/>
+                              </artreeitem>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <rmimref id="treeRef-QUQI_RM000001UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Request Continue / Cancel" refFamiliarName="Query Control Act Request Continue / Cancel" refIdentifier="QUQI_RM000001UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-QUQI_HD000001UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Request Continue / Cancel" refFamiliarName="Query Control Act Request Continue / Cancel" refIdentifier="QUQI_HD000001UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-QUQI_MT000001UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Request Continue / Cancel" refFamiliarName="Query Control Act Request Continue / Cancel" refIdentifier="QUQI_MT000001UV01"/>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090300UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedDeviceUniversal" refFamiliarName="R_AssignedDeviceUniversal" refIdentifier="COCT_MT090300UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090100UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedPersonUniversal" refFamiliarName="R_AssignedPersonUniversal" refIdentifier="COCT_MT090100UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-MCAI_MT900001UV01" role="dependency" sectID="UVAI" sectType="SB" refName="A_DetectedIssueUniversal" refFamiliarName="A_DetectedIssueUniversal" refIdentifier="MCAI_MT900001UV01"/>
+                              </artreeitem>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <rmimref id="treeRef-QUQI_RM120000UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Response / Acknowledgement" refFamiliarName="Query Control Act Response / Acknowledgement" refIdentifier="QUQI_RM120000UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-QUQI_HD120000UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Response / Acknowledgement" refFamiliarName="Query Control Act Response / Acknowledgement" refIdentifier="QUQI_HD120000UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-QUQI_MT120001UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query Control Act Response / Acknowledgement" refFamiliarName="Query Control Act Response / Acknowledgement" refIdentifier="QUQI_MT120001UV01"/>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090300UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedDeviceUniversal" refFamiliarName="R_AssignedDeviceUniversal" refIdentifier="COCT_MT090300UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090100UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedPersonUniversal" refFamiliarName="R_AssignedPersonUniversal" refIdentifier="COCT_MT090100UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-MCAI_MT900001UV01" role="dependency" sectID="UVAI" sectType="SB" refName="A_DetectedIssueUniversal" refFamiliarName="A_DetectedIssueUniversal" refIdentifier="MCAI_MT900001UV01"/>
+                              </artreeitem>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21010" role="tree-intro" sectID="" sectType="SB" refName=" Interactions" refFamiliarName=" Interactions" refIdentifier=""/>
+                     <artreeitem>
+                        <intref id="treeRef-QUQI_IN000003UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="General Query Activate Query Continue" refFamiliarName="General Query Activate Query Continue" refIdentifier="QUQI_IN000003UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-QUQI_AR000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query by Parameter Fulfiller" refFamiliarName="Query by Parameter Fulfiller" refIdentifier="QUQI_AR000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-QUQI_AR000001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query by Parameter Placer" refFamiliarName="Query by Parameter Placer" refIdentifier="QUQI_AR000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-QUQI_TE000003UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query General Activate Query Continuation" refFamiliarName="Query General Activate Query Continuation" refIdentifier="QUQI_TE000003UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000300UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Application Level Acknowledgement" refFamiliarName="Application Level Acknowledgement" refIdentifier="MCCI_MT000300UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-QUQI_MT000001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query Control Act Request Continue / Cancel" refFamiliarName="Query Control Act Request Continue / Cancel" refIdentifier="QUQI_MT000001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <intref id="treeRef-QUQI_IN000002UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="General Query Complete Query Response" refFamiliarName="General Query Complete Query Response" refIdentifier="QUQI_IN000002UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-QUQI_AR000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query by Parameter Fulfiller" refFamiliarName="Query by Parameter Fulfiller" refIdentifier="QUQI_AR000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-QUQI_AR000001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query by Parameter Placer" refFamiliarName="Query by Parameter Placer" refIdentifier="QUQI_AR000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-QUQI_TE000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query General Complete Query Response" refFamiliarName="Query General Complete Query Response" refIdentifier="QUQI_TE000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000300UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Application Level Acknowledgement" refFamiliarName="Application Level Acknowledgement" refIdentifier="MCCI_MT000300UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-QUQI_MT120001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query Control Act Response / Acknowledgement" refFamiliarName="Query Control Act Response / Acknowledgement" refIdentifier="QUQI_MT120001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-QUQI_TE000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query General Complete Query Response" refFamiliarName="Query General Complete Query Response" refIdentifier="QUQI_TE000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Complete Query Response" refFamiliarName="General Query Complete Query Response" refIdentifier="QUQI_IN000002UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <intref id="treeRef-QUQI_IN000001UV01" role="tree-element" sectID="UVQI" sectType="SB" refName="Query by Parameter Query Specification" refFamiliarName="Query by Parameter Query Specification" refIdentifier="QUQI_IN000001UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-QUQI_AR000001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query by Parameter Placer" refFamiliarName="Query by Parameter Placer" refIdentifier="QUQI_AR000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-QUQI_AR000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query by Parameter Fulfiller" refFamiliarName="Query by Parameter Fulfiller" refIdentifier="QUQI_AR000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-QUQI_TE000001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query General Execute Query Specification" refFamiliarName="Query General Execute Query Specification" refIdentifier="QUQI_TE000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-QUQI_MT020001UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query Control Act Request : Parameter List" refFamiliarName="Query Control Act Request : Parameter List" refIdentifier="QUQI_MT020001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-QUQI_TE000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="Query General Complete Query Response" refFamiliarName="Query General Complete Query Response" refIdentifier="QUQI_TE000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-QUQI_IN000002UV01" role="dependency" sectID="UVQI" sectType="SB" refName="General Query Complete Query Response" refFamiliarName="General Query Complete Query Response" refIdentifier="QUQI_IN000002UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+            </artreeitem>
+         </artree>
+      </div1>
+   </body>
+</spec>

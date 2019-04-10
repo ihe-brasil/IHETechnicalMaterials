@@ -1,0 +1,1421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="urn://hl7.org/CTSMAPI" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="urn://hl7.org/CTSMAPI" xmlns:intf="urn://hl7.org/CTSMAPI" xmlns:tns2="urn://cts.hl7.org/types" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.2RC2
+Built on Nov 16, 2004 (12:19:44 EST)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="urn://hl7.org/CTSMAPI" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="urn://cts.hl7.org/types"/>
+   <element name="getSupportedMatchAlgorithms">
+    <complexType/>
+   </element>
+   <element name="getSupportedMatchAlgorithmsResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getSupportedMatchAlgorithmsReturn" type="tns2:ST"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="UnexpectedError">
+    <sequence>
+     <element name="possible_cause" nillable="true" type="tns2:ST"/>
+    </sequence>
+   </complexType>
+   <element name="fault" type="impl:UnexpectedError"/>
+   <element name="getSupportedAttributes">
+    <complexType>
+     <sequence>
+      <element name="in0" type="tns2:ST"/>
+      <element name="in1" type="tns2:ST"/>
+      <element name="in2" type="xsd:int"/>
+      <element name="in3" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getSupportedAttributesResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getSupportedAttributesReturn" type="impl:RIMCodedAttribute"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="RIMAttributeId">
+    <sequence>
+     <element name="model_id" nillable="true" type="tns2:ST"/>
+     <element name="class_name" nillable="true" type="tns2:ST"/>
+     <element name="attribute_name" nillable="true" type="tns2:ST"/>
+    </sequence>
+   </complexType>
+   <complexType name="RIMCodedAttribute">
+    <sequence>
+     <element name="RIMAttribute_id" nillable="true" type="impl:RIMAttributeId"/>
+     <element name="dataType_code" nillable="true" type="tns2:ST"/>
+     <element name="codingStrength_code" nillable="true" type="tns2:ST"/>
+     <element name="vocabularyDomain_name" nillable="true" type="tns2:ST"/>
+    </sequence>
+   </complexType>
+   <complexType name="BadlyFormedMatchText">
+    <sequence>
+     <element name="matchText" nillable="true" type="tns2:ST"/>
+    </sequence>
+   </complexType>
+   <element name="fault1" type="impl:BadlyFormedMatchText"/>
+   <complexType name="UnknownMatchAlgorithm">
+    <sequence>
+     <element name="matchAlgorithm_code" nillable="true" type="tns2:ST"/>
+    </sequence>
+   </complexType>
+   <element name="fault2" type="impl:UnknownMatchAlgorithm"/>
+   <complexType name="TimeoutError">
+    <sequence/>
+   </complexType>
+   <element name="fault3" type="impl:TimeoutError"/>
+   <element name="getSupportedVocabularyDomains">
+    <complexType>
+     <sequence>
+      <element name="in0" type="tns2:ST"/>
+      <element name="in1" type="tns2:ST"/>
+      <element name="in2" type="xsd:int"/>
+      <element name="in3" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getSupportedVocabularyDomainsResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getSupportedVocabularyDomainsReturn" type="tns2:ST"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getSupportedValueSets">
+    <complexType>
+     <sequence>
+      <element name="in0" type="tns2:ST"/>
+      <element name="in1" type="tns2:ST"/>
+      <element name="in2" type="xsd:int"/>
+      <element name="in3" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getSupportedValueSetsResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getSupportedValueSetsReturn" type="impl:ValueSetDescriptor"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ValueSetDescriptor">
+    <sequence>
+     <element name="valueSet_id" nillable="true" type="tns2:UID"/>
+     <element name="valueSet_name" nillable="true" type="tns2:ST"/>
+    </sequence>
+   </complexType>
+   <element name="getSupportedCodeSystems">
+    <complexType>
+     <sequence>
+      <element name="in0" type="tns2:ST"/>
+      <element name="in1" type="tns2:ST"/>
+      <element name="in2" type="xsd:int"/>
+      <element name="in3" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getSupportedCodeSystemsResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getSupportedCodeSystemsReturn" type="impl:CodeSystemDescriptor"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ArrayOf_tns2_ST">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="tns2:ST"/>
+    </sequence>
+   </complexType>
+   <complexType name="CodeSystemDescriptor">
+    <sequence>
+     <element name="codeSystem_id" nillable="true" type="tns2:UID"/>
+     <element name="codeSystem_name" nillable="true" type="tns2:ST"/>
+     <element name="copyright" nillable="true" type="tns2:ST"/>
+     <element name="availableReleases" nillable="true" type="impl:ArrayOf_tns2_ST"/>
+    </sequence>
+   </complexType>
+   <element name="lookupVocabularyDomain">
+    <complexType>
+     <sequence>
+      <element name="in0" type="tns2:ST"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="lookupVocabularyDomainResponse">
+    <complexType>
+     <sequence>
+      <element name="lookupVocabularyDomainReturn" type="impl:VocabularyDomainDescription"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ArrayOfRIMCodedAttribute">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="impl:RIMCodedAttribute"/>
+    </sequence>
+   </complexType>
+   <complexType name="VocabularyDomainValueSet">
+    <sequence>
+     <element name="definedByValueSet" nillable="true" type="impl:ValueSetDescriptor"/>
+     <element name="applicationContext_code" nillable="true" type="tns2:ST"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfVocabularyDomainValueSet">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="impl:VocabularyDomainValueSet"/>
+    </sequence>
+   </complexType>
+   <complexType name="VocabularyDomainDescription">
+    <sequence>
+     <element name="vocabularyDomain_name" nillable="true" type="tns2:ST"/>
+     <element name="description" nillable="true" type="tns2:ST"/>
+     <element name="restrictsDomain_name" nillable="true" type="tns2:ST"/>
+     <element name="basisOfDomains" nillable="true" type="impl:ArrayOf_tns2_ST"/>
+     <element name="constrainsAttributes" nillable="true" type="impl:ArrayOfRIMCodedAttribute"/>
+     <element name="representedByValueSets" nillable="true" type="impl:ArrayOfVocabularyDomainValueSet"/>
+    </sequence>
+   </complexType>
+   <complexType name="UnknownVocabularyDomain">
+    <sequence>
+     <element name="vocabularyDomain_name" nillable="true" type="tns2:ST"/>
+    </sequence>
+   </complexType>
+   <element name="fault4" type="impl:UnknownVocabularyDomain"/>
+   <element name="lookupValueSet">
+    <complexType>
+     <sequence>
+      <element name="in0" type="tns2:UID"/>
+      <element name="in1" type="tns2:ST"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="lookupValueSetResponse">
+    <complexType>
+     <sequence>
+      <element name="lookupValueSetReturn" type="impl:FullValueSetDescription"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ValueSetDescription">
+    <sequence>
+     <element name="idAndName" nillable="true" type="impl:ValueSetDescriptor"/>
+     <element name="description" nillable="true" type="tns2:ST"/>
+     <element name="definingExpression" nillable="true" type="tns2:ST"/>
+     <element name="basedOnCodeSystem" nillable="true" type="impl:CodeSystemDescriptor"/>
+     <element name="allCodes" nillable="true" type="tns2:BL"/>
+     <element name="head_code" nillable="true" type="tns2:ST"/>
+    </sequence>
+   </complexType>
+   <complexType name="ValueSetConstructor">
+    <sequence>
+     <element name="includedValueSet" nillable="true" type="impl:ValueSetDescriptor"/>
+     <element name="includeHeadCode" nillable="true" type="tns2:BL"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfValueSetConstructor">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="impl:ValueSetConstructor"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfValueSetDescriptor">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="impl:ValueSetDescriptor"/>
+    </sequence>
+   </complexType>
+   <complexType name="ValueSetCodeReference">
+    <sequence>
+     <element name="referenced_code" nillable="true" type="tns2:ST"/>
+     <element name="relationship_code" nillable="true" type="tns2:ST"/>
+     <element name="includeReferencedCode" nillable="true" type="tns2:BL"/>
+     <element name="leafOnly" nillable="true" type="tns2:BL"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfValueSetCodeReference">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="impl:ValueSetCodeReference"/>
+    </sequence>
+   </complexType>
+   <complexType name="FullValueSetDescription">
+    <sequence>
+     <element name="description" nillable="true" type="impl:ValueSetDescription"/>
+     <element name="constructedUsingValueSets" nillable="true" type="impl:ArrayOfValueSetConstructor"/>
+     <element name="usedToDefine" nillable="true" type="impl:ArrayOfValueSetDescriptor"/>
+     <element name="referencesCodes" nillable="true" type="impl:ArrayOfValueSetCodeReference"/>
+    </sequence>
+   </complexType>
+   <complexType name="UnknownValueSet">
+    <sequence>
+     <element name="valueSet" nillable="true" type="impl:ValueSetDescriptor"/>
+    </sequence>
+   </complexType>
+   <element name="fault5" type="impl:UnknownValueSet"/>
+   <complexType name="ValueSetNameIdMismatch">
+    <sequence>
+     <element name="valueSet_id" nillable="true" type="tns2:UID"/>
+     <element name="valueSet_name" nillable="true" type="tns2:ST"/>
+    </sequence>
+   </complexType>
+   <element name="fault6" type="impl:ValueSetNameIdMismatch"/>
+   <element name="lookupCodeSystem">
+    <complexType>
+     <sequence>
+      <element name="in0" type="tns2:UID"/>
+      <element name="in1" type="tns2:ST"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="lookupCodeSystemResponse">
+    <complexType>
+     <sequence>
+      <element name="lookupCodeSystemReturn" type="impl:CodeSystemInfo"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="CodeSystemRegistration">
+    <sequence>
+     <element name="sponsor" nillable="true" type="tns2:ST"/>
+     <element name="publisher" nillable="true" type="tns2:ST"/>
+     <element name="versionReportingMethod" nillable="true" type="tns2:ST"/>
+     <element name="licensingInformation" nillable="true" type="tns2:ST"/>
+     <element name="inUMLS" nillable="true" type="tns2:BL"/>
+     <element name="systemSpecificLocatorInfo" nillable="true" type="tns2:ST"/>
+     <element name="codeSystemType_code" nillable="true" type="tns2:ST"/>
+    </sequence>
+   </complexType>
+   <complexType name="CodeSystemInfo">
+    <sequence>
+     <element name="description" nillable="true" type="impl:CodeSystemDescriptor"/>
+     <element name="registrationInfo" nillable="true" type="impl:CodeSystemRegistration"/>
+    </sequence>
+   </complexType>
+   <complexType name="UnknownCodeSystem">
+    <sequence>
+     <element name="codeSystem_id" nillable="true" type="tns2:UID"/>
+    </sequence>
+   </complexType>
+   <element name="fault7" type="impl:UnknownCodeSystem"/>
+   <complexType name="CodeSystemNameIdMismatch">
+    <sequence>
+     <element name="codeSystem_id" nillable="true" type="tns2:UID"/>
+     <element name="codeSystem_name" nillable="true" type="tns2:ST"/>
+    </sequence>
+   </complexType>
+   <element name="fault8" type="impl:CodeSystemNameIdMismatch"/>
+   <element name="lookupValueSetForDomain">
+    <complexType>
+     <sequence>
+      <element name="in0" type="tns2:ST"/>
+      <element name="in1" type="tns2:ST"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="lookupValueSetForDomainResponse">
+    <complexType>
+     <sequence>
+      <element name="lookupValueSetForDomainReturn" type="impl:ValueSetDescriptor"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="UnknownApplicationContextCode">
+    <sequence>
+     <element name="applicationContext_code" nillable="true" type="tns2:ST"/>
+    </sequence>
+   </complexType>
+   <element name="fault9" type="impl:UnknownApplicationContextCode"/>
+   <complexType name="NoApplicableValueSet">
+    <sequence>
+     <element name="vocabularyDomain_name" nillable="true" type="tns2:ST"/>
+     <element name="applicationContext_code" nillable="true" type="tns2:ST"/>
+    </sequence>
+   </complexType>
+   <element name="fault10" type="impl:NoApplicableValueSet"/>
+   <element name="isCodeInValueSet">
+    <complexType>
+     <sequence>
+      <element name="in0" type="tns2:UID"/>
+      <element name="in1" type="tns2:ST"/>
+      <element name="in2" type="tns2:BL"/>
+      <element name="in3" type="impl:ConceptId"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ConceptId">
+    <sequence>
+     <element name="codeSystem_id" nillable="true" type="tns2:UID"/>
+     <element name="concept_code" nillable="true" type="tns2:ST"/>
+    </sequence>
+   </complexType>
+   <element name="isCodeInValueSetResponse">
+    <complexType>
+     <sequence>
+      <element name="isCodeInValueSetReturn" type="tns2:BL"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="UnknownConceptCode">
+    <sequence>
+     <element name="concept_id" nillable="true" type="impl:ConceptId"/>
+    </sequence>
+   </complexType>
+   <element name="fault11" type="impl:UnknownConceptCode"/>
+   <element name="getServiceName">
+    <complexType/>
+   </element>
+   <element name="getServiceNameResponse">
+    <complexType>
+     <sequence>
+      <element name="getServiceNameReturn" type="tns2:ST"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getServiceVersion">
+    <complexType/>
+   </element>
+   <element name="getServiceVersionResponse">
+    <complexType>
+     <sequence>
+      <element name="getServiceVersionReturn" type="tns2:ST"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getServiceDescription">
+    <complexType/>
+   </element>
+   <element name="getServiceDescriptionResponse">
+    <complexType>
+     <sequence>
+      <element name="getServiceDescriptionReturn" type="tns2:ST"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getHL7ReleaseVersion">
+    <complexType/>
+   </element>
+   <element name="getHL7ReleaseVersionResponse">
+    <complexType>
+     <sequence>
+      <element name="getHL7ReleaseVersionReturn" type="tns2:ST"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getCTSVersion">
+    <complexType/>
+   </element>
+   <element name="getCTSVersionResponse">
+    <complexType>
+     <sequence>
+      <element name="getCTSVersionReturn" type="impl:CTSVersionId"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="CTSVersionId">
+    <sequence>
+     <element name="major" nillable="true" type="tns2:INT"/>
+     <element name="minor" nillable="true" type="tns2:INT"/>
+    </sequence>
+   </complexType>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="urn://cts.hl7.org/types" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="urn://hl7.org/CTSMAPI"/>
+   <complexType name="ST">
+    <sequence>
+     <element name="v" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="UID">
+    <sequence>
+     <element name="v" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="BL">
+    <sequence>
+     <element name="v" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <complexType name="INT">
+    <sequence>
+     <element name="v" type="xsd:int"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="UnknownMatchAlgorithm">
+
+      <wsdl:part element="impl:fault2" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupValueSetForDomainRequest">
+
+      <wsdl:part element="impl:lookupValueSetForDomain" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="UnexpectedError">
+
+      <wsdl:part element="impl:fault" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSupportedCodeSystemsRequest">
+
+      <wsdl:part element="impl:getSupportedCodeSystems" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupValueSetRequest">
+
+      <wsdl:part element="impl:lookupValueSet" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCTSVersionRequest">
+
+      <wsdl:part element="impl:getCTSVersion" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSupportedVocabularyDomainsRequest">
+
+      <wsdl:part element="impl:getSupportedVocabularyDomains" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="UnknownConceptCode">
+
+      <wsdl:part element="impl:fault11" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServiceDescriptionRequest">
+
+      <wsdl:part element="impl:getServiceDescription" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="UnknownApplicationContextCode">
+
+      <wsdl:part element="impl:fault9" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="UnknownCodeSystem">
+
+      <wsdl:part element="impl:fault7" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServiceVersionResponse">
+
+      <wsdl:part element="impl:getServiceVersionResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSupportedMatchAlgorithmsRequest">
+
+      <wsdl:part element="impl:getSupportedMatchAlgorithms" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupCodeSystemResponse">
+
+      <wsdl:part element="impl:lookupCodeSystemResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupValueSetResponse">
+
+      <wsdl:part element="impl:lookupValueSetResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSupportedAttributesResponse">
+
+      <wsdl:part element="impl:getSupportedAttributesResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSupportedValueSetsResponse">
+
+      <wsdl:part element="impl:getSupportedValueSetsResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCTSVersionResponse">
+
+      <wsdl:part element="impl:getCTSVersionResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServiceNameResponse">
+
+      <wsdl:part element="impl:getServiceNameResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="UnknownValueSet">
+
+      <wsdl:part element="impl:fault5" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSupportedMatchAlgorithmsResponse">
+
+      <wsdl:part element="impl:getSupportedMatchAlgorithmsResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="CodeSystemNameIdMismatch">
+
+      <wsdl:part element="impl:fault8" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupValueSetForDomainResponse">
+
+      <wsdl:part element="impl:lookupValueSetForDomainResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="TimeoutError">
+
+      <wsdl:part element="impl:fault3" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServiceNameRequest">
+
+      <wsdl:part element="impl:getServiceName" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHL7ReleaseVersionResponse">
+
+      <wsdl:part element="impl:getHL7ReleaseVersionResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSupportedValueSetsRequest">
+
+      <wsdl:part element="impl:getSupportedValueSets" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServiceDescriptionResponse">
+
+      <wsdl:part element="impl:getServiceDescriptionResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupVocabularyDomainRequest">
+
+      <wsdl:part element="impl:lookupVocabularyDomain" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="NoApplicableValueSet">
+
+      <wsdl:part element="impl:fault10" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSupportedAttributesRequest">
+
+      <wsdl:part element="impl:getSupportedAttributes" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSupportedCodeSystemsResponse">
+
+      <wsdl:part element="impl:getSupportedCodeSystemsResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSupportedVocabularyDomainsResponse">
+
+      <wsdl:part element="impl:getSupportedVocabularyDomainsResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServiceVersionRequest">
+
+      <wsdl:part element="impl:getServiceVersion" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="BadlyFormedMatchText">
+
+      <wsdl:part element="impl:fault1" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupVocabularyDomainResponse">
+
+      <wsdl:part element="impl:lookupVocabularyDomainResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="isCodeInValueSetRequest">
+
+      <wsdl:part element="impl:isCodeInValueSet" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupCodeSystemRequest">
+
+      <wsdl:part element="impl:lookupCodeSystem" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="UnknownVocabularyDomain">
+
+      <wsdl:part element="impl:fault4" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="isCodeInValueSetResponse">
+
+      <wsdl:part element="impl:isCodeInValueSetResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHL7ReleaseVersionRequest">
+
+      <wsdl:part element="impl:getHL7ReleaseVersion" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="ValueSetNameIdMismatch">
+
+      <wsdl:part element="impl:fault6" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="BrowserOperations">
+
+      <wsdl:operation name="getSupportedMatchAlgorithms">
+
+         <wsdl:input message="impl:getSupportedMatchAlgorithmsRequest" name="getSupportedMatchAlgorithmsRequest"/>
+
+         <wsdl:output message="impl:getSupportedMatchAlgorithmsResponse" name="getSupportedMatchAlgorithmsResponse"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSupportedAttributes">
+
+         <wsdl:input message="impl:getSupportedAttributesRequest" name="getSupportedAttributesRequest"/>
+
+         <wsdl:output message="impl:getSupportedAttributesResponse" name="getSupportedAttributesResponse"/>
+
+         <wsdl:fault message="impl:UnknownMatchAlgorithm" name="UnknownMatchAlgorithm"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+         <wsdl:fault message="impl:BadlyFormedMatchText" name="BadlyFormedMatchText"/>
+
+         <wsdl:fault message="impl:TimeoutError" name="TimeoutError"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSupportedVocabularyDomains">
+
+         <wsdl:input message="impl:getSupportedVocabularyDomainsRequest" name="getSupportedVocabularyDomainsRequest"/>
+
+         <wsdl:output message="impl:getSupportedVocabularyDomainsResponse" name="getSupportedVocabularyDomainsResponse"/>
+
+         <wsdl:fault message="impl:UnknownMatchAlgorithm" name="UnknownMatchAlgorithm"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+         <wsdl:fault message="impl:BadlyFormedMatchText" name="BadlyFormedMatchText"/>
+
+         <wsdl:fault message="impl:TimeoutError" name="TimeoutError"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSupportedValueSets">
+
+         <wsdl:input message="impl:getSupportedValueSetsRequest" name="getSupportedValueSetsRequest"/>
+
+         <wsdl:output message="impl:getSupportedValueSetsResponse" name="getSupportedValueSetsResponse"/>
+
+         <wsdl:fault message="impl:UnknownMatchAlgorithm" name="UnknownMatchAlgorithm"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+         <wsdl:fault message="impl:BadlyFormedMatchText" name="BadlyFormedMatchText"/>
+
+         <wsdl:fault message="impl:TimeoutError" name="TimeoutError"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSupportedCodeSystems">
+
+         <wsdl:input message="impl:getSupportedCodeSystemsRequest" name="getSupportedCodeSystemsRequest"/>
+
+         <wsdl:output message="impl:getSupportedCodeSystemsResponse" name="getSupportedCodeSystemsResponse"/>
+
+         <wsdl:fault message="impl:UnknownMatchAlgorithm" name="UnknownMatchAlgorithm"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+         <wsdl:fault message="impl:BadlyFormedMatchText" name="BadlyFormedMatchText"/>
+
+         <wsdl:fault message="impl:TimeoutError" name="TimeoutError"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupVocabularyDomain">
+
+         <wsdl:input message="impl:lookupVocabularyDomainRequest" name="lookupVocabularyDomainRequest"/>
+
+         <wsdl:output message="impl:lookupVocabularyDomainResponse" name="lookupVocabularyDomainResponse"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+         <wsdl:fault message="impl:UnknownVocabularyDomain" name="UnknownVocabularyDomain"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupValueSet">
+
+         <wsdl:input message="impl:lookupValueSetRequest" name="lookupValueSetRequest"/>
+
+         <wsdl:output message="impl:lookupValueSetResponse" name="lookupValueSetResponse"/>
+
+         <wsdl:fault message="impl:UnknownValueSet" name="UnknownValueSet"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+         <wsdl:fault message="impl:ValueSetNameIdMismatch" name="ValueSetNameIdMismatch"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupCodeSystem">
+
+         <wsdl:input message="impl:lookupCodeSystemRequest" name="lookupCodeSystemRequest"/>
+
+         <wsdl:output message="impl:lookupCodeSystemResponse" name="lookupCodeSystemResponse"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+         <wsdl:fault message="impl:CodeSystemNameIdMismatch" name="CodeSystemNameIdMismatch"/>
+
+         <wsdl:fault message="impl:UnknownCodeSystem" name="UnknownCodeSystem"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupValueSetForDomain">
+
+         <wsdl:input message="impl:lookupValueSetForDomainRequest" name="lookupValueSetForDomainRequest"/>
+
+         <wsdl:output message="impl:lookupValueSetForDomainResponse" name="lookupValueSetForDomainResponse"/>
+
+         <wsdl:fault message="impl:NoApplicableValueSet" name="NoApplicableValueSet"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+         <wsdl:fault message="impl:UnknownApplicationContextCode" name="UnknownApplicationContextCode"/>
+
+         <wsdl:fault message="impl:UnknownVocabularyDomain" name="UnknownVocabularyDomain"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isCodeInValueSet">
+
+         <wsdl:input message="impl:isCodeInValueSetRequest" name="isCodeInValueSetRequest"/>
+
+         <wsdl:output message="impl:isCodeInValueSetResponse" name="isCodeInValueSetResponse"/>
+
+         <wsdl:fault message="impl:UnknownValueSet" name="UnknownValueSet"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+         <wsdl:fault message="impl:ValueSetNameIdMismatch" name="ValueSetNameIdMismatch"/>
+
+         <wsdl:fault message="impl:UnknownConceptCode" name="UnknownConceptCode"/>
+
+         <wsdl:fault message="impl:UnknownCodeSystem" name="UnknownCodeSystem"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServiceName">
+
+         <wsdl:input message="impl:getServiceNameRequest" name="getServiceNameRequest"/>
+
+         <wsdl:output message="impl:getServiceNameResponse" name="getServiceNameResponse"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServiceVersion">
+
+         <wsdl:input message="impl:getServiceVersionRequest" name="getServiceVersionRequest"/>
+
+         <wsdl:output message="impl:getServiceVersionResponse" name="getServiceVersionResponse"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServiceDescription">
+
+         <wsdl:input message="impl:getServiceDescriptionRequest" name="getServiceDescriptionRequest"/>
+
+         <wsdl:output message="impl:getServiceDescriptionResponse" name="getServiceDescriptionResponse"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHL7ReleaseVersion">
+
+         <wsdl:input message="impl:getHL7ReleaseVersionRequest" name="getHL7ReleaseVersionRequest"/>
+
+         <wsdl:output message="impl:getHL7ReleaseVersionResponse" name="getHL7ReleaseVersionResponse"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCTSVersion">
+
+         <wsdl:input message="impl:getCTSVersionRequest" name="getCTSVersionRequest"/>
+
+         <wsdl:output message="impl:getCTSVersionResponse" name="getCTSVersionResponse"/>
+
+         <wsdl:fault message="impl:UnexpectedError" name="UnexpectedError"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="MessageBrowserServiceSoapBinding" type="impl:BrowserOperations">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getSupportedMatchAlgorithms">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSupportedMatchAlgorithmsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSupportedMatchAlgorithmsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSupportedAttributes">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSupportedAttributesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSupportedAttributesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnknownMatchAlgorithm">
+
+            <wsdlsoap:fault name="UnknownMatchAlgorithm" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="BadlyFormedMatchText">
+
+            <wsdlsoap:fault name="BadlyFormedMatchText" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="TimeoutError">
+
+            <wsdlsoap:fault name="TimeoutError" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSupportedVocabularyDomains">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSupportedVocabularyDomainsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSupportedVocabularyDomainsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnknownMatchAlgorithm">
+
+            <wsdlsoap:fault name="UnknownMatchAlgorithm" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="BadlyFormedMatchText">
+
+            <wsdlsoap:fault name="BadlyFormedMatchText" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="TimeoutError">
+
+            <wsdlsoap:fault name="TimeoutError" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSupportedValueSets">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSupportedValueSetsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSupportedValueSetsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnknownMatchAlgorithm">
+
+            <wsdlsoap:fault name="UnknownMatchAlgorithm" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="BadlyFormedMatchText">
+
+            <wsdlsoap:fault name="BadlyFormedMatchText" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="TimeoutError">
+
+            <wsdlsoap:fault name="TimeoutError" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSupportedCodeSystems">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSupportedCodeSystemsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSupportedCodeSystemsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnknownMatchAlgorithm">
+
+            <wsdlsoap:fault name="UnknownMatchAlgorithm" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="BadlyFormedMatchText">
+
+            <wsdlsoap:fault name="BadlyFormedMatchText" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="TimeoutError">
+
+            <wsdlsoap:fault name="TimeoutError" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupVocabularyDomain">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="lookupVocabularyDomainRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="lookupVocabularyDomainResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownVocabularyDomain">
+
+            <wsdlsoap:fault name="UnknownVocabularyDomain" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupValueSet">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="lookupValueSetRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="lookupValueSetResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnknownValueSet">
+
+            <wsdlsoap:fault name="UnknownValueSet" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="ValueSetNameIdMismatch">
+
+            <wsdlsoap:fault name="ValueSetNameIdMismatch" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupCodeSystem">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="lookupCodeSystemRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="lookupCodeSystemResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="CodeSystemNameIdMismatch">
+
+            <wsdlsoap:fault name="CodeSystemNameIdMismatch" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownCodeSystem">
+
+            <wsdlsoap:fault name="UnknownCodeSystem" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupValueSetForDomain">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="lookupValueSetForDomainRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="lookupValueSetForDomainResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="NoApplicableValueSet">
+
+            <wsdlsoap:fault name="NoApplicableValueSet" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownApplicationContextCode">
+
+            <wsdlsoap:fault name="UnknownApplicationContextCode" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownVocabularyDomain">
+
+            <wsdlsoap:fault name="UnknownVocabularyDomain" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isCodeInValueSet">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="isCodeInValueSetRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="isCodeInValueSetResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnknownValueSet">
+
+            <wsdlsoap:fault name="UnknownValueSet" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="ValueSetNameIdMismatch">
+
+            <wsdlsoap:fault name="ValueSetNameIdMismatch" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownConceptCode">
+
+            <wsdlsoap:fault name="UnknownConceptCode" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="UnknownCodeSystem">
+
+            <wsdlsoap:fault name="UnknownCodeSystem" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServiceName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getServiceNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getServiceNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServiceVersion">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getServiceVersionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getServiceVersionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServiceDescription">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getServiceDescriptionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getServiceDescriptionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHL7ReleaseVersion">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getHL7ReleaseVersionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getHL7ReleaseVersionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCTSVersion">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getCTSVersionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getCTSVersionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UnexpectedError">
+
+            <wsdlsoap:fault name="UnexpectedError" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="BrowserOperationsService">
+
+      <wsdl:port binding="impl:MessageBrowserServiceSoapBinding" name="MessageBrowserService">
+
+         <wsdlsoap:address location="http://localhost:8080/axis/services/MessageBrowserService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

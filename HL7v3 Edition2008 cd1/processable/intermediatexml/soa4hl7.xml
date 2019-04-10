@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE spec SYSTEM "../../support/dtd/v3m.dtd">
+<spec>
+	<header>
+		<title>SERVICE ORIENTED ARCHITECTURE AND HL7 V3 METHODOLOGY</title>
+		<version>1.0</version>
+		<date>29 September 2006</date>
+		<authlist>
+			<author>
+				<role>Project Lead</role>
+				<name key="Honey, Alan">Alan Honey</name>
+			</author>
+			<author>
+				<role>Editor</role>
+				<name key="Lund, Brad">Brad Lund </name>
+			</author>
+			<author>
+				<role>Author</role>
+				<name key="Dutta, Ani">Ani Dutta</name>
+			</author>
+			<author>
+				<role>Author</role>
+				<name key="Porrasmaa, Jari">Jari Porrasmaa</name>
+			</author>
+			<author>
+				<role>Author</role>
+				<name key="Mykkanen, Juha">Juha Mykkanen</name>
+			</author>
+			<author>
+				<role>Author</role>
+				<name key="Connor, Kathleen">Kathleen Connor</name>
+			</author>
+			<author>
+				<role>Author</role>
+				<name key="Kumar, Manoj">Manoj Kumar</name>
+			</author>
+			<author>
+				<role>Author</role>
+				<name key="Stevens, Rick">Rick Stevens</name>
+			</author>
+		</authlist>
+			</header>
+	<body>
+		<div1 id="SOA4HL7" ballotStatus="InformativeStandard" ballotNumber="1">
+			<head>Introduction</head>
+			<div2 id="NotestoReaders">
+					<head>Notes to Readers</head>
+<p>This document is a detailed but informal document, aimed at defining an approach for implementing healthcare services within a Service Oriented Architecture. This is intended to complement the Service Specification Framework (SSF) defined within the Healthcare Services Specification Project (HSSP), but provide an additional interim method of defining and implementing web services based on HL7 V3 artifacts.</p>
+<p>Work is also ongoing to marry this work, and other related HSSP work with the overall HL7 processes (HDF etc.). As and when that work matures, this document will be updated and/or replaced.</p>
+			<artref ref="file:SOA-HL7_Methodology_v1-0.pdf" alt="Click here to download a copy of the approved document."/>
+			</div2>
+		</div1>
+	</body>
+</spec>

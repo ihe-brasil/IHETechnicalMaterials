@@ -1,0 +1,1072 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <link rel="stylesheet" type="text/css" href="../../support/css/v3m.css" title="v3m" /><script src="../../support/js/tree.js" type="text/javascript"></script><script src="../../support/js/setTopFrameText.js" type="text/javascript"></script><script src="../../support/js/swapcss.js" type="text/javascript"></script><script type="text/javascript">
+			if (find('heading')) setHeadingTextFromFileName(document.location.href);
+			</script><title>Domain: Medical Records</title>
+   </head>
+   <body>
+      <div class="section">
+         <h1>Domain: Medical Records</h1>
+         <table cellspacing="0" cellpadding="3" border="1">
+            <tr>
+               <td align="center"><img src="../../support/graphics/ansilogo.gif" alt="ANSI" /><br />ANSI/HL7 V3 RCMR, R1-2006<br />HL7 Version 3 Standard: Medical Records/Information Management, Release 1<br />11/3/2006<img width="5" alt="spacer" src="../../support/graphics/spacer.gif" /></td>
+               <td align="center"><img src="../../support/graphics/dstulogo.gif" alt="DSTU" /><br />HL7 V3 RCMR, R2-2006<br />HL7 Version 3 Standard: Medical Records/Information Management, Release 2<br />2006<img width="5" alt="spacer" src="../../support/graphics/spacer.gif" /></td>
+               <td align="center"><img src="../../support/graphics/hl7candidatestandardlogo.gif" alt="Candidate ANSI Standard" /><br />HL7 V3 MR DATACONSENT, R1-2008<br />HL7 Version 3 Standard: Medical Records; Data Access Consent, Release 1 (Candidate ANSI Standard)<br />Summer 2008<img width="5" alt="spacer" src="../../support/graphics/spacer.gif" /></td>
+            </tr>
+         </table>
+         <table style="border-width:0" width="100%" cellpadding="6">
+            <tr>
+               <td valign="top" align="left">Community Based Collaborative Care SIG Modeling and Vocabulary Facilitator</td>
+               <td valign="top" align="left">Kathleen Connor<br />Fox Systems, Inc
+               </td>
+            </tr>
+            <tr>
+               <td valign="top" align="left">Primary Contributor</td>
+               <td valign="top" align="left">Bob Dolin, MD<br />Kaiser Permanente
+               </td>
+            </tr>
+            <tr>
+               <td valign="top" align="left">Primary Contributor</td>
+               <td valign="top" align="left">Matthew Greene<br />U.S. Department of Veterans Affairs
+               </td>
+            </tr>
+            <tr>
+               <td valign="top" align="left">Community Based Collaborative Care Publishing Facilitator</td>
+               <td valign="top" align="left">Francine Kitchen<br />GE Healthcare
+               </td>
+            </tr>
+            <tr>
+               <td valign="top" align="left">Medical Records Co-Chair</td>
+               <td valign="top" align="left">Nancy LeRoy, BS, CCS, CCP<br />U.S. Department of Veterans Affairs
+               </td>
+            </tr>
+            <tr>
+               <td valign="top" align="left">Medical Records Past Co-Chair</td>
+               <td valign="top" align="left">Michelle Dougherty<br />American Health Information Management Association
+               </td>
+            </tr>
+            <tr>
+               <td valign="top" align="left">Medical Records Past Co-Chair</td>
+               <td valign="top" align="left">Wayne Tracy<br />Health Patterns, LLC
+               </td>
+            </tr>
+            <tr>
+               <td valign="top" align="left">Medical Records Co-Chair</td>
+               <td valign="top" align="left">John Travis<br />Cerner Corporation
+               </td>
+            </tr>
+         </table>
+         <p class="copyright">Last Published: 06/24/2008 2:24 PM</p>
+         <p class="lastEdit">Content Last Edited: 4/30/2008 11:54:50 AM</p>
+         <p class="copyright">HL7® Version 3 Standard, © 2008 Health 
+            Level Seven®, Inc.  All Rights Reserved.
+         </p>
+         <p class="copyright">HL7 and Health Level Seven are registered 
+            trademarks of Health Level Seven, Inc.  Reg. U.S. Pat &amp; TM Off
+         </p>
+         <hr title="Separator for header" />
+         <h2><a name="contents">Table of Contents</a></h2><br /><a href="#prefBegin">Preface</a><br /><span>    i  <a href="UVMR.htm#navigate-divs">Message Design Element Navigation</a><br /></span>1  <a href="UVMR.htm#intro-RCMR_DO000010UV-ic">Overview</a><br />    1.1  <a href="UVMR.htm#spec-scope">Introduction &amp; Scope</a><br />
+         			    1.2  <a href="UVMR.htm#dmims-RCMR_DO000010UV-ic">Domain Message Information Models</a><br />2.  <a href="UVMR_DocumentManagement.htm#RCMR_DO000010UV-Document-ic">Document Management Topic</a><br /><span>    2.1  <a href="UVMR_DocumentManagement.htm#sbs-RCMR_DO000010UV-Document-ic">Storyboards</a><br /></span><span>    2.2  <a href="UVMR_DocumentManagement.htm#roles-RCMR_DO000010UV-Document-ic">Application Roles</a><br /></span><span>    2.3  <a href="UVMR_DocumentManagement.htm#tes-RCMR_DO000010UV-Document-ic">Trigger Events</a><br /></span><span>    2.4  <a href="UVMR_DocumentManagement.htm#rmims-RCMR_DO000010UV-Document-ic">Refined Message Information Models</a><br /></span><span>    2.5  <a href="UVMR_DocumentManagement.htm#hmds-RCMR_DO000010UV-Document-ic">Hierarchical Message Descriptions</a><br /></span><span>    2.6  <a href="UVMR_DocumentManagement.htm#ints-RCMR_DO000010UV-Document-ic">Interactions</a><br /></span>3.  <a href="UVMR_DocumentQuery.htm#RCMR_DO000010UV-Query-ic">Document Query Topic</a><br /><span>    3.1  <a href="UVMR_DocumentQuery.htm#sbs-RCMR_DO000010UV-Query-ic">Storyboards</a><br /></span><span>    3.2  <a href="UVMR_DocumentQuery.htm#tes-RCMR_DO000010UV-Query-ic">Trigger Events</a><br /></span><span>    3.3  <a href="UVMR_DocumentQuery.htm#rmims-RCMR_DO000010UV-Query-ic">Refined Message Information Models</a><br /></span><span>    3.4  <a href="UVMR_DocumentQuery.htm#hmds-RCMR_DO000010UV-Query-ic">Hierarchical Message Descriptions</a><br /></span><span>    3.5  <a href="UVMR_DocumentQuery.htm#ints-RCMR_DO000010UV-Query-ic">Interactions</a><br /></span>4.  <a href="UVMR_DataConsent.htm#RCMR_DO000010UV-Consent-ic">Data Consent Topic</a><br /><span>    4.1  <a href="UVMR_DataConsent.htm#sbs-RCMR_DO000010UV-Consent-ic">Storyboards</a><br /></span><span>    4.2  <a href="UVMR_DataConsent.htm#roles-RCMR_DO000010UV-Consent-ic">Application Roles</a><br /></span><span>    4.3  <a href="UVMR_DataConsent.htm#tes-RCMR_DO000010UV-Consent-ic">Trigger Events</a><br /></span><span>    4.4  <a href="UVMR_DataConsent.htm#rmims-RCMR_DO000010UV-Consent-ic">Refined Message Information Models</a><br /></span><span>    4.5  <a href="UVMR_DataConsent.htm#hmds-RCMR_DO000010UV-Consent-ic">Hierarchical Message Descriptions</a><br /></span><span>    4.6  <a href="UVMR_DataConsent.htm#ints-RCMR_DO000010UV-Consent-ic">Interactions</a><br /></span>5.  <a href="UVMR_do_cmets.htm#">CMETs Defined by this Domain
+            			</a><br />6.  <a href="UVMR_DO_CT.htm#RCMR_DO000010UV-ic">Common Message Elements Annex<br /></a>
+         		    6.1  <a href="UVMR_DO_CT.htm#RCMR_DO000010UV-icc2id">CMETs Used In This Domain</a><br />7.  <a href="UVMR_DO_XX.htm#indx-RCMR_DO000010UV-ic">Interaction Annex</a><br />
+         		    7.1  <a href="UVMR_DO_XX.htm#RCMR_DO000010UV-ic1id">By Application Role</a><br />
+         		    7.2  <a href="UVMR_DO_XX.htm#RCMR_DO000010UV-ic2id">By Trigger Event</a><br />
+         		    7.3  <a href="UVMR_DO_XX.htm#RCMR_DO000010UV-ic3id">By Message Type</a><br />8.  <a href="uvmr_glossary.htm#">Glossary</a><br /><div class="body">
+            <div class="subSection">
+               <div class="header">
+                  <h3><a name="prefBegin">Preface</a></h3>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">i </span><span class="title"><a name="navigate-divs">Message Design Element Navigation</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e75" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong>Medical Records - Clinical Documents Message Model&nbsp;<a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_RM000050UV02-rmi" class="toc_link">RCMR_RM000050UV02</a></strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td class="toc_indent_flag_gap"> </td>
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                                       <tr id="d0e77" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                          <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong>Clinical Document Event&nbsp;<a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_HD000050UV02-hmd" class="toc_link">RCMR_HD000050UV02</a></strong></span></td>
+                                       </tr>
+                                       <tr class="toc_row_master">
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td valign="top">
+                                             <table cellpadding="0" cellspacing="0" style="border:0px">
+                                                <tr>
+                                                   <td>
+                                                      <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                         <tr>
+                                                            <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                            <td valign="top" align="left" class="general">Document Event&nbsp;<a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_MT000001UV02-msg" class="">RCMR_MT000001UV02</a></td>
+                                                         </tr>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                             <table cellpadding="0" cellspacing="0" style="border:0px">
+                                                <tr>
+                                                   <td>
+                                                      <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                         <tr>
+                                                            <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                            <td valign="top" align="left" class="general">Document Event, with Content&nbsp;<a href="../../domains/uvmr/uvmr_DocumentManagement.htm#RCMR_MT000002UV02-msg" class="">RCMR_MT000002UV02</a></td>
+                                                         </tr>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e83" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong>Medical Records Parameter Query Model&nbsp;<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_RM000920UV01-rmi" class="toc_link">RCMR_RM000920UV01</a></strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td class="toc_indent_flag_gap"> </td>
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                                       <tr id="d0e85" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                          <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong>Medical Records Parameter Query HMD&nbsp;<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_HD000920UV01-hmd" class="toc_link">RCMR_HD000920UV01</a></strong></span></td>
+                                       </tr>
+                                       <tr class="toc_row_master">
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td valign="top">
+                                             <table cellpadding="0" cellspacing="0" style="border:0px">
+                                                <tr>
+                                                   <td>
+                                                      <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                         <tr>
+                                                            <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                            <td valign="top" align="left" class="general">Medical Records Parameter Query Message&nbsp;<a href="../../domains/uvmr/uvmr_DocumentQuery.htm#RCMR_MT000003UV01-msg" class="">RCMR_MT000003UV01</a></td>
+                                                         </tr>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table inserted">
+                              <tr id="d0e89" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong>Shared Secred Model&nbsp;<a href="../../domains/uvmr/uvmr_DataConsent.htm#RCMR_RM010002UV01-rmi" class="toc_link">RCMR_RM010002UV01</a></strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td class="toc_indent_flag_gap"> </td>
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table changed">
+                                       <tr id="d0e91" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                          <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong>Shared Secret&nbsp;<a href="../../domains/uvmr/uvmr_DataConsent.htm#RCMR_HD010002UV01-hmd" class="toc_link">RCMR_HD010002UV01</a></strong></span></td>
+                                       </tr>
+                                       <tr class="toc_row_master">
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td valign="top">
+                                             <table cellpadding="0" cellspacing="0" style="border:0px" class="changed">
+                                                <tr>
+                                                   <td>
+                                                      <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                         <tr>
+                                                            <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                            <td valign="top" align="left" class="general">Shared Secret&nbsp;<a href="../../domains/uvmr/uvmr_DataConsent.htm#RCMR_MT010002UV01-msg" class="">RCMR_MT010002UV01</a></td>
+                                                         </tr>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table inserted">
+                              <tr id="d0e95" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong>Data Consent Model&nbsp;<a href="../../domains/uvmr/uvmr_DataConsent.htm#RCMR_RM010001UV01-rmi" class="toc_link">RCMR_RM010001UV01</a></strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td class="toc_indent_flag_gap"> </td>
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table inserted">
+                                       <tr id="d0e97" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                          <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong>Data Consent&nbsp;<a href="../../domains/uvmr/uvmr_DataConsent.htm#RCMR_HD010001UV01-hmd" class="toc_link">RCMR_HD010001UV01</a></strong></span></td>
+                                       </tr>
+                                       <tr class="toc_row_master">
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td valign="top">
+                                             <table cellpadding="0" cellspacing="0" style="border:0px" class="inserted">
+                                                <tr>
+                                                   <td>
+                                                      <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                         <tr>
+                                                            <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                            <td valign="top" align="left" class="general">Consent&nbsp;<a href="../../domains/uvmr/uvmr_DataConsent.htm#RCMR_MT010001UV01-msg" class="">RCMR_MT010001UV01</a></td>
+                                                         </tr>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table><br /></div>
+            </div>
+            <hr title="Separator from body" />
+            <div class="subSection">
+               <div class="header"><span class="icon"><img src="../../support/graphics/MixedContent.gif" alt="MixedContent1" /></span><span class="number">1 </span><span class="title"><a name="intro-RCMR_DO000010UV-ic">Overview</a></span></div>
+               <div class="body">
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number">1.1 </span><span class="title"><a name="spec-scope">Introduction &amp; Scope</a></span></div>
+                     <div class="body">
+                        <p>The Medical Records domain currently supports clinical document management, and document querying. In the future, it is intended
+                           also to support the data exchange needs of applications supporting other medical record functions, including chart location
+                           and tracking, deficiency analysis, consents, and release of information. The main purpose of the medical record is to produce
+                           an accurate, legal, and legible clinical document that serves as a comprehensive account of healthcare services provided to
+                           a patient, and which has the following characteristics:
+                        </p>
+                        <ul style="margin-left:20px;">
+                           <li>
+                              <p><strong>Persistence:</strong> A clinical document continues to exist in an unaltered state, for a time period defined by local and regulatory requirements.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>Stewardship:</strong> A clinical document is maintained by an organization entrusted with its care.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>Potential for authentication:</strong> A clinical document is an assemblage of information that is intended to be legally authenticated.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>Wholeness:</strong> Authentication of a clinical document applies to the whole and does not apply to portions of the document without the full
+                                 context of the document.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>Human readability:</strong> A clinical document is human readable.
+                              </p>
+                           </li>
+                        </ul>
+                        <p>These interactions are mainly associated with documents that will be or have been transcribed. The types and appearance of
+                           the transcribed documents can vary greatly within a healthcare organization and between organizations. However, the main purpose
+                           of the transcription process is to document patient care or diagnostic results in a legible manner; these documents then become
+                           part of the legal medical record. 
+                        </p>
+                        <div class="subSubSubSection">
+                           <div class="header"><span class="icon"> </span><span class="number">1.1.1 </span><span class="title"><a name="pref01">Use of Observation Reporting vs. Document Management Messaging</a></span></div>
+                           <div class="body">
+                              <p>Both Observation Reporting and Document Management messages can convey clinical observations including (but not limited to)
+                                 clinical laboratory results, measures of patient status and condition, vital signs, intake and output, severity and/or frequency
+                                 of symptoms.
+                              </p>
+                              <p>If the observation being reported meets one or more of the following criteria, then the content would qualify as a medical
+                                 document management message rather than an observation message.
+                              </p>
+                              <ul style="margin-left:20px;">
+                                 <li>
+                                    <p>Documents/reports that require succession management to reflect the evolution of both document addenda and replacement documents.
+                                       
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p>Documents/reports where the Sender wants to indicate the availability of the report for use in patient care.</p>
+                                 </li>
+                                 <li>
+                                    <p>Documents/reports where document storage status is useful for archival and purging purposes.</p>
+                                 </li>
+                              </ul>
+                              <p>Additional considerations that may affect the appropriateness of using the messages defined in this chapter include:</p>
+                              <ul style="margin-left:20px;">
+                                 <li>
+                                    <p>Documents/reports where the whole requires a signature as part of the message.</p>
+                                 </li>
+                                 <li>
+                                    <p>Documents/reports where the whole requires authentication as part of the message.</p>
+                                 </li>
+                              </ul>
+                              <p>Using these criteria, the following examples would typically qualify as reports transmitted via medical document management
+                                 messages:
+                              </p>
+                              <ul style="margin-left:20px;">
+                                 <li>
+                                    <p>History and Physical</p>
+                                 </li>
+                                 <li>
+                                    <p>Consultation reports</p>
+                                 </li>
+                                 <li>
+                                    <p>Discharge summaries</p>
+                                 </li>
+                                 <li>
+                                    <p>Surgical/anatomic pathology reports</p>
+                                 </li>
+                                 <li>
+                                    <p>Diagnostic imaging reports</p>
+                                 </li>
+                                 <li>
+                                    <p>Cardio-diagnostic reports</p>
+                                 </li>
+                                 <li>
+                                    <p>Operative reports</p>
+                                 </li>
+                                 <li>
+                                    <p>As an international example, microbiology reports may include clinical interpretation and require authentication.  This may
+                                       not be the case in all jurisdictions, but is an example that the use or requirement of the messages defined in this chapter
+                                       may be influenced by local considerations.
+                                    </p>
+                                 </li>
+                              </ul>
+                              <p><strong>NOTE: </strong> Transcription is not a defining quality for the selection of  a document management or observation reporting message.  In
+                                 a document management message, the document/report is typically dictated or transcribed, but not always. Machine-generated
+                                 or automated output is an example of a document/report that may be appropriately sent via a document management message but
+                                 is not transcribed.
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection">
+                           <div class="header"><span class="icon"> </span><span class="number">1.1.2 </span><span class="title"><a name="pref02">Security, Confidentiality, and Data Integrity</a></span></div>
+                           <div class="body">
+                              <p>Application systems sending and receiving clinical documents are responsible for meeting all legal requirements for document
+                                 authentication, confidentiality, and retention. For communications over public media, cryptographic techniques for source/recipient
+                                 authentication and secure transport of encapsulated documents may be required, and should be addressed with commercially available
+                                 tools outside the scope of this standard.
+                              </p>
+                              <p>Confidentiality status information is provided in medical records messages to aid application systems in managing access to
+                                 sensitive data. Confidentiality status may apply to the entire document or to specified segments of the document. 
+                              </p>
+                              <p><strong>Privacy and Security Prerequisites for Document Queries</strong></p>
+                              <p>
+                                 There are a number of privacy and security considerations the reader or implementer of document query messaging should consider
+                                 in any given implementation use case for support of cross enterprise, cross application document queries. These concerns are
+                                 especially important to help guard against unauthorized re-disclosure of information, and help build confidence that patient
+                                 privacy and confidentiality can be upheld. These concerns include how evidence of a requestor's authorization may be provided
+                                 or made available to provide validation to the recipient of the request that the requestor is making a valid request for release
+                                 of information, how the recipient of the request has an appropriate level of trust (contractually, technically or legally)
+                                 with the requestor and how patient rights to know of disclosures of personal health information may be enabled through auditing
+                                 of such disclosures.   There may be additional functional requirements and implementation requirements at the realm level.
+                                 
+                              </p>
+                              <p>The prerequisites for privacy and security interests to be appropriately served in document query transacting are as follows:
+                                 
+                              </p>
+                              <ul style="margin-left:20px;">
+                                 <li>
+                                    <p><strong>Security context/Trust relationship exists between participants for each communication instance: </strong>
+                                       These prerequisites outline the security requirements that should be in place to assure the trust relationship exists, and
+                                       that the communication is done in a secure manner. They include: [1] Support for the confidentiality and integrity of the
+                                       message itself through the use of appropriate security measures (e.g. encryption) [2] That the transmission is done in a secure
+                                       manner [3] That the sender and receiver of the message perform mutual authentication to ensure the transmission is directed
+                                       to the appropriate recipient.
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p><strong>Patient Rights protected/upheld: </strong>These prerequisites enable a patient to be confident that disclosures of personal health information are properly authorized,
+                                       and that such authorization is verifiable. The identity of the requesting party is specifically known, and is not anonymous
+                                       from verification. Users of systems that facilitate making a request for release of information are subject to authorization
+                                       enabled by access control policies to assure proper access to personal health information. Prerequisites in this area include:
+                                       [1]That user identities are known and authenticated for requestors of releases of information; [2] That user access permissions
+                                       are established by access control policies enabled within the systems from which document query requests are made; [3] That
+                                       positive identification is possible and specific to the initiator of the query whether a person, an organization (location)
+                                       or a trusted identified application recipient representing the user (or proxied to by the user); [4] That the requestor commits
+                                       to abide by terms of any applicable patient consent/authorization for release of information; [5] That  the user/intended
+                                       recipient is authorized (and validated) to be the recipient in accordance with patient consent or written authorization, a
+                                       court order, as permitted by law or regulation, as supported by a manually validated request (such as for a release for law
+                                       enforcement purposes);  [6] That evidence of the authorization exists and can be validated programmatically (through evidence
+                                       of the authorization provided within the context of the request) or through human procedural verification with identification
+                                       of the method and responsibility for validation 
+                                    </p>
+                                    <p>These measures help assure that the request for documents is authorized under proper authority, and that the identity and
+                                       accountability of the requestor is established and verifiable by the recipient of the request for release of information.
+                                       
+                                       
+                                    </p>
+                                 </li>
+                                 <li>
+                                    <p><strong>Audit trails of disclosures to be enabled: </strong>
+                                       Patients have the right to request an accounting of disclosures of to whom their personal health information has been disclosed.
+                                       Different types of disclosures may be included in that accounting based on the requirements of prevailing law/regulation and
+                                       policy. All disclosures need to be made auditable on that basis. The audit trail should incorporate, but not necessarily be
+                                       limited to, information that identifies the party to whom the disclosure was made, who made the disclosure, when the disclosure
+                                       occurred, what was the subject matter disclosed and why the disclosure occurred.
+                                    </p>
+                                 </li>
+                              </ul>
+                              <p>The above prerequisites are seen as elemental to providing the supporting infrastructure for solicited document query processing
+                                 to occur in a secure manner that upholds patient privacy and the confidentiality of personal health information.     
+                                 
+                              </p>
+                              <p>Within the document query message structure itself, there are also several prerequisite requirements that should be in place
+                                 for a normative document query standard to be successful. These must be contained within the query message structure, and
+                                 must exist prior to the fulfillment of a query. These include: [1] If the release requires patient permission, then the appropriate
+                                 means of assuring support for  non-repudiation (e.g. through electronic signature or through in person identity verification)
+                                 and unique identification is required for all participants in the release of information for  authentication of patients/legal
+                                 representatives, witnesses and providers as signatories that may be incorporated on consent forms; [2] Standard identifiers
+                                 must be included for reference to intended recipients (e.g. such as the National Provider Identifier (NPI) in the US or as
+                                 appropriate for the use of other external references); [3] Inclusion of the automated release of information up to and including
+                                 the electronically signed (non-repudiated) release of information itself or, if not fully automatable, then the message structure
+                                 should include the identity of the individual performing the external validation of the appropriateness of the release and
+                                 the date/time of the external validation.  
+                              </p>
+                              <p>Implementers should be aware of the significance of ensuring satisfaction of these prerequisites prior to attempting to use
+                                 the document query messages for support of release of information activities for solicited queries.     
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection">
+                           <div class="header"><span class="icon"> </span><span class="number">1.1.3 </span><span class="title"><a name="pref03">Document Identification, Revisions, and Addenda</a></span></div>
+                           <div class="body">
+                              <p>A clinical document can be replaced by a new document and/or appended with an addendum.</p>
+                              <p>A replacement document is a new version of the parent document. The parent document is considered superseded, but a system
+                                 may retain it for historical or auditing purposes. The parent document being replaced is referenced via act relationship relatedDocument,
+                                 where relatedDocument.typeCode is set to equal "RPLC" (for "replaces"). An example is a report found to contain an error that
+                                 is subsequently replaced by the corrected report. 
+                              </p>
+                              <p>An addendum is a separate document that references the parent document, and may extend or alter the observations in the prior
+                                 document. The parent document remains a current component of the patient record, and the addendum and its parent are both
+                                 read by report recipients. The parent report (represented by the ParentDocument class) being appended is referenced via act
+                                 relationship relatedDocument, where relatedDocument.typeCode is set to equal "APND" (for "appends"). 
+                              </p>
+                              <p>Every clinical document must have a unique ClinicalDocument.id, and thus the replacement or addendum documents each have ClinicalDocument.id
+                                 that is different from that of the parent document. Clinical documents may also contain a ClinicalDocument.setId and a ClinicalDocument.versionNumber,
+                                 which together support a document identification and versioning scheme used in some document management systems. In this scheme,
+                                 all documents in a chain of replacements have the same ClinicalDocument.setId and are distinguished by an incrementing ClinicalDocument.versionNumber.
+                                 The initial version of a document gets a new unique value for ClinicalDocument.id, a new value for ClinicalDocument.setId,
+                                 and has the value of ClinicalDocument.versionNumber set to equal "1". A replacement document gets a new globally unique ClinicalDocument.id
+                                 value, and uses the same value for ClinicalDocument.setId as the parent report being replaced, and increments the value of
+                                 ClinicalDocument.versionNumber by 1. (Note that version number must be incremented by one when a report is replaced, but can
+                                 also be incremented more often to meet local requirements.) 
+                              </p>
+                              <p>These relationships are summarized in the following illustration: </p>
+                              <p><br /><img class="graphic" src="graphics/RCMR_EX000010.png" alt="RCMR_EX000010.gif" /><br /></p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection">
+                           <div class="header"><span class="icon"> </span><span class="number">1.1.4 </span><span class="title"><a name="pref04">Document Statuses and Transitions</a></span></div>
+                           <div class="body">
+                              <p>Documents only assume a subset of the states that other Acts can take on. A newly created document that has not yet been released
+                                 is "new". Because it has not yet been released, it can be "cancelled". In this case, there are no requirements to save a copy
+                                 of the document. When a document is released, its status becomes "active". An active" document that has been legally authenticated
+                                 is "completed".  Documents that are "active" or "completed" are rendered "obsolete" when they are replaced with a revision.
+                              </p>
+                              <p>These document statuses are summarized in the following illustration:</p>
+                              <p><br /><img class="graphic" src="graphics/RCMR_EX000011.png" alt="RCMR_EX000011.gif" /><br /></p>
+                              <p>To maintain consistency with the statuses defined in HL7 V2.x, Chapter 9 "Medical Records / Information Management (Document
+                                 Management)", the value of ClinicalDocument.statusCode constrains the allowable values for ClinicalDocument.completionCode,
+                                 ClinicalDocument.confidentialityCode, ClinicalDocument.storageCode, and ClinicalDocument.availabilityTime, as shown in the
+                                 following table: 
+                              </p>
+                              <table width="90%" cellspacing="0" cellpadding="5" border="1" style="border-color:blue">
+                                 <tbody>
+                                    <tr>
+                                       <td><strong>Status Code</strong></td>
+                                       <td><strong>Completion Code</strong></td>
+                                       <td><strong>Confidentiality Code</strong></td>
+                                       <td><strong>Storage Code</strong></td>
+                                       <td><strong>Availability Time</strong></td>
+                                       <td><strong>Description</strong></td>
+                                    </tr>
+                                    <tr>
+                                       <td>New</td>
+                                       <td>Any value</td>
+                                       <td>Any value</td>
+                                       <td>NULL</td>
+                                       <td>NULL</td>
+                                       <td>This is a new document. It has not been made available for viewing. It can have any confidentiality status. It's document
+                                          storage status and availability time are undefined, since it has not yet been made active. 
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>Active</td>
+                                       <td>Anything other than Legally Authenticated</td>
+                                       <td>Any value</td>
+                                       <td>Active;  Active &amp; Archived</td>
+                                       <td>Availability Time = time the document was made available</td>
+                                       <td>This document is active, and is available. It has not yet been legally authenticated. It can have any confidentiality status.
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>Completed</td>
+                                       <td>Legally Authenticated</td>
+                                       <td>Any value</td>
+                                       <td>Active; Active &amp; Archived</td>
+                                       <td>Availability Time = time the document was made available</td>
+                                       <td>This document is active, and is available. It has been legally authenticated. It can have any confidentiality status. </td>
+                                    </tr>
+                                    <tr>
+                                       <td>Canceled</td>
+                                       <td>Any value</td>
+                                       <td>Any value</td>
+                                       <td>NULL</td>
+                                       <td>NULL</td>
+                                       <td>This document was abandoned before being released. It may or may not have been authenticated.  </td>
+                                    </tr>
+                                    <tr>
+                                       <td>Obsolete</td>
+                                       <td>Any value</td>
+                                       <td>Any value</td>
+                                       <td>Archived; Purged</td>
+                                       <td>Availability Time = time the document was made available</td>
+                                       <td>This document was superseded by a replacement document and is now obsolete. It is no longer available.</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Nullified</td>
+                                       <td>Nullified (proposed new value for V2.7)</td>
+                                       <td>Any value</td>
+                                       <td>Archived</td>
+                                       <td>Availability Time = time the document was made available</td>
+                                       <td>This document was created in error or was placed in the wrong chart. It is no longer available.</td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">1.2</span><span class="title"><a name="dmims-RCMR_DO000010UV-ic">Domain Message Information Models</a></span><hr class="sectionrule" />
+               </div>
+               <div class="body">
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number"></span><span class="title"><a name="RCMR_DM000920UV-rmi">Medical Records Parameter Query Domain Model  (RCMR_DM000920UV) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/RCMR_DM000920UV.htm" target="_blank"><img class="graphic" src="editable/images/T-RCMR_DM000920UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><p></p>
+                        <div class="heading">Description</div>
+                        <p>The Medical Records Query-by-Parameter model is used to retrieve documents from a document repository. Parameters reference
+                           the <a href="../../domains/uvmr/uvmr.htm#RCMR_DM000050UV-rmi" class="">Medical Records domain model</a>.
+                        </p>
+                        <p>Details of the Query-by-Parameter approach can be found in the Query Infrastructure chapter, where descriptions of the ControlActProcess
+                           and SortControl classes can be found.
+                        </p>
+                        <p><strong>And/Or Logic</strong></p>
+                        
+                        
+                        
+                        
+                        The representation of And/Or logic in the Query-by-Parameter message is based on the cardinality of associations and parameter
+                        item values in the query message. 
+                        
+                        
+                        <ul>
+                           <li>
+                              <p><strong>AND : </strong>Where multiple occurrences of the same parameterItem appear in a query instance, a matching document shall include all of
+                                 the values. 
+                              </p>
+                              <p>If the parameter can occur no more than once in an instance, then the cardinality of the association in the query model is
+                                 [0..1]. Otherwise, the cardinality is [0..*].
+                              </p>
+                              <p>Where multiple parameters appear in a query instance (e.g. both ClinicalDocument.code and Performer.id), a matching document
+                                 shall include all of the values (e.g. shall match one of the ClinicalDocument.code values AND shall match one of the Performer.id
+                                 values).
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>OR : </strong> Where a single parameterItem has multiple values, a matching document shall include any or all of the values. 
+                                 
+                              </p>
+                              <p>ParameterItem.value cardinality is always [0..*].</p>
+                           </li>
+                        </ul>
+                        <p><strong>Description of Parameters</strong></p>
+                        <p>The Query-by-Parameter model includes the following parameters :</p>
+                        <ul>
+                           <li>
+                              <p><strong>ClinicalDocument.id </strong>(ClinicalDocument / id)
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>ClinicalDocument.code </strong>(ClinicalDocument / code) 
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>ClinicalDocument.effectiveTive </strong>(ClinicalDocument / effectiveTime) 
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>ServiceEvent.classCode </strong>(ClinicalDocument / documentationOf / ServiceEvent / classCode) 
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>ServiceEvent.code </strong>(ClinicalDocument / documentationOf / ServiceEvent / code) 
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>ServiceEvent.effectiveTime </strong>(ClinicalDocument / documentationOf / ServiceEvent / effectiveTime) 
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>Performer.id </strong>(ClinicalDocument / documentationOf / ServiceEvent / performer / assignedPerson / id) 
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>EncompassingEncounter.id </strong>(ClinicalDocument / componentOf / EncompassingEncounter / id) 
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>EncompassingEncounter.effectiveTime </strong>(ClinicalDocument / componentOf / EncompassingEncounter / effectiveTime) 
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>EncounterParticipant.id </strong>(ClinicalDocument / componentOf / EncompassingEncounter / encounterParticipant / assignedPerson / id) 
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>HealthCareFacility.code </strong>(ClinicalDocument / componentOf / EncompassingEncounter / location / HealthCareFacility / code) 
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>AssignedAuthor.id </strong>(ClinicalDocument / author / AssignedAuthor / id) 
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>RepresentedOrganization.id </strong>(ClinicalDocument / custodian / AssignedCustodian / representedOrganization / id) 
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>Patient.id </strong>(ClinicalDocument / recordTarget / patient / id) 
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>PatientLivingSubject.id </strong>(ClinicalDocument / recordTarget / patient / patientLivingSubject / id) 
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>PatientLivingSubject.administrativeGenderCode </strong>(ClinicalDocument / recordTarget / patient / patientLivingSubject / administrativeGenderCode) 
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>PatientLivingSubject.birthTime </strong>(ClinicalDocument / recordTarget / patient / patientLivingSubject / birthTime) 
+                              </p>
+                           </li>
+                        </ul>
+                        <p>Refer to the documentation of the referenced domain model for a full description of these parameters.</p>
+                        <p><strong>Query Response</strong></p>
+                        <p>The query response uses message type RCMR_MT000001 (Document Event) or message type RCMR_MT000002 (Document Event, with Content).
+                           The control act wrapper QUQI_MT0001 (Query Control Act Response / Acknowledgement) can include zero or more of the domain
+                           defined query response, thereby enabling, for instance, multiple documents to be included in a single response.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number"></span><span class="title"><a name="RCMR_DM000050UV-rmi">Medical Records Domain Model  (RCMR_DM000050UV) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/RCMR_DM000050UV.htm" target="_blank"><img class="graphic" src="editable/images/T-RCMR_DM000050UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><p></p>
+                        <div class="heading">Description</div>
+                        <p>The purpose of the transmitted data is to enable clinical document exchange, notification and retrieval across and within
+                           institutions; facilitate clinical document management; and facilitate compilation of an individual patient's clinical documents
+                           into a lifetime electronic patient record.
+                        </p>
+                        <p>The main components of the model include information about the document, such as encounter data, various participants, related
+                           documents; and the document itself. When sending a document encapsulated inside a medical records message, the strong preference
+                           is to send one that conforms to the ANSI HL7 Clinical Document Architecture (CDA) specification. 
+                        </p>
+                        <p><strong>NOTE: </strong>The HL7 Reference Information Model is the definitive source of definitions for classes and definitions. What follows are
+                           special considerations for the referenced RIM components as they are used in this model. Note that at no time do the comments
+                           presented here conflict with the RIM, but instead further constrain the RIM definitions. 
+                        </p>
+                        <p><strong>Document Attributes</strong></p>
+                        <p>This section describes attributes of the root ClinicalDocument class.</p>
+                        <ul>
+                           <li>
+                              <p><strong>ClinicalDocument.id: </strong>Represents the globally unique instance identifier of this version of a clinical document. (See section <b>(The user identified specification hmrcmr 
+                                    is not available)</b> in Introduction and Scope above).    
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>ClinicalDocument.code: </strong>The code specifying the particular kind of document (e.g. History and Physical, Discharge Summary, Progress Note). Values
+                                 are preferably drawn from LOINC. (Within the LOINC database, beginning with version 2.09, May 2003, document type codes are
+                                 those that have a value of "DOC" in the Scale component).
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>ClinicalDocument.title: </strong>Represents the title of the document. It's commonly the case that clinical documents do not have a title, and are collectively
+                                 referred to by the display name of ClinicalDocument.code (e.g. a "consultation" or "progress note"). 
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>ClinicalDocument.text: </strong>The ClinicalDocument.text attribute uses an encapsulated data (ED) type. The components of this data type can be used to transmit
+                                 a document file name and/or URL (ED.reference), and document format or media type (ED.type). If message type is RCMR_MT000002
+                                 then ClinicalDocument.text shall include exactly 1 clinical document, with all its authenticated content (with or without
+                                 associated stylesheet(s)) in ED.BIN. The mechanism for packaging an HL7 Clinical Document Architecture (CDA) document in ClinicalDocument.text
+                                 is described in the CDA specification. 
+                              </p>
+                              <p><strong>NOTE:</strong> Message RCMR_MT000002 is to be used when including the document itself. The ED.BIN component cannot be used in RCMR_MT000001.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>ClinicalDocument.statusCode: </strong>A code specifying the state of the document. See the Introduction and Scope section above for a complete discussion of allowable
+                                 states and state transitions.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>ClinicalDocument.effectiveTime: </strong>Signifies the document creation time, when the document first came into being.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>ClinicalDocument.availabilityTime: </strong>Signifies the time a document was made available for patient care. This value is NULL when statusCode is "NEW", and is required
+                                 when statusCode is "ACTIVE" or "COMPLETED".
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>ClinicalDocument.confidentialityCode: </strong>It is customary, but not required, that the value of confidentialityCode be set equal to the most restrictive confidentialityCode
+                                 of any of the document parts.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>ClinicalDocument.reasonCode: </strong>A code specifying the motivation, cause, or rationale for replacing or nullifying a clinical document.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>ClinicalDocument.languageCode: </strong>Specifies the human language of character data (whether they be in contents or attribute values).  
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>ClinicalDocument.setId: </strong>Represents the identifier that remains constant across all revisions of a clinical document. (See section <b>(The user identified specification hmrcmr 
+                                    is not available)</b> in Introduction and Scope above).				
+                                 				
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>ClinicalDocument.versionNumber: </strong>Represents the version number for this version of a clinical document. (See section <b>(The user identified specification hmrcmr 
+                                    is not available)</b> in Introduction and Scope above).
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>ClinicalDocument.completionCode: </strong>A code depicting the completion status of a report (e.g., incomplete, authenticated, legally authenticated). 
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>ClinicalDocument.storageCode: </strong>A code depicting the storage status (e.g., active, archived, purged) of a report. 
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>ClinicalDocument.copyTime: </strong>Time a document is released (i.e., copied or sent to a display device) from a document management system that maintains revision
+                                 control over the document.  Once valued, cannot be changed.  Intent of this attribute is to give the viewer of the document
+                                 some notion as to how long the document has been out of the safe context of its document management system.
+                              </p>
+                           </li>
+                        </ul>
+                        <p><strong>Document Relationships</strong></p>
+                        <p>This section describes clones related to the root ClinicalDocument class via an ActRelationship.</p>
+                        <ul>
+                           <li>
+                              <p><strong>ParentDocument: </strong>This class represents the target of a document relationship. The target is either being appended, revised, or transformed
+                                 by the source document. See section "Document Identification, Revisions, and Addenda" in Introduction and Scope above for
+                                 further details. See the discussion of ClinicalDocument for attribute level descriptions. ParentDocument.text can be used
+                                 to indicate the MIME type of the related document. It is not to be used to embed the related document, and thus ParentDocument.text.BIN
+                                 is precluded from use. 
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>ServiceEvent: </strong>This class represents the main Act, such as a colonoscopy or an appendectomy, being documented. 
+                              </p>
+                              <p>In some cases, the ServiceEvent is inherent in the ClinicalDocument.code, such as where ClinicalDocument.code is "History
+                                 and Physical Report" and the procedure being documented is a "History and Physical" act. A ServiceEvent can further specialize
+                                 the act inherent in the ClinicalDocument.code, such as where the ClinicalDocument.code is simply "Procedure Report" and the
+                                 procedure was a "colonoscopy". If ServiceEvent is included, it must be equivalent to or further specialize the value inherent
+                                 in the ClinicalDocument.code, and shall not conflict with the value inherent in the ClinicalDocument.code, as such a conflict
+                                 would constitute an ambiguous situation.   
+                              </p>
+                              <p>ServiceEvent.effectiveTime can be used to indicate the time the actual event (as opposed to the encounter surrounding the
+                                 event) took place.   
+                              </p>
+                              <p>The performer participant represents clinicians who actually and principally carry out the ServiceEvent. Performer.time can
+                                 be used to specify the time during which the performer is involved in the activity. Performer.functionCode can be used to
+                                 specify addition detail about the function of the performer (e.g. scrub nurse, third assistant).
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>Order: </strong>This class enables the representation of those orders being addressed by this document. For instance, a provider orders an
+                                 X-Ray. The X-Ray is performed. A radiologist reads the X-Ray and generates a report. The X-Ray order identifier is transmitted
+                                 in the Order class (Order.id), the performed X-Ray procedure is transmitted in the ServiceEvent clone, and the ClinicalDocument.code
+                                 would be valued with "Diagnostic Imaging Report".
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>Consent: </strong>This class references the consents associated with this document. The type of consent (e.g. a consent to perform the related
+                                 ServiceEvent, a consent for the information contained in the document to be released to a third party) is conveyed in Consent.code.
+                                 Referenced consents are those that have been finalized (Consent.statusCode must equal "completed") and should be on file.
+                                 The authorization.typeCode can be either "AUTH" (authorized by) or "REFR" (refers to). Use "AUTH" when the referenced consent
+                                 is an authorization for the procedure or other act being documented. Use "REFR" for any other referenced consent.   
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>EncompassingEncounter: </strong>This class represents the clinical encounter during which the documented act occurred. Documents are not necessarily generated
+                                 during an encounter, such as when a clinician, in response to an abnormal lab result, attempts to contact the patient but
+                                 can't, and writes a Progress Note. 
+                              </p>
+                              <p>In some cases, the setting of the encounter is inherent in the ClinicalDocument.code, such as where ClinicalDocument.code
+                                 is "Diabetes Clinic Progress Note". The setting of an encounter can also be transmitted in the EncompassingEncounter.code
+                                 or HealthCareFacility.code attribute. If either are sent, they should be equivalent to or further specialize the value inherent
+                                 in the ClinicalDocument.code (such as where the ClinicalDocument.code is simply "Clinic Progress Note" and the value of HealthCareFacility.code
+                                 is "cardiology clinic"), and shall not conflict with the value inherent in the ClinicalDocument.code, as such a conflict would
+                                 constitute an ambiguous situation. 
+                              </p>
+                              <p>EncompassingEncounter.effectiveTime represents the time of the encounter. EncompassingEncounter.dischargeDispositionCode can
+                                 be used to depict the disposition of the patient at the time of hospital discharge (e.g., discharged to home, expired, against
+                                 medical advice, etc.).   
+                              </p>
+                              <p>The location participant (location class) relates a healthcare facility (HealthCareFacility class) to the encounter to indicate
+                                 where the encounter took place. The entity playing the role of HealthCareFacility is a place (Place class). The entity scoping
+                                 the HealthCareFacility role is an organization (Organization class).          
+                              </p>
+                              <p>The setting of an encounter (e.g. cardiology clinic, primary care clinic, rehabilitation hospital, skilled nursing facility)
+                                 can be expressed in HealthCareFacility.code. Note that setting (HealthCareFacility.code) and physical location (Place) are
+                                 not the same. There is a many-to-many relationship between setting and the physical location where care is delivered. For
+                                 instance, a particular place such as a room can provide the location for the cardiology clinic setting one day, and for the
+                                 primary care clinic setting another day; and cardiology clinic today might be held in one place, but in another place tomorrow.
+                                 
+                              </p>
+                              <p>The encounterParticipant participant represents clinicians directly associated with the encounter (e.g. by initiating, terminating,
+                                 or overseeing it).
+                              </p>
+                           </li>
+                        </ul>
+                        <p><strong>Document Participants</strong></p>
+                        <p>This section describes classes related to the root ClinicalDocument class via Participation.</p>
+                        <ul>
+                           <li>
+                              <p><strong>authenticator: </strong>Represents a participant who has attested to the accuracy of the document, but who does not have privileges to legally authenticate
+                                 the document. An example would be a resident physician who sees a patient and dictates a note, then later signs it. Authenticator.time
+                                 reflects the time of authentication. Authenticator.signatureCode specifies whether and how the participant has attested his/her
+                                 participation through a signature and or whether such a signature is needed.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>author: </strong>Represents the humans and/or machines that authored the document. Author.time reflects the time of authorhip.
+                              </p>
+                              <p>In some cases, the role or function of the author is inherent in the ClinicalDocument.code, such as where ClinicalDocument.code
+                                 is "Medical Student Progress Note". The role of the author can also be recorded in the Author.functionCode or AssignedAuthor.code
+                                 attribute. If either of these attributes is included, they should be equivalent to or further specialize the role inherent
+                                 in the ClinicalDocument.code (such as where the ClinicalDocument.code is simply "Physician Progress Note" and the value of
+                                 Author.functionCode is "rounding physician"), and shall not conflict with the role inherent in the ClinicalDocument.code,
+                                 as such a conflict would constitute an ambiguous situation.   
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>custodian: </strong>Represents the organization that is in charge of maintaining the document. The custodian is the steward that is entrusted
+                                 with the care of the document. Every clinical document has exactly one custodian.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>dataEnterer (e.g. transcriptionist): </strong>Represents the participant who has transformed a dictated note into text. DataEnterer.time reflects the time of data entering.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>encounterParticipant: </strong>See the discussion on EncompassingEncounter for a description of the encounterParticipant participant.   
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>informationRecipient: </strong>Represents a recipient who should receive or has received a copy of the document. When the intended recipient is an organization,
+                                 the value for IntendedRecipient.classCode is "ASSIGNED", and the recipient is reflected by the presence of a scoping Organization,
+                                 without a playing entity.
+                              </p>
+                              <p><strong>NOTE:</strong> The information recipient is an entity to whom a copy of a document is directed, at the time of document authorship. It is
+                                 not the same as the cumulative set of persons to whom the document has subsequently been disclosed, over the life-time of
+                                 the patient. Such a disclosure list would not be contained within the document, and is outside the scope of CDA. 
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>legalAuthenticator: </strong>Represents a participant who has legally authenticated the document. LegalAuthenticator.time reflects the time of legal authentication.
+                                 LegalAuthenticator.signatureCode specifies whether and how the participant has attested his/her participation through a signature
+                                 and or whether such a signature is needed.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>participant: </strong>Used to represent other participants not explicitly mentioned by other classes, that played a role in the documented act.
+                                 When the participating entity is an organization, this is reflected by the presence of a scoping Organization, without a playing
+                                 entity.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>performer: </strong>See the discussion on ServiceEvent for a description of the performer participant.   
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>recordTarget: </strong>The recordTarget represents the medical record that this document belongs to.   A clinical document typically has exactly
+                                 one recordTarget participant. In the uncommon case where a clinical document (such as a group encounter note) is placed into
+                                 more than one patient chart, more than one recordTarget participants can be stated.
+                              </p>
+                              <p>The <strong>subject</strong> participant represents the primary target of the observations recorded in the document. Most of the time the subject is the
+                                 recordTarget, but need not be, for instance when the subject is a fetus observed in an obstetrical ultrasound. Therefore,
+                                 there is both a recordTarget and a subject. To be explicit, both recordTarget and subject should be valued, even when redundant.
+                                 When the subject is not included, it can be assumed that the subject is the recordTarget.
+                              </p>
+                           </li>
+                           <li>
+                              <p><strong>subject: </strong>See discussion of recordTarget above.
+                              </p>
+                           </li>
+                        </ul>
+                        <p>Several participations can be played by the same person. In such cases, the person should be identified as the player for
+                           each appropriate participation. For instance, if a person is both the author and the authenticator of a document, the message
+                           should identify that person as both the author participant and the authenticator participant.  
+                        </p>
+                        <p>On other occasions, participants are played by different people. The following table shows a number of scenarios and the values
+                           for various participants.    
+                        </p>
+                        <table width="90%" cellspacing="0" cellpadding="5" border="1" style="border-color:blue">
+                           <tbody>
+                              <tr>
+                                 <th>1. StaffPhysicianOne sees a patient as a consultant, dictates a note, and later signs it. </th>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <ul>
+                                       <li>Author - StaffPhysicianOne   </li>
+                                       <li>Encounter Participant - StaffPhysicianOne (typeCode="CONS")   </li>
+                                       <li>Legal Authenticator - StaffPhysicianOne </li>
+                                    </ul>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <th>2. StaffPhysicianOne sees a patient and dictates a note. StaffPhysicianTwo later signs the note. *</th>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <ul>
+                                       <li>Author - StaffPhysicianOne   </li>
+                                       <li>Legal Authenticator - StaffPhysicianTwo </li>
+                                    </ul>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <th>3. ResidentOne sees a patient with StaffPhysicianOne. ResidentOne dictates a note and later signs it. The note is co-signed
+                                    by StaffPhysicianOne. * 
+                                 </th>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <ul>
+                                       <li>Author - ResidentOne   </li>
+                                       <li>Authenticator - ResidentOne   </li>
+                                       <li>Encounter Participant - StaffPhysicianOne (typeCode="ATND")   </li>
+                                       <li>Legal Authenticator - StaffPhysicianOne </li>
+                                    </ul>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <th>4. ResidentOne sees a patient with StaffPhysicianOne. ResidentOne dictates a note and later signs it. The note is co-signed
+                                    by StaffPhysicianTwo. *   
+                                 </th>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <ul>
+                                       <li>Author - ResidentOne   </li>
+                                       <li>Authenticator - ResidentOne   </li>
+                                       <li>Encounter Participant - StaffPhysicianOne (typeCode="ATND")   </li>
+                                       <li>Legal Authenticator - StaffPhysicianTwo </li>
+                                    </ul>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <th>5. ResidentOne sees a patient with StaffPhysicianOne. ResidentOne dictates a note, and goes off on vacation. The note is signed
+                                    by ResidentTwo and by StaffPhysicianOne. * 
+                                 </th>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <ul>
+                                       <li>Author - ResidentOne   </li>
+                                       <li>Authenticator - ResidentTwo   </li>
+                                       <li>Encounter Participant - StaffPhysicianOne (typeCode="ATND")   </li>
+                                       <li>Legal Authenticator - StaffPhysicianOne </li>
+                                    </ul>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <th>6. ResidentOne sees a patient with StaffPhysicianOne. ResidentOne dictates a note, which is later signed by ResidentTwo and
+                                    StaffPhysicianTwo. *   
+                                 </th>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <ul>
+                                       <li>Author - ResidentOne   </li>
+                                       <li>Authenticator - ResidentTwo   </li>
+                                       <li>Encounter Participant - StaffPhysicianOne (typeCode="ATND")   </li>
+                                       <li>Legal Authenticator - StaffPhysicianTwo </li>
+                                    </ul>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <th>7. StaffPhysicianOne receives an abnormal lab result, attempts to contact patient but can't, and writes and signs a progress
+                                    note. 
+                                 </th>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <ul>
+                                       <li>Author - StaffPhysicianOne   </li>
+                                       <li>Legal Authenticator - StaffPhysicianOne </li>
+                                    </ul>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <th>8. ResidentSurgeonOne is operating on a patient with StaffSurgeonOne. StaffSurgeonOne dictates an operative report and later
+                                    signs it. 
+                                 </th>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <ul>
+                                       <li>Author - StaffSurgeonOne   </li>
+                                       <li>Authenticator - null (need not be included)   </li>
+                                       <li>Legal Authenticator - StaffSurgeonOne   </li>
+                                       <li>Performer - StaffSurgeonOne (typeCode="PPRF")   </li>
+                                       <li>Performer - ResidentSurgeonOne (typeCode="SPRF") </li>
+                                    </ul>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <p>* Note that the ability of one clinician to co-sign or to sign on behalf of another clinician is subject to regulatory and
+                           local practice constraints. 
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <p>
+               <table>
+                  <tbody>
+                     <tr>
+                        <td><a class="custombutton" href="#top">Return to top of page</a></td>
+                     </tr>
+                  </tbody>
+               </table>
+            </p>
+         </div>
+      </div>
+   </body>
+</html>

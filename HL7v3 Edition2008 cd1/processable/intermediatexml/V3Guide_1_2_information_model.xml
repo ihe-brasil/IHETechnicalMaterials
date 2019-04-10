@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 3 U (http://www.xmlspy.com) by andrew hinchley (HL7 Publications TC) -->
+<!-- edited with XML Spy v4.0 (http://www.xmlspy.com) by Sandy Boyer -->
+<div2 id="v3ginfomdl">
+	<head>Information Model</head>
+	<p>An information model is a structured specification of the information within a specific domain of interest. It expresses the classes of information required and the properties of those classes, including attributes, relationships, constraints, and states.  In HL7, the scope of a domain of interest ranges from the domain of the entire system of health services to the specific context of a set of information exchanges to meet a particular identified business purpose.  HL7 defines different types of information models to represent the different contexts of interest.
+
+</p>
+	<div3 id="v3ginfomdlcomp">
+		<head>Information Model Components</head>
+		<p>The information model consists of the following components:</p>
+		<list role="unordered">
+			<item>
+				<p>classes, their attributes, and relationships between the classes;</p>
+			</item>
+			<item>
+				<p>data types for all attributes and vocabulary domains for coded attributes;</p>
+			</item>
+			<item>
+				<p>state transition models for some classes.</p>
+			</item>
+		</list>
+		<p>HL7 information models are based upon the Unified Modeling Language (UML), and may be represented graphically using the UML style. UML is a modeling language that unifies the object-oriented modeling methods of Grady Booch, Jim Rumbaugh, Ivar Jacobson, and others. The UML is a rich, mainly graphical, means of expressing object-oriented concepts. To obtain more information about UML see <loc href="http://www.rational.com/uml/"/> or the book UML Distilled by Martin Fowler (ISBN 0-201-32563-2).</p>
+	</div3>
+	<div3 id="v3ginfomdltypes">
+		<head>Types of Information Models</head>
+		<p>The HL7 information modeling process recognizes three interrelated types of information models. Each of the model types uses the same notation and has the same basic structure. The models differ from each other based on their information content, scope, and intended use. The following types of information models are defined:</p>
+		<list role="unordered">
+			<item>
+				<emph role="strong">Reference Information Model (RIM)- </emph> The RIM is used to express the information content for the collective work of the HL7 Working Group. It is the information model that encompasses the HL7 domain of interest as a whole. The RIM is a coherent, shared information model that is the source for the data content of all HL7 messages. As such, it provides consistent data and concept reuse across multiple information structures, including messages. The RIM is maintained by a collaborative, consensus building process involving all Technical Committees and Special Interest Groups. This process, known as model harmonization, uses standard consensus processes, to review, debate, enhance, and reconcile change proposals that have been submitted by Technical Committees.  The resulting changes are applied to the RIM to produce a new version. The RIM is intentionally abstract  allowing it to represent the richness of the information topics that must be shared throughout the health system. The principles underlying this abstraction are discussed in detail in the introduction to the RIM.</item>
+			<item>
+				<emph role="strong">Domain Message Information Model (D-MIM)- </emph> A D-MIM is a refined subset of the RIM that includes a set of class clones, attributes and relationships that can be used to create messages for a particular domain (a particular area of interest in healthcare). The D-MIM is used as a common base upon which all R-MIMs within a domain are built. The rules for the refinement process by which the D-MIMs and R-MIMs are created are discussed in detail in the specification on Refinement and Localization.</item>
+			<item>
+				<emph role="strong">Refined Message Information Model (R-MIM)-</emph> The R-MIM is a subset of a D-MIM that is used to express the information content for a message or set of messages with annotations and refinements that are message specific. The content of an R-MIM is drawn from the D-MIM for the specific domain in which the R-MIM is used. The R-MIM may include clones of selected classes with alias names specific to the perspective of the message(s) to be derived. The R-MIM represents the information content for one or more abstract message structures, also called Hierarchal Message Definitions (HMDs).</item>
+		</list>
+	</div3>
+	<div3 id="v3ginfomdlstruct">
+		<head>Static Structure: Classes and Relationships</head>
+		<div4 id="v3ginfomdlstructclasses">
+			<head>Classes</head>
+			<p>A <emph role="strong">class</emph> is an abstraction of things or concepts that are subjects of interest in a given application domain. All things or concepts subsumed under a class have the same properties and are subject to and conform to the same rules. Classes are the people, places, roles, things, and events about which information is kept. Classes have a name, description, and sets of attributes, relationships, and states.</p>
+			<p>The instances of classes are called <emph role="strong">objects</emph>. Where classes represent categories of concepts, people and things, objects represent the individual things themselves. There is still a difference between objects and the things they represent. Objects capture all relevant data about things that are known to the information system, but are not the things themselves. For instance, a particular human being, named John Doe, may be represented through an object in an information system. That object contains John Doe's demographic or medical data, but the object is still different from John Doe himself.</p>
+		</div4>
+		<div4 id="v3ginfomdlstructrelations">
+			<head>Relationships</head>
+			<p>Classes relate to other classes in various ways. Such relationships are of two types: Generalization and Association. These are discussed in more detail below.</p>
+			<p>
+				<emph>Generalizations</emph>
+			</p>
+			<p>A generalization relationship is a connection between classes (as opposed to objects). It is an association between two classes (a superclass and a subclass) in which the subclass is derived from the superclass (i.e., the superclass generalizes the subclass and the subclass is a specialization of the superclass). The subclass inherits all properties from the superclass, including attributes, relationships, and states. Instances of a subclass are also instances of the superclass. </p>
+			<p>In a generalization relationship the subclass inherits all properties from the superclass, including attributes, relationships, and states. In addition, the subclass has other properties that are special for the subclass. </p>
+			<p>Each subclass may in turn have subclasses of its own. Thus, <emph>superclass/subclass</emph> and <emph>generalization/specialization</emph> are relative concepts. A class can be both a subclass of its superclass and a superclass of its subclasses. The entirety of superclasses and subclasses with a common root superclass is called a <emph>generalization hierarchy</emph>.</p>
+			<p>A generalization usually has multiple specializations. However, not all of the conceptual specializations need to be represented in the model. Only those concepts that warrant special properties (e.g., attributes, relationships, states) are modeled as distinguished classes. If all specializations of a class are fully enumerated as subclasses in the model, the superclass could be "abstract."  An abstract class is never instantiated directly, but only through one of its specializations.</p>
+			<p>
+				<emph>Associations</emph>
+			</p>
+			<p>An association defines a relationship between objects. The objects may be instances of two different classes  or of the same class (reflexive association). Just as classes have instances, associations have instances too. An association instance is a connection between objects and is defined by an association that connects classes.</p>
+			<p>Associations in the HL7 information models have at least two ends. Each end of the association instance connects with one and only one object. However, one object may be associated with more than one object of the same class by the same association. In this case, multiple association instances exist, each connecting exactly two objects. The number of instances of an association that can connect to one object is regulated by the multiplicities of the association.</p>
+			<p>An association multiplicity specifies the minimum and maximum number of objects of each class participating in the association. The multiplicity is expressed as a pair of cardinal numbers (i.e., non-negative integers) <emph>min..max</emph>. The lower bound min is a non-negative integer, usually zero or one. The upper bound <emph>max</emph> is an integer greater or equal to <emph>min</emph>, usually one, or unlimited, indicated by an asterisk ("*").<footnote>
+					<p>In other models, the lower case letters "n" or "m" are sometimes used, indicating integer variables. This notation is not defined in the <emph>UML Notation Guide</emph>. The problem with using letters instead of the asterisk is that if the same letter is used more than once, it may be misunderstood to represent the same integer number everywhere. Furthermore, an "n" indicates some boundary specified elsewhere, while the asterisk ("*") indicates unbounded multiplicity, without the notion of any dependency between such multiplicities.</p>
+				</footnote>  Valid multiplicities are listed in the following table:</p>
+			<table>
+				<tbody>
+					<tr>
+						<th>Multiplicity</th>
+						<th>Meaning</th>
+					</tr>
+					<tr>
+						<td>0..1</td>
+						<td>minimum zero, maximum one</td>
+					</tr>
+					<tr>
+						<td>0..n</td>
+						<td>minimum zero, maximum the integer n, where n > 1</td>
+					</tr>
+					<tr>
+						<td>0..*</td>
+						<td>minimum zero, maximum unlimited</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>short for "1..1" minimum one, maximum one</td>
+					</tr>
+					<tr>
+						<td>1..n</td>
+						<td>minimum one, maximum the integer n, where n > 1</td>
+					</tr>
+					<tr>
+						<td>1..*</td>
+						<td>minimum one, maximum unlimited</td>
+					</tr>
+					<tr>
+						<td>n1..n2</td>
+						<td>minimum the integer n1, maximum the integer n2, where n1 > 1 and n2 >n1</td>
+					</tr>
+					<tr>
+						<td>n..*</td>
+						<td>minimum the integer n, maximum unlimited, where n > 1</td>
+						<!-- GWB CHANGE 10/20/01 - was a type in preceding.  it read "where n ( 1" -->
+					</tr>
+				</tbody>
+			</table>
+			<p/>
+		</div4>
+	</div3>
+	<div3 id="v3ginfomdlattrib">
+		<head>Attributes</head>
+		<p>Class attributes are the core components of the information model. The attributes are the source for all the information content of HL7. The majority of attributes are descriptive attributes that depict aspects of classes that are important for communication between healthcare systems. Besides the descriptive attributes, there are three special kinds of attributes in the information model: identifier attributes, classifier attributes and state attributes. These are discussed in more detail below.</p>
+		<p>
+			<emph>Identifier Attributes</emph>
+		</p>
+		<p>Identifier attributes can be used to identify an instance of a class. Sometimes more than one attribute may be needed to identify an instance of a class. The identifier attributes always have a value. The values of identifier attributes are unique among all instances of the class. Since identity is static, values of identifier attributes never change. Identifier attributes are assigned the “set of instance identifier (SETII) data type and generally have the name &quot;id&quot; that allow for multiple identifiers to be specified.</p>
+		<p>Examples of identifier attributes from the RIM include Entity.id and Act.id, which uniquely identify a particular Entity or Act respectively. In each case, the identifier attributes are a set of instance identifiers. This indicates that there may be multiple, unique identifiers for an Entity or Act. Entity identifiers might include device serial numbers, social security numbers, driver license numbers, and others. Act identifiers might include placer accession numbers, filler accession numbers, and others.</p>
+		<p>
+			<emph>Classifier Attributes</emph>
+		</p>
+		<p>The classifier attributes are a critical aspect of the classes forming the backbone of the RIM (Entity, Role, and Act). The classifier attributes are named &quot;classCode&quot;. The classifier attributes provide a great amount of flexibility and extensibility in the information model. The vocabulary domains for classifier attributes include an entry for each specialization of the backbone class. For example the vocabulary domain specified for Entity.classCode  includes living subject, organization, place and material. The vocabulary domain may also include entries that are not explicitly expressed as classes in the model. For example, group is a valid Entity class code (or specialization of Entity) but does not appear in the model as a class. This provides the flexibility and extensibility capability.</p>
+		<p>
+			<emph>Structural Attributes</emph>
+		</p>
+		<p>Structural attributes are those attributes whose coded values are needed to fully interpret the classes that they classify. They are a small set of mandatory attributes, including the classifier attribute: ClassCode described in the previous paragraph, together with moodCode, typeCode and determinerCode. All four are not found in every class. For instance neither Acts or Entities use determinerCode. Exactly as with classCodes there is a bounded vocabulary, managed by HL7 against each use of a structural attribute. For instance, for the mood attribute in Act, there is an actMood vocabulary.
+</p>
+		<p>
+			<emph>State Attributes</emph>
+		</p>
+		<p>A state attribute is used in subject classes (classes that a Technical Committee designates as the central focus of a collection of messages). It contains a value that concisely indicates the current state (named condition) of the class. A subject class must have only one state attribute. The state attribute must be assigned the data type &quot;set of code value&quot; that allows multiple state flags to be specified. State attributes are named status_cd and are associated with vocabulary domains defined by HL7 that correspond to the state machine defined for the subject class.  For example, Act.status_cd has the domain values which include  active, suspended, cancelled, completed, and aborted.  </p>
+	</div3>
+	<div3 id="v3ginfomdlconstr">
+		<head>Constraints</head>
+		<p>Constraints narrow the set of possible values that an attribute can take on. Constraints include vocabulary domain constraints (e.g., this attribute must be a LOINC code), range constraints (e.g., this attribute must be a floating point number between 0 and 1) etc. While the term "constraint" has the connotation of restricting and limiting, the objective in defining constraints is more to provide guidance in the proper use of a class or attribute.</p>
+		<p>Constraints may be specified in the RIM, D-MIM, R-MIM or hierarchical message description (HMD). If specified in the RIM, the constraint is relevant for an attribute in all messages containing the attribute. If specified in the D-MIM or R-MIM, the constraint is specific to all of the messages derived from that D-MIM or R-MIM. Constraints may also be specified within the HMD where they can be made specific to a particular set of message structures. Constraints specified in a higher level (e.g., the RIM) may be further constrained in a lower level (e.g., D-MIM or HMD). However, the subordinate constraint must conform to the constraint on the higher level. Higher level constraints cannot be undone on a lower level. (Constraints are discussed in greater detail in the normative section on Refinement,Constraint and Localization.)</p>
+	</div3>
+	<div3 id="v3ginfomdlbehave">
+		<head>Dynamic Behavior: States and Transitions</head>
+		<p>The behavioral aspect of a class is defined in a state diagram associated with a class in an information model. State diagrams, which show all of the potential states for a class, are developed for classes that are the central subject of an interaction. These classes are called subject classes. Interactions are sometimes motivated by changes in the state of a subject class. For example, Act may be identified as a subject class. The vocabulary domain for the Act.status_cd declares the defined states for the Act. Those states include Active, Suspended, Cancelled, Complete, and Aborted. A state diagram depicts the allowable class states with a box labeled with the name of the state. Changes in state are called state transitions and are depicted in the diagram by a line with a arrowhead showing the direction of the transition. An example of a state transition might be the change in the state of an Act from Active to Complete. The change in state (state transition) is associated with a trigger event that causes the transition. The trigger event in this example might be the fulfillment of an order. An order is a special type of Act. The transition from an Active order to a Completed order is triggered by the fulfillment of the Order. The state diagram depicts the states, trigger event, and state transitions of interest.</p>
+		<p>
+			<graphic source="graphics/VG_Ch3_StateTransitions.gif"/>
+		</p>
+	</div3>
+</div2>

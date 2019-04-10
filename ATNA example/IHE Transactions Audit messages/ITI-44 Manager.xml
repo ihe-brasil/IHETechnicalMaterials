@@ -1,0 +1,18 @@
+<AuditMessage>
+<EventIdentification EventActionCode="C" EventDateTime="2019-01-22T22:00:25.4624249Z" EventOutcomeIndicator="0">
+<EventID csd-code="110110" codeSystemName="DCM" originalText="Patient Record"/>
+<EventTypeCode csd-code="ITI-44" codeSystemName="IHE Transactions" originalText="Patient Identity Feed"/>
+</EventIdentification>
+<ActiveParticipant AlternativeUserID="4001" NetworkAccessPointID="192.168.0.10" NetworkAccessPointTypeCode="2" UserID="http://localhost:18035/PIX/Manager" UserIsRequestor="false">
+<RoleIDCode codeSystemName="DCM" csd-code="110152" displayName="Source" originalText="Source"/>
+</ActiveParticipant>
+<ActiveParticipant NetworkAccessPointID="127.0.0.1" NetworkAccessPointTypeCode="2" UserID="" UserIsRequestor="false">
+<RoleIDCode codeSystemName="DCM" csd-code="110153" displayName="Destination" originalText="Destination"/>
+</ActiveParticipant>
+
+<AuditSourceIdentification AuditEnterpriseSiteID="ENTERPRISE" AuditSourceID="TEST"/>
+<ParticipantObjectIdentification ParticipantObjectID="6578946^^^&amp;1.3.6.1.4.1.21367.9999.3.7&amp;ISO" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+<ParticipantObjectIDTypeCode codeSystemName="RFC-3881" csd-code="2" originalText="Patient Number"/>
+<ParticipantObjectDetail type="II" value="MS4zLjYuMS40LjEuMjEzNjcuOTkyLjY2MC41MDQ="/>
+</ParticipantObjectIdentification>
+</AuditMessage>

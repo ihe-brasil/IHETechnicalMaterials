@@ -1,0 +1,13 @@
+<!--<!DOCTYPE usage PUBLIC "DTDVersion-1" "../../../support/dtd/V3mCMETusage.dtd">-->
+<!--CMET Usage collected and expressed by RoseTree 4.2.7-->
+<!--Example copyright 2008 by Health Level Seven, Inc. -->
+<usage rendered="5/1/2008 9:54:45 PM">
+<cmetuse role="uses">
+<hmdref ref="POCG_HD000040UV01-hmd" refname="POCG_HD000040" refidentifier="POCG_HD000040UV01"/>
+<cmetref ref="POCG_MT000023UV01-msg" refname="A_GenotypeUniversal" refidentifier="POCG_MT000023UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="POCG_HD000023UV01-hmd" refname="POCG_HD000023" refidentifier="POCG_HD000023UV01"/>
+<cmetref ref="COCT_MT090000UV01-msg" refname="R_AssignedEntityUniversal" refidentifier="COCT_MT090000UV01"/>
+</cmetuse>
+</usage>

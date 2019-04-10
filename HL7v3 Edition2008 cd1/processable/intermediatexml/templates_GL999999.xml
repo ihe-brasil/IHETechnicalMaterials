@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by George W Beeler (Beeler Consulting LLC) -->
+<!-- These comments have been added by Steve Jakob
+     for use with the jEdit text editor. -->
+<!-- :folding=explicit:collapseFolds=1: -->
+<!--
+	NOTE ON <GTERM> ID ATTRIBUTES:
+	The convention for <gterm> id attributes is to use the same text as the
+	label, substituting underscore characters for spaces, with all alphabetic
+	characters in lower case. If the label contains explanatory text in 
+	parantheses (eg. "sponsor
+-->
+<!--
+<!DOCTYPE spec SYSTEM "./V3m.dtd">
+<?xml-stylesheet type="text/xsl" href="V3mNoTableLayoutHTML.xsl"?> -->
+<spec>
+  <header>
+    <title>Glossary</title>
+    <version>2.5</version>
+    <date>August 16, 2004</date>
+    <authlist>
+      <author>
+        <role>Editor</role>
+        <name>Various Contributors</name>
+        <affiliation>HL7 Publishing Technical Committee</affiliation>
+      </author>
+    </authlist>
+  </header>
+  <body>
+    <div1 id="glossary">
+      <head>Alphabetic Index</head>
+      <!-- {{{    A    -->
+      <div2 id="glossary-a">
+        <head>A</head>
+        <glist/>
+      </div2>
+      <!-- }}} -->
+      <!-- {{{    B    -->
+      <div2 id="glossary-b">
+        <head>B</head>
+        <glist/>
+      </div2>
+      <!-- }}} -->
+      <!-- {{{    C    -->
+      <div2 id="glossary-c">
+        <head>C</head>
+        <glist/>
+      </div2>
+      <!-- }}} -->
+      <!-- {{{    D    -->
+      <div2 id="glossary-d">
+        <head>D</head>
+        <glist/>
+      </div2>
+      <!-- }}} -->
+      <!-- {{{    E    -->
+      <div2 id="glossary-e">
+        <head>E</head>
+        <glist/>
+      </div2>
+      <!-- }}} -->
+      <!-- {{{    F    -->
+      <div2 id="glossary-f">
+        <head>F</head>
+        <glist/>
+      </div2>
+      <!-- }}} -->
+      <!-- {{{    G    -->
+      <div2 id="glossary-g">
+        <head>G</head>
+        <glist/>
+      </div2>
+      <!-- }}} -->
+      <!-- {{{    H    -->
+      <div2 id="glossary-h">
+        <head>H</head>
+        <glist/>
+      </div2>
+      <!-- }}} -->
+      <!-- {{{    I    -->
+      <div2 id="glossary-i">
+        <head>I</head>
+        <glist/>
+      </div2>
+      <!-- }}} -->
+      <!-- {{{    J    -->
+      <div2 id="glossary-j">
+        <head>J</head>
+        <glist/>
+      </div2>
+      <!-- }}} -->
+      <!-- {{{    K    -->
+      <div2 id="glossary-k">
+        <head>K</head>
+        <glist/>
+      </div2>
+      <!-- }}} -->
+      <!-- {{{    L    -->
+      <div2 id="glossary-l">
+        <head>L</head>
+        <glist/>
+      </div2>
+      <!-- }}} -->
+      <!-- {{{    M    -->
+      <div2 id="glossary-m">
+        <head>M</head>
+        <glist/>
+      </div2>
+      <!-- }}} -->
+      <!-- {{{    N    -->
+      <div2 id="glossary-n">
+        <head>N</head>
+        <glist/>
+      </div2>
+      <!-- }}} -->
+      <!-- {{{    O    -->
+      <div2 id="glossary-o">
+        <head>O</head>
+        <glist/>
+      </div2>
+      <!-- }}} -->
+      <!-- {{{    P    -->
+      <div2 id="glossary-p">
+        <head>P</head>
+        <glist/>
+      </div2>
+      <!-- }}} -->
+      <!-- {{{   Q    -->
+      <div2 id="glossary-q">
+        <head>Q</head>
+        <glist/>
+      </div2>
+      <!-- }}} -->
+      <!-- {{{    R    -->
+      <div2 id="glossary-r">
+        <head>R</head>
+        <glist/>
+      </div2>
+      <!-- }}} -->
+      <!-- {{{    S    -->
+      <div2 id="glossary-s">
+        <head>S</head>
+		<glist>
+			<gitem id="shell_method">
+				<label>Shell Method</label>
+				<def domainid="templates_glossary">The shell method of referencing templates in a message instance involves the use of the infrastructure templateId attribute set to a template identifier at the point in the instance where conformance to a template is asserted.</def>
+			</gitem>
+			<gitem id="sandbag_method">
+				<label>Sandbag Method</label>
+				<def domainid="templates_glossary">The sandbag method of referencing templates in a message instance involves the use of the infratructure templateId attribute set to the template identifier at the point in the instace where conformance to a template is asserted AND every class in the template is referenced (named) at the corresponding point in the instance using templateId this binds parts of the instance to specific parts of the identified template constraints definition.</def>
+			</gitem>
+		</glist>
+      </div2>
+      <!-- }}} -->
+      <!-- {{{    T    -->
+      <div2 id="glossary-t">
+        <head>T</head>
+        <glist/>
+      </div2>
+      <!-- }}} -->
+      <!-- {{{    U    -->
+      <div2 id="glossary-u">
+        <head>U</head>
+        <glist/>
+      </div2>
+      <!-- }}} -->
+      <!-- {{{    V    -->
+      <div2 id="glossary-v">
+        <head>V</head>
+        <glist/>
+      </div2>
+      <!-- }}} -->
+      <!-- {{{    W    -->
+      <div2 id="glossary-w">
+        <head>W</head>
+        <glist/>
+      </div2>
+      <!-- }}} -->
+      <!-- {{{    X    -->
+      <div2 id="glossary-x">
+        <head>X</head>
+        <glist/>
+      </div2>
+      <!-- }}} -->
+      <!-- {{{    Y    -->
+      <div2 id="glossary-y">
+        <head>Y</head>
+        <glist/>
+      </div2>
+      <!-- }}} -->
+      <!-- {{{    Z    -->
+      <div2 id="glossary-z">
+        <head>Z</head>
+        <glist/>
+      </div2>
+      <!-- }}} -->
+    </div1>
+  </body>
+</spec>

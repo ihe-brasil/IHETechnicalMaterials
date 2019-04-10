@@ -1,0 +1,1079 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:exslt="http://exslt.org/common">
+   <head>
+      <title>Domain: Patient Administration - Attending Practitioner Topic</title>
+      <link rel="stylesheet" type="text/css" href="../../support/css/v3m.css" title="v3m" /><script src="../../support/js/tree.js" type="text/javascript"></script><script src="../../support/js/setTopFrameText.js" type="text/javascript"></script><script src="../../support/js/swapcss.js" type="text/javascript"></script><script type="text/javascript">
+				if (find('heading')) setHeadingTextFromFileName(document.location.href,"Attending Practitioner Topic");
+			</script></head>
+   <body>
+      <div class="section">
+         <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU2" /></span><span class="number">10</span><span class="title"><a name="PRPA_DO000000UV-AttendingPractitioner-ic">Attending Practitioner Topic</a></span></div>
+         <div class="body">
+            <table>
+               <tbody>
+                  <tr>
+                     <td><a class="custombutton" href="uvpa.htm#contents">Return to Domain Table of Contents</a></td>
+                  </tr>
+                  <tr>
+                     <td colspan="2">
+                        <p class="lastEdit">Content Last Edited: 2008-05-29T10:25:27</p>
+                     </td>
+                  </tr>
+               </tbody>
+            </table><br /><div class="toc"><span>10.1  <a href="#sbs-PRPA_DO000000UV-AttendingPractitioner-ic">Storyboards</a><br /></span><span>10.2  <a href="#roles-PRPA_DO000000UV-AttendingPractitioner-ic">Application Roles</a><br /></span><span>10.3  <a href="#tes-PRPA_DO000000UV-AttendingPractitioner-ic">Trigger Events</a><br /></span><span>10.4  <a href="#rmims-PRPA_DO000000UV-AttendingPractitioner-ic">Refined Message Information Models</a><br /></span><span>10.5  <a href="#hmds-PRPA_DO000000UV-AttendingPractitioner-ic">Hierarchical Message Descriptions</a><br /></span><span>10.6  <a href="#ints-PRPA_DO000000UV-AttendingPractitioner-ic">Interactions</a><br /></span></div>
+            <div class="heading"><br /><b class="heading">Introduction</b></div>
+            <p>This topic covers messages about changing attending practitioner responsibility during an active patient encounter.  This
+               type of message would only be exchanged between systems that are closely coupled with respect to attending practitioner assignments
+               so the information model consists of little more than identifiers for the encounter, patient and practitioners plus the time
+               intervals for the attending practitioner participations.  In HL7 version 2.x terms, these messages represent the ADT^A54 (change
+               attending doctor) and the ADT^A55 (cancel change attending doctor) events. 
+            </p>
+            <p><strong>Scope  </strong></p>
+            <p>The Patient Administration Technical Committee chose to limit scope in this first release by:</p>
+            <ul>
+               <li>
+                  <p>Limiting storyboards to the simplest cases</p>
+               </li>
+               <li>
+                  <p>Excluding order/request messages</p>
+               </li>
+               <li>
+                  <p>Excluding notification messages for state transitions to/from "pending" (see the Role State Diagram for Patient Administration
+                     Messages below; the unsupported states and transitions are grayed out in the diagram)
+                  </p>
+               </li>
+            </ul>
+            <p><br /><img class="graphic" src="graphics/PRPA_NA000003.gif" alt="Managed Participation State Diagram for Patient Administration Messages" /><br />Managed Participation State Diagram for Patient Administration Messages<br /></p>
+            <p>The Patient Administration Technical Committee invites implementers with additional requirements to submit content proposals
+               for future releases of the standard.
+            </p>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">10.1</span><span class="title"><a name="sbs-PRPA_DO000000UV-AttendingPractitioner-ic">Storyboards</a></span><hr class="sectionrule" />
+               </div>
+               <div class="body">
+                  <p><a href="#">Go To Top</a></p>
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e15440" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Storyboards (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Cancel Attending Practitioner Change(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_ST301012UV02-str" class="">PRPA_ST301012UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Change Attending Practitioner(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_ST301011UV02-str" class="">PRPA_ST301011UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e154402" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Storyboards (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Attending Practitioner Change(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_ST301011UV02-str" class="">PRPA_ST301011UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Attending Practitioner Change Reversal(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_ST301012UV02-str" class="">PRPA_ST301012UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e154403" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Storyboards (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Change Attending Practitioner(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_ST301011UV02-str" class="">PRPA_ST301011UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Cancel Attending Practitioner Change(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_ST301012UV02-str" class="">PRPA_ST301012UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3gstory">the storyboard discussion</a> in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU2" /></span><span class="number">10.1.1</span><span class="title"><a name="PRPA_ST301011UV02-str">Change Attending Practitioner  (PRPA_ST301011UV02) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Purpose</b></div>
+                        <p>This storyboard demonstrates changing the attending practitioner assignment during an encounter.</p>
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><img class="graphic" src="graphics/PRPA_ST301011UV02.gif" alt="PRPA_ST301011UV02.gif" /><p></p><a name="PRPA_ST301011UV02-str"></a><table class="artifactList">
+                           <caption><b>Interaction List</b></caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Attending Practitioner Changed</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/PRPA_IN301011UV02.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_IN301011UV02-int" class="">PRPA_IN301011UV02</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <div class="subSubSubSection">
+                           <div class="header"><span class="icon"> </span><span class="number">10.1.1.1</span><span class="title"><a name="PRPA_ST301011UV02-PRPA_SN301001UV02-stex">Change Attending Practitioner (PRPA_SN301001UV02) </a></span></div>
+                           <div class="body">
+                              <p>Mr. Adam Everyman was admitted on Monday to the Good Health Hospital Inpatient Unit for his hip replacement surgery with Dr.
+                                 Sara Specialize as his attending practitioner.  Dr. Specialize was called out of town on a family emergency before arriving
+                                 at the hospital on Tuesday morning.  The active attending practitioner for Mr. Everyman's encounter was changed from Dr. Sara
+                                 Specialize to Dr. Aaron Attending as of Tuesday morning, 7am [Trigger Event <a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_TE301011UV02-te" class="">Change Assigned Attending Practitioner</a>].
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU2" /></span><span class="number">10.1.2</span><span class="title"><a name="PRPA_ST301012UV02-str">Cancel Attending Practitioner Change  (PRPA_ST301012UV02) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Purpose</b></div>
+                        <p>This storyboard demonstrates canceling a reported change of attending practitioner during an encounter.</p>
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><img class="graphic" src="graphics/PRPA_ST301012UV02.gif" alt="PRPA_ST301012UV02.gif" /><p></p><a name="PRPA_ST301012UV02-str"></a><table class="artifactList">
+                           <caption><b>Interaction List</b></caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Attending Practitioner Change Canceled</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/PRPA_IN301012UV02.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_IN301012UV02-int" class="">PRPA_IN301012UV02</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <div class="subSubSubSection">
+                           <div class="header"><span class="icon"> </span><span class="number">10.1.2.1</span><span class="title"><a name="PRPA_ST301012UV02-PRPA_SN301012UV02-stex">Cancel Attending Practitioner Change (PRPA_SN301012UV02) </a></span></div>
+                           <div class="body">
+                              <p>Mr. Adam Everyman was an inpatient in the Good Health Hospital Inpatient Unit. Dr. Sara Specialize was his attending physician.
+                                 Dr. Specialize was called out of town on an emergency so she arranged for Dr. Aaron Attending to take over as Mr. Everyman's
+                                 attending physician. The clerk recorded the change of Mr. Everyman's attending practitioner but a few minutes later Dr. Specialize
+                                 called back to say she would not be going out of town after all and would continue responsibility for her patients.  The clerk
+                                 reversed the change in attending practitioner [Trigger Event <a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_TE301012UV02-te" class="">Cancel Change Assigned Attending Practitioner</a>].
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">10.2</span><span class="title"><a name="roles-PRPA_DO000000UV-AttendingPractitioner-ic">Application Roles</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" border="0" class="help_table" width="100%">
+                              <tr id="d0e15474a" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Application Roles (Sorted by Artifact Code)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top" align="left" class="general"> </td>
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" border="0" class="">
+                                       <tr>
+                                          <td>
+                                             <table border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Attending Practitioner Change Informer&nbsp;
+                                                      					(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_AR301011UV02-ar" class="">PRPA_AR301011UV02</a>)
+                                                      				
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" border="0" class="">
+                                       <tr>
+                                          <td>
+                                             <table border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Attending Practitioner Change Tracker&nbsp;
+                                                      					(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_AR301012UV02-ar" class="">PRPA_AR301012UV02</a>)
+                                                      				
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" border="0" class="help_table" width="100%">
+                              <tr id="d0e15474b" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Application Roles (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top" align="left" class="general"> </td>
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" border="0" class="">
+                                       <tr>
+                                          <td>
+                                             <table border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Attending Practitioner Event Existence Informer&nbsp;
+                                                      					(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_AR301011UV02-ar" class="">PRPA_AR301011UV02</a>)
+                                                      				
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" border="0" class="">
+                                       <tr>
+                                          <td>
+                                             <table border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Attending Practitioner Event Existence Tracker&nbsp;
+                                                      					(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_AR301012UV02-ar" class="">PRPA_AR301012UV02</a>)
+                                                      				
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e154683" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Application Roles (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Attending Practitioner Change Informer(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_AR301011UV02-ar" class="">PRPA_AR301011UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Attending Practitioner Change Tracker(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_AR301012UV02-ar" class="">PRPA_AR301012UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3gapprole">the discussion of application roles</a> and their relationships in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU2" /></span><span class="number">10.2.1</span><span class="title"><a name="PRPA_AR301011UV02-ar">Attending Practitioner Change Informer  (PRPA_AR301011UV02) </a></span></div>
+                     <div class="body"><b>Description</b> 
+                        					<a href="../../domains/uvpa/uvpa_DO_XX.htm#PRPA_AR301011UV02-ar" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a><table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Attending Practitioner Event Existence Informer</em></td>
+                           </tr>
+                        </table>
+                        <p>An Attending Practitioner Change Informer sends notification when the attending practitioner responsible for an  encounter
+                           changes.  It can also send cancelation notification if a reported change did not take place.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU2" /></span><span class="number">10.2.2</span><span class="title"><a name="PRPA_AR301012UV02-ar">Attending Practitioner Change Tracker  (PRPA_AR301012UV02) </a></span></div>
+                     <div class="body"><b>Description</b> 
+                        					<a href="../../domains/uvpa/uvpa_DO_XX.htm#PRPA_AR301012UV02-ar" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a><table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Attending Practitioner Event Existence Tracker</em></td>
+                           </tr>
+                        </table>
+                        <p>An Attending Practitioner Change Tracker receives notification when the attending practitioner responsible for an encounter
+                           changes. It can also receive cancelation notification if a reported change did not take place.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">10.3</span><span class="title"><a name="tes-PRPA_DO000000UV-AttendingPractitioner-ic">Trigger Events</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e15491" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Trigger Events (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Cancel Change Assigned Attending Practitioner(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_TE301012UV02-te" class="">PRPA_TE301012UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Change Assigned Attending Practitioner(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_TE301011UV02-te" class="">PRPA_TE301011UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e154912" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Trigger Events (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Attending Practitioner Event Activate Change Notification(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_TE301011UV02-te" class="">PRPA_TE301011UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Attending Practitioner Event Nullify Change Notification(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_TE301012UV02-te" class="">PRPA_TE301012UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e154913" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Trigger Events (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Change Assigned Attending Practitioner(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_TE301011UV02-te" class="">PRPA_TE301011UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Cancel Change Assigned Attending Practitioner(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_TE301012UV02-te" class="">PRPA_TE301012UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3gtrigger">the discussion of trigger events</a> in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU2" /></span><span class="number">10.3.1</span><span class="title"><a name="PRPA_TE301011UV02-te">Change Assigned Attending Practitioner  (PRPA_TE301011UV02) </a></span></div>
+                     <div class="body">
+                        <div class="subheading">Description
+                           				<a href="../../domains/uvpa/uvpa_DO_XX.htm#PRPA_TE301011UV02-te" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a></div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Attending Practitioner Event Activate Change Notification</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>Type: </em></td>
+                              <td class="structType_value"><em>State-transition based</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>State Transition: </em></td>
+                              <td class="structType_value"><em>attender1 (<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_RM301011UV02-rmi" class="">PRPA_RM301011UV02</a>)
+                                    									</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>State Transition: </em></td>
+                              <td class="structType_value"><em>attender2 (<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_RM301011UV02-rmi" class="">PRPA_RM301011UV02</a>)
+                                    									</em></td>
+                           </tr>
+                        </table>
+                        <p>The Change Assigned Attending Practitioner trigger event signals that attending practitioner responsibility for an encounter
+                           was transferred from one practitioner to another.
+                        </p>
+                        <div class="heading"><br /><b class="heading">V2 Reference</b></div>
+                        <p>The Change Assigned Attending Practitioner trigger event is most closely aligned with the HL7 2.4 ADT^A54 - change attending
+                           doctor event.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU2" /></span><span class="number">10.3.2</span><span class="title"><a name="PRPA_TE301012UV02-te">Cancel Change Assigned Attending Practitioner  (PRPA_TE301012UV02) </a></span></div>
+                     <div class="body">
+                        <div class="subheading">Description
+                           				<a href="../../domains/uvpa/uvpa_DO_XX.htm#PRPA_TE301012UV02-te" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a></div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Attending Practitioner Event Nullify Change Notification</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>Type: </em></td>
+                              <td class="structType_value"><em>State-transition based</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>State Transition: </em></td>
+                              <td class="structType_value"><em>attender2 (<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_RM301011UV02-rmi" class="">PRPA_RM301011UV02</a>)
+                                    									</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>State Transition: </em></td>
+                              <td class="structType_value"><em>attender1 (<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_RM301011UV02-rmi" class="">PRPA_RM301011UV02</a>)
+                                    									</em></td>
+                           </tr>
+                        </table>
+                        <p>The Cancel Change Assigned Attending Practitioner trigger event signals that a previously reported transfer of attending practitioner
+                           responsibility for an encounter from one practitioner to another did not take place.  The previous Change Assigned Attending
+                           Practitioner action was reversed.
+                        </p>
+                        <div class="heading"><br /><b class="heading">V2 Reference</b></div>
+                        <p>The Cancel Change Assigned Attending Practitioner trigger event is most closely aligned with the HL7 2.4 ADT^A55 - cancel
+                           change attending doctor event.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">10.4</span><span class="title"><a name="rmims-PRPA_DO000000UV-AttendingPractitioner-ic">Refined Message Information Models</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e15521" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Refined Message Information Models (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Attending Practitioner Change(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_RM301011UV02-rmi" class="">PRPA_RM301011UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e155212" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Refined Message Information Models (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Attending Practitioner Event Change(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_RM301011UV02-rmi" class="">PRPA_RM301011UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e155213" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Refined Message Information Models (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Attending Practitioner Change(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_RM301011UV02-rmi" class="">PRPA_RM301011UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3grmim">the description of RMIMs</a> in the Version 3 Guide.
+                  </p>
+                  <p></p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU2" /></span><span class="number">10.4.1</span><span class="title"><a name="PRPA_RM301011UV02-rmi">Attending Practitioner Change  (PRPA_RM301011UV02) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/PRPA_RM301011UV.htm" target="_blank"><img class="graphic" src="editable/images/T-PRPA_RM301011UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><div class="subheading">Description</div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><b><em>Parent:  </em></b></td>
+                              <td class="structType_value"><em>Patient Administration (<a href="../../domains/uvpa/uvpa.htm#PRPA_DM000000UV-rmi" class="">PRPA_DM000000UV</a>)
+                                    									</em></td>
+                           </tr>
+                        </table>
+                        <p>The <strong>Attending Practitioner Change R-MIM</strong> defines the message used to report that attending practitioner responsibility has been transferred from one practitioner
+                           to another during an active encounter.
+                        </p>
+                        <p><strong>EncounterEvent</strong></p>
+                        <p>The entry point to the R-MIM is the focal encounter, <em>EncounterEvent</em>.  The R-MIM assumes attending practitioner change messages would be exchanged between systems that are closely coupled with
+                           respect to attending practitioner assignments so only <em>EncounterEvent.id</em> and the <em>subject</em> association to <em>R_Patient [identified]</em> CMET are sent about the encounter.
+                        </p>
+                        <p><strong>attender1</strong></p>
+                        <p>The <em>attender1</em> class describes the attending practitioner for the encounter following the change action.  The attributes <em>statusCode</em> (set to "active") and <em>time</em> (populated with the assignment start date-time) are mandatory.  The practitioner is sent in an <em>R_AssignedPerson</em> CMET.
+                        </p>
+                        <p><strong>attender2</strong></p>
+                        <p>The <em>attender2</em> class describes the attending practitioner for the encounter prior to the change action.  The attributes <em>statusCode</em> (with a value other than "active") and <em>time</em> are mandatory.  For a <em>statusCode</em> other than "nullified" the <em>time</em> attribute should contain the time range (starting and ending date-time) for the assignment. For a <em>statusCode</em> of "nullified" <em>time</em> would contain the start date-time reported in the record that was nullified.  The practitioner is sent in an <em>R_AssignedPerson</em> CMET.
+                        </p>
+                        <p></p>
+                        <table class="artifactList">
+                           <caption>Contained Hierarchical Message Descriptions</caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Attending Practitioner Event Change</td>
+                              <td class="artifactList_code"><a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_HD301011UV02-hmd" class="">PRPA_HD301011UV02</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">10.5</span><span class="title"><a name="hmds-PRPA_DO000000UV-AttendingPractitioner-ic">Hierarchical Message Descriptions</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e15600" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Hierarchical Message Descriptions (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Attending Practitioner Change(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_HD301011UV02-hmd" class="">PRPA_HD301011UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e156002" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Hierarchical Message Descriptions (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Attending Practitioner Event Change(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_HD301011UV02-hmd" class="">PRPA_HD301011UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e156003" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Hierarchical Message Descriptions (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Attending Practitioner Change(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_HD301011UV02-hmd" class="">PRPA_HD301011UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <p></p>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3ghmd">the description of HMDs</a> in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU2" /></span><span class="number">10.5.1</span><span class="title"><a name="PRPA_HD301011UV02-hmd">Attending Practitioner Change  (PRPA_HD301011UV02) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Description</b></div>
+                        <p>This HMD defines the message used report that attending practitioner responsibility has changed during an active encounter.</p>
+                        <table class="artifactList">
+                           <caption>
+                              												Common Message Element Types Used
+                              									
+                           </caption>
+                           <tr class="">
+                              <td class="artifactList_desc">R_PatientIdentified</td>
+                              <td class="artifactList_code"><a href="../../domains/uvct/uvct_do_cmets.htm#COCT_MT050001UV01-msg" class="">COCT_MT050001UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="artifactList_desc">R_AssignedPersonContact</td>
+                              <td class="artifactList_code"><a href="../../domains/uvct/uvct_do_cmets.htm#COCT_MT090103UV01-msg" class="">COCT_MT090103UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <div class="subheading">Base Hierarchical Message Description
+                           				<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_RM301011UV02-rmi" class=""><img src="../../support/graphics/rmimview.gif" alt="View R-MIM" height="16" width="16" style="border-width:0" /></a> 
+                           				<a href="../../domains/uvpa/editable/PRPA_HD301011UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="editable/PRPA_HD301011UV.xls" target="_blank"><img src="../../support/graphics/excelview.gif" height="16" width="16" alt="Excel View" style="border:0px" /></a> 
+                        </div>
+                        <table class="hmd">
+                           <caption>Message Type List</caption>
+                           <tr class="">
+                              <td class="hmd_desc"><a name="PRPA_MT301011UV02-msg"></a>Attending Practitioner Event Change
+                              </td>
+                              <td class="hmd_code">PRPA_MT301011UV02</td>
+                              <td class="hmd_links"><a href="../../domains/uvpa/editable/PRPA_HD301011UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="../../processable/multicacheschemas/PRPA_MT301011UV02.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> <a href="../../domains/uvpa/uvpa_DO_XX.htm#PRPA_MT301011UV02-msg" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a>
+                                 										 
+                                 									
+                                 
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">10.6</span><span class="title"><a name="ints-PRPA_DO000000UV-AttendingPractitioner-ic">Interactions</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e15622" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> List of Interactions (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Attending Practitioner Change Canceled(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_IN301012UV02-int" class="">PRPA_IN301012UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Attending Practitioner Changed(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_IN301011UV02-int" class="">PRPA_IN301011UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e156222" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> List of Interactions (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Attending Practitioner Event Activate Change Notification(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_IN301011UV02-int" class="">PRPA_IN301011UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Attending Practitioner Event Nullify Notification Change(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_IN301012UV02-int" class="">PRPA_IN301012UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e156223" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> List of Interactions (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Attending Practitioner Changed(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_IN301011UV02-int" class="">PRPA_IN301011UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Attending Practitioner Change Canceled(<a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_IN301012UV02-int" class="">PRPA_IN301012UV02</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <p></p>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3gintact">the definition of Interactions</a> in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU2" /></span><span class="number">10.6.1</span><span class="title"><a name="PRPA_IN301011UV02-int">Attending Practitioner Changed  (PRPA_IN301011UV02) </a></span></div>
+                     <div class="body">
+                        <div class="heading">Description <a href="../../processable/multicacheschemas/PRPA_IN301011UV02.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                        </div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Attending Practitioner Event Activate Change Notification</em></td>
+                           </tr>
+                        </table>
+                        <p>This interaction occurs after the attending practitioner responsibility for an encounter is transferred from one practitioner
+                           to another.  An informer sends to a tracker a small message identifying the encounter, the patient, the previous attending
+                           practitioner and assignment time range, and the new attending practitioner and start time.
+                        </p>
+                        <p></p>
+                        <table class="interact">
+                           <tr class="">
+                              <td class="interact_type"><b>Trigger Event</b></td>
+                              <td class="interact_desc">Change Assigned Attending Practitioner</td>
+                              <td class="interact_code"><a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_TE301011UV02-te" class="">PRPA_TE301011UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Transmission Wrapper</b></td>
+                              <td class="interact_desc">Send Message Payload</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_GenericMessageTransmission.htm#MCCI_MT000100UV01-msg" class="">MCCI_MT000100UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Control Act Wrapper</b></td>
+                              <td class="interact_desc">Trigger Event Control Act</td>
+                              <td class="interact_code"><a href="../../domains/uvai/uvai_TriggerEventControlAct.htm#MCAI_MT700201UV01-msg" class="">MCAI_MT700201UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Message Type</b></td>
+                              <td class="interact_desc">Attending Practitioner Change</td>
+                              <td class="interact_code"><a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_MT301011UV02-msg" class="">PRPA_MT301011UV02</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="interact">
+                           <caption>Sending and Receiving Roles</caption>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Attending Practitioner Change Informer</td>
+                              <td class="interact_code"><a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_AR301011UV02-ar" class="">PRPA_AR301011UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Attending Practitioner Change Tracker</td>
+                              <td class="interact_code"><a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_AR301012UV02-ar" class="">PRPA_AR301012UV02</a></td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <p></p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU2" /></span><span class="number">10.6.2</span><span class="title"><a name="PRPA_IN301012UV02-int">Attending Practitioner Change Canceled  (PRPA_IN301012UV02) </a></span></div>
+                     <div class="body">
+                        <div class="heading">Description <a href="../../processable/multicacheschemas/PRPA_IN301012UV02.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                        </div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Attending Practitioner Event Nullify Notification Change</em></td>
+                           </tr>
+                        </table>This interaction occurs after a previously reported change of attending practitioner is canceled. An informer sends trackers
+                        a small message identifying the encounter, the patient, the attending practitioner assignment to be reactivated and the attending
+                        practitioner assignment to be nullified.
+                        <p></p>
+                        <table class="interact">
+                           <tr class="">
+                              <td class="interact_type"><b>Trigger Event</b></td>
+                              <td class="interact_desc">Cancel Change Assigned Attending Practitioner</td>
+                              <td class="interact_code"><a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_TE301012UV02-te" class="">PRPA_TE301012UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Transmission Wrapper</b></td>
+                              <td class="interact_desc">Send Message Payload</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_GenericMessageTransmission.htm#MCCI_MT000100UV01-msg" class="">MCCI_MT000100UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Control Act Wrapper</b></td>
+                              <td class="interact_desc">Trigger Event Control Act</td>
+                              <td class="interact_code"><a href="../../domains/uvai/uvai_TriggerEventControlAct.htm#MCAI_MT700201UV01-msg" class="">MCAI_MT700201UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Message Type</b></td>
+                              <td class="interact_desc">Attending Practitioner Change</td>
+                              <td class="interact_code"><a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_MT301011UV02-msg" class="">PRPA_MT301011UV02</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="interact">
+                           <caption>Sending and Receiving Roles</caption>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Attending Practitioner Change Informer</td>
+                              <td class="interact_code"><a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_AR301011UV02-ar" class="">PRPA_AR301011UV02</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Attending Practitioner Change Tracker</td>
+                              <td class="interact_code"><a href="../../domains/uvpa/uvpa_AttendingPractitioner.htm#PRPA_AR301012UV02-ar" class="">PRPA_AR301012UV02</a></td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <p></p>
+               </div>
+            </div>
+            <p>
+               <table>
+                  <tbody>
+                     <tr>
+                        <td><a class="custombutton" href="#top">Return to top of page</a></td>
+                     </tr>
+                  </tbody>
+               </table>
+            </p>
+         </div>
+      </div>
+   </body>
+</html>

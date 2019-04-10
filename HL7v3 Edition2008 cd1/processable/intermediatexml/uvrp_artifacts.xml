@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<spec id="PORP_DO000001UV-ic" type="dependencyTree" sectionCode="UVRP">
+   <header>
+      <title> Regulated Products Dependency Annex
+				</title>
+      <version>V 00-00</version>
+      <ballot type="NormativeStandard" number="1"/>
+      <date>6/31/2008</date>
+      <legalese copyRightDate="2008"/>
+   </header>
+   <body>
+      <div1 id="all-sortOrder">
+         <head> Regulated Products in Structured Sort Order</head>
+         <artree role="ssn">
+            <artreeitem>
+               <stref id="d0e21162" role="tree-intro" sectID="UVRP" sectType="SB" refName="Domain: Regulated Products" refFamiliarName="Domain: Regulated Products" refIdentifier="PORP_DO000001UV"/>
+               <artreeitem>
+                  <stref id="d0e21164" role="tree-intro" sectID="UVRP" sectType="SB" refName="Topic: Regulated Product Submission" refFamiliarName="Topic: Regulated Product Submission" refIdentifier="PORP_DO000001UV"/>
+                  <artreeitem>
+                     <stref id="d0e21164" role="tree-intro" sectID="" sectType="SB" refName=" Story Boards" refFamiliarName=" Story Boards" refIdentifier=""/>
+                     <artreeitem>
+                        <stref id="treeRef-PORP_ST000001UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Managing Applications through Submission Units" refFamiliarName="Managing Applications through Submission Units" refIdentifier="PORP_ST000001UV01"/>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000001UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Creating a new application and submission" refFamiliarName="Creating a new application and submission" refIdentifier="PORP_SN000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000002UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Adding submission units to an existing submission" refFamiliarName="Adding submission units to an existing submission" refIdentifier="PORP_SN000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000003UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Creating a new submission to an application" refFamiliarName="Creating a new submission to an application" refIdentifier="PORP_SN000003UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000004UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Modular Reviews" refFamiliarName="Modular Reviews" refIdentifier="PORP_SN000004UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000005UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="One submission unit to multiple applications" refFamiliarName="One submission unit to multiple applications" refIdentifier="PORP_SN000005UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000006UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="One submission unit to multiple submissions" refFamiliarName="One submission unit to multiple submissions" refIdentifier="PORP_SN000006UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000000UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Withdrawing a submission unit" refFamiliarName="Withdrawing a submission unit" refIdentifier="PORP_SN000000UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000008UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Withdrawing a submission" refFamiliarName="Withdrawing a submission" refIdentifier="PORP_SN000008UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORP_IN000001UV01" role="dependency" sectID="UVRP" sectType="SB" refName="Submission Unit sent" refFamiliarName="Submission Unit sent" refIdentifier="PORP_IN000001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <stref id="treeRef-PORP_ST000002UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Managing the contents of submission units" refFamiliarName="Managing the contents of submission units" refIdentifier="PORP_ST000002UV01"/>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000009UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Adding new files to a submission" refFamiliarName="Adding new files to a submission" refIdentifier="PORP_SN000009UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000010UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Replacing a previously submitted file" refFamiliarName="Replacing a previously submitted file" refIdentifier="PORP_SN000010UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000011UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Removing a previously submitted file" refFamiliarName="Removing a previously submitted file" refIdentifier="PORP_SN000011UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000012UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Replacing one file with multiple files" refFamiliarName="Replacing one file with multiple files" refIdentifier="PORP_SN000012UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000013UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Adding an addendum to a file" refFamiliarName="Adding an addendum to a file" refIdentifier="PORP_SN000013UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000014UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Replacing an addendum" refFamiliarName="Replacing an addendum" refIdentifier="PORP_SN000014UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000015UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Replacing a file and an addendum" refFamiliarName="Replacing a file and an addendum" refIdentifier="PORP_SN000015UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000016UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Adding one file to multiple logical documents" refFamiliarName="Adding one file to multiple logical documents" refIdentifier="PORP_SN000016UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000017UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Adding files that were previously removed" refFamiliarName="Adding files that were previously removed" refIdentifier="PORP_SN000017UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000018UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Changing the category of a submitted file" refFamiliarName="Changing the category of a submitted file" refIdentifier="PORP_SN000018UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000019UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Referencing files from other applications" refFamiliarName="Referencing files from other applications" refIdentifier="PORP_SN000019UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000020UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Replacing files referenced from other applications" refFamiliarName="Replacing files referenced from other applications" refIdentifier="PORP_SN000020UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000021UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Replacing one file in multiple logical documents" refFamiliarName="Replacing one file in multiple logical documents" refIdentifier="PORP_SN000021UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000022UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Replacing multiple files with one file" refFamiliarName="Replacing multiple files with one file" refIdentifier="PORP_SN000022UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000023UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Replacing sections of a file" refFamiliarName="Replacing sections of a file" refIdentifier="PORP_SN000023UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORP_IN000001UV01" role="dependency" sectID="UVRP" sectType="SB" refName="Submission Unit sent" refFamiliarName="Submission Unit sent" refIdentifier="PORP_IN000001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21164" role="tree-intro" sectID="" sectType="SB" refName=" Application Roles" refFamiliarName=" Application Roles" refIdentifier=""/>
+                     <artreeitem>
+                        <arref id="treeRef-PORP_AR000001UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Applicant" refFamiliarName="Applicant" refIdentifier="PORP_AR000001UV01"/>
+                     </artreeitem>
+                     <artreeitem>
+                        <arref id="treeRef-PORP_AR000002UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Regulatory Authority" refFamiliarName="Regulatory Authority" refIdentifier="PORP_AR000002UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-PORP_IN000001UV01" role="dependency" sectID="UVRP" sectType="SB" refName="Submission Unit sent" refFamiliarName="Submission Unit sent" refIdentifier="PORP_IN000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORP_IN000001UV01" role="dependency" sectID="UVRP" sectType="SB" refName="Submission Unit sent" refFamiliarName="Submission Unit sent" refIdentifier="PORP_IN000001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21164" role="tree-intro" sectID="" sectType="SB" refName=" Trigger Events" refFamiliarName=" Trigger Events" refIdentifier=""/>
+                     <artreeitem>
+                        <teref id="treeRef-PORP_TE000001UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Regulatory Product Submission Unit Notification" refFamiliarName="Regulatory Product Submission Unit Notification" refIdentifier="PORP_TE000001UV01"/>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21164" role="tree-intro" sectID="" sectType="SB" refName=" Refined Message Information Models" refFamiliarName=" Refined Message Information Models" refIdentifier=""/>
+                     <artreeitem>
+                        <rmimref id="treeRef-PORP_RM000001UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Regulated Product Submission" refFamiliarName="Regulated Product Submission" refIdentifier="PORP_RM000001UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-PORP_HD000001UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Regulated Product Submission" refFamiliarName="Regulated Product Submission" refIdentifier="PORP_HD000001UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-PORP_MT000001UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Regulated Product Submission MT" refFamiliarName="Regulated Product Submission MT" refIdentifier="PORP_MT000001UV01"/>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21164" role="tree-intro" sectID="" sectType="SB" refName=" Interactions" refFamiliarName=" Interactions" refIdentifier=""/>
+                     <artreeitem>
+                        <intref id="treeRef-PORP_IN000001UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Submission Unit sent" refFamiliarName="Submission Unit sent" refIdentifier="PORP_IN000001UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORP_AR000002UV01" role="dependency" sectID="UVRP" sectType="SB" refName="Regulatory Authority" refFamiliarName="Regulatory Authority" refIdentifier="PORP_AR000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORP_AR000002UV01" role="dependency" sectID="UVRP" sectType="SB" refName="Regulatory Authority" refFamiliarName="Regulatory Authority" refIdentifier="PORP_AR000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORP_TE000001UV01" role="dependency" sectID="UVRP" sectType="SB" refName="Regulatory Product Submission Unit Notification" refFamiliarName="Regulatory Product Submission Unit Notification" refIdentifier="PORP_TE000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PORP_MT000001UV01" role="dependency" sectID="UVRP" sectType="SB" refName="Regulated Product Submission MT" refFamiliarName="Regulated Product Submission MT" refIdentifier="PORP_MT000001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+               <artreeitem>
+                  <stref id="d0e21257" role="tree-intro" sectID="UVRP" sectType="SB" refName="Topic: Structured Product Labeling (SPL) Release 3" refFamiliarName="Topic: Structured Product Labeling (SPL) Release 3" refIdentifier="PORP_DO000001UV"/>
+                  <artreeitem>
+                     <stref id="d0e21257" role="tree-intro" sectID="" sectType="SB" refName=" Story Boards" refFamiliarName=" Story Boards" refIdentifier=""/>
+                     <artreeitem>
+                        <stref id="treeRef-PORP_ST050001UV03" role="tree-element" sectID="UVRP" sectType="SB" refName="Publishing a Product Label" refFamiliarName="Publishing a Product Label" refIdentifier="PORP_ST050001UV03"/>
+                        <artreeitem/>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21257" role="tree-intro" sectID="" sectType="SB" refName=" Application Roles" refFamiliarName=" Application Roles" refIdentifier=""/>
+                     <artreeitem>
+                        <arref id="treeRef-PORP_AR050002UV03" role="tree-element" sectID="UVRP" sectType="SB" refName="Structured Product Label Recipient" refFamiliarName="Structured Product Label Recipient" refIdentifier="PORP_AR050002UV03"/>
+                        <artreeitem>
+                           <intref id="treeRef-PORP_IN050001UV03" role="dependency" sectID="UVRP" sectType="SB" refName="Structured Product Label Document Submission" refFamiliarName="Structured Product Label Document Submission" refIdentifier="PORP_IN050001UV03"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <arref id="treeRef-PORP_AR050001UV03" role="tree-element" sectID="UVRP" sectType="SB" refName="Structured Product Label Submitter" refFamiliarName="Structured Product Label Submitter" refIdentifier="PORP_AR050001UV03"/>
+                        <artreeitem>
+                           <intref id="treeRef-PORP_IN050001UV03" role="dependency" sectID="UVRP" sectType="SB" refName="Structured Product Label Document Submission" refFamiliarName="Structured Product Label Document Submission" refIdentifier="PORP_IN050001UV03"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21257" role="tree-intro" sectID="" sectType="SB" refName=" Trigger Events" refFamiliarName=" Trigger Events" refIdentifier=""/>
+                     <artreeitem>
+                        <teref id="treeRef-PORP_TE050001UV03" role="tree-element" sectID="UVRP" sectType="SB" refName="Structured Product Label Document Submission" refFamiliarName="Structured Product Label Document Submission" refIdentifier="PORP_TE050001UV03"/>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21257" role="tree-intro" sectID="" sectType="SB" refName=" Refined Message Information Models" refFamiliarName=" Refined Message Information Models" refIdentifier=""/>
+                     <artreeitem>
+                        <rmimref id="treeRef-PORP_RM050032UV03" role="tree-element" sectID="UVRP" sectType="SB" refName="Structured Product Label Document" refFamiliarName="Structured Product Label Document" refIdentifier="PORP_RM050032UV03"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-PORP_HD050032UV03" role="tree-element" sectID="UVRP" sectType="SB" refName="Structured Product Label Document" refFamiliarName="Structured Product Label Document" refIdentifier="PORP_HD050032UV03"/>
+                           <artreeitem>
+                              <msgref id="treeRef-PORP_MT050032UV03" role="tree-element" sectID="UVRP" sectType="SB" refName="Structured Product Label Document" refFamiliarName="Structured Product Label Document" refIdentifier="PORP_MT050032UV03"/>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21257" role="tree-intro" sectID="" sectType="SB" refName=" Interactions" refFamiliarName=" Interactions" refIdentifier=""/>
+                     <artreeitem>
+                        <intref id="treeRef-PORP_IN050001UV03" role="tree-element" sectID="UVRP" sectType="SB" refName="Structured Product Label Document Submission" refFamiliarName="Structured Product Label Document Submission" refIdentifier="PORP_IN050001UV03"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORP_AR050001UV03" role="dependency" sectID="UVRP" sectType="SB" refName="Structured Product Label Submitter" refFamiliarName="Structured Product Label Submitter" refIdentifier="PORP_AR050001UV03"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORP_AR050002UV03" role="dependency" sectID="UVRP" sectType="SB" refName="Structured Product Label Recipient" refFamiliarName="Structured Product Label Recipient" refIdentifier="PORP_AR050002UV03"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORP_TE050001UV03" role="dependency" sectID="UVRP" sectType="SB" refName="Structured Product Label Document Submission" refFamiliarName="Structured Product Label Document Submission" refIdentifier="PORP_TE050001UV03"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PORP_MT050032UV03" role="dependency" sectID="UVRP" sectType="SB" refName="Structured Product Label Document" refFamiliarName="Structured Product Label Document" refIdentifier="PORP_MT050032UV03"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+            </artreeitem>
+         </artree>
+      </div1>
+      <div1 id="all-codeOrder">
+         <head> Regulated Products in Artifact Code Order</head>
+         <artree role="code">
+            <artreeitem>
+               <stref id="d0e21162" role="tree-intro" sectID="UVRP" sectType="SB" refName="Domain: Regulated Products" refFamiliarName="Domain: Regulated Products" refIdentifier="PORP_DO000001UV"/>
+               <artreeitem>
+                  <stref id="d0e21164" role="tree-intro" sectID="UVRP" sectType="SB" refName="Topic: Regulated Product Submission" refFamiliarName="Topic: Regulated Product Submission" refIdentifier="PORP_DO000001UV"/>
+                  <artreeitem>
+                     <stref id="d0e21164" role="tree-intro" sectID="" sectType="SB" refName=" Story Boards" refFamiliarName=" Story Boards" refIdentifier=""/>
+                     <artreeitem>
+                        <stref id="treeRef-PORP_ST000001UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Managing Applications through Submission Units" refFamiliarName="Managing Applications through Submission Units" refIdentifier="PORP_ST000001UV01"/>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000001UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Creating a new application and submission" refFamiliarName="Creating a new application and submission" refIdentifier="PORP_SN000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000002UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Adding submission units to an existing submission" refFamiliarName="Adding submission units to an existing submission" refIdentifier="PORP_SN000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000003UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Creating a new submission to an application" refFamiliarName="Creating a new submission to an application" refIdentifier="PORP_SN000003UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000004UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Modular Reviews" refFamiliarName="Modular Reviews" refIdentifier="PORP_SN000004UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000005UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="One submission unit to multiple applications" refFamiliarName="One submission unit to multiple applications" refIdentifier="PORP_SN000005UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000006UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="One submission unit to multiple submissions" refFamiliarName="One submission unit to multiple submissions" refIdentifier="PORP_SN000006UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000000UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Withdrawing a submission unit" refFamiliarName="Withdrawing a submission unit" refIdentifier="PORP_SN000000UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000008UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Withdrawing a submission" refFamiliarName="Withdrawing a submission" refIdentifier="PORP_SN000008UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORP_IN000001UV01" role="dependency" sectID="UVRP" sectType="SB" refName="Submission Unit sent" refFamiliarName="Submission Unit sent" refIdentifier="PORP_IN000001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <stref id="treeRef-PORP_ST000002UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Managing the contents of submission units" refFamiliarName="Managing the contents of submission units" refIdentifier="PORP_ST000002UV01"/>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000009UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Adding new files to a submission" refFamiliarName="Adding new files to a submission" refIdentifier="PORP_SN000009UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000010UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Replacing a previously submitted file" refFamiliarName="Replacing a previously submitted file" refIdentifier="PORP_SN000010UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000011UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Removing a previously submitted file" refFamiliarName="Removing a previously submitted file" refIdentifier="PORP_SN000011UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000012UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Replacing one file with multiple files" refFamiliarName="Replacing one file with multiple files" refIdentifier="PORP_SN000012UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000013UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Adding an addendum to a file" refFamiliarName="Adding an addendum to a file" refIdentifier="PORP_SN000013UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000014UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Replacing an addendum" refFamiliarName="Replacing an addendum" refIdentifier="PORP_SN000014UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000015UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Replacing a file and an addendum" refFamiliarName="Replacing a file and an addendum" refIdentifier="PORP_SN000015UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000016UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Adding one file to multiple logical documents" refFamiliarName="Adding one file to multiple logical documents" refIdentifier="PORP_SN000016UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000017UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Adding files that were previously removed" refFamiliarName="Adding files that were previously removed" refIdentifier="PORP_SN000017UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000018UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Changing the category of a submitted file" refFamiliarName="Changing the category of a submitted file" refIdentifier="PORP_SN000018UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000019UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Referencing files from other applications" refFamiliarName="Referencing files from other applications" refIdentifier="PORP_SN000019UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000020UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Replacing files referenced from other applications" refFamiliarName="Replacing files referenced from other applications" refIdentifier="PORP_SN000020UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000021UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Replacing one file in multiple logical documents" refFamiliarName="Replacing one file in multiple logical documents" refIdentifier="PORP_SN000021UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000022UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Replacing multiple files with one file" refFamiliarName="Replacing multiple files with one file" refIdentifier="PORP_SN000022UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000023UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Replacing sections of a file" refFamiliarName="Replacing sections of a file" refIdentifier="PORP_SN000023UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORP_IN000001UV01" role="dependency" sectID="UVRP" sectType="SB" refName="Submission Unit sent" refFamiliarName="Submission Unit sent" refIdentifier="PORP_IN000001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21164" role="tree-intro" sectID="" sectType="SB" refName=" Application Roles" refFamiliarName=" Application Roles" refIdentifier=""/>
+                     <artreeitem>
+                        <arref id="treeRef-PORP_AR000001UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Applicant" refFamiliarName="Applicant" refIdentifier="PORP_AR000001UV01"/>
+                     </artreeitem>
+                     <artreeitem>
+                        <arref id="treeRef-PORP_AR000002UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Regulatory Authority" refFamiliarName="Regulatory Authority" refIdentifier="PORP_AR000002UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-PORP_IN000001UV01" role="dependency" sectID="UVRP" sectType="SB" refName="Submission Unit sent" refFamiliarName="Submission Unit sent" refIdentifier="PORP_IN000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORP_IN000001UV01" role="dependency" sectID="UVRP" sectType="SB" refName="Submission Unit sent" refFamiliarName="Submission Unit sent" refIdentifier="PORP_IN000001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21164" role="tree-intro" sectID="" sectType="SB" refName=" Trigger Events" refFamiliarName=" Trigger Events" refIdentifier=""/>
+                     <artreeitem>
+                        <teref id="treeRef-PORP_TE000001UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Regulatory Product Submission Unit Notification" refFamiliarName="Regulatory Product Submission Unit Notification" refIdentifier="PORP_TE000001UV01"/>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21164" role="tree-intro" sectID="" sectType="SB" refName=" Refined Message Information Models" refFamiliarName=" Refined Message Information Models" refIdentifier=""/>
+                     <artreeitem>
+                        <rmimref id="treeRef-PORP_RM000001UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Regulated Product Submission" refFamiliarName="Regulated Product Submission" refIdentifier="PORP_RM000001UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-PORP_HD000001UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Regulated Product Submission" refFamiliarName="Regulated Product Submission" refIdentifier="PORP_HD000001UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-PORP_MT000001UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Regulated Product Submission MT" refFamiliarName="Regulated Product Submission MT" refIdentifier="PORP_MT000001UV01"/>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21164" role="tree-intro" sectID="" sectType="SB" refName=" Interactions" refFamiliarName=" Interactions" refIdentifier=""/>
+                     <artreeitem>
+                        <intref id="treeRef-PORP_IN000001UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Submission Unit sent" refFamiliarName="Submission Unit sent" refIdentifier="PORP_IN000001UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORP_AR000002UV01" role="dependency" sectID="UVRP" sectType="SB" refName="Regulatory Authority" refFamiliarName="Regulatory Authority" refIdentifier="PORP_AR000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORP_AR000002UV01" role="dependency" sectID="UVRP" sectType="SB" refName="Regulatory Authority" refFamiliarName="Regulatory Authority" refIdentifier="PORP_AR000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORP_TE000001UV01" role="dependency" sectID="UVRP" sectType="SB" refName="Regulatory Product Submission Unit Notification" refFamiliarName="Regulatory Product Submission Unit Notification" refIdentifier="PORP_TE000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PORP_MT000001UV01" role="dependency" sectID="UVRP" sectType="SB" refName="Regulated Product Submission MT" refFamiliarName="Regulated Product Submission MT" refIdentifier="PORP_MT000001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+               <artreeitem>
+                  <stref id="d0e21257" role="tree-intro" sectID="UVRP" sectType="SB" refName="Topic: Structured Product Labeling (SPL) Release 3" refFamiliarName="Topic: Structured Product Labeling (SPL) Release 3" refIdentifier="PORP_DO000001UV"/>
+                  <artreeitem>
+                     <stref id="d0e21257" role="tree-intro" sectID="" sectType="SB" refName=" Story Boards" refFamiliarName=" Story Boards" refIdentifier=""/>
+                     <artreeitem>
+                        <stref id="treeRef-PORP_ST050001UV03" role="tree-element" sectID="UVRP" sectType="SB" refName="Publishing a Product Label" refFamiliarName="Publishing a Product Label" refIdentifier="PORP_ST050001UV03"/>
+                        <artreeitem/>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21257" role="tree-intro" sectID="" sectType="SB" refName=" Application Roles" refFamiliarName=" Application Roles" refIdentifier=""/>
+                     <artreeitem>
+                        <arref id="treeRef-PORP_AR050001UV03" role="tree-element" sectID="UVRP" sectType="SB" refName="Structured Product Label Submitter" refFamiliarName="Structured Product Label Submitter" refIdentifier="PORP_AR050001UV03"/>
+                        <artreeitem>
+                           <intref id="treeRef-PORP_IN050001UV03" role="dependency" sectID="UVRP" sectType="SB" refName="Structured Product Label Document Submission" refFamiliarName="Structured Product Label Document Submission" refIdentifier="PORP_IN050001UV03"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <arref id="treeRef-PORP_AR050002UV03" role="tree-element" sectID="UVRP" sectType="SB" refName="Structured Product Label Recipient" refFamiliarName="Structured Product Label Recipient" refIdentifier="PORP_AR050002UV03"/>
+                        <artreeitem>
+                           <intref id="treeRef-PORP_IN050001UV03" role="dependency" sectID="UVRP" sectType="SB" refName="Structured Product Label Document Submission" refFamiliarName="Structured Product Label Document Submission" refIdentifier="PORP_IN050001UV03"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21257" role="tree-intro" sectID="" sectType="SB" refName=" Trigger Events" refFamiliarName=" Trigger Events" refIdentifier=""/>
+                     <artreeitem>
+                        <teref id="treeRef-PORP_TE050001UV03" role="tree-element" sectID="UVRP" sectType="SB" refName="Structured Product Label Document Submission" refFamiliarName="Structured Product Label Document Submission" refIdentifier="PORP_TE050001UV03"/>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21257" role="tree-intro" sectID="" sectType="SB" refName=" Refined Message Information Models" refFamiliarName=" Refined Message Information Models" refIdentifier=""/>
+                     <artreeitem>
+                        <rmimref id="treeRef-PORP_RM050032UV03" role="tree-element" sectID="UVRP" sectType="SB" refName="Structured Product Label Document" refFamiliarName="Structured Product Label Document" refIdentifier="PORP_RM050032UV03"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-PORP_HD050032UV03" role="tree-element" sectID="UVRP" sectType="SB" refName="Structured Product Label Document" refFamiliarName="Structured Product Label Document" refIdentifier="PORP_HD050032UV03"/>
+                           <artreeitem>
+                              <msgref id="treeRef-PORP_MT050032UV03" role="tree-element" sectID="UVRP" sectType="SB" refName="Structured Product Label Document" refFamiliarName="Structured Product Label Document" refIdentifier="PORP_MT050032UV03"/>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21257" role="tree-intro" sectID="" sectType="SB" refName=" Interactions" refFamiliarName=" Interactions" refIdentifier=""/>
+                     <artreeitem>
+                        <intref id="treeRef-PORP_IN050001UV03" role="tree-element" sectID="UVRP" sectType="SB" refName="Structured Product Label Document Submission" refFamiliarName="Structured Product Label Document Submission" refIdentifier="PORP_IN050001UV03"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORP_AR050001UV03" role="dependency" sectID="UVRP" sectType="SB" refName="Structured Product Label Submitter" refFamiliarName="Structured Product Label Submitter" refIdentifier="PORP_AR050001UV03"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORP_AR050002UV03" role="dependency" sectID="UVRP" sectType="SB" refName="Structured Product Label Recipient" refFamiliarName="Structured Product Label Recipient" refIdentifier="PORP_AR050002UV03"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORP_TE050001UV03" role="dependency" sectID="UVRP" sectType="SB" refName="Structured Product Label Document Submission" refFamiliarName="Structured Product Label Document Submission" refIdentifier="PORP_TE050001UV03"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PORP_MT050032UV03" role="dependency" sectID="UVRP" sectType="SB" refName="Structured Product Label Document" refFamiliarName="Structured Product Label Document" refIdentifier="PORP_MT050032UV03"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+            </artreeitem>
+         </artree>
+      </div1>
+      <div1 id="all-nameOrder">
+         <head> Regulated Products in Name Order</head>
+         <artree role="name">
+            <artreeitem>
+               <stref id="d0e21162" role="tree-intro" sectID="UVRP" sectType="SB" refName="Domain: Regulated Products" refFamiliarName="Domain: Regulated Products" refIdentifier="PORP_DO000001UV"/>
+               <artreeitem>
+                  <stref id="d0e21164" role="tree-intro" sectID="UVRP" sectType="SB" refName="Topic: Regulated Product Submission" refFamiliarName="Topic: Regulated Product Submission" refIdentifier="PORP_DO000001UV"/>
+                  <artreeitem>
+                     <stref id="d0e21164" role="tree-intro" sectID="" sectType="SB" refName=" Story Boards" refFamiliarName=" Story Boards" refIdentifier=""/>
+                     <artreeitem>
+                        <stref id="treeRef-PORP_ST000001UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Managing Applications through Submission Units" refFamiliarName="Managing Applications through Submission Units" refIdentifier="PORP_ST000001UV01"/>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000001UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Creating a new application and submission" refFamiliarName="Creating a new application and submission" refIdentifier="PORP_SN000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000002UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Adding submission units to an existing submission" refFamiliarName="Adding submission units to an existing submission" refIdentifier="PORP_SN000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000003UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Creating a new submission to an application" refFamiliarName="Creating a new submission to an application" refIdentifier="PORP_SN000003UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000004UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Modular Reviews" refFamiliarName="Modular Reviews" refIdentifier="PORP_SN000004UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000005UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="One submission unit to multiple applications" refFamiliarName="One submission unit to multiple applications" refIdentifier="PORP_SN000005UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000006UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="One submission unit to multiple submissions" refFamiliarName="One submission unit to multiple submissions" refIdentifier="PORP_SN000006UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000000UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Withdrawing a submission unit" refFamiliarName="Withdrawing a submission unit" refIdentifier="PORP_SN000000UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000008UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Withdrawing a submission" refFamiliarName="Withdrawing a submission" refIdentifier="PORP_SN000008UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORP_IN000001UV01" role="dependency" sectID="UVRP" sectType="SB" refName="Submission Unit sent" refFamiliarName="Submission Unit sent" refIdentifier="PORP_IN000001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <stref id="treeRef-PORP_ST000002UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Managing the contents of submission units" refFamiliarName="Managing the contents of submission units" refIdentifier="PORP_ST000002UV01"/>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000009UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Adding new files to a submission" refFamiliarName="Adding new files to a submission" refIdentifier="PORP_SN000009UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000010UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Replacing a previously submitted file" refFamiliarName="Replacing a previously submitted file" refIdentifier="PORP_SN000010UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000011UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Removing a previously submitted file" refFamiliarName="Removing a previously submitted file" refIdentifier="PORP_SN000011UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000012UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Replacing one file with multiple files" refFamiliarName="Replacing one file with multiple files" refIdentifier="PORP_SN000012UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000013UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Adding an addendum to a file" refFamiliarName="Adding an addendum to a file" refIdentifier="PORP_SN000013UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000014UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Replacing an addendum" refFamiliarName="Replacing an addendum" refIdentifier="PORP_SN000014UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000015UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Replacing a file and an addendum" refFamiliarName="Replacing a file and an addendum" refIdentifier="PORP_SN000015UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000016UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Adding one file to multiple logical documents" refFamiliarName="Adding one file to multiple logical documents" refIdentifier="PORP_SN000016UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000017UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Adding files that were previously removed" refFamiliarName="Adding files that were previously removed" refIdentifier="PORP_SN000017UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000018UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Changing the category of a submitted file" refFamiliarName="Changing the category of a submitted file" refIdentifier="PORP_SN000018UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000019UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Referencing files from other applications" refFamiliarName="Referencing files from other applications" refIdentifier="PORP_SN000019UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000020UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Replacing files referenced from other applications" refFamiliarName="Replacing files referenced from other applications" refIdentifier="PORP_SN000020UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000021UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Replacing one file in multiple logical documents" refFamiliarName="Replacing one file in multiple logical documents" refIdentifier="PORP_SN000021UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000022UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Replacing multiple files with one file" refFamiliarName="Replacing multiple files with one file" refIdentifier="PORP_SN000022UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <stref id="treeRef-PORP_SN000023UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Replacing sections of a file" refFamiliarName="Replacing sections of a file" refIdentifier="PORP_SN000023UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORP_IN000001UV01" role="dependency" sectID="UVRP" sectType="SB" refName="Submission Unit sent" refFamiliarName="Submission Unit sent" refIdentifier="PORP_IN000001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21164" role="tree-intro" sectID="" sectType="SB" refName=" Application Roles" refFamiliarName=" Application Roles" refIdentifier=""/>
+                     <artreeitem>
+                        <arref id="treeRef-PORP_AR000001UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Applicant" refFamiliarName="Applicant" refIdentifier="PORP_AR000001UV01"/>
+                     </artreeitem>
+                     <artreeitem>
+                        <arref id="treeRef-PORP_AR000002UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Regulatory Authority" refFamiliarName="Regulatory Authority" refIdentifier="PORP_AR000002UV01"/>
+                        <artreeitem>
+                           <intref id="treeRef-PORP_IN000001UV01" role="dependency" sectID="UVRP" sectType="SB" refName="Submission Unit sent" refFamiliarName="Submission Unit sent" refIdentifier="PORP_IN000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-PORP_IN000001UV01" role="dependency" sectID="UVRP" sectType="SB" refName="Submission Unit sent" refFamiliarName="Submission Unit sent" refIdentifier="PORP_IN000001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21164" role="tree-intro" sectID="" sectType="SB" refName=" Trigger Events" refFamiliarName=" Trigger Events" refIdentifier=""/>
+                     <artreeitem>
+                        <teref id="treeRef-PORP_TE000001UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Regulatory Product Submission Unit Notification" refFamiliarName="Regulatory Product Submission Unit Notification" refIdentifier="PORP_TE000001UV01"/>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21164" role="tree-intro" sectID="" sectType="SB" refName=" Refined Message Information Models" refFamiliarName=" Refined Message Information Models" refIdentifier=""/>
+                     <artreeitem>
+                        <rmimref id="treeRef-PORP_RM000001UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Regulated Product Submission" refFamiliarName="Regulated Product Submission" refIdentifier="PORP_RM000001UV01"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-PORP_HD000001UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Regulated Product Submission" refFamiliarName="Regulated Product Submission" refIdentifier="PORP_HD000001UV01"/>
+                           <artreeitem>
+                              <msgref id="treeRef-PORP_MT000001UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Regulated Product Submission MT" refFamiliarName="Regulated Product Submission MT" refIdentifier="PORP_MT000001UV01"/>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21164" role="tree-intro" sectID="" sectType="SB" refName=" Interactions" refFamiliarName=" Interactions" refIdentifier=""/>
+                     <artreeitem>
+                        <intref id="treeRef-PORP_IN000001UV01" role="tree-element" sectID="UVRP" sectType="SB" refName="Submission Unit sent" refFamiliarName="Submission Unit sent" refIdentifier="PORP_IN000001UV01"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORP_AR000002UV01" role="dependency" sectID="UVRP" sectType="SB" refName="Regulatory Authority" refFamiliarName="Regulatory Authority" refIdentifier="PORP_AR000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORP_AR000002UV01" role="dependency" sectID="UVRP" sectType="SB" refName="Regulatory Authority" refFamiliarName="Regulatory Authority" refIdentifier="PORP_AR000002UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORP_TE000001UV01" role="dependency" sectID="UVRP" sectType="SB" refName="Regulatory Product Submission Unit Notification" refFamiliarName="Regulatory Product Submission Unit Notification" refIdentifier="PORP_TE000001UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PORP_MT000001UV01" role="dependency" sectID="UVRP" sectType="SB" refName="Regulated Product Submission MT" refFamiliarName="Regulated Product Submission MT" refIdentifier="PORP_MT000001UV01"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+               <artreeitem>
+                  <stref id="d0e21257" role="tree-intro" sectID="UVRP" sectType="SB" refName="Topic: Structured Product Labeling (SPL) Release 3" refFamiliarName="Topic: Structured Product Labeling (SPL) Release 3" refIdentifier="PORP_DO000001UV"/>
+                  <artreeitem>
+                     <stref id="d0e21257" role="tree-intro" sectID="" sectType="SB" refName=" Story Boards" refFamiliarName=" Story Boards" refIdentifier=""/>
+                     <artreeitem>
+                        <stref id="treeRef-PORP_ST050001UV03" role="tree-element" sectID="UVRP" sectType="SB" refName="Publishing a Product Label" refFamiliarName="Publishing a Product Label" refIdentifier="PORP_ST050001UV03"/>
+                        <artreeitem/>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21257" role="tree-intro" sectID="" sectType="SB" refName=" Application Roles" refFamiliarName=" Application Roles" refIdentifier=""/>
+                     <artreeitem>
+                        <arref id="treeRef-PORP_AR050002UV03" role="tree-element" sectID="UVRP" sectType="SB" refName="Structured Product Label Recipient" refFamiliarName="Structured Product Label Recipient" refIdentifier="PORP_AR050002UV03"/>
+                        <artreeitem>
+                           <intref id="treeRef-PORP_IN050001UV03" role="dependency" sectID="UVRP" sectType="SB" refName="Structured Product Label Document Submission" refFamiliarName="Structured Product Label Document Submission" refIdentifier="PORP_IN050001UV03"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <arref id="treeRef-PORP_AR050001UV03" role="tree-element" sectID="UVRP" sectType="SB" refName="Structured Product Label Submitter" refFamiliarName="Structured Product Label Submitter" refIdentifier="PORP_AR050001UV03"/>
+                        <artreeitem>
+                           <intref id="treeRef-PORP_IN050001UV03" role="dependency" sectID="UVRP" sectType="SB" refName="Structured Product Label Document Submission" refFamiliarName="Structured Product Label Document Submission" refIdentifier="PORP_IN050001UV03"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21257" role="tree-intro" sectID="" sectType="SB" refName=" Trigger Events" refFamiliarName=" Trigger Events" refIdentifier=""/>
+                     <artreeitem>
+                        <teref id="treeRef-PORP_TE050001UV03" role="tree-element" sectID="UVRP" sectType="SB" refName="Structured Product Label Document Submission" refFamiliarName="Structured Product Label Document Submission" refIdentifier="PORP_TE050001UV03"/>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21257" role="tree-intro" sectID="" sectType="SB" refName=" Refined Message Information Models" refFamiliarName=" Refined Message Information Models" refIdentifier=""/>
+                     <artreeitem>
+                        <rmimref id="treeRef-PORP_RM050032UV03" role="tree-element" sectID="UVRP" sectType="SB" refName="Structured Product Label Document" refFamiliarName="Structured Product Label Document" refIdentifier="PORP_RM050032UV03"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-PORP_HD050032UV03" role="tree-element" sectID="UVRP" sectType="SB" refName="Structured Product Label Document" refFamiliarName="Structured Product Label Document" refIdentifier="PORP_HD050032UV03"/>
+                           <artreeitem>
+                              <msgref id="treeRef-PORP_MT050032UV03" role="tree-element" sectID="UVRP" sectType="SB" refName="Structured Product Label Document" refFamiliarName="Structured Product Label Document" refIdentifier="PORP_MT050032UV03"/>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e21257" role="tree-intro" sectID="" sectType="SB" refName=" Interactions" refFamiliarName=" Interactions" refIdentifier=""/>
+                     <artreeitem>
+                        <intref id="treeRef-PORP_IN050001UV03" role="tree-element" sectID="UVRP" sectType="SB" refName="Structured Product Label Document Submission" refFamiliarName="Structured Product Label Document Submission" refIdentifier="PORP_IN050001UV03"/>
+                        <artreeitem>
+                           <arref id="treeRef-PORP_AR050001UV03" role="dependency" sectID="UVRP" sectType="SB" refName="Structured Product Label Submitter" refFamiliarName="Structured Product Label Submitter" refIdentifier="PORP_AR050001UV03"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-PORP_AR050002UV03" role="dependency" sectID="UVRP" sectType="SB" refName="Structured Product Label Recipient" refFamiliarName="Structured Product Label Recipient" refIdentifier="PORP_AR050002UV03"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-PORP_TE050001UV03" role="dependency" sectID="UVRP" sectType="SB" refName="Structured Product Label Document Submission" refFamiliarName="Structured Product Label Document Submission" refIdentifier="PORP_TE050001UV03"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-PORP_MT050032UV03" role="dependency" sectID="UVRP" sectType="SB" refName="Structured Product Label Document" refFamiliarName="Structured Product Label Document" refIdentifier="PORP_MT050032UV03"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+            </artreeitem>
+         </artree>
+      </div1>
+   </body>
+</spec>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<spec id="COCS_DO000000UV-ic" type="dependencyTree" sectionCode="UVCS">
+   <header>
+      <title> Clinical Statement Dependency Annex
+				</title>
+      <version>V 00-00</version>
+      <ballot type="NormativeStandard" number="1"/>
+      <date>6/31/2008</date>
+      <legalese copyRightDate="2008"/>
+   </header>
+   <body>
+      <div1 id="all-sortOrder">
+         <head> Clinical Statement in Structured Sort Order</head>
+         <artree role="ssn">
+            <artreeitem>
+               <stref id="d0e10504" role="tree-intro" sectID="UVCS" sectType="SB" refName="Domain: Clinical Statement" refFamiliarName="Domain: Clinical Statement" refIdentifier="COCS_DO000000UV"/>
+               <artreeitem>
+                  <rmimref id="treeRef-COCS_DM000000UV" role="tree-element" sectID="UVCS" sectType="SB" refName="Clinical Statement Pattern" refFamiliarName="Clinical Statement Pattern" refIdentifier="COCS_DM000000UV"/>
+               </artreeitem>
+               <artreeitem>
+                  <stref id="d0e10508" role="tree-intro" sectID="UVCS" sectType="SB" refName="Topic: Clinical Statement Topics" refFamiliarName="Topic: Clinical Statement Topics" refIdentifier="COCS_DO000000UV"/>
+               </artreeitem>
+            </artreeitem>
+         </artree>
+      </div1>
+      <div1 id="all-codeOrder">
+         <head> Clinical Statement in Artifact Code Order</head>
+         <artree role="code">
+            <artreeitem>
+               <stref id="d0e10504" role="tree-intro" sectID="UVCS" sectType="SB" refName="Domain: Clinical Statement" refFamiliarName="Domain: Clinical Statement" refIdentifier="COCS_DO000000UV"/>
+               <artreeitem>
+                  <rmimref id="treeRef-COCS_DM000000UV" role="tree-element" sectID="UVCS" sectType="SB" refName="Clinical Statement Pattern" refFamiliarName="Clinical Statement Pattern" refIdentifier="COCS_DM000000UV"/>
+               </artreeitem>
+               <artreeitem>
+                  <stref id="d0e10508" role="tree-intro" sectID="UVCS" sectType="SB" refName="Topic: Clinical Statement Topics" refFamiliarName="Topic: Clinical Statement Topics" refIdentifier="COCS_DO000000UV"/>
+               </artreeitem>
+            </artreeitem>
+         </artree>
+      </div1>
+      <div1 id="all-nameOrder">
+         <head> Clinical Statement in Name Order</head>
+         <artree role="name">
+            <artreeitem>
+               <stref id="d0e10504" role="tree-intro" sectID="UVCS" sectType="SB" refName="Domain: Clinical Statement" refFamiliarName="Domain: Clinical Statement" refIdentifier="COCS_DO000000UV"/>
+               <artreeitem>
+                  <rmimref id="treeRef-COCS_DM000000UV" role="tree-element" sectID="UVCS" sectType="SB" refName="Clinical Statement Pattern" refFamiliarName="Clinical Statement Pattern" refIdentifier="COCS_DM000000UV"/>
+               </artreeitem>
+               <artreeitem>
+                  <stref id="d0e10508" role="tree-intro" sectID="UVCS" sectType="SB" refName="Topic: Clinical Statement Topics" refFamiliarName="Topic: Clinical Statement Topics" refIdentifier="COCS_DO000000UV"/>
+               </artreeitem>
+            </artreeitem>
+         </artree>
+      </div1>
+   </body>
+</spec>

@@ -1,0 +1,983 @@
+/*  
+ * Source file: CTSVAPI.idl
+ *	Version:	1.0
+ *	Date:		10/31/03
+ */
+
+#ifndef   __CTSVAPI_DEFINED
+#define   __CTSVAPI_DEFINED
+                                                                                                                              
+                                                                                                                              
+/* 
+ *  Centralized Terminology Services vocabulary layer API                                                                      
+ *      This module defines the interface between the HL7 messaging applications and                                          
+ *      the terminology services.                                                                                             
+ */                                                                                                                           
+module CTSVAPI {                                                                                                              
+
+/***********************************************
+ * Suffix convention:
+ *	Xxx		- Type suffix
+ *	_xxx		- attribute suffix
+ *
+ * Suffixes
+ *	Id		- unique entity identifier
+ *	Name		- unique name
+ *	Code		- concept code
+ *	Version		- version identifier
+ */
+ 
+/************************************************
+ *          Basic Types                         *
+ ************************************************/
+/* HL7SpecBlock:basicData */
+
+/* AnISO Object Identifier (OID) */
+        typedef string  OID; 
+        
+/* A description or definition of an entity. Can be a large amount of text, multi-lines, etc. */
+        typedef string  Description;
+ 
+/************************************************
+ * 	Base entity identifiers			*
+ ************************************************/
+ 
+/* CTS Specification Version Identifier */
+        struct CTSVersionId {
+        	short	major;
+        	short	minor;
+        };
+
+/* A unique code system identifier */
+        typedef OID     CodeSystemId;
+        typedef sequence<CodeSystemId> CodeSystemIdList;  
+                                  
+/* The name of a code system */        
+        typedef string  CodeSystemName;
+            
+/* A concept code within a code system */
+        typedef string  ConceptCode;
+        typedef sequence<ConceptCode> ConceptCodeList;
+  
+/* A unique concept identifier consisting of a code system id and concept code */
+        struct ConceptId {
+                CodeSystemId codeSystem_id;
+                ConceptCode  concept_code;
+        };
+        typedef sequence<ConceptId> ConceptIdList;
+       
+/* A version identifier */
+        typedef string  VersionId;
+
+/* A version of a code system */
+        typedef VersionId       CodeSystemVersion;
+        typedef sequence<VersionId> CodeSystemVersionList;
+        
+/* An opaque context passed from service to client */
+	typedef sequence<octet> ExpansionContext;
+        
+/* HL7SpecBlockEnd */                
+/************************************************
+ *	Coded elements				*
+ ************************************************/
+ /* HL7SpecBlock:conceptCodes */
+/* Language identifier
+ *		Syntax is based on IETF RFC 3066 - Tag for Identification of Languages
+ *		Consists of a primary-subtag followed by zero or more secondary subtags		
+ *		<primary subtag>  - drawn from ISO 639 part 1 (2 char) codes where possible, otherwise 3 character
+ *				  - "i-" and "x-" codes are not allowed in this specification
+ *				     
+ *		<secondary subtag 1> - 2-8 characters
+ *				     - 2 character codes are drawn from ISO 3166 alpha-2 country codes
+ *				       3-8 character codes are drawn from IANA registry - see: http://www.iana.org/assignments/language-tags
+ *		<secondary subtag 2-n> - no rules, although some get registered w/ IANA
+ *
+ *	Code Systems:	ISO639-1		(2.16.840.1.113883.6.99)
+ *			ISO639-2		(2.16.840.1.113883.6.100)
+ *			ISO 3166-1		(2.16.1)
+ */
+        typedef ConceptCode     LanguageCode;
+        typedef sequence<LanguageCode>  LanguageCodeList;
+
+        
+/* Mime type identifier - the identifier of a mime type.
+ *	Code System:	MediaType (2.16.840.1.113883.5.79)
+ */
+        typedef ConceptCode     MimeTypeCode;
+        typedef sequence<MimeTypeCode> MimeTypeCodeList;
+
+/* Concept status code - identifies whether a concept code is active, retired, etc.
+ *	Code System: ConceptStatusCode (2.16.840.1.113883.5.1086)
+ */
+ 	typedef ConceptCode	ConceptStatusCode;
+
+
+/* Property code - The identifier of a property within a code system.
+ *      Identifier includes both code system and concept code.
+ *      Code System: ConceptProperty (2.16.840.1.113883.5.1087)
+ */
+        typedef ConceptCode       PropertyCode;
+        typedef sequence<PropertyCode> PropertyCodeList;
+
+       
+/* Relationshp code - The identifier of a relation within a code system.
+ *      Identifier contains only the concept code.
+ *      HL7 relationships must be drawn from ConceptCodeRelationship code system (2.16.840.1.113883.5.1088)
+ */
+        typedef ConceptCode       RelationshipCode;
+        typedef sequence<RelationshipCode> RelationshipCodeList;
+        
+/* Map quality - A concept code identifying the general quality of a mapping (e.g. broader, narrower,...)
+ *      Must be drawn from Map Quality code system (2.16.840.1.113883.5.1093) when possible
+ */
+        typedef ConceptCode     MapQualityCode;
+
+/*
+ * Relationship qualifier code - a qualifier that further explains or refines a relationship between two concepts
+ *	Not currently used internally in HL7
+ */
+ 	typedef ConceptCode	RelationQualifierCode;
+ 	typedef sequence<RelationQualifierCode> RelationQualifierCodeList;
+ 	
+ /*
+  * Match algorithm code - a code that identifies a match algorithm to be used when searching
+  *	Should be drawn from the match algorithm set when possible (2.16.840.1.113883.5.1094)
+  */
+ 	typedef ConceptCode	MatchAlgorithmCode;
+ 	typedef sequence<MatchAlgorithmCode> MatchAlgorithmCodeList;
+	
+/* HL7SpecBlockEnd */ 
+
+/****************************************
+ * Entities representing the UML model  *
+ ***************************************/
+ /* HL7SpecBlock:codeSystemIdAndVersions */
+/* Code system - the id, name and version of a code system
+ *      codeSystem_id    	- code system identifier (OID)
+ *      codeSystem_name  	- code system name
+ *	copyright		- copyright notice on code system, if any
+ *      codeSystem_VersionList  - release versions represented by code system (if any)
+ */
+        struct CodeSystemIdAndVersions {
+                CodeSystemId                    codeSystem_id;
+                CodeSystemName                  codeSystem_name;
+                string				copyright;
+                CodeSystemVersionList           codeSystem_versions;
+        };
+        typedef sequence<CodeSystemIdAndVersions> CodeSystemIdAndVersionsList;  
+              
+/* HL7SpecBlockEnd */
+/* HL7SpecBlock:codeSystemInfo */
+
+/* Code System info - a detailed description of a code system
+ *	codeSystem		- id, name and version(s) of the code system
+ *      fullName                - official name of the code system
+ *      codeSystemDescription   - textual description of the code system
+ *      supportedLanguages      - list of languages supported by the code system
+ *      supportedRelations      - list of relations supported by the code system
+ *      supportedProperties     - list of properties supported by the code system
+ *      representsVersion       - the version of the code system, where applicable  
+ *	supportedMimeTypes	- the mime types supported by the code system
+ *	supportedRelationQualifiers - the relationship qualifiers supported by the system.
+ */
+        struct  CodeSystemInfo {
+                CodeSystemIdAndVersions		codeSystem;
+                string                          fullName;
+                Description                     codeSystemDescription;
+                LanguageCodeList                supportedLanguages;
+                RelationshipCodeList            supportedRelations;
+                PropertyCodeList                supportedProperties;
+                MimeTypeCodeList		supportedMimeTypes;
+                RelationQualifierCodeList	supportedRelationQualifiers;
+        };
+/* HL7SpecBlockEnd */ 
+/* HL7SpecBlock:conceptDesignation */ 
+
+/* ConceptDesignation = the name or representation given to the concept represented by a concept code
+ *      designation             - the name or designation of a concept
+ *      language                - language of the designation
+ *      preferredForLanguage    - True means that designation is preferred for the ED.language
+ *      contextsOfUse           - list of contexts where the designation applies
+ */
+        struct ConceptDesignation {
+                string                          designation;
+                LanguageCode                    language_code;
+                boolean                         preferredForLanguage;
+        };
+        typedef sequence<ConceptDesignation> ConceptDesignationList;
+/* HL7SpecBlockEnd */ 
+/* HL7SpecBlock:conceptProperty */ 
+/* ConceptProperty - a characteristic or attribute of the concept represented by a concept code
+ *      property_code           - the code system / property code that identifies the property
+ *      propertyValue           - the value of the property
+ *      language_code           - language of the property (optional)
+ *      mimeType_code           - mime type of the property (default: text/plain)
+ */
+        struct ConceptProperty {
+                PropertyCode                    property_code;
+                string                          propertyValue;
+                LanguageCode                    language_code;
+                MimeTypeCode                    mimeType_code;
+        };
+        typedef sequence<ConceptProperty> ConceptPropertyList;
+
+/* HL7SpecBlockEnd */ 
+/* HL7SpecBlock:conceptRelationship */         
+
+/* A relationship entry */
+	struct ConceptRelationship {
+		ConceptId			sourceConcept_id;
+		RelationshipCode		relationship_code;
+		RelationQualifierCodeList	relationQualifiers;
+		ConceptId			targetConcept_id;
+	};
+	typedef sequence<ConceptRelationship> ConceptRelationshipList;
+/* HL7SpecBlockEnd */ 
+/* HL7SpecBlock:completeCodedConceptDescription */         
+        
+/* CompleteCodedConceptDescription - all of the known information about a concept code
+ *      concept_id              - code system identifier and concept code
+ *	conceptStatus_code	- status of the concept within the code system version
+ *	CodeSystem_version 	- version of code system that information was drawn from
+ *      designatedBy            - concept designations
+ *      hasProperties           - concept properties
+ *      sourceFor               - qualified relationship codes and direct target codes
+ *      targetOf                - qualified relationship codes and direct source codes
+ */
+        struct CompleteCodedConceptDescription {
+                ConceptId               concept_id;
+                ConceptStatusCode     	conceptStatus_code;
+                CodeSystemVersion	codeSystem_version;
+                ConceptDesignationList  designatedBy;
+                ConceptPropertyList     hasProperties;
+                ConceptRelationshipList sourceFor;
+                ConceptRelationshipList targetOf;
+        };
+/* HL7SpecBlockEnd */
+
+/* HL7SpecBlock:relatedCode */ 
+/* A related code entry
+ *      pathLength      - the distance from the starting node
+ *      concept_code    - concept code
+ *      designation     - appropriate concept designation
+ *      canExpand       - true means that further expansion is possible
+ *      expansionContext - context (opaque) to use for further expansion
+ */
+        struct RelatedCode {
+                short            	pathLength;
+                ConceptCode      	concept_code;
+                string           	designation;
+                RelationQualifierCodeList relationQualifiers;
+                boolean          	canExpand;
+                ExpansionContext 	expansionContext;
+        };
+        typedef sequence<RelatedCode> RelatedCodeList;
+/* HL7SpecBlockEnd */
+/* HL7SpecBlock:supportedMap */ 
+/* A code map
+ *	map_name		- The unique identifier of the particular map
+ *      fromCodeSystem_id       - The code system that is the source of the map
+ *	fromCodeSystem_name	- The name of the source code system
+ *      fromCodeSystem_version  - The version of the source code system (optional)
+ *      toCodeSystem_id         - The code system that is the target of the map
+ *	toCodeSystem_name	- The name of the target code system
+ *      toCodeSystem_version    - The version of the target code system (optional)
+ *      mapDescription  	- A description of the map (who, what, when, etc).
+ *
+ *      Note: maps are not symmetric
+ */
+        struct CodeMap {
+        	string				map_name;
+        	Description                     mapDescription;
+                CodeSystemId                    fromCodeSystem_id;
+                CodeSystemName			fromCodeSystem_name;
+                CodeSystemVersion               fromCodeSystem_version;
+                CodeSystemId                    toCodeSystem_id;
+                CodeSystemName			toCodeSystem_name;
+                CodeSystemVersion               toCodeSystem_version;
+
+        };
+        typedef sequence<CodeMap> CodeMapList;
+/* HL7SpecBlockEnd */ 
+/* HL7SpecBlock:mappedConceptCode */ 
+
+/* Mapped Concept Code - the result of mapping a concept code and the map quality indicator
+ *      mappedConcept_id     	 - Mapped code system and concept code
+ *      mapQuality_code  	 - Coarse measure of map accuracy
+ *
+ */
+        struct MappedConceptCode {
+                ConceptId               mappedConcept_id;
+                MapQualityCode      	mapQuality_code;
+        };
+
+/* HL7SpecBlockEnd */ 
+/* HL7SpecBlock:stringAndLanguage */
+/* String and language - a tuple consisting of a text string and an associated
+ * 		language code.  
+ */
+	struct StringAndLanguage {
+		string		text;
+		LanguageCode	language_code;
+	};
+/* HL7SpecBlockEnd */ 
+
+/***********************************************
+ *      Exceptions                             *
+ ***********************************************/
+ /* HL7SpecBlock:exceptions */
+/*
+ * An unspecified error occurred and the function didn't complete successfully
+ */
+	exception UnexpectedError {
+		string possible_cause;
+	};
+	 
+/*
+ * A code system id was supplied that wasn't recognized by the service
+ */
+        exception UnknownCodeSystem {
+                CodeSystemId            codeSystem_id;
+        };
+ 
+        
+/*
+ * A concept code was supplied that wasn't valid in the supplied code system
+ */
+        exception UnknownConceptCode {
+                ConceptCode               concept_code;
+        };
+ 
+
+
+/*
+ * A property code was used that wasn't valid for the code system
+ */
+        exception UnknownPropertyCode {
+                PropertyCode            property_code;
+        };
+
+
+
+	
+/*
+ * A language code was supplied that isn't valid for the code system
+ */
+ 	exception UnknownLanguageCode {
+ 		LanguageCode		language_code;
+ 	};
+ 	
+/*
+ * A relation code was supplied that isn't valid for the code system
+ */
+ 	exception UnknownRelationshipCode {
+ 		RelationshipCode	relationship_code;
+ 	};
+ 	
+/*
+ * A relationship qualifier code was supplied that isn't valid for the code system
+ */
+ 	exception UnknownRelationQualifier {
+ 		RelationQualifierCode	relationQualifier_code;
+ 	};
+ 	
+/*
+ * An unrecognized mime type code was passed
+ */
+ 	exception UnknownMimeTypeCode {
+ 		MimeTypeCode		mimeType_code;
+ 	};
+ 	
+/*
+ * The context that was passed to expandCodeContext is not valid or has been damaged
+ * in some fashion.
+ */
+ 	exception InvalidExpansionContext {
+ 	};       
+ 	
+/*
+ * No appropriate designation could be found for the supplied concept code and selection criteria
+ */
+ 	exception NoApplicableDesignationFound {
+ 		ConceptId	concept_id;
+ 		LanguageCode	language_code;
+ 	};
+ 	
+        
+/*
+ * The code system identifier didn't match the name 
+ */
+	exception CodeSystemNameIdMismatch {
+		CodeSystemId	codeSystem_id;
+		CodeSystemName	codeSystem_name;
+	};
+
+/*
+ * The format of the match text wasn't parsable
+ */
+	exception BadlyFormedMatchText {
+		string	matchText;
+	};
+	
+/*
+ * The operation exceeded the alloted time limit
+ */
+ 	exception TimeoutError {
+ 	};
+ 	
+ /*
+  * The match algorithm code isn't supported by the service
+  */
+  	exception UnknownMatchAlgorithm {
+  		MatchAlgorithmCode	matchAlgorithm_code;
+  	};
+ 
+/* HL7SpecBlockEnd */ 
+/* HL7SpecBlock:mapExceptions */ 
+
+/*
+ * No mapping is available between the two code systems
+ */
+        exception MappingNotAvailable  {
+                CodeSystemId            fromCodeSystem_id;
+                CodeSystemId            toCodeSystem_id;
+        };
+        
+/*
+ * The service is unable to map between the source and target concepts
+ */
+ 	exception UnableToMap {
+ 	};
+ 
+        
+ /*
+  * The map name passed to the mapping service isn't recognized
+  */
+  	exception UnknownMapName {
+  		string			map_name;
+  	};
+  	
+  /*
+   * A map name wasn't passed and there is more than one possible mapping
+   * between the source and target.  Return includes a list of possible
+   * maps.
+   */
+   	exception AmbiguousMapRequest {
+   		sequence<string>	possible_maps;
+   	};
+   	
+ /*
+  * A map name was passed and the source code system of the map wasn't the
+  * same as the source code system of fromConcept_id
+  */
+  	exception MapNameSourceMismatch {
+  		CodeSystemId		fromCodeSystem_id;
+  		CodeSystemId		mapSourceCodeSystem_id;
+  	};
+  	
+ /*
+  * A map name was passed and the target code system of the map wasn't the
+  * same as the toCodeSystem_id in the map call
+  */
+  	exception MapNameTargetMismatch {
+  		CodeSystemId		toCodeSystem_id;
+  		CodeSystemId		mapTargetCodeSystem_id;
+  	};
+
+/* HL7SpecBlockEnd */ 
+
+
+/**********************************
+ *  Module Identification Section *
+ **********************************/
+  /* HL7SpecBlock:identification */
+	interface Identification {
+/* The name of the service implementation */
+        	string		getServiceName() raises (UnexpectedError);
+        	
+/* The version of the service implementation */
+        	string		getServiceVersion() raises (UnexpectedError);
+        	
+/* Description of the service (who, when, etc.) */
+        	string		getServiceDescription() raises (UnexpectedError);
+        	
+/* CTS Version represented by this service */
+        	CTSVersionId	getCTSVersion() raises (UnexpectedError);
+        };	 
+/* HL7SpecBlockEnd */ 
+
+/* HL7SpecBlock:mapping */ 
+/*************************************************
+ *      Code mapping interface                   *
+ *                                               * 
+ * The code mapping interface represents one     *
+ * or more mappings between code systems         *
+ *************************************************/
+        interface CodeMapping : Identification {
+/* HL7SpecBlockEndElipsis */ 
+/* HL7SpecBlock:supportedMaps */ 
+
+/* List of mappings supported by the service */
+                CodeMapList getSupportedMaps() raises (UnexpectedError);
+               
+/* HL7SpecBlockEnd */ 
+/* HL7SpecBlock:mapConceptCode */ 
+
+/* Map a concept code from one code system into the closest equivalent (if any)
+ * in the target code system
+ *      fromConcept_id                   - The code system / concept code to map
+ *      toCodeSystem_id                  - The target code system
+ *	map_name			 - Name of the map to use.  Can be omitted if there is only one possible map
+ *					   from the fromConcept_id code system to the toCodeSystem_id.  
+ *
+ *      Returns                         - Mapped concept in target system
+ *
+ *      Exceptions
+ *              UnknownCodeSystem       - Either the from or the to code system isn't supported
+ *                                        by this map service
+ *              UnknownConceptCode      - The concept code to be mapped isn't part of the code system
+ *              MappingNotAvailable     - There is not a map from the supplied concept code to the
+ *                                        target code system.
+ *
+ *		UnableToMap      	- The requested concept code could not be mapped
+ *		UnknownMapName		- mapping_name is not understood by the service
+ *		MapSourceMismatch	- source code system id in map didn't match fromConcept_id code system
+ *		MapTargetMismatch	- target code system id in map didn't match targetCodeSystem_id in call
+ *		AmbiguousMapRequest	- There is more than one possible map between the source concept and target
+ *		UnexpectedError		- An unspecified error occurred that prevented successful completion
+ *					  of the request
+ */
+                MappedConceptCode mapConceptCode(
+                        in ConceptId                    fromConcept_id,
+                        in CodeSystemId                 toCodeSystem_id,
+                        in string			map_name
+                        )
+                        raises ( UnknownCodeSystem,
+                                 UnknownConceptCode,
+                                 MappingNotAvailable,
+                                 UnknownMapName,
+                                 AmbiguousMapRequest,
+                                 MapNameSourceMismatch,
+                                 MapNameTargetMismatch,
+                                 UnableToMap,
+                                 UnexpectedError);
+/* HL7SpecBlockEnd */ 
+        };
+
+
+
+/***********************************************
+ *     Run Time Services
+ *	   Vocabuary services that are intended for use
+ *         in a runtime/production environment.
+ ***********************************************/
+ /* HL7SpecBlock:runtime */
+        interface Runtime : Identification {
+ /* HL7SpecBlockEndElipsis */
+ /* HL7SpecBlock:getSupportedCodeSystems */
+
+/* List of code systems and versions supported by this service *
+ *	timeout			- time limit for operation to complete in milliseconds (0 means unlimited
+ *	sizeLimit		- maximum number of elements to return (0 means unlimited)
+ *
+ *	Returns			- list of supported code systems
+ *
+ *	NOTE: if a sizeLimit has been specified and the number of entries in the list is the same as the size limit,
+ *	      the caller must presume that the list is incomplete.
+ *
+ *	Exceptions
+ *		TimeoutError	- time limit was exceeded
+ */
+        	CodeSystemIdAndVersionsList	getSupportedCodeSystems(
+        		in long				timeout,
+        		in long				sizeLimit
+        		) 
+        		raises ( TimeoutError,
+        			 UnexpectedError);
+/* HL7SpecBlockEnd */ 
+ /* HL7SpecBlock:lookupCodeSystemInfo */
+/* Return a detailed description of a code system
+ *	codeSystem_id	- OID of the identifier to be retrieved
+ *	codeSystem_name	- name of the code system to be retrieved
+ *
+ *	Either codeSystem_id or codeSystem_name must be present.  If both are present
+ *	the name must be correct for the identifier or an exception is thrown.
+ *
+ *	Returns		- detailed description of the code system
+ *
+ *	Exceptions
+ *		UnknownCodeSystem - if the code system isn't known to the service
+ *		CodeSystemNameIdMismatch - Name doesn't match the identifier
+ */
+ 		CodeSystemInfo lookupCodeSystemInfo(
+ 			in CodeSystemId		codeSystem_id,
+ 			in CodeSystemName	codeSystem_name
+ 			)
+ 			raises (UnknownCodeSystem,
+ 				CodeSystemNameIdMismatch,
+ 				UnexpectedError);
+/* HL7SpecBlockEnd */ 
+ /* HL7SpecBlock:isConceptIdValid */
+/* Determine whether the given concept code is valid in the code system
+ *      concept_id    		- code system id / concept code to validate
+ *      activeConceptsOnly 	- true means that the conceptStatus must be active
+ *			 	  false means any status passes
+ *
+ *      Returns - true if the code exists in the current code system and matches
+ *			the status test.
+ *
+ *	Exceptions
+ *		UnknownCodeSystem - the code system isn't supported by the service
+ */
+                boolean isConceptIdValid(
+                	in ConceptId 		concept_id,
+                        in boolean 		activeConceptsOnly
+                        )
+                        raises (UnknownCodeSystem,
+                        	UnexpectedError);
+/* HL7SpecBlockEnd */ 
+ /* HL7SpecBlock:lookupDesignation */
+/* Look up the preferred designation and associated language for the supplied code in the
+ * specified language and context
+ *
+ *      code    	- the referenced code
+ *      language 	- the preferred output language
+ *
+ *	Returns	- the preferred designation in that language and context
+ *
+ *	Exceptions
+ *		UnknownLanguageCode	- the supplied language code isn't valid for the code system
+ *		UnknownCodeSystem - the code system isn't supported by the service
+ *		UnknownConceptCode - the concept code isn't valid for the code system 
+ *		NoApplicableDesignationFound - no designation was found that matched the language requirements
+ *
+ */
+                StringAndLanguage lookupDesignation(
+                        in ConceptId 		concept_id,
+                        in LanguageCode		language_code
+                        )
+                        raises (UnknownLanguageCode,
+                        	UnknownCodeSystem,
+                        	UnknownConceptCode,
+                        	NoApplicableDesignationFound,
+                        	UnexpectedError);
+
+/* HL7SpecBlockEnd */ 
+ /* HL7SpecBlock:areCodesRelated */
+/* Determine whether two concept codes are related
+ *	codeSystem_id	- code system of parent and child
+ *      source_code     - source of relationship
+ *      target_code     - target of relationship
+ *      relationship_code  - relationship being queried
+ *	relationship_qualifiers - relationship qualifiers, if any
+ *	directRelationsOnly - 'True' means that only direct parent-child relationships
+ *			  are tested.  'False' means that indirect, transitive links
+ *			  are considered valid as well.
+ *
+ *      Returns - true: The code system contains a direct or implied
+ *                      relationship between the parent and child
+ *                false: The code system does not contain such a
+ *                       relationship.
+ *
+ *	Exceptions
+ *		UnknownConceptCode - the parent or child code isn't valid for the code system
+ *		UnknownCodeSystem  - the code system isn't supported by the service
+ *		UnknownRelation	   - the relation code isn't valid for the code system.
+ *		UnknownRelationshipQualifier - the relationship qualifier isn't valid for the code system
+ *
+ */
+                boolean areCodesRelated(
+                	in CodeSystemId 		codeSystem_id,
+                        in ConceptCode			source_code,
+                        in ConceptCode			target_code,
+                        in RelationshipCode		relationship_code,
+                        in RelationQualifierCodeList 	relationQualifiers,
+                        in boolean			directRelationsOnly
+                        )
+                        raises (UnknownConceptCode,
+                        	UnknownCodeSystem,
+                                UnknownRelationshipCode,
+                                UnknownRelationQualifier,
+                                UnexpectedError);
+/* HL7SpecBlockEnd */ 
+
+        };
+
+/* HL7SpecBlock:browser */
+
+/***********************************************
+ *      Browser interface                      *
+ ***********************************************/
+ interface Browser : Identification{
+ 
+ /* HL7SpecBlockEndElipsis */ 
+ /* HL7SpecBlock:browserSupport */
+
+/* Return a list of supported match algorithms */
+		MatchAlgorithmCodeList			getSupportedMatchAlgorithms() raises (UnexpectedError);
+
+/* List of code systems and versions supported by this service 
+ *
+ *	timeout			- time limit for operation to complete in milliseconds (0 means unlimited
+ *	sizeLimit		- maximum number of elements to return (0 means unlimited)
+ *
+ *	Returns			- list of code systems
+ *
+ *	NOTE: if a sizeLimit has been specified and the number of entries in the list is the same as the size limit,
+ *	      the caller must presume that the list is incomplete.
+ *
+ *	Exceptions
+ *		TimeoutError	- time limit was exceeded
+ */
+        	CodeSystemIdAndVersionsList 	getSupportedCodeSystems(
+        		in long			timeout,
+        		in long			sizeLimit) 
+        		raises (TimeoutError,
+        			UnexpectedError);
+/* HL7SpecBlockEnd */
+/* HL7SpecBlock:lookupConceptCodesByDesignation */   	
+/* Return the concept codes with matching designations
+ *      codeSystem_id           - code system to query
+ *      matchText               - Match string.  Format depends upon the match algorithm.
+ *	matchAlgorithmCode	- match algorithm to be used in the search
+ *      language_code           - language filter.  If present, only designations / descriptions in this
+ *                                language are searched.  (Default: all languages)
+ *      activeConceptsOnly      - true means only active codes qualify.  False means both. (Default: True)
+ *	timeout			- time limit for operation to complete in milliseconds (0 means unlimited
+ *	sizeLimit		- maximum number of elements to return (0 means unlimited)
+ *
+ * Return - a list of concept codes that match the supplied search criteria
+ *
+ *	NOTE: if a sizeLimit has been specified and the number of entries in the list is the same as the size limit,
+ *	      the caller must presume that the list is incomplete.
+ *
+ * Exceptions -
+ *		UnknownCodeSystem	- codeSystem is not supported by the service
+ *		BadlyFormedMatchText	- match text couldn't be parsed
+ *		UnknownLanguageCode	- language code is not supported by the service
+ *		TimeoutError		- time limit was exceeded
+ *		UnknownMatchAlgorithm - match algorithm isn't supported by the service
+ *
+ */
+                ConceptIdList lookupConceptCodesByDesignation (
+                        in CodeSystemId		 	codeSystem_id,
+                        in string 			matchText,
+                        in MatchAlgorithmCode		matchAlgorithm_code,
+                        in LanguageCode		 	language_code,
+                        in boolean 			activeConceptsOnly,
+                        in long				timeout,
+                        in long				sizeLimit
+                        )
+                        raises (UnknownCodeSystem,
+                        	BadlyFormedMatchText,
+                        	UnknownMatchAlgorithm,
+                                UnknownLanguageCode,
+                                TimeoutError,
+                                UnexpectedError);
+/* HL7SpecBlockEnd */
+/* HL7SpecBlock:lookupConceptCodesByProperty */ 
+
+/* Return the concept codes with matching properties.
+ *      codeSystem_id           - code system to query
+ *      matchText               - Match string.  Format depends upon the match algorithm.
+ *	matchAlgorithm_code	- match algorithm to be used in the search
+ *      language_code           - language filter.  If present, only properties in this
+ *                                language are searched.  (Default: all languages)
+ *      activeConceptsOnly      - true means only active codes qualify.  False means both. (Default: True)
+ *	properties		- List of property codes to search. (Default: All properties)
+ *      mimeTypes               - only search properties with these mime types. (Default: all mime types)
+ *	timeout			- time limit for operation to complete in milliseconds (0 means unlimited
+ *	sizeLimit		- maximum number of elements to return (0 means unlimited)			- 
+ *
+ * Return - a list of concept codes that match the supplied search criteria
+ *
+ *	NOTE: if a sizeLimit has been specified and the number of entries in the list is the same as the size limit,
+ *	      the caller must presume that the list is incomplete.
+ *
+ *
+ * Exceptions -
+ *		UnknownCodeSystem	- codeSystem is not supported by the service
+ *		BadlyFormedMatchText	- match text syntax is invalid for the match algorithm
+ *		UnknownLanguageCode	- language code is not supported by the service
+ *		UnknownPropertyCode	- property code is not supported by the service
+ *		UnknownMimeTypeCode	- mime code is not recognized by the service
+ *		TimeoutError		- time limit exceeded
+ *		UnknownMatchAlgorithm - match algorithm isn't supported by the service
+ *
+ */
+               ConceptIdList lookupConceptCodesByProperty (
+ 			in CodeSystemId		 	codeSystem_id,
+                        in string 			matchText,
+                        in MatchAlgorithmCode		matchAlgorithm_code,
+                        in LanguageCode		 	language_code,
+                        in boolean 			activeConceptsOnly,
+			in PropertyCodeList		properties,
+                        in MimeTypeCodeList		mimeTypes,
+                        in long				timeout,
+                        in long				sizeLimit
+                        )
+                        raises (UnknownCodeSystem,
+                                BadlyFormedMatchText,
+                                UnknownMatchAlgorithm,
+                                UnknownLanguageCode,
+                                UnknownPropertyCode,
+                                UnknownMimeTypeCode,
+                                TimeoutError,
+                                UnexpectedError);
+/* HL7SpecBlockEnd */
+/* HL7SpecBlock:lookupCompleteCodedConcept */                                 
+/* Retrieve a complete description of a concept code
+ * 	concept_id	- concept to retrieve
+ *
+ * Returns - complete description of the concept
+ *
+ * Exceptions
+ *	UnknownCodeSystem	- codeSystem is not supported by the service
+ *	UnknwonConceptCode	- concept code is not valid in the code system
+ */	
+		CompleteCodedConceptDescription lookupCompleteCodedConcept (
+			in ConceptId	concept_id
+			)                                
+			raises (UnknownCodeSystem,       
+				UnknownConceptCode,
+				UnexpectedError);    
+/* HL7SpecBlockEnd */
+/* HL7SpecBlock:lookupDesignations */ 
+/* Return the designations of an individual concept that match the supplied criteria
+ *      concept_id      - code system and concept code to match 
+ *      matchText        - Match string.  Format depends upon the match algorithm.
+ *	matchAlgorithm_code - match algorithm to use for matching
+ *	language_code	- if present, only match text of this language
+ *
+ * Exceptions -
+ *		UnknownCodeSystem	- unrecognized code system in the concept id
+ *		UnknownConceptCode	- unrecognized concept code
+ *		BadlyFormedMatchText	- match text syntax is invalid for the match algorithm
+ *		UnknownLanguageCode	- language code is not supported by the service
+ *		UnknownMatchAlgorithm - match algorithm isn't supported by the service
+ *	
+ *
+ */
+                ConceptDesignationList lookupDesignations (
+                        in ConceptId 		concept_id,
+                        in string 		matchText,
+                        in MatchAlgorithmCode 	matchAlgorithm_code,
+                        in LanguageCode 	language_code
+                        )
+                        raises (UnknownCodeSystem,
+                                UnknownConceptCode,
+                                BadlyFormedMatchText,
+                                UnknownMatchAlgorithm,
+                                UnknownLanguageCode,
+                                UnexpectedError);
+/* HL7SpecBlockEnd */ 
+/* HL7SpecBlock:lookupProperties */ 
+
+
+/* Return the properties of an individual concept that match the supplied criteria 
+ *      concept_id      - code system and concept code to match 
+ * 	properties	- if present, constrain the search to this set of properties
+ *      matchText       - Match string.  Format depends upon the match algorithm.
+ *	matchAlgorithm_code - match algorithm to use for matching
+ *      language        - if present, only return properties in this language
+ *      mimeType        - constrain search to properties of these types
+ *
+ * *
+ * Exceptions -
+ *		UnknownCodeSystem	- codeSystem is not supported by the service
+ *		UnknwonConceptCode	- concept code wasn't valid in the code system
+ *		UnknownPropertyCode	- one of the property codes wasn't recognized
+ *		BadlyFormedMatchText	- match text syntax can't be parsed
+ *		UnknownLanguageCode	- language code is not supported by the service
+ *		UnknownMimeTypeCode	- one of the mime type codes isn't recognized
+  *		UnknownMatchAlgorithm 	- match algorithm isn't supported by the service
+ *
+ */
+                ConceptPropertyList lookupProperties (
+                        in ConceptId 		concept_id,
+                        in PropertyCodeList 	properties,
+                        in string 		matchText,
+                        in MatchAlgorithmCode 	matchAlgorithm_code,
+                        in LanguageCode 	language_code,
+                        in MimeTypeCodeList 	mimeTypes
+                        )
+                        raises (UnknownCodeSystem,
+                                UnknownConceptCode,
+                                BadlyFormedMatchText,
+                                UnknownLanguageCode,
+                                UnknownPropertyCode,
+                                UnknownMatchAlgorithm,
+                                UnknownMimeTypeCode,
+                                UnexpectedError);
+ 
+/* HL7SpecBlockEnd */ 
+/* HL7SpecBlock:lookupCodeExpansion */ 
+        
+        
+/* List the children (or parents) of the supplied code
+ *      expandConcept_id    	- Starting code system / concept code
+ *				  If the concept code is omitted and only the code system is supplied
+ *				  expand code returns all of the 'root' concept codes under the relationship.
+ *      relationship    	- relationship to expand
+ *      sourceToTarget 		- true means source to target, false - target to source
+ *      directRelationsOnly 	- true means only return directly related
+ *                                nodes.  False means return complete transitive graph (if the relationship is transitive)
+ *	designationLanguage_code - language to use when returning designations
+ *	timeout			- time limit for operation to complete in milliseconds (0 means unlimited
+ *	sizeLimit		- maximum number of elements to return (0 means unlimited)
+ *
+ *      Returns         	- list of expanded codes
+ *
+ *	NOTE: if a sizeLimit has been specified and the number of entries in the list is the same as the size limit,
+ *	      the caller must presume that the list is incomplete.
+ *
+ *	Exceptions
+ *		UnknownConceptCode - the supplied concept code isn't valid for the code system
+ *		UnknownCodeSystem  - the code system isn't supported by the service
+ *		UnknownRelation	   - the relation code isn't valid for the code system.
+ *		UnknownLanguageCode - the supplied language code isn't valid for the code system
+ *		TimeoutError	   - time limit was exceeded
+ */
+ 
+                RelatedCodeList lookupCodeExpansion (                  
+                        in ConceptId 		expandConcept_id,
+                        in RelationshipCode 	relationship_code,
+                        in boolean		sourceToTarget,                                             
+                        in boolean		directRelationsOnly,                                          
+                        in LanguageCode 	designationLanguage_code,
+                        in long			timeout,
+                        in long			sizeLimit                                         
+                        )                                                                                     
+                        raises (UnknownConceptCode,                                                           
+                        	UnknownCodeSystem,                                                            
+                                UnknownRelationshipCode,                                                          
+                                UnknownLanguageCode,
+                                TimeoutError,
+                                UnexpectedError);                                                  
+
+/* HL7SpecBlockEnd */ 
+/* HL7SpecBlock:expandCodeExpansionContext */ 
+                                                                
+/* Further expand the results of a previous expandCode call      
+ *      contextToExpand     - node context from prior expand code session
+ *
+ *      Returns         	- list of expanded codes
+ *
+ *	NOTE: if a sizeLimit has been specified and the number of entries in the list is the same as the size limit,
+ *	      the caller must presume that the list is incomplete.
+ *
+ *	Exceptions
+ *		InvalidExpansionContext - expansion context isn't valid or has expired 
+ *		TimeoutError	   - time limit was exceeded
+ */
+                RelatedCodeList expandCodeExpansionContext(
+                        in ExpansionContext 	contextToExpand
+                        )
+                        raises (InvalidExpansionContext,
+                        	TimeoutError,
+                        	UnexpectedError);
+
+	};
+/* HL7SpecBlockEnd */
+
+};

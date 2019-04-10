@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<spec id="POTD_DO000001UV-ic" type="dependencyTree" sectionCode="UVTD">
+   <header>
+      <title> Therapeutic Devices Dependency Annex
+				</title>
+      <version>V 00-00</version>
+      <ballot type="NormativeStandard" number="1"/>
+      <date>6/31/2008</date>
+      <legalese copyRightDate="2008"/>
+   </header>
+   <body>
+      <div1 id="all-sortOrder">
+         <head> Therapeutic Devices in Structured Sort Order</head>
+         <artree role="ssn">
+            <artreeitem>
+               <stref id="d0e22304" role="tree-intro" sectID="UVTD" sectType="SB" refName="Domain: Therapeutic Devices" refFamiliarName="Domain: Therapeutic Devices" refIdentifier="POTD_DO000001UV"/>
+               <artreeitem>
+                  <rmimref id="treeRef-POTD_DM000000UV" role="tree-element" sectID="UVTD" sectType="SB" refName="Implantable Cardiac Device DMIM" refFamiliarName="Implantable Cardiac Device DMIM" refIdentifier="POTD_DM000000UV"/>
+               </artreeitem>
+               <artreeitem>
+                  <stref id="d0e22308" role="tree-intro" sectID="UVTD" sectType="SB" refName="Topic: Implantable Cardiac Device" refFamiliarName="Topic: Implantable Cardiac Device" refIdentifier="POTD_DO000001UV"/>
+                  <artreeitem>
+                     <stref id="d0e22308" role="tree-intro" sectID="" sectType="SB" refName=" Story Boards" refFamiliarName=" Story Boards" refIdentifier=""/>
+                     <artreeitem>
+                        <stref id="treeRef-POTD_ST000001UV02" role="tree-element" sectID="UVTD" sectType="SB" refName="Implantable Cardiac Device Follow-Up" refFamiliarName="Implantable Cardiac Device Follow-Up" refIdentifier="POTD_ST000001UV02"/>
+                        <artreeitem>
+                           <stref id="treeRef-POTD_SN000001UV02" role="tree-element" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Follow-up" refFamiliarName="Implanted Cardiac Device Follow-up" refIdentifier="POTD_SN000001UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-POTD_IN000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Results Notification" refFamiliarName="Implanted Cardiac Device Results Notification" refIdentifier="POTD_IN000001UV02"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22308" role="tree-intro" sectID="" sectType="SB" refName=" Application Roles" refFamiliarName=" Application Roles" refIdentifier=""/>
+                     <artreeitem>
+                        <arref id="treeRef-POTD_AR000001UV02" role="tree-element" sectID="UVTD" sectType="SB" refName="Cardiac Interrogation Observation Tracker" refFamiliarName="Cardiac Interrogation Observation Tracker" refIdentifier="POTD_AR000001UV02"/>
+                        <artreeitem>
+                           <arref id="treeRef-POTD_AR000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Cardiac Interrogation Observation Tracker" refFamiliarName="Cardiac Interrogation Observation Tracker" refIdentifier="POTD_AR000001UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-POTD_AR000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Cardiac Interrogation Observation Tracker" refFamiliarName="Cardiac Interrogation Observation Tracker" refIdentifier="POTD_AR000001UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-POTD_IN000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Results Notification" refFamiliarName="Implanted Cardiac Device Results Notification" refIdentifier="POTD_IN000001UV02"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <arref id="treeRef-POTD_AR000010UV02" role="tree-element" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Interrogation System" refFamiliarName="Implanted Cardiac Device Interrogation System" refIdentifier="POTD_AR000010UV02"/>
+                        <artreeitem>
+                           <arref id="treeRef-POTD_AR000010UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Interrogation System" refFamiliarName="Implanted Cardiac Device Interrogation System" refIdentifier="POTD_AR000010UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-POTD_AR000010UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Interrogation System" refFamiliarName="Implanted Cardiac Device Interrogation System" refIdentifier="POTD_AR000010UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-POTD_IN000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Results Notification" refFamiliarName="Implanted Cardiac Device Results Notification" refIdentifier="POTD_IN000001UV02"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22308" role="tree-intro" sectID="" sectType="SB" refName=" Trigger Events" refFamiliarName=" Trigger Events" refIdentifier=""/>
+                     <artreeitem>
+                        <teref id="treeRef-POTD_TE000001UV02" role="tree-element" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Follow-Up" refFamiliarName="Implanted Cardiac Device Follow-Up" refIdentifier="POTD_TE000001UV02"/>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22308" role="tree-intro" sectID="" sectType="SB" refName=" Refined Message Information Models" refFamiliarName=" Refined Message Information Models" refIdentifier=""/>
+                     <artreeitem>
+                        <rmimref id="treeRef-POTD_RM000001UV02" role="tree-element" sectID="UVTD" sectType="SB" refName="Implantable Cardiac Device Follow-up" refFamiliarName="Implantable Cardiac Device Follow-up" refIdentifier="POTD_RM000001UV02"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-POTD_HD000001UV02" role="tree-element" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Follow-Up" refFamiliarName="Implanted Cardiac Device Follow-Up" refIdentifier="POTD_HD000001UV02"/>
+                           <artreeitem>
+                              <msgref id="treeRef-POTD_MT000001UV02" role="tree-element" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Event New" refFamiliarName="Implanted Cardiac Device Event New" refIdentifier="POTD_MT000001UV02"/>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT050002UV04" role="dependency" sectID="UVCT" sectType="SB" refName="R_PatientIdentified-confirmable" refFamiliarName="R_PatientIdentified-confirmable" refIdentifier="COCT_MT050002UV04"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090002UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedEntityIdentified-confirmable" refFamiliarName="R_AssignedEntityIdentified-confirmable" refIdentifier="COCT_MT090002UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090300UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedDeviceUniversal" refFamiliarName="R_AssignedDeviceUniversal" refIdentifier="COCT_MT090300UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT010000UV01" role="dependency" sectID="UVCT" sectType="SB" refName="A_EncounterUniversal" refFamiliarName="A_EncounterUniversal" refIdentifier="COCT_MT010000UV01"/>
+                              </artreeitem>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22308" role="tree-intro" sectID="" sectType="SB" refName=" Interactions" refFamiliarName=" Interactions" refIdentifier=""/>
+                     <artreeitem>
+                        <intref id="treeRef-POTD_IN000001UV02" role="tree-element" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Results Notification" refFamiliarName="Implanted Cardiac Device Results Notification" refIdentifier="POTD_IN000001UV02"/>
+                        <artreeitem>
+                           <arref id="treeRef-POTD_AR000010UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Interrogation System" refFamiliarName="Implanted Cardiac Device Interrogation System" refIdentifier="POTD_AR000010UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-POTD_AR000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Cardiac Interrogation Observation Tracker" refFamiliarName="Cardiac Interrogation Observation Tracker" refIdentifier="POTD_AR000001UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-POTD_TE000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Follow-Up" refFamiliarName="Implanted Cardiac Device Follow-Up" refIdentifier="POTD_TE000001UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-POTD_MT000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Event New" refFamiliarName="Implanted Cardiac Device Event New" refIdentifier="POTD_MT000001UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-POTD_TE000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Follow-Up" refFamiliarName="Implanted Cardiac Device Follow-Up" refIdentifier="POTD_TE000001UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-POTD_IN000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Results Notification" refFamiliarName="Implanted Cardiac Device Results Notification" refIdentifier="POTD_IN000001UV02"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+            </artreeitem>
+         </artree>
+      </div1>
+      <div1 id="all-codeOrder">
+         <head> Therapeutic Devices in Artifact Code Order</head>
+         <artree role="code">
+            <artreeitem>
+               <stref id="d0e22304" role="tree-intro" sectID="UVTD" sectType="SB" refName="Domain: Therapeutic Devices" refFamiliarName="Domain: Therapeutic Devices" refIdentifier="POTD_DO000001UV"/>
+               <artreeitem>
+                  <rmimref id="treeRef-POTD_DM000000UV" role="tree-element" sectID="UVTD" sectType="SB" refName="Implantable Cardiac Device DMIM" refFamiliarName="Implantable Cardiac Device DMIM" refIdentifier="POTD_DM000000UV"/>
+               </artreeitem>
+               <artreeitem>
+                  <stref id="d0e22308" role="tree-intro" sectID="UVTD" sectType="SB" refName="Topic: Implantable Cardiac Device" refFamiliarName="Topic: Implantable Cardiac Device" refIdentifier="POTD_DO000001UV"/>
+                  <artreeitem>
+                     <stref id="d0e22308" role="tree-intro" sectID="" sectType="SB" refName=" Story Boards" refFamiliarName=" Story Boards" refIdentifier=""/>
+                     <artreeitem>
+                        <stref id="treeRef-POTD_ST000001UV02" role="tree-element" sectID="UVTD" sectType="SB" refName="Implantable Cardiac Device Follow-Up" refFamiliarName="Implantable Cardiac Device Follow-Up" refIdentifier="POTD_ST000001UV02"/>
+                        <artreeitem>
+                           <stref id="treeRef-POTD_SN000001UV02" role="tree-element" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Follow-up" refFamiliarName="Implanted Cardiac Device Follow-up" refIdentifier="POTD_SN000001UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-POTD_IN000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Results Notification" refFamiliarName="Implanted Cardiac Device Results Notification" refIdentifier="POTD_IN000001UV02"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22308" role="tree-intro" sectID="" sectType="SB" refName=" Application Roles" refFamiliarName=" Application Roles" refIdentifier=""/>
+                     <artreeitem>
+                        <arref id="treeRef-POTD_AR000001UV02" role="tree-element" sectID="UVTD" sectType="SB" refName="Cardiac Interrogation Observation Tracker" refFamiliarName="Cardiac Interrogation Observation Tracker" refIdentifier="POTD_AR000001UV02"/>
+                        <artreeitem>
+                           <arref id="treeRef-POTD_AR000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Cardiac Interrogation Observation Tracker" refFamiliarName="Cardiac Interrogation Observation Tracker" refIdentifier="POTD_AR000001UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-POTD_AR000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Cardiac Interrogation Observation Tracker" refFamiliarName="Cardiac Interrogation Observation Tracker" refIdentifier="POTD_AR000001UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-POTD_IN000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Results Notification" refFamiliarName="Implanted Cardiac Device Results Notification" refIdentifier="POTD_IN000001UV02"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <arref id="treeRef-POTD_AR000010UV02" role="tree-element" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Interrogation System" refFamiliarName="Implanted Cardiac Device Interrogation System" refIdentifier="POTD_AR000010UV02"/>
+                        <artreeitem>
+                           <arref id="treeRef-POTD_AR000010UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Interrogation System" refFamiliarName="Implanted Cardiac Device Interrogation System" refIdentifier="POTD_AR000010UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-POTD_AR000010UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Interrogation System" refFamiliarName="Implanted Cardiac Device Interrogation System" refIdentifier="POTD_AR000010UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-POTD_IN000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Results Notification" refFamiliarName="Implanted Cardiac Device Results Notification" refIdentifier="POTD_IN000001UV02"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22308" role="tree-intro" sectID="" sectType="SB" refName=" Trigger Events" refFamiliarName=" Trigger Events" refIdentifier=""/>
+                     <artreeitem>
+                        <teref id="treeRef-POTD_TE000001UV02" role="tree-element" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Follow-Up" refFamiliarName="Implanted Cardiac Device Follow-Up" refIdentifier="POTD_TE000001UV02"/>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22308" role="tree-intro" sectID="" sectType="SB" refName=" Refined Message Information Models" refFamiliarName=" Refined Message Information Models" refIdentifier=""/>
+                     <artreeitem>
+                        <rmimref id="treeRef-POTD_RM000001UV02" role="tree-element" sectID="UVTD" sectType="SB" refName="Implantable Cardiac Device Follow-up" refFamiliarName="Implantable Cardiac Device Follow-up" refIdentifier="POTD_RM000001UV02"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-POTD_HD000001UV02" role="tree-element" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Follow-Up" refFamiliarName="Implanted Cardiac Device Follow-Up" refIdentifier="POTD_HD000001UV02"/>
+                           <artreeitem>
+                              <msgref id="treeRef-POTD_MT000001UV02" role="tree-element" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Event New" refFamiliarName="Implanted Cardiac Device Event New" refIdentifier="POTD_MT000001UV02"/>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT050002UV04" role="dependency" sectID="UVCT" sectType="SB" refName="R_PatientIdentified-confirmable" refFamiliarName="R_PatientIdentified-confirmable" refIdentifier="COCT_MT050002UV04"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090002UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedEntityIdentified-confirmable" refFamiliarName="R_AssignedEntityIdentified-confirmable" refIdentifier="COCT_MT090002UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090300UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedDeviceUniversal" refFamiliarName="R_AssignedDeviceUniversal" refIdentifier="COCT_MT090300UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT010000UV01" role="dependency" sectID="UVCT" sectType="SB" refName="A_EncounterUniversal" refFamiliarName="A_EncounterUniversal" refIdentifier="COCT_MT010000UV01"/>
+                              </artreeitem>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22308" role="tree-intro" sectID="" sectType="SB" refName=" Interactions" refFamiliarName=" Interactions" refIdentifier=""/>
+                     <artreeitem>
+                        <intref id="treeRef-POTD_IN000001UV02" role="tree-element" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Results Notification" refFamiliarName="Implanted Cardiac Device Results Notification" refIdentifier="POTD_IN000001UV02"/>
+                        <artreeitem>
+                           <arref id="treeRef-POTD_AR000010UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Interrogation System" refFamiliarName="Implanted Cardiac Device Interrogation System" refIdentifier="POTD_AR000010UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-POTD_AR000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Cardiac Interrogation Observation Tracker" refFamiliarName="Cardiac Interrogation Observation Tracker" refIdentifier="POTD_AR000001UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-POTD_TE000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Follow-Up" refFamiliarName="Implanted Cardiac Device Follow-Up" refIdentifier="POTD_TE000001UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-POTD_MT000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Event New" refFamiliarName="Implanted Cardiac Device Event New" refIdentifier="POTD_MT000001UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-POTD_TE000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Follow-Up" refFamiliarName="Implanted Cardiac Device Follow-Up" refIdentifier="POTD_TE000001UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-POTD_IN000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Results Notification" refFamiliarName="Implanted Cardiac Device Results Notification" refIdentifier="POTD_IN000001UV02"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+            </artreeitem>
+         </artree>
+      </div1>
+      <div1 id="all-nameOrder">
+         <head> Therapeutic Devices in Name Order</head>
+         <artree role="name">
+            <artreeitem>
+               <stref id="d0e22304" role="tree-intro" sectID="UVTD" sectType="SB" refName="Domain: Therapeutic Devices" refFamiliarName="Domain: Therapeutic Devices" refIdentifier="POTD_DO000001UV"/>
+               <artreeitem>
+                  <rmimref id="treeRef-POTD_DM000000UV" role="tree-element" sectID="UVTD" sectType="SB" refName="Implantable Cardiac Device DMIM" refFamiliarName="Implantable Cardiac Device DMIM" refIdentifier="POTD_DM000000UV"/>
+               </artreeitem>
+               <artreeitem>
+                  <stref id="d0e22308" role="tree-intro" sectID="UVTD" sectType="SB" refName="Topic: Implantable Cardiac Device" refFamiliarName="Topic: Implantable Cardiac Device" refIdentifier="POTD_DO000001UV"/>
+                  <artreeitem>
+                     <stref id="d0e22308" role="tree-intro" sectID="" sectType="SB" refName=" Story Boards" refFamiliarName=" Story Boards" refIdentifier=""/>
+                     <artreeitem>
+                        <stref id="treeRef-POTD_ST000001UV02" role="tree-element" sectID="UVTD" sectType="SB" refName="Implantable Cardiac Device Follow-Up" refFamiliarName="Implantable Cardiac Device Follow-Up" refIdentifier="POTD_ST000001UV02"/>
+                        <artreeitem>
+                           <stref id="treeRef-POTD_SN000001UV02" role="tree-element" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Follow-up" refFamiliarName="Implanted Cardiac Device Follow-up" refIdentifier="POTD_SN000001UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-POTD_IN000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Results Notification" refFamiliarName="Implanted Cardiac Device Results Notification" refIdentifier="POTD_IN000001UV02"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22308" role="tree-intro" sectID="" sectType="SB" refName=" Application Roles" refFamiliarName=" Application Roles" refIdentifier=""/>
+                     <artreeitem>
+                        <arref id="treeRef-POTD_AR000001UV02" role="tree-element" sectID="UVTD" sectType="SB" refName="Cardiac Interrogation Observation Tracker" refFamiliarName="Cardiac Interrogation Observation Tracker" refIdentifier="POTD_AR000001UV02"/>
+                        <artreeitem>
+                           <arref id="treeRef-POTD_AR000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Cardiac Interrogation Observation Tracker" refFamiliarName="Cardiac Interrogation Observation Tracker" refIdentifier="POTD_AR000001UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-POTD_AR000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Cardiac Interrogation Observation Tracker" refFamiliarName="Cardiac Interrogation Observation Tracker" refIdentifier="POTD_AR000001UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-POTD_IN000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Results Notification" refFamiliarName="Implanted Cardiac Device Results Notification" refIdentifier="POTD_IN000001UV02"/>
+                        </artreeitem>
+                     </artreeitem>
+                     <artreeitem>
+                        <arref id="treeRef-POTD_AR000010UV02" role="tree-element" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Interrogation System" refFamiliarName="Implanted Cardiac Device Interrogation System" refIdentifier="POTD_AR000010UV02"/>
+                        <artreeitem>
+                           <arref id="treeRef-POTD_AR000010UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Interrogation System" refFamiliarName="Implanted Cardiac Device Interrogation System" refIdentifier="POTD_AR000010UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-POTD_AR000010UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Interrogation System" refFamiliarName="Implanted Cardiac Device Interrogation System" refIdentifier="POTD_AR000010UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-POTD_IN000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Results Notification" refFamiliarName="Implanted Cardiac Device Results Notification" refIdentifier="POTD_IN000001UV02"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22308" role="tree-intro" sectID="" sectType="SB" refName=" Trigger Events" refFamiliarName=" Trigger Events" refIdentifier=""/>
+                     <artreeitem>
+                        <teref id="treeRef-POTD_TE000001UV02" role="tree-element" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Follow-Up" refFamiliarName="Implanted Cardiac Device Follow-Up" refIdentifier="POTD_TE000001UV02"/>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22308" role="tree-intro" sectID="" sectType="SB" refName=" Refined Message Information Models" refFamiliarName=" Refined Message Information Models" refIdentifier=""/>
+                     <artreeitem>
+                        <rmimref id="treeRef-POTD_RM000001UV02" role="tree-element" sectID="UVTD" sectType="SB" refName="Implantable Cardiac Device Follow-up" refFamiliarName="Implantable Cardiac Device Follow-up" refIdentifier="POTD_RM000001UV02"/>
+                        <artreeitem>
+                           <hmdref id="treeRef-POTD_HD000001UV02" role="tree-element" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Follow-Up" refFamiliarName="Implanted Cardiac Device Follow-Up" refIdentifier="POTD_HD000001UV02"/>
+                           <artreeitem>
+                              <msgref id="treeRef-POTD_MT000001UV02" role="tree-element" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Event New" refFamiliarName="Implanted Cardiac Device Event New" refIdentifier="POTD_MT000001UV02"/>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT050002UV04" role="dependency" sectID="UVCT" sectType="SB" refName="R_PatientIdentified-confirmable" refFamiliarName="R_PatientIdentified-confirmable" refIdentifier="COCT_MT050002UV04"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090002UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedEntityIdentified-confirmable" refFamiliarName="R_AssignedEntityIdentified-confirmable" refIdentifier="COCT_MT090002UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT090300UV01" role="dependency" sectID="UVCT" sectType="SB" refName="R_AssignedDeviceUniversal" refFamiliarName="R_AssignedDeviceUniversal" refIdentifier="COCT_MT090300UV01"/>
+                              </artreeitem>
+                              <artreeitem>
+                                 <cmetref id="treeRef-COCT_MT010000UV01" role="dependency" sectID="UVCT" sectType="SB" refName="A_EncounterUniversal" refFamiliarName="A_EncounterUniversal" refIdentifier="COCT_MT010000UV01"/>
+                              </artreeitem>
+                           </artreeitem>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+                  <artreeitem>
+                     <stref id="d0e22308" role="tree-intro" sectID="" sectType="SB" refName=" Interactions" refFamiliarName=" Interactions" refIdentifier=""/>
+                     <artreeitem>
+                        <intref id="treeRef-POTD_IN000001UV02" role="tree-element" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Results Notification" refFamiliarName="Implanted Cardiac Device Results Notification" refIdentifier="POTD_IN000001UV02"/>
+                        <artreeitem>
+                           <arref id="treeRef-POTD_AR000010UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Interrogation System" refFamiliarName="Implanted Cardiac Device Interrogation System" refIdentifier="POTD_AR000010UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <arref id="treeRef-POTD_AR000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Cardiac Interrogation Observation Tracker" refFamiliarName="Cardiac Interrogation Observation Tracker" refIdentifier="POTD_AR000001UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-POTD_TE000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Follow-Up" refFamiliarName="Implanted Cardiac Device Follow-Up" refIdentifier="POTD_TE000001UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCCI_MT000100UV01" role="dependency" sectID="UVCI" sectType="SB" refName="Send Message Payload" refFamiliarName="Send Message Payload" refIdentifier="MCCI_MT000100UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-MCAI_MT700201UV01" role="dependency" sectID="UVAI" sectType="SB" refName="Trigger Event Control Act" refFamiliarName="Trigger Event Control Act" refIdentifier="MCAI_MT700201UV01"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <msgref id="treeRef-POTD_MT000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Event New" refFamiliarName="Implanted Cardiac Device Event New" refIdentifier="POTD_MT000001UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <teref id="treeRef-POTD_TE000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Follow-Up" refFamiliarName="Implanted Cardiac Device Follow-Up" refIdentifier="POTD_TE000001UV02"/>
+                        </artreeitem>
+                        <artreeitem>
+                           <intref id="treeRef-POTD_IN000001UV02" role="dependency" sectID="UVTD" sectType="SB" refName="Implanted Cardiac Device Results Notification" refFamiliarName="Implanted Cardiac Device Results Notification" refIdentifier="POTD_IN000001UV02"/>
+                        </artreeitem>
+                     </artreeitem>
+                  </artreeitem>
+               </artreeitem>
+            </artreeitem>
+         </artree>
+      </div1>
+   </body>
+</spec>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <link rel="stylesheet" type="text/css" href="../../support/css/v3m.css" title="v3m" /><script src="../../support/js/tree.js" type="text/javascript"></script><script src="../../support/js/setTopFrameText.js" type="text/javascript"></script><script src="../../support/js/swapcss.js" type="text/javascript"></script><script type="text/javascript">
+			if (find('heading')) setHeadingTextFromFileName(document.location.href);
+			</script><title>Domain: Accounting and Billing</title>
+   </head>
+   <body>
+      <div class="section">
+         <h1>Domain: Accounting and Billing</h1>
+         <table cellspacing="0" cellpadding="3" border="1">
+            <tr>
+               <td align="center"><img src="../../support/graphics/ansilogo.gif" alt="ANSI" /><br />ANSI/HL7 V3 AB, R2-2008<br />HL7 Version 3 Standard: Accounting and Billing, Release 2<br />03/06/2008<img width="5" alt="spacer" src="../../support/graphics/spacer.gif" /></td>
+            </tr>
+         </table>
+         <table style="border-width:0" width="100%" cellpadding="6">
+            <tr>
+               <td valign="top" align="left">Financial Management Co-Chair + Vocabulary Facilitator + Modeling Facilitator</td>
+               <td valign="top" align="left">Kathleen Connor<br />Fox Systems, Inc.
+               </td>
+            </tr>
+            <tr>
+               <td valign="top" align="left">Financial Management Co-Chair + V2 and Mapping Expert</td>
+               <td valign="top" align="left">Susan Lepping<br />Siemens Medical Solutions
+               </td>
+            </tr>
+            <tr>
+               <td valign="top" align="left">Financial Management Co-Chair + Mapping Expert</td>
+               <td valign="top" align="left">Francine Kitchen<br />IDX Systems Corporation
+               </td>
+            </tr>
+            <tr>
+               <td valign="top" align="left">Recent Past Financial Management Co-Chair</td>
+               <td valign="top" align="left">Michael van Campen<br />Gordon Point Informatics Ltd. - HL7 Canada
+               </td>
+            </tr>
+            <tr>
+               <td valign="top" align="left">Primary Contributor</td>
+               <td valign="top" align="left">Mark Shafarman<br />Shafarman Consulting
+               </td>
+            </tr>
+            <tr>
+               <td valign="top" align="left">Contributor</td>
+               <td valign="top" align="left">Lloyd McKenzie<br />Lloyd McKenzie and Associates - HL7 Canada
+               </td>
+            </tr>
+         </table>
+         <p class="copyright">Last Published: 06/23/2008 2:02 PM</p>
+         <p class="lastEdit">Content Last Edited: 6/4/2008 1:47:15 PM</p>
+         <p class="copyright">HL7® Version 3 Standard, © 2008 Health 
+            Level Seven®, Inc.  All Rights Reserved.
+         </p>
+         <p class="copyright">HL7 and Health Level Seven are registered 
+            trademarks of Health Level Seven, Inc.  Reg. U.S. Pat &amp; TM Off
+         </p>
+         <hr title="Separator for header" />
+         <h2><a name="contents">Table of Contents</a></h2><br /><a href="#prefBegin">Preface</a><br /><span>    i  <a href="UVAB.htm#spec-preface">Notes to Readers</a><br /></span><span>    ii  <a href="UVAB.htm#navigate-divs">Message Design Element Navigation</a><br /></span>1  <a href="UVAB.htm#intro-FIAB_DO000000UV-ic">Overview</a><br />    1.1  <a href="UVAB.htm#spec-scope">Introduction &amp; Scope</a><br />
+         			    1.2  <a href="UVAB.htm#dmims-FIAB_DO000000UV-ic">Domain Message Information Models</a><br />2.  <a href="UVAB_PatientBillingAccount.htm#FIAB_DO000000UV-PatientBillingAccount-ic">Patient Billing Account Topic</a><br /><span>    2.1  <a href="UVAB_PatientBillingAccount.htm#sbs-FIAB_DO000000UV-PatientBillingAccount-ic">Storyboards</a><br /></span><span>    2.2  <a href="UVAB_PatientBillingAccount.htm#roles-FIAB_DO000000UV-PatientBillingAccount-ic">Application Roles</a><br /></span><span>    2.3  <a href="UVAB_PatientBillingAccount.htm#tes-FIAB_DO000000UV-PatientBillingAccount-ic">Trigger Events</a><br /></span><span>    2.4  <a href="UVAB_PatientBillingAccount.htm#rmims-FIAB_DO000000UV-PatientBillingAccount-ic">Refined Message Information Models</a><br /></span><span>    2.5  <a href="UVAB_PatientBillingAccount.htm#hmds-FIAB_DO000000UV-PatientBillingAccount-ic">Hierarchical Message Descriptions</a><br /></span><span>    2.6  <a href="UVAB_PatientBillingAccount.htm#ints-FIAB_DO000000UV-PatientBillingAccount-ic">Interactions</a><br /></span>3.  <a href="UVAB_PatientBillingPost.htm#FIAB_DO000000UV-PatientBillingPost-ic">Patient Billing Post Topic</a><br /><span>    3.1  <a href="UVAB_PatientBillingPost.htm#sbs-FIAB_DO000000UV-PatientBillingPost-ic">Storyboards</a><br /></span><span>    3.2  <a href="UVAB_PatientBillingPost.htm#roles-FIAB_DO000000UV-PatientBillingPost-ic">Application Roles</a><br /></span><span>    3.3  <a href="UVAB_PatientBillingPost.htm#tes-FIAB_DO000000UV-PatientBillingPost-ic">Trigger Events</a><br /></span><span>    3.4  <a href="UVAB_PatientBillingPost.htm#rmims-FIAB_DO000000UV-PatientBillingPost-ic">Refined Message Information Models</a><br /></span><span>    3.5  <a href="UVAB_PatientBillingPost.htm#hmds-FIAB_DO000000UV-PatientBillingPost-ic">Hierarchical Message Descriptions</a><br /></span><span>    3.6  <a href="UVAB_PatientBillingPost.htm#ints-FIAB_DO000000UV-PatientBillingPost-ic">Interactions</a><br /></span>4.  <a href="UVAB_do_cmets.htm#">CMETs Defined by this Domain
+            			</a><br />5.  <a href="UVAB_DO_CT.htm#FIAB_DO000000UV-ic">Common Message Elements Annex<br /></a>
+         		    5.1  <a href="UVAB_DO_CT.htm#FIAB_DO000000UV-icc2id">CMETs Used In This Domain</a><br />6.  <a href="UVAB_DO_XX.htm#indx-FIAB_DO000000UV-ic">Interaction Annex</a><br />
+         		    6.1  <a href="UVAB_DO_XX.htm#FIAB_DO000000UV-ic1id">By Application Role</a><br />
+         		    6.2  <a href="UVAB_DO_XX.htm#FIAB_DO000000UV-ic2id">By Trigger Event</a><br />
+         		    6.3  <a href="UVAB_DO_XX.htm#FIAB_DO000000UV-ic3id">By Message Type</a><br />7.  <a href="uvab_glossary.htm#">Glossary</a><br /><div class="body">
+            <div class="subSection">
+               <div class="header">
+                  <h3><a name="prefBegin">Preface</a></h3>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">i </span><span class="title"><a name="spec-preface">Notes to Readers</a></span></div>
+               <div class="body">
+                  <p>This is release 2 of the Account and Billing domain.  This content passed normative ballot during the September 2007 ballot
+                     cycle and was subsequently approved as an ANSI standard.
+                  </p>
+                  <p>FOR INFORMATIONAL PURPOSES ONLY: The following link is to an excel spreadsheet containing data mapping from HL7 Version 2.5
+                     Chapter 6 to HL7 V3 FIAB: <a href="map_V2-V3_FM.xls">V2 - V3 Mapping Document</a>.
+                  </p>
+                  <p>The spreadsheet contains a separate worksheet for each version 2.5 Chapter 6 segment.  This V2-V3 mapping in not intended
+                     to be balloted or to become normative.  In is included in the hope that it will be helpful for implementations.  The FM work
+                     group welcomes any geedback, questions or corrections.  Please send any feedback to <a href="mailto:francine.kitchen@ge.com">francine.kitchen@ge.com</a>.
+                  </p>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">ii </span><span class="title"><a name="navigate-divs">Message Design Element Navigation</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e76" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong>Patient Billing Account Event&nbsp;<a href="../../domains/uvab/uvab_PatientBillingAccount.htm#FIAB_RM010000UV02-rmi" class="toc_link">FIAB_RM010000UV02</a></strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td class="toc_indent_flag_gap"> </td>
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                                       <tr id="d0e78" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                          <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong>Patient Billing Account Event&nbsp;<a href="../../domains/uvab/uvab_PatientBillingAccount.htm#FIAB_HD010100UV02-hmd" class="toc_link">FIAB_HD010100UV02</a></strong></span></td>
+                                       </tr>
+                                       <tr class="toc_row_master">
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td valign="top">
+                                             <table cellpadding="0" cellspacing="0" style="border:0px">
+                                                <tr>
+                                                   <td>
+                                                      <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                         <tr>
+                                                            <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                            <td valign="top" align="left" class="general">Patient Billing Account Event Activate&nbsp;<a href="../../domains/uvab/uvab_PatientBillingAccount.htm#FIAB_MT010101UV02-msg" class="">FIAB_MT010101UV02</a></td>
+                                                         </tr>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                             <table cellpadding="0" cellspacing="0" style="border:0px">
+                                                <tr>
+                                                   <td>
+                                                      <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                         <tr>
+                                                            <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                            <td valign="top" align="left" class="general">Patient Billing Account Event Revise&nbsp;<a href="../../domains/uvab/uvab_PatientBillingAccount.htm#FIAB_MT010102UV02-msg" class="">FIAB_MT010102UV02</a></td>
+                                                         </tr>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                             <table cellpadding="0" cellspacing="0" style="border:0px">
+                                                <tr>
+                                                   <td>
+                                                      <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                         <tr>
+                                                            <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                            <td valign="top" align="left" class="general">Patient Billing Account Event Complete&nbsp;<a href="../../domains/uvab/uvab_PatientBillingAccount.htm#FIAB_MT010103UV02-msg" class="">FIAB_MT010103UV02</a></td>
+                                                         </tr>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                             <table cellpadding="0" cellspacing="0" style="border:0px">
+                                                <tr>
+                                                   <td>
+                                                      <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                         <tr>
+                                                            <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                            <td valign="top" align="left" class="general">Patient Billing Account Event Nullify&nbsp;<a href="../../domains/uvab/uvab_PatientBillingAccount.htm#FIAB_MT010104UV02-msg" class="">FIAB_MT010104UV02</a></td>
+                                                         </tr>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                             <table cellpadding="0" cellspacing="0" style="border:0px">
+                                                <tr>
+                                                   <td>
+                                                      <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                         <tr>
+                                                            <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                            <td valign="top" align="left" class="general">Patient Billing Account Event Obsolete&nbsp;<a href="../../domains/uvab/uvab_PatientBillingAccount.htm#FIAB_MT010105UV02-msg" class="">FIAB_MT010105UV02</a></td>
+                                                         </tr>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e90" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong>Patient Billing Post Event&nbsp;<a href="../../domains/uvab/uvab_PatientBillingPost.htm#FIAB_RM020000UV02-rmi" class="toc_link">FIAB_RM020000UV02</a></strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td class="toc_indent_flag_gap"> </td>
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                                       <tr id="d0e92" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                          <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong>Patient Billing Post Event&nbsp;<a href="../../domains/uvab/uvab_PatientBillingPost.htm#FIAB_HD020100UV02-hmd" class="toc_link">FIAB_HD020100UV02</a></strong></span></td>
+                                       </tr>
+                                       <tr class="toc_row_master">
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td valign="top">
+                                             <table cellpadding="0" cellspacing="0" style="border:0px">
+                                                <tr>
+                                                   <td>
+                                                      <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                         <tr>
+                                                            <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                            <td valign="top" align="left" class="general">Patient Billing Post Event Complete&nbsp;<a href="../../domains/uvab/uvab_PatientBillingPost.htm#FIAB_MT020101UV02-msg" class="">FIAB_MT020101UV02</a></td>
+                                                         </tr>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table><br /></div>
+            </div>
+            <hr title="Separator from body" />
+            <div class="subSection">
+               <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard2" /></span><span class="number">1 </span><span class="title"><a name="intro-FIAB_DO000000UV-ic">Overview</a></span></div>
+               <div class="body">
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number">1.1 </span><span class="title"><a name="spec-scope">Introduction &amp; Scope</a></span></div>
+                     <div class="body">
+                        <p>The Accounting and Billing (AB) domain covers the creation and management of patient billing accounts, primarily for the purpose
+                           of collecting charges and credits (financial transactions) to support the submission of a claim or invoice for reimbursement.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">1.2</span><span class="title"><a name="dmims-FIAB_DO000000UV-ic">Domain Message Information Models</a></span><hr class="sectionrule" />
+               </div>
+               <div class="body">
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number"></span><span class="title"><a name="FIAB_DM000000UV-rmi">Patient Billing Account Domain Model  (FIAB_DM000000UV) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/FIAB_DM000000UV.htm" target="_blank"><img class="graphic" src="editable/images/T-FIAB_DM000000UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a></div>
+                  </div>
+               </div>
+            </div>
+            <p>
+               <table>
+                  <tbody>
+                     <tr>
+                        <td><a class="custombutton" href="#top">Return to top of page</a></td>
+                     </tr>
+                  </tbody>
+               </table>
+            </p>
+         </div>
+      </div>
+   </body>
+</html>

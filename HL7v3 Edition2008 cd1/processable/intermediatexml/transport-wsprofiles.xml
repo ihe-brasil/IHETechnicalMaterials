@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE spec SYSTEM "..\..\support\dtd\v3m.dtd">
+<spec id="V3_TRANSPORT_SOAP_WSDL_D1_NOV2003" specDTDversionNum="1">
+	<header ballotNumber="1" ballotStatus="DSTU">
+		<title>Web Services – Basic Profile</title>
+		<version>1.0</version>
+		<date>May 2005</date>
+		<authlist>
+			<author>
+				<role>Editor</role>
+				<name>Roberto Ruggeri</name>
+				<affiliation>Microsoft</affiliation>
+				<email href="rruggeri@microsoft.com" xlink-form="simple" actuate="auto" show="embed">rruggeri@microsoft.com</email>
+			</author>
+			<author>
+				<role>Contributor</role>
+				<name>Marc de Graauw</name>
+			</author>
+			<author>
+				<role>Co-chair</role>
+				<name>Grahame Grieve</name>
+				<affiliation>Kestral Computing Pty Ltd.</affiliation>
+				<email href="grahame@kestral.com.au" xlink-form="simple" actuate="auto" show="embed">grahame@kestral.com.au</email>
+			</author>
+			<author>
+				<role>Co-chair</role>
+				<name>Anthony Julian</name>
+				<affiliation>Mayo Clinic/Foundation</affiliation>
+				<email href="ajulian@mayo.edu" xlink-form="simple" actuate="auto" show="embed">ajulian@mayo.edu</email>
+			</author>
+			<author>
+				<role>Co-chair</role>
+				<name>Joann Larson</name>
+				<affiliation>Kaiser Permanente</affiliation>
+				<email href="joann.larson@kp.org" xlink-form="simple" actuate="auto" show="embed">joann.larson@kp.org</email>
+			</author>
+			<author>
+				<role>Co-chair</role>
+				<name>Doug Pratt</name>
+				<affiliation>Siemens Medical Solutions Health Services</affiliation>
+				<email href="Douglas.Pratt@siemens.com" xlink-form="simple" actuate="auto" show="embed">Douglas.Pratt@siemens.com</email>
+			</author>
+			<author>
+				<role>Co-chair</role>
+				<name>Rene Spronk</name>
+				<affiliation>Ringholm GmbH</affiliation>
+				<email href="rene.spronk@ringholm.com" xlink-form="simple" actuate="auto" show="embed">rene.spronk@ringholm.com</email>
+			</author>
+		</authlist>
+	</header>
+	<front>
+		<div1 id="pref-i">
+			<head>Preface and Note to Readers</head>
+			<p>The Release 1 of HL7 Web Services Basic Profile has been approved as a DSTU in the January 2004 ballot. This version has been revised to include minor suggestions and comments.</p>
+		</div1>
+		<div1 id="pref-ii">
+			<head>Acknowledgements</head>
+			<p>All the balloters and people that provided comments through the Transports mailing list and the CQ meetings.</p>
+		</div1>
+		<div1 id="pref-iii">
+			<head>Changes from Previous Release</head>
+			<p>Changes from the January 2004 Ballot version:</p>
+			<p>
+				<list role="unordered">
+					<item>Minor editorial changes.</item>
+					<item>Rearranged the content to be more in line with the HL7 Publishing Guidelines</item>
+				</list>
+			</p>
+		</div1>
+		<div1 id="pref-vi">
+			<head>Known Issues and Planned Changes</head>
+			<p>Since some of the specifications referenced by this profile are not yet owned by a recognized SDO, CQ won't do a normative release of a transports specification until the referenced specifications themselves are normative for their own SDO.</p>
+			<p>Changes planned for Release 2 of the DSTU:</p>
+			<p>
+				<list role="unordered">
+					<item>Achieve consistency in naming of soapAction in the basic profile and wsa:Action in this profile and resolving compatibility issues between the two profiles</item>
+					<item>Revise the role of the Application Role based on changes in the ITS and the Dynamic Model for HL7 Version 3</item>
+					<item>Merge the Web Services Profiles in a single document with a single introduction, bringing more consistency among them, but still allowing implementers to claim conformance to individual sections of the profile<list role="unordered">
+							<item>Use a single storyboard from a Normative section of the HL7 Version 3 Ballot</item>
+						</list>
+					</item>
+					<item>Revise the profile to include SOAP 1.2</item>
+				</list>
+			</p>
+		</div1>
+		<div1 id="pref-vii">
+			<head>Other Informative Notes</head>
+			<p>Discussion of changes and comments to the HL7 Web Services Profiles happens on the transports discussion list (transports@lists.hl7.org).</p>
+		</div1>
+	</front>
+	<body>
+		<div1 id="WSP_Overview" ballotStatus="DSTU" ballotNumber="1">
+			<head>Overview</head>
+			<div2 id="WSP_Intro">
+				<head>Introduction and Scope</head>
+				<p>Web Services are a way for applications to expose software services using standard interoperable protocols, regardless of the platform on which they are implemented.The development of interoperable standards and the focus on communication and collaboration among people and applications have created an environment where Web Services are becoming a protocol/technology of choice for application integration.There are many definitions of Web Service, but almost all definitions have these things in common: </p>
+				<list role="ordered">
+					<item>Web Services expose useful functionality to users through the Web Services protocols. </item>
+					<item>Web services provide a way to describe their interfaces in enough detail to allow a user to build a client application to talk to them. This description is usually provided in an XML document called a Web Services Description Language (WSDL) document. </item>
+					<item>Web services are registered so that potential users can find them easily. This is done with Universal Discovery Description and Integration (UDDI).</item>
+				</list>
+				<p>Advanced Web Services Protocols (WS-* Protocols) are built on top of the foundation for Web Services constituted by XML, SOAP and WSDL to express additional functionalities. These are specifications that are developed with the intention of broad adoption and interoperability and focus on security, reliability, transactions, description and discovery.</p>
+				<p>While the first implementations of Web Services were built with the Internet in mind, there is really nothing in the specifications themselves that prevents the use of these standards with other protocols (protocol binding), extending the use of Web Services from business to business (B2B) integration over the internet and HTTP, to Enterprise Application Integration (EAI) inside the company’s firewall using different protocols like TCP/IP or MLLP (Minimum Lower Layer Protocol as defined by HL7).</p>
+				<p>Here are some of the design principles of the Web Services standards:</p>
+				<list role="ordered">
+					<item>
+						<emph role="strong">Modularity:</emph> the standards were built with extensibility in mind so that a gradual approach could be taken to the development of a complete messaging infrastructure. Implementer can pick and choose what standards to implement based on their needs. All of the specifications included in the Web Services standards are very simple and easy to use and can be composed for additional functionality.</item>
+					<item>
+						<emph role="strong">General purpose:</emph> Web Services standards are not tied to any particular messaging protocol or platform forming the basis for a universal mean of communication between organizations, applications and processes. Being built on SOAP and XML imposes very few requirements on applications that can be deployed on traditional servers and desktops, down to PDA and embedded systems like medical devices. The nature of these standards allows also for multiple integration paradigms like Enterprise Application Integration (EAI), Business to Business (B2B) and Peer to Peer (P2P). In addition Web Services specifications support both synchronous and asynchronous communications.</item>
+					<item>
+						<emph role="strong">Based on interoperable standards:</emph> one important factor that determines the rapid development and adoption of Web Services standards is the fact that these are built on other standards like XML, HTTP and SOAP were multiple implementations on multiple platform are available</item>
+				</list>
+				<p>
+					<emph role="strong">Figure 1 - Web Services Architecture</emph>
+				</p>
+				<graphic source="WSP001.jpg" xlink-form="simple" actuate="auto" show="embed"/>
+				<p>Figure 1 shows the architecture and the relation between the different WS-* protocols. At the bottom of the stack, different network transports provide connectivity between applications and service consumers and providers. The rest of the WS-* specifications are largely independent from the specific network transport chosen.</p>
+				<p>XML and SOAP, along with the XML standards like XML Schema Definition, XPath and so on, constitute the basis on which the rest of the specifications are built upon. Core messaging standards like WS-Addressing provide the infrastructure for message exchange allowing transport independent addressing and enabling composition with other specifications like WS-Security.</p>
+				<p>The information that is needed beyond what WSDL provides (ports, types …), is specified by metadata and policies attached to the message definition. Policies define a base set of constructs that can be used and extended by other Web Services specifications to describe a broad range of service requirements, preferences and capabilities.</p>
+				<p>Other specifications address security (in order to be able to ensure the confidentiality, integrity, and privacy of a SOAP message and still being able to route messages through various intermediaries), reliable messaging and transactions among different parties.</p>
+				<p>The purpose of the Web Services Profile (WSP) is to provide implementation guidelines to promote interoperability between implementers that want to exchange HL7 Version 3 messages using standards that fall under the general definition of Web Services. With the objective of leveraging the effort of the industry to promote interoperability, recommendations from organizations like WS-I, W3C and other will be taken into account. A complete list of standards, publications and organizations involved in the development of the standards referenced in this document is available in the References section.</p>
+				<p>The ideal situation that we will be looking at is a Healthcare environment where “plug-n-play” interoperability via Web Services is a reality. In this environment Independent Software Vendors (ISV) and corporate developers implementing HL7 interfaces can write generic and reusable classes, subroutines, and modules consistent with the guidelines set forth by the HL7 standard for Web Services standards in order to handle HL7 message traffic from a potentially unlimited number of connecting applications and services. Applications that “expose” HL7 messages (e.g. Web Services servers) will do so according to the HL7 Web Services Profile (WSP) guidelines; “consumers” of HL7 messages (e.g. Web Services clients) can be written without prior knowledge of the application that they will ultimately end up talking to. In addition, this “plug-n-play” environment will take advantage of supporting discovery protocols such as UDDI to break the rigidity of the current hard-coded message routing infrastructures of most Healthcare enterprises. </p>
+				<p>As an example, imagine an application that consumes ADT (Admission Discharge Transfer) messages that is installed in a hospital data center, using the Web Services discovery protocols such as UDDI is possible to get the physical endpoints of all the applications that expose the ADT service from a central enterprise UDDI server. The list of service providers can be presented to the user or administrator that is installing the application and the specific endpoint set as part of the configuration steps. Protocols, document definitions, security and policies are defined in the service descriptions and all the complex interfacing configurations are avoided.</p>
+				<p>A set of policies can be attached to the definition of the Web Service that specify additional messaging requirements like security, message reliability levels, transactions and so on.</p>
+				<p>Once the service is located, the appropriate bindings and configurations are accomplished and the applications are ready to start exchanging messages in a secure, reliable way, all of this with minimal user intervention.</p>
+				<p>In order to make this vision a reality we are presenting the work in this document to coordinate the work done in the industry around Web Services and the development of the HL7 standards.</p>
+				<p>For the development of the HL7 WSP we chose a phased approach, where we gradually introduce Web Services specifications as these standards mature and consolidate and solid implementations become available on the market.</p>
+				<p>This is the roadmap set for the development of the Web Services profiles at the time of writing (November 2003):<br/>
+				</p>
+				<p>
+					<emph role="strong">SOAP/WSDL Profile - Version 1.0 (this version):</emph>
+				</p>
+				<list role="unordered">
+					<item role="unordered"> Include SOAP 1.1 [3], WSDL 1.1 [4] to define the HL7 WSP and consider recommendations set in the draft WS-I Basic Profile [6]</item>
+				</list>
+				<p>
+					<emph role="strong">Future profiles:</emph>
+				</p>
+				<list role="unordered">
+					<item>Include WS-Security and WS-Policy specifications</item>
+					<item>Include changes for SOAP 1.2</item>
+					<item>Include additional specifications (like WS-ReliableMessaging, Attachments …) and refinements as well as changes to the vision/scope scenario as the Web Services specifications mature</item>
+				</list>
+				<p>Subsequent profiles will be implemented on top of the SOAP/WSDL Profile to allow the implementer to compose specifications based on needs and choose to claim conformance either to the SOAP/WSDL Profile alone or to a combination of multiple profiles.</p>
+				<div3 id="WSPPrerequisites">
+					<head>Prerequisites</head>
+					<p>This document is meant to illustrate an application of several standards to the context of HL7 and therefore does not provide a full explanation of the specifications referenced. To fully comprehend this document it is suggested that the reader meets the following prerequisites:</p>
+					<list role="unordered">
+						<item>A knowledge of XML and XML Schema Language as defined in [1] and [2]</item>
+						<item>A knowledge of the SOAP protocol as defined in [3]</item>
+						<item>A knowledge of the WSDL format as defined in [4]</item>
+						<item>A knowledge of the HL7 Version 3 ballot as defined in [5]</item>
+					</list>
+					<p>A complete list of resources can be found in the References chapter.</p>
+				</div3>
+				<div3 id="WSPStatus">
+					<head>Status of This Document</head>
+					<p>This document is posted in the HL7 Version 3 ballot as a Draft Standard for Trial Use (DSTU). Readers are encouraged to implement the standard and provide feedback to be included in future releases of this document.</p>
+				</div3>
+				<div3 id="WSPConventions">
+					<head>Conventions</head>
+					<p>Implementation decisions will be defined in the profile using the following convention: </p>
+					<p>
+						<quote>
+							<emph role="strong">HL7-WSnnn) text</emph>
+						</quote>
+					</p>
+					<p>Where <emph>nnn</emph> is a unique number used to identify the implementation decision throughout the document and <emph>text</emph> is the actual text of the decision.</p>
+				</div3>
+			</div2>
+			<div2 id="WSPIntroduction">
+				<head>An Introduction to the Relevant Standards</head>
+				<div3 id="WSPIntroSOAP">
+					<head>SOAP 1.1</head>
+					<p>From [3]:</p>
+					<p>
+						<quote>“SOAP is a lightweight protocol for the exchange of information in a decentralized, distributed environment. It is an XML-based protocol that consists of three parts: an envelope that defines a framework for describing what is in a message and how to process it, a set of encoding rules for expressing instances of application-defined data types, and a convention for representing remote procedure calls and responses. SOAP can potentially be used in combination with a variety of other protocols.”</quote>
+					</p>
+					<p>This profile does not specifically address SOAP 1.2. SOAP 1.2 has recently become a W3C recommendation, but implementations are not yet widely available. Future versions of this document will address the changes required by SOAP 1.2. Note that compliancy with the WS-I Basic Profile, as implemented in this profile, allows for a smoother migration to SOAP 1.2 as most of the features from SOAP 1.1 that did not make it to version 1.2 are deprecated in the WS-I Basic Profile.</p>
+				</div3>
+				<div3 id="WSPIntroWSDL">
+					<head>WSDL 1.1</head>
+					<p>From [4]:</p>
+					<p>
+						<quote>“WSDL defines an XML-based grammar for describing network services as a set of endpoints that accept messages containing either document-oriented or procedure-oriented information. The operations and messages are described abstractly. They are bound to a concrete network protocol and message format to define an endpoint. Related concrete endpoints are combined into abstract endpoints (services). WSDL is extensible to allow the description of endpoints and their messages regardless of what message formats or network protocols are being used to communicate.”</quote>
+					</p>
+				</div3>
+			</div2>
+		</div1>
+		<div1 id="WSP_Basic">
+			<head>Basic Profile for HL7 Version 3 Messages</head>
+			<div2 id="WSP_Workflow">
+				<head>Workflow</head>
+				<p>In accomplishing this simple task the Message Sender (e.g. client, placer) and Message Receiver (e.g. server, fulfiller) will take advantage of the guidelines set in this document. Following is a step-by-step breakdown of the workflow used to send and receive the HL7 Message.</p>
+				<p>The <emph role="strong">Message Receiver</emph> is the application or service that exposes the Web Service and provides the WSDL document that is analyzed in §1.5.3.The <emph role="strong">Message Sender</emph> is the application or service that acts as a client and <emph>consumes</emph> the Web Service.</p>
+				<p>
+					<emph role="strong">Note:</emph> the workflow is intended to outline the pertinent tasks and is not prescriptive as to the sequence of fine grained steps.</p>
+				<list role="unordered">
+					<item>The Sender locates the service, downloads the message definition (WSDL) and builds the appropriate proxies and interfaces. This process is usually accomplished out-of-band at configuration or development time.</item>
+					<item>Message Sender constructs the HL7 payload.</item>
+					<item>Message Sender constructs SOAP message headers and body according to the rules set in the WSDL and encapsulates the HL7 payload in the body of the SOAP message.</item>
+					<item>Message Sender sends the SOAP message to the selected service end point as specified in the WSDL.</item>
+					<item>The message is routed and delivered to service end point. </item>
+					<item>Message Receiver receives SOAP message containing the HL7 payload.</item>
+					<item>Message Receiver extracts, parses, and validates encapsulated HL7 payload.</item>
+					<item>Message Receiver constructs the response HL7 payload (acknowledgement, query response …) in the case that a response is required, for asynchronous and one-way messages this step is not necessary.</item>
+					<item>Message Receiver constructs the SOAP reply message headers and body according to the rules set in the WSDL.</item>
+					<item>Message Receiver returns the SOAP reply message to the Message Sender.</item>
+					<item>Reply message is routed and delivered to Message Sender. </item>
+					<item>Message Sender receives SOAP reply message containing the HL7 payload.</item>
+					<item>Message Sender extracts, parses, and validates encapsulated HL7 payload.</item>
+				</list>
+			</div2>
+			<div2 id="WSP_SOAP">
+				<head>SOAP</head>
+				<p>HL7 documents are transported in the SOAP Body, under a single element, which is the top-level element of the original HL7 XML message.</p>
+				<exhibit role="example">
+					<pre>  &lt;soap:Body&gt;
+    &lt;QURX_AR100020_Request_Response_QURX_IN100001.Message xmlns="urn:hl7-org:v3"&gt;
+      &lt;id root="2.16.840.1.113883.2.4.99.1.700222.1" extension="34234"/&gt;
+      &lt;creationTime value="20030718161000"/&gt;
+      &lt;versionId&gt;3.0&lt;/versionId&gt;
+      &lt;!
+      ... remainder of included HL7v3 document omitted ....
+      --&gt;
+    &lt;/QURX_AR100020_Request_Response_QURX_IN100001.Message&gt;
+  &lt;/soap:Body&gt;
+</pre>
+				</exhibit>
+				<p>
+					<emph role="strong">HL7-WS101) The top-level element of the remaining HL7 document embedded as an only child in the SOAP Body. The name of the top-level element (the one directly under the soap:Body element) is {Application Role Artifact Id}_{Operation Name}_{Interaction Artifact Id}.Message.</emph>
+				</p>
+			</div2>
+			<div2 id="WSP_WSDL">
+				<head>WSDL</head>
+				<p>WSDL documents will be provided for all transactions. The rationale is:</p>
+				<list role="unordered">
+					<item>WSDL files are generally used as code generators for SOAP stubs. Using WSDL across multiple platforms and programming environments will lead to better (more interoperable) implementations.</item>
+					<item>Even when not used as a code generator, the strict format of WSDL will support building better interoperable implementations.</item>
+					<item>Since most (or all) of the information in the WSDL file is needed anyway, a uniform, standardized and machine-readable format is preferable for documentation purposes.</item>
+					<item>The WSDL document will refer to the XML Schema describing the HL7 document.</item>
+				</list>
+				<p>A WSDL document consists of the following parts:<br/>
+				</p>
+				<p>
+					<emph role="strong">Abstract Definitions:</emph>
+				</p>
+				<list role="unordered">
+					<item>
+						<emph role="strong">Types</emph>. A description of the XML content using XML Schema.</item>
+					<item>
+						<emph role="strong">Messages</emph>. With elements from the types section messages are compiled.</item>
+					<item>
+						<emph role="strong">PortTypes</emph>. A PortType is a logical “application port” which supports one or more <emph role="strong">Operations</emph>. An Operation consists of one or more <emph role="strong">Inputs</emph> and <emph role="strong">Outputs</emph>. The Inputs and Outputs reference the above-mentioned Messages. </item>
+					<item>
+						<emph role="strong">Services</emph>. A Service consists of one or more physical Ports. A Port connects a Binding with a location, usually an URI, which is the web address of the Web Service.</item>
+				</list>
+				<p>
+					<emph role="strong">Concrete definitions:</emph>
+				</p>
+				<list role="unordered">
+					<item>
+						<emph role="strong">Bindings</emph>. A Binding connects a PortType with a specific Transport Protocol, such as SOAP over HTTP. All Operations, Inputs and Outputs from a Port Type are assigned to SOAP components. Also the design of the SOAP message is indicated (document versus rpc, literal versus encoded).</item>
+				</list>
+				<p>In the following parts an example HL7 Storyboard will be used to explain the use of WSDL and SOAP with HL7v3 messages. WSDL fragments are in the following text; the complete WSDL file is available in chapter 1.5.6.</p>
+				<p>A complete description of the Storyboard can be found under Infrastructure Management / Query Infrastructure / Message Definitions / Storyboards.</p>
+				<graphic source="WSP002.jpg" xlink-form="simple" actuate="auto" show="embed"/>
+				<p>This Storyboard has the following components:</p>
+				<p>
+					<table>
+						<thead>
+							<tr>
+								<td colspan="1" rowspan="1">Artifact Id</td>
+								<td colspan="1" rowspan="1">Artifact type</td>
+								<td colspan="1" rowspan="1">Comment</td>
+							</tr>
+						</thead>
+						<tr>
+							<td colspan="1" rowspan="1">QURX_ST100000</td>
+							<td colspan="1" rowspan="1">Storyboard</td>
+							<td colspan="1" rowspan="1"/>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">QURX_IN100001</td>
+							<td colspan="1" rowspan="1">Interaction</td>
+							<td colspan="1" rowspan="1">Associated with the Interaction is a XML Schema, QURX_IN100001.xsd</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">QURX_IN100002</td>
+							<td colspan="1" rowspan="1">Interaction</td>
+							<td colspan="1" rowspan="1">QURX_IN100002.xsd</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">QURX_IN100003</td>
+							<td colspan="1" rowspan="1">Interaction</td>
+							<td colspan="1" rowspan="1">QURX_IN100003.xsd</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">QURX_AR100010</td>
+							<td colspan="1" rowspan="1">Application Role</td>
+							<td colspan="1" rowspan="1">The client that initiates the web service.</td>
+						</tr>
+						<tr>
+							<td colspan="1" rowspan="1">QURX_AR100020</td>
+							<td colspan="1" rowspan="1">Application Role</td>
+							<td colspan="1" rowspan="1">The server that fulfills the web service.</td>
+						</tr>
+					</table>
+				</p>
+				<p>
+					<emph role="strong">HL7-WS201) WSDL documents MUST implement a specific Application Role</emph>
+				</p>
+				<p>Not all Application Roles qualify as WSDL implementations. After all, Application Roles can be clients and servers (Placer / Fulfiller in HL7 Query jargon). Only Application Roles that implement a server should be described in a WSDL document. In general, Interaction Based Trigger Events indicate that the sending Application Role qualifies as a Web Services. However, Trigger Events may be unspecified, so there can be no strict rule for deciding which Application Roles need a WSDL implementation and which do not. (HL7 WSDL documents do not necessarily coincide with Storyboards, since Storyboards may contain more Application Roles which can act as server.)</p>
+				<p>
+					<emph role="strong">HL7-WS202) The name of the WSDL document SHOULD be {Application Role Artifact Id}.wsdl</emph>
+				</p>
+				<exhibit role="example">
+					<pre>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;!--  
+This WSDL document implements Substance Supply Event 
+Query Fulfiller (QURX_AR100020) 
+--&gt;
+&lt;definitions name="QURX_AR100020" 
+  targetNamespace="urn:hl7-org:v3" 
+  xmlns:hl7="urn:hl7-org:v3" 
+  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns="http://schemas.xmlsoap.org/wsdl/"&gt;
+  
+  &lt;documentation&gt;
+    WSDL implementation of Substance Supply Event 
+    Query Fulfiller (QURX_AR100020)
+  &lt;/documentation&gt;
+</pre>
+				</exhibit>
+				<p>
+					<emph role="strong">HL7-WS203) The targetNamespace of the WSDL MUST be “urn:hl7-org:v3”.</emph>
+				</p>
+				<p>
+					<emph role="strong">HL7-WS204) Names (as opposed to Id's) of Artifacts SHOULD be included in XML comments wherever appropriate.</emph>
+				</p>
+				<exhibit role="example">
+					<pre>  &lt;types&gt;
+    &lt;xsd:schema elementFormDefault="qualified" 
+        targetNamespace="urn:hl7-org:v3" 
+        xmlns:tns="urn:hl7-org:v3"&gt;
+      &lt;xsd:include schemaLocation="QURX_IN100001.xsd"/&gt;
+      &lt;xsd:include schemaLocation="QURX_IN100002.xsd"/&gt;
+      &lt;xsd:include schemaLocation="QURX_IN100003.xsd"/&gt;
+      &lt;xsd:element 
+        name="QURX_AR100020_Request_Response_QURX_IN100001.Message"
+        type="tns:QURX_IN100001.Message"/&gt;
+      &lt;xsd:element 
+        name="QURX_AR100020_Request_Response_QURX_IN100002.Message" 
+        type="tns:QURX_IN100002.Message"/&gt;
+      &lt;xsd:element 
+        name="QURX_AR100020_Continuation_Response_QURX_IN100003.Message" 
+        type="tns:QURX_IN100003.Message"/&gt;
+      &lt;xsd:element 
+        name="QURX_AR100020_Continuation_Response_QURX_IN100002.Message" 
+        type="tns:QURX_IN100002.Message"/&gt;
+      &lt;xsd:element 
+        name="QURX_AR100020_Cancel_QURX_IN100003.Message" 
+        type="tns:QURX_IN100003.Message"/&gt;
+    &lt;/xsd:schema&gt;
+  &lt;/types&gt;
+</pre>
+				</exhibit>
+				<p>
+					<emph role="strong">HL7-WS205) XML Schema's MUST be included with an XML Schema &lt;include&gt; inside a &lt;schema&gt; element in the WSDL &lt;types&gt; section. WSDL &lt;include&gt;s MUST NOT be used for schema inclusion.</emph>
+				</p>
+				<p>
+					<emph role="strong">HL7-WS206) The schema for each Interaction this Application Role participates in is included.</emph>
+				</p>
+				<p>
+					<emph role="strong">HL7-WS207) A unique element name MUST be declared for each message in the storyboard. The elements MUST be named {Application Role Artifact Id}_{Operation Name}_{Interaction Artifact Id}.Message.</emph>
+				</p>
+				<exhibit role="example">
+					<pre>  &lt;message name="QURX_AR100020_Request_Response_QURX_IN100001"&gt;
+    &lt;documentation&gt;
+      QURX_IN100001 Substance Supply Query Request
+    &lt;/documentation&gt;
+    &lt;part 
+      name="body" 
+      element="hl7:QURX_AR100020_Request_Response_QURX_IN100001.Message"/&gt;
+  &lt;/message&gt;
+  &lt;message name="QURX_AR100020_Request_Response_QURX_IN100002"&gt;
+    &lt;documentation&gt;
+      QURX_IN100002 Substance Supply Query Response
+    &lt;/documentation&gt;
+    &lt;part name="body" 
+      element="hl7:QURX_AR100020_Request_Response_QURX_IN100002.Message"/&gt;
+  &lt;/message&gt;
+  &lt;message name="QURX_AR100020_Continuation_Response_QURX_IN100003"&gt;
+    &lt;documentation&gt;
+      QURX_IN100003 Substance Supply Query Continuation / Cancel
+    &lt;/documentation&gt;
+    &lt;part name="body" 
+      element="hl7:QURX_AR100020_Continuation_Response_QURX_IN100003.Message"/&gt;
+  &lt;/message&gt;
+  &lt;message name="QURX_AR100020_Continuation_Response_QURX_IN100002"&gt;
+    &lt;documentation&gt;
+      QURX_IN100002 Substance Supply Query Response
+    &lt;/documentation&gt;
+    &lt;part name="body" 
+      element="hl7:QURX_AR100020_Continuation_Response_QURX_IN100002.Message"/&gt;
+  &lt;/message&gt;
+  &lt;message name="QURX_AR100020_Cancel_QURX_IN100003"&gt;
+    &lt;documentation&gt;
+      QURX_IN100003 Substance Supply Query Continuation / Cancel
+    &lt;/documentation&gt;
+    &lt;part name="body" 
+      element="hl7:QURX_AR100020_Cancel_QURX_IN100003.Message"/&gt;
+  &lt;/message&gt;
+</pre>
+				</exhibit>
+				<p>
+					<emph role="strong">HL7-WS210) Each message in the HL7 storyboard becomes a WSDL &lt;message&gt;.</emph>
+				</p>
+				<p>
+					<emph role="strong">HL7-WS211) Each message is named {Application Role Artifact Id}_{Operation Name}_{Interaction Artifact Id}</emph>
+				</p>
+				<p>
+					<emph role="strong">HL7-WS212) Parts are named "body". Since each SOAP Body is fully described by a single Schema, using named parts is superfluous.</emph>
+				</p>
+				<p>
+					<emph role="strong">HL7-WS213) The message refers to the top-level element. In the current release of ITS the names of those elements are not unique. This is about to change, here unique names are already used.</emph>
+				</p>
+				<exhibit role="example">
+					<pre>  &lt;portType name="QURX_AR100020_PortType"&gt;
+    &lt;operation name="QURX_AR100020_Request_Response"&gt;
+      &lt;input 
+        message="hl7:QURX_AR100020_Request_Response_QURX_IN100001"/&gt;
+      &lt;output 
+        message="hl7:QURX_AR100020_Request_Response_QURX_IN100002"/&gt;
+    &lt;/operation&gt;
+    &lt;operation name="QURX_AR100020_Continuation_Response"&gt;
+      &lt;input 
+        message="hl7:QURX_AR100020_Continuation_Response_QURX_IN100003"/&gt;
+      &lt;output 
+        message="hl7:QURX_AR100020_Continuation_Response_QURX_IN100002"/&gt;
+    &lt;/operation&gt;
+    &lt;operation name="QURX_AR100020_Cancel"&gt;
+      &lt;input 
+        message="hl7:QURX_AR100020_Cancel_QURX_IN100003"/&gt;
+    &lt;/operation&gt;
+  &lt;/portType&gt;
+</pre>
+				</exhibit>
+				<p>
+					<emph role="strong">HL7-WS220) A PortType named {Application Role Artifact Id}_PortType is declared.</emph>
+				</p>
+				<p>
+					<emph role="strong">HL7-WS221) A request/response operation consists of two interactions, which are linked by an Interaction Based Trigger Event. </emph>
+				</p>
+				<p>
+					<emph role="strong">HL7-WS222) A one-way operation is made for each interaction that does not lead to an Interaction Based Trigger Event. (Note: Trigger Events may be unspecified, in which case the operations have to be discovered by other means.)</emph>
+				</p>
+				<p>
+					<emph role="strong">HL7-WS223) Each operation is given a unique name {Application Role Artifact Id}_{Operation Name}</emph>
+				</p>
+				<exhibit role="example">
+					<pre>  &lt;binding 
+    name="QURX_AR100020_Binding" 
+    type="hl7:QURX_AR100020_PortType"&gt;
+    &lt;soap:binding 
+      style="document"
+      transport="http://schemas.xmlsoap.org/soap/http"/&gt;
+    &lt;operation name="QURX_AR100020_Request_Response"&gt;
+      &lt;soap:operation 
+        soapAction="urn:hl7-org:v3/QURX_AR100020_Request_Response"/&gt;
+      &lt;input&gt;
+        &lt;soap:body use="literal"/&gt;
+      &lt;/input&gt;
+      &lt;output&gt;
+        &lt;soap:body use="literal"/&gt;
+      &lt;/output&gt;
+    &lt;/operation&gt;
+    &lt;operation name="QURX_AR100020_Continuation_Response"&gt;
+      &lt;soap:operation 
+        soapAction="urn:hl7-org:v3/QURX_AR100020_Continuation_Response"/&gt;
+      &lt;input&gt;
+        &lt;soap:body use="literal"/&gt;
+      &lt;/input&gt;
+      &lt;output&gt;
+        &lt;soap:body use="literal"/&gt;
+      &lt;/output&gt;
+    &lt;/operation&gt;
+    &lt;operation name="QURX_AR100020_Cancel"&gt;
+      &lt;soap:operation 
+        soapAction="urn:hl7-org:v3/QURX_AR100020_Cancel"/&gt;
+      &lt;input&gt;
+        &lt;soap:body use="literal"/&gt;
+      &lt;/input&gt;
+    &lt;/operation&gt;
+  &lt;/binding&gt;
+</pre>
+				</exhibit>
+				<p>
+					<emph role="strong">HL7-WS230) A Binding named {Application Role Artifact Id}_Binding is declared.</emph>
+				</p>
+				<p>
+					<emph role="strong">HL7-WS231) a soap:operation/@soapAction attribute with value "urn:hl7-org:v3/{Application Role Artifact Id}_{Operation Name}" is provided</emph>
+				</p>
+				<p>
+					<emph role="strong">HL7-WS232) HL7 WSDL uses the SOAP Binding described in WSDL 1.1 Chapter 3</emph>
+				</p>
+				<p>Note that the most available and interoperable binding at the time of writing (November 2003) is the HTTP binding. Other bindings may be described in later versions of this standard.</p>
+				<p>
+					<emph role="strong">HL7-WS240) SOAP Messages for HL7 use document/literal style.</emph>
+				</p>
+				<exhibit role="example">
+					<pre>  &lt;service name="QURX_AR100020_Service"&gt;
+    &lt;port 
+      name="QURX_AR100020_Port" 
+      binding="hl7:QURX_AR100020_Binding"&gt;
+      &lt;soap:address 
+        location="http://servicelocation/QURX_AR100020"/&gt;
+    &lt;/port&gt;
+  &lt;/service&gt;
+&lt;/definitions&gt;
+</pre>
+				</exhibit>
+				<p>Note: the web address http://servicelocation/QURX_AR100020 does not represent a real web service!</p>
+				<p>
+					<emph role="strong">HL7-WS250) A Service named {Application Role Artifact Id}_Service is declared.</emph>
+				</p>
+				<p>
+					<emph role="strong">HL7-WS251) A Port named {Application Role Artifact Id}_Port is declared.</emph>
+				</p>
+				<p>The WSDL presented was developed according to the guidelines set in the WS-I Basic Profile at [6] and tested with the draft version of the WS-I Testing Tools available at [7].</p>
+			</div2>
+			<div2 id="WSP_WSIBasic">
+				<head>WS-I Basic Profile 1.0</head>
+				<p>The WS-I Basic Profile 1.0 is a list with best-practice recommendations for SOAP 1.1 and WSDL 1.1. As such, it is not another standard, but a guideline of how to use SOAP and WSDL to achieve maximum interoperability. The guidelines and examples in this specification conform to the Basic Profile. The Basic Profile allows conformance claims in documents, but does not require them.</p>
+				<p>
+					<emph role="strong">HL7-WS301) SOAP messages and WSDL documents must conform to the WS-I Basic Profile 1.0.</emph>
+				</p>
+				<p>
+					<emph role="strong">HL7-WS302) SOAP messages and WSDL documents do not contain WS-I Basic Profile 1.0 conformance claims.</emph>
+				</p>
+			</div2>
+			<div2 id="WSP_Samples">
+				<head>Samples</head>
+				<div3 id="WSP_SOAPReq">
+					<head>SOAP Request</head>
+					<exhibit role="example">
+						<pre>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;soap:Envelope 
+  xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"   
+  xmlns:hl7="urn:hl7-org:v3"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;soap:Body&gt;
+    &lt;QURX_AR100020_Request_Response_QURX_IN100001.Message 
+      xmlns="urn:hl7-org:v3"&gt;
+    ...
+    &lt;/QURX_AR100020_Request_Response_QURX_IN100001.Message&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;
+</pre>
+					</exhibit>
+				</div3>
+				<div3 id="WSP_SOAPResp">
+					<head>SOAP Response</head>
+					<exhibit role="example">
+						<pre>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;soap:Envelope 
+  xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"   
+  xmlns:hl7="urn:hl7-org:v3" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;soap:Body&gt;
+    &lt;QURX_AR100020_Request_Response_QURX_IN100002.Message 
+      xmlns="urn:hl7-org:v3" 
+      xmlns:voc="urn:hl7-org:v3/voc" 
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:schemaLocation="urn:hl7-org:v3 QURX_IN100002.xsd"&gt;
+    ...
+    &lt;/QURX_AR100020_Request_Response_QURX_IN100001.Message&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;
+</pre>
+					</exhibit>
+				</div3>
+				<div3 id="WSPWSDLSample">
+					<head>WSDL Example</head>
+					<exhibit role="example">
+						<pre>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;definitions 
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+    xmlns="http://schemas.xmlsoap.org/wsdl/" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    targetNamespace="urn:hl7-org:v3" 
+    xmlns:hl7="urn:hl7-org:v3" 
+    name="QURX_AR100020"&gt;
+  &lt;documentation&gt;
+    WSDL implementation of Substance Supply Event 
+    Query Fulfiller (QURX_AR100020)
+  &lt;/documentation&gt;
+  &lt;types&gt;
+    &lt;xsd:schema 
+      elementFormDefault="qualified" 
+      targetNamespace="urn:hl7-org:v3" 
+      xmlns:tns="urn:hl7-org:v3"&gt;
+      &lt;xsd:include schemaLocation="QURX_IN100001.xsd"/&gt;
+      &lt;xsd:include schemaLocation="QURX_IN100002.xsd"/&gt;
+      &lt;xsd:include schemaLocation="QURX_IN100003.xsd"/&gt;
+      &lt;xsd:element 
+        name="QURX_AR100020_Request_Response_QURX_IN100001.Message" 
+        type="tns:QURX_IN100001.Message"/&gt;
+      &lt;xsd:element 
+        name="QURX_AR100020_Request_Response_QURX_IN100002.Message" 
+        type="tns:QURX_IN100002.Message"/&gt;
+      &lt;xsd:element 
+        name="QURX_AR100020_Continuation_Response_QURX_IN100003.Message" 
+        type="tns:QURX_IN100003.Message"/&gt;
+      &lt;xsd:element 
+        name="QURX_AR100020_Continuation_Response_QURX_IN100002.Message" 
+        type="tns:QURX_IN100002.Message"/&gt;
+      &lt;xsd:element 
+        name="QURX_AR100020_Cancel_QURX_IN100003.Message" 
+        type="tns:QURX_IN100003.Message"/&gt;
+    &lt;/xsd:schema&gt;
+  &lt;/types&gt;
+  &lt;message name="QURX_AR100020_Request_Response_QURX_IN100001"&gt;
+    &lt;documentation&gt;QURX_IN100001 Substance Supply Query Request&lt;/documentation&gt;
+    &lt;part name="body" 
+      element="hl7:QURX_AR100020_Request_Response_QURX_IN100001.Message"/&gt;
+  &lt;/message&gt;
+  &lt;message name="QURX_AR100020_Request_Response_QURX_IN100002"&gt;
+    &lt;documentation&gt;QURX_IN100002 Substance Supply Query Response&lt;/documentation&gt;
+    &lt;part name="body"
+      element="hl7:QURX_AR100020_Request_Response_QURX_IN100002.Message"/&gt;
+  &lt;/message&gt;
+  &lt;message name="QURX_AR100020_Continuation_Response_QURX_IN100003"&gt;
+    &lt;documentation&gt;QURX_IN100003 Substance Supply Query Continuation / Cancel&lt;/documentation&gt;
+    &lt;part name="body" 
+      element="hl7:QURX_AR100020_Continuation_Response_QURX_IN100003.Message"/&gt;
+  &lt;/message&gt;
+  &lt;message name="QURX_AR100020_Continuation_Response_QURX_IN100002"&gt;
+    &lt;documentation&gt;QURX_IN100002 Substance Supply Query Response&lt;/documentation&gt;
+    &lt;part name="body" 
+      element="hl7:QURX_AR100020_Continuation_Response_QURX_IN100002.Message"/&gt;
+  &lt;/message&gt;
+  &lt;message name="QURX_AR100020_Cancel_QURX_IN100003"&gt;
+    &lt;documentation&gt;QURX_IN100003 Substance Supply Query Continuation / Cancel&lt;/documentation&gt;
+    &lt;part name="body"
+      element="hl7:QURX_AR100020_Cancel_QURX_IN100003.Message"/&gt;
+  &lt;/message&gt;
+  &lt;portType name="QURX_AR100020_PortType"&gt;
+    &lt;operation name="QURX_AR100020_Request_Response"&gt;
+      &lt;input message="hl7:QURX_AR100020_Request_Response_QURX_IN100001"/&gt;
+      &lt;output message="hl7:QURX_AR100020_Request_Response_QURX_IN100002"/&gt;
+    &lt;/operation&gt;
+    &lt;operation name="QURX_AR100020_Continuation_Response"&gt;
+      &lt;input message="hl7:QURX_AR100020_Continuation_Response_QURX_IN100003"/&gt;
+      &lt;output message="hl7:QURX_AR100020_Continuation_Response_QURX_IN100002"/&gt;
+    &lt;/operation&gt;
+    &lt;operation name="QURX_AR100020_Cancel"&gt;
+      &lt;input message="hl7:QURX_AR100020_Cancel_QURX_IN100003"/&gt;
+    &lt;/operation&gt;
+  &lt;/portType&gt;
+  &lt;binding name="QURX_AR100020_Binding" type="hl7:QURX_AR100020_PortType"&gt;
+    &lt;soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/&gt;
+    &lt;operation name="QURX_AR100020_Request_Response"&gt;
+      &lt;soap:operation soapAction="urn:hl7-org:v3/QURX_AR100020_Request_Response"/&gt;
+      &lt;input&gt;
+        &lt;soap:body use="literal"/&gt;
+      &lt;/input&gt;
+      &lt;output&gt;
+        &lt;soap:body use="literal"/&gt;
+      &lt;/output&gt;
+    &lt;/operation&gt;
+    &lt;operation name="QURX_AR100020_Continuation_Response"&gt;
+      &lt;soap:operation soapAction="urn:hl7-org:v3/QURX_AR100020_Continuation_Response"/&gt;
+      &lt;input&gt;
+        &lt;soap:body use="literal"/&gt;
+      &lt;/input&gt;
+      &lt;output&gt;
+        &lt;soap:body use="literal"/&gt;
+      &lt;/output&gt;
+    &lt;/operation&gt;
+    &lt;operation name="QURX_AR100020_Cancel"&gt;
+      &lt;soap:operation soapAction="urn:hl7-org:v3/QURX_AR100020_Cancel"/&gt;
+      &lt;input&gt;
+        &lt;soap:body use="literal"/&gt;
+      &lt;/input&gt;
+    &lt;/operation&gt;
+  &lt;/binding&gt;
+  &lt;service name="QURX_AR100020_Service"&gt;
+    &lt;port name="QURX_AR100020_Port" binding="hl7:QURX_AR100020_Binding"&gt;
+      &lt;soap:address location="http://servicelocation/QURX_AR100020"/&gt;
+    &lt;/port&gt;
+  &lt;/service&gt;
+&lt;/definitions&gt;</pre>
+					</exhibit>
+				</div3>
+			</div2>
+		</div1>
+		<div1 id="WSP_References">
+			<head>References</head>
+			<list role="ordered">
+				<item>W3C Extensible Markup Language (XML) 1.0 (Second Edition) http://www.w3.org/TR/REC-xml</item>
+				<item>W3C XML Schema http://www.w3.org/XML/Schema</item>
+				<item>W3C Simple Object Access Protocol (SOAP) 1.1 http://www.w3.org/TR/SOAP/</item>
+				<item>W3C Web Services Description Language (WSDL) 1.1 http://www.w3.org/TR/wsdl</item>
+				<item>HL7 Version 3 Ballot http://www.hl7.org/v3ballot/html/foundationdocuments/welcome/index.htm</item>
+				<item>WS-I Basic Profile Version 1.0 http://www.ws-i.org/Profiles/Basic/2002-10/BasicProfile-1.0-WGD.htm</item>
+				<item>WS-I Testing Tools http://www.ws-i.org/implementation.aspx</item>
+			</list>
+		</div1>
+	</body>
+</spec>

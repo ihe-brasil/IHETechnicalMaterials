@@ -1,0 +1,341 @@
+<!--<!DOCTYPE usage PUBLIC "DTDVersion-1" "../../../support/dtd/V3mCMETusage.dtd">-->
+<!--CMET Usage collected and expressed by RoseTree 4.2.7-->
+<!--Example copyright 2008 by Health Level Seven, Inc. -->
+<usage rendered="5/1/2008 10:07:31 PM">
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000322UV-hmd" refname="AllergyIntoleranceList" refidentifier="REPC_HD000322UV"/>
+<cmetref ref="REPC_MT000324UV-msg" refname="A_AllergyIntoleranceConcernCare provision" refidentifier="REPC_MT000324UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000322UV-hmd" refname="AllergyIntoleranceList" refidentifier="REPC_HD000322UV"/>
+<cmetref ref="REPC_MT000323UV-msg" refname="A_AllergyIntoleranceGroupNegationObservationCare provision" refidentifier="REPC_MT000323UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD610001UV-hmd" refname="Professional Service Record" refidentifier="REPC_HD610001UV"/>
+<cmetref ref="COCT_MT120600UV-msg" refname="A_AnnotationUniversal" refidentifier="COCT_MT120600UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD610002UV-hmd" refname="Professional Service List" refidentifier="REPC_HD610002UV"/>
+<cmetref ref="COCT_MT120600UV-msg" refname="A_AnnotationUniversal" refidentifier="COCT_MT120600UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD610001UV-hmd" refname="Professional Service Record" refidentifier="REPC_HD610001UV"/>
+<cmetref ref="COCT_MT520001UV-msg" refname="A_CareEventIdentified" refidentifier="COCT_MT520001UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD610002UV-hmd" refname="Professional Service List" refidentifier="REPC_HD610002UV"/>
+<cmetref ref="COCT_MT520001UV-msg" refname="A_CareEventIdentified" refidentifier="COCT_MT520001UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD002000UV-hmd" refname="CareTransferRequest" refidentifier="REPC_HD002000UV"/>
+<cmetref ref="REPC_MT000200UV-msg" refname="A_CarePlanCare provision" refidentifier="REPC_MT000200UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD004000UV-hmd" refname="CareRecord" refidentifier="REPC_HD004000UV"/>
+<cmetref ref="REPC_MT000200UV-msg" refname="A_CarePlanCare provision" refidentifier="REPC_MT000200UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD002000UV-hmd" refname="CareTransferRequest" refidentifier="REPC_HD002000UV"/>
+<cmetref ref="REPC_MT004000UV-msg" refname="A_CareRecordUniversal" refidentifier="REPC_MT004000UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000130UV-hmd" refname="A_ObservationVitalSigns" refidentifier="REPC_HD000130UV"/>
+<cmetref ref="REPC_MT000100UV-msg" refname="A_CareStatementCare provision" refidentifier="REPC_MT000100UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000300UV-hmd" refname="A_ConcernTracking" refidentifier="REPC_HD000300UV"/>
+<cmetref ref="REPC_MT000100UV-msg" refname="A_CareStatementCare provision" refidentifier="REPC_MT000100UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000400UV-hmd" refname="A_StatementCollector" refidentifier="REPC_HD000400UV"/>
+<cmetref ref="REPC_MT000100UV-msg" refname="A_CareStatementCare provision" refidentifier="REPC_MT000100UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD002000UV-hmd" refname="CareTransferRequest" refidentifier="REPC_HD002000UV"/>
+<cmetref ref="REPC_MT000100UV-msg" refname="A_CareStatementCare provision" refidentifier="REPC_MT000100UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD004000UV-hmd" refname="CareRecord" refidentifier="REPC_HD004000UV"/>
+<cmetref ref="REPC_MT000100UV-msg" refname="A_CareStatementCare provision" refidentifier="REPC_MT000100UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000410UV-hmd" refname="A_ConcernList" refidentifier="REPC_HD000410UV"/>
+<cmetref ref="REPC_MT000300UV-msg" refname="A_ConcernTrackingCare provision" refidentifier="REPC_MT000300UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD002000UV-hmd" refname="CareTransferRequest" refidentifier="REPC_HD002000UV"/>
+<cmetref ref="REPC_MT000301UV-msg" refname="A_ConditionTrackingEventCare provision" refidentifier="REPC_MT000301UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD004000UV-hmd" refname="CareRecord" refidentifier="REPC_HD004000UV"/>
+<cmetref ref="REPC_MT000301UV-msg" refname="A_ConditionTrackingEventCare provision" refidentifier="REPC_MT000301UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD002000UV-hmd" refname="CareTransferRequest" refidentifier="REPC_HD002000UV"/>
+<cmetref ref="COCT_MT010000UV01-msg" refname="A_EncounterUniversal" refidentifier="COCT_MT010000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD004000UV-hmd" refname="CareRecord" refidentifier="REPC_HD004000UV"/>
+<cmetref ref="COCT_MT010000UV01-msg" refname="A_EncounterUniversal" refidentifier="COCT_MT010000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD002000UV-hmd" refname="CareTransferRequest" refidentifier="REPC_HD002000UV"/>
+<cmetref ref="REPC_MT000400UV-msg" refname="A_StatementCollectorCare provision" refidentifier="REPC_MT000400UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD004000UV-hmd" refname="CareRecord" refidentifier="REPC_HD004000UV"/>
+<cmetref ref="REPC_MT000400UV-msg" refname="A_StatementCollectorCare provision" refidentifier="REPC_MT000400UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD610001UV-hmd" refname="Professional Service Record" refidentifier="REPC_HD610001UV"/>
+<cmetref ref="COCT_MT200000UV01-msg" refname="A_SupportingClinicalInformationUniversal" refidentifier="COCT_MT200000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD610002UV-hmd" refname="Professional Service List" refidentifier="REPC_HD610002UV"/>
+<cmetref ref="COCT_MT200000UV01-msg" refname="A_SupportingClinicalInformationUniversal" refidentifier="COCT_MT200000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000700UV-hmd" refname="R_CaredEntity" refidentifier="REPC_HD000700UV"/>
+<cmetref ref="COCT_MT710000UV01-msg" refname="E_PlaceUniversal" refidentifier="COCT_MT710000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000100UV-hmd" refname="A_CareStatement" refidentifier="REPC_HD000100UV"/>
+<cmetref ref="COCT_MT220200UV-msg" refname="R_AdministerableMedicationUniversal" refidentifier="COCT_MT220200UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000100UV-hmd" refname="A_CareStatement" refidentifier="REPC_HD000100UV"/>
+<cmetref ref="COCT_MT090000UV01-msg" refname="R_AssignedEntityUniversal" refidentifier="COCT_MT090000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000120UV-hmd" refname="A_ObservationAssessmentScale" refidentifier="REPC_HD000120UV"/>
+<cmetref ref="COCT_MT090000UV01-msg" refname="R_AssignedEntityUniversal" refidentifier="COCT_MT090000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000130UV-hmd" refname="A_ObservationVitalSigns" refidentifier="REPC_HD000130UV"/>
+<cmetref ref="COCT_MT090000UV01-msg" refname="R_AssignedEntityUniversal" refidentifier="COCT_MT090000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD610001UV-hmd" refname="Professional Service Record" refidentifier="REPC_HD610001UV"/>
+<cmetref ref="COCT_MT090000UV01-msg" refname="R_AssignedEntityUniversal" refidentifier="COCT_MT090000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD610002UV-hmd" refname="Professional Service List" refidentifier="REPC_HD610002UV"/>
+<cmetref ref="COCT_MT090000UV01-msg" refname="R_AssignedEntityUniversal" refidentifier="COCT_MT090000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD002000UV-hmd" refname="CareTransferRequest" refidentifier="REPC_HD002000UV"/>
+<cmetref ref="COCT_MT090400UV-msg" refname="R_AssignedPartyUniversal" refidentifier="COCT_MT090400UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD003000UV-hmd" refname="Care Transfer Promise" refidentifier="REPC_HD003000UV"/>
+<cmetref ref="COCT_MT090400UV-msg" refname="R_AssignedPartyUniversal" refidentifier="COCT_MT090400UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD004000UV-hmd" refname="CareRecord" refidentifier="REPC_HD004000UV"/>
+<cmetref ref="COCT_MT090400UV-msg" refname="R_AssignedPartyUniversal" refidentifier="COCT_MT090400UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000300UV-hmd" refname="A_ConcernTracking" refidentifier="REPC_HD000300UV"/>
+<cmetref ref="COCT_MT090102UV02-msg" refname="R_AssignedPersonIdentified/confirmable" refidentifier="COCT_MT090102UV02"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000322UV-hmd" refname="AllergyIntoleranceList" refidentifier="REPC_HD000322UV"/>
+<cmetref ref="COCT_MT090102UV02-msg" refname="R_AssignedPersonIdentified/confirmable" refidentifier="COCT_MT090102UV02"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000323UV-hmd" refname="AllergyIntoleranceGroupNegationObservation" refidentifier="REPC_HD000323UV"/>
+<cmetref ref="COCT_MT090102UV02-msg" refname="R_AssignedPersonIdentified/confirmable" refidentifier="COCT_MT090102UV02"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000324UV-hmd" refname="AllergyIntoleranceConcern" refidentifier="REPC_HD000324UV"/>
+<cmetref ref="COCT_MT090102UV02-msg" refname="R_AssignedPersonIdentified/confirmable" refidentifier="COCT_MT090102UV02"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000120UV-hmd" refname="A_ObservationAssessmentScale" refidentifier="REPC_HD000120UV"/>
+<cmetref ref="COCT_MT090100UV01-msg" refname="R_AssignedPersonUniversal" refidentifier="COCT_MT090100UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000130UV-hmd" refname="A_ObservationVitalSigns" refidentifier="REPC_HD000130UV"/>
+<cmetref ref="COCT_MT090100UV01-msg" refname="R_AssignedPersonUniversal" refidentifier="COCT_MT090100UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000322UV-hmd" refname="AllergyIntoleranceList" refidentifier="REPC_HD000322UV"/>
+<cmetref ref="COCT_MT090100UV01-msg" refname="R_AssignedPersonUniversal" refidentifier="COCT_MT090100UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000324UV-hmd" refname="AllergyIntoleranceConcern" refidentifier="REPC_HD000324UV"/>
+<cmetref ref="COCT_MT090100UV01-msg" refname="R_AssignedPersonUniversal" refidentifier="COCT_MT090100UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000400UV-hmd" refname="A_StatementCollector" refidentifier="REPC_HD000400UV"/>
+<cmetref ref="COCT_MT090100UV01-msg" refname="R_AssignedPersonUniversal" refidentifier="COCT_MT090100UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000410UV-hmd" refname="A_ConcernList" refidentifier="REPC_HD000410UV"/>
+<cmetref ref="COCT_MT090100UV01-msg" refname="R_AssignedPersonUniversal" refidentifier="COCT_MT090100UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD002000UV-hmd" refname="CareTransferRequest" refidentifier="REPC_HD002000UV"/>
+<cmetref ref="COCT_MT090100UV01-msg" refname="R_AssignedPersonUniversal" refidentifier="COCT_MT090100UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD003000UV-hmd" refname="Care Transfer Promise" refidentifier="REPC_HD003000UV"/>
+<cmetref ref="COCT_MT090100UV01-msg" refname="R_AssignedPersonUniversal" refidentifier="COCT_MT090100UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD004000UV-hmd" refname="CareRecord" refidentifier="REPC_HD004000UV"/>
+<cmetref ref="COCT_MT090100UV01-msg" refname="R_AssignedPersonUniversal" refidentifier="COCT_MT090100UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000100UV-hmd" refname="A_CareStatement" refidentifier="REPC_HD000100UV"/>
+<cmetref ref="REPC_MT000700UV-msg" refname="R_CaredEntityCare provision" refidentifier="REPC_MT000700UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000300UV-hmd" refname="A_ConcernTracking" refidentifier="REPC_HD000300UV"/>
+<cmetref ref="REPC_MT000700UV-msg" refname="R_CaredEntityCare provision" refidentifier="REPC_MT000700UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD002000UV-hmd" refname="CareTransferRequest" refidentifier="REPC_HD002000UV"/>
+<cmetref ref="REPC_MT000700UV-msg" refname="R_CaredEntityCare provision" refidentifier="REPC_MT000700UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD003000UV-hmd" refname="Care Transfer Promise" refidentifier="REPC_HD003000UV"/>
+<cmetref ref="REPC_MT000700UV-msg" refname="R_CaredEntityCare provision" refidentifier="REPC_MT000700UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD004000UV-hmd" refname="CareRecord" refidentifier="REPC_HD004000UV"/>
+<cmetref ref="REPC_MT000700UV-msg" refname="R_CaredEntityCare provision" refidentifier="REPC_MT000700UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000100UV-hmd" refname="A_CareStatement" refidentifier="REPC_HD000100UV"/>
+<cmetref ref="COCT_MT230100UV-msg" refname="R_MedicationUniversal" refidentifier="COCT_MT230100UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000324UV-hmd" refname="AllergyIntoleranceConcern" refidentifier="REPC_HD000324UV"/>
+<cmetref ref="COCT_MT230100UV-msg" refname="R_MedicationUniversal" refidentifier="COCT_MT230100UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000120UV-hmd" refname="A_ObservationAssessmentScale" refidentifier="REPC_HD000120UV"/>
+<cmetref ref="COCT_MT050001UV01-msg" refname="R_PatientIdentified" refidentifier="COCT_MT050001UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000130UV-hmd" refname="A_ObservationVitalSigns" refidentifier="REPC_HD000130UV"/>
+<cmetref ref="COCT_MT050001UV01-msg" refname="R_PatientIdentified" refidentifier="COCT_MT050001UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000100UV-hmd" refname="A_CareStatement" refidentifier="REPC_HD000100UV"/>
+<cmetref ref="COCT_MT050000UV01-msg" refname="R_PatientUniversal" refidentifier="COCT_MT050000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000300UV-hmd" refname="A_ConcernTracking" refidentifier="REPC_HD000300UV"/>
+<cmetref ref="COCT_MT050000UV01-msg" refname="R_PatientUniversal" refidentifier="COCT_MT050000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000322UV-hmd" refname="AllergyIntoleranceList" refidentifier="REPC_HD000322UV"/>
+<cmetref ref="COCT_MT050000UV01-msg" refname="R_PatientUniversal" refidentifier="COCT_MT050000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000323UV-hmd" refname="AllergyIntoleranceGroupNegationObservation" refidentifier="REPC_HD000323UV"/>
+<cmetref ref="COCT_MT050000UV01-msg" refname="R_PatientUniversal" refidentifier="COCT_MT050000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000324UV-hmd" refname="AllergyIntoleranceConcern" refidentifier="REPC_HD000324UV"/>
+<cmetref ref="COCT_MT050000UV01-msg" refname="R_PatientUniversal" refidentifier="COCT_MT050000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD002000UV-hmd" refname="CareTransferRequest" refidentifier="REPC_HD002000UV"/>
+<cmetref ref="COCT_MT050000UV01-msg" refname="R_PatientUniversal" refidentifier="COCT_MT050000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD003000UV-hmd" refname="Care Transfer Promise" refidentifier="REPC_HD003000UV"/>
+<cmetref ref="COCT_MT050000UV01-msg" refname="R_PatientUniversal" refidentifier="COCT_MT050000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD004000UV-hmd" refname="CareRecord" refidentifier="REPC_HD004000UV"/>
+<cmetref ref="COCT_MT050000UV01-msg" refname="R_PatientUniversal" refidentifier="COCT_MT050000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD610001UV-hmd" refname="Professional Service Record" refidentifier="REPC_HD610001UV"/>
+<cmetref ref="COCT_MT050000UV01-msg" refname="R_PatientUniversal" refidentifier="COCT_MT050000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD610002UV-hmd" refname="Professional Service List" refidentifier="REPC_HD610002UV"/>
+<cmetref ref="COCT_MT050000UV01-msg" refname="R_PatientUniversal" refidentifier="COCT_MT050000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000100UV-hmd" refname="A_CareStatement" refidentifier="REPC_HD000100UV"/>
+<cmetref ref="COCT_MT910000UV-msg" refname="R_RelatedPartyUniversal" refidentifier="COCT_MT910000UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000120UV-hmd" refname="A_ObservationAssessmentScale" refidentifier="REPC_HD000120UV"/>
+<cmetref ref="COCT_MT910000UV-msg" refname="R_RelatedPartyUniversal" refidentifier="COCT_MT910000UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000130UV-hmd" refname="A_ObservationVitalSigns" refidentifier="REPC_HD000130UV"/>
+<cmetref ref="COCT_MT910000UV-msg" refname="R_RelatedPartyUniversal" refidentifier="COCT_MT910000UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000300UV-hmd" refname="A_ConcernTracking" refidentifier="REPC_HD000300UV"/>
+<cmetref ref="COCT_MT910000UV-msg" refname="R_RelatedPartyUniversal" refidentifier="COCT_MT910000UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000322UV-hmd" refname="AllergyIntoleranceList" refidentifier="REPC_HD000322UV"/>
+<cmetref ref="COCT_MT910000UV-msg" refname="R_RelatedPartyUniversal" refidentifier="COCT_MT910000UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000323UV-hmd" refname="AllergyIntoleranceGroupNegationObservation" refidentifier="REPC_HD000323UV"/>
+<cmetref ref="COCT_MT910000UV-msg" refname="R_RelatedPartyUniversal" refidentifier="COCT_MT910000UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000324UV-hmd" refname="AllergyIntoleranceConcern" refidentifier="REPC_HD000324UV"/>
+<cmetref ref="COCT_MT910000UV-msg" refname="R_RelatedPartyUniversal" refidentifier="COCT_MT910000UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD002000UV-hmd" refname="CareTransferRequest" refidentifier="REPC_HD002000UV"/>
+<cmetref ref="COCT_MT910000UV-msg" refname="R_RelatedPartyUniversal" refidentifier="COCT_MT910000UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD003000UV-hmd" refname="Care Transfer Promise" refidentifier="REPC_HD003000UV"/>
+<cmetref ref="COCT_MT910000UV-msg" refname="R_RelatedPartyUniversal" refidentifier="COCT_MT910000UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD004000UV-hmd" refname="CareRecord" refidentifier="REPC_HD004000UV"/>
+<cmetref ref="COCT_MT910000UV-msg" refname="R_RelatedPartyUniversal" refidentifier="COCT_MT910000UV"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000100UV-hmd" refname="A_CareStatement" refidentifier="REPC_HD000100UV"/>
+<cmetref ref="COCT_MT040200UV01-msg" refname="R_ResponsiblePartyUniversal" refidentifier="COCT_MT040200UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000322UV-hmd" refname="AllergyIntoleranceList" refidentifier="REPC_HD000322UV"/>
+<cmetref ref="COCT_MT040200UV01-msg" refname="R_ResponsiblePartyUniversal" refidentifier="COCT_MT040200UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000400UV-hmd" refname="A_StatementCollector" refidentifier="REPC_HD000400UV"/>
+<cmetref ref="COCT_MT040200UV01-msg" refname="R_ResponsiblePartyUniversal" refidentifier="COCT_MT040200UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000410UV-hmd" refname="A_ConcernList" refidentifier="REPC_HD000410UV"/>
+<cmetref ref="COCT_MT040200UV01-msg" refname="R_ResponsiblePartyUniversal" refidentifier="COCT_MT040200UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD610001UV-hmd" refname="Professional Service Record" refidentifier="REPC_HD610001UV"/>
+<cmetref ref="COCT_MT040200UV01-msg" refname="R_ResponsiblePartyUniversal" refidentifier="COCT_MT040200UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD610002UV-hmd" refname="Professional Service List" refidentifier="REPC_HD610002UV"/>
+<cmetref ref="COCT_MT040200UV01-msg" refname="R_ResponsiblePartyUniversal" refidentifier="COCT_MT040200UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD610001UV-hmd" refname="Professional Service Record" refidentifier="REPC_HD610001UV"/>
+<cmetref ref="COCT_MT240000UV01-msg" refname="R_ServiceDeliveryLocationUniversal" refidentifier="COCT_MT240000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD610002UV-hmd" refname="Professional Service List" refidentifier="REPC_HD610002UV"/>
+<cmetref ref="COCT_MT240000UV01-msg" refname="R_ServiceDeliveryLocationUniversal" refidentifier="COCT_MT240000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="REPC_HD000100UV-hmd" refname="A_CareStatement" refidentifier="REPC_HD000100UV"/>
+<cmetref ref="COCT_MT080000UV-msg" refname="R_SpecimenUniversal" refidentifier="COCT_MT080000UV"/>
+</cmetuse>
+</usage>

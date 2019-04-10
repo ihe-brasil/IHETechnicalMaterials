@@ -1,0 +1,138 @@
+/* Source file: types.idl
+ */
+
+#ifndef  __types_IDL_
+#define  __types_IDL_
+
+/*
+ * IDL binding of a subset of the version 3 data types. 
+ *	Version: V3 Ballot Cycle 5
+ *
+ *      Currently, this module is specifically intended for use with the Centralized Terminology Services
+ *      API, although a formal mapping from the types specification should probably be considered in the
+ *      longer term.
+ *
+ * Note: Some target languages aren't case sensitive.  IDL, as a consequence, does not permit different
+ *       case representations of the same token.  To remain as faithful as possible to the types ITS, we have
+ *       chosen to suffix "_value" to lower case names where there is a possibility of clash with the
+ *       upper case equivalents.
+ *
+ * Note: We have chosen to omit the nullFlavor aspect of the basic data types.
+ */
+module types {
+
+        typedef boolean bl_value;
+        struct BL {
+        	bl_value v;
+        };
+
+        typedef long int_value;
+        struct INT {
+        	int_value v;
+        };
+
+        typedef string uid_value;
+        struct UID {
+        	uid_value v;
+        };
+        typedef sequence <UID> LIST_UID;
+
+        typedef string st_value;
+        struct ST {
+        	st_value v;
+        };
+
+        typedef string ts_value;
+        struct TS {
+        	ts_value TS;
+        };
+
+	typedef sequence<octet> bin_value;   
+
+        enum cs_BinaryDataEncoding {
+                B64,
+                TXT
+        };
+        
+        typedef string cs_value;
+       
+	/* The following is actually a union, but we make it explicit for simplicity 
+        union binary_or_text switch(cs_BinaryDataEncoding) {
+                case B64: bin_value binaryValue;
+                case TXT: st_value textualValue;
+        }; */ 
+	struct binary_or_text {
+		cs_BinaryDataEncoding itemType;
+		bin_value binaryValue;
+		st_value  textualValue;
+	};
+	
+/* Note - sequence<ED> is kludge to allow compiler recursion.  Cardinality is 0..1 */    
+        struct ED {
+                binary_or_text this;
+                cs_value encoding;
+                cs_value mediaType;
+                cs_value compression;
+                bin_value integrityCheck;
+                cs_value reference;
+                cs_value ingegrityCheckAlgorithm;
+                cs_value charset;
+                cs_value language;
+                sequence<ED> thumbnail;
+        };                
+                
+        struct CS {
+ 		cs_value code;
+                ED originalText;
+                cs_value codingRationale;
+        };
+
+        
+        struct CV {
+                cs_value code;
+                uid_value codeSystem;
+                st_value codeSystemName;
+                st_value codeSystemVersion;
+                st_value displayName;
+                ED originalText;
+                CS codingRationale;
+        };
+        typedef sequence <CV> SET_CV;
+        
+/* Note: Value is actual type CD, but recursion prevents it from being used here */ 
+        struct CR {
+        	CV name;
+        	CV value;
+        	BL inverted;
+        };
+        typedef sequence <CR> LIST_CR;
+        
+        struct CD {
+                cs_value code;
+                uid_value codeSystem;
+                st_value codeSystemName;
+                st_value codeSystemVersion;
+                st_value displayName;
+                LIST_CR qualifiers;
+                ED originalText;
+                sequence <CD> translation;
+                CS codingRationale;
+        };
+        typedef sequence <CD> SET_CD;
+
+        struct CE {
+                cs_value code;
+                uid_value codeSystem;
+                st_value codeSystemName;
+                st_value codeSystemVersion;
+                st_value displayName;
+                ED originalText;
+                SET_CD translation;
+                CS codingRationale;
+        };
+
+        
+};
+
+#endif
+

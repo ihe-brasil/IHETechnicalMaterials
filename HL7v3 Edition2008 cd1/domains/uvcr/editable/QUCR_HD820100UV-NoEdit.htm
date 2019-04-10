@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><html><head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/><title>QUCR_HD820100UV01 - Hierarchical Message Description</title><meta name="Entry" content="Provider Details Query Response"/><meta name="Identifier" content="QUCR_HD820100UV01"/><style type="text/css">table {empty-cells: show}</style><script language="JavaScript1.2">
+
+var isNew=0;
+var isNS4=0;
+var isIE4=0;
+
+var brow=((navigator.appName) + (parseInt(navigator.appVersion)));
+
+//alert(brow);
+if (parseInt(navigator.appVersion)&gt;=5)
+{
+	isNew=1
+}
+else
+{
+	if(brow=="Netscape4")
+	{
+		isNS4=1;
+		document.captureEvents(Event.ONMOUSEOVER);
+	}
+	else
+	{
+		if(brow=="Microsoft Internet Explorer4")
+		{
+			isIE4=1;
+		}
+	}
+		
+}
+
+// thats ok
+
+
+if(isNS4||isIE4||isNew)
+{
+	docObj=(isNS4) ? 'document' : 'document.all';
+	
+	styleObj=(isNS4) ? ' ' : '.style';
+}
+
+function checkDOM(elementName)
+{
+	if(isNS4||isIE4||isNew)
+	{
+		dom=eval(docObj + '.' + elementName + styleObj);
+		//alert('This browser uses the ' + dom + 'Document Object Model.');
+		dom.left =0;
+		dom.top =0;
+	}
+}
+
+function popUp(evt,currElem)
+{
+
+	if((isNS4 &amp;&amp; currElem !=0) || (isIE4 &amp;&amp; currElem !=0))
+	{
+		dom =eval(docObj +'.' +currElem+styleObj);
+		state=dom.visibility;
+		if ((state == "visible") || (state=="show"))
+		{
+			dom.visibility="hidden";
+		}
+		else
+		{
+			if(isNS4)
+			{
+				topVal=eval(evt.pageY);
+				leftVal=eval(evt.pageX);
+				/*if(((document.body.scrollLeft+document.body.clientWidth)-leftVal)&lt; 150)
+				{
+					leftVal=(document.body.clientWidth+document.body.scrollLeft-151);
+				}
+				if(((document.body.scrollTop+document.body.clientHeight)-topVal)&lt; 30)
+				{
+					topVal=(document.body.clientHeight+document.body.scrollTop-80);
+				}*/
+
+			}
+			if(isIE4)
+			{
+				topVal=eval(event.clientY)  + document.body.scrollTop+20;
+				leftVal=eval(event.clientX) + document.body.scrollLeft;
+				
+				if(((document.body.scrollLeft+document.body.clientWidth)-leftVal)&lt; 150)
+				{
+					leftVal=(document.body.clientWidth+document.body.scrollLeft-151);
+				}
+				if(((document.body.scrollTop+document.body.clientHeight)-topVal)&lt; 30)
+				{
+					topVal=(document.body.clientHeight+document.body.scrollTop-80);
+				}
+			}
+			if(leftVal &lt; 2)
+			{
+				leftVal=2;
+			}
+			dom.top=topVal;
+			dom.left=leftVal;
+			dom.visibility="visible";
+		}
+	}
+}
+</script><style>
+#ds
+{
+	position: absolute;
+	visibility: hidden;
+	z-index: 100;
+	top: 10px;
+	left: 10px;
+}
+#cwe
+{
+	position: absolute;
+	visibility: hidden;
+	z-index: 100;
+	top: 10px;
+	left: 10px;
+}
+
+#cne
+{
+	position: absolute;
+	visibility: hidden;
+	z-index: 100;
+	top: 10px;
+	left: 10px;
+}
+
+.hypertext
+{
+position: absolute;
+	background-color: white;
+	layer-background-colour: cornflowerblue;
+	padding: 3px;
+	border: 3px solid blue;
+	width: 150px;
+	font:normal 10pt/13pt helvetica, sans-serif;
+	text-align: left;
+	color: blue;
+
+	
+}
+td {font-family: verdana,arial; text-align: left; font-size: 8pt;border-style:solid;border-width=1pt;}
+				</style></head><body onload="checkDOM('ds')"><span id="ds" class="hypertext">No Current Link To Vocabulary</span><span id="cwe" class="hypertext">Coded With Extensions</span><span id="cne" class="hypertext">Coded No Extensions</span><table border="3" frame="vsides" rules="cols" cellpadding="2" cellspacing="0" bordercolor="black" style="border-width: 2px;border-style: solid"><tr valign="top"><td height="35"><b><font size="+1">QUCR_HD820100UV01</font><br/>SOFA Details Query Request</b></td><td height="35" class="lightBoundary"><b><i>Description: </i></b><p>Entry point for SOFA (stmt of financial activity) details query request message</p>  <br/><a href="QUCR_HD820100UV.xls">(Link to Excel View)</a><br/>Derived from RMIM: <a href="QUCR_RM820000UV.htm">QUCR_RM820000UV</a></td></tr><tr><td height="3" colspan="10" style="font-size=4pt;"> </td></tr><tr class="hmd" valign="top"><td bgcolor="lightblue"><b><a name="ParameterList">ParameterList</a></b></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:ParameterList"><b><i>Design Comments: </i></b><p>Either a AdjudResultsGroup.ID (which implies date, payee, payor) or date, payee, payor needs to be specified.</p>  </div></td></tr><tr valign="top" class="ConfomanceR"><td><b>id</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#Parameter-cls">Parameter</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-II">II</a>)<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:ParameterList.id"><b><i>Design Comments: </i></b><p>Query Identifier</p>  </div></td></td></tr><tr valign="top" class="ConfomanceR"><td bgcolor="lightgrey">adjudResultsGroup.Author.Time<font color="green"> [0..1]</font><font color="gray"> (<a href="#AdjudResultsGroup.Author.Time">AdjudResultsGroup.Author.Time</a>)</font></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:ParameterList.adjudResultsGroup.Author.Time"/></td></tr><tr valign="top" class="ConfomanceR"><td bgcolor="lightgrey">adjudResultsGroup.Id<font color="green"> [0..1]</font><font color="gray"> (<a href="#AdjudResultsGroup.Id">AdjudResultsGroup.Id</a>)</font></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:ParameterList.adjudResultsGroup.Id"/></td></tr><tr valign="top" class="ConfomanceR"><td bgcolor="lightgrey">financialContract.Id<font color="green"> [0..1]</font><font color="gray"> (<a href="#FinancialContract.Id">FinancialContract.Id</a>)</font></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:ParameterList.financialContract.Id"/></td></tr><tr valign="top" class="ConfomanceR"><td bgcolor="lightgrey">insuranceCarrierRole.Id<font color="green"> [0..1]</font><font color="gray"> (<a href="#InsuranceCarrierRole.Id">InsuranceCarrierRole.Id</a>)</font></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:ParameterList.insuranceCarrierRole.Id"/></td></tr><tr valign="top" class="ConfomanceR"><td bgcolor="lightgrey">invoiceElementGroup.Code<font color="green"> [0..1]</font><font color="gray"> (<a href="#InvoiceElementGroup.Code">InvoiceElementGroup.Code</a>)</font></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:ParameterList.invoiceElementGroup.Code"/></td></tr><tr valign="top" class="ConfomanceR"><td bgcolor="lightgrey">location.Id<font color="green"> [0..1]</font><font color="gray"> (<a href="#Location.Id">Location.Id</a>)</font></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:ParameterList.location.Id"/></td></tr><tr valign="top" class="ConfomanceR"><td bgcolor="lightgrey">payee.Id<font color="green"> [0..1]</font><font color="gray"> (<a href="#Payee.Id">Payee.Id</a>)</font></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:ParameterList.payee.Id"/></td></tr><tr valign="top" class="ConfomanceR"><td bgcolor="lightgrey">payor.Id<font color="green"> [0..1]</font><font color="gray"> (<a href="#Payor.Id">Payor.Id</a>)</font></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:ParameterList.payor.Id"/></td></tr><tr valign="top" class="ConfomanceR"><td bgcolor="lightgrey">provider.Id<font color="green"> [0..1]</font><font color="gray"> (<a href="#Provider.Id">Provider.Id</a>)</font></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:ParameterList.provider.Id"/></td></tr><tr valign="top" class="ConfomanceR"><td bgcolor="lightgrey">sendingApplication.Id<font color="green"> [0..1]</font><font color="gray"> (<a href="#SendingApplication.Id">SendingApplication.Id</a>)</font></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:ParameterList.sendingApplication.Id"/></td></tr><tr><td height="3" colspan="10" style="font-size=4pt;"> </td></tr><tr class="hmd" valign="top"><td bgcolor="lightblue"><b><a name="AdjudResultsGroup.Author.Time">AdjudResultsGroup.Author.Time</a></b></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:AdjudResultsGroup.Author.Time"/></td></tr><tr valign="top" class="ConfomanceR"><td><b>value</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#ParameterItem-cls">ParameterItem</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-IVL">IVL</a>&lt;<a href="../../../infrastructure/datatypes/datatypes.htm#dt-TS">TS</a>&gt;)<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:AdjudResultsGroup.Author.Time.value"><b><i>Design Comments: </i></b><p>adjudication period</p>  </div></td></td></tr><tr><td height="3" colspan="10" style="font-size=4pt;"> </td></tr><tr class="hmd" valign="top"><td bgcolor="lightblue"><b><a name="AdjudResultsGroup.Id">AdjudResultsGroup.Id</a></b></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:AdjudResultsGroup.Id"/></td></tr><tr valign="top" class="ConfomanceR"><td><b>value</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#ParameterItem-cls">ParameterItem</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-II">II</a>)<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:AdjudResultsGroup.Id.value"><b><i>Design Comments: </i></b><p>Harry's bucket or accumulator id</p>  </div></td></td></tr><tr><td height="3" colspan="10" style="font-size=4pt;"> </td></tr><tr class="hmd" valign="top"><td bgcolor="lightblue"><b><a name="FinancialContract.Id">FinancialContract.Id</a></b></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:FinancialContract.Id"/></td></tr><tr valign="top" class="ConfomanceR"><td><b>value</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#ParameterItem-cls">ParameterItem</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-II">II</a>)<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:FinancialContract.Id.value"><b><i>Design Comments: </i></b><p>e.g. Business Arrangement Identifier</p>  </div></td></td></tr><tr><td height="3" colspan="10" style="font-size=4pt;"> </td></tr><tr class="hmd" valign="top"><td bgcolor="lightblue"><b><a name="InsuranceCarrierRole.Id">InsuranceCarrierRole.Id</a></b></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:InsuranceCarrierRole.Id"/></td></tr><tr valign="top" class="ConfomanceR"><td><b>value</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#ParameterItem-cls">ParameterItem</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-II">II</a>)<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:InsuranceCarrierRole.Id.value"><b><i>Design Comments: </i></b><p>insurance carrier id</p>  </div></td></td></tr><tr><td height="3" colspan="10" style="font-size=4pt;"> </td></tr><tr class="hmd" valign="top"><td bgcolor="lightblue"><b><a name="InvoiceElementGroup.Code">InvoiceElementGroup.Code</a></b></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:InvoiceElementGroup.Code"/></td></tr><tr valign="top" class="ConfomanceR"><td><b>value</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#ParameterItem-cls">ParameterItem</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-CS">CS</a>) {CWE:V:<a href="../../../infrastructure/vocabulary/vs_ActCode.htm#ActInvoiceGroupCode"><b>ActInvoiceGroupCode</b></a>}<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:InvoiceElementGroup.Code.value"><b><i>Design Comments: </i></b><p>invoice type</p>  </div></td></td></tr><tr><td height="3" colspan="10" style="font-size=4pt;"> </td></tr><tr class="hmd" valign="top"><td bgcolor="lightblue"><b><a name="Location.Id">Location.Id</a></b></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:Location.Id"/></td></tr><tr valign="top" class="ConfomanceR"><td><b>value</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#ParameterItem-cls">ParameterItem</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-II">II</a>)<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:Location.Id.value"><b><i>Design Comments: </i></b><p>Service/good location identifier</p>  </div></td></td></tr><tr><td height="3" colspan="10" style="font-size=4pt;"> </td></tr><tr class="hmd" valign="top"><td bgcolor="lightblue"><b><a name="Payee.Id">Payee.Id</a></b></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:Payee.Id"/></td></tr><tr valign="top" class="ConfomanceR"><td><b>value</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#ParameterItem-cls">ParameterItem</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-II">II</a>)<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:Payee.Id.value"><b><i>Design Comments: </i></b><p>payee identifier</p>  </div></td></td></tr><tr><td height="3" colspan="10" style="font-size=4pt;"> </td></tr><tr class="hmd" valign="top"><td bgcolor="lightblue"><b><a name="Payor.Id">Payor.Id</a></b></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:Payor.Id"/></td></tr><tr valign="top" class="ConfomanceR"><td><b>value</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#ParameterItem-cls">ParameterItem</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-II">II</a>)<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:Payor.Id.value"><b><i>Design Comments: </i></b><p>payor identifier</p>  </div></td></td></tr><tr><td height="3" colspan="10" style="font-size=4pt;"> </td></tr><tr class="hmd" valign="top"><td bgcolor="lightblue"><b><a name="Provider.Id">Provider.Id</a></b></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:Provider.Id"/></td></tr><tr valign="top" class="ConfomanceR"><td><b>value</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#ParameterItem-cls">ParameterItem</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-II">II</a>)<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:Provider.Id.value"><b><i>Design Comments: </i></b><p>provider identifier for service/good</p>  </div></td></td></tr><tr><td height="3" colspan="10" style="font-size=4pt;"> </td></tr><tr class="hmd" valign="top"><td bgcolor="lightblue"><b><a name="SendingApplication.Id">SendingApplication.Id</a></b></td><td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:SendingApplication.Id"/></td></tr><tr valign="top" class="ConfomanceR"><td><b>value</b><font color="green"> [1..1]</font> (M)<br/><span style="margin-left:20pt"/><a href="../../../infrastructure/rim/rim.htm#ParameterItem-cls">ParameterItem</a> (<a href="../../../infrastructure/datatypes/datatypes.htm#dt-II">II</a>)<td><div style="height: 100%; width: 100%;" contenteditable="$contentE" id="QUCR_HD820100UV01:SendingApplication.Id.value"><b><i>Design Comments: </i></b><p>sending application</p>  </div></td></td></tr></table></body></html>

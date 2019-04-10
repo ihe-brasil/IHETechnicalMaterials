@@ -1,0 +1,1185 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <link rel="stylesheet" type="text/css" href="../../support/css/v3m.css" title="v3m" /><script src="../../support/js/tree.js" type="text/javascript"></script><script src="../../support/js/setTopFrameText.js" type="text/javascript"></script><script src="../../support/js/swapcss.js" type="text/javascript"></script><script type="text/javascript">
+			if (find('heading')) setHeadingTextFromFileName(document.location.href);
+			</script><title>Domain: Clinical Statement</title>
+   </head>
+   <body>
+      <div class="section">
+         <h1>Domain: Clinical Statement</h1>
+         <table cellspacing="0" cellpadding="3" border="1">
+            <tr>
+               <td align="center"><img src="../../support/graphics/dstulogo.gif" alt="DSTU" /><br />HL7 V3 CS, R1<br />HL7 Version 3 Standard: Clinical Statement Pattern, Release 1<br />November 2007<img width="5" alt="spacer" src="../../support/graphics/spacer.gif" /></td>
+            </tr>
+         </table>
+         <table style="border-width:0" width="100%" cellpadding="6">
+            <tr>
+               <td valign="top" align="left">Modeling Facilitator</td>
+               <td valign="top" align="left">Charlie Bishop<br />iSoft plc, UK
+               </td>
+            </tr>
+            <tr>
+               <td valign="top" align="left">Orders &amp; Observations Co-Chair</td>
+               <td valign="top" align="left">Hans Buitendijk<br />SIEMENS Medical Solutions - Health Services, USA
+               </td>
+            </tr>
+            <tr>
+               <td valign="top" align="left">Contributing Editor and Structured Documents Co-Chair</td>
+               <td valign="top" align="left">Bob Dolin MD<br />Kaiser Permanente, USA
+               </td>
+            </tr>
+            <tr>
+               <td valign="top" align="left">Publishing Facilitator</td>
+               <td valign="top" align="left">Isobel Frean, RN, MSc, PhD.<br />Visiting Fellow Health Informatics Research Centre University of Wollongong, Australia
+               </td>
+            </tr>
+            <tr>
+               <td valign="top" align="left">Narrative Editor and Patient Care Co-Chair</td>
+               <td valign="top" align="left">William Goossen, RN PhD<br />Acquest Research and Development, Netherlands
+               </td>
+            </tr>
+            <tr>
+               <td valign="top" align="left">Clinical Statement Co-Chair</td>
+               <td valign="top" align="left">Andrew Perry, MBBCh<br />The Clinical Information Consultancy Ltd, UK
+               </td>
+            </tr>
+            <tr>
+               <td valign="top" align="left">Chief Editor</td>
+               <td valign="top" align="left">Dan Russler, MD<br />Oracle, USA
+               </td>
+            </tr>
+         </table>
+         <p class="copyright">Last Published: 06/23/2008 2:11 PM</p>
+         <p class="lastEdit">Content Last Edited: 6/5/2008 9:43:12 AM</p>
+         <p class="copyright">HL7® Version 3 Standard, © 2008 Health 
+            Level Seven®, Inc.  All Rights Reserved.
+         </p>
+         <p class="copyright">HL7 and Health Level Seven are registered 
+            trademarks of Health Level Seven, Inc.  Reg. U.S. Pat &amp; TM Off
+         </p>
+         <hr title="Separator for header" />
+         <h2><a name="contents">Table of Contents</a></h2><br /><a href="#prefBegin">Preface</a><br /><span>    i  <a href="UVCS.htm#prefNotes">Notes to Readers</a><br /></span><span>    ii  <a href="UVCS.htm#prefAck">Acknowledgements</a><br /></span><span>    iii  <a href="UVCS.htm#prefChange">Changes from Previous Release</a><br /></span><span>    iv  <a href="UVCS.htm#navigate-divs">Message Design Element Navigation</a><br /></span>1  <a href="UVCS.htm#intro-COCS_DO000000UV-ic">Overview</a><br />    1.1  <a href="UVCS.htm#spec-scope">Introduction &amp; Scope</a><br />
+         			    1.2  <a href="UVCS.htm#dmims-COCS_DO000000UV-ic">Domain Message Information Models</a><br />2.  <a href="UVCS_ClinicalStatementTopics.htm#COCS_DO000000UV-ClinicalStatement-ic">Clinical Statement Topics Topic</a><br />3.  <a href="UVCS_do_cmets.htm#">CMETs Defined by this Domain
+            			</a><br />4.  <a href="UVCS_DO_CT.htm#COCS_DO000000UV-ic">Common Message Elements Annex<br /></a>
+         		    4.1  <a href="UVCS_DO_CT.htm#COCS_DO000000UV-icc2id">CMETs Used In This Domain</a><br />5.  <a href="UVCS_DO_XX.htm#indx-COCS_DO000000UV-ic">Interaction Annex</a><br />
+         		    5.1  <a href="UVCS_DO_XX.htm#COCS_DO000000UV-ic1id">By Application Role</a><br />
+         		    5.2  <a href="UVCS_DO_XX.htm#COCS_DO000000UV-ic2id">By Trigger Event</a><br />
+         		    5.3  <a href="UVCS_DO_XX.htm#COCS_DO000000UV-ic3id">By Message Type</a><br />6.  <a href="uvcs_glossary.htm#">Glossary</a><br /><div class="body">
+            <div class="subSection">
+               <div class="header">
+                  <h3><a name="prefBegin">Preface</a></h3>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">i </span><span class="title"><a name="prefNotes">Notes to Readers</a></span></div>
+               <div class="body">
+                  <p>This document is submitted for draft standard for trial use (DSTU). The Clinical Statement pattern has been under development
+                     since January 2004 as part of a joint initiative of the following Technical Committees: Orders and Observations; Patient Care;
+                     and Structured Documents. The version of the model in this ballot (v1.0.0.) includes the changes agreed up to CSCR-068 and
+                     arising from the September 2007 ballot. Readers are encouraged to check the latest status and history of change requests to
+                     the Clinical Statement pattern on the Clinical Statement wiki site: 
+                  </p>
+                  <p><a href="http://wiki.hl7.org/index.php?title=Clinical_Statement_Change_Requests">http://wiki.hl7.org/index.php?title=Clinical_Statement_Change_Requests</a></p>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">ii </span><span class="title"><a name="prefAck">Acknowledgements</a></span></div>
+               <div class="body">
+                  <p>This document has its origins in two important pieces of work, the UK National Programme for Information Technology (NPfIT)
+                     and the Clinical Statement section of the CDA R2 specification. NPfIT and CDA specific material have been removed, but the
+                     acknowledgement must be made at this point that the document, in its current form, is heavily reliant on the wonderful work
+                     these two groups have done. 
+                  </p>
+                  <p>The Clinical Statement Task Force wishes to acknowledge the contribution to the development of this ballot document and for
+                     the participation in regular teleconferences from the following individuals: Heath Frankel, Davera Gabriel, Dr David Rowed,
+                     Rob Hausam, Austin Kreisler, Patrick Loyd, David Markwell, Patrick Mitchell-Jones, Harry Solomon, Rik Smithies.
+                  </p>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">iii </span><span class="title"><a name="prefChange">Changes from Previous Release</a></span></div>
+               <div class="body">
+                  <p>The following changes were made to version 0.2.4.4 of the model: </p>
+                  <ul style="margin-left:20px;">
+                     <li>Changed clone name of HealthCareFacility to ServiceDeliveryLocation  </li>
+                     <li>Note added to ControlActEvent</li>
+                     <li>Note added to Organizer Act noting harmonization decision in July 2007 to change ActClassContainer to ActClassRecordOrganizer</li>
+                     <li>Notes to say there will be a harmonization request to add DEF to the x_domains: x_ClinicalStatementSubstance; and x_ClinicalStatementEncounterMood</li>
+                     <li>Note added to say there will be a harmonization request to add RSK to the x_domains: x_ClinicalStatementObservationMood; and
+                        x_ClinicalStatementActMood
+                     </li>
+                     <li>Note added to x_ClinicalStatementSupplyMood</li>
+                  </ul>
+                  <p>The following changes have been made to version 0.2.5.02 of the model following the September 2007 ballot:</p>
+                  <ul style="margin-left:20px;">
+                     <li>All CMET names updated to include 'UV' realm - technical correction</li>
+                     <li>Datatype of languageCode attribute changed to CE and coding strength changed to CNE for all Clinical Statement types - technical
+                        correction for RIM alignment
+                     </li>
+                     <li>Note added explaining usage of sourceOf2/targetOf.inversionInd</li>
+                  </ul>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">iv </span><span class="title"><a name="navigate-divs">Message Design Element Navigation</a></span></div>
+               <div class="body">
+                  <p>No information is provided here because there is no content in this domain to navigate.</p><br /></div>
+            </div>
+            <hr title="Separator from body" />
+            <div class="subSection">
+               <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">1 </span><span class="title"><a name="intro-COCS_DO000000UV-ic">Overview</a></span></div>
+               <div class="body">
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number">1.1 </span><span class="title"><a name="spec-scope">Introduction &amp; Scope</a></span></div>
+                     <div class="body">
+                        <p><strong>Scope of Clinical Statement Pattern Domain</strong></p>
+                        <p>The model described in this document is a 'pattern' designed to be used within multiple HL7 Version 3 domain models. This
+                           pattern is intended to facilitate the consistent design of communications that convey clinical information to meet specific
+                           use cases. In most cases the pattern will be refined for use within the model using the clinical statement. There are two
+                           CMETs based on the pattern  - COCT_MT530000 A_SupportingClinicalStatement universal and COCT_MT530004 A_SupportingClinicalStatement
+                           minimal.  
+                        </p>
+                        <p>It is not intended that the 'pattern' itself is ever used in a communication, accordingly the information in this document
+                           is necessarily at a high level with a minimum of constraints applied.  The pattern does not represent a Record Architecture
+                           or a physical structure for storing data on an EHR database, although it does cover many of the types of clinical information
+                           that should be part of an Electronic Health Record. The Clinical Statement ballot will include ballot topics (over time -
+                           common patterns such as Lab, Allergy, etc.) where those topics will be written such that they are as much as possible isomorphic
+                           with the domain models to which they correspond.
+                        </p>
+                        <p>The Clinical Statement model is deliberately broad and encompassing. As a result, it would be possible to represent a particular
+                           statement in more than one way. The primary objective of the Clinical Statement topics (see section 2 Clinical Statement Topics)
+                           is to contrain the Clinical Statement model when used to communicate certain types of information in an effort to enhance
+                           interoperability and shareable semantics. The process for developing these constraints is described in section 2.4 Development
+                           of Clinical Statement Topics. The result of the constraint process is to create a Clinical Statement pattern that is isomorphic
+                           with an HL7 committee's primary domain model.
+                        </p>
+                        <p>The formal definition of a clinical statement for the care of patients is:</p>
+                        <p>"An expression of a discrete item of clinical (or clinically related) information that is recorded because of its relevance
+                           to the care of a patient.  Clinical information can be expressed with different levels of granularity and therefore the extent
+                           and detail conveyed in a single statement may vary.  To be regarded as a clinical statement, a concept must be associated
+                           with a patient in a manner which makes clear:
+                        </p>
+                        <ul style="margin-left:20px;">
+                           <li>
+                              <p>Its temporal context</p>
+                           </li>
+                           <li>
+                              <p>Its relationship to the patient</p>
+                           </li>
+                           <li>
+                              <p>In the case of an observation, its mood and presence, absence or value</p>
+                           </li>
+                           <li>
+                              <p>In the case of a procedure, its mood and status</p>
+                           </li>
+                        </ul>
+                        <p>This clarity may be achieved by: </p>
+                        <ul style="margin-left:20px;">
+                           <li>
+                              <p>Explicit representation; or</p>
+                           </li>
+                           <li>
+                              <p>Implicit application of defaults ONLY where explicitly modeled rules state the appropriate defaults."</p>
+                           </li>
+                        </ul>
+                        <p><strong>Background sources</strong></p>
+                        <p>This Clinical Statement pattern is informed by many individuals from many countries, including but not limited to representatives
+                           from the UK National Programme for Information Technology (NPfIT) and the HL7 Structured Documents Technical Committee. The
+                           Clinical Statement Task Force acknowledges and wishes to thank all these individuals and organizations for their valuable
+                           contributions. This standard is not intended, however, to be a derivative of any of these sources and these sources should
+                           not be used to interpret any semantics communicated within this document.
+                        </p>
+                        <p><strong>Use of the model</strong></p>
+                        <p>The Clinical Statement pattern represents a standard, high-level structure for the inclusion of clinical information in communications
+                           intended to support specific business functions.  Although not capable of being implemented 'as is', the Clinical Statement
+                           pattern can be constrained to meet the requirements of many specific communications regarding clinical information.  The process
+                           of modification will involve either pattern constraint or extension (or sometimes both) in order to achieve the needs of a
+                           particular domain. There are two CMETs based on the pattern:   
+                        </p><a href="../../domains/uvct/uvct_do_cmets.htm#COCT_MT530000UV-msg" class="">COCT_MT530000</a>
+                        <!--divN/text()--> (A_SupportingClinicalStatement universal) and 
+                        <p><a href="../../domains/uvct/uvct_do_cmets.htm#COCT_MT530004UV-msg" class="">COCT_MT530004</a> (A_SupportingClinicalStatement minimal).
+                        </p>
+                        <p><strong>Options for pattern constraint include:</strong></p>
+                        <ul style="margin-left:20px;">
+                           <li>
+                              <p>The generic 'Clinical Statement' class attributes may be constrained to reflect the precise nature of the data to be conveyed.
+                                 For example:
+                              </p>
+                              <ul>
+                                 <li>
+                                    <p>Optional attributes may be removed if not appropriate to the business case</p>
+                                 </li>
+                                 <li>
+                                    <p>Attributes themselves may be constrained:</p>
+                                    <ul>
+                                       <li>
+                                          <p>multiplicities may be constrained to narrower number sets, e.g. (0..*) may be constrained to (1..*)</p>
+                                       </li>
+                                       <li>
+                                          <p>attribute value sets may be constrained to smaller attribute value sets, e.g. 'mood code' limited to 'Event'</p>
+                                       </li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    <p>Datatypes for an attribute may be constrained, e.g. 'ANY to CD'</p>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li>
+                              <p>Associations may be constrained to remove the potential for complexity, e.g. the limitation of an implementation to three
+                                 levels of nesting; the removal of 'Episode Link' in order to define an implementation to the 'lowest common denominator' regarding
+                                 system capabilities
+                              </p>
+                           </li>
+                           <li>
+                              <p>Classes may be constrained: </p>
+                              <ul>
+                                 <li>
+                                    <p>Classes may be removed if not required</p>
+                                 </li>
+                                 <li>
+                                    <p>Classes may be constrained to specific subclasses, e.g. 'Observation Class' constrained to 'Condition Class'</p>
+                                 </li>
+                                 <li>
+                                    <p>Classes may be 'cloned' in order to document specific constraints on attributes or associations</p>
+                                 </li>
+                                 <li>
+                                    <p>Classes with specific constraints applied may be 'unrolled' from the Clinical Statement Choice box in order to constrain their
+                                       use to a specific structure (in that case, the constrained version of the class may no longer be assumed to be present in
+                                       the generalized Clinical Statement Choice Box)
+                                    </p>
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                        <p><strong>Pattern Use</strong></p>
+                        <p>This pattern is to be referenced by an Act external to the Clinical Statement pattern model.   Often, this external Act provides
+                           the 'Entry point' to a communication specification and represents the context in which the clinical statement information
+                           is being sent. For example, the information regarding who is sending this information is found in an Act external to the Clinical
+                           Statement pattern. The Care Provision Act in the Care Provision Domain is an example of an Act external to the pattern.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">1.2</span><span class="title"><a name="dmims-COCS_DO000000UV-ic">Domain Message Information Models</a></span><hr class="sectionrule" />
+               </div>
+               <div class="body">
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number"></span><span class="title"><a name="COCS_DM000000UV-rmi">Clinical Statement Pattern  (COCS_DM000000UV) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/COCS_DM000000UV.htm" target="_blank"><img class="graphic" src="editable/images/T-COCS_DM000000UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><p></p>
+                        <div class="heading">Description</div>
+                        <p><strong>1.2.1   Model Overview</strong></p>
+                        <p>The model can be divided into 4 related parts:</p>
+                        <ul>
+                           <li>Clinical Statement Act Choice Box</li>
+                           <li>Relationships between Clinical Statements</li>
+                           <li>Participations surrounding the Acts</li>
+                           <li>Acts and relationships outside the Choice Box</li>
+                        </ul>
+                        <p>Each of these parts is described below in sections 1.2.3 - 1.2.6.</p>
+                        <p><strong>1.2.2     Attributes of Clinical Statements</strong></p>
+                        <p>In general, the use of attributes within classes representing Clinical Statements follows the standard HL7 v3 rules.  </p>
+                        <p><strong><em>     1.2.2.1     moodCode</em></strong></p>
+                        <p>Following the HL7 v3 approach to modeling, most of the classes within the Clinical Statement can be assigned a moodCode that
+                           determines whether it is reporting an actual event or expressing a request, proposal, promise, appointment or goal.  The only
+                           exception is Organizer.moodCode, which always has a value of 'EVN'. The allowed values for this attribute in most Clinical
+                           Statement classes have been specified using an x_domain. Where a TC or Realm implementation etc. uses a constrained version
+                           of this model, the value set for the constrained model may be restricted to a sub-set of one or more of the values allowed.
+                        </p>
+                        <p>The use of moodCode overlaps with SNOMED CT context attributes and the SNOMED CT concept identifiers and expressions used
+                           in the code attribute shall not contradict the moodCode. The Terminfo project provides guidance on the binding between the
+                           moodCode and the SNOMED CT context model for the different classes in the Clinical Statement pattern.
+                        </p>
+                        <p>NOTE: [Derived from the draft Vocabulary TC document "Domain and Value Set Definitions and Binding.] The name X-domain is
+                           a misnomer. A more proper name would be "X-Value Sets", since they are really HL7 defined value sets. As time permits, all
+                           X-domains will be replaced by Value Sets. When this occurs the current x_domains in the RIM and in the Clinical Statement
+                           pattern will be replaced by value sets containing the same values. 
+                        </p>
+                        <p><strong><em>     1.2.2.2     id</em></strong></p>
+                        <p>Each instance of a Clinical Statement may be identified by means of an id using any of the HL7's II data types which currently
+                           includes GUID/UUID, OID, or RUID in the root plus a potential extension. Any of these provides a unique identification, depending
+                           on the level of coupling between the communicating systems, which in turn uniquely identifies the specific Clinical Statement.
+                           If precisely the same information (statement and context) is required to be referenced either in the same communication instance
+                           or in another communication instance, then the same identifier value shall be used in an ActReference to reference the original
+                           Clinical Statement.
+                        </p>
+                        <p>Conversely, if all of the attributes and context of a Clinical Statement class are not identical, then it is a different Clinical
+                           Statement and a new unique identifier shall be assigned.  This means:
+                        </p>
+                        <ul>
+                           <li>
+                              <p>a subset of a Clinical Statement is a different Clinical Statement, requiring a different identifier </p>
+                           </li>
+                           <li>an Organizer where one of the 'contained' statements is modified is a new statement requiring a new identifier. </li>
+                        </ul>
+                        <p>The clinical statement 'pattern' allows Clinical Statements to have multiple identifiers.  This allows Clinical Statements
+                           to be identified by a human readable identifier in addition to the unique identifier and will always be represented by an
+                           OID and code value.  The use of these identifiers could include identifiers such as departmental order number, episode number
+                           etc. where required by specific communication use cases.
+                        </p>
+                        <p>NOTE: Modeling and Methodology (MnM) are currently undertaking work to allow identifiers to be classified based on their role
+                           in the life cycle and the local management practices for Clinical Statements. When this work is complete, it will be reflected
+                           in the definitions for this attribute.
+                        </p>
+                        <p><strong><em>     1.2.2.3     code</em></strong></p>
+                        <p>The code attribute is used to identify the nature of the information conveyed by an instance of a Clinical Statement Act.
+                           Code may be optional in some specifications. The cardinality and conformance of the code attribute in the Observation is act
+                           is 1..1 required. While the attribute must be present in all Observation instances it is permissible to send an exceptional
+                           value from the NullFlavor vocabulary domain as a legal value. The HL7 v3 data type of the code attribute is CD (Concept Descriptor).
+                           The CD data type allows the inclusion of:
+                        </p>
+                        <ul>
+                           <li>
+                              <p>The text assigned to the code by the coding scheme (displayText) and the text on which the encoding was based (originalText)</p>
+                           </li>
+                           <li>
+                              <p>Qualifiers of the type used in SNOMED CT (including context attributes) to refine the meaning of the primary code</p>
+                              <ul>
+                                 <li>
+                                    <p>Each qualifier is a name + value pair with the name expressed as a code and the value expressed as another instance of the
+                                       CD data type (allowing nested qualifiers where needed).
+                                    </p>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li>
+                              <p>Translations to allow the representation of the concept in the coding scheme in which it originated as well as translated
+                                 into other preferred terminologies.
+                              </p>
+                              <ul>
+                                 <li>
+                                    <p>Note that the original code is expressed at the outer level with the required code (if different) expressed as a translation
+                                       within this.  The ability to recognize the original code is important to enable future enhanced translations based on improved
+                                       mappings.  Thus, if the data was originally encoded in a different coding system the original code should be included with
+                                       the translation element containing the SNOMED CT representation.
+                                    </p>
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                        <p>The CD data type supports the use of pre and post-coordination of vocabulary expressions and this model places no restrictions
+                           on how these expressions are represented other than the constraints imposed by the respective terminologies.  
+                        </p>
+                        <p><strong><em>     1.2.2.4     value</em></strong></p>
+                        <p>Observation.value is information that is assigned or determined by the observation action. </p>
+                        <p>There is still some debate for many observation events, in determining how to populate Observation.code and Observation.value.
+                           While this is typically straight-forward for laboratory observations, it can get blurry for other types of observations, such
+                           as findings and disorders, family history observations, etc. The HL7 Terminfo project has defined the principles for different
+                           patterns of the use for these two attributes where the clinical terminology used in the code attribute is SNOMED Clinical
+                           Terms. 
+                        </p>
+                        <p>The data type of the Observation.value attribute varies and where the expression in Observation.code requires a value, the
+                           subset of allowed data types is constrained by the code. Where the PQ data type is used then the UCUM codes should be used
+                           to represent the units of the measurement.
+                        </p>
+                        <p><strong><em>     1.2.2.5     priorityCode</em></strong></p>
+                        <p>The Act.priorityCode is defined by HL7 as: "A code or set of codes (e.g., for routine, emergency,) specifying the urgency
+                           under which the Act happened, can happen, is happening, is intended to happen, or is requested/demanded to happen".
+                        </p>
+                        <p>The priorityCode attribute has a potential overlap with some vocabularies.   This potential conflict is resolved as follows:</p>
+                        <ul>
+                           <li>
+                              <p>priorityCode should be used to indicate the priority as it relates to workflow management. It is also used to indicate priority
+                                 assigned by the originator of a request or result or to indicate the priority with which the communication recipient should
+                                 respond to the information in the Act.  For example, the request for a procedure should be treated as 'urgent'.  
+                              </p>
+                           </li>
+                           <li>
+                              <p>Where the vocabulary used in the message has a priority attribute, then this should be used in coded expressions where the
+                                 priority significantly alters the Act.code, or in the case of an Observation, the Observation.value attribute. For example,
+                                 the concept 'an Emergency appendectomy' should be expressed totally within vocabulary expression used in Procedure.code.
+                              </p>
+                           </li>
+                        </ul>
+                        <p><strong><em>1.2.2.6     Act.code dependent attributes in the Clinical Statement model</em></strong></p>
+                        <p>Some coded attributes included in the HL7 v3 RIM are deliberately made optional in Act classes in this model because they
+                           represent qualifications that might be more appropriately handled within the terminology model (e.g.  using SNOMED CT qualifiers
+                           within the code attribute where necessary).  These include: 
+                        </p>
+                        <ul>
+                           <li>negationInd</li>
+                           <li>uncertaintyCode</li>
+                           <li>priorityCode</li>
+                           <li>statusCode</li>
+                           <li>Observation.methodCode</li>
+                           <li>Observation.targetSiteCode</li>
+                           <li>Procedure.methodCode</li>
+                           <li>Procedure.targetSiteCode</li>
+                           <li>Procedure.approachSiteCode</li>
+                        </ul>
+                        <p>The rationale for considering these attributes optional is that flexibility is required by realms in order to be able to implement
+                           the vocabularies of choice without ambiguities related to whether a particular concept is included in an Act.code expression
+                           or included in another Act Class attribute value. The Terminfo project provides guidance on how these attributes should be
+                           used in models and message instances where the code system used is SNOMED CT. 
+                        </p>
+                        <p><strong>1.2.3     Clinical Statement Act Choice Box</strong></p>
+                        <p>This part of the model is used to convey the detailed clinical information that is being sent in support of the specific business
+                           need.  As well as providing a mechanism for conveying the components of this information, it supports grouping of these components
+                           and provides mechanisms to explicitly link statements where there is a specific relationship. 
+                        </p>
+                        <p>Where a Clinical Statement has previously been conveyed in a communication and is consequently known within an information
+                           system, the Clinical Statement may be included either by reference or by repeating the full statement.  Where the full statement
+                           is repeated, all attributes and context (whether explicit or inherited) shall be identical. 
+                        </p>
+                        <p>Clinical Statement has the choice box structure to allow any clinically relevant selection, duplication, constraining and
+                           ordering of Acts to be included in the communication. 
+                        </p>
+                        <p>All items in the clinical data will be able to be coded via either an HL7 code, an external registered coding system, or a
+                           locally derived / developed coding system. Through use of the OID structure, the appropriate coding system will be identified.
+                           
+                        </p>
+                        <p><strong><em>     1.2.3.1     Observation</em></strong></p>
+                        <p>The Observation (OBS) choice, a derivative of the RIM Observation class used for representing coded and other observations,
+                           includes information about an observation including the nature and, where appropriate, the result or finding from that observation.
+                           This includes requesting, recommending, promising, refusing or setting a goal to be attained or risk to be avoided, as well
+                           as a specific instance of an observation with its result. It also includes any kind of Observation subclass.
+                        </p>
+                        <p>The value sets for Observation.moodCode (CNE) may be taken from the x_ClinicalStatementObservationMood. See the detailed description
+                           of moodCode above in section 1.2.2.1 for more details on the use of x_domains in this model. 
+                        </p>
+                        <p>NOTE: This vocabulary "domain" does not contain the value Risk (RSK). A harmonization proposal requesting this addition will
+                           be submitted to the November 2007 harmonization meeting.
+                        </p>
+                        <p>As with Act Class described below in  section 1.2.3.7, use may be made of the Observation.negationInd. When set to "true",
+                           this is a positive assertion that the descriptive attributes of the Observation as a whole are negated. Similarly, the inert
+                           properties such as Observation.id, Observation.moodCode, and the participations are not negated. 
+                        </p>
+                        <p>An Observation can have zero to many referenceRange relationships, which relate an Observation to the ObservationRange class,
+                           where the expected range of values for a particular observation can be specified. 
+                        </p>
+                        <p><strong><em>     1.2.3.2     SubstanceAdministration</em></strong></p>
+                        <p>The Substance Administration (SBADM) choice is a derivative of the RIM SubstanceAdministration class used for representing
+                           medication-related events such as medication history or planned medication administration orders or ongoing medication administration.
+                           This includes the act of introducing or otherwise applying a substance to the subject. It also includes requesting, instructing
+                           the patient, recommending, promising, prohibiting or refusing to administer a substance, as well as the actual act of personally
+                           administering the drug.
+                        </p>
+                        <p>This part of the pattern will be further harmonized with Pharmacy. </p>
+                        <p>The value set for SubstanceAdministration.moodCode (CNE) may be taken from the x_ClinicalStatementSubstanceMood vocabulary
+                           x_domain. See the detailed description of moodCode above in section 1.2.2.1 for more details on the use of x_domains in this
+                           model.
+                           
+                        </p>
+                        <p>NOTE: This vocabulary "domain" does not contain the value Definition (DEF). A harmonization proposal requesting this addition
+                           will be submitted to the November 2007 harmonization meeting.
+                        </p>
+                        <table width="90%" cellspacing="0" cellpadding="5" border="1" style="border-color:blue">
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <p>SubstanceAdministration.priorityCode</p>
+                                 </td>
+                                 <td>
+                                    <p>Categorizes the priority of a substance administration</p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>SubstanceAdministration.doseQuantity</p>
+                                 </td>
+                                 <td>
+                                    <p> Indicates how much medication is given per dose</p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>SubstanceAdministration.rateQuantity</p>
+                                 </td>
+                                 <td>
+                                    <p>Can be used to indicate the rate at which the dose is to be administered (e.g. the flow rate for intravenous infusions)</p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p> SubstanceAdministration.maxDoseQuantity</p>
+                                 </td>
+                                 <td>
+                                    <p>Is used to capture the maximum dose of the medication that can be given over a stated time interval (e.g. maximum daily dose
+                                       of morphine, maximum lifetime dose of doxorubicin)
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p> SubstanceAdministration.effectiveTime</p>
+                                 </td>
+                                 <td>
+                                    <p>Is used to describe the timing of administration. It is modeled using the GTS data type to accommodate various dosing scenarios.
+                                       
+                                    </p>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <p>SubstanceAdministration.negationInd, when set to "true", is a positive assertion that the descriptive attributes of the SubstanceAdministration
+                           as a whole are negated. As discussed above, the inert properties of the Act Class such as SubstanceAdministration.id, SubstanceAdministration.moodCode,
+                           and the participations are not negated. These inert properties always have the same meaning: i.e. the author remains the author
+                           of the negative SubstanceAdministration. A substance administration statement with negationInd is still a statement about
+                           the specific fact described by the SubstanceAdministration. For instance, a negated "aspirin administration" means that the
+                           author positively denies that aspirin is being administered, and that he takes the same responsibility for such statement
+                           and the same requirement to have evidence for such statement than if he had not used negation.
+                        </p>
+                        <p>The capture of medication-related information also involves the interrelationship of SubstanceAdministration with several
+                           other classes. 
+                        </p>
+                        <p><strong><em>     1.2.3.3     Supply</em></strong></p>
+                        <p>The Supply (SPLY) choice is a derivative of the RIM Supply class, used for representing the provision of a material by one
+                           entity to another. It includes requesting, recommending, promising, prohibiting or refusing such a supply, as well as the
+                           actual supply event.
+                        </p>
+                        <p>Note that an outpatient prescription typically includes both a recommendation for SubstanceAdministration and a request to
+                           Supply.
+                        </p>
+                        <p>This part of the pattern will further be harmonized with Pharmacy.</p>
+                        <p>The value set for Supply.moodCode (CNE) may be taken from the x_ClinicalStatementSupplyMood. See the detailed description
+                           of moodCode above in section 1.2.2.1 for more details on the use of x_domains in this model. 
+                        </p>
+                        <p>NOTE: This vocabulary "domain" does not contain the value Definition (DEF). A harmonization proposal requesting this addition
+                           will be submitted to the November 2007 harmonization meeting.
+                        </p>
+                        <p>The Supply class represents dispensing, whereas the SubstanceAdministration class represents administration. Prescriptions
+                           are complex activities that involve both an administration request to the patient (e.g. take digoxin 0.125mg by mouth once
+                           per day) and a supply request to the pharmacy (e.g. dispense 30 tablets, with 5 refills). This should be represented by a
+                           SubstanceAdministration statement that has a component Supply statement. The nested Supply statement can have Supply.independentInd
+                           set to "false" to signal that the Supply cannot stand alone, without it's containing SubstanceAdministration. 
+                        </p>
+                        <p><strong><em>     1.2.3.4     Procedure</em></strong></p>
+                        <p>The Procedure (PROC) choice is a derivative of the RIM Procedure class, used for representing procedures. It is an act whose
+                           immediate and primary outcome (post-condition) is the alteration of the physical condition of the subject. This includes requesting,
+                           recommending, promising, prohibiting or refusing to carry out a procedure as well as the actual act of undertaking the procedure.
+                        </p>
+                        <p>The value sets for Procedure.moodCode (CNE) may be taken from the x_ClinicalStatementProcedureMood. See the detailed description
+                           of moodCode above in section 1.2.2.1 for more details on the use of x_domains in this model. 
+                        </p>
+                        <p>Procedure.negationInd, when set to "true", is a positive assertion that the descriptive attributes of the Procedure as a whole
+                           are negated. The inert properties such as Procedure.id, Procedure.moodCode and the participations are not negated. These inert
+                           properties always have the same meaning: i.e. the author remains the author of the negative Procedure. A procedure statement
+                           with negationInd is still a statement about the specific fact described by the Procedure. For instance, a negated "appendectomy
+                           performed" means that the author positively denies that there was ever an appendectomy performed, and that he takes the same
+                           responsibility for such statement and the same requirement to have evidence for such statement than if he had not used negation.
+                        </p>
+                        <p><strong><em>     1.2.3.5     Encounter</em></strong></p>
+                        <p>An Encounter (ENC) choice is an interaction between a patient and care provider(s) for the purpose of providing healthcare-related
+                           service(s). Healthcare-related services include health assessment. 
+                        </p>
+                        <p>Note this type of statement covers admissions, discharges and transfers of care, as well as the more usual understanding of
+                           a single discrete office visit.
+                        </p>
+                        <p>It further deals with a plan for regular visits, such as preventive care during pregnancy, or monitoring of chronic ill patients.
+                           
+                        </p>
+                        <p>Includes requesting, proposing, promising, prohibiting or refusing an encounter as well as an actual encounter event.</p>
+                        <p>The encounter is a derivative of the RIM PatientEncounter class, used to represent related encounters, such as follow-up visits
+                           or referenced past encounters.  
+                        </p>
+                        <p>The value sets for Encounter.moodCode (CNE) may be taken from the x_ClinicalStatementEncounterMood. See the detailed description
+                           of moodCode above in section 1.2.2.1 for more details on the use of x_domains in this model. 
+                        </p>
+                        <p>NOTE: This vocabulary "domain" does not contain the value Definition (DEF). A harmonization proposal requesting this addition
+                           will be submitted to the November 2007 harmonization meeting.
+                        </p>
+                        <p><strong><em>     1.2.3.6     Organizer</em></strong></p>
+                        <p>An Organizer (ORGANIZER) choice is a derivative of the RIM Act class, which can be used to create groupings of other clinical
+                           statements that share a common context for navigational purposes. An Organizer can contain other Organizers and/or other clinical
+                           statements, by traversing the component relationship. An Organizer can refer to acts by reference or by value via the component
+                           relationship. An Organizer cannot be the source of the sourceOf1, sourceOf2, definition or conditions relationships. 
+                        </p>
+                        <p>The record entries relating to a single clinical session are usually grouped under headings that represent phases of the encounter,
+                           or assist with layout and navigation. The organizer represents a heading in a heading structure, or "organizer tree" and does
+                           not itself have any semantic content. Clinical headings usually reflect the clinical workflow during a care session, and might
+                           also reflect the main author's reasoning processes. Knowledge of the heading is not required to interpret contained clinical
+                           statements. Much research has demonstrated that headings are used differently by different professional groups and specialties,
+                           and that headings are not used consistently enough to support safe automatic processing of the EHR. 
+                        </p>
+                        <p>The value for Act.ClassCode may be taken from the ActClassContainer vocabulary domain. Several specific types of collection
+                           are recognized (folder, composition, topic, category, cluster and battery), although individual communications will restrict
+                           the types that may be used for individual communication use cases.
+                        </p>
+                        <p>NOTE: The ActClassContainer title was changed to ActClassRecordOrganizer at the July 2007 harmonization meeting. The Entry
+                           code was changed to Grouper and the Organizer was changed to Container. When this change is added to the RIM the messaging
+                           tools and the vocabulary for this class will be changed to ActClassRecordOrganizer.
+                        </p>
+                        <p>An Organizer typically can be assigned a SNOMED CT concept identifier appropriate to its type (for example a category might
+                           be identified as 'investigations' and a battery might be identified as 'Full blood count'). However, any kind of concept identifier
+                           can be used, such as in the case of the HL7 CDA R2 Implementation Guides where LOINC is frequently employed. 
+                        </p>
+                        <p>The Organizer may be used to harmonize hierarchical RECORD_COMPONENTs within and ENTRY object under either the CEN/ISO 13606
+                           or openEHR standard with a Clinical Statement. 
+                        </p>
+                        <p>NOTE: Clinical Statement ActChoice Acts such as Observation can also contain other ActChoice Acts by traversing the sourceOf2
+                           class. There is no requirement that the Organizer statement be used in order to group clinical statements. 
+                        </p>
+                        <p>The value sets for Organizer.moodCode (CNE) is fixed to EVN (Event). </p>
+                        <p><strong><em>     1.2.3.7     Act Class</em></strong></p>
+                        <p>The Act (ACT) choice is a derivative of the RIM Act class, to be used when the other more specific classes are not appropriate.</p>
+                        <p>Attributes of the Act Class include:</p>
+                        <p>Act.negationInd: when set to "true", is a positive assertion that the descriptive attributes of the Act as a whole are negated.
+                           The inert properties such as Act.id, Act.moodCode, and the participations are not negated. These inert properties always have
+                           the same meaning: i.e., the author remains the author of the negative Act. An act statement with negationInd is still a statement
+                           about the specific fact described by the Act. For instance, a negated "finding of wheezing on July 1" means that the author
+                           positively denies that there was wheezing on July 1, and that he takes the same responsibility for such statement and the
+                           same requirement to have evidence for such statement than if he had not used negation. 
+                        </p>
+                        <p>The value for Act.moodCode (CNE) may be taken from the x_ClinicalStatementActMood. See the detailed description of moodCode
+                           below for more details on the use of x_domains in this model.
+                        </p>
+                        <p>NOTE: This vocabulary "domain" does not contain the value Risk (RSK). A harmonization proposal requesting this addition will
+                           be submitted to the November 2007 harmonization meeting.
+                        </p>
+                        <p><strong>1.2.4     Relationships between Clinical Statements</strong></p>
+                        <p>The model provides three mechanisms that allow Clinical Statements to be linked by the Act Relationship Class:</p>
+                        <ul>
+                           <li>Containment</li>
+                           <li>Direct relationship</li>
+                           <li>Reference</li>
+                        </ul>
+                        <p>These links may be achieved by one of three act relationships in the pattern described below:</p>
+                        <ul>
+                           <li>component</li>
+                           <li>sourceOf2/targetOf</li>
+                           <li>sourceOf1</li>
+                        </ul>
+                        <p>These are all refinements of the same general structure and share the following facilities:</p>
+                        <ul>
+                           <li>inversionInd; when 'true' reverses the direction of the relationship e.g. 'Cause of' becomes 'Caused by' (see Context and
+                              Inheritance below for how this works with Context Inheritance)
+                           </li>
+                           <li>negationInd; when 'true' allows the sender to specifically state that the relationship does not apply e.g.. An observation
+                              was not caused by a medication
+                           </li>
+                        </ul>
+                        <p>There is some overlap in the potential use of these three relationship mechanisms that shall be resolved as follows:</p>
+                        <p><strong><em>     1.2.4.1     Containment</em></strong></p>
+                        <p>Grouping of classes of clinical data is achieved using collector classes such as the Organizer Class and ConditionNode Class
+                           (a specialization of the Observation class code) associated with a 'Component' Act Relationship that supports recursion of
+                           the Clinical Statement structure.  
+                        </p>
+                        <p>Grouping can be used for many purposes, including:</p>
+                        <ul>
+                           <li>Relating statements.  For example, an Antenatal exam may comprise individual observations of maternal weight, maternal BP,
+                              fetal size, fetal heart rate etc.
+                           </li>
+                           <li>Linking statements relating to a specific 'Problem' in the case of Condition Node</li>
+                        </ul>
+                        <p>Organizer: The type of grouping permitted is restricted by the vocabulary used in the Organizer.code attribute. Specific vocabulary
+                           constraints will be applied in individual communication designs based on the communication requirement that is being addressed.
+                        </p>
+                        <p><strong><em>     1.2.4.2     Direct relationship</em></strong></p>
+                        <p>This linkage type is supported by the recursion on the Clinical Statement, with ActRelationship.typeCode specifying the nature
+                           of the link between the statements.  It is used to include a Clinical Statement in a communication that relates to another
+                           included Clinical Statement but is not directly pertinent to the Focal Act, source Act or purpose of the communication.
+                        </p>
+                        <p>An example would be if a previous condition explains an observation made during an encounter.  In this case the previous condition
+                           is only being included in the communication to explain the observation and not because it was identified during the encounter.
+                        </p>
+                        <p>Where the supporting Clinical Statement is already available from a previous communication, the link by reference approach
+                           may be used to convey this type of linkage. 
+                        </p>
+                        <p><strong><em>     1.2.4.3     Reference</em></strong></p>
+                        <p>Linking Clinical Statements by reference is supported by the sourceOf1 Act Relationship between the Clinical Statement and
+                           	ActReference, again with typeCode specifying the nature of the link.  There are three cases for its use:
+                        </p>
+                        <ul>
+                           <li>
+                              <p>To assert a link to a Clinical Statement that is already in the communication instance for another purpose, thus 	avoiding
+                                 unnecessary duplication
+                              </p>
+                           </li>
+                           <li>
+                              <p>To assert a link to a Clinical Statement that is directly related to the purpose of the communication but has been sent as
+                                 part of a prior notification
+                              </p>
+                           </li>
+                           <li>
+                              <p>To link to a Clinical Statement that is already available as a result of an unrelated communication.</p>
+                           </li>
+                        </ul>
+                        <p>The ActReference.classCode and ActReference.moodCode shall take the values of the target Act and ActReference.id is the unique
+                           identifier of the target Clinical Statement. 
+                        </p>
+                        <p>NOTE: The current methodology for ActReference is not ideal, since only the class name itself helps to know that this construct
+                           actually is an act reference and not just an act. RIM class names are not intended to be semantic markers. MnM are working
+                           to resolve this and are defining a way of unambiguously knowing that this is a reference. It is suggested that implementers
+                           refer to current MnM guidance, pre-adopting if necessary.
+                        </p>
+                        <p>Alternatively, in many contexts, given the small nature of the act reference, just ClassCode and MoodCode and Id, will serve
+                           to identify it - though this is a workaround at best.
+                        </p>
+                        <p><strong><em>     1.2.4.4     component</em></strong></p>
+                        <p>The component relationship is used to link the organizer class to one or more ActChoice Acts. The component.typeCode value
+                           is fixed to COMP (is component of) and is used to show that the target is a component of the source Organizer act (for instance
+                           "hemoglobin measurement" is a component of a "complete blood count"). The source Organizer can contain other Organizers and/or
+                           other clinical statements, by traversing the component relationship.
+                        </p><strong><em>     1.2.4.5     sourceOf2/targetOf</em></strong><p>Clinical Statement has identified and modelled various link scenarios. These scenarios enable ActChoice Acts to be semantically
+                           linked to Acts that exist within the same document or message
+                        </p>
+                        <p>NOTE: The Clinical Statement model permits any ActChoice Act to relate to any ActChoice Act using any of the following relationship
+                           types. In many cases, this would result in nonsensical relationships. The following table is a guideline for reasonable relationships
+                           between Clinical Statement Acts and is not a conformance constraint.
+                        </p>
+                        <table width="90%" cellspacing="0" cellpadding="5" border="1" style="border-color:blue">
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <p>ActRelationship Type</p>
+                                 </td>
+                                 <td>
+                                    <p>Reasonable Source and Target classes</p>
+                                 </td>
+                                 <td>
+                                    <p>Comments</p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>CAUS (is etiology for)</p>
+                                 </td>
+                                 <td>
+                                    <p>[Act | Observation | Procedure | SubstanceAdministration] CAUS [Observation]</p>
+                                 </td>
+                                 <td>
+                                    <p>Used to show that the source caused the target observation (for instance, source "diabetes mellitus" is the cause of target
+                                       "kidney disease").
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>COMP (has component)</p>
+                                 </td>
+                                 <td>
+                                    <p>[Act | Observation | Procedure | SubstanceAdministration | Supply] COMP [Act | Observation | Procedure | SubstanceAdministration
+                                       | Supply]
+                                    </p>
+                                 </td>
+                                 <td>
+                                    <p>Used to show that the target is a component of the source (for instance "hemoglobin measurement" is a component of a "complete
+                                       blood count").
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>GEVL (evaluates (goal))</p>
+                                 </td>
+                                 <td>
+                                    <p>[Observation] GEVL [Observation]</p>
+                                 </td>
+                                 <td>
+                                    <p>Used to link an observation (intent or actual) to a goal to indicate that the observation evaluates the goal (for instance,
+                                       a source observation of "walking distance" evaluates a target goal of "adequate walking distance").
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>MFST (is manifestation of)</p>
+                                 </td>
+                                 <td>
+                                    <p>[Observation] MFST [Observation]</p>
+                                 </td>
+                                 <td>
+                                    <p>Used to say that the source is a manifestation of the target (for instance, source "hives" is a manifestation of target "penicillin
+                                       allergy").
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>REFR (refers to)</p>
+                                 </td>
+                                 <td>
+                                    <p>[Act | Observation | Procedure | SubstanceAdministration | Supply] REFR [Act | Observation | ObservationMedia | Procedure
+                                       | RegionOfInterest | SubstanceAdministration | Supply]
+                                    </p>
+                                 </td>
+                                 <td>
+                                    <p>Used to show a general relationship between the source and the target, when the more specific semantics of the relationship
+                                       isn't known.
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>RSON (has reason)</p>
+                                 </td>
+                                 <td>
+                                    <p>[Act | Encounter | Observation | Procedure | SubstanceAdministration | Supply] RSON [Act | Encounter | Observation | Procedure
+                                       | SubstanceAdministration | Supply]
+                                    </p>
+                                 </td>
+                                 <td>
+                                    <p>Used to show the reason or rational for a service (for instance source "treadmill test" has reason "chest pain").</p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>SAS (starts after start)</p>
+                                 </td>
+                                 <td>
+                                    <p>[Act | Encounter | Observation | Procedure | SubstanceAdministration | Supply] SAS [Act | Encounter | Observation | Procedure
+                                       | SubstanceAdministration | Supply]
+                                    </p>
+                                 </td>
+                                 <td>
+                                    <p>The source Act starts after the start of the target Act (for instance source "diaphoresis" starts after the start of target
+                                       "chest pain").
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>SPRT (has support)</p>
+                                 </td>
+                                 <td>
+                                    <p>[Observation] SPRT [Observation | ObservationMedia | RegionOfInterest]</p>
+                                 </td>
+                                 <td>
+                                    <p>Used to show that the target provides supporting evidence for the source (for instance source "possible lung tumor" has support
+                                       target "mass seen on chest-x-ray").
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>SUBJ (has subject)</p>
+                                 </td>
+                                 <td>
+                                    <p>[Observation | RegionOfInterest] SUBJ [Observation | ObservationMedia]</p>
+                                 </td>
+                                 <td>
+                                    <p>Used to relate a source region of interest to a target image, or to relate an observation to its subject observation (for
+                                       instance, source "moderate severity" has subject target "chest pain").
+                                    </p>
+                                    <p>The ActRelationshipType "has subject" is similar to the ParticipationType "subject". Entries that primarily operate on physical
+                                       subjects use the Participation, whereas entries that primarily operate on other entries use the ActRelationship.
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>XCRPT (is excerpt of)</p>
+                                 </td>
+                                 <td>
+                                    <p>[Act | Observation] XCRPT [Act | Observation | Procedure | SubstanceAdministration | Supply]</p>
+                                 </td>
+                                 <td>
+                                    <p>Used to show that the source is excerpted from the target (for instance source "hemoglobin value of 12" is an excerpt of target
+                                       "complete blood count").
+                                    </p>
+                                    <p>The distinction between an excerpt and an informant participant can be blurry ? such as in the case of recording a patient's
+                                       medication history where the clinician may obtain the information from an informant or may excerpt the information from another
+                                       computer system. An informant (or source of information) is a person who provides relevant information. An informant class
+                                       is in the header, and can be overridden in the body. An excerpt is a sub portion of some other act.
+                                    </p>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <p>The sourceOf2.inversionInd can be set to "true" to indicate that the relationship should be interpreted as if the roles of
+                           the 	source and target entries were reversed. In the example in the table above, "treadmill test" RSON (has reason) "chest
+                           pain". Inverted, this would have "chest pain" as the source and "treadmill test" as the target: "chest pain" RSON (inverted)
+                           "treadmill test". Inversion can be useful when the current context is describing the target of an act relationship that needs
+                           to be related back to the source.
+                        </p>
+                        <p>The actRelationship.contextConductionInd differs from the otherwise common use of this attribute in that in all other cases
+                           where this attribute is used, the value is fixed at "true", whereas here the value is defaulted to "true", and can be changed
+                           to "false" when referencing an entry in the same document. Setting the context conduction to false when referencing an entry
+                           in the same document keeps clear the fact that the 	referenced object retains its original context. 
+                        </p>
+                        <p><strong><em>     1.2.4.6     sourceOf1</em></strong></p>
+                        <p>Clinical Statement has identified and modeled various reference scenarios. These scenarios enable ActChoice Acts to be semantically
+                           linked to Acts by reference that exist within the same document/message or to Acts external to it. Each object allows for
+                           an identifier. 	
+                        </p>
+                        <p>A description of allowable, reference typeCode values are shown in the following table. As in the table above (sourceOf2/targetOf1
+                           Types) this table is a guideline for reasonable relationships ActChoice acts and ActReference objects, and is not a conformance
+                           constraint.
+                        </p>
+                        <table width="90%" cellspacing="0" cellpadding="5" border="1" style="border-color:blue">
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <p>ActRelationship Type</p>
+                                 </td>
+                                 <td>
+                                    <p>Reasonable Source and Target classes</p>
+                                 </td>
+                                 <td>
+                                    <p>Comments</p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>ELNK (episode link)</p>
+                                 </td>
+                                 <td>
+                                    <p>[Observation] ELNK [ExternalObservation]</p>
+                                 </td>
+                                 <td>
+                                    <p>Used to show that the source and the target are part of the same episode (for instance, a diagnosis of "pneumonia" can be
+                                       linked to an external problem list entry of "pneumonia" to show that the current diagnosis is part of the ongoing episode
+                                       of pneumonia).
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>REFR (refers to)</p>
+                                 </td>
+                                 <td>
+                                    <p>[Act | Observation | Procedure | SubstanceAdministration | Supply] REFR [ExternalAct | ExternalDocument | ExternalObservation
+                                       | ExternalProcedure]
+                                    </p>
+                                 </td>
+                                 <td>
+                                    <p>Used to show a general relationship between the source and the target, when the more specific semantics of the relationship
+                                       isn't known.
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>RPLC (replace)</p>
+                                 </td>
+                                 <td>
+                                    <p>[Act | Encounter | Observation | ObservationMedia | Organizer | Procedure | SubstanceAdministration | Supply] RPLC [ExternalAct
+                                       | ExternalDocument | ExternalObservation | ExternalProcedure]
+                                    </p>
+                                 </td>
+                                 <td>
+                                    <p>Used to indicate that the source statement is a replacement for the target external act.</p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>SPRT (has support)</p>
+                                 </td>
+                                 <td>
+                                    <p>[Observation] SPRT [ExternalDocument | ExternalObservation]</p>
+                                 </td>
+                                 <td>
+                                    <p>Used to show that the target provides supporting evidence for the source.</p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>SUBJ (has subject)</p>
+                                 </td>
+                                 <td>
+                                    <p>[Observation | RegionOfInterest] SUBJ [ExternalObservation]</p>
+                                 </td>
+                                 <td>
+                                    <p>Used to relate a source region of interest to a target image, or to relate an observation to its subject observation.</p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p>XCRPT (is excerpt of)</p>
+                                 </td>
+                                 <td>
+                                    <p>[Act | Observation] XCRPT [ExternalAct | ExternalDocument | ExternalObservation | ExternalProcedure]</p>
+                                 </td>
+                                 <td>
+                                    <p>Used to show that the source is excerpted from the target (for instance "the hemoglobin is 10.7" is an excerpt of an externally
+                                       referenced "complete blood count").
+                                    </p>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <p><strong><em>     1.2.4.7     Context and Inheritance</em></strong></p>
+                        <p>Although potentially complex, context inheritance provides an essential facility that:</p>
+                        <ul>
+                           <li>
+                              <p>removes the need to explicitly state the full context of every Clinical Statement as in the general case this can be inherited
+                                 from the source statement; and
+                              </p>
+                           </li>
+                           <li>
+                              <p>provides a mechanism that allows specific items of context to be overridden when appropriate.  For instance the 'author' of
+                                 a result for a battery is assumed to be the author for all the components but each test within the battery could be performed
+                                 by a different person or device.
+                              </p>
+                           </li>
+                        </ul>
+                        <p>Following the HL7 v3 conventions the source class (the class at the 'blunt' end of the SourceOf arrow) always specifies the
+                           context  in which the SourceOf was asserted.  Thus this source class indicates the attribution (time, author, etc.) of the
+                           linkage. The semantic direction of the relationship type (as expressed by SourceOf.typeCode) can be reversed using the inversionInd.
+                           As this does not reverse the owning context it allows the full range of directional relationships to be expressed from the
+                           context of either of the related classes.
+                        </p>
+                        <p>The seperatableInd in an Act Relationship indicates whether the author is willing to attest to the content of the source Act
+                           if it is separated from the target Act.  A value of 'false' indicates that they intend that the two acts are not separated
+                           for interpretation. This clearly cannot be enforced, but is intended as a warning to the recipient of the author's intent.
+                           The value of the seperatableInd is not propagated beyond the target Act, regardless of other context inheritance.
+                        </p>
+                        <p>Unless an Act Relationship specifically indicates to the contrary (a value of 'true' in the contextConductionInd), context
+                           is not inherited from source to  target.
+                        </p>
+                        <p>If the contextConductionInd in an Act Relationship is set to 'false' then none of the context of the source Act is inherited
+                           by the target Act.  However, when set to 'true', all of the context is inherited, except for Participations in the source
+                           Act where the contextControlCode is set to a 'non-propagating' value.  Where a specific Participation is included for an Act,
+                           this overrides any inherited Participation of the same type unless the contextControlCode is set to an 'additive' value when
+                           the specific Participation is in  addition to the inherited value (i.e. there are multiple Participations of the same type).
+                           Context inherited in this way is limited to Participations in an Act.  For a full discussion of propagation and its representation,
+                           refer to the RIM section of the HL7 Version 3 Standard.
+                        </p>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        Act Relationships that have an ActReference as their target never conduct context as the context of the referenced Clinical
+                        Statement is defined from its original setting.
+                        <p><strong>1.2.5     Participations surrounding the Acts</strong></p>
+                        <p>Clinical statements can have various participations. Participations propagated from the focal or source Act can be overridden
+                           within the Clinical Statement. These participations include:
+                        </p>
+                        <ul>
+                           <li>subject</li>
+                           <li>recordTarget</li>
+                           <li>author</li>
+                           <li>consumable</li>
+                           <li>informant</li>
+                           <li>performer</li>
+                           <li>product</li>
+                           <li>location</li>
+                           <li>dataEnterer</li>
+                           <li>verifier</li>
+                           <li>responsibleParty.</li>
+                        </ul>
+                        <p>The value sets for typeCode (CNE), contextControlCodes (CNE) and contextConductionInd for all participants are defined in
+                           the RIM. Selected participations are detailed below.
+                        </p><em><strong><em>     1.2.5.1     subject</em></strong></em><p>The patient is considered to be the Subject of each Clinical Statement in the communication unless it is explicitly indicated
+                           that this is not the case for the specified statement(s). This can be indicated in one of the following ways:
+                        </p>
+                        <ul>
+                           <li>The Clinical Statement has a subject participation that provides details of the person to whom the statement relates </li>
+                           <li>Optionally, in some realms, the SNOMED CT concept in the code attribute has a context that refers to someone other than the
+                              patient e.g. Father has history of Diabetes.
+                           </li>
+                        </ul>
+                        <p><strong><em>     1.2.5.2     recordTarget</em></strong></p>
+                        <p>The record target is the entity for which the Care Provision is being recorded, like the details of the baby go in the record
+                           of the mother. There is normally only one record target for a Clinical Statement. 
+                        </p>
+                        <p><strong><em>     1.2.5.3     author</em></strong></p>
+                        <p>Represents the humans and/or machines that authored the statements. This may be an assigned person or organization (R_AssignedEntity)
+                           such as a healthcare provider, a related party such as a family member or court, or the patient (R_Patient) themselves. The
+                           author participant can be ascribed to a Clinical Statement where it overrides the value(s) propagated from the focal or source
+                           act and propagates to nested Acts.  
+                        </p>
+                        <p><strong><em>     1.2.5.4     consumable</em></strong></p>
+                        <p>The consumable participation is used describe the administered substance. This may be an R_Medication CMET or AdministerableMaterial
+                           entity. The manufactured material in the R_Medication CMET or the Material class, identifies the drug that is consumed in
+                           the substance administration. The Material entity is used to identify non-drug administered substances such as vaccines and
+                           blood products. 
+                        </p>
+                        <p>The value sets for ManufacturedProduct.classCode (CNE),  LabeledDrug.classCode (CNE), Material.classCode (CNE), and Material.determinerCode
+                           (CNE) are defined in the RIM.
+                        </p>
+                        <p><strong><em>     1.2.5.5     informant</em></strong></p>
+                        <p>An informant (or source of information) is a person that provides relevant information, such as the parent of a comatose patient
+                           who describes the patient's behavior prior to the onset of coma. This may be an assigned person or organization (R_AssignedEntity)
+                           such as a healthcare provider, a related party such as a family member or court, or the patient (R_Patient) themselves. The
+                           RelatedEntity role is used to represent an informant without a role.id (e.g. a parent or guy on the street). The informant
+                           in this case bears some formal or personal relationship to the patient. RelatedEntity.code can be used to specify the nature
+                           of the relationship. The R_AssignedEntity role is used for an identified informant, and is scoped by an Organization. The
+                           informant participant, can be ascribed to a Clinical Statement where it overrides the value(s) propagated from the focal or
+                           source Act and propagates to nested Acts.
+                        </p>
+                        <p>The value sets for the RelatedEntity.classCode (CNE) is defined in the RIM.</p>
+                        <p><strong><em>     1.2.5.6     performer</em></strong></p>
+                        <p>The performer is a person who carries out or will carry out a particular act. The performer need not be the principal responsible
+                           participant, e.g. a surgery resident operating under supervision of attending surgeon is a performer. 
+                        </p>
+                        <p><strong><em>     1.2.5.7     product</em></strong></p>
+                        <p>The dispensed product associates the Supply act to a ManufacturedProduct sold. This may be a LabeledDrug entity or a Material.
+                           
+                        </p>
+                        <p><em><strong>1.2.5.8     location</strong></em></p>
+                        <p>Describes the location that the Clinical Statement took place or is intended to take place. It uses the ServiceDeliveryLocation
+                           role that may optionally use the Place or Organization entities to describe the particular location of the Clinical Statement.
+                        </p><strong>1.2.6     Acts and relationships outside the Choice Box</strong><p><strong><em>     1.2.6.1     ControlActEvent</em></strong></p>
+                        <p>A Clinical Statement can be associated with the Control Act in the Clinical Statement pattern. Each message has a Control
+                           Act wrapper to represent the trigger event to which this message relates. The contents, participations and semantics of the
+                           Trigger Event Control act are conducted to each class in the message including each Clinical Statement. In some circumstances,
+                           mostly for messaging in transactional domains such as Laboratory and Pharmacy, it may be necessary to associate one or more
+                           Clinical Statements to an additional control act. The ControlActEvent has been placed in the Clinical Statement pattern so
+                           that those transactional domains that would like to be compliant with the clinical statement may use it in their models and
+                           remain Clinical Statement compliant.
+                        </p>
+                        <p>In non-transactional messages it would be conceivable to use the control act to represent version history and to indicate
+                           that the Clinical Statements were subject to trigger events that differ from that in the Control Act wrapper. At present there
+                           are a number of areas where the V3 methodology does not support the use of control acts in non-transactional domains. It is
+                           advised that the control act is not included in messages derived from the Clinical Statement pattern in non-transactional
+                           domains.
+                        </p><em><strong>     1.2.6.2     referenceRange</strong></em><p>The referenceRange relationship (described above, see Observation), has a source of Observation, and a target that is another
+                           Clinical Statement. 
+                        </p>
+                        <p><em><strong>     1.2.6.3     conditions</strong></em></p>
+                        <p>The precondition class, derived from the ActRelationship class, is used along with the Criterion class to express a condition
+                           that must hold true before some other activity occurs.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <p>
+               <table>
+                  <tbody>
+                     <tr>
+                        <td><a class="custombutton" href="#top">Return to top of page</a></td>
+                     </tr>
+                  </tbody>
+               </table>
+            </p>
+         </div>
+      </div>
+   </body>
+</html>

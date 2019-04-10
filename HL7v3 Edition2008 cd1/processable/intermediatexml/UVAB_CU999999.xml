@@ -1,0 +1,29 @@
+<!--<!DOCTYPE usage PUBLIC "DTDVersion-1" "../../../support/dtd/V3mCMETusage.dtd">-->
+<!--CMET Usage collected and expressed by RoseTree 4.2.7-->
+<!--Example copyright 2008 by Health Level Seven, Inc. -->
+<usage rendered="5/1/2008 9:54:30 PM">
+<cmetuse role="uses">
+<hmdref ref="FIAB_HD020100UV02-hmd" refname="Patient Billing Post Event" refidentifier="FIAB_HD020100UV02"/>
+<cmetref ref="COCT_MT110100UV04-msg" refname="A_AccountPayorUniversal" refidentifier="COCT_MT110100UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FIAB_HD020100UV02-hmd" refname="Patient Billing Post Event" refidentifier="FIAB_HD020100UV02"/>
+<cmetref ref="COCT_MT280000UV04-msg" refname="A_BillableUniversal" refidentifier="COCT_MT280000UV04"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FIAB_HD010100UV02-hmd" refname="Patient Billing Account Event" refidentifier="FIAB_HD010100UV02"/>
+<cmetref ref="COCT_MT010000UV01-msg" refname="A_EncounterUniversal" refidentifier="COCT_MT010000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FIAB_HD020100UV02-hmd" refname="Patient Billing Post Event" refidentifier="FIAB_HD020100UV02"/>
+<cmetref ref="COCT_MT010000UV01-msg" refname="A_EncounterUniversal" refidentifier="COCT_MT010000UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FIAB_HD010100UV02-hmd" refname="Patient Billing Account Event" refidentifier="FIAB_HD010100UV02"/>
+<cmetref ref="COCT_MT030200UV01-msg" refname="E_PersonUniversal" refidentifier="COCT_MT030200UV01"/>
+</cmetuse>
+<cmetuse role="uses">
+<hmdref ref="FIAB_HD020100UV02-hmd" refname="Patient Billing Post Event" refidentifier="FIAB_HD020100UV02"/>
+<cmetref ref="COCT_MT030200UV01-msg" refname="E_PersonUniversal" refidentifier="COCT_MT030200UV01"/>
+</cmetuse>
+</usage>

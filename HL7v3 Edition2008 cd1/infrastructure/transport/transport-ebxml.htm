@@ -1,0 +1,1483 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head><script src="../../support/js/tree.js" type="text/javascript"></script><script src="../../support/js/setTopFrameText.js" type="text/javascript"></script><script src="../../support/js/swapcss.js" type="text/javascript"></script><script type="text/javascript">
+			if (find('heading')) setHeadingTextFromFileName(document.location.href);
+			</script><title>HL7 Version 3 Standard: Transport Specification - ebXML, Release 1</title>
+      <link rel="stylesheet" type="text/css" href="../../support/css/v3m.css" title="v3m" />
+   </head>
+   <body>
+      <div class="section">
+         <h1>HL7 Version 3 Standard: Transport Specification - ebXML, Release 1</h1>
+         <table style="border-width:0" width="100%" cellpadding="6">
+            <tr>
+               <td valign="top" align="left">Editor</td>
+               <td valign="top" align="left">Paul Knapp<br /><a href="mailto:pknapp@continovation.com">pknapp@continovation.com</a><br /></td>
+            </tr>
+         </table>
+         <p class="copyright">Last Published: 05/27/2008 5:15 PM</p>
+         <p class="copyright">HL7® Version 3 Standard, © 2008 Health 
+            Level Seven®, Inc.  All Rights Reserved.
+         </p>
+         <p class="copyright">HL7 and Health Level Seven are registered 
+            trademarks of Health Level Seven, Inc.  Reg. U.S. Pat &amp; TM Off
+         </p>
+         <hr title="Separator for header" />
+         <div class="body">
+            <div class="foundationtoc">
+               <h2><a name="contents">Table of Contents</a></h2>
+               
+               <div class="toc1"><a href="#prefBegin">Preface</a></div>
+               <div class="toc2">i  <a href="#prefNotes">Notes to Readers</a></div>
+               <div class="toc2">ii  <a href="#DSTU">Draft Standard for Trial Use</a></div>
+               
+               <div class="toc1">1  <a href="#ebXMLmessage">ebXML Message Delivery &amp; Message Wrapper</a></div>
+               <div class="toc2">1.1  <a href="#ebXMLmessagePreamble">Introduction &amp; Scope</a></div>
+               <div class="toc2">1.2  <a href="#ebXMLmessagesReferences">References</a></div>
+               <div class="toc2">1.3  <a href="#ebXMLmessagesLowerLevel">Lower Level Transports</a></div>
+               <div class="toc2">1.4  <a href="#ebXMLpackaging">Packaging Specification</a></div>
+               <div class="toc2">1.5  <a href="#ebXMLmessageDelivery">Message Delivery</a></div>
+               <div class="toc3">1.5.1  <a href="#ebXMLmessageExchangeWithAck">Message Exchange with ebXML Acknowledgments</a></div>
+               <div class="toc3">1.5.2  <a href="#ebXMLmessageExchangeWithoutAck">Message Exchange without ebXML Acknowledgments</a></div>
+               <div class="toc2">1.6  <a href="#ebXMLSequenceNumberProtocol">Sequence Number Protocol</a></div>
+               <div class="toc2">1.7  <a href="#ebXMLmessagesDuplicateHandling">Duplicate Message Handling</a></div>
+               <div class="toc2">1.8  <a href="#ebXMLmessageRouters">Message Routers</a></div>
+               <div class="toc2">1.9  <a href="#ebXMLmessageElements">ebXML Message Elements</a></div>
+               <div class="toc2">1.10  <a href="#ebXMLmessageElementAndAttributes">ebXML Element and Attribute Sources</a></div>
+               <div class="toc2">1.11  <a href="#ebXMLmessageDocNotes">Document Notes</a></div>
+               <div class="toc2">1.12  <a href="#ebXMLmessageSamples">Sample Messages</a></div>
+               <div class="toc3">1.12.1  <a href="#ebXMLmessageSamplesV2">HL7 Version 2 Sample Message</a></div>
+               <div class="toc3">1.12.2  <a href="#ebXMLmessageSampleAck">HL7 Version 2 Sample ebXML Acknowledgment</a></div>
+               <div class="toc3">1.12.3  <a href="#ebXMLmessageSampleRespone">HL7 Version 2 Sample Application Response Message</a></div>
+               <div class="toc3">1.12.4  <a href="#ebXMLmessageSampleV3">HL7 Version 3 Sample Message</a></div>
+               <div class="toc3">1.12.5  <a href="#ebXMLmessageSampleSignature">HL7 Version 2 Sample With Signature</a></div>
+               <div class="toc3">1.12.6  <a href="#ebXMLmessageSampleAckError">HL7 Version 2 Sample ebXML Acknowledgment with Error</a></div>
+               
+               <div class="toc1">2  <a href="#Appendex1">Appendex 1</a></div>
+               <div class="toc2">2.1  <a href="#HTTPTransport">HTTP Transport</a></div>
+               <div class="toc2">2.2  <a href="#SMTPTransport">SMTP Transport</a></div>
+               <div class="toc2">2.3  <a href="#SimpleSecureAuthTCPTransport">Simple Secure Authenticated TCP Transport</a></div>
+               <div class="toc3">2.3.1  <a href="#SimpleSecureTCP">Simple TCP and Secure TCP</a></div>
+               <div class="toc3">2.3.2  <a href="#SettingUpTCPIP">Setting up the TCP/IP connection</a></div>
+               <div class="toc3">2.3.3  <a href="#TCPIPConnParams">TCP/IP connection parameters</a></div>
+               <hr />
+            </div>
+            <div class="subSection">
+               <div class="header">
+                  <h3><a name="prefBegin">Preface</a></h3>
+               </div>
+            </div>
+            <div class="subSection">
+               <!--divN/head-->
+               <div class="header"><span class="icon"> </span><span class="number"><a name="prefNotes"></a>i </span><span class="title">Notes to Readers</span></div>
+               <div class="body">
+                  <p>This document was approved by the HL7 Board of Directors as a Draft Standard for Trail Use (DSTU) in 2003.</p>
+               </div>
+            </div>
+            <div class="subSection">
+               <!--divN/head-->
+               <div class="header"><span class="icon"> </span><span class="number"><a name="DSTU"></a>ii </span><span class="title">Draft Standard for Trial Use</span></div>
+               <div class="body">
+                  <p>As reviewers of this document submit suggestions, and implementers gain field experience with the standard and feed that information
+                     in as suggestions, technical amendments to the document may be issued.
+                  </p>
+                  <p>It is planned to commence work on a new version in late 2005. At this time known issues will be addressed and the document
+                     will proceed through the normal process for a normative HL7 document. Thank you to all contributors to this document, and
+                     to those organizations which are currently implementing this standard and through that effort will contribute to the evolution
+                     of this document.
+                     
+                  </p>
+               </div>
+            </div>
+            <hr title="Separator from body" />
+            <div class="subSection">
+               <!--divN/head-->
+               <div class="header"><span class="icon"><img src="../../support/graphics/DSTU.gif" alt="DSTU1" /></span><span class="number"><a name="ebXMLmessage"></a>1 </span><span class="title">ebXML Message Delivery &amp; Message Wrapper</span></div>
+               <div class="body">
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number"><a name="ebXMLmessagePreamble"></a>1.1 </span><span class="title">Introduction &amp; Scope</span></div>
+                     <div class="body">
+                        <p>
+                           					The purpose of the ebXML message wrapper is to provide a secure, flexible transport for exchanging HL7 messages and other
+                           content, and potentially other message formats, between message handling interfaces or ebXML Message Service Handlers (ebXML
+                           MSH).  This document describes a specific implementation of the ebXML Message Service as described in "Message Service Specification
+                           Version 2.0 1 April 2002".
+                           				
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number"><a name="ebXMLmessagesReferences"></a>1.2 </span><span class="title">References</span></div>
+                     <div class="body">
+                        <p><strong>ebXML &#8211; Electronic Business Extensible Markup Language</strong></p>
+                        <p>
+                           					The ebXML Message Service(ebMS), developed by The Organization for the Advancement of Structured Information Standards
+                           [OASIS] January 2002, defines the message enveloping and header document schema used to transfer ebXML messages over a communications
+                           protocol such as TCP/IP, HTTP or SMTP and the behavior of software sending and receiving ebXML messages.   The ebMS is defined
+                           as a set of layered extensions to the base Simple Object Access Protocol [SOAP] and SOAP Messages with Attachments [SOAPAttach]
+                           specifications.  This document provides security and reliability features necessary to support international electronic business.
+                           These security and reliability features are not provided in the SOAP or SOAP with Attachments specifications.
+                           				
+                        </p>
+                        <p> 
+                           					Documents may be found at 
+                           					<a href="http://www.oasis-open.org/committees/ebxml-msg/">"http://www.oasis-open.org/committees/ebxml-msg/"</a></p>
+                        <p>Additionally, CPP/A may be used as a convenient way of expressing trading partner parameters, and BPSS for the message exchange
+                           sequencing (business process).  Documents on these additional ebXML services may also be found at the OASIS site listed above.
+                        </p>
+                        <p><strong>SOAP &#8211; Simple Object Access Protocol</strong></p>
+                        <p>
+                           					SOAP is a lightweight protocol for exchange of information in a decentralized, distributed environment. It is an XML
+                           based protocol that consists of three parts: an envelope that defines a framework for describing what is in a message and
+                           how to process it, a set of encoding rules for expressing instances of application-defined datatypes, and a convention for
+                           representing remote procedure calls and responses.
+                           				
+                        </p>
+                        <p>
+                           					SOAP documents may be found at 
+                           					<a href="http://www.w3.org/TR/SOAP/">"http://www.w3.org/TR/SOAP/"</a>.
+                           					<br />
+                           					SOAP with Attachments documents may be found at 
+                           					<a href="http://www.w3.org/TR/SOAP-attachments">"http://www.w3.org/TR/SOAP-attachments"</a><br />
+                           					MIME (Multipurpose Internet Mail Extensions) documents may be found at 
+                           					<a href="http://www.ietf.org/rfc/rfc2045.txt">"http://www.ietf.org/rfc/rfc2045.txt"</a>.
+                           					<br />
+                           					Internet Message Format documents may be found at 
+                           					<a href="http://www.ietf.org/rfc/rfc2822.txt">"http://www.ietf.org/rfc/rfc2822.txt". </a></p>
+                        <p><strong>TLS/SSL &#8211; Transport Layer Security &#8211; Secure Sockets Layer</strong></p>
+                        <p>
+                           					The IETF protocol Version 1.0 of the Transport Layer Security Version 1.0 (TLS), and it's predecessor the Netscape protocol
+                           Secure Sockets Layer Version 3.0 (SSL), provide both communications privacy and authentication over the Internet. The protocols
+                           allow client/server applications to communicate in a way that is designed to prevent eavesdropping, tampering, or message
+                           forgery.
+                           				
+                        </p>
+                        <p>
+                           					TLS 1.0 documents may be found at 
+                           					<a href="http://www.ietf.org/rfc/rfc2246.txt">"http://www.ietf.org/rfc/rfc2246.txt"</a>.
+                           					<br />
+                           					SSL 3.0 documents may be found at 
+                           					<a href="http://wp.netscape.com/eng/ssl3/">"http://wp.netscape.com/eng/ssl3/"</a>.
+                           				
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number"><a name="ebXMLmessagesLowerLevel"></a>1.3 </span><span class="title">Lower Level Transports</span></div>
+                     <div class="body">
+                        <p>
+                           					The ebXML message wrappers and transport architecture as described in this document may be used to exchange messages
+                           over a variety of lower level transports such as TCP/IP, HTTP, SMTP and others.  The ebXML "Message Service Specification
+                           Version 2.0 1 April 2002" includes appendices describing the requirements for transport of the messages and wrappers over
+                           HTTP and SMTP.  This document includes a section titled "2.0 Simple Secure Authenticated TCP Transport" which provides the
+                           mechanisms for exchanging the ebXML messages via TCP/IP.
+                           				
+                        </p>
+                        <p>
+                           					The specific transport used to exchange messages is a matter for trading partner agreement, and may require additional
+                           transport specific content, such as headers, and/or host routing information, e.g. URL, DNS name, service name etc. However
+                           the messages themselves and the message handling architecture, what messages are to be exchanged and when, will be consistent
+                           regardless of the means used to exchange messages between two message handling interfaces, the Sending (Initiating) and Receiving
+                           ebXML MSHs.
+                           				
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number"><a name="ebXMLpackaging"></a>1.4 </span><span class="title">Packaging Specification</span></div>
+                     <div class="body">
+                        <p>
+                           					An ebXML Message is a lower level communication protocol independent MIME/Multipart message envelope, structured in compliance
+                           with the SOAP Messages with Attachments [SOAPATTACH] specification referred to as a 
+                           					<em>Message Package.</em></p>
+                        <p>There are two logical MIME parts within the Message Package:				
+                           				
+                           <ul style="margin-left:20px;">
+                              <li>A MIME part, referred to as the <em>Header Container</em>, containing one SOAP 1.1 compliant message.  This XML document is referred to as a SOAP Message for the remainder of this
+                                 specification.
+                              </li>
+                              <li>Zero or more MIME parts, referred to as <em>Payload Containers</em>, containing application level payloads.
+                              </li>
+                           </ul>
+                        </p>
+                        <p>
+                           					The <em>SOAP Message</em> is an XML document that consists of the SOAP <strong>Envelope</strong> element.  This is the root element of the XML document representing the <em>SOAP Message</em>.  The SOAP <strong>Envelope</strong> element consists of the following:
+                           					
+                           <ul style="margin-left:20px;">
+                              <li>One SOAP <strong>Header</strong> element.  This is a generic mechanism for adding features to a SOAP Message, including ebXML specific header elements.
+                              </li>
+                              <li>One SOAP <strong>Body</strong> element.  This is a container for message service handler control data and information related to the payload parts of the
+                                 message.
+                              </li>
+                           </ul>
+                        </p>
+                        <p>
+                           					The general structure and composition of an ebXML Message is described in the following figure.
+                           					<br /><img class="graphic" src="graphics/ebXMLfig1.jpg" alt="ebXMLfig1.jpg" /><br /><br /><br /><strong>Figure 1 ebXML Message Structure</strong> (Copyright OASIS 2002)
+                           				
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number"><a name="ebXMLmessageDelivery"></a>1.5 </span><span class="title">Message Delivery</span></div>
+                     <div class="body">
+                        <p>
+                           					The HL7 ebXML message delivery system may use the assured delivery mechanisms of ebXML.  The ebXML wrapper provides an
+                           element "/SOAP:Envelope/SOAP:Header/eb:MessageHeader/eb:ackRequested" the presence of which in the message body indicates
+                           that an ebXML Acknowledgment is required.  This element contains an attribute "eb:signed" which may be set to "true" or "false"
+                           to indicate whether or not the ebXML Acknowledgment must be signed by the creator of the acknowledgment
+                           				
+                        </p>
+                        <p>
+                           				The ebXML ACK (transport level ACK) serves the purpose to indicating to the sender that the payoad has been received by
+                           the receiver so that it is not retransmitted by the sender.  Implementers are free to not use ebXML ACKs and instead rely
+                           on application level ACKs, such as an HL7 Version 3 ACK, to indicate recept of the application message.
+                           
+                        </p>
+                        <p>
+                           The following section, "Message Exchange with ebXML Acnowledgments", makes use of the ebMS Guaranteed Message Delivery function,
+                           and retries, if necessary, are handled by the ebXML MSH software.  In the section "Message Exchange without ebXML Acnowledgments",
+                           the ebXML MSH is not responsible for failed delivery attempts, and retries are done by the sending application.  Retries in
+                           the latter section will only work if the application-level message exchange pattern (or Business Process) is bidirectional
+                           (request-reply, query-response, send-acknowledge), and the response will never be retried.  Message Exchange without ebXML
+                           Acnowledgments may be used when reliability and once-only delivery are not important to the parties involved.
+                           
+                        </p>
+                        <div class="subSubSubSection">
+                           <div class="header"><span class="icon"> </span><span class="number"><a name="ebXMLmessageExchangeWithAck"></a>1.5.1 </span><span class="title">Message Exchange with ebXML Acknowledgments</span></div>
+                           <div class="body">
+                              <p><br /><img class="graphic" src="graphics/ebXMLfig2.jpg" alt="ebXMLfig2.jpg" /><br /><br /><br /><strong>Figure 2 Message Exchange with ebXML Acknowledgments</strong> (Copyright OASIS 2002)
+                                 					
+                              </p>
+                              <p>
+                                 						The message exchange architecture requires the Sender (Initiator) to format and send (as a Sending ebXML MSH), via the
+                                 agreed lower level transport, an ebXML message to the message target (as a Receiving ebXML MSH).  The Receiving ebXML MSH
+                                 will respond with an ebXML Acknowledgment Message to confirm receipt of the Sender&#8217;s message.  The target message interface
+                                 will then assume the role of the Sending ebXML MSH in the return of a response message with an application message payload
+                                 and the Initiator, in the role of Receiving ebXML MSH, will confirm receipt of the response message with an ebXML Acknowledgment
+                                 Message.
+                                 					
+                              </p>
+                              <p>
+                                 						The rules that apply are as follows:
+                                 						
+                                 <ul style="margin-left:20px;">
+                                    <li>
+                                       								The <em>Sending ebXML MSH</em> MUST resend the original message if an ebXML <em>Acknowledgment Message</em> has not been received from the <em>Receiving ebXML MSH</em> and the following are both true:
+                                       								
+                                       <ol>
+                                          <li>At least the time specified in the <strong>retryInterval</strong> has passed since the message was last sent, and
+                                          </li>
+                                          <li>The message has been resent less than the number of times specified in the <strong>retries</strong> Parameter
+                                          </li>
+                                       </ol>
+                                    </li>
+                                    <li>
+                                       								If the <em>Sending ebXML MSH</em> does not receive an ebXML <em>Acknowledgment Message</em> after the maximum number of retries, the <em>Sending ebXML MSH</em> SHOULD notify the application and/or system administrator function of the failure to receive an acknowledgment.
+                                       							
+                                    </li>
+                                    <li>
+                                       								If the <em>Sending ebXML MSH</em> detects an unrecoverable communications protocol error at the transport protocol level, the <em>Sending ebXML MSH</em> SHOULD resend the message if possible, otherwise terminate and if possible reestablish the connection.
+                                       							
+                                    </li>
+                                 </ul>
+                              </p>
+                              <p>	It is up to trading partners to determine the specific values of the <strong>retryInterval</strong> and the number of <strong>retries</strong>.
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection">
+                           <div class="header"><span class="icon"> </span><span class="number"><a name="ebXMLmessageExchangeWithoutAck"></a>1.5.2 </span><span class="title">Message Exchange without ebXML Acknowledgments</span></div>
+                           <div class="body">
+                              <p><br /><img class="graphic" src="graphics/ebXMLfig3.jpg" alt="ebXMLfig3.jpg" /><br /><br /><br /><strong>Figure 3 Message Exchange without ebXML Acknowledgments</strong> (Copyright OASIS 2002)
+                                 					
+                              </p>
+                              <p>
+                                 						The message exchange architecture requires the Sender (Initiator) to format and send (as a Sending ebXML MSH), via the
+                                 agreed lower level transport, an ebXML message to the message target (as a Receiving ebXML MSH).  The target message interface
+                                 will then assume the role of the Sending ebXML MSH in the return of a response message with an application message payload.
+                                 Neither the Initiator nor the Target message interfaces will acknowledge receipt of the message from the other message interface.
+                                 					
+                              </p>
+                              <p>
+                                 						The rules that apply are as follows:
+                                 						
+                                 <ul style="margin-left:20px;">
+                                    <li>
+                                       								The <em>Sending ebXML MSH</em> MUST resend the original message if a <em>Message with an application payload </em>has not been received from the <em>Receiving ebXML MSH</em> and the following are both true:
+                                       								
+                                       <ol>
+                                          <li>At least the time specified in the <strong>retryInterval </strong>has passed since the message was last sent, and
+                                          </li>
+                                          <li>The message has been resent less than the number of times specified in the <strong>retries </strong>Parameter
+                                          </li>
+                                       </ol>
+                                    </li>
+                                    <li>If the <em>Sending ebXML MSH</em> does not receive a <em>Message with an application payload</em> after the maximum number of retries, the <em>Sending ebXML MSH</em> SHOULD notify the application and/or system administrator function of the failure to receive a response.
+                                    </li>
+                                    <li>If the <em>Sending ebXML MSH</em> detects an unrecoverable communications protocol error at the transport protocol level, the <em>Sending ebXML MSH</em> SHOULD resend the message if possible, otherwise terminate and if possible reestablish the connection.
+                                    </li>
+                                 </ul>
+                              </p>
+                              <p>It is up to trading partners to determine the specific values of the <strong>retryInterval </strong>and the number of <strong>retries</strong>.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number"><a name="ebXMLSequenceNumberProtocol"></a>1.6 </span><span class="title">Sequence Number Protocol</span></div>
+                     <div class="body">
+                        <p>
+                           				To support the Sequence Number Protocol at the ebXML Messaging level see Section 9.1 in the "Message Service Specification
+                           Version 2" for ebXML through the inclusion of an optional eb:MessageOrder element in the eb:MessageHeader.
+                           				
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number"><a name="ebXMLmessagesDuplicateHandling"></a>1.7 </span><span class="title">Duplicate Message Handling</span></div>
+                     <div class="body">
+                        <p>
+                           					All nodes involved in the transport of the message from the originator to the ultimate receiver may implement a persistent
+                           storage mechanism in order to detect and suppress the forwarding of duplicate messages. The presence of a <em>/SOAP:Envelope/SOAP:Header/eb:MessageHeader/eb:DuplicateElimination</em> element in the SOAP Header indicates that duplicate messages should be eliminated and not passed on to the Receiving Application
+                           or next message interface.  In the context of this specification:
+                           					
+                           <ul style="margin-left:20px;">
+                              <li>an "identical message" is a message that contains the same ebXML SOAP <strong>Header</strong>, <em>Body</em> and ebXML <em>Payload </em>as the earlier <em>message </em>that was sent.
+                              </li>
+                              <li>a "duplicate message" is a message that contains the same <strong>MessageId </strong>as an earlier message that was received.
+                              </li>
+                              <li>the "first message" is the message with the earliest <strong>Timestamp </strong>in the <strong>MessageData </strong>element that has the same <em>RefToMessageId </em>as the duplicate message.
+                              </li>
+                              <li>for the purpose of this specification an identical message SHALL always be a Duplicate Message</li>
+                           </ul>
+                        </p>
+                        <p><br /><img class="graphic" src="graphics/ebXMLfig4.jpg" alt="ebXMLfig4.jpg" /><br /><br /></p>
+                        <p><strong>Figure 4 Resending Unacknowledged Messages</strong> (Copyright OASIS 2002)
+                        </p>
+                        <p>
+                           					The diagram above shows the behavior that MUST be followed by the Sending and Receiving ebXML MSHs when Duplicate Elimination
+                           is specified.   Specifically:
+                           					
+                           <ol>
+                              <li>The sender of the <em>message  </em>(e.g. Sending ebXML MSH) MUST resend the "identical message" if no ebXML <em>Acknowledgment Message</em> is received.
+                              </li>
+                              <li>When the recipient (Receiving ebXML MSH) of the message receives a "duplicate message", it MUST resend to the sender (Sending
+                                 ebXML MSH) a message identical to the <em>first message</em> that was sent to the sender (Sending ebXML MSH).
+                              </li>
+                              <li>The recipient of the <em>message </em>(Receiving ebXML MSH) MUST NOT forward the message a second time to the application/process.
+                              </li>
+                           </ol>
+                        </p>
+                        <p>	The length of time for which message information should be retained in persistent storage to effectively eliminate duplicates
+                           is a an issue for trading partners to determine based upon the nature of the messages being exchanged.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number"><a name="ebXMLmessageRouters"></a>1.8 </span><span class="title">Message Routers</span></div>
+                     <div class="body">
+                        <p>
+                           					A Message Router is a system or service which accepts connections and messages on behalf of Sending MSHs which don&#8217;t
+                           know the actual connection route to a given Receiving MSH which serves to route messages between Sending and Receiving MSHs.
+                           				
+                        </p>
+                        <p>
+                           					The Router will authenticate the Sending connection, if required, and receive and acknowledge Client messages in the
+                           same manner as a Receiving ebXML MSH, and perform the same duplicate suppression as would a Receiving ebXML MSH.  Once a message
+                           is passed to a Router and acknowledged by the Router, the Router assumes responsibility to get the message to the intended
+                           target Receiving ebXML MSH.
+                           				
+                        </p>
+                        <p>
+                           					Receiving ebXML MSHs will accept and authenticate connections from Routers and otherwise deal with Routers as if they
+                           were the Sending ebXML MSH.
+                           				
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number"><a name="ebXMLmessageElements"></a>1.9 </span><span class="title">ebXML Message Elements</span></div>
+                     <div class="body">
+                        <p>
+                           					Only the elements of specific interest to this implementation are described below, for a description of all elements
+                           please refer to "ebXML Message Service Specification Version 2.0 1 April 2002".  The Src (Source) column below indicates whether
+                           the element or attribute is populated from the Message Contents (Msg) or the Message Service Handler (MSH).  All items (attributes,
+                           elements, parameters and headers) specified below are required unless specified below.  All other ebXML elements and attributes
+                           not specified below are permitted but may be ignored by the receiver.
+                           					
+                           <table width="90%" cellspacing="0" cellpadding="5" border="1" style="border-color:blue">
+                              <thead>
+                                 <tr>
+                                    <th colspan="1">Location</th>
+                                    <th colspan="1">Src</th>
+                                    <th colspan="1">Description/Notes</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td colspan="1"><strong>SOAP with Attachments MIME Envelope</strong></td>
+                                    <td colspan="1"> </td>
+                                    <td colspan="1"> </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">SOAPAction header</td>
+                                    <td colspan="1">MSH</td>
+                                    <td colspan="1">Must be "ebXML"</td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">Content-Type header</td>
+                                    <td colspan="1">MSH</td>
+                                    <td colspan="1">Must be multipart/related</td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">Content-Type header, @type</td>
+                                    <td colspan="1">MSH</td>
+                                    <td colspan="1">Must be text/xml</td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">Content-Type header, @boundary</td>
+                                    <td colspan="1">MSH</td>
+                                    <td colspan="1">The string which is used to mark boundaries between MIME parts and terminate the multipart MIME message.</td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">Content-Type header, @start</td>
+                                    <td colspan="1">MSH</td>
+                                    <td colspan="1">This attribute maps to the Content-ID of the SOAP Envelope MIME part.  </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1"><strong>SOAP Message</strong></td>
+                                    <td colspan="1"> </td>
+                                    <td colspan="1"> </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">Content-ID header</td>
+                                    <td colspan="1">MSH</td>
+                                    <td colspan="1">Maps to the SOAP with Attachments MIME Envelope Content-Type start attribute.</td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">Content-Type header</td>
+                                    <td colspan="1">MSH</td>
+                                    <td colspan="1">Must be<em> text/xml</em>.
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">Content-Type header, @charset</td>
+                                    <td colspan="1">Msg</td>
+                                    <td colspan="1">Trading partner specified.</td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/?xml/@encoding</td>
+                                    <td colspan="1">MSH</td>
+                                    <td colspan="1">Must match the Content-Type @charset setting.</td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Header /eb:MessageHeader/eb:From/eb:PartyId</td>
+                                    <td colspan="1">Msg</td>
+                                    <td colspan="1">Identification of the message sender.</td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Header/eb:MessageHeader/eb:From/eb:PartyId@type</td>
+                                    <td colspan="1">MSH</td>
+                                    <td colspan="1">Domain of the contents if not a uri, eg. "urn:isooid' for OIDs.</td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Header /eb:MessageHeader/eb:To/eb:PartyId</td>
+                                    <td colspan="1">Msg</td>
+                                    <td colspan="1">Identification of the message receiver.</td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Header /eb:MessageHeader/eb:To/eb:PartyId@type</td>
+                                    <td colspan="1">MSH</td>
+                                    <td colspan="1">Domain of the contents if not a uri, eg. "urn:isooid' for OIDs.</td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Header /eb:MessageHeader/eb:To/eb:CPAId</td>
+                                    <td colspan="1">MSH</td>
+                                    <td colspan="1">Identification of a Collaboration Protocol Agreement between the sender and receiver.  This will contain the trading partner
+                                       agreed CPA text reference.
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Header /eb:MessageHeader/eb:To/eb:ConversationId</td>
+                                    <td colspan="1">MSH</td>
+                                    <td colspan="1">HL7 makes no use of this element.  Given that this is an ebXML required element the following may be used in the absence of
+                                       a local trading partner agreement CCYYMMDD-HHMMSS-mmmmm based upon the Sending ebXML MSH connection  When generating responses
+                                       the eb:ConversationID is taken from the original message.
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Header /eb:MessageHeader/eb:Service</td>
+                                    <td colspan="1">MSH</td>
+                                    <td colspan="1">Identification of the message processing service on the receiver&#8217;s end of the conversation, recommend <em>urn:services:HL7MessageProcessing</em>.For ebXML acknowledgment messages the value must be <em>urn:oasis:names:tc:ebxml-msg:service</em>.
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Header /eb:MessageHeader/eb:Action</td>
+                                    <td colspan="1">Msg</td>
+                                    <td colspan="1">Identification of the action process within the message processing service on the receiver&#8217;s end of the conversation.For ebXML
+                                       acknowledgment messages the value must be <em>Acknowledgment</em>.
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Header /eb:MessageHeader/eb:MessageData/eb:MessageId</td>
+                                    <td colspan="1">Msg</td>
+                                    <td colspan="1">A unique message identifier generated by the sender, either a concatenation of message elements, to create a globally unique
+                                       identifier, or a single message element if that element is globally unique.
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Header /eb:MessageHeader/eb:MessageData/eb:Timestamp</td>
+                                    <td colspan="1">MSH</td>
+                                    <td colspan="1">The timestamp for the message determined by the ebXML MSH when the actual message to be sent is created. Note that the format
+                                       for this element uses xs:dateTime format while HL7 V3 TS type does not?
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Header /eb:MessageHeader/eb:SyncReply</td>
+                                    <td colspan="1">MSH</td>
+                                    <td colspan="1">Indicates to the Receiving ebXML MSH, or all of the ebXML MSHs in a route, that they should keep the connection to the Sending
+                                       ebXML MSH open as a reply from the target ebXML MSH is expected.
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Header /eb:MessageHeader/eb:MessageOrder</td>
+                                    <td colspan="1">MSH</td>
+                                    <td colspan="1">Optional element used when message ordering is required.  The @SequenceNumber attribute holds the sequence number.</td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Header /eb:MessageHeader/eb:DuplicateElimination</td>
+                                    <td colspan="1">MSH</td>
+                                    <td colspan="1">Optional.Indicates to the Receiving ebXML MSH that it should eliminate duplicate messages.</td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Header /eb:MessageHeader/eb:ackRequested</td>
+                                    <td colspan="1">MSH</td>
+                                    <td colspan="1">Optional.The presence of this element indicates that an ebXML Acknowledgment is required from the next MSH.</td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Header /eb:MessageHeader/eb:ackRequested/@eb:signed</td>
+                                    <td colspan="1">MSH</td>
+                                    <td colspan="1">"false" indicates that an unsigned ebXML acknowledgment must be returned by the receiver to confirm receipt, if a digitally
+                                       signed acknowledgment is required then the value must be "true".
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Body /eb:Manifest/eb:Reference/@xlink:href</td>
+                                    <td colspan="1">MSH</td>
+                                    <td colspan="1">A URI that identifies the particular MIME part in the Message Package that corresponds to this payload.  The URI should identify
+                                       the MIME part by its content-id using the cid URI scheme [ add ref to RFC that defines the cid URI scheme].
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Body /eb:Manifest/eb:Reference/eb:Description</td>
+                                    <td colspan="1">Msg</td>
+                                    <td colspan="1">Text description of the payload.</td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Body /eb:Manifest/eb:Reference/hl7ebxml:Payload/@style</td>
+                                    <td colspan="1">Msg</td>
+                                    <td colspan="1">The style or standard to which the message in the payload conforms.  For HL7 messages use  "HL7". Other implementation may
+                                       define additional values such as "X12", "NCPDP", "CDANET". 
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Body/eb:Manifest /eb:Reference/hl7ebxml:Payload/@encoding</td>
+                                    <td colspan="1">Msg</td>
+                                    <td colspan="1">The encoding method for the standard which is used to encode the message in the payload.  For HL7 use "Delimited" or  "XML".
+                                       Other implementations may define additional values such as  "Fixed" .
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Body /eb:Manifest/eb:Reference/hl7ebxml:Payload/@version</td>
+                                    <td colspan="1">Msg</td>
+                                    <td colspan="1">The version of the standard to which the payload message conforms.</td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1"><strong>Payload</strong></td>
+                                    <td colspan="1"> </td>
+                                    <td colspan="1"> </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">Content-ID header</td>
+                                    <td colspan="1">MSH</td>
+                                    <td colspan="1">Maps to the /SOAP:Envelope/SOAP:Body /eb:Manifest/eb:Reference/@xlink:href attribute.</td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">Content-Type header</td>
+                                    <td colspan="1">MSH</td>
+                                    <td colspan="1">Must be <em>application/xml </em>when the payload is cast in xml, for example HL7 V2 and V3 xml encoded, and<em> text/plain</em> when cast as text, for example HL7 V2 VBAR.
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">Content-Type header, @charset</td>
+                                    <td colspan="1">Msg</td>
+                                    <td colspan="1">Trading partner specified.</td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number"><a name="ebXMLmessageElementAndAttributes"></a>1.10 </span><span class="title">ebXML Element and Attribute Sources</span></div>
+                     <div class="body">
+                        <p>The tables below detail where in the messages element and attribute contents are sourced.</p>
+                        <p><strong>HL7 version 2 Messages</strong><br /><table width="90%" cellspacing="0" cellpadding="5" border="1" style="border-color:blue">
+                              <thead>
+                                 <tr>
+                                    <th colspan="1">Location</th>
+                                    <th colspan="1">Message Source</th>
+                                    <th colspan="1">Notes</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Header /eb:MessageHeader/eb:From/eb:PartyId</td>
+                                    <td colspan="1">MSH.4 Sending Facility</td>
+                                    <td colspan="1"> </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Header /eb:MessageHeader/eb:To/eb:PartyId</td>
+                                    <td colspan="1">MSH.6 Receiving Facility</td>
+                                    <td colspan="1"> </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Header /eb:MessageHeader/eb:Service</td>
+                                    <td colspan="1"><em>urn:services:HL7MessageProcessing</em></td>
+                                    <td colspan="1"> </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Header /eb:MessageHeader/eb:Action</td>
+                                    <td colspan="1">MSH.9.3 Message Type</td>
+                                    <td colspan="1">Third part of the field</td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Header /eb:MessageHeader/eb:MessageData/eb:MessageId</td>
+                                    <td colspan="1">MSH.4 + "-" + MSH.10 Message Control ID</td>
+                                    <td colspan="1">MSH.4 + "-" + MSH.10 concatenated</td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Body /eb:Manifest/eb:Reference/hl7ebxml:Payload/@style</td>
+                                    <td colspan="1">"HL7"</td>
+                                    <td colspan="1"> </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Body /eb:Manifest/eb:Reference/hl7ebxml:Payload/@encoding</td>
+                                    <td colspan="1">"Delimited" or "XML"</td>
+                                    <td colspan="1">Based on actual encoding.</td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Body /eb:Manifest/eb:Reference/hl7ebxml:Payload/@version</td>
+                                    <td colspan="1">MSH.12 Version ID</td>
+                                    <td colspan="1"> </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </p>
+                        <p><strong>HL7 Version 3 Messages</strong>.  Note all elements are direct children of the hl7:Message element.
+                           					
+                           <table width="90%" cellspacing="0" cellpadding="5" border="1" style="border-color:blue">
+                              <thead>
+                                 <tr>
+                                    <th colspan="1">Element/Attribute</th>
+                                    <th colspan="1">Message Source</th>
+                                    <th colspan="1">Notes</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Header /eb:MessageHeader/eb:From/eb:PartyId</td>
+                                    <td colspan="1">&lt;sender&gt;&lt;device&gt;&lt;id&gt; root attribute [+ "-" + extension attribute]</td>
+                                    <td colspan="1">OID [+ "-" + Extension] concatenated</td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Header /eb:MessageHeader/eb:To/eb:PartyId</td>
+                                    <td colspan="1">&lt;receiver&gt;&lt;device&gt;&lt;id&gt; root attribute [+ "-" + extension attribute]</td>
+                                    <td colspan="1">OID [+ "-" + Extension] concatenated</td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Header /eb:MessageHeader/eb:Service</td>
+                                    <td colspan="1"><em>urn:services:HL7MessageProcessing</em></td>
+                                    <td colspan="1"> </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Header /eb:MessageHeader/eb:Action</td>
+                                    <td colspan="1">Root name</td>
+                                    <td colspan="1">String, e.g. "POLB_IN004410"</td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Header /eb:MessageHeader/eb:MessageData/eb:MessageId</td>
+                                    <td colspan="1">&lt;id&gt; root attribute [+ "-" + extension attribute]</td>
+                                    <td colspan="1">OID [+ "-" + Extension] concatenated</td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Body /eb:Manifest/eb:Reference/hl7ebxml:Payload/@style</td>
+                                    <td colspan="1">"HL7"</td>
+                                    <td colspan="1"> </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Body /eb:Manifest/eb:Reference/hl7ebxml:Payload/@encoding</td>
+                                    <td colspan="1">"XML"</td>
+                                    <td colspan="1">Based on actual encoding.</td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">/SOAP:Envelope/SOAP:Body /eb:Manifest/eb:Reference/hl7ebxml:Payload/@version</td>
+                                    <td colspan="1">&lt;versionCode&gt; code attribute</td>
+                                    <td colspan="1"> </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number"><a name="ebXMLmessageDocNotes"></a>1.11 </span><span class="title">Document Notes</span></div>
+                     <div class="body">
+                        <p>
+                           					Reliance upon schema location hints when provided in the message may present a potential security risk therefore message
+                           senders should not include them in messages and SOAP and ebXML processors are encouraged to ignore them unless the URI provided
+                           matches the URI specified in their respective specifications.
+                           				
+                        </p>
+                        <p>
+                           					The examples provided are based on HL7 ballot #6 (December 2003) and therefore do not necessarily reflect the current
+                           message standard.
+                           				
+                        </p>
+                        <p>
+                           					XML language encoding is a trading partner issue and therefore the document XML encoding is left to trading partners
+                           to determine even though the examples provided in the appendixes show UTF-8.  
+                           				
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number"><a name="ebXMLmessageSamples"></a>1.12 </span><span class="title">Sample Messages</span></div>
+                     <div class="body">
+                        <p>
+                           					The following sections contain sample messages to illustrate the construction of ebXML messages with both HL7 version
+                           2 and version 3 payloads, as well as with xml and non-xml payloads.
+                           					
+                           <table width="90%" cellspacing="0" cellpadding="5" border="1" style="border-color:blue">
+                              <thead>
+                                 <tr>
+                                    <th colspan="1">Sample</th>
+                                    <th colspan="1">Title</th>
+                                    <th colspan="1">Notes</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td colspan="1">1</td>
+                                    <td colspan="1">HL7 Version 2 Sample Message</td>
+                                    <td colspan="1">HL7 Version 2 Admit Notification application message which requests an unsigned ebXML Acknowledgment from the interface which
+                                       receives this message.
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">2</td>
+                                    <td colspan="1">HL7 Version 2 Sample ebXML Acknowledgment</td>
+                                    <td colspan="1">The unsigned ebXML Acknowlegement message from the receiver of the above message.</td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">3</td>
+                                    <td colspan="1">HL7 Version 2 Sample Application Response Message</td>
+                                    <td colspan="1">HL7 Version 2 Lab response application message which requests an unsigned ebXML Acknowledgment from the interface which receives
+                                       this message.
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">4</td>
+                                    <td colspan="1">HL7 Version 3 Sample Message</td>
+                                    <td colspan="1">HL7 Version 3 Admit Notification application message which requests an unsigned ebXML Acknowledgment from the interface which
+                                       receives this message.
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">5</td>
+                                    <td colspan="1">HL7 Version 2 Sample Message with Signature</td>
+                                    <td colspan="1">HL7 Version 2 Admit Notification application message which requests a signed ebXML Acknowledgment from the interface which
+                                       receives this message.
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="1">6</td>
+                                    <td colspan="1">HL7 Version 2 Sample ebXML Acknowledgment with Error</td>
+                                    <td colspan="1">An unsigned ebXML Acknowlegement message which reports errors in the received message.</td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </p>
+                        <div class="subSubSubSection">
+                           <div class="header"><span class="icon"> </span><span class="number"><a name="ebXMLmessageSamplesV2"></a>1.12.1 </span><span class="title">HL7 Version 2 Sample Message</span></div>
+                           <div class="body">
+                              <p>
+                                 <table width="90%" id="Sample1">
+                                    <caption>Example 1. </caption>
+                                    <tr>
+                                       <td class="example"><pre><pre><p>
+SOAPAction: "ebXML"
+Content-Type: multipart/related; boundary="MIME_boundary"; type="text/xml";
+start="ebhmheader@example.com"
+								
+--MIME_boundary
+Content-ID: &lt;ebhmheader@example.com&gt;
+Content-Type: text/xml; charset = "UTF-8"
+								
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;SOAP:Envelope 
+  xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:eb="http://www.oasis-open.org/committees/ebxml-msg/schema/msg-header-2_0.xsd"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:hl7ebxml="urn:hl7-org:transport/ebXML/DSTUv1.0"&gt;
+  &lt;SOAP:Header&gt;
+     &lt;eb:MessageHeader version="2.0" SOAP:mustUnderstand="1"&gt;
+		&lt;eb:From&gt;
+		&lt;eb:PartyId eb:type="localid"&gt;MCM&lt;/eb:PartyId&gt;
+ 	&lt;/eb:From&gt;
+ 	&lt;eb:To&gt;
+		&lt;eb:PartyId eb:type="localid"&gt;XYZ&lt;/eb:PartyId&gt;
+ 	&lt;/eb:To&gt;
+	&lt;eb:CPAId&gt;MCM-XYZ&lt;/eb:CPAId&gt;
+	&lt;eb:ConversationId&gt;20001215-133003-28572&lt;/eb:ConversationId&gt;
+	&lt;eb:Service&gt;urn:services:HL7MessageProcessing&lt;/eb:Service&gt;
+	&lt;eb:Action&gt;ADT_A01&lt;/eb:Action&gt;
+		&lt;eb:MessageData&gt;
+		&lt;eb:MessageId&gt;MCM-MSG00001&lt;/eb:MessageId&gt;
+			&lt;eb:Timestamp&gt;2001-02-15T11:17:00Z&lt;/eb:Timestamp&gt;
+		&lt;/eb:MessageData&gt;
+	&lt;eb:SyncReply eb:version="2.0" SOAP:mustUnderstand="1" 
+SOAP:actor="http://schemas.xmlsoap.org/soap/actor/next"/&gt;
+	&lt;eb:DuplicateElimination/&gt;
+&lt;eb:AckRequested SOAP:mustUnderstand="1" eb:version="2.0" 
+eb:signed="false" eb:actor="urn:oasis:names:tc:ebxml-msg:actor:nextMSH"/&gt;
+    	&lt;/eb:MessageHeader&gt;
+  &lt;/SOAP:Header&gt;
+  &lt;SOAP:Body&gt;
+&lt;eb:Manifest eb:version="2.0"&gt;
+	&lt;eb:Reference xlink:href="cid:ebxmlpayload01@example.com"&gt;
+		&lt;eb:Description xml:lang="en-us"&gt;Admit Notification1&lt;/eb:Description&gt;
+		&lt;hl7ebxml:Payload style="HL7" encoding="Delimited" version="2.4"/&gt;
+		&lt;/eb:Reference&gt;
+	&lt;/eb:Manifest&gt;
+  &lt;/SOAP:Body&gt;
+&lt;/SOAP:Envelope&gt;
+								
+--MIME_boundary
+Content-ID: &lt;ebxmlpayload01@example.com&gt;
+Content-Type: text/plain; charset = "UTF-8"
+								
+MSH|^~\&amp;|ADT1|MCM|LABADT|XYZ|200102151112|SECURITY|ADT^A01^ADT_A01|MSG00001­|P|2.4|12345678||AL|NE&lt;cr&gt;
+EVN|A01|200102091109||&lt;cr&gt;
+PID|1||PATID1234^5^M11^ADT1^MR^MCM~123456789^^^USSSA^SS||JONES^WILLIAM^A^III||19610615|M­||C|
+1200 N ELM STREET^^GREENSBORO^NC^27401-1020|GL|(919)379-1212|(919)271-3434||S||
+PATID12345001^2^M10^ADT1^AN^A|123456789|9­87654^NC|&lt;cr&gt;
+NK1|1|JONES^BARBARA^K|WI^WIFE||||NK^NEXT OF KIN&lt;cr&gt;
+PV1|1|I|2000^2012^01||||004777^LEBAUER^SIDNEY^J.|||SUR||­||ADM|A0­|&lt;cr&gt;
+								
+--MIME_boundary--
+</p></pre></pre></td>
+                                    </tr>
+                                 </table>
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection">
+                           <div class="header"><span class="icon"> </span><span class="number"><a name="ebXMLmessageSampleAck"></a>1.12.2 </span><span class="title">HL7 Version 2 Sample ebXML Acknowledgment</span></div>
+                           <div class="body">
+                              <p>
+                                 <table width="90%" id="Sample2">
+                                    <caption>Example 2. </caption>
+                                    <tr>
+                                       <td class="example"><pre><pre><p>
+SOAPAction: "ebXML"
+Content-Type: multipart/related; boundary="MIME_boundary"; type="text/xml";
+start="ebhmheader@example.com"
+								
+--MIME_boundary
+Content-ID: &lt;ebhmheader@example.com&gt;
+Content-Type: text/xml; charset = "UTF-8"
+								
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;SOAP:Envelope 
+  xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:eb="http://www.oasis-open.org/committees/ebxml-msg/schema/msg-header-2_0.xsd"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:hl7ebxml="urn:hl7-org:transport/ebXML/DSTUv1.0"&gt;
+  &lt;SOAP:Header&gt;
+     &lt;eb:MessageHeader version="2.0" SOAP:mustUnderstand="1"&gt;
+		&lt;eb:From&gt;
+		&lt;eb:PartyId eb:type="localid"&gt;XYZ&lt;/eb:PartyId&gt;
+ 	&lt;/eb:From&gt;
+ 	&lt;eb:To&gt;
+		&lt;eb:PartyId eb:type="localid"&gt;MCM&lt;/eb:PartyId&gt;
+ 	&lt;/eb:To&gt;
+	&lt;eb:CPAId&gt;MCM-XYZ&lt;/eb:CPAId&gt;
+	&lt;eb:ConversationId&gt;20010215-133003-28572&lt;/eb:ConversationId&gt;
+	&lt;eb:Service&gt;urn:oasis:names:tc:ebxml-msg:service&lt;/eb:Service&gt;
+	&lt;eb:Action&gt;Acknowledgment&lt;/eb:Action&gt;
+		&lt;eb:MessageData&gt;
+		&lt;eb:MessageId&gt;XYZ-20010215-111800-12345&lt;/eb:MessageId&gt;
+			&lt;eb:Timestamp&gt;2001-02-15T11:12:00Z&lt;/eb:Timestamp&gt;
+		&lt;eb:RefToMessageId&gt;MCM-MSG00001&lt;/eb:RefToMessageId&gt;
+		&lt;/eb:MessageData&gt;
+	&lt;eb:DuplicateElimination/&gt;
+    	&lt;/eb:MessageHeader&gt;
+&lt;eb:Acknowledgment
+	SOAP:mustUnderstand="1"
+	eb:version="2.0"
+	SOAP:actor="urn:oasis:names:tc:ebxml-msg:actor:nextMSH"&gt;
+	&lt;eb:Timestamp&gt;2001-02-15T11:17:00Z&lt;/eb:Timestamp&gt;
+	&lt;eb:From&gt;
+		&lt;eb:PartyId&gt;XYZ&lt;/eb:PartyId&gt;
+	&lt;/eb:From&gt;
+&lt;/eb:Acknowledgment&gt;
+  &lt;/SOAP:Header&gt;
+  &lt;SOAP:Body&gt;
+  &lt;/SOAP:Body&gt;
+&lt;/SOAP:Envelope&gt;
+								
+--MIME_boundary--
+								
+							</p></pre></pre></td>
+                                    </tr>
+                                 </table>
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection">
+                           <div class="header"><span class="icon"> </span><span class="number"><a name="ebXMLmessageSampleRespone"></a>1.12.3 </span><span class="title">HL7 Version 2 Sample Application Response Message</span></div>
+                           <div class="body">
+                              <p>
+                                 <table width="90%" id="Sample3">
+                                    <caption>Example 3. </caption>
+                                    <tr>
+                                       <td class="example"><pre><pre><p>
+SOAPAction: "ebXML"
+Content-Type: multipart/related; boundary="MIME_boundary"; type="text/xml";
+start="ebhmheader@example.com"
+								
+--MIME_boundary
+Content-ID: &lt;ebhmheader@example.com&gt;
+Content-Type: text/xml; charset = "UTF-8"
+								
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;SOAP:Envelope 
+  xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:eb="http://www.oasis-open.org/committees/ebxml-msg/schema/msg-header-2_0.xsd"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:hl7ebxml="urn:hl7-org:transport/ebXML/DSTUv1.0"&gt;
+  &lt;SOAP:Header&gt;
+     &lt;eb:MessageHeader version="2.0" SOAP:mustUnderstand="1"&gt;
+		&lt;eb:From&gt;
+		&lt;eb:PartyId eb:type="localid"&gt;XYZ&lt;/eb:PartyId&gt;
+ 	&lt;/eb:From&gt;
+ 	&lt;eb:To&gt;
+		&lt;eb:PartyId eb:type="localid"&gt;MCM&lt;/eb:PartyId&gt;
+ 	&lt;/eb:To&gt;
+	&lt;eb:CPAId&gt;MCM-XYZ&lt;/eb:CPAId&gt;
+	&lt;eb:ConversationId&gt;20010215-133003-28572&lt;/eb:ConversationId&gt;
+	&lt;eb:Service&gt;urn:services:HL7MessageProcessing&lt;/eb:Service&gt;
+	&lt;eb:Action&gt;ACK&lt;/eb:Action&gt;
+		&lt;eb:MessageData&gt;
+		&lt;eb:MessageId&gt;XYZ-LAB00001&lt;/eb:MessageId&gt;
+			&lt;eb:Timestamp&gt;2001-02-15T11:16:00Z&lt;/eb:Timestamp&gt;
+		&lt;eb:RefToMessageId&gt;MCM-MSG00001&lt;/eb:RefToMessageId&gt;
+		&lt;/eb:MessageData&gt;
+	&lt;eb:DuplicateElimination/&gt;
+&lt;eb:AckRequested SOAP:mustUnderstand="1" eb:version="2.0" 
+eb:signed="false" eb:actor="urn:oasis:names:tc:ebxml-msg:actor:nextMSH"/&gt;
+    	&lt;/eb:MessageHeader&gt;
+  &lt;/SOAP:Header&gt;
+  &lt;SOAP:Body
+        xmlns:eb="http://www.oasis-open.org/committees/ebxml-msg/schema/msg-header-2_0.xsd"&gt;
+&lt;eb:Manifest eb:version="2.0"&gt;
+	&lt;eb:Reference xlink:href="cid:ebxmlpayload01@example.com"&gt;
+		&lt;eb:Description xml:lang="en-us"&gt;Acknowledge Admit Notification1&lt;/eb:Description&gt;
+		&lt;hl7ebxml:Payload style="HL7" encoding="Delimited" version="2.4"/&gt;
+		&lt;/eb:Reference&gt;
+	&lt;/eb:Manifest&gt;
+  &lt;/SOAP:Body&gt;
+&lt;/SOAP:Envelope&gt;
+								
+--MIME_boundary
+Content-ID: &lt;ebxmlpayload01@example.com&gt;
+Content-Type: text/plain; charset = "UTF-8"
+								
+MSH|^~\&amp;|LABADT|XYZ|ADT1|MCM|200102151113|SECURITY|ACK^A01^ACK|LAB00001­|P|2.4|12345678||NE|NE&lt;cr&gt;
+MSA|CA|MSG00001&lt;cr&gt;
+								
+--MIME_boundary--
+								
+							</p></pre></pre></td>
+                                    </tr>
+                                 </table>
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection">
+                           <div class="header"><span class="icon"> </span><span class="number"><a name="ebXMLmessageSampleV3"></a>1.12.4 </span><span class="title">HL7 Version 3 Sample Message</span></div>
+                           <div class="body">
+                              <p>
+                                 <table width="90%" id="Sample4">
+                                    <caption>Example 4. </caption>
+                                    <tr>
+                                       <td class="example"><pre><pre><p>
+SOAPAction: "ebXML"
+Content-Type: multipart/related; boundary="MIME_boundary"; type="text/xml";
+start="ebhmheader@example.com"
+								
+--MIME_boundary
+Content-ID: &lt;ebhmheader@example.com&gt;
+Content-Type: text/xml; charset = "UTF-8"
+								
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;SOAP:Envelope 
+  xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:eb="http://www.oasis-open.org/committees/ebxml-msg/schema/msg-header-2_0.xsd"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:hl7ebxml="urn:hl7-org:transport/ebXML/DSTUv1.0"&gt;
+  &lt;SOAP:Header&gt;
+     &lt;eb:MessageHeader version="2.0" SOAP:mustUnderstand="1"&gt;
+		&lt;eb:From&gt;
+		&lt;eb:PartyId eb:type="urn:isooid"&gt;2.16.840.1.113883.2.4.99.1-700222&lt;/eb:PartyId&gt;
+ 	&lt;/eb:From&gt;
+ 	&lt;eb:To&gt;
+		&lt;eb:PartyId eb:type="urn:isooid"&gt;2.16.840.1.113883.2.4.99.1-700856&lt;/eb:PartyId&gt;
+ 	&lt;/eb:To&gt;
+	&lt;eb:CPAId&gt;HL7V3&lt;/eb:CPAId&gt;
+	&lt;eb:ConversationId&gt;20030718-161000&lt;/eb:ConversationId&gt;
+	&lt;eb:Service&gt;urn:services:HL7MessageProcessing&lt;/eb:Service&gt;
+	&lt;eb:Action&gt;PORX_IN932000NL&lt;/eb:Action&gt;
+		&lt;eb:MessageData&gt;
+		&lt;eb:MessageId&gt;2.16.840.1.113883.2.4.99.1.700222.1-34234&lt;/eb:MessageId&gt;
+			&lt;eb:Timestamp&gt;2003-07-18T16:10:00.16Z+01&lt;/eb:Timestamp&gt;
+		&lt;/eb:MessageData&gt;
+	&lt;eb:SyncReply eb:version="2.0" SOAP:mustUnderstand="1" 
+SOAP:actor="http://schemas.xmlsoap.org/soap/actor/next"/&gt;
+	&lt;eb:DuplicateElimination/&gt;
+&lt;eb:AckRequested SOAP:mustUnderstand="1" eb:version="2.0" 
+eb:signed="false" eb:actor="urn:oasis:names:tc:ebxml-msg:actor:nextMSH"/&gt;
+    	&lt;/eb:MessageHeader&gt;
+  &lt;/SOAP:Header&gt;
+  &lt;SOAP:Body&gt;
+&lt;eb:Manifest eb:version="2.0"&gt;
+	&lt;eb:Reference xlink:href="cid:ebxmlpayload01@example.com"&gt;
+		&lt;eb:Description xml:lang="en-us"&gt;Observation Message&lt;/eb:Description&gt;
+		&lt;hl7ebxml:Payload style="HL7" encoding="XML" version="V3PR1"/&gt;
+		&lt;/eb:Reference&gt;
+	&lt;/eb:Manifest&gt;
+  &lt;/SOAP:Body&gt;
+&lt;/SOAP:Envelope&gt;
+								
+--MIME_boundary
+Content-ID: &lt;ebxmlpayload01@example.com&gt;
+Content-Type: application/xml; charset = "UTF-8"
+								
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;PORX_IN932000NL xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="urn:hl7-org:v3 PORX_IN932000NL.xsd"&gt;
+	&lt;id extension="34234" root="2.16.840.1.113883.2.4.99.1.700222.1"/&gt;
+	&lt;creationTime value="20030718161000"/&gt;
+	&lt;versionCode code="V3PR1"/&gt;
+	&lt;interactionId extension="PORX_IN932000NL" root="2.16.840.1.113883"/&gt;
+	&lt;processingCode code="P"/&gt;
+	&lt;processingModeCode code="T"/&gt;
+	&lt;acceptAckCode code="NE"/&gt;	
+	&lt;controlActProcess moodCode="RQO"&gt;
+		&lt;!-- message payload --&gt;
+		...
+	&lt;/controlActProcess&gt;
+								
+	&lt;receiver typeCode="RCV"&gt;
+		&lt;telecom use="WP" value="tel:+31303248724"/&gt;	
+		&lt;device classCode="DEV" determinerCode="INSTANCE"&gt;
+			&lt;!-- receiving application, ID of receiving system --&gt;
+			&lt;id  extension="700856" root="2.16.840.1.113883.2.4.99.1"/&gt;
+			&lt;name use="L"&gt;
+				&lt;given&gt;ZIM&lt;/given&gt;
+			&lt;/name&gt;
+			&lt;agencyFor classCode="AGNT"&gt;
+				&lt;representedOrganization classCode="ORG" determinerCode="INSTANCE"&gt;
+				&lt;id  extension="100100" root="2.16.840.1.113883.2.4.99.1"/&gt;			
+					&lt;name use="L"&gt;
+						&lt;given&gt;ZIM Beheersorganisatie Regio Utrecht&lt;/given&gt;
+					&lt;/name&gt;
+				&lt;/representedOrganization&gt;
+			&lt;/agencyFor&gt;
+		&lt;/device&gt;
+	&lt;/receiver&gt;
+								
+	&lt;sender typeCode="SND"&gt;
+		&lt;telecom use="WP" value="tel:+31307236354"/&gt;
+		&lt;device classCode="DEV" determinerCode="INSTANCE"&gt;
+			&lt;!-- sending application, ID of sending system --&gt;
+			&lt;id extension="700222" root="2.16.840.1.113883.2.4.99.1"/&gt;
+			&lt;name use="L"&gt;
+				&lt;given&gt;ABC-ZIS/St.Jozef Ziekenhuis&lt;/given&gt;
+			&lt;/name&gt;
+			&lt;agencyFor classCode="AGNT"&gt;
+				&lt;representedOrganization classCode="ORG" determinerCode="INSTANCE"&gt;
+					&lt;id extension="600862" root="2.16.840.1.113883.2.4.99.1"/&gt;
+						&lt;name use="L"&gt;
+							&lt;given&gt;St.Jozef Ziekenhuis&lt;/given&gt;
+						&lt;/name&gt;
+				&lt;/representedOrganization&gt;
+			&lt;/agencyFor&gt;
+		&lt;/device&gt;
+	&lt;/sender&gt;
+								
+&lt;/PORX_IN932000NL&gt;
+								
+--MIME_boundary--
+								
+							</p></pre></pre></td>
+                                    </tr>
+                                 </table>
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection">
+                           <div class="header"><span class="icon"> </span><span class="number"><a name="ebXMLmessageSampleSignature"></a>1.12.5 </span><span class="title">HL7 Version 2 Sample With Signature</span></div>
+                           <div class="body">
+                              <p>
+                                 <table width="90%" id="Sample5">
+                                    <caption>Example 5. </caption>
+                                    <tr>
+                                       <td class="example"><pre><pre><p>
+SOAPAction: "ebXML"
+Content-Type: multipart/related; boundary="MIME_boundary"; type="text/xml";
+start="ebhmheader@example.com"
+								
+--MIME_boundary
+Content-ID: &lt;ebhmheader@example.com&gt;
+Content-Type: text/xml; charset = "UTF-8"
+								
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;SOAP:Envelope 
+  xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:eb="http://www.oasis-open.org/committees/ebxml-msg/schema/msg-header-2_0.xsd"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:hl7ebxml="urn:hl7-org:transport/ebXML/DSTUv1.0"&gt;
+  &lt;SOAP:Header&gt;
+     &lt;eb:MessageHeader version="2.0" SOAP:mustUnderstand="1"&gt;
+		&lt;eb:From&gt;
+		&lt;eb:PartyId eb:type="localid"&gt;MCM&lt;/eb:PartyId&gt;
+ 	&lt;/eb:From&gt;
+ 	&lt;eb:To&gt;
+		&lt;eb:PartyId eb:type="localid"&gt;XYZ&lt;/eb:PartyId&gt;
+ 	&lt;/eb:To&gt;
+	&lt;eb:CPAId&gt;MCM-XYZ&lt;/eb:CPAId&gt;
+	&lt;eb:ConversationId&gt;20010215-133003-28572&lt;/eb:ConversationId&gt;
+	&lt;eb:Service&gt;urn:services:HL7MessageProcessing&lt;/eb:Service&gt;
+	&lt;eb:Action&gt;ADT_A01&lt;/eb:Action&gt;
+		&lt;eb:MessageData&gt;
+		&lt;eb:MessageId&gt;MCM-MSG00001&lt;/eb:MessageId&gt;
+			&lt;eb:Timestamp&gt;2001-02-15T11:14:00Z&lt;/eb:Timestamp&gt;
+		&lt;/eb:MessageData&gt;
+	&lt;eb:SyncReply eb:version="2.0" SOAP:mustUnderstand="1" 
+SOAP:actor="http://schemas.xmlsoap.org/soap/actor/next"/&gt;
+	&lt;eb:DuplicateElimination/&gt;
+&lt;eb:AckRequested SOAP:mustUnderstand="1" eb:version="2.0" 
+eb:signed="true" eb:actor="urn:oasis:names:tc:ebxml-msg:actor:nextMSH"/&gt;
+    	&lt;/eb:MessageHeader&gt;
+&lt;Signature xmlns="http://www.w3.org/2000/09/xmldsig#"&gt;
+	   &lt;SignedInfo&gt;
+      &lt;CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/&gt;
+      &lt;SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/&gt;
+      &lt;Reference URI=""&gt;
+	  &lt;Transforms&gt;
+	     &lt;Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/&gt;
+	     &lt;Transform Algorithm="http://www.w3.org/TR/1999/REC-xpath-19991116"&gt;
+		  &lt;XPath&gt; not(ancestor-or-self::node()[@SOAP:actor=
+		    "urn:oasis:names:tc:ebxml-msg:actor:nextMSH"]
+		    | ancestor-or-self::node()[@SOAP:actor=
+		    "http://schemas.xmlsoap.org/soap/actor/next"])
+		  &lt;/XPath&gt;
+	     &lt;/Transform&gt;
+	     &lt;Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/&gt;
+	  &lt;/Transforms&gt;
+	  &lt;DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/&gt;
+	  &lt;DigestValue&gt;...&lt;/DigestValue&gt;
+       	&lt;/Reference&gt;
+	&lt;Reference URI="cid:ebxmlpayload01@example.com"&gt;
+	  &lt;DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/&gt;
+	  &lt;DigestValue&gt;...&lt;/DigestValue&gt;
+	&lt;/Reference&gt;
+   &lt;/SignedInfo&gt;
+   &lt;SignatureValue&gt;...&lt;/SignatureValue&gt;
+   &lt;KeyInfo&gt;...&lt;/KeyInfo&gt;
+&lt;/Signature&gt;
+  &lt;/SOAP:Header&gt;
+  &lt;SOAP:Body&gt;
+&lt;eb:Manifest eb:version="2.0"&gt;
+	&lt;eb:Reference xlink:href="cid:ebxmlpayload01@example.com"&gt;
+		&lt;eb:Description xml:lang="en-us"&gt;Admit Notification1&lt;/eb:Description&gt;
+		&lt;hl7ebxml:Payload style="HL7" encoding="Delimited" version="2.4"/&gt;
+		&lt;/eb:Reference&gt;
+	&lt;/eb:Manifest&gt;
+  &lt;/SOAP:Body&gt;
+&lt;/SOAP:Envelope&gt;
+								
+--MIME_boundary
+Content-ID: &lt;ebxmlpayload01@example.com&gt;
+Content-Type: text/plain; charset = "UTF-8"
+								
+MSH|^~\&amp;|ADT1|MCM|LABADT|XYZ|200102151112|SECURITY|ADT^A01^ADT_A01|MSG00001­|P|2.4|12345678||AL|NE&lt;cr&gt;
+EVN|A01|200102091109||&lt;cr&gt;
+PID|1||PATID1234^5^M11^ADT1^MR^MCM~123456789^^^USSSA^SS||JONES^WILLIAM^A^III||19610615|M||C|
+1200 N ELM STREET^^GREENSBORO^NC^27401-1020|GL|(919)379-1212|(919)271-3434||S||
+PATID12345001^2^M10^ADT1^AN^A|123456789|987654^NC|&lt;cr&gt;
+NK1|1|JONES^BARBARA^K|WI^WIFE||||NK^NEXT OF KIN&lt;cr&gt;
+PV1|1|I|2000^2012^01||||004777^LEBAUER^SIDNEY^J.|||SUR||||ADM|A0|&lt;cr&gt;
+								
+--MIME_boundary-- 
+								
+							</p></pre></pre></td>
+                                    </tr>
+                                 </table>
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection">
+                           <div class="header"><span class="icon"> </span><span class="number"><a name="ebXMLmessageSampleAckError"></a>1.12.6 </span><span class="title">HL7 Version 2 Sample ebXML Acknowledgment with Error</span></div>
+                           <div class="body">
+                              <p>
+                                 <table width="90%" id="Sample6">
+                                    <caption>Example 6. </caption>
+                                    <tr>
+                                       <td class="example"><pre><pre><p>
+SOAPAction: "ebXML"
+Content-Type: multipart/related; boundary="MIME_boundary"; type="text/xml";
+start="ebhmheader@example.com"
+								
+--MIME_boundary
+Content-ID: &lt;ebhmheader@example.com&gt;
+Content-Type: text/xml; charset = "UTF-8"
+								
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;SOAP:Envelope 
+  xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:eb="http://www.oasis-open.org/committees/ebxml-msg/schema/msg-header-2_0.xsd"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:hl7ebxml="urn:hl7-org:transport/ebXML/DSTUv1.0"&gt;
+  &lt;SOAP:Header&gt;
+     &lt;eb:MessageHeader version="2.0" SOAP:mustUnderstand="1"&gt;
+		&lt;eb:From&gt;
+		&lt;eb:PartyId eb:type="localid"&gt;XYZ&lt;/eb:PartyId&gt;
+ 	&lt;/eb:From&gt;
+ 	&lt;eb:To&gt;
+		&lt;eb:PartyId eb:type="localid"&gt;MCM&lt;/eb:PartyId&gt;
+ 	&lt;/eb:To&gt;
+	&lt;eb:CPAId&gt;MCM-XYZ&lt;/eb:CPAId&gt;
+	&lt;eb:ConversationId&gt;20010215-133003-28572&lt;/eb:ConversationId&gt;
+	&lt;eb:Service&gt;urn:oasis:names:tc:ebxml-msg:service&lt;/eb:Service&gt;
+	&lt;eb:Action&gt;Acknowledgment&lt;/eb:Action&gt;
+		&lt;eb:MessageData&gt;
+		&lt;eb:MessageId&gt;XYZ-20010215-111800-12345&lt;/eb:MessageId&gt;
+			&lt;eb:Timestamp&gt;2001-02-15T11:12:00Z&lt;/eb:Timestamp&gt;
+		&lt;eb:RefToMessageId&gt;MCM-MSG00001&lt;/eb:RefToMessageId&gt;
+		&lt;/eb:MessageData&gt;
+	&lt;eb:DuplicateElimination/&gt;
+    	&lt;/eb:MessageHeader&gt;
+&lt;eb:Acknowledgment
+	SOAP:mustUnderstand="1"
+	eb:version="2.0"
+	SOAP:actor="urn:oasis:names:tc:ebxml-msg:actor:nextMSH"&gt;
+	&lt;eb:Timestamp&gt;2001-02-15T11:17:00Z&lt;/eb:Timestamp&gt;
+	&lt;eb:From&gt;
+		&lt;eb:PartyId&gt;XYZ&lt;/eb:PartyId&gt;
+	&lt;/eb:From&gt;
+&lt;/eb:Acknowledgment&gt;
+&lt;eb:ErrorList eb:highestSeverity="error" eb:version="2.0" SOAP:mustUnderstand="1"&gt;
+&lt;eb:Error eb:errorCode="DeliveryFailure" eb:severity="error" eb:location="URI of eb:From"&gt;
+&lt;eb:Description xml:lang="en-US"&gt;Unsupported message sender&lt;/eb:Description&gt;
+&lt;/eb:Error&gt;   
+&lt;/eb:ErrorList&gt;
+  &lt;/SOAP:Header&gt;
+  &lt;SOAP:Body&gt;
+  &lt;/SOAP:Body&gt;
+&lt;/SOAP:Envelope&gt;
+								
+--MIME_boundary--
+								
+							</p></pre></pre></td>
+                                    </tr>
+                                 </table>
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <!--divN/head-->
+               <div class="header"><span class="icon"> </span><span class="number"><a name="Appendex1"></a>2 </span><span class="title">Appendex 1</span></div>
+               <div class="body">
+                  <p>Trading partners may select from any of the lower level transports detailed in this section to exchange ebXML messages.</p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number"><a name="HTTPTransport"></a>2.1 </span><span class="title">HTTP Transport</span></div>
+                     <div class="body">
+                        <p>For specifications on the use of HTTP for the exchange of ebXML messages refer to the ebXML "Message Service Specification
+                           Version 2.0 1 April 2002" Appendix B.2.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number"><a name="SMTPTransport"></a>2.2 </span><span class="title">SMTP Transport</span></div>
+                     <div class="body">
+                        <p>For specifications on the use of SMTP for the exchange of ebXML messages refer to the ebXML "Message Service Specification
+                           Version 2.0 1 April 2002" Appendix B.2.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"> </span><span class="number"><a name="SimpleSecureAuthTCPTransport"></a>2.3 </span><span class="title">Simple Secure Authenticated TCP Transport</span></div>
+                     <div class="body">
+                        <div class="subSubSubSection">
+                           <div class="header"><span class="icon"> </span><span class="number"><a name="SimpleSecureTCP"></a>2.3.1 </span><span class="title">Simple TCP and Secure TCP</span></div>
+                           <div class="body">
+                              <p>
+                                 					Message exchange may occur over either a simple non-encrypted TCP session or over an encrypted TCP session where either
+                                 end of the connection may authenticate the identity of the other end.  The following sections describe the establishment of
+                                 the connection, and the recommended ports, key length, and authentication requirements.
+                                 				
+                              </p>
+                              <p>
+                                 					When communicating over a secure network the use of encryption, minimum encryption strength and use of authentication
+                                 is optional.  While communicating parties must respect national/regional legislation and existing agreements the use of encryption,
+                                 minimum encryption strength and authentication is recommended when communicating over non-secure networks.
+                                 				
+                              </p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection">
+                           <div class="header"><span class="icon"> </span><span class="number"><a name="SettingUpTCPIP"></a>2.3.2 </span><span class="title">Setting up the TCP/IP connection</span></div>
+                           <div class="body">
+                              <p>
+                                 					In order to establish the TCP/IP connection for message exchange the connection initiator must know the IP address or
+                                 DNS name of the responding connection and the responder's listening port number.  The responder connection must already be
+                                 listening for connections from initiators.  The initiating connection contacts the responder's listening port and requests
+                                 a connection, which is either refused by the responder, or acknowledged by the responder which also supplies a new unique
+                                 port number for the connection.  The initiator then contacts the indicated new port and completes the connection.
+                                 				
+                              </p>
+                              <p>
+                                 					If a secure connection, TLS or SSL, is being established then the connections negotiate an encryption algorithm.  The
+                                 responder then sends its certificate, excluding its private key, to the initiator for acceptance and optionally requests the
+                                 same from the initiator.  If the initiator's certificate is requested then it is sent to the responder for acceptance.  The
+                                 connections then exchange a session key, encrypted with the public key of the receiving party, which is used to encrypt messages
+                                 sent to the other connection.
+                                 <br /><img class="graphic" src="graphics/ebXMLfig5.jpg" alt="ebXMLfig5.jpg" /><br /><br /><br /><strong>Figure 5 Setting up the TCP/IP connection using TLS/SSL</strong></p>
+                           </div>
+                        </div>
+                        <div class="subSubSubSection">
+                           <div class="header"><span class="icon"> </span><span class="number"><a name="TCPIPConnParams"></a>2.3.3 </span><span class="title">TCP/IP connection parameters</span></div>
+                           <div class="body">
+                              <p>
+                                 					The table below provides recommendations for encryption and authentication for Public and Private non-secure connections.
+                                 Encryption and authentication of connections over secure lines is optional, and therefore the use of certificates and the
+                                 table rows below pertaining to certificates and digital signatures need not apply over connections which are otherwise deemed
+                                 secure.
+                                 					
+                                 <table width="90%" cellspacing="0" cellpadding="5" border="1" style="border-color:blue">
+                                    <thead>
+                                       <tr>
+                                          <th colspan="1"> </th>
+                                          <th colspan="1">Initiator</th>
+                                          <th colspan="1">Responder</th>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="1">IP address / DNS name</td>
+                                          <td colspan="1">Any including derived from Network Address Translation</td>
+                                          <td colspan="1">Any, must resolve to a legal Internet address for Public access</td>
+                                       </tr>
+                                       <tr>
+                                          <td colspan="1">IP Port</td>
+                                          <td colspan="1">Any.</td>
+                                          <td colspan="1">Any, trading partner agreed.443 in the absence of alternative.</td>
+                                       </tr>
+                                       <tr>
+                                          <td colspan="1">Encryption protocol</td>
+                                          <td colspan="1">TLS 1.0 or SSL 3.0</td>
+                                          <td colspan="1">TLS 1.0 and SSL 3.0</td>
+                                       </tr>
+                                       <tr>
+                                          <td colspan="1">Certificate (X.509)</td>
+                                          <td colspan="1">Optional, recommended</td>
+                                          <td colspan="1">Required</td>
+                                       </tr>
+                                       <tr>
+                                          <td colspan="1">Minimum Public Key Length</td>
+                                          <td colspan="1">1024 bits</td>
+                                          <td colspan="1">1024 bits</td>
+                                       </tr>
+                                       <tr>
+                                          <td colspan="1">Minimum Session Key Length</td>
+                                          <td colspan="1">128 Bits</td>
+                                          <td colspan="1">128 Bits</td>
+                                       </tr>
+                                       <tr>
+                                          <td colspan="1">Digital Signing of Messages</td>
+                                          <td colspan="1">Optional, trading partner agreement.</td>
+                                          <td colspan="1">Optional, trading partner agreement.</td>
+                                       </tr>
+                                       <tr>
+                                          <td colspan="1">Digital Signing of ebXML Acknowledgments</td>
+                                          <td colspan="1">Optional, trading partner agreement</td>
+                                          <td colspan="1">Optional, trading partner agreement</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </p>
+                              <p>
+                                 					When using X.509 certificates for authentication the Certificate Authority and Certificate Name structure must be agreed
+                                 by trading partners.
+                                 				
+                              </p>
+                              <p>
+                                 					A TCP responder interface will be required to support both SSL 3.0 and TLS 1.0 message encryption, initiator interfaces
+                                 are required to support either SSL 3.0 or TLS 1.0.  
+                                 				
+                              </p>
+                              <p>
+                                 					Where mutual authentication is agreed by trading partners both initiators and responders are required to have X.509 certificates,
+                                 with a minimum Key Length of 1024 Bits, issued by an agreed Certificate Authority(s) and using an agreed Certificate Name
+                                 structure such that either party can confirm the identify of the other within the concept of &#8216;identity&#8217; for the message exchange
+                                 domain.  Both parties are required to confirm the identity of the other party as a legitimate member of the message exchange
+                                 domain before exchanging messages, and are required to drop or refuse the connection if the party on the other end of the
+                                 connection is deemed not to be legitimate.
+                                 				
+                              </p>
+                              <p>
+                                 					The initiator interface is required to have a lookup mechanism to determine: the DNS name or IP address and IP port of
+                                 the target Responder; the initiator certificate based on the &#8216;/SOAP:Envelope/SOAP:Header/eb:MessageHeader/eb:From/eb:PartyId&#8217;
+                                 element contents; and, expected responder certificate name contents of the message target based on the &#8216;/SOAP:Envelope/SOAP:Header/eb:MessageHeader/eb:To/eb:PartyId&#8217;
+                                 element contents.
+                                 				
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <p>
+            <table>
+               <tbody>
+                  <tr>
+                     <td><a class="custombutton" href="#top">Return to top of page</a></td>
+                  </tr>
+               </tbody>
+            </table>
+         </p>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 3 U (http://www.xmlspy.com) by andrew hinchley (HL7 Publications TC) -->
+<!-- edited with XML Spy v4.0 (http://www.xmlspy.com) by Sandy Boyer -->
+<div2 id="v3gtrigger">
+	<head>Trigger Events</head>
+	<p>A trigger event is an explicit set of conditions that initiate the transfer of information between system components (application roles). It is a real-world event such as the placing of a laboratory order or drug order. The trigger event must be systematically recognizable by an automated system.</p>
+	<p>Within the V3 standards, trigger events are defined by a name, an artifact ID, a description, and a Type.   The Structured Name is used to sort the trigger events within a particular domain into a logical sequence and is assigned by the Technical Committee.The required Structured Name for a trigger event must comprise Mood,State -Transition and Type, however note that all committees are not yet following these recommendations in current ballots.</p>
+	<p>In the V3 standard, most trigger events will be a specifiedType, from the following list:</p>
+	<list role="unordered">
+		<item>Interaction Based: Trigger events can be based on another interaction. For example, the response to a query (which is an interaction) is an Interaction Based trigger event. </item>
+		<item>State-Transition Based: Trigger events resulting from a state transition as depicted in the State Transition Model for a particular message interaction.  The trigger for canceling a document, for example, may be considered a State Transition Based trigger event  </item>
+		<item>User Request Based: Trigger events may be based on a user request. For example, the trigger event that prompts a system to send all accumulated data to a tracking system every 12 hours is considered User Based. </item>
+	</list>
+	<p>Most trigger events are State-Transition based and will be encountered when reading the dynamic message model information defined to support a particular message interaction. Some trigger events may be based on more than one state transition, which are assumed to occur simultaneously. In some cases, trigger events may not fall into any of the three categories defined in the above list. In these cases, Unspecified will appear as the Type. The trigger event Type, when specified, affects the responsibilities of the interactions initiated by that trigger event.</p>
+	<p>The figure below illustrates how trigger events are documented and represented within the HL7 Version 3 Specifications:</p>
+	<p>When defining custom Trigger Event refinements, technical committees are
+encouraged to construct an "expository" R-MIMs which only mention attributes
+and relationships pertinent to their message.  These expository R-MIM will
+appear as Visio diagrams in their chapters, but, because they don't mention
+all attributes and relationships, they cannot be used directly in specifying
+messages.  For each expository R-MIM, Committees will need to create a
+corresponding "full" R-MIM which does not drop or prohibit any attributes,
+and has the desired constraints.</p>
+	<p>Implementors may design custom Trigger Event Control Acts to be used by
+site-agreement.  However, to maintain compatibility with HL7, senders who
+abide by the official standard, implementor-defined Trigger Event Control
+Act also may not drop or prohibit attributes or relationshipsImplementors may design custom Trigger Event Control Acts to be used by site-agreement.  However, to maintain compatibility with HL7, senders who
+abide by the official standard, implementor-defined Trigger Event Control
+Act also may not drop or prohibit attributes or relationships.</p>
+	<p>
+		<graphic source="graphics/VG_2_4_01.gif"/>
+	</p>
+</div2>

@@ -1,0 +1,914 @@
+<html xmlns="http://www.w3.org/TR/REC-html40" xmlns:mif="urn:hl7-org:v3/mif">
+   <head>
+      <title xmlns="">Record Detail Query</title><style xmlns="">
+         <!--
+ /* Style Definitions */
+.CellGrid
+	{margin-left:6.0pt;
+	margin-right:6.0pt;
+	margin-top:6.0pt;
+	margin-bottom:6.0pt;
+	border-collapse:collapse;
+	border:solid windowtext 1.0pt;}
+
+.CellGridHeader
+	{margin-left:6.0pt;
+	margin-right:6.0pt;
+	margin-top:6.0pt;
+	margin-bottom:6.0pt;
+	border-collapse:collapse;
+	border:solid windowtext 0.75pt;
+	background:#F3F3F3;
+	color:navy;
+	font-weight:bold;}
+
+.CellGridBold
+	{margin-left:6.0pt;
+	margin-right:6.0pt;
+	margin-top:6.0pt;
+	margin-bottom:6.0pt;
+	border-collapse:collapse;
+	border:solid windowtext 0.75pt;
+	font-weight:bold;}
+
+.DividerRow
+	{border-collapse:collapse;
+	border-bottom:solid windowtext 1.5pt}
+
+.DividerContent
+	{margin-left:0pt;
+	margin-right:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	font-size:1pt;}
+	
+.HL7Ref
+	{margin-left:0.0pt;
+	margin-right:0.0pt;
+	margin-top:0.0pt;
+	margin-bottom:0.0pt;
+	font-size:12.0pt;
+	color:gray;
+	font-weight:normal;
+	mso-no-proof:yes;}
+
+.HL7InlineRef
+	{font-size:10.0pt;
+	color:gray;
+	font-weight:normal;
+	mso-no-proof:yes;}
+
+.Label
+	{font-size:12.0pt;
+	font-weight:normal;
+	font-style:normal;}
+
+.MsoBodyText
+	{margin-right:1.0pt;
+	margin-left:1.0pt;
+	margin-top:1.0pt;
+	margin-bottom:1.0pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+
+.MsoStrongListBullet
+	{	margin-left:0pt;
+	margin-right:0pt;
+	margin-top:12pt;
+	margin-bottom:0pt;
+	mso-list:l9 level1 lfo1;
+	page-break-after:avoid;
+	color:navy;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-style:italic;
+	font-weight:normal;}
+
+@list l9
+	{mso-list-id:-119;
+	mso-list-type:simple;
+	mso-list-template-ids:-316790866;}
+@list l9:level1
+	{mso-level-number-format:bullet;
+	mso-level-style-link:"List Bullet";
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+
+.MsoStrong
+	{	margin-left:0pt;
+	margin-right:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	page-break-after:avoid;
+	color:navy;
+	font-size:12.0pt;
+	font-family:Arial;
+	font-style:italic;
+	font-weight:normal;}
+
+.TableGrid
+	{border-collapse:collapse;
+	border:solid windowtext 1.5pt;
+	mso-border-alt:solid windowtext 1.5pt;
+	mso-border-insidev:1.5pt solid windowtext;
+	padding:0pt 0pt 0pt 0pt;}
+
+.TableNoGrid
+	{border-collapse:collapse;
+	font-size:10.0pt;
+	font-family:Arial;}
+
+h2
+	{mso-outline-level:1;
+	margin-left:0pt;
+	margin-right:0pt;
+	margin-top:12pt;
+	margin-bottom:0pt;
+	page-break-after:avoid;
+	color:navy;
+	font-size:16.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+
+h3
+	{mso-outline-level:2;
+	margin-left:0pt;
+	margin-right:0pt;
+	margin-top:12pt;
+	margin-bottom:0pt;
+	page-break-after:avoid;
+	color:black;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-style:italic;
+	font-weight:normal;}
+
+h4
+	{mso-outline-level:3;
+	margin-left:0pt;
+	margin-right:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	text-indent:.5in;
+	page-break-after:avoid;
+	color:navy;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-style:italic;
+	font-weight:normal;}
+
+formated
+	{margin-left:0pt;
+	margin-right:0pt;
+	margin-top:12pt;
+	margin-bottom:0pt;
+	page-break-after:avoid;
+	color:navy;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-style:italic;
+	font-weight:normal;}
+
+
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in .75in .75in .75in;}
+
+div.Section1
+	{page:Section1;}
+			--></style><title></title>
+   </head>
+   <body lang="EN-US" link="blue" vlink="purple" style="tab-interval:.5in">
+      <p xmlns="" class="MsoBodyText"><span></span><a href="#1">Query Definition</a></p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#1_A5">Patient name</a>&nbsp;O
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#1_A4">Patient Gender</a>&nbsp;O
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#1_A3">Patient Date of Birth</a>&nbsp;O
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#1_A6">Record Ids</a>&nbsp;R
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#1_A2">Include Notes Indicator</a>&nbsp;O
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#1_A1">Include History Indicator</a>&nbsp;O
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#1_S1">has</a>&nbsp;<a href="#2">PatientId</a>&nbsp;M
+      </p>
+      <p xmlns="" class="MsoBodyText"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#2_A1">Patient Id</a>&nbsp;M
+      </p>
+      <div xmlns="" class="Section1">
+         <h2><a name="1"></a><span>Query Definition</span></h2>
+         <p class="HL7Ref">(ParameterList)</p>
+         <table class="TableGrid" style="margin-left:.25in" border="0" cellspacing="0" cellpadding="0" width="640">
+            <col width="115">
+            <col width="525">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Identifies the various parameters that act as filters on the records to be retrieved.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Allows the user and/or the point-of-service application to constrain what EHR information they wish to retrieve.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Constraints</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Search Radius may only be</p>
+                     
+                     <p class="MsoBodyText" style="margin-top:6.0pt;">specified if Near Address</p>
+                     
+                     <p class="MsoBodyText" style="margin-top:6.0pt;">is specified</p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <h3>Attributes</h3>
+         <h4><a name="1_A5">Patient name</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(patientName.value)</p>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Datatype</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">PN</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">(*** NO DESCRIPTION ***)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Optional</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Implementers may declare whether they support the concept or not</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">1</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Does not repeat</p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">The full name of the patient whose record is to be retrieved, as known by the client registry.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">The name is used to verify that the patient has been correctly identified and is therefore mandatory</p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+         <h4><a name="1_A4">Patient Gender</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(patientGender.value)</p>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Datatype</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">CV</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Code (includes mnemonic, code-system and original text)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Optional</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Implementers may declare whether they support the concept or not</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">1</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Does not repeat</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Code Strength</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">CNE</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Must be coded using 'official' codeset (no un-coded text or local codes)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Code Domain</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">AdministrativeGender</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText"></p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">The administrative gender of the patient whose record is to be retrieved, as known by the client registry.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">The gender is used to verify that the patient has been correctly identified and is therefore mandatory</p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+         <h4><a name="1_A3">Patient Date of Birth</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(patientDateOfBirth.value)</p>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Datatype</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">TS</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Timestamp (includes date and time down to milli-seconds with various levels of precision.  Supports timezone)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Optional</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Implementers may declare whether they support the concept or not</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">1</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Does not repeat</p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">The date of birth of the patient whose record is to be retrieved, as known by the client registry.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">The date of birth is used to verify that the patient has been correctly identified and is therefore mandatory.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+         <h4><a name="1_A6">Record Ids</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(recordId.value)</p>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Datatype</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">II</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Identifier (includes id, assigning authority)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Required</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Implementers must support, but only supply data when it is available</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Unlimited</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Number of repetitions are unlimited</p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">A globally unique identifier assigned by the EHR to the record (or records) to be retrieved.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Specifically identifies the &lt;insert name&gt; to be returned.</p>
+                     
+                     <p class="MsoBodyText" style="margin-top:6.0pt;">Because the primary purpose of the query is to retrieve identified records, the element is mandatory.</p>
+                     
+                     <p class="MsoBodyText" style="margin-top:6.0pt;">Multiple repetitions are allowed to support multiple detail records as part of one query for efficiency reasons.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+         <h4><a name="1_A2">Include Notes Indicator</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(includeNotesIndicator.value)</p>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Datatype</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">BL</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Boolean (values are 'true' or 'false')</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Optional</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Implementers may declare whether they support the concept or not</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">1</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Does not repeat</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Default</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">true</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">If no value is specified, receiver behaves as though "true" had been sent.</p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">If true, indicates that notes should be included when retrieving the record(s). If false, notes will not be returned.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Allows filtering whether supplemental comments should be retrieved or not. Some uses of the record do not require having the
+                        supplemental information available. The attribute is mandatory because it must be known whether notes are to be returned or
+                        not.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+         <h4><a name="1_A1">Include History Indicator</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(includeHistoryIndicator.value)</p>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Datatype</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">BL</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Boolean (values are 'true' or 'false')</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Optional</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Implementers may declare whether they support the concept or not</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">1</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Does not repeat</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Default</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">false</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">If no value is specified, receiver behaves as though "false" had been sent.</p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">If true, indicates that historical versions of the record(s) should be included. If false, only the current version will be
+                        returned.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Allows a user to filter whether historical information is needed. Retrieving historical information will be needed in some
+                        circumstances, but it makes sense to constrain. The attribute is mandatory because it must be known whether history is to
+                        be returned or not.
+                     </p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+         <h3>Associations</h3>
+         <h4><a name="1_S1">has</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(patientId)</p>
+         <table class="TableNoGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="90">
+            <col>
+            <tr valign="top">
+               <td>
+                  <p class="MsoBodyText"></p>
+               </td>
+               <td>
+                  <p class="MsoStrong" style="margin-top:0pt"><a href="#2">PatientId</a><span class="HL7Ref"> (PatientId)</span></p>
+               </td>
+            </tr>
+         </table>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Mandatory</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Value must always be supplied (no nulls)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Unlimited</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Number of repetitions are unlimited</p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+      </div>
+      <div xmlns="" class="Section1">
+         <h2><a name="2"></a><span>PatientId</span></h2>
+         <p class="HL7Ref">(PatientId)</p>
+         <table class="TableGrid" style="margin-left:.25in" border="0" cellspacing="0" cellpadding="0" width="640">
+            <col width="115">
+            <col width="525">
+         </table>
+         <h3>Attributes</h3>
+         <h4><a name="2_A1">Patient Id</a></h4>
+         <p class="HL7Ref" style="text-indent:.5in">(value)</p>
+         <table class="TableGrid" style="margin-left:.5in" border="0" cellspacing="0" cellpadding="0" width="615">
+            <col width="115">
+            <col width="85">
+            <col width="415">
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Datatype</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">II</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Identifier (includes id, assigning authority)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Conformance</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">Mandatory</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Value must always be supplied (no nulls)</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Repetitions</p>
+               </td>
+               <td class="CellGridBold" align="center" style="mso-no-proof:yes">
+                  <p class="MsoBodyText">1</p>
+               </td>
+               <td class="CellGrid">
+                  <p class="MsoBodyText">Does not repeat</p>
+               </td>
+            </tr>
+            <tr char="DividerRow">
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+               <td>
+                  <p class="DividerContent">&nbsp;</p>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Description</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">A globally unique identifier for the patient whose information is to be retrieved as known by the client registry.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td class="CellGridHeader">
+                  <p class="MsoBodyText">Rationale</p>
+               </td>
+               <td class="CellGrid" colspan="2">
+                  <text class="MsoBodyText">
+                     
+                     <p class="MsoBodyText">Identifies the patient whose information is to be retrieved. Because the query is patient-specific, the identifier is mandatory.</p>
+                     
+                  </text>
+               </td>
+            </tr>
+         </table>
+         <p style="MsoBodyText">&nbsp;</p>
+      </div>
+   </body>
+</html>

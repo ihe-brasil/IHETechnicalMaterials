@@ -1,0 +1,2106 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:exslt="http://exslt.org/common">
+   <head>
+      <title>Domain: Transmission Infrastructure - Polling Message Transmission Topic</title>
+      <link rel="stylesheet" type="text/css" href="../../support/css/v3m.css" title="v3m" /><script src="../../support/js/tree.js" type="text/javascript"></script><script src="../../support/js/setTopFrameText.js" type="text/javascript"></script><script src="../../support/js/swapcss.js" type="text/javascript"></script><script type="text/javascript">
+				if (find('heading')) setHeadingTextFromFileName(document.location.href,"Polling Message Transmission Topic");
+			</script></head>
+   <body>
+      <div class="section">
+         <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">3</span><span class="title"><a name="MCCI_DO000000UV-PollingMessageTransmission-ic">Polling Message Transmission Topic</a></span></div>
+         <div class="body">
+            <table>
+               <tbody>
+                  <tr>
+                     <td><a class="custombutton" href="uvci.htm#contents">Return to Domain Table of Contents</a></td>
+                  </tr>
+                  <tr>
+                     <td colspan="2">
+                        <p class="lastEdit">Content Last Edited: 2005-05-18T16:35:01</p>
+                     </td>
+                  </tr>
+               </tbody>
+            </table><br /><div class="toc"><span>3.1  <a href="#sbs-MCCI_DO000000UV-PollingMessageTransmission-ic">Storyboards</a><br /></span><span>3.2  <a href="#roles-MCCI_DO000000UV-PollingMessageTransmission-ic">Application Roles</a><br /></span><span>3.3  <a href="#tes-MCCI_DO000000UV-PollingMessageTransmission-ic">Trigger Events</a><br /></span><span>3.4  <a href="#rmims-MCCI_DO000000UV-PollingMessageTransmission-ic">Refined Message Information Models</a><br /></span><span>3.5  <a href="#hmds-MCCI_DO000000UV-PollingMessageTransmission-ic">Hierarchical Message Descriptions</a><br /></span><span>3.6  <a href="#ints-MCCI_DO000000UV-PollingMessageTransmission-ic">Interactions</a><br /></span></div>
+            <div class="heading"><br /><b class="heading">Introduction</b></div>
+            <p>This topic addresses those aspects about the communications environment that are related to polling. Polling is used in those
+               environments were messages are held on a queue on a remote system until they are released by means of a poll request. This
+               topic includes a specification of the interrelationships in the flow of messages and the communication of significant application
+               level exceptions or error conditions.
+            </p>
+            <p>The Polling Message Transmission topic in the HL7 Version 3 messaging standard addresses:
+               
+            </p>
+            <ol>
+               <li>The definition of transmission oriented wrappers (static models). These wrappers shall be used in all message interactions;
+                  they identify (amongst other things) the HL7 message interaction itself as well as the sending and receiving entities.
+               </li>
+               <li>The enforcement of a generic mode of message handling that is called for by the relationship between interactions and generic
+                  communication roles.
+               </li>
+            </ol>
+            <p>The Control Query Technical Committee invites implementers with additional requirements to submit content proposals for future
+               releases of the standard.
+               
+            </p>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">3.1</span><span class="title"><a name="sbs-MCCI_DO000000UV-PollingMessageTransmission-ic">Storyboards</a></span><hr class="sectionrule" />
+               </div>
+               <div class="body">
+                  <p><a href="#">Go To Top</a></p>
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e1358" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Storyboards (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Req for a Msg/Accept Ack(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_ST100001UV01-str" class="">MCCI_ST100001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Req for a Msg/Accept Ack w/ Poll for Nxt(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_ST100002UV01-str" class="">MCCI_ST100002UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Req for a Msg/Process Poll Error(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_ST100003UV01-str" class="">MCCI_ST100003UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e13582" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Storyboards (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Polling Message Transmission Message Remote Polling For A Message / Accept Ack(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_ST100001UV01-str" class="">MCCI_ST100001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Polling Message Transmission Message Remote Polling For A Message / Accept Ack W/poll For Next Message(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_ST100002UV01-str" class="">MCCI_ST100002UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Polling Message Transmission Message Remote Polling For A Message / Process Poll Error(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_ST100003UV01-str" class="">MCCI_ST100003UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e13583" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Storyboards (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Req for a Msg/Accept Ack(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_ST100001UV01-str" class="">MCCI_ST100001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Req for a Msg/Accept Ack w/ Poll for Nxt(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_ST100002UV01-str" class="">MCCI_ST100002UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Req for a Msg/Process Poll Error(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_ST100003UV01-str" class="">MCCI_ST100003UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3gstory">the storyboard discussion</a> in the Version 3 Guide.
+                  </p>
+                  <div class="heading"><br /><b class="heading">Introduction</b></div>
+                  <p>The reader is referred to the introduction of this domain for a detailed discussion regarding use cases and to the state-based
+                     storyboards.
+                  </p>
+                  <p><strong>Note: </strong>The examples can be combined into more complex scenarios as needed by a domain.
+                  </p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">3.1.1</span><span class="title"><a name="MCCI_ST100001UV01-str">Send Poll Req for a Msg/Accept Ack  (MCCI_ST100001UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Purpose</b></div>
+                        <p>Send HL7 Poll Request for one message.  If message received send accept acknowledgement and message polling session will complete.</p>
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><img class="graphic" src="graphics/MCCI_ST100001UV01.gif" alt="MCCI_ST100001UV01.gif" /><p></p><a name="MCCI_ST100001UV01-str"></a><table class="artifactList">
+                           <caption><b>Interaction List</b></caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Send Poll Request</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/MCCI_IN100001UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100001UV01-int" class="">MCCI_IN100001UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="artifactList_desc">Send Poll Message Payload</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/MCCI_IN100002UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100002UV01-int" class="">MCCI_IN100002UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="artifactList_desc">Send Poll Message Accept Acknowledgement</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/MCCI_IN100003UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100003UV01-int" class="">MCCI_IN100003UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <div class="subSubSubSection">
+                           <div class="header"><span class="icon"> </span><span class="number">3.1.1.1</span><span class="title"><a name="MCCI_ST100001UV01-MCCI_SN100001UV01-stex">Send Poll Req. for a Msg/Accept Ack (MCCI_SN100001UV01) </a></span></div>
+                           <div class="body">
+                              <p>In this scenario, the HL7 Message Queue Manager Role manages a remote message queue.  This service is not always available.
+                                 When it is available, the HL7 Message Queue Poller Role may send a poll request message.  When there is one or messages in
+                                 the remote message queue the HL7 Message Queue Manager prepares and sends an HL7 composite message payload to the HL7 Message
+                                 Queue Poller Role.  The Message Queue Poller receives the message and responds with an accept acknowledgement message and
+                                 the sequence is complete.  Note the restriction on this message queue is that it must not contain any messages that require
+                                 an immediate application level response.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">3.1.2</span><span class="title"><a name="MCCI_ST100002UV01-str">Send Poll Req for a Msg/Accept Ack w/ Poll for Nxt  (MCCI_ST100002UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Purpose</b></div>
+                        <p>Send HL7 Poll Request for one message.  If message received send accept acknowledgement with poll request for next message.</p>
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><img class="graphic" src="graphics/MCCI_ST100002UV01.gif" alt="MCCI_ST100002UV01.gif" /><p></p><a name="MCCI_ST100002UV01-str"></a><table class="artifactList">
+                           <caption><b>Interaction List</b></caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Send Poll Request</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/MCCI_IN100001UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100001UV01-int" class="">MCCI_IN100001UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="artifactList_desc">Send Poll Message Payload</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/MCCI_IN100002UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100002UV01-int" class="">MCCI_IN100002UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="artifactList_desc">Accept Ack Poll for Next Message in Queue</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/MCCI_IN100004UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100004UV01-int" class="">MCCI_IN100004UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="artifactList_desc">Send Poll Message Payload</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/MCCI_IN100002UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100002UV01-int" class="">MCCI_IN100002UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="artifactList_desc">Accept Ack Poll for Next Message in Queue</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/MCCI_IN100004UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100004UV01-int" class="">MCCI_IN100004UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="artifactList_desc">Send Poll Message Payload</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/MCCI_IN100002UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100002UV01-int" class="">MCCI_IN100002UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="artifactList_desc">Send Poll Message Accept Acknowledgement</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/MCCI_IN100003UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100003UV01-int" class="">MCCI_IN100003UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <div class="subSubSubSection">
+                           <div class="header"><span class="icon"> </span><span class="number">3.1.2.1</span><span class="title"><a name="MCCI_ST100002UV01-MCCI_SN100002UV01-stex">Send Poll Req for Msg/ Accept Ack &amp; Poll Next Msg (MCCI_SN100002UV01) </a></span></div>
+                           <div class="body">
+                              <p>In this scenario, the HL7 Message Queue Manager Role manages a remote message queue.  This service is not always available.
+                                 When it is available, the HL7 Message Queue Poller Role may send a poll request message.  When there are one or messages in
+                                 the remote message queue the HL7 Message Queue Manager prepares and sends an HL7 composite message payload to the HL7 Message
+                                 Queue Poller Role.  The Message Queue Poller receives the message and responds with an accept acknowledgement message that
+                                 additionally requests that the next message in the queue be sent. If there is one or messages in the remote message queue
+                                 the HL7 Message Queue Manager prepares and sends an HL7 composite message payload to the HL7 Message Queue Poller Role.  This
+                                 sequence may continue as long as there are messages queued or until the HL7 Message Queue Poller Role responds to a received
+                                 message with a simple accept acknowledgement message.  Any other error in processing a poll message request will also complete
+                                 the session for retrieving queued messages.  Note the restriction on this message queue is that it must not contain any messages
+                                 that require an immediate application level response.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">3.1.3</span><span class="title"><a name="MCCI_ST100003UV01-str">Send Poll Req for a Msg/Process Poll Error  (MCCI_ST100003UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Purpose</b></div>
+                        <p>Send HL7 Poll Request for one message.  If a message cannot be returned from the queue, send an accept acknowledgement indicating
+                           the reason for ending the message polling session.
+                        </p>
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><img class="graphic" src="graphics/MCCI_ST100003UV01.gif" alt="MCCI_ST100003UV01.gif" /><p></p><a name="MCCI_ST100003UV01-str"></a><table class="artifactList">
+                           <caption><b>Interaction List</b></caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Send Poll Request</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/MCCI_IN100001UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100001UV01-int" class="">MCCI_IN100001UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="artifactList_desc">Exception Acknowledgement in Response to Poll Req</td>
+                              <td class="artifactList_code"><a href="../../processable/multicacheschemas/MCCI_IN100005UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a>  <a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100005UV01-int" class="">MCCI_IN100005UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <div class="subSubSubSection">
+                           <div class="header"><span class="icon"> </span><span class="number">3.1.3.1</span><span class="title"><a name="MCCI_ST100003UV01-MCCI_SN100003UV01-stex">Send Poll Req for Msg/Process Poll Error (MCCI_SN100003UV01) </a></span></div>
+                           <div class="body">
+                              <p>In this scenario, the HL7 Message Queue Manager Role manages a remote message queue.  This service is not always available.
+                                 When it is available, the HL7 Message Queue Poller Role may send a poll request message.  When there are no messages in the
+                                 remote message queue or if there is another condition which prevents the HL7 Message Queue Manager Role from returning a message
+                                 from the message queue, the HL7 Message Queue Manager Role prepares and sends an HL7 acknowledgement message indicates the
+                                 reason why an application message from the message queue is not being returned.  Receiving such a response, the HL7 Message
+                                 Queue Poller Role will discontinue the message polling session.  The HL7 Message Queue Poller Role will discontinue a message
+                                 polling session if the communications link to the remote HL7 Message Queue Manager Role is not available.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">3.2</span><span class="title"><a name="roles-MCCI_DO000000UV-PollingMessageTransmission-ic">Application Roles</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" border="0" class="help_table" width="100%">
+                              <tr id="d0e1420a" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Application Roles (Sorted by Artifact Code)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top" align="left" class="general"> </td>
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" border="0" class="">
+                                       <tr>
+                                          <td>
+                                             <table border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Message Queue Poller&nbsp;
+                                                      					(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_AR100001UV01-ar" class="">MCCI_AR100001UV01</a>)
+                                                      				
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" border="0" class="">
+                                       <tr>
+                                          <td>
+                                             <table border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Message Queue Manager&nbsp;
+                                                      					(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_AR100002UV01-ar" class="">MCCI_AR100002UV01</a>)
+                                                      				
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" border="0" class="help_table" width="100%">
+                              <tr id="d0e1420b" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top" colspan="10"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Application Roles (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top" align="left" class="general"> </td>
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" border="0" class="">
+                                       <tr>
+                                          <td>
+                                             <table border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Polling Message Transmission Order Fulfiller&nbsp;
+                                                      					(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_AR100002UV01-ar" class="">MCCI_AR100002UV01</a>)
+                                                      				
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" border="0" class="">
+                                       <tr>
+                                          <td>
+                                             <table border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Polling Message Transmission Order Placer&nbsp;
+                                                      					(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_AR100001UV01-ar" class="">MCCI_AR100001UV01</a>)
+                                                      				
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e14073" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Application Roles (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Message Queue Poller(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_AR100001UV01-ar" class="">MCCI_AR100001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Message Queue Manager(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_AR100002UV01-ar" class="">MCCI_AR100002UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3gapprole">the discussion of application roles</a> and their relationships in the Version 3 Guide.
+                  </p>
+                  <div class="heading"><br /><b class="heading">Introduction</b></div>
+                  <p>The justification for HL7 Communication Roles for Version 3 message control comes from a need to formalize the expectations
+                     of HL7 Application Roles for messaging communication services. Application Roles specify the expected message handling behavior
+                     for a set of interactions. The HL7 Message Development Framework has led to the creation of numerous Application Roles by
+                     the technical committees that are developing HL7 Version 3 messaging interactions. Communication Roles are intended to specify
+                     a core set of messaging communication services that can support the messaging communication requirements of HL7 Application
+                     Roles.
+                  </p>
+                  <p><strong>Note</strong>: These application roles are not used in their own right except for the inplementable interactions in this domain.  Accept-level
+                     acknowledgements fall into this category.  Domain interactions will define, and reference, two domain application roles.
+                  </p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">3.2.1</span><span class="title"><a name="MCCI_AR100001UV01-ar">Message Queue Poller  (MCCI_AR100001UV01) </a></span></div>
+                     <div class="body"><b>Description</b> 
+                        					<a href="../../domains/uvci/uvci_DO_XX.htm#MCCI_AR100001UV01-ar" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a><table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Polling Message Transmission Order Placer</em></td>
+                           </tr>
+                        </table>
+                        <p>Sends HL7 poll request control message to an HL7 message queue manager.  Can handle poll message errors returned by remote
+                           queue manager.  Only able to handle notification HL7 message payloads or message payloads that do not require a deferred application
+                           level response.
+                        </p>
+                        <p>Note: This is not a real trigger event. Common messages, as defined in the Shared Messages Introduction  [COMT_DO000000] ,
+                           are not used in their own right but as a reusable payload in various domains. When used in this fashion, the message is transmitted
+                           as the result of a domain interaction, and between two domain application roles.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">3.2.2</span><span class="title"><a name="MCCI_AR100002UV01-ar">Message Queue Manager  (MCCI_AR100002UV01) </a></span></div>
+                     <div class="body"><b>Description</b> 
+                        					<a href="../../domains/uvci/uvci_DO_XX.htm#MCCI_AR100002UV01-ar" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a><table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Polling Message Transmission Order Fulfiller</em></td>
+                           </tr>
+                        </table>
+                        <p>Responds to HL7 poll request control message with next HL7 message in queue or a message queue poll error message.  Requires
+                           an accept-level acknowledgement on all HL7 message payloads sent.  May accept an embedded poll for next message in an accept-level
+                           message acknowledgement.  Does not allow the send of an HL7 message payload that  requires a deferred application level response.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">3.3</span><span class="title"><a name="tes-MCCI_DO000000UV-PollingMessageTransmission-ic">Trigger Events</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e1445" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Trigger Events (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Message 1 Request(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_TE100001UV01-te" class="">MCCI_TE100001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Message Accept/Poll Next(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_TE100005UV01-te" class="">MCCI_TE100005UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Message Accept Acknowledgement(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_TE100003UV01-te" class="">MCCI_TE100003UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Message Error(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_TE100004UV01-te" class="">MCCI_TE100004UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Message From Poll Request(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_TE100002UV01-te" class="">MCCI_TE100002UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e14452" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Trigger Events (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Polling Message Transmission Event Message Remote Polling Send 2 Error(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_TE100004UV01-te" class="">MCCI_TE100004UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Polling Message Transmission Request(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_TE100001UV01-te" class="">MCCI_TE100001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Polling Message Transmission Request(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_TE100002UV01-te" class="">MCCI_TE100002UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Polling Message Transmission Request Message Remote Polling Send 2 Accept Ack/poll For Next Message(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_TE100005UV01-te" class="">MCCI_TE100005UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Polling Message Transmission Request Message Remote Polling Send 2 Accept Acknowledgement(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_TE100003UV01-te" class="">MCCI_TE100003UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e14453" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Trigger Events (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Message 1 Request(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_TE100001UV01-te" class="">MCCI_TE100001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Message From Poll Request(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_TE100002UV01-te" class="">MCCI_TE100002UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Message Accept/Poll Next(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_TE100005UV01-te" class="">MCCI_TE100005UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Message Accept Acknowledgement(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_TE100003UV01-te" class="">MCCI_TE100003UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Message Error(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_TE100004UV01-te" class="">MCCI_TE100004UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3gtrigger">the discussion of trigger events</a> in the Version 3 Guide.
+                  </p>
+                  <div class="heading"><br /><b class="heading">Introduction</b></div>
+                  <p>Communication level message control in HL7 Version 3 is defined by the handling of the events and state transitions identified
+                     in the Version 3 HL7 Message Control state diagram.  Refer to domain interactions for domain trigger events.
+                  </p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">3.3.1</span><span class="title"><a name="MCCI_TE100001UV01-te">Send Poll Message 1 Request  (MCCI_TE100001UV01) </a></span></div>
+                     <div class="body">
+                        <div class="subheading">Description
+                           				<a href="../../domains/uvci/uvci_DO_XX.htm#MCCI_TE100001UV01-te" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a></div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Polling Message Transmission Request</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>Type: </em></td>
+                              <td class="structType_value"><em>State-transition based</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>State Transition: </em></td>
+                              <td class="structType_value"><em>Message (<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_RM100100UV01-rmi" class="">MCCI_RM100100UV01</a>)
+                                    									</em></td>
+                           </tr>
+                        </table>
+                        <p>The processing of a poll operation to retrieve a message from a remotely managed message queue has started.</p>
+                        <p><strong>Note</strong>: This trigger event is for communication infrastructure purposes only.  Domain interactions will define the Transmission
+                           Wrapper, domain trigger events, application roles, and domain payload. 
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">3.3.2</span><span class="title"><a name="MCCI_TE100002UV01-te">Send Poll Message From Poll Request  (MCCI_TE100002UV01) </a></span></div>
+                     <div class="body">
+                        <div class="subheading">Description
+                           				<a href="../../domains/uvci/uvci_DO_XX.htm#MCCI_TE100002UV01-te" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a></div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Polling Message Transmission Request</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>Type: </em></td>
+                              <td class="structType_value"><em>State-transition based</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>State Transition: </em></td>
+                              <td class="structType_value"><em>Message (<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_RM100300UV01-rmi" class="">MCCI_RM100300UV01</a>)
+                                    									</em></td>
+                           </tr>
+                        </table>
+                        <p>An HL7 Composite Message Payload send operation has been started as a result of a poll request to a remotely managed message
+                           queue.
+                        </p>
+                        <p><strong>Note</strong>: This trigger event is for communication infrastructure purposes only.  Domain interactions will define the Transmission
+                           Wrapper, domain trigger events, application roles, and domain payload. 
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">3.3.3</span><span class="title"><a name="MCCI_TE100005UV01-te">Send Poll Message Accept/Poll Next  (MCCI_TE100005UV01) </a></span></div>
+                     <div class="body">
+                        <div class="subheading">Description
+                           				
+                        </div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Polling Message Transmission Request Message Remote Polling Send 2 Accept Ack/poll For Next Message</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>Type: </em></td>
+                              <td class="structType_value"><em>State-transition based</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>State Transition: </em></td>
+                              <td class="structType_value"><em>Message (<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_RM100200UV01-rmi" class="">MCCI_RM100200UV01</a>)
+                                    									</em></td>
+                           </tr>
+                        </table>
+                        <p>An HL7 Composite Message Payload has been accepted for guaranteed delivery as a result of a poll request to a remotely managed
+                           message queue.  Simultaneously, a poll operation for the next message in the queue was started.
+                        </p>
+                        <p><strong>Note</strong>: This trigger event is for communication infrastructure for accept-level acknowledgements which are implementable as a receiver
+                           responsibility. 
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">3.3.4</span><span class="title"><a name="MCCI_TE100003UV01-te">Send Poll Message Accept Acknowledgement  (MCCI_TE100003UV01) </a></span></div>
+                     <div class="body">
+                        <div class="subheading">Description
+                           				<a href="../../domains/uvci/uvci_DO_XX.htm#MCCI_TE100003UV01-te" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a></div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Polling Message Transmission Request Message Remote Polling Send 2 Accept Acknowledgement</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>Type: </em></td>
+                              <td class="structType_value"><em>State-transition based</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>State Transition: </em></td>
+                              <td class="structType_value"><em>Message (<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_RM100200UV01-rmi" class="">MCCI_RM100200UV01</a>)
+                                    									</em></td>
+                           </tr>
+                        </table>
+                        <p>An HL7 Composite Message Payload has been accepted for guaranteed delivery as a result of a poll request to a remotely managed
+                           message queue.
+                        </p>
+                        <p><strong>Note</strong>: This trigger event is for communication infrastructure for accept-level acknowledgements which are implementable as a receiver
+                           responsibility. 
+                        </p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">3.3.5</span><span class="title"><a name="MCCI_TE100004UV01-te">Send Poll Message Error  (MCCI_TE100004UV01) </a></span></div>
+                     <div class="body">
+                        <div class="subheading">Description
+                           				<a href="../../domains/uvci/uvci_DO_XX.htm#MCCI_TE100004UV01-te" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a></div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Polling Message Transmission Event Message Remote Polling Send 2 Error</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>Type: </em></td>
+                              <td class="structType_value"><em>State-transition based</em></td>
+                           </tr>
+                           <tr>
+                              <td class="structType_name"><em>State Transition: </em></td>
+                              <td class="structType_value"><em>Message (<a href="../../domains/uvci/uvci_GenericMessageTransmission.htm#MCCI_RM000200UV01-rmi" class="">MCCI_RM000200UV01</a>)
+                                    									</em></td>
+                           </tr>
+                        </table>
+                        <p>The processing of a poll operation to retrieve a message from a remotely managed message queue has resulted in an error condition
+                           noted by the manager of the queue.
+                        </p>
+                        <p><strong>Note</strong>: This trigger event is for communication infrastructure for accept-level acknowledgements which are implementable as a receiver
+                           responsibility. 
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">3.4</span><span class="title"><a name="rmims-MCCI_DO000000UV-PollingMessageTransmission-ic">Refined Message Information Models</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e1508" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Refined Message Information Models (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Polling Accept Acknowledgement(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_RM100200UV01-rmi" class="">MCCI_RM100200UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Polling Response W/ Message(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_RM100300UV01-rmi" class="">MCCI_RM100300UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Request(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_RM100100UV01-rmi" class="">MCCI_RM100100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e15082" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Refined Message Information Models (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Polling Message Transmission Event Create Send Poll Reqst(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_RM100100UV01-rmi" class="">MCCI_RM100100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Polling Message Transmission Event New Accept Acknowledgement/poll Next Msg(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_RM100200UV01-rmi" class="">MCCI_RM100200UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Polling Message Transmission Event New Response W/ Message(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_RM100300UV01-rmi" class="">MCCI_RM100300UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e15083" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Refined Message Information Models (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Request(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_RM100100UV01-rmi" class="">MCCI_RM100100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Polling Accept Acknowledgement(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_RM100200UV01-rmi" class="">MCCI_RM100200UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Polling Response W/ Message(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_RM100300UV01-rmi" class="">MCCI_RM100300UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3grmim">the description of RMIMs</a> in the Version 3 Guide.
+                  </p>
+                  <p></p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">3.4.1</span><span class="title"><a name="MCCI_RM100100UV01-rmi">Send Poll Request  (MCCI_RM100100UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/MCCI_RM100100UV.htm" target="_blank"><img class="graphic" src="editable/images/T-MCCI_RM100100UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><div class="subheading">Description</div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><b><em>Parent:  </em></b></td>
+                              <td class="structType_value"><em>Transmission Infrastructure Domain Model (<a href="../../domains/uvci/uvci.htm#MCCI_DM000000UV-rmi" class="">MCCI_DM000000UV</a>)
+                                    									</em></td>
+                           </tr>
+                        </table>
+                        <p>Send poll request for next message in remote message queue.  </p>
+                        <p><strong>Note</strong>: This will not be implemented in its own right.  Domain interactions will reference the appropriate Transmission Wrapper.
+                        </p>
+                        <p></p>
+                        <table class="artifactList">
+                           <caption>Contained Hierarchical Message Descriptions</caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Send Poll Request</td>
+                              <td class="artifactList_code"><a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_HD100100UV01-hmd" class="">MCCI_HD100100UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">3.4.2</span><span class="title"><a name="MCCI_RM100200UV01-rmi">Send Polling Accept Acknowledgement  (MCCI_RM100200UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/MCCI_RM100200UV.htm" target="_blank"><img class="graphic" src="editable/images/T-MCCI_RM100200UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><div class="subheading">Description</div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><b><em>Parent:  </em></b></td>
+                              <td class="structType_value"><em>Transmission Infrastructure Domain Model (<a href="../../domains/uvci/uvci.htm#MCCI_DM000000UV-rmi" class="">MCCI_DM000000UV</a>)
+                                    									</em></td>
+                           </tr>
+                        </table>
+                        <p>Give communication level accept acknowledgement of reception of a message while simultaneously issuing a poll request for
+                           the next message in the remote message queue.
+                        </p>
+                        <p><strong>Note</strong>: This message type is implementable as a receiver responsibility.
+                        </p>
+                        <p></p>
+                        <table class="artifactList">
+                           <caption>Contained Hierarchical Message Descriptions</caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Send Accept Ack/Poll Next Msg</td>
+                              <td class="artifactList_code"><a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_HD100200UV01-hmd" class="">MCCI_HD100200UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">3.4.3</span><span class="title"><a name="MCCI_RM100300UV01-rmi">Send Polling Response W/ Message  (MCCI_RM100300UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">
+                           <p>Diagram</p>
+                        </div><a style="border:0px solid none;" href="editable/MCCI_RM100300UV.htm" target="_blank"><img class="graphic" src="editable/images/T-MCCI_RM100300UV.png" alt="" /><br />
+                           						Click thumbnail above to open larger graphic in a new window
+                           					</a><div class="subheading">Description</div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><b><em>Parent:  </em></b></td>
+                              <td class="structType_value"><em>Transmission Infrastructure Domain Model (<a href="../../domains/uvci/uvci.htm#MCCI_DM000000UV-rmi" class="">MCCI_DM000000UV</a>)
+                                    									</em></td>
+                           </tr>
+                        </table>
+                        <p>Send of next message in queue in response to poll request.</p>
+                        <p><strong>Note</strong>: This will not be implemented in its own right.  Domain interactions will reference the appropriate Transmission Wrapper.
+                        </p>
+                        <p></p>
+                        <table class="artifactList">
+                           <caption>Contained Hierarchical Message Descriptions</caption>
+                           <tr class="">
+                              <td class="artifactList_desc">Send Poll Response w/ Message</td>
+                              <td class="artifactList_code"><a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_HD100300UV01-hmd" class="">MCCI_HD100300UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">3.5</span><span class="title"><a name="hmds-MCCI_DO000000UV-PollingMessageTransmission-ic">Hierarchical Message Descriptions</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e1547" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Hierarchical Message Descriptions (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Accept Ack/Poll Next Msg(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_HD100200UV01-hmd" class="">MCCI_HD100200UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Request(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_HD100100UV01-hmd" class="">MCCI_HD100100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Response w/ Message(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_HD100300UV01-hmd" class="">MCCI_HD100300UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e15472" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Hierarchical Message Descriptions (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Accept Ack/Poll Next Msg(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_HD100200UV01-hmd" class="">MCCI_HD100200UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Request(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_HD100100UV01-hmd" class="">MCCI_HD100100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Response w/ Message(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_HD100300UV01-hmd" class="">MCCI_HD100300UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e15473" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> Hierarchical Message Descriptions (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Request(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_HD100100UV01-hmd" class="">MCCI_HD100100UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Accept Ack/Poll Next Msg(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_HD100200UV01-hmd" class="">MCCI_HD100200UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Response w/ Message(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_HD100300UV01-hmd" class="">MCCI_HD100300UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <p></p>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3ghmd">the description of HMDs</a> in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">3.5.1</span><span class="title"><a name="MCCI_HD100100UV01-hmd">Send Poll Request  (MCCI_HD100100UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Description</b></div>
+                        <p>Send poll request for next message in remote message queue.</p>
+                        <p><strong>Note</strong>: This will not be implemented in its own right.  Domain interactions will reference the appropriate Transmission Wrapper.
+                        </p>
+                        <table class="artifactList">
+                           <caption>
+                              												Common Message Element Types Used
+                              									
+                           </caption>
+                           <tr class="">
+                              <td class="artifactList_desc">R_NotificationPartyContact</td>
+                              <td class="artifactList_code"><a href="../../domains/uvct/uvct_do_cmets.htm#COCT_MT040203UV01-msg" class="">COCT_MT040203UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <div class="subheading">Base Hierarchical Message Description
+                           				<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_RM100100UV01-rmi" class=""><img src="../../support/graphics/rmimview.gif" alt="View R-MIM" height="16" width="16" style="border-width:0" /></a> 
+                           				<a href="../../domains/uvci/editable/MCCI_HD100100UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="editable/MCCI_HD100100UV.xls" target="_blank"><img src="../../support/graphics/excelview.gif" height="16" width="16" alt="Excel View" style="border:0px" /></a> 
+                        </div>
+                        <table class="hmd">
+                           <caption>Message Type List</caption>
+                           <tr class="">
+                              <td class="hmd_desc"><a name="MCCI_MT100100UV01-msg"></a>Send Poll Request
+                              </td>
+                              <td class="hmd_code">MCCI_MT100100UV01</td>
+                              <td class="hmd_links"><a href="../../domains/uvci/editable/MCCI_HD100100UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="../../processable/multicacheschemas/MCCI_MT100100UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> <a href="../../domains/uvci/uvci_DO_XX.htm#MCCI_MT100100UV01-msg" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a>
+                                 										 
+                                 									
+                                 
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">3.5.2</span><span class="title"><a name="MCCI_HD100200UV01-hmd">Send Accept Ack/Poll Next Msg  (MCCI_HD100200UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Description</b></div>
+                        <p>Give communication level accept acknowledgement of reception of a message while simultaneously issuing a poll request for
+                           the next message in the remote message queue.
+                        </p>
+                        <p><strong>Note</strong>: This message type is implementable as a receiver responsibility.
+                        </p>
+                        <table class="artifactList">
+                           <caption>
+                              												Common Message Element Types Used
+                              									
+                           </caption>
+                           <tr class="">
+                              <td class="artifactList_desc">R_NotificationPartyContact</td>
+                              <td class="artifactList_code"><a href="../../domains/uvct/uvct_do_cmets.htm#COCT_MT040203UV01-msg" class="">COCT_MT040203UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <div class="subheading">Base Hierarchical Message Description
+                           				<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_RM100200UV01-rmi" class=""><img src="../../support/graphics/rmimview.gif" alt="View R-MIM" height="16" width="16" style="border-width:0" /></a> 
+                           				<a href="../../domains/uvci/editable/MCCI_HD100200UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="editable/MCCI_HD100200UV.xls" target="_blank"><img src="../../support/graphics/excelview.gif" height="16" width="16" alt="Excel View" style="border:0px" /></a> 
+                        </div>
+                        <table class="hmd">
+                           <caption>Message Type List</caption>
+                           <tr class="">
+                              <td class="hmd_desc"><a name="MCCI_MT100200UV01-msg"></a>Send Accept Ack/Poll Next Message
+                              </td>
+                              <td class="hmd_code">MCCI_MT100200UV01</td>
+                              <td class="hmd_links"><a href="../../domains/uvci/editable/MCCI_HD100200UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="../../processable/multicacheschemas/MCCI_MT100200UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> <a href="../../domains/uvci/uvci_DO_XX.htm#MCCI_MT100200UV01-msg" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a>
+                                 										 
+                                 									
+                                 
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">3.5.3</span><span class="title"><a name="MCCI_HD100300UV01-hmd">Send Poll Response w/ Message  (MCCI_HD100300UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading"><br /><b class="heading">Description</b></div>
+                        <p>Send of next message in queue in response to poll request.</p>
+                        <p><strong>Note</strong>: This will not be implemented in its own right.  Domain interactions will reference the appropriate Transmission Wrapper.
+                        </p>
+                        <table class="artifactList">
+                           <caption>
+                              												Common Message Element Types Used
+                              									
+                           </caption>
+                           <tr class="">
+                              <td class="artifactList_desc">R_NotificationPartyContact</td>
+                              <td class="artifactList_code"><a href="../../domains/uvct/uvct_do_cmets.htm#COCT_MT040203UV01-msg" class="">COCT_MT040203UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <div class="subheading">Base Hierarchical Message Description
+                           				<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_RM100300UV01-rmi" class=""><img src="../../support/graphics/rmimview.gif" alt="View R-MIM" height="16" width="16" style="border-width:0" /></a> 
+                           				<a href="../../domains/uvci/editable/MCCI_HD100300UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="editable/MCCI_HD100300UV.xls" target="_blank"><img src="../../support/graphics/excelview.gif" height="16" width="16" alt="Excel View" style="border:0px" /></a> 
+                        </div>
+                        <table class="hmd">
+                           <caption>Message Type List</caption>
+                           <tr class="">
+                              <td class="hmd_desc"><a name="MCCI_MT100300UV01-msg"></a>Send Poll Response with Message
+                              </td>
+                              <td class="hmd_code">MCCI_MT100300UV01</td>
+                              <td class="hmd_links"><a href="../../domains/uvci/editable/MCCI_HD100300UV-NoEdit.htm" target="_blank"><img src="../../support/graphics/tableview.gif" alt="Table View" style="border:0px" /></a> <a href="../../processable/multicacheschemas/MCCI_MT100300UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> <a href="../../domains/uvci/uvci_DO_XX.htm#MCCI_MT100300UV01-msg" class=""><img src="../../support/graphics/interactionsview.gif" alt="View Interactions" height="16" width="16" style="border-width:0" /></a>
+                                 										 
+                                 									
+                                 
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"> </span><span class="number">3.6</span><span class="title"><a name="ints-MCCI_DO000000UV-PollingMessageTransmission-ic">Interactions</a></span></div>
+               <div class="body">
+                  <table class="artifactList">
+                     <tr>
+                        <td class="artifactList_desc">
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e1599" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> List of Interactions (Sorted by Title)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Accept Ack Poll for Next Message in Queue(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100004UV01-int" class="">MCCI_IN100004UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Exception Acknowledgement in Response to Poll Req(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100005UV01-int" class="">MCCI_IN100005UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Message Accept Acknowledgement(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100003UV01-int" class="">MCCI_IN100003UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Message Payload(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100002UV01-int" class="">MCCI_IN100002UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Request(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100001UV01-int" class="">MCCI_IN100001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e15992" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> List of Interactions (Sorted by Structured Sort Name)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Polling Message Transmission Definition Message Remote Polling Accept Acknowledgement Poll For Next Message In Queue(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100004UV01-int" class="">MCCI_IN100004UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Polling Message Transmission Definition Message Remote Polling Exception Acknowledgement In Response To Poll Rqst(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100005UV01-int" class="">MCCI_IN100005UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Polling Message Transmission Definition Message Remote Polling Send Poll Message Payload(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100002UV01-int" class="">MCCI_IN100002UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Polling Message Transmission Request Message Remote Polling 1 Send Poll Rqst(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100001UV01-int" class="">MCCI_IN100001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Polling Message Transmission Request Message Remote Polling Accept Acknowledgement(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100003UV01-int" class="">MCCI_IN100003UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                           <table cellpadding="0" cellspacing="0" style="border:0px" class="help_table">
+                              <tr id="d0e15993" class="toc_title_row" onclick="toggle(this);" style="cursor: hand;" onmouseover="highlightRow(this,1);" onmouseout="highlightRow(this,0);">
+                                 <td valign="top"><span class="toc_title_arrow">&#9660;</span><span class="toc_title_text"><strong> List of Interactions (Sorted by Display Order)</strong></span></td>
+                              </tr>
+                              <tr class="toc_row_master">
+                                 <td valign="top">
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Accept Ack Poll for Next Message in Queue(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100004UV01-int" class="">MCCI_IN100004UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Exception Acknowledgement in Response to Poll Req(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100005UV01-int" class="">MCCI_IN100005UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Message Payload(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100002UV01-int" class="">MCCI_IN100002UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Request(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100001UV01-int" class="">MCCI_IN100001UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    <table cellpadding="0" cellspacing="0" style="border:0px" class="">
+                                       <tr>
+                                          <td class="toc_indent_flag_gap"> </td>
+                                          <td>
+                                             <table style="border:0px" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                   <td valign="top" align="left" class="general"><img src="../../support/graphics/pointer.gif" alt="pointer" /></td>
+                                                   <td valign="top" align="left" class="general">Send Poll Message Accept Acknowledgement(<a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100003UV01-int" class="">MCCI_IN100003UV01</a>)&nbsp;
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <p></p>
+                  <div class="heading"><br /><b class="heading">Reference</b></div>
+                  <p>For details on the interpretation of this section, see <a href="../../help/v3guide/v3guide.htm#v3gintact">the definition of Interactions</a> in the Version 3 Guide.
+                  </p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">3.6.1</span><span class="title"><a name="MCCI_IN100004UV01-int">Accept Ack Poll for Next Message in Queue  (MCCI_IN100004UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">Description <a href="../../processable/multicacheschemas/MCCI_IN100004UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                        </div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Polling Message Transmission Definition Message Remote Polling Accept Acknowledgement Poll For Next Message In Queue</em></td>
+                           </tr>
+                        </table>
+                        <p>Communication level acknowledgement that polled message received and immediately making a poll request for the next message
+                           in the queue. Note: This interaction is invoked, where appropriate, as a receiver responsibility.
+                        </p>
+                        <p></p>
+                        <table class="interact">
+                           <tr class="">
+                              <td class="interact_type"><b>Trigger Event</b></td>
+                              <td class="interact_desc">Send Poll Message Accept Acknowledgement</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_TE100003UV01-te" class="">MCCI_TE100003UV01</a></td>
+                           </tr>
+                           <tr>
+                              <td class="interact_type"><b>Transmission Wrapper</b></td>
+                              <td class="interact_desc">
+                                 									 
+                                 								
+                              </td>
+                              <td class="interact_code">
+                                 								 
+                                 								
+                              </td>
+                           </tr>
+                           <tr>
+                              <td class="interact_type"><b>Control Act Wrapper</b></td>
+                              <td class="interact_desc">
+                                 									 
+                                 								
+                              </td>
+                              <td class="interact_code">
+                                 									 
+                                 								
+                              </td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Message Type</b></td>
+                              <td class="interact_desc">Send Accept Ack/Poll Next Message</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_MT100200UV01-msg" class="">MCCI_MT100200UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="resp">
+                           <caption>Receiver Responsibilities</caption>
+                           <tr>
+                              <td class="resp_reason"><b>Reason</b></td>
+                              <td class="resp_te"><b>Trigger Event</b></td>
+                              <td class="resp_in_code"><b>Interaction</b></td>
+                           </tr>
+                           <tr>
+                              <td class="resp_reason">If message waiting in queue to send.</td>
+                              <td class="resp_te"></td>
+                              <td class="resp_in_code"><a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100002UV01-int" class="">MCCI_IN100002UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="interact">
+                           <caption>Sending and Receiving Roles</caption>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Message Queue Poller</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_AR100001UV01-ar" class="">MCCI_AR100001UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Message Queue Manager</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_AR100002UV01-ar" class="">MCCI_AR100002UV01</a></td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <p></p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">3.6.2</span><span class="title"><a name="MCCI_IN100005UV01-int">Exception Acknowledgement in Response to Poll Req  (MCCI_IN100005UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">Description <a href="../../processable/multicacheschemas/MCCI_IN100005UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                        </div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Polling Message Transmission Definition Message Remote Polling Exception Acknowledgement In Response To Poll Rqst</em></td>
+                           </tr>
+                        </table>
+                        <p>Communication level acknowledgement indicating exception as to why message payload not returned by poll request that has been
+                           received. Note: This interaction is invoked, where appropriate, as a receiver responsibility.
+                        </p>
+                        <p></p>
+                        <table class="interact">
+                           <tr class="">
+                              <td class="interact_type"><b>Trigger Event</b></td>
+                              <td class="interact_desc">Send Poll Message Error</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_TE100004UV01-te" class="">MCCI_TE100004UV01</a></td>
+                           </tr>
+                           <tr>
+                              <td class="interact_type"><b>Transmission Wrapper</b></td>
+                              <td class="interact_desc">
+                                 									 
+                                 								
+                              </td>
+                              <td class="interact_code">
+                                 								 
+                                 								
+                              </td>
+                           </tr>
+                           <tr>
+                              <td class="interact_type"><b>Control Act Wrapper</b></td>
+                              <td class="interact_desc">
+                                 									 
+                                 								
+                              </td>
+                              <td class="interact_code">
+                                 									 
+                                 								
+                              </td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Message Type</b></td>
+                              <td class="interact_desc">Accept Acknowledgement</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_GenericMessageTransmission.htm#MCCI_MT000200UV01-msg" class="">MCCI_MT000200UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="interact">
+                           <caption>Sending and Receiving Roles</caption>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Message Queue Manager</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_AR100002UV01-ar" class="">MCCI_AR100002UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Message Queue Poller</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_AR100001UV01-ar" class="">MCCI_AR100001UV01</a></td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <p></p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">3.6.3</span><span class="title"><a name="MCCI_IN100002UV01-int">Send Poll Message Payload  (MCCI_IN100002UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">Description <a href="../../processable/multicacheschemas/MCCI_IN100002UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                        </div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Polling Message Transmission Definition Message Remote Polling Send Poll Message Payload</em></td>
+                           </tr>
+                        </table>
+                        <p>Sends next message in HL7 message queue. Note: This interaction is for communication illustration purposes only.  Refer to
+                           domain defined interactions which will indicate the appropriate transmission wrapper.
+                        </p>
+                        <p></p>
+                        <table class="interact">
+                           <tr class="">
+                              <td class="interact_type"><b>Trigger Event</b></td>
+                              <td class="interact_desc">Send Poll Message From Poll Request</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_TE100002UV01-te" class="">MCCI_TE100002UV01</a></td>
+                           </tr>
+                           <tr>
+                              <td class="interact_type"><b>Transmission Wrapper</b></td>
+                              <td class="interact_desc">
+                                 									 
+                                 								
+                              </td>
+                              <td class="interact_code">
+                                 								 
+                                 								
+                              </td>
+                           </tr>
+                           <tr>
+                              <td class="interact_type"><b>Control Act Wrapper</b></td>
+                              <td class="interact_desc">
+                                 									 
+                                 								
+                              </td>
+                              <td class="interact_code">
+                                 									 
+                                 								
+                              </td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Message Type</b></td>
+                              <td class="interact_desc">Send Poll Response with Message</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_MT100300UV01-msg" class="">MCCI_MT100300UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="resp">
+                           <caption>Receiver Responsibilities</caption>
+                           <tr>
+                              <td class="resp_reason"><b>Reason</b></td>
+                              <td class="resp_te"><b>Trigger Event</b></td>
+                              <td class="resp_in_code"><b>Interaction</b></td>
+                           </tr>
+                           <tr>
+                              <td class="resp_reason">If acknowledging message received and no more polling is required.</td>
+                              <td class="resp_te"></td>
+                              <td class="resp_in_code"><a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100003UV01-int" class="">MCCI_IN100003UV01</a></td>
+                           </tr>
+                           <tr>
+                              <td class="resp_reason">If acknowledging message received and an additional poll request for next queued message is wanted.</td>
+                              <td class="resp_te"></td>
+                              <td class="resp_in_code"><a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100004UV01-int" class="">MCCI_IN100004UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="interact">
+                           <caption>Sending and Receiving Roles</caption>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Message Queue Manager</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_AR100002UV01-ar" class="">MCCI_AR100002UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Message Queue Poller</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_AR100001UV01-ar" class="">MCCI_AR100001UV01</a></td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <p></p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">3.6.4</span><span class="title"><a name="MCCI_IN100001UV01-int">Send Poll Request  (MCCI_IN100001UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">Description <a href="../../processable/multicacheschemas/MCCI_IN100001UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                        </div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Polling Message Transmission Request Message Remote Polling 1 Send Poll Rqst</em></td>
+                           </tr>
+                        </table>
+                        <p>Sends HL7 poll request control message to an HL7 message queue manager. Note: This interaction is for communication illustration
+                           purposes only.  Refer to domain defined interactions which will indicate the appropriate transmission wrapper.
+                        </p>
+                        <p></p>
+                        <table class="interact">
+                           <tr class="">
+                              <td class="interact_type"><b>Trigger Event</b></td>
+                              <td class="interact_desc">Send Poll Message 1 Request</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_TE100001UV01-te" class="">MCCI_TE100001UV01</a></td>
+                           </tr>
+                           <tr>
+                              <td class="interact_type"><b>Transmission Wrapper</b></td>
+                              <td class="interact_desc">
+                                 									 
+                                 								
+                              </td>
+                              <td class="interact_code">
+                                 								 
+                                 								
+                              </td>
+                           </tr>
+                           <tr>
+                              <td class="interact_type"><b>Control Act Wrapper</b></td>
+                              <td class="interact_desc">
+                                 									 
+                                 								
+                              </td>
+                              <td class="interact_code">
+                                 									 
+                                 								
+                              </td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Message Type</b></td>
+                              <td class="interact_desc">Send Poll Request</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_MT100100UV01-msg" class="">MCCI_MT100100UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="resp">
+                           <caption>Receiver Responsibilities</caption>
+                           <tr>
+                              <td class="resp_reason"><b>Reason</b></td>
+                              <td class="resp_te"><b>Trigger Event</b></td>
+                              <td class="resp_in_code"><b>Interaction</b></td>
+                           </tr>
+                           <tr>
+                              <td class="resp_reason">If message waiting in queue to send.</td>
+                              <td class="resp_te"></td>
+                              <td class="resp_in_code"><a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100002UV01-int" class="">MCCI_IN100002UV01</a></td>
+                           </tr>
+                           <tr>
+                              <td class="resp_reason">If message cannot be returned from the queue</td>
+                              <td class="resp_te"></td>
+                              <td class="resp_in_code"><a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_IN100005UV01-int" class="">MCCI_IN100005UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="interact">
+                           <caption>Sending and Receiving Roles</caption>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Message Queue Poller</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_AR100001UV01-ar" class="">MCCI_AR100001UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Message Queue Manager</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_AR100002UV01-ar" class="">MCCI_AR100002UV01</a></td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <p></p>
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon"><img src="../../support/graphics/NormativeStandard.gif" alt="NormativeStandard1" /></span><span class="number">3.6.5</span><span class="title"><a name="MCCI_IN100003UV01-int">Send Poll Message Accept Acknowledgement  (MCCI_IN100003UV01) </a></span></div>
+                     <div class="body">
+                        <div class="heading">Description <a href="../../processable/multicacheschemas/MCCI_IN100003UV01.htm" target="_blank"><img src="../../support/graphics/schemaview.gif" height="16" width="16" style="border:0px" alt="Schema View" /></a> 
+                        </div>
+                        <table class="structType">
+                           <tr>
+                              <td class="structType_name"><em>Structured Name: </em></td>
+                              <td class="structType_value"><em>Polling Message Transmission Request Message Remote Polling Accept Acknowledgement</em></td>
+                           </tr>
+                        </table>
+                        <p>Communication level acknowledgement that polled message received. Note: This interaction is invoked, where appropriate, as
+                           a receiver responsibility.
+                        </p>
+                        <p></p>
+                        <table class="interact">
+                           <tr class="">
+                              <td class="interact_type"><b>Trigger Event</b></td>
+                              <td class="interact_desc">Send Message Accept Acknowledgement</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_GenericMessageTransmission.htm#MCCI_TE000002UV01-te" class="">MCCI_TE000002UV01</a></td>
+                           </tr>
+                           <tr>
+                              <td class="interact_type"><b>Transmission Wrapper</b></td>
+                              <td class="interact_desc">
+                                 									 
+                                 								
+                              </td>
+                              <td class="interact_code">
+                                 								 
+                                 								
+                              </td>
+                           </tr>
+                           <tr>
+                              <td class="interact_type"><b>Control Act Wrapper</b></td>
+                              <td class="interact_desc">
+                                 									 
+                                 								
+                              </td>
+                              <td class="interact_code">
+                                 									 
+                                 								
+                              </td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Message Type</b></td>
+                              <td class="interact_desc">Accept Acknowledgement</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_GenericMessageTransmission.htm#MCCI_MT000200UV01-msg" class="">MCCI_MT000200UV01</a></td>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <table class="interact">
+                           <caption>Sending and Receiving Roles</caption>
+                           <tr class="">
+                              <td class="interact_type"><b>Sender</b></td>
+                              <td class="interact_desc">Message Queue Poller</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_AR100001UV01-ar" class="">MCCI_AR100001UV01</a></td>
+                           </tr>
+                           <tr class="">
+                              <td class="interact_type"><b>Receiver</b></td>
+                              <td class="interact_desc">Message Queue Manager</td>
+                              <td class="interact_code"><a href="../../domains/uvci/uvci_PollingMessageTransmission.htm#MCCI_AR100002UV01-ar" class="">MCCI_AR100002UV01</a></td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+                  <p></p>
+               </div>
+            </div>
+            <p>
+               <table>
+                  <tbody>
+                     <tr>
+                        <td><a class="custombutton" href="#top">Return to top of page</a></td>
+                     </tr>
+                  </tbody>
+               </table>
+            </p>
+         </div>
+      </div>
+   </body>
+</html>
